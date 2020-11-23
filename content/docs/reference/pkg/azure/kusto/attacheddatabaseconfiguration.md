@@ -12,7 +12,6 @@ meta_desc: "Explore the AttachedDatabaseConfiguration resource of the kusto modu
 
 Manages a Kusto (also known as Azure Data Explorer) Attached Database Configuration
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1224,6 +1223,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Kusto Attached Database Configurations can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:kusto/attachedDatabaseConfiguration:AttachedDatabaseConfiguration example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Kusto/Clusters/cluster1/AttachedDatabaseConfigurations/configuration1
+```
 
 
 

@@ -14,7 +14,6 @@ Manages a Node Pool within a Kubernetes Cluster
 
 > **NOTE:** Multiple Node Pools are only supported when the Kubernetes Cluster is using Virtual Machine Scale Sets.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2569,6 +2568,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Kubernetes Cluster Node Pools can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:containerservice/kubernetesClusterNodePool:KubernetesClusterNodePool pool1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.ContainerService/managedClusters/cluster1/agentPools/pool1
+```
 
 
 

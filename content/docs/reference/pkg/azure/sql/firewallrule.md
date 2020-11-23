@@ -12,7 +12,6 @@ meta_desc: "Explore the FirewallRule resource of the sql module, including examp
 
 Allows you to manage an Azure SQL Firewall Rule
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1040,6 +1039,16 @@ create the sql server.
 
 
 
+
+
+## Import
+
+
+SQL Firewall Rules can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:sql/firewallRule:FirewallRule rule1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.Sql/servers/myserver/firewallRules/rule1
+```
 
 
 

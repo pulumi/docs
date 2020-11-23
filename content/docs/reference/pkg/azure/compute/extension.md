@@ -17,7 +17,6 @@ and run automated tasks.
 
 > **NOTE:** Custom Script Extensions require that the Azure Virtual Machine Guest Agent is running on the Virtual Machine.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1742,6 +1741,16 @@ use, available versions can be found using the Azure CLI.
 
 
 
+
+
+## Import
+
+
+Virtual Machine Extensions can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:compute/extension:Extension example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Compute/virtualMachines/myVM/extensions/hostname
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the Assignment resource of the lighthouse module, including 
 
 Manages a Lighthouse Assignment to a subscription, or to a resource group.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -804,6 +803,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Lighthouse Assignments can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:lighthouse/assignment:Assignment example /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.ManagedServices/registrationAssignments/00000000-0000-0000-0000-000000000000
+```
 
 
 

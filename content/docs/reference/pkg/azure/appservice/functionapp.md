@@ -12,7 +12,6 @@ meta_desc: "Explore the FunctionApp resource of the appservice module, including
 
 Manages a Function App.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -7003,6 +7002,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Function Apps can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:appservice/functionApp:FunctionApp functionapp1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Web/sites/functionapp1
+```
 
 
 

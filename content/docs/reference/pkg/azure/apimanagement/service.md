@@ -16,7 +16,6 @@ Manages an API Management Service.
 
 > **Note:** It's possible to define Custom Domains both within the `azure.apimanagement.Service` resource via the `hostname_configurations` block and by using the `azure.apimanagement.CustomDomain` resource. However it's not possible to use both methods to manage Custom Domains within an API Management Service, since there'll be conflicts.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -6450,6 +6449,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+API Management Services can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:apimanagement/service:Service example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.ApiManagement/service/instance1
+```
 
 
 

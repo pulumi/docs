@@ -12,7 +12,6 @@ meta_desc: "Explore the Endpoint resource of the cdn module, including examples,
 
 A CDN Endpoint is the entity within a CDN Profile containing configuration information regarding caching behaviours and origins. The CDN Endpoint is exposed using the URL format <endpointname>.azureedge.net.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -9248,6 +9247,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+CDN Endpoints can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:cdn/endpoint:Endpoint example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Cdn/profiles/myprofile1/endpoints/myendpoint1
+```
 
 
 

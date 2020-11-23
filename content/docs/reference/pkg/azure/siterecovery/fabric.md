@@ -12,7 +12,6 @@ meta_desc: "Explore the Fabric resource of the siterecovery module, including ex
 
 Manages a Azure Site Recovery Replication Fabric within a Recovery Services vault. Only Azure fabrics are supported at this time. Replication Fabrics serve as a container within an Azure region for other Site Recovery resources such as protection containers, protected items, network mappings.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -945,6 +944,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Site Recovery Fabric can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:siterecovery/fabric:Fabric myfabric /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resource-group-name/providers/Microsoft.RecoveryServices/vaults/recovery-vault-name/replicationFabrics/fabric-name
+```
 
 
 

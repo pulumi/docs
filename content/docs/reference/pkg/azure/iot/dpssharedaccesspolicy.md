@@ -12,7 +12,6 @@ meta_desc: "Explore the DpsSharedAccessPolicy resource of the iot module, includ
 
 Manages an IotHub Device Provisioning Service Shared Access Policy
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1653,6 +1652,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+IoTHub Device Provisioning Service Shared Access Policies can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:iot/dpsSharedAccessPolicy:DpsSharedAccessPolicy shared_access_policy1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Devices/provisioningServices/dps1/keys/shared_access_policy1
+```
 
 
 

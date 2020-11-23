@@ -14,7 +14,6 @@ Manages a Customer Managed Key for a Storage Account.
 
 
 
-
 ## Create a CustomerManagedKey Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -814,6 +813,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Customer Managed Keys for a Storage Account can be imported using the `resource id` of the Storage Account, e.g.
+
+```sh
+ $ pulumi import azure:storage/customerManagedKey:CustomerManagedKey example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.Storage/storageAccounts/myaccount
+```
 
 
 

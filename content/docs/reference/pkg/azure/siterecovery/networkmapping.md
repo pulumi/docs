@@ -12,7 +12,6 @@ meta_desc: "Explore the NetworkMapping resource of the siterecovery module, incl
 
 Manages a site recovery network mapping on Azure. A network mapping decides how to translate connected netwroks when a VM is migrated from one region to another.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1338,6 +1337,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Site Recovery Network Mapping can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:siterecovery/networkMapping:NetworkMapping mymapping /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resource-group-name/providers/Microsoft.RecoveryServices/vaults/recovery-vault-name/replicationFabrics/primary-fabric-name/replicationNetworks/azureNetwork/replicationNetworkMappings/mapping-name
+```
 
 
 

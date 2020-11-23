@@ -12,7 +12,6 @@ meta_desc: "Explore the Cluster resource of the servicefabric module, including 
 
 Manages a Service Fabric Cluster.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4681,6 +4680,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Service Fabric Clusters can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:servicefabric/cluster:Cluster cluster1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.ServiceFabric/clusters/cluster1
+```
 
 
 

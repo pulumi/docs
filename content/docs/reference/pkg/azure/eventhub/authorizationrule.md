@@ -12,7 +12,6 @@ meta_desc: "Explore the AuthorizationRule resource of the eventhub module, inclu
 
 Manages a Event Hubs authorization Rule within an Event Hub.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1780,6 +1779,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+EventHub Authorization Rules can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:eventhub/authorizationRule:AuthorizationRule rule1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.EventHub/namespaces/namespace1/eventhubs/eventhub1/authorizationRules/rule1
+```
 
 
 

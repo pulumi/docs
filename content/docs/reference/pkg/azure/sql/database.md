@@ -14,7 +14,6 @@ Allows you to manage an Azure SQL Database
 
 > **NOTE:** The Database Extended Auditing Policy Can be set inline here as well as with the mssql_database_extended_auditing_policy resource resource. You can only use one or the other and using both will cause a conflict.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3753,6 +3752,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+SQL Databases can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:sql/database:Database database1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.Sql/servers/myserver/databases/database1
+```
 
 
 

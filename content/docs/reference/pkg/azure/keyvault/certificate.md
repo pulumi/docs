@@ -12,7 +12,6 @@ meta_desc: "Explore the Certificate resource of the keyvault module, including e
 
 Manages a Key Vault Certificate.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3774,6 +3773,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Key Vault Certificates can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:keyvault/certificate:Certificate net/certificates/example/fdf067c93bbb4b22bff4d8b7a9a56217
+```
 
 
 

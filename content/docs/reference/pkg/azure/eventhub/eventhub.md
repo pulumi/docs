@@ -12,7 +12,6 @@ meta_desc: "Explore the EventHub resource of the eventhub module, including exam
 
 Manages a Event Hubs as a nested resource within a Event Hubs namespace.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1755,6 +1754,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+EventHubs can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:eventhub/eventHub:EventHub eventhub1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.EventHub/namespaces/namespace1/eventhubs/eventhub1
+```
 
 
 

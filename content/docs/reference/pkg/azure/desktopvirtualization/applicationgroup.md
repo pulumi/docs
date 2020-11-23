@@ -12,7 +12,6 @@ meta_desc: "Explore the ApplicationGroup resource of the desktopvirtualization m
 
 Manages a Virtual Desktop Application Group.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1402,6 +1401,16 @@ Valid options are `RemoteApp` or `Desktop` application groups.
 
 
 
+
+
+## Import
+
+
+Virtual Desktop Application Groups can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:desktopvirtualization/applicationGroup:ApplicationGroup example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup1/providers/Microsoft.DesktopVirtualization/applicationGroups/myapplicationgroup
+```
 
 
 

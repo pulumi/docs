@@ -12,7 +12,6 @@ meta_desc: "Explore the DatasetSqlServerTable resource of the datafactory module
 
 Manages a SQL Server Table Dataset inside a Azure Data Factory.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1751,6 +1750,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Data Factory SQL Server Table Datasets can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:datafactory/datasetSqlServerTable:DatasetSqlServerTable example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example/providers/Microsoft.DataFactory/factories/example/datasets/example
+```
 
 
 

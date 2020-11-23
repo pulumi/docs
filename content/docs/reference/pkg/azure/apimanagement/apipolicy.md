@@ -14,7 +14,6 @@ Manages an API Management API Policy
 
 
 
-
 ## Create a ApiPolicy Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -902,6 +901,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+API Management API Policy can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:apimanagement/apiPolicy:ApiPolicy example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.ApiManagement/service/service1/apis/exampleId/policies/policy
+```
 
 
 

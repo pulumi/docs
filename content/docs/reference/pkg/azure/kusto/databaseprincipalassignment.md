@@ -12,7 +12,6 @@ meta_desc: "Explore the DatabasePrincipalAssignment resource of the kusto module
 
 Manages a Kusto (also known as Azure Data Explorer) Database Principal Assignment.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1519,6 +1518,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Kusto Database Principal Assignment can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:kusto/databasePrincipalAssignment:DatabasePrincipalAssignment example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Kusto/Clusters/cluster1/Databases/database1/PrincipalAssignments/assignment1
+```
 
 
 

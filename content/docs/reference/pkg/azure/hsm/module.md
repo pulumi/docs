@@ -16,7 +16,6 @@ Manages a Dedicated Hardware Security Module.
 
 > **Note**: If the quota is not enough in some region, please submit the quota request to service team.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1696,6 +1695,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Dedicated Hardware Security Module can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:hsm/module:Module example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.HardwareSecurityModules/dedicatedHSMs/hsm1
+```
 
 
 

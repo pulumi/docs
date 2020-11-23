@@ -12,7 +12,6 @@ meta_desc: "Explore the VirtualNetwork resource of the devtest module, including
 
 Manages a Virtual Network within a DevTest Lab.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1402,6 +1401,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+DevTest Virtual Networks can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:devtest/virtualNetwork:VirtualNetwork network1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.DevTestLab/labs/lab1/virtualnetworks/network1
+```
 
 
 

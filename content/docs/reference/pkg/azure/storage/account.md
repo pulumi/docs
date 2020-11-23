@@ -12,7 +12,6 @@ meta_desc: "Explore the Account resource of the storage module, including exampl
 
 Manages an Azure Storage Account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -7656,6 +7655,16 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
 
 
+
+
+## Import
+
+
+Storage Accounts can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:storage/account:Account storageAcc1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.Storage/storageAccounts/myaccount
+```
 
 
 

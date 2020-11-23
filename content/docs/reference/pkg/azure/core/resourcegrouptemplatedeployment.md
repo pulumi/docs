@@ -14,7 +14,6 @@ Manages a Resource Group Template Deployment.
 
 > **Note:** This resource will automatically attempt to delete resources deployed by the ARM Template when it is deleted. You can opt-out of this by setting the `delete_nested_items_during_deletion` field within the `template_deployment` block of the `features` block to `false`.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1317,6 +1316,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Resource Group Template Deployments can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:core/resourceGroupTemplateDeployment:ResourceGroupTemplateDeployment example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Resources/deployments/template1
+```
 
 
 

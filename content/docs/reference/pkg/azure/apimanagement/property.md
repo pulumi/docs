@@ -12,7 +12,6 @@ meta_desc: "Explore the Property resource of the apimanagement module, including
 
 Manages an API Management Property.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1208,6 +1207,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+API Management Properties can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:apimanagement/property:Property example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example-resources/providers/Microsoft.ApiManagement/service/example-apim/namedValues/example-apimp
+```
 
 
 

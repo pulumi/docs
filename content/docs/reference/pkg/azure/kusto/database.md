@@ -12,7 +12,6 @@ meta_desc: "Explore the Database resource of the kusto module, including example
 
 Manages a Kusto (also known as Azure Data Explorer) Database
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1217,6 +1216,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Kusto Clusters can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:kusto/database:Database example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Kusto/Clusters/cluster1/Databases/database1
+```
 
 
 

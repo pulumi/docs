@@ -12,7 +12,6 @@ meta_desc: "Explore the Database resource of the mysql module, including example
 
 Manages a MySQL Database within a MySQL Server
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1068,6 +1067,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+MySQL Database's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:mysql/database:Database database1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.DBforMySQL/servers/server1/databases/database1
+```
 
 
 

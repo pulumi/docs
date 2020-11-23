@@ -12,7 +12,6 @@ meta_desc: "Explore the Workspace resource of the databricks module, including e
 
 Manages a Databricks Workspace
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1678,6 +1677,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Databrick Workspaces can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:databricks/workspace:Workspace workspace1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Databricks/workspaces/workspace1
+```
 
 
 

@@ -14,7 +14,6 @@ Manages a policy rule definition on a management group or your provider subscrip
 
 Policy definitions do not take effect until they are assigned to a scope using a Policy Assignment.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1577,6 +1576,22 @@ a then block.
 
 
 
+
+
+## Import
+
+
+Policy Definitions can be imported using the `policy name`, e.g.
+
+```sh
+ $ pulumi import azure:policy/definition:Definition examplePolicy /subscriptions/<SUBSCRIPTION_ID>/providers/Microsoft.Authorization/policyDefinitions/<POLICY_NAME>
+```
+
+ or
+
+```sh
+ $ pulumi import azure:policy/definition:Definition examplePolicy /providers/Microsoft.Management/managementgroups/<MANGAGEMENT_GROUP_ID>/providers/Microsoft.Authorization/policyDefinitions/<POLICY_NAME>
+```
 
 
 

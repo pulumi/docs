@@ -12,7 +12,6 @@ meta_desc: "Explore the ActiveDirectoryAdministrator resource of the mysql modul
 
 Allows you to set a user or group as the AD administrator for an MySQL server in Azure
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1051,6 +1050,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+A MySQL Active Directory Administrator can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:mysql/activeDirectoryAdministrator:ActiveDirectoryAdministrator administrator /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.DBforMySQL/servers/myserver/administrators/activeDirectory
+```
 
 
 

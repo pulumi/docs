@@ -3,7 +3,7 @@ title: "Module monitoring"
 title_tag: "Module monitoring | Package @pulumi/azure | Node.js SDK"
 linktitle: "monitoring"
 meta_desc: "Explore members of the monitoring module in the @pulumi/azure package."
-git_sha: "edf6ad707defa77aa50be8a5aec9983f4d44d071"
+git_sha: "1e6e272729ef317dfcecf40b50c7ce26be8e27d6"
 block_external_search_index: true
 ---
 
@@ -78,7 +78,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="ActionGroup" data-link-title="ActionGroup">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L89">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L96">
         Resource <strong>ActionGroup</strong>
     </a>
 </h3>
@@ -164,8 +164,16 @@ const exampleActionGroup = new azure.monitoring.ActionGroup("exampleActionGroup"
 });
 ```
 
+#### Import
+
+Action Groups can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:monitoring/actionGroup:ActionGroup example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Insights/actionGroups/myagname
+```
+
 <h4 class="pdoc-member-header" id="ActionGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L176"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L183"> <b>constructor</b></a>
 </h4>
 
 
@@ -179,7 +187,7 @@ Create a ActionGroup resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ActionGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L99">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L106">method <b>get</b></a>
 </h4>
 
 
@@ -190,14 +198,14 @@ Get an existing ActionGroup resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ActionGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L89">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L96">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ActionGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L110">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L117">method <b>isInstance</b></a>
 </h4>
 
 
@@ -208,7 +216,7 @@ Returns true if the given object is an instance of ActionGroup.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ActionGroup-armRoleReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L120">property <b>armRoleReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L127">property <b>armRoleReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>armRoleReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupArmRoleReceiver'>ActionGroupArmRoleReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -216,7 +224,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 One or more `armRoleReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroup-automationRunbookReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L124">property <b>automationRunbookReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L131">property <b>automationRunbookReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>automationRunbookReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupAutomationRunbookReceiver'>ActionGroupAutomationRunbookReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -224,7 +232,7 @@ One or more `armRoleReceiver` blocks as defined below.
 One or more `automationRunbookReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroup-azureAppPushReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L128">property <b>azureAppPushReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L135">property <b>azureAppPushReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>azureAppPushReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupAzureAppPushReceiver'>ActionGroupAzureAppPushReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -232,7 +240,7 @@ One or more `automationRunbookReceiver` blocks as defined below.
 One or more `azureAppPushReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroup-azureFunctionReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L132">property <b>azureFunctionReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L139">property <b>azureFunctionReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>azureFunctionReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupAzureFunctionReceiver'>ActionGroupAzureFunctionReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -240,7 +248,7 @@ One or more `azureAppPushReceiver` blocks as defined below.
 One or more `azureFunctionReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroup-emailReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L136">property <b>emailReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L143">property <b>emailReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>emailReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupEmailReceiver'>ActionGroupEmailReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -248,7 +256,7 @@ One or more `azureFunctionReceiver` blocks as defined below.
 One or more `emailReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroup-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L140">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L147">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -256,7 +264,7 @@ One or more `emailReceiver` blocks as defined below.
 Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ActionGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L89">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L96">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -265,7 +273,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ActionGroup-itsmReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L144">property <b>itsmReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L151">property <b>itsmReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>itsmReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupItsmReceiver'>ActionGroupItsmReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -273,7 +281,7 @@ deployments and may be missing (undefined) during planning phases.
 One or more `itsmReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroup-logicAppReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L148">property <b>logicAppReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L155">property <b>logicAppReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logicAppReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupLogicAppReceiver'>ActionGroupLogicAppReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -281,7 +289,7 @@ One or more `itsmReceiver` blocks as defined below.
 One or more `logicAppReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L152">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L159">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -289,7 +297,7 @@ One or more `logicAppReceiver` blocks as defined below.
 The name of the Action Group. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionGroup-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L156">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L163">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -297,7 +305,7 @@ The name of the Action Group. Changing this forces a new resource to be created.
 The name of the resource group in which to create the Action Group instance.
 
 <h4 class="pdoc-member-header" id="ActionGroup-shortName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L160">property <b>shortName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L167">property <b>shortName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>shortName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -305,7 +313,7 @@ The name of the resource group in which to create the Action Group instance.
 The short name of the action group. This will be used in SMS messages.
 
 <h4 class="pdoc-member-header" id="ActionGroup-smsReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L164">property <b>smsReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L171">property <b>smsReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>smsReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupSmsReceiver'>ActionGroupSmsReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -313,7 +321,7 @@ The short name of the action group. This will be used in SMS messages.
 One or more `smsReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L168">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L175">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -321,7 +329,7 @@ One or more `smsReceiver` blocks as defined below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ActionGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L89">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L96">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -330,7 +338,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ActionGroup-voiceReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L172">property <b>voiceReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L179">property <b>voiceReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>voiceReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupVoiceReceiver'>ActionGroupVoiceReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -338,7 +346,7 @@ deployments.
 One or more `voiceReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroup-webhookReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L176">property <b>webhookReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L183">property <b>webhookReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>webhookReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupWebhookReceiver'>ActionGroupWebhookReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -346,7 +354,7 @@ One or more `voiceReceiver` blocks as defined below.
 One or more `webhookReceiver` blocks as defined below.
 
 <h3 class="pdoc-module-header" id="ActionRuleActionGroup" data-link-title="ActionRuleActionGroup">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L43">
         Resource <strong>ActionRuleActionGroup</strong>
     </a>
 </h3>
@@ -379,8 +387,16 @@ const exampleActionRuleActionGroup = new azure.monitoring.ActionRuleActionGroup(
 });
 ```
 
+#### Import
+
+Monitor Action Rule can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:monitoring/actionRuleActionGroup:ActionRuleActionGroup example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.AlertsManagement/actionRules/actionRule1
+```
+
 <h4 class="pdoc-member-header" id="ActionRuleActionGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L95"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L102"> <b>constructor</b></a>
 </h4>
 
 
@@ -394,7 +410,7 @@ Create a ActionRuleActionGroup resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -405,14 +421,14 @@ Get an existing ActionRuleActionGroup resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L43">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -423,7 +439,7 @@ Returns true if the given object is an instance of ActionRuleActionGroup.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroup-actionGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L67">property <b>actionGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L74">property <b>actionGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>actionGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -431,7 +447,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the resource id of monitor action group.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroup-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L71">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L78">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionRuleActionGroupCondition'>ActionRuleActionGroupCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -439,7 +455,7 @@ Specifies the resource id of monitor action group.
 A `condition` block as defined below.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L75">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L82">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -447,7 +463,7 @@ A `condition` block as defined below.
 Specifies a description for the Action Rule.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroup-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L79">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L86">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -455,7 +471,7 @@ Specifies a description for the Action Rule.
 Is the Action Rule enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L43">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -464,7 +480,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L83">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L90">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -472,7 +488,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the Monitor Action Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroup-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L87">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L94">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -480,7 +496,7 @@ Specifies the name of the Monitor Action Rule. Changing this forces a new resour
 Specifies the name of the resource group in which the Monitor Action Rule should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroup-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L91">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L98">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionRuleActionGroupScope'>ActionRuleActionGroupScope</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -488,7 +504,7 @@ Specifies the name of the resource group in which the Monitor Action Rule should
 A `scope` block as defined below.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L95">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L102">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -496,7 +512,7 @@ A `scope` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L43">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -505,7 +521,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ActionRuleSuppression" data-link-title="ActionRuleSuppression">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L51">
         Resource <strong>ActionRuleSuppression</strong>
     </a>
 </h3>
@@ -546,8 +562,16 @@ const exampleActionRuleSuppression = new azure.monitoring.ActionRuleSuppression(
 });
 ```
 
+#### Import
+
+Monitor Action Rule can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:monitoring/actionRuleSuppression:ActionRuleSuppression example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.AlertsManagement/actionRules/actionRule1
+```
+
 <h4 class="pdoc-member-header" id="ActionRuleSuppression-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L103"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L110"> <b>constructor</b></a>
 </h4>
 
 
@@ -561,7 +585,7 @@ Create a ActionRuleSuppression resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppression-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L61">method <b>get</b></a>
 </h4>
 
 
@@ -572,14 +596,14 @@ Get an existing ActionRuleSuppression resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppression-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L51">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppression-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L72">method <b>isInstance</b></a>
 </h4>
 
 
@@ -590,7 +614,7 @@ Returns true if the given object is an instance of ActionRuleSuppression.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppression-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L75">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L82">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionRuleSuppressionCondition'>ActionRuleSuppressionCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -598,7 +622,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A `condition` block as defined below.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppression-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L79">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L86">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -606,7 +630,7 @@ A `condition` block as defined below.
 Specifies a description for the Action Rule.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppression-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L83">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L90">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -614,7 +638,7 @@ Specifies a description for the Action Rule.
 Is the Action Rule enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppression-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L51">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -623,7 +647,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppression-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L87">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L94">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -631,7 +655,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the Monitor Action Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppression-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L91">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L98">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -639,7 +663,7 @@ Specifies the name of the Monitor Action Rule. Changing this forces a new resour
 Specifies the name of the resource group in which the Monitor Action Rule should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppression-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L95">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L102">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionRuleSuppressionScope'>ActionRuleSuppressionScope</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -647,7 +671,7 @@ Specifies the name of the resource group in which the Monitor Action Rule should
 A `scope` block as defined below.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppression-suppression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L99">property <b>suppression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L106">property <b>suppression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>suppression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionRuleSuppressionSuppression'>ActionRuleSuppressionSuppression</a>&gt;;</code></pre>
@@ -655,7 +679,7 @@ A `scope` block as defined below.
 A `suppression` block as defined below.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppression-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L103">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L110">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -663,7 +687,7 @@ A `suppression` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppression-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L51">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -672,7 +696,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ActivityLogAlert" data-link-title="ActivityLogAlert">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L58">
         Resource <strong>ActivityLogAlert</strong>
     </a>
 </h3>
@@ -720,8 +744,16 @@ const mainActivityLogAlert = new azure.monitoring.ActivityLogAlert("mainActivity
 });
 ```
 
+#### Import
+
+Activity log alerts can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:monitoring/activityLogAlert:ActivityLogAlert example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/microsoft.insights/activityLogAlerts/myalertname
+```
+
 <h4 class="pdoc-member-header" id="ActivityLogAlert-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L110"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L117"> <b>constructor</b></a>
 </h4>
 
 
@@ -735,7 +767,7 @@ Create a ActivityLogAlert resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlert-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L61">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L68">method <b>get</b></a>
 </h4>
 
 
@@ -746,14 +778,14 @@ Get an existing ActivityLogAlert resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlert-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L51">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L58">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ActivityLogAlert-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L72">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L79">method <b>isInstance</b></a>
 </h4>
 
 
@@ -764,7 +796,7 @@ Returns true if the given object is an instance of ActivityLogAlert.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlert-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L82">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L89">property <b>actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActivityLogAlertAction'>ActivityLogAlertAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -772,7 +804,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 One or more `action` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlert-criteria">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L86">property <b>criteria</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L93">property <b>criteria</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>criteria: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActivityLogAlertCriteria'>ActivityLogAlertCriteria</a>&gt;;</code></pre>
@@ -780,7 +812,7 @@ One or more `action` blocks as defined below.
 A `criteria` block as defined below.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlert-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L90">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L97">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -788,7 +820,7 @@ A `criteria` block as defined below.
 The description of this activity log alert.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlert-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L94">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L101">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -796,7 +828,7 @@ The description of this activity log alert.
 Should this Activity Log Alert be enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlert-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L51">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L58">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -805,7 +837,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlert-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L98">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L105">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -813,7 +845,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the activity log alert. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlert-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L102">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L109">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -821,7 +853,7 @@ The name of the activity log alert. Changing this forces a new resource to be cr
 The name of the resource group in which to create the activity log alert instance.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlert-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L106">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L113">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -829,7 +861,7 @@ The name of the resource group in which to create the activity log alert instanc
 The Scope at which the Activity Log should be applied, for example a the Resource ID of a Subscription or a Resource (such as a Storage Account).
 
 <h4 class="pdoc-member-header" id="ActivityLogAlert-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L110">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L117">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -837,7 +869,7 @@ The Scope at which the Activity Log should be applied, for example a the Resourc
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlert-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L51">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L58">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -846,7 +878,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AutoscaleSetting" data-link-title="AutoscaleSetting">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L233">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L240">
         Resource <strong>AutoscaleSetting</strong>
     </a>
 </h3>
@@ -1076,8 +1108,16 @@ const exampleAutoscaleSetting = new azure.monitoring.AutoscaleSetting("exampleAu
 });
 ```
 
+#### Import
+
+AutoScale Setting can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:monitoring/autoscaleSetting:AutoscaleSetting example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/microsoft.insights/autoscalesettings/setting1
+```
+
 <h4 class="pdoc-member-header" id="AutoscaleSetting-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L292"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L299"> <b>constructor</b></a>
 </h4>
 
 
@@ -1091,7 +1131,7 @@ Create a AutoscaleSetting resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AutoscaleSetting-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L243">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L250">method <b>get</b></a>
 </h4>
 
 
@@ -1102,14 +1142,14 @@ Get an existing AutoscaleSetting resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AutoscaleSetting-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L233">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L240">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AutoscaleSetting-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L254">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L261">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1120,7 +1160,7 @@ Returns true if the given object is an instance of AutoscaleSetting.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AutoscaleSetting-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L264">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L271">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1128,7 +1168,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies whether automatic scaling is enabled for the target resource. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="AutoscaleSetting-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L233">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L240">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1137,7 +1177,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AutoscaleSetting-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L268">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L275">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1145,7 +1185,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AutoscaleSetting-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L272">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L279">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1153,7 +1193,7 @@ Specifies the supported Azure location where the AutoScale Setting should exist.
 The name of the AutoScale Setting. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AutoscaleSetting-notification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L276">property <b>notification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L283">property <b>notification</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AutoscaleSettingNotification'>AutoscaleSettingNotification</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1161,7 +1201,7 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 Specifies a `notification` block as defined below.
 
 <h4 class="pdoc-member-header" id="AutoscaleSetting-profiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L280">property <b>profiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L287">property <b>profiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>profiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AutoscaleSettingProfile'>AutoscaleSettingProfile</a>[]&gt;;</code></pre>
@@ -1169,7 +1209,7 @@ Specifies a `notification` block as defined below.
 Specifies one or more (up to 20) `profile` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="AutoscaleSetting-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L284">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L291">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1177,7 +1217,7 @@ Specifies one or more (up to 20) `profile` blocks as defined below.
 The name of the Resource Group in the AutoScale Setting should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AutoscaleSetting-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L288">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L295">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1185,7 +1225,7 @@ The name of the Resource Group in the AutoScale Setting should be created. Chang
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="AutoscaleSetting-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L292">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L299">property <b>targetResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1193,7 +1233,7 @@ A mapping of tags to assign to the resource.
 Specifies the resource ID of the resource that the autoscale setting should be added to.
 
 <h4 class="pdoc-member-header" id="AutoscaleSetting-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L233">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L240">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1202,7 +1242,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DiagnosticSetting" data-link-title="DiagnosticSetting">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L53">
         Resource <strong>DiagnosticSetting</strong>
     </a>
 </h3>
@@ -1245,8 +1285,16 @@ const exampleDiagnosticSetting = new azure.monitoring.DiagnosticSetting("example
 });
 ```
 
+#### Import
+
+Diagnostic Settings can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:monitoring/diagnosticSetting:DiagnosticSetting example /subscriptions/XXX/resourcegroups/resource_group/providers/microsoft.keyvault/vaults/vault|logMonitoring
+```
+
 <h4 class="pdoc-member-header" id="DiagnosticSetting-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L109"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L116"> <b>constructor</b></a>
 </h4>
 
 
@@ -1260,7 +1308,7 @@ Create a DiagnosticSetting resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DiagnosticSetting-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L56">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L63">method <b>get</b></a>
 </h4>
 
 
@@ -1271,14 +1319,14 @@ Get an existing DiagnosticSetting resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DiagnosticSetting-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L46">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L53">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DiagnosticSetting-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L67">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L74">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1289,7 +1337,7 @@ Returns true if the given object is an instance of DiagnosticSetting.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DiagnosticSetting-eventhubAuthorizationRuleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L77">property <b>eventhubAuthorizationRuleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L84">property <b>eventhubAuthorizationRuleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventhubAuthorizationRuleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1297,7 +1345,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagnostics Data. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DiagnosticSetting-eventhubName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L81">property <b>eventhubName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L88">property <b>eventhubName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventhubName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1305,7 +1353,7 @@ Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagn
 Specifies the name of the Event Hub where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DiagnosticSetting-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L53">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1314,7 +1362,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DiagnosticSetting-logAnalyticsDestinationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L85">property <b>logAnalyticsDestinationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L92">property <b>logAnalyticsDestinationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logAnalyticsDestinationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1322,7 +1370,7 @@ deployments and may be missing (undefined) during planning phases.
 When set to 'Dedicated' logs sent to a Log Analytics workspace will go into resource specific tables, instead of the legacy AzureDiagnostics table.
 
 <h4 class="pdoc-member-header" id="DiagnosticSetting-logAnalyticsWorkspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L89">property <b>logAnalyticsWorkspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L96">property <b>logAnalyticsWorkspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logAnalyticsWorkspaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1330,7 +1378,7 @@ When set to 'Dedicated' logs sent to a Log Analytics workspace will go into reso
 Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DiagnosticSetting-logs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L93">property <b>logs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L100">property <b>logs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DiagnosticSettingLog'>DiagnosticSettingLog</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1338,7 +1386,7 @@ Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be s
 One or more `log` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="DiagnosticSetting-metrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L97">property <b>metrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L104">property <b>metrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metrics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DiagnosticSettingMetric'>DiagnosticSettingMetric</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1346,7 +1394,7 @@ One or more `log` blocks as defined below.
 One or more `metric` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="DiagnosticSetting-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L101">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L108">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1354,7 +1402,7 @@ One or more `metric` blocks as defined below.
 Specifies the name of the Diagnostic Setting. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DiagnosticSetting-storageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L105">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L112">property <b>storageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1362,7 +1410,7 @@ Specifies the name of the Diagnostic Setting. Changing this forces a new resourc
 The ID of the Storage Account where logs should be sent. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DiagnosticSetting-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L109">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L116">property <b>targetResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1370,7 +1418,7 @@ The ID of the Storage Account where logs should be sent. Changing this forces a 
 The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DiagnosticSetting-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L46">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L53">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1379,7 +1427,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LogProfile" data-link-title="LogProfile">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L59">
         Resource <strong>LogProfile</strong>
     </a>
 </h3>
@@ -1428,8 +1476,16 @@ const exampleLogProfile = new azure.monitoring.LogProfile("exampleLogProfile", {
 });
 ```
 
+#### Import
+
+A Log Profile can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:monitoring/logProfile:LogProfile example /subscriptions/00000000-0000-0000-0000-000000000000/providers/microsoft.insights/logprofiles/test
+```
+
 <h4 class="pdoc-member-header" id="LogProfile-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L104"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L111"> <b>constructor</b></a>
 </h4>
 
 
@@ -1443,7 +1499,7 @@ Create a LogProfile resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LogProfile-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L62">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L69">method <b>get</b></a>
 </h4>
 
 
@@ -1454,14 +1510,14 @@ Get an existing LogProfile resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LogProfile-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L52">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L59">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LogProfile-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L73">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L80">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1472,7 +1528,7 @@ Returns true if the given object is an instance of LogProfile.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LogProfile-categories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L83">property <b>categories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L90">property <b>categories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>categories: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1480,7 +1536,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 List of categories of the logs.
 
 <h4 class="pdoc-member-header" id="LogProfile-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L52">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L59">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1489,7 +1545,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LogProfile-locations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L87">property <b>locations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L94">property <b>locations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>locations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1497,7 +1553,7 @@ deployments and may be missing (undefined) during planning phases.
 List of regions for which Activity Log events are stored or streamed.
 
 <h4 class="pdoc-member-header" id="LogProfile-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L92">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L99">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1506,7 +1562,7 @@ The name of the Log Profile. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="LogProfile-retentionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L96">property <b>retentionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L103">property <b>retentionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LogProfileRetentionPolicy'>LogProfileRetentionPolicy</a>&gt;;</code></pre>
@@ -1514,7 +1570,7 @@ new resource to be created.
 A `retentionPolicy` block as documented below. A retention policy for how long Activity Logs are retained in the storage account.
 
 <h4 class="pdoc-member-header" id="LogProfile-servicebusRuleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L100">property <b>servicebusRuleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L107">property <b>servicebusRuleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>servicebusRuleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1522,7 +1578,7 @@ A `retentionPolicy` block as documented below. A retention policy for how long A
 The service bus (or event hub) rule ID of the service bus (or event hub) namespace in which the Activity Log is streamed to. At least one of `storageAccountId` or `servicebusRuleId` must be set.
 
 <h4 class="pdoc-member-header" id="LogProfile-storageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L104">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L111">property <b>storageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1530,7 +1586,7 @@ The service bus (or event hub) rule ID of the service bus (or event hub) namespa
 The resource ID of the storage account in which the Activity Log is stored. At least one of `storageAccountId` or `servicebusRuleId` must be set.
 
 <h4 class="pdoc-member-header" id="LogProfile-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L52">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L59">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1539,7 +1595,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="MetricAlert" data-link-title="MetricAlert">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L62">
         Resource <strong>MetricAlert</strong>
     </a>
 </h3>
@@ -1591,8 +1647,16 @@ const example = new azure.monitoring.MetricAlert("example", {
 });
 ```
 
+#### Import
+
+Metric Alerts can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:monitoring/metricAlert:MetricAlert main /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example-resources/providers/microsoft.insights/metricalerts/example-metricalert
+```
+
 <h4 class="pdoc-member-header" id="MetricAlert-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L146"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L153"> <b>constructor</b></a>
 </h4>
 
 
@@ -1606,7 +1670,7 @@ Create a MetricAlert resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MetricAlert-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L65">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L72">method <b>get</b></a>
 </h4>
 
 
@@ -1617,14 +1681,14 @@ Get an existing MetricAlert resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MetricAlert-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L55">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L62">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MetricAlert-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L76">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L83">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1635,7 +1699,7 @@ Returns true if the given object is an instance of MetricAlert.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MetricAlert-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L86">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L93">property <b>actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MetricAlertAction'>MetricAlertAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1643,7 +1707,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 One or more `action` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="MetricAlert-applicationInsightsWebTestLocationAvailabilityCriteria">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L90">property <b>applicationInsightsWebTestLocationAvailabilityCriteria</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L97">property <b>applicationInsightsWebTestLocationAvailabilityCriteria</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationInsightsWebTestLocationAvailabilityCriteria: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria'>MetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1651,7 +1715,7 @@ One or more `action` blocks as defined below.
 A `applicationInsightsWebTestLocationAvailabilityCriteria` block as defined below.
 
 <h4 class="pdoc-member-header" id="MetricAlert-autoMitigate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L94">property <b>autoMitigate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L101">property <b>autoMitigate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoMitigate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1659,7 +1723,7 @@ A `applicationInsightsWebTestLocationAvailabilityCriteria` block as defined belo
 Should the alerts in this Metric Alert be auto resolved? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="MetricAlert-criterias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L98">property <b>criterias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L105">property <b>criterias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>criterias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MetricAlertCriteria'>MetricAlertCriteria</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1667,7 +1731,7 @@ Should the alerts in this Metric Alert be auto resolved? Defaults to `true`.
 One or more (static) `criteria` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="MetricAlert-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L102">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L109">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1675,7 +1739,7 @@ One or more (static) `criteria` blocks as defined below.
 The description of this Metric Alert.
 
 <h4 class="pdoc-member-header" id="MetricAlert-dynamicCriteria">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L106">property <b>dynamicCriteria</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L113">property <b>dynamicCriteria</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dynamicCriteria: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MetricAlertDynamicCriteria'>MetricAlertDynamicCriteria</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1683,7 +1747,7 @@ The description of this Metric Alert.
 A `dynamicCriteria` block as defined below.
 
 <h4 class="pdoc-member-header" id="MetricAlert-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L110">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L117">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1691,7 +1755,7 @@ A `dynamicCriteria` block as defined below.
 Should this Metric Alert be enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="MetricAlert-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L114">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L121">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>frequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1699,7 +1763,7 @@ Should this Metric Alert be enabled? Defaults to `true`.
 The evaluation frequency of this Metric Alert, represented in ISO 8601 duration format. Possible values are `PT1M`, `PT5M`, `PT15M`, `PT30M` and `PT1H`. Defaults to `PT1M`.
 
 <h4 class="pdoc-member-header" id="MetricAlert-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L55">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L62">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1708,7 +1772,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MetricAlert-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L118">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L125">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1716,7 +1780,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Metric Alert. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MetricAlert-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L122">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L129">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1724,7 +1788,7 @@ The name of the Metric Alert. Changing this forces a new resource to be created.
 The name of the resource group in which to create the Metric Alert instance.
 
 <h4 class="pdoc-member-header" id="MetricAlert-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L126">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L133">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1732,7 +1796,7 @@ The name of the resource group in which to create the Metric Alert instance.
 A set of strings of resource IDs at which the metric criteria should be applied.
 
 <h4 class="pdoc-member-header" id="MetricAlert-severity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L130">property <b>severity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L137">property <b>severity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>severity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1740,7 +1804,7 @@ A set of strings of resource IDs at which the metric criteria should be applied.
 The severity of this Metric Alert. Possible values are `0`, `1`, `2`, `3` and `4`. Defaults to `3`.
 
 <h4 class="pdoc-member-header" id="MetricAlert-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L134">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L141">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1748,7 +1812,7 @@ The severity of this Metric Alert. Possible values are `0`, `1`, `2`, `3` and `4
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="MetricAlert-targetResourceLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L138">property <b>targetResourceLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L145">property <b>targetResourceLocation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetResourceLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1756,7 +1820,7 @@ A mapping of tags to assign to the resource.
 The location of the target resource.
 
 <h4 class="pdoc-member-header" id="MetricAlert-targetResourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L142">property <b>targetResourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L149">property <b>targetResourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetResourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1764,7 +1828,7 @@ The location of the target resource.
 The resource type (e.g. `Microsoft.Compute/virtualMachines`) of the target resource.
 
 <h4 class="pdoc-member-header" id="MetricAlert-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L55">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L62">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1773,7 +1837,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="MetricAlert-windowSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L146">property <b>windowSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L153">property <b>windowSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>windowSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1781,7 +1845,7 @@ deployments.
 The period of time that is used to monitor alert activity, represented in ISO 8601 duration format. This value must be greater than `frequency`. Possible values are `PT1M`, `PT5M`, `PT15M`, `PT30M`, `PT1H`, `PT6H`, `PT12H` and `P1D`. Defaults to `PT5M`.
 
 <h3 class="pdoc-module-header" id="ScheduledQueryRulesAlert" data-link-title="ScheduledQueryRulesAlert">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L19">
         Resource <strong>ScheduledQueryRulesAlert</strong>
     </a>
 </h3>
@@ -1790,8 +1854,16 @@ The period of time that is used to monitor alert activity, represented in ISO 86
 
 Manages an AlertingAction Scheduled Query Rules resource within Azure Monitor.
 
+#### Import
+
+Scheduled Query Rule Alerts can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:monitoring/scheduledQueryRulesAlert:ScheduledQueryRulesAlert example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Insights/scheduledQueryRules/myrulename
+```
+
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlert-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L94"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L101"> <b>constructor</b></a>
 </h4>
 
 
@@ -1805,7 +1877,7 @@ Create a ScheduledQueryRulesAlert resource with the given unique name, arguments
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlert-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L22">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L29">method <b>get</b></a>
 </h4>
 
 
@@ -1816,14 +1888,14 @@ Get an existing ScheduledQueryRulesAlert resource's state with the given name, I
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlert-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L19">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlert-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L40">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1834,7 +1906,7 @@ Returns true if the given object is an instance of ScheduledQueryRulesAlert.  Th
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlert-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L43">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L50">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScheduledQueryRulesAlertAction'>ScheduledQueryRulesAlertAction</a>&gt;;</code></pre>
@@ -1842,7 +1914,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 An `action` block as defined below.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlert-authorizedResourceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L47">property <b>authorizedResourceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L54">property <b>authorizedResourceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizedResourceIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1850,7 +1922,7 @@ An `action` block as defined below.
 List of Resource IDs referred into query.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlert-dataSourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L51">property <b>dataSourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L58">property <b>dataSourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataSourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1858,7 +1930,7 @@ List of Resource IDs referred into query.
 The resource URI over which log search query is to be run.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlert-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L55">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L62">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1866,7 +1938,7 @@ The resource URI over which log search query is to be run.
 The description of the scheduled query rule.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlert-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L59">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L66">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1874,7 +1946,7 @@ The description of the scheduled query rule.
 Whether this scheduled query rule is enabled.  Default is `true`.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlert-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L63">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L70">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>frequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1882,7 +1954,7 @@ Whether this scheduled query rule is enabled.  Default is `true`.
 Frequency (in minutes) at which rule condition should be evaluated.  Values must be between 5 and 1440 (inclusive).
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlert-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L19">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1891,12 +1963,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlert-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L64">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L71">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlert-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L68">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L75">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1904,7 +1976,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the scheduled query rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlert-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L72">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L79">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1912,12 +1984,12 @@ The name of the scheduled query rule. Changing this forces a new resource to be 
 Log search query.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlert-queryType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L73">property <b>queryType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L80">property <b>queryType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>queryType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlert-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L77">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L84">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1925,7 +1997,7 @@ Log search query.
 The name of the resource group in which to create the scheduled query rule instance.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlert-severity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L81">property <b>severity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L88">property <b>severity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>severity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1933,12 +2005,12 @@ The name of the resource group in which to create the scheduled query rule insta
 Severity of the alert. Possible values include: 0, 1, 2, 3, or 4.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlert-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L82">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L89">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlert-throttling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L86">property <b>throttling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L93">property <b>throttling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>throttling: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1946,7 +2018,7 @@ Severity of the alert. Possible values include: 0, 1, 2, 3, or 4.
 Time (in minutes) for which Alerts should be throttled or suppressed.  Values must be between 0 and 10000 (inclusive).
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlert-timeWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L90">property <b>timeWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L97">property <b>timeWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1954,7 +2026,7 @@ Time (in minutes) for which Alerts should be throttled or suppressed.  Values mu
 Time window for which data needs to be fetched for query (must be greater than or equal to `frequency`).  Values must be between 5 and 2880 (inclusive).
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlert-trigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L94">property <b>trigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L101">property <b>trigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>trigger: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScheduledQueryRulesAlertTrigger'>ScheduledQueryRulesAlertTrigger</a>&gt;;</code></pre>
@@ -1962,7 +2034,7 @@ Time window for which data needs to be fetched for query (must be greater than o
 The condition that results in the alert rule being run.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlert-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L19">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1971,7 +2043,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ScheduledQueryRulesLog" data-link-title="ScheduledQueryRulesLog">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L19">
         Resource <strong>ScheduledQueryRulesLog</strong>
     </a>
 </h3>
@@ -1980,8 +2052,16 @@ deployments.
 
 Manages a LogToMetricAction Scheduled Query Rules resource within Azure Monitor.
 
+#### Import
+
+Scheduled Query Rule Log can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:monitoring/scheduledQueryRulesLog:ScheduledQueryRulesLog example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Insights/scheduledQueryRules/myrulename
+```
+
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLog-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L73"> <b>constructor</b></a>
 </h4>
 
 
@@ -1995,7 +2075,7 @@ Create a ScheduledQueryRulesLog resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLog-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L22">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L29">method <b>get</b></a>
 </h4>
 
 
@@ -2006,14 +2086,14 @@ Get an existing ScheduledQueryRulesLog resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLog-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L19">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLog-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L40">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2024,12 +2104,12 @@ Returns true if the given object is an instance of ScheduledQueryRulesLog.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLog-authorizedResourceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L40">property <b>authorizedResourceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L47">property <b>authorizedResourceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizedResourceIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLog-criteria">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L44">property <b>criteria</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L51">property <b>criteria</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>criteria: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScheduledQueryRulesLogCriteria'>ScheduledQueryRulesLogCriteria</a>&gt;;</code></pre>
@@ -2037,7 +2117,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A `criteria` block as defined below.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLog-dataSourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L48">property <b>dataSourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L55">property <b>dataSourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataSourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2045,7 +2125,7 @@ A `criteria` block as defined below.
 The resource uri over which log search query is to be run.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLog-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L52">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L59">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2053,7 +2133,7 @@ The resource uri over which log search query is to be run.
 The description of the scheduled query rule.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLog-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L56">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L63">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2061,7 +2141,7 @@ The description of the scheduled query rule.
 Whether this scheduled query rule is enabled.  Default is `true`.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLog-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L19">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2070,12 +2150,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLog-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L57">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L64">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLog-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L68">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2083,7 +2163,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the scheduled query rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLog-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L65">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L72">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2091,12 +2171,12 @@ The name of the scheduled query rule. Changing this forces a new resource to be 
 The name of the resource group in which to create the scheduled query rule instance.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLog-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L66">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L73">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLog-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L19">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2105,7 +2185,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SmartDetectorAlertRule" data-link-title="SmartDetectorAlertRule">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L47">
         Resource <strong>SmartDetectorAlertRule</strong>
     </a>
 </h3>
@@ -2142,8 +2222,16 @@ const exampleSmartDetectorAlertRule = new azure.monitoring.SmartDetectorAlertRul
 });
 ```
 
+#### Import
+
+Monitor Smart Detector Alert Rule can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:monitoring/smartDetectorAlertRule:SmartDetectorAlertRule example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.AlertsManagement/smartdetectoralertrules/rule1
+```
+
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L107"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L114"> <b>constructor</b></a>
 </h4>
 
 
@@ -2157,7 +2245,7 @@ Create a SmartDetectorAlertRule resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L57">method <b>get</b></a>
 </h4>
 
 
@@ -2168,14 +2256,14 @@ Get an existing SmartDetectorAlertRule resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L47">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L68">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2186,7 +2274,7 @@ Returns true if the given object is an instance of SmartDetectorAlertRule.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRule-actionGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L71">property <b>actionGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L78">property <b>actionGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>actionGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SmartDetectorAlertRuleActionGroup'>SmartDetectorAlertRuleActionGroup</a>&gt;;</code></pre>
@@ -2194,7 +2282,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 An `actionGroup` block as defined below.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRule-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L75">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L82">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2202,7 +2290,7 @@ An `actionGroup` block as defined below.
 Specifies a description for the Smart Detector Alert Rule.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRule-detectorType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L79">property <b>detectorType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L86">property <b>detectorType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>detectorType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2210,7 +2298,7 @@ Specifies a description for the Smart Detector Alert Rule.
 Specifies the Built-In Smart Detector type that this alert rule will use. Currently the only possible value is `FailureAnomaliesDetector`.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRule-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L83">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L90">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2218,7 +2306,7 @@ Specifies the Built-In Smart Detector type that this alert rule will use. Curren
 Is the Smart Detector Alert Rule enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRule-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L87">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L94">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>frequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2226,7 +2314,7 @@ Is the Smart Detector Alert Rule enabled? Defaults to `true`.
 Specifies the frequency of this Smart Detector Alert Rule in ISO8601 format.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L47">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2235,7 +2323,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L91">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L98">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2243,7 +2331,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the Monitor Smart Detector Alert Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRule-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L95">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L102">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2251,7 +2339,7 @@ Specifies the name of the Monitor Smart Detector Alert Rule. Changing this force
 Specifies the name of the resource group in which the Monitor Smart Detector Alert Rule should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRule-scopeResourceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L99">property <b>scopeResourceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L106">property <b>scopeResourceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scopeResourceIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -2259,7 +2347,7 @@ Specifies the name of the resource group in which the Monitor Smart Detector Ale
 Specifies the scopes of this Smart Detector Alert Rule.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRule-severity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L103">property <b>severity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L110">property <b>severity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>severity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2267,7 +2355,7 @@ Specifies the scopes of this Smart Detector Alert Rule.
 Specifies the severity of this Smart Detector Alert Rule. Possible values are `Sev0`, `Sev1`, `Sev2`, `Sev3` or `Sev4`.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRule-throttlingDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L107">property <b>throttlingDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L114">property <b>throttlingDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>throttlingDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2275,7 +2363,7 @@ Specifies the severity of this Smart Detector Alert Rule. Possible values are `S
 Specifies the duration (in ISO8601 format) to wait before notifying on the alert rule again.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L47">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2286,7 +2374,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getActionGroup" data-link-title="getActionGroup">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getActionGroup.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getActionGroup.ts#L24">
         Function <strong>getActionGroup</strong>
     </a>
 </h3>
@@ -2311,7 +2399,7 @@ export const actionGroupId = example.then(example => example.id);
 ```
 
 <h3 class="pdoc-module-header" id="getDiagnosticCategories" data-link-title="getDiagnosticCategories">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L26">
         Function <strong>getDiagnosticCategories</strong>
     </a>
 </h3>
@@ -2338,7 +2426,7 @@ const exampleDiagnosticCategories = exampleKeyVault.then(exampleKeyVault => azur
 ```
 
 <h3 class="pdoc-module-header" id="getLogProfile" data-link-title="getLogProfile">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getLogProfile.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getLogProfile.ts#L23">
         Function <strong>getLogProfile</strong>
     </a>
 </h3>
@@ -2362,7 +2450,7 @@ export const logProfileStorageAccountId = example.then(example => example.storag
 ```
 
 <h3 class="pdoc-module-header" id="getScheduledQueryRulesAlert" data-link-title="getScheduledQueryRulesAlert">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L25">
         Function <strong>getScheduledQueryRulesAlert</strong>
     </a>
 </h3>
@@ -2388,7 +2476,7 @@ export const queryRuleId = example.id;
 ```
 
 <h3 class="pdoc-module-header" id="getScheduledQueryRulesLog" data-link-title="getScheduledQueryRulesLog">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L25">
         Function <strong>getScheduledQueryRulesLog</strong>
     </a>
 </h3>
@@ -2416,7 +2504,7 @@ export const queryRuleId = example.id;
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ActionGroupArgs" data-link-title="ActionGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L309">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L316">
         interface <strong>ActionGroupArgs</strong>
     </a>
 </h3>
@@ -2426,7 +2514,7 @@ export const queryRuleId = example.id;
 The set of arguments for constructing a ActionGroup resource.
 
 <h4 class="pdoc-member-header" id="ActionGroupArgs-armRoleReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L313">property <b>armRoleReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L320">property <b>armRoleReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>armRoleReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupArmRoleReceiver'>ActionGroupArmRoleReceiver</a>&gt;[]&gt;;</code></pre>
@@ -2434,7 +2522,7 @@ The set of arguments for constructing a ActionGroup resource.
 One or more `armRoleReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroupArgs-automationRunbookReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L317">property <b>automationRunbookReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L324">property <b>automationRunbookReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationRunbookReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupAutomationRunbookReceiver'>ActionGroupAutomationRunbookReceiver</a>&gt;[]&gt;;</code></pre>
@@ -2442,7 +2530,7 @@ One or more `armRoleReceiver` blocks as defined below.
 One or more `automationRunbookReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroupArgs-azureAppPushReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L321">property <b>azureAppPushReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L328">property <b>azureAppPushReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureAppPushReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupAzureAppPushReceiver'>ActionGroupAzureAppPushReceiver</a>&gt;[]&gt;;</code></pre>
@@ -2450,7 +2538,7 @@ One or more `automationRunbookReceiver` blocks as defined below.
 One or more `azureAppPushReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroupArgs-azureFunctionReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L325">property <b>azureFunctionReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L332">property <b>azureFunctionReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureFunctionReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupAzureFunctionReceiver'>ActionGroupAzureFunctionReceiver</a>&gt;[]&gt;;</code></pre>
@@ -2458,7 +2546,7 @@ One or more `azureAppPushReceiver` blocks as defined below.
 One or more `azureFunctionReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroupArgs-emailReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L329">property <b>emailReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L336">property <b>emailReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupEmailReceiver'>ActionGroupEmailReceiver</a>&gt;[]&gt;;</code></pre>
@@ -2466,7 +2554,7 @@ One or more `azureFunctionReceiver` blocks as defined below.
 One or more `emailReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroupArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L333">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L340">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2474,7 +2562,7 @@ One or more `emailReceiver` blocks as defined below.
 Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ActionGroupArgs-itsmReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L337">property <b>itsmReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L344">property <b>itsmReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>itsmReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupItsmReceiver'>ActionGroupItsmReceiver</a>&gt;[]&gt;;</code></pre>
@@ -2482,7 +2570,7 @@ Whether this action group is enabled. If an action group is not enabled, then no
 One or more `itsmReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroupArgs-logicAppReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L341">property <b>logicAppReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L348">property <b>logicAppReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicAppReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupLogicAppReceiver'>ActionGroupLogicAppReceiver</a>&gt;[]&gt;;</code></pre>
@@ -2490,7 +2578,7 @@ One or more `itsmReceiver` blocks as defined below.
 One or more `logicAppReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L345">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L352">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2498,7 +2586,7 @@ One or more `logicAppReceiver` blocks as defined below.
 The name of the Action Group. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionGroupArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L349">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L356">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2506,7 +2594,7 @@ The name of the Action Group. Changing this forces a new resource to be created.
 The name of the resource group in which to create the Action Group instance.
 
 <h4 class="pdoc-member-header" id="ActionGroupArgs-shortName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L353">property <b>shortName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L360">property <b>shortName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shortName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2514,7 +2602,7 @@ The name of the resource group in which to create the Action Group instance.
 The short name of the action group. This will be used in SMS messages.
 
 <h4 class="pdoc-member-header" id="ActionGroupArgs-smsReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L357">property <b>smsReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L364">property <b>smsReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>smsReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupSmsReceiver'>ActionGroupSmsReceiver</a>&gt;[]&gt;;</code></pre>
@@ -2522,7 +2610,7 @@ The short name of the action group. This will be used in SMS messages.
 One or more `smsReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L361">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L368">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2530,7 +2618,7 @@ One or more `smsReceiver` blocks as defined below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ActionGroupArgs-voiceReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L365">property <b>voiceReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L372">property <b>voiceReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>voiceReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupVoiceReceiver'>ActionGroupVoiceReceiver</a>&gt;[]&gt;;</code></pre>
@@ -2538,7 +2626,7 @@ A mapping of tags to assign to the resource.
 One or more `voiceReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroupArgs-webhookReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L369">property <b>webhookReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L376">property <b>webhookReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>webhookReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupWebhookReceiver'>ActionGroupWebhookReceiver</a>&gt;[]&gt;;</code></pre>
@@ -2546,7 +2634,7 @@ One or more `voiceReceiver` blocks as defined below.
 One or more `webhookReceiver` blocks as defined below.
 
 <h3 class="pdoc-module-header" id="ActionGroupState" data-link-title="ActionGroupState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L243">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L250">
         interface <strong>ActionGroupState</strong>
     </a>
 </h3>
@@ -2556,7 +2644,7 @@ One or more `webhookReceiver` blocks as defined below.
 Input properties used for looking up and filtering ActionGroup resources.
 
 <h4 class="pdoc-member-header" id="ActionGroupState-armRoleReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L247">property <b>armRoleReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L254">property <b>armRoleReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>armRoleReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupArmRoleReceiver'>ActionGroupArmRoleReceiver</a>&gt;[]&gt;;</code></pre>
@@ -2564,7 +2652,7 @@ Input properties used for looking up and filtering ActionGroup resources.
 One or more `armRoleReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroupState-automationRunbookReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L251">property <b>automationRunbookReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L258">property <b>automationRunbookReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationRunbookReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupAutomationRunbookReceiver'>ActionGroupAutomationRunbookReceiver</a>&gt;[]&gt;;</code></pre>
@@ -2572,7 +2660,7 @@ One or more `armRoleReceiver` blocks as defined below.
 One or more `automationRunbookReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroupState-azureAppPushReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L255">property <b>azureAppPushReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L262">property <b>azureAppPushReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureAppPushReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupAzureAppPushReceiver'>ActionGroupAzureAppPushReceiver</a>&gt;[]&gt;;</code></pre>
@@ -2580,7 +2668,7 @@ One or more `automationRunbookReceiver` blocks as defined below.
 One or more `azureAppPushReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroupState-azureFunctionReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L259">property <b>azureFunctionReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L266">property <b>azureFunctionReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureFunctionReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupAzureFunctionReceiver'>ActionGroupAzureFunctionReceiver</a>&gt;[]&gt;;</code></pre>
@@ -2588,7 +2676,7 @@ One or more `azureAppPushReceiver` blocks as defined below.
 One or more `azureFunctionReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroupState-emailReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L263">property <b>emailReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L270">property <b>emailReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupEmailReceiver'>ActionGroupEmailReceiver</a>&gt;[]&gt;;</code></pre>
@@ -2596,7 +2684,7 @@ One or more `azureFunctionReceiver` blocks as defined below.
 One or more `emailReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroupState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L267">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L274">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2604,7 +2692,7 @@ One or more `emailReceiver` blocks as defined below.
 Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ActionGroupState-itsmReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L271">property <b>itsmReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L278">property <b>itsmReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>itsmReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupItsmReceiver'>ActionGroupItsmReceiver</a>&gt;[]&gt;;</code></pre>
@@ -2612,7 +2700,7 @@ Whether this action group is enabled. If an action group is not enabled, then no
 One or more `itsmReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroupState-logicAppReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L275">property <b>logicAppReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L282">property <b>logicAppReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicAppReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupLogicAppReceiver'>ActionGroupLogicAppReceiver</a>&gt;[]&gt;;</code></pre>
@@ -2620,7 +2708,7 @@ One or more `itsmReceiver` blocks as defined below.
 One or more `logicAppReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L279">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L286">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2628,7 +2716,7 @@ One or more `logicAppReceiver` blocks as defined below.
 The name of the Action Group. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionGroupState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L283">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L290">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2636,7 +2724,7 @@ The name of the Action Group. Changing this forces a new resource to be created.
 The name of the resource group in which to create the Action Group instance.
 
 <h4 class="pdoc-member-header" id="ActionGroupState-shortName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L287">property <b>shortName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L294">property <b>shortName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shortName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2644,7 +2732,7 @@ The name of the resource group in which to create the Action Group instance.
 The short name of the action group. This will be used in SMS messages.
 
 <h4 class="pdoc-member-header" id="ActionGroupState-smsReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L291">property <b>smsReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L298">property <b>smsReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>smsReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupSmsReceiver'>ActionGroupSmsReceiver</a>&gt;[]&gt;;</code></pre>
@@ -2652,7 +2740,7 @@ The short name of the action group. This will be used in SMS messages.
 One or more `smsReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L295">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L302">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2660,7 +2748,7 @@ One or more `smsReceiver` blocks as defined below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ActionGroupState-voiceReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L299">property <b>voiceReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L306">property <b>voiceReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>voiceReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupVoiceReceiver'>ActionGroupVoiceReceiver</a>&gt;[]&gt;;</code></pre>
@@ -2668,7 +2756,7 @@ A mapping of tags to assign to the resource.
 One or more `voiceReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActionGroupState-webhookReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionGroup.ts#L303">property <b>webhookReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionGroup.ts#L310">property <b>webhookReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>webhookReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupWebhookReceiver'>ActionGroupWebhookReceiver</a>&gt;[]&gt;;</code></pre>
@@ -2676,7 +2764,7 @@ One or more `voiceReceiver` blocks as defined below.
 One or more `webhookReceiver` blocks as defined below.
 
 <h3 class="pdoc-module-header" id="ActionRuleActionGroupArgs" data-link-title="ActionRuleActionGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L193">
         interface <strong>ActionRuleActionGroupArgs</strong>
     </a>
 </h3>
@@ -2686,7 +2774,7 @@ One or more `webhookReceiver` blocks as defined below.
 The set of arguments for constructing a ActionRuleActionGroup resource.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroupArgs-actionGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L190">property <b>actionGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L197">property <b>actionGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2694,7 +2782,7 @@ The set of arguments for constructing a ActionRuleActionGroup resource.
 Specifies the resource id of monitor action group.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroupArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L194">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L201">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionRuleActionGroupCondition'>ActionRuleActionGroupCondition</a>&gt;;</code></pre>
@@ -2702,7 +2790,7 @@ Specifies the resource id of monitor action group.
 A `condition` block as defined below.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L198">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L205">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2710,7 +2798,7 @@ A `condition` block as defined below.
 Specifies a description for the Action Rule.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroupArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L202">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L209">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2718,7 +2806,7 @@ Specifies a description for the Action Rule.
 Is the Action Rule enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L206">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L213">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2726,7 +2814,7 @@ Is the Action Rule enabled? Defaults to `true`.
 Specifies the name of the Monitor Action Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroupArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L210">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L217">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2734,7 +2822,7 @@ Specifies the name of the Monitor Action Rule. Changing this forces a new resour
 Specifies the name of the resource group in which the Monitor Action Rule should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroupArgs-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L214">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L221">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionRuleActionGroupScope'>ActionRuleActionGroupScope</a>&gt;;</code></pre>
@@ -2742,7 +2830,7 @@ Specifies the name of the resource group in which the Monitor Action Rule should
 A `scope` block as defined below.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L218">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L225">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2750,7 +2838,7 @@ A `scope` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ActionRuleActionGroupState" data-link-title="ActionRuleActionGroupState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L155">
         interface <strong>ActionRuleActionGroupState</strong>
     </a>
 </h3>
@@ -2760,7 +2848,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering ActionRuleActionGroup resources.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroupState-actionGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L152">property <b>actionGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L159">property <b>actionGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2768,7 +2856,7 @@ Input properties used for looking up and filtering ActionRuleActionGroup resourc
 Specifies the resource id of monitor action group.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroupState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L156">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L163">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionRuleActionGroupCondition'>ActionRuleActionGroupCondition</a>&gt;;</code></pre>
@@ -2776,7 +2864,7 @@ Specifies the resource id of monitor action group.
 A `condition` block as defined below.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L160">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L167">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2784,7 +2872,7 @@ A `condition` block as defined below.
 Specifies a description for the Action Rule.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroupState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L164">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L171">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2792,7 +2880,7 @@ Specifies a description for the Action Rule.
 Is the Action Rule enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L168">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L175">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2800,7 +2888,7 @@ Is the Action Rule enabled? Defaults to `true`.
 Specifies the name of the Monitor Action Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroupState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L172">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L179">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2808,7 +2896,7 @@ Specifies the name of the Monitor Action Rule. Changing this forces a new resour
 Specifies the name of the resource group in which the Monitor Action Rule should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroupState-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L176">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L183">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionRuleActionGroupScope'>ActionRuleActionGroupScope</a>&gt;;</code></pre>
@@ -2816,7 +2904,7 @@ Specifies the name of the resource group in which the Monitor Action Rule should
 A `scope` block as defined below.
 
 <h4 class="pdoc-member-header" id="ActionRuleActionGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L180">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleActionGroup.ts#L187">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2824,7 +2912,7 @@ A `scope` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ActionRuleSuppressionArgs" data-link-title="ActionRuleSuppressionArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L194">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L201">
         interface <strong>ActionRuleSuppressionArgs</strong>
     </a>
 </h3>
@@ -2834,7 +2922,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a ActionRuleSuppression resource.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppressionArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L198">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L205">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionRuleSuppressionCondition'>ActionRuleSuppressionCondition</a>&gt;;</code></pre>
@@ -2842,7 +2930,7 @@ The set of arguments for constructing a ActionRuleSuppression resource.
 A `condition` block as defined below.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppressionArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L202">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L209">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2850,7 +2938,7 @@ A `condition` block as defined below.
 Specifies a description for the Action Rule.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppressionArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L206">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L213">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2858,7 +2946,7 @@ Specifies a description for the Action Rule.
 Is the Action Rule enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppressionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L210">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L217">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2866,7 +2954,7 @@ Is the Action Rule enabled? Defaults to `true`.
 Specifies the name of the Monitor Action Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppressionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L214">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L221">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2874,7 +2962,7 @@ Specifies the name of the Monitor Action Rule. Changing this forces a new resour
 Specifies the name of the resource group in which the Monitor Action Rule should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppressionArgs-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L218">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L225">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionRuleSuppressionScope'>ActionRuleSuppressionScope</a>&gt;;</code></pre>
@@ -2882,7 +2970,7 @@ Specifies the name of the resource group in which the Monitor Action Rule should
 A `scope` block as defined below.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppressionArgs-suppression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L222">property <b>suppression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L229">property <b>suppression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>suppression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionRuleSuppressionSuppression'>ActionRuleSuppressionSuppression</a>&gt;;</code></pre>
@@ -2890,7 +2978,7 @@ A `scope` block as defined below.
 A `suppression` block as defined below.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppressionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L226">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L233">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2898,7 +2986,7 @@ A `suppression` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ActionRuleSuppressionState" data-link-title="ActionRuleSuppressionState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L163">
         interface <strong>ActionRuleSuppressionState</strong>
     </a>
 </h3>
@@ -2908,7 +2996,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering ActionRuleSuppression resources.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppressionState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L160">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L167">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionRuleSuppressionCondition'>ActionRuleSuppressionCondition</a>&gt;;</code></pre>
@@ -2916,7 +3004,7 @@ Input properties used for looking up and filtering ActionRuleSuppression resourc
 A `condition` block as defined below.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppressionState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L164">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L171">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2924,7 +3012,7 @@ A `condition` block as defined below.
 Specifies a description for the Action Rule.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppressionState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L168">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L175">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2932,7 +3020,7 @@ Specifies a description for the Action Rule.
 Is the Action Rule enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppressionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L172">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L179">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2940,7 +3028,7 @@ Is the Action Rule enabled? Defaults to `true`.
 Specifies the name of the Monitor Action Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppressionState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L176">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L183">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2948,7 +3036,7 @@ Specifies the name of the Monitor Action Rule. Changing this forces a new resour
 Specifies the name of the resource group in which the Monitor Action Rule should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppressionState-scope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L180">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L187">property <b>scope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionRuleSuppressionScope'>ActionRuleSuppressionScope</a>&gt;;</code></pre>
@@ -2956,7 +3044,7 @@ Specifies the name of the resource group in which the Monitor Action Rule should
 A `scope` block as defined below.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppressionState-suppression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L184">property <b>suppression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L191">property <b>suppression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>suppression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionRuleSuppressionSuppression'>ActionRuleSuppressionSuppression</a>&gt;;</code></pre>
@@ -2964,7 +3052,7 @@ A `scope` block as defined below.
 A `suppression` block as defined below.
 
 <h4 class="pdoc-member-header" id="ActionRuleSuppressionState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/actionRuleSuppression.ts#L188">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/actionRuleSuppression.ts#L195">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2972,7 +3060,7 @@ A `suppression` block as defined below.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ActivityLogAlertArgs" data-link-title="ActivityLogAlertArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L204">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L211">
         interface <strong>ActivityLogAlertArgs</strong>
     </a>
 </h3>
@@ -2982,7 +3070,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a ActivityLogAlert resource.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlertArgs-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L208">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L215">property <b>actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActivityLogAlertAction'>ActivityLogAlertAction</a>&gt;[]&gt;;</code></pre>
@@ -2990,7 +3078,7 @@ The set of arguments for constructing a ActivityLogAlert resource.
 One or more `action` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlertArgs-criteria">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L212">property <b>criteria</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L219">property <b>criteria</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>criteria: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActivityLogAlertCriteria'>ActivityLogAlertCriteria</a>&gt;;</code></pre>
@@ -2998,7 +3086,7 @@ One or more `action` blocks as defined below.
 A `criteria` block as defined below.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlertArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L216">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L223">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3006,7 +3094,7 @@ A `criteria` block as defined below.
 The description of this activity log alert.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlertArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L220">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L227">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3014,7 +3102,7 @@ The description of this activity log alert.
 Should this Activity Log Alert be enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlertArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L224">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L231">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3022,7 +3110,7 @@ Should this Activity Log Alert be enabled? Defaults to `true`.
 The name of the activity log alert. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlertArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L228">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L235">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3030,7 +3118,7 @@ The name of the activity log alert. Changing this forces a new resource to be cr
 The name of the resource group in which to create the activity log alert instance.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlertArgs-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L232">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L239">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3038,7 +3126,7 @@ The name of the resource group in which to create the activity log alert instanc
 The Scope at which the Activity Log should be applied, for example a the Resource ID of a Subscription or a Resource (such as a Storage Account).
 
 <h4 class="pdoc-member-header" id="ActivityLogAlertArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L236">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L243">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3046,7 +3134,7 @@ The Scope at which the Activity Log should be applied, for example a the Resourc
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ActivityLogAlertState" data-link-title="ActivityLogAlertState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L173">
         interface <strong>ActivityLogAlertState</strong>
     </a>
 </h3>
@@ -3056,7 +3144,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering ActivityLogAlert resources.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlertState-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L170">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L177">property <b>actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActivityLogAlertAction'>ActivityLogAlertAction</a>&gt;[]&gt;;</code></pre>
@@ -3064,7 +3152,7 @@ Input properties used for looking up and filtering ActivityLogAlert resources.
 One or more `action` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlertState-criteria">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L174">property <b>criteria</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L181">property <b>criteria</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>criteria?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActivityLogAlertCriteria'>ActivityLogAlertCriteria</a>&gt;;</code></pre>
@@ -3072,7 +3160,7 @@ One or more `action` blocks as defined below.
 A `criteria` block as defined below.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlertState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L178">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L185">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3080,7 +3168,7 @@ A `criteria` block as defined below.
 The description of this activity log alert.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlertState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L182">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L189">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3088,7 +3176,7 @@ The description of this activity log alert.
 Should this Activity Log Alert be enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlertState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L186">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L193">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3096,7 +3184,7 @@ Should this Activity Log Alert be enabled? Defaults to `true`.
 The name of the activity log alert. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlertState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L190">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L197">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3104,7 +3192,7 @@ The name of the activity log alert. Changing this forces a new resource to be cr
 The name of the resource group in which to create the activity log alert instance.
 
 <h4 class="pdoc-member-header" id="ActivityLogAlertState-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L194">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L201">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3112,7 +3200,7 @@ The name of the resource group in which to create the activity log alert instanc
 The Scope at which the Activity Log should be applied, for example a the Resource ID of a Subscription or a Resource (such as a Storage Account).
 
 <h4 class="pdoc-member-header" id="ActivityLogAlertState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/activityLogAlert.ts#L198">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/activityLogAlert.ts#L205">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3120,7 +3208,7 @@ The Scope at which the Activity Log should be applied, for example a the Resourc
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="AutoscaleSettingArgs" data-link-title="AutoscaleSettingArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L386">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L393">
         interface <strong>AutoscaleSettingArgs</strong>
     </a>
 </h3>
@@ -3130,7 +3218,7 @@ A mapping of tags to assign to the resource.
 The set of arguments for constructing a AutoscaleSetting resource.
 
 <h4 class="pdoc-member-header" id="AutoscaleSettingArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L390">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L397">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3138,7 +3226,7 @@ The set of arguments for constructing a AutoscaleSetting resource.
 Specifies whether automatic scaling is enabled for the target resource. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="AutoscaleSettingArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L394">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L401">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3146,7 +3234,7 @@ Specifies whether automatic scaling is enabled for the target resource. Defaults
 Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AutoscaleSettingArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L398">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L405">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3154,7 +3242,7 @@ Specifies the supported Azure location where the AutoScale Setting should exist.
 The name of the AutoScale Setting. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AutoscaleSettingArgs-notification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L402">property <b>notification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L409">property <b>notification</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AutoscaleSettingNotification'>AutoscaleSettingNotification</a>&gt;;</code></pre>
@@ -3162,7 +3250,7 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 Specifies a `notification` block as defined below.
 
 <h4 class="pdoc-member-header" id="AutoscaleSettingArgs-profiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L406">property <b>profiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L413">property <b>profiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AutoscaleSettingProfile'>AutoscaleSettingProfile</a>&gt;[]&gt;;</code></pre>
@@ -3170,7 +3258,7 @@ Specifies a `notification` block as defined below.
 Specifies one or more (up to 20) `profile` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="AutoscaleSettingArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L410">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L417">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3178,7 +3266,7 @@ Specifies one or more (up to 20) `profile` blocks as defined below.
 The name of the Resource Group in the AutoScale Setting should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AutoscaleSettingArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L414">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L421">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3186,7 +3274,7 @@ The name of the Resource Group in the AutoScale Setting should be created. Chang
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="AutoscaleSettingArgs-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L418">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L425">property <b>targetResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3194,7 +3282,7 @@ A mapping of tags to assign to the resource.
 Specifies the resource ID of the resource that the autoscale setting should be added to.
 
 <h3 class="pdoc-module-header" id="AutoscaleSettingState" data-link-title="AutoscaleSettingState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L348">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L355">
         interface <strong>AutoscaleSettingState</strong>
     </a>
 </h3>
@@ -3204,7 +3292,7 @@ Specifies the resource ID of the resource that the autoscale setting should be a
 Input properties used for looking up and filtering AutoscaleSetting resources.
 
 <h4 class="pdoc-member-header" id="AutoscaleSettingState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L352">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L359">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3212,7 +3300,7 @@ Input properties used for looking up and filtering AutoscaleSetting resources.
 Specifies whether automatic scaling is enabled for the target resource. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="AutoscaleSettingState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L356">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L363">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3220,7 +3308,7 @@ Specifies whether automatic scaling is enabled for the target resource. Defaults
 Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AutoscaleSettingState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L360">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L367">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3228,7 +3316,7 @@ Specifies the supported Azure location where the AutoScale Setting should exist.
 The name of the AutoScale Setting. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AutoscaleSettingState-notification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L364">property <b>notification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L371">property <b>notification</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AutoscaleSettingNotification'>AutoscaleSettingNotification</a>&gt;;</code></pre>
@@ -3236,7 +3324,7 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 Specifies a `notification` block as defined below.
 
 <h4 class="pdoc-member-header" id="AutoscaleSettingState-profiles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L368">property <b>profiles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L375">property <b>profiles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AutoscaleSettingProfile'>AutoscaleSettingProfile</a>&gt;[]&gt;;</code></pre>
@@ -3244,7 +3332,7 @@ Specifies a `notification` block as defined below.
 Specifies one or more (up to 20) `profile` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="AutoscaleSettingState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L372">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L379">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3252,7 +3340,7 @@ Specifies one or more (up to 20) `profile` blocks as defined below.
 The name of the Resource Group in the AutoScale Setting should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AutoscaleSettingState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L376">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L383">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3260,7 +3348,7 @@ The name of the Resource Group in the AutoScale Setting should be created. Chang
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="AutoscaleSettingState-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/autoscaleSetting.ts#L380">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/autoscaleSetting.ts#L387">property <b>targetResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3268,7 +3356,7 @@ A mapping of tags to assign to the resource.
 Specifies the resource ID of the resource that the autoscale setting should be added to.
 
 <h3 class="pdoc-module-header" id="DiagnosticSettingArgs" data-link-title="DiagnosticSettingArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L203">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L210">
         interface <strong>DiagnosticSettingArgs</strong>
     </a>
 </h3>
@@ -3278,7 +3366,7 @@ Specifies the resource ID of the resource that the autoscale setting should be a
 The set of arguments for constructing a DiagnosticSetting resource.
 
 <h4 class="pdoc-member-header" id="DiagnosticSettingArgs-eventhubAuthorizationRuleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L207">property <b>eventhubAuthorizationRuleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L214">property <b>eventhubAuthorizationRuleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventhubAuthorizationRuleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3286,7 +3374,7 @@ The set of arguments for constructing a DiagnosticSetting resource.
 Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagnostics Data. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DiagnosticSettingArgs-eventhubName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L211">property <b>eventhubName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L218">property <b>eventhubName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventhubName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3294,7 +3382,7 @@ Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagn
 Specifies the name of the Event Hub where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DiagnosticSettingArgs-logAnalyticsDestinationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L215">property <b>logAnalyticsDestinationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L222">property <b>logAnalyticsDestinationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logAnalyticsDestinationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3302,7 +3390,7 @@ Specifies the name of the Event Hub where Diagnostics Data should be sent. Chang
 When set to 'Dedicated' logs sent to a Log Analytics workspace will go into resource specific tables, instead of the legacy AzureDiagnostics table.
 
 <h4 class="pdoc-member-header" id="DiagnosticSettingArgs-logAnalyticsWorkspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L219">property <b>logAnalyticsWorkspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L226">property <b>logAnalyticsWorkspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logAnalyticsWorkspaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3310,7 +3398,7 @@ When set to 'Dedicated' logs sent to a Log Analytics workspace will go into reso
 Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DiagnosticSettingArgs-logs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L223">property <b>logs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L230">property <b>logs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DiagnosticSettingLog'>DiagnosticSettingLog</a>&gt;[]&gt;;</code></pre>
@@ -3318,7 +3406,7 @@ Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be s
 One or more `log` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="DiagnosticSettingArgs-metrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L227">property <b>metrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L234">property <b>metrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DiagnosticSettingMetric'>DiagnosticSettingMetric</a>&gt;[]&gt;;</code></pre>
@@ -3326,7 +3414,7 @@ One or more `log` blocks as defined below.
 One or more `metric` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="DiagnosticSettingArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L231">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L238">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3334,7 +3422,7 @@ One or more `metric` blocks as defined below.
 Specifies the name of the Diagnostic Setting. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DiagnosticSettingArgs-storageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L235">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L242">property <b>storageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3342,7 +3430,7 @@ Specifies the name of the Diagnostic Setting. Changing this forces a new resourc
 The ID of the Storage Account where logs should be sent. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DiagnosticSettingArgs-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L239">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L246">property <b>targetResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3350,7 +3438,7 @@ The ID of the Storage Account where logs should be sent. Changing this forces a 
 The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="DiagnosticSettingState" data-link-title="DiagnosticSettingState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L161">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L168">
         interface <strong>DiagnosticSettingState</strong>
     </a>
 </h3>
@@ -3360,7 +3448,7 @@ The ID of an existing Resource on which to configure Diagnostic Settings. Changi
 Input properties used for looking up and filtering DiagnosticSetting resources.
 
 <h4 class="pdoc-member-header" id="DiagnosticSettingState-eventhubAuthorizationRuleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L165">property <b>eventhubAuthorizationRuleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L172">property <b>eventhubAuthorizationRuleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventhubAuthorizationRuleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3368,7 +3456,7 @@ Input properties used for looking up and filtering DiagnosticSetting resources.
 Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagnostics Data. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DiagnosticSettingState-eventhubName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L169">property <b>eventhubName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L176">property <b>eventhubName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventhubName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3376,7 +3464,7 @@ Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagn
 Specifies the name of the Event Hub where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DiagnosticSettingState-logAnalyticsDestinationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L173">property <b>logAnalyticsDestinationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L180">property <b>logAnalyticsDestinationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logAnalyticsDestinationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3384,7 +3472,7 @@ Specifies the name of the Event Hub where Diagnostics Data should be sent. Chang
 When set to 'Dedicated' logs sent to a Log Analytics workspace will go into resource specific tables, instead of the legacy AzureDiagnostics table.
 
 <h4 class="pdoc-member-header" id="DiagnosticSettingState-logAnalyticsWorkspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L177">property <b>logAnalyticsWorkspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L184">property <b>logAnalyticsWorkspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logAnalyticsWorkspaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3392,7 +3480,7 @@ When set to 'Dedicated' logs sent to a Log Analytics workspace will go into reso
 Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DiagnosticSettingState-logs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L181">property <b>logs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L188">property <b>logs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DiagnosticSettingLog'>DiagnosticSettingLog</a>&gt;[]&gt;;</code></pre>
@@ -3400,7 +3488,7 @@ Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be s
 One or more `log` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="DiagnosticSettingState-metrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L185">property <b>metrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L192">property <b>metrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DiagnosticSettingMetric'>DiagnosticSettingMetric</a>&gt;[]&gt;;</code></pre>
@@ -3408,7 +3496,7 @@ One or more `log` blocks as defined below.
 One or more `metric` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="DiagnosticSettingState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L189">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L196">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3416,7 +3504,7 @@ One or more `metric` blocks as defined below.
 Specifies the name of the Diagnostic Setting. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DiagnosticSettingState-storageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L193">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L200">property <b>storageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3424,7 +3512,7 @@ Specifies the name of the Diagnostic Setting. Changing this forces a new resourc
 The ID of the Storage Account where logs should be sent. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DiagnosticSettingState-targetResourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/diagnosticSetting.ts#L197">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/diagnosticSetting.ts#L204">property <b>targetResourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3432,7 +3520,7 @@ The ID of the Storage Account where logs should be sent. Changing this forces a 
 The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="GetActionGroupArgs" data-link-title="GetActionGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getActionGroup.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getActionGroup.ts#L41">
         interface <strong>GetActionGroupArgs</strong>
     </a>
 </h3>
@@ -3442,7 +3530,7 @@ The ID of an existing Resource on which to configure Diagnostic Settings. Changi
 A collection of arguments for invoking getActionGroup.
 
 <h4 class="pdoc-member-header" id="GetActionGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getActionGroup.ts#L46">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getActionGroup.ts#L45">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3450,7 +3538,7 @@ A collection of arguments for invoking getActionGroup.
 Specifies the name of the Action Group.
 
 <h4 class="pdoc-member-header" id="GetActionGroupArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getActionGroup.ts#L50">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getActionGroup.ts#L49">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3458,7 +3546,7 @@ Specifies the name of the Action Group.
 Specifies the name of the resource group the Action Group is located in.
 
 <h3 class="pdoc-module-header" id="GetActionGroupResult" data-link-title="GetActionGroupResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getActionGroup.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getActionGroup.ts#L55">
         interface <strong>GetActionGroupResult</strong>
     </a>
 </h3>
@@ -3468,7 +3556,7 @@ Specifies the name of the resource group the Action Group is located in.
 A collection of values returned by getActionGroup.
 
 <h4 class="pdoc-member-header" id="GetActionGroupResult-armRoleReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getActionGroup.ts#L60">property <b>armRoleReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getActionGroup.ts#L59">property <b>armRoleReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>armRoleReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupArmRoleReceiver'>GetActionGroupArmRoleReceiver</a>[];</code></pre>
@@ -3476,7 +3564,7 @@ A collection of values returned by getActionGroup.
 One or more `armRoleReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="GetActionGroupResult-automationRunbookReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getActionGroup.ts#L64">property <b>automationRunbookReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getActionGroup.ts#L63">property <b>automationRunbookReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automationRunbookReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupAutomationRunbookReceiver'>GetActionGroupAutomationRunbookReceiver</a>[];</code></pre>
@@ -3484,7 +3572,7 @@ One or more `armRoleReceiver` blocks as defined below.
 One or more `automationRunbookReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="GetActionGroupResult-azureAppPushReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getActionGroup.ts#L68">property <b>azureAppPushReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getActionGroup.ts#L67">property <b>azureAppPushReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureAppPushReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupAzureAppPushReceiver'>GetActionGroupAzureAppPushReceiver</a>[];</code></pre>
@@ -3492,7 +3580,7 @@ One or more `automationRunbookReceiver` blocks as defined below.
 One or more `azureAppPushReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="GetActionGroupResult-azureFunctionReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getActionGroup.ts#L72">property <b>azureFunctionReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getActionGroup.ts#L71">property <b>azureFunctionReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureFunctionReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupAzureFunctionReceiver'>GetActionGroupAzureFunctionReceiver</a>[];</code></pre>
@@ -3500,7 +3588,7 @@ One or more `azureAppPushReceiver` blocks as defined below.
 One or more `azureFunctionReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="GetActionGroupResult-emailReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getActionGroup.ts#L76">property <b>emailReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getActionGroup.ts#L75">property <b>emailReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupEmailReceiver'>GetActionGroupEmailReceiver</a>[];</code></pre>
@@ -3508,7 +3596,7 @@ One or more `azureFunctionReceiver` blocks as defined below.
 One or more `emailReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="GetActionGroupResult-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getActionGroup.ts#L80">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getActionGroup.ts#L79">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -3516,7 +3604,7 @@ One or more `emailReceiver` blocks as defined below.
 Whether this action group is enabled.
 
 <h4 class="pdoc-member-header" id="GetActionGroupResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getActionGroup.ts#L84">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getActionGroup.ts#L83">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3524,7 +3612,7 @@ Whether this action group is enabled.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetActionGroupResult-itsmReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getActionGroup.ts#L88">property <b>itsmReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getActionGroup.ts#L87">property <b>itsmReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>itsmReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupItsmReceiver'>GetActionGroupItsmReceiver</a>[];</code></pre>
@@ -3532,7 +3620,7 @@ The provider-assigned unique ID for this managed resource.
 One or more `itsmReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="GetActionGroupResult-logicAppReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getActionGroup.ts#L92">property <b>logicAppReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getActionGroup.ts#L91">property <b>logicAppReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicAppReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupLogicAppReceiver'>GetActionGroupLogicAppReceiver</a>[];</code></pre>
@@ -3540,7 +3628,7 @@ One or more `itsmReceiver` blocks as defined below.
 One or more `logicAppReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="GetActionGroupResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getActionGroup.ts#L96">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getActionGroup.ts#L95">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3548,12 +3636,12 @@ One or more `logicAppReceiver` blocks as defined below.
 The name of the webhook receiver.
 
 <h4 class="pdoc-member-header" id="GetActionGroupResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getActionGroup.ts#L97">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getActionGroup.ts#L96">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetActionGroupResult-shortName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getActionGroup.ts#L101">property <b>shortName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getActionGroup.ts#L100">property <b>shortName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shortName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3561,7 +3649,7 @@ The name of the webhook receiver.
 The short name of the action group.
 
 <h4 class="pdoc-member-header" id="GetActionGroupResult-smsReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getActionGroup.ts#L105">property <b>smsReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getActionGroup.ts#L104">property <b>smsReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>smsReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupSmsReceiver'>GetActionGroupSmsReceiver</a>[];</code></pre>
@@ -3569,7 +3657,7 @@ The short name of the action group.
 One or more `smsReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="GetActionGroupResult-voiceReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getActionGroup.ts#L109">property <b>voiceReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getActionGroup.ts#L108">property <b>voiceReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>voiceReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupVoiceReceiver'>GetActionGroupVoiceReceiver</a>[];</code></pre>
@@ -3577,7 +3665,7 @@ One or more `smsReceiver` blocks as defined below.
 One or more `voiceReceiver` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="GetActionGroupResult-webhookReceivers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getActionGroup.ts#L113">property <b>webhookReceivers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getActionGroup.ts#L112">property <b>webhookReceivers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>webhookReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupWebhookReceiver'>GetActionGroupWebhookReceiver</a>[];</code></pre>
@@ -3585,7 +3673,7 @@ One or more `voiceReceiver` blocks as defined below.
 One or more `webhookReceiver` blocks as defined below.
 
 <h3 class="pdoc-module-header" id="GetDiagnosticCategoriesArgs" data-link-title="GetDiagnosticCategoriesArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L42">
         interface <strong>GetDiagnosticCategoriesArgs</strong>
     </a>
 </h3>
@@ -3595,7 +3683,7 @@ One or more `webhookReceiver` blocks as defined below.
 A collection of arguments for invoking getDiagnosticCategories.
 
 <h4 class="pdoc-member-header" id="GetDiagnosticCategoriesArgs-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L47">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L46">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3603,7 +3691,7 @@ A collection of arguments for invoking getDiagnosticCategories.
 The ID of an existing Resource which Monitor Diagnostics Categories should be retrieved for.
 
 <h3 class="pdoc-module-header" id="GetDiagnosticCategoriesResult" data-link-title="GetDiagnosticCategoriesResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L52">
         interface <strong>GetDiagnosticCategoriesResult</strong>
     </a>
 </h3>
@@ -3613,7 +3701,7 @@ The ID of an existing Resource which Monitor Diagnostics Categories should be re
 A collection of values returned by getDiagnosticCategories.
 
 <h4 class="pdoc-member-header" id="GetDiagnosticCategoriesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L56">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3621,7 +3709,7 @@ A collection of values returned by getDiagnosticCategories.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDiagnosticCategoriesResult-logs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L61">property <b>logs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L60">property <b>logs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logs: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3629,7 +3717,7 @@ The provider-assigned unique ID for this managed resource.
 A list of the Log Categories supported for this Resource.
 
 <h4 class="pdoc-member-header" id="GetDiagnosticCategoriesResult-metrics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L65">property <b>metrics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L64">property <b>metrics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metrics: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3637,12 +3725,12 @@ A list of the Log Categories supported for this Resource.
 A list of the Metric Categories supported for this Resource.
 
 <h4 class="pdoc-member-header" id="GetDiagnosticCategoriesResult-resourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L66">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getDiagnosticCategories.ts#L65">property <b>resourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetLogProfileArgs" data-link-title="GetLogProfileArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getLogProfile.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getLogProfile.ts#L39">
         interface <strong>GetLogProfileArgs</strong>
     </a>
 </h3>
@@ -3652,7 +3740,7 @@ A list of the Metric Categories supported for this Resource.
 A collection of arguments for invoking getLogProfile.
 
 <h4 class="pdoc-member-header" id="GetLogProfileArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getLogProfile.ts#L44">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getLogProfile.ts#L43">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3660,7 +3748,7 @@ A collection of arguments for invoking getLogProfile.
 Specifies the Name of the Log Profile.
 
 <h3 class="pdoc-module-header" id="GetLogProfileResult" data-link-title="GetLogProfileResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getLogProfile.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getLogProfile.ts#L49">
         interface <strong>GetLogProfileResult</strong>
     </a>
 </h3>
@@ -3670,7 +3758,7 @@ Specifies the Name of the Log Profile.
 A collection of values returned by getLogProfile.
 
 <h4 class="pdoc-member-header" id="GetLogProfileResult-categories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getLogProfile.ts#L54">property <b>categories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getLogProfile.ts#L53">property <b>categories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>categories: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3678,7 +3766,7 @@ A collection of values returned by getLogProfile.
 List of categories of the logs.
 
 <h4 class="pdoc-member-header" id="GetLogProfileResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getLogProfile.ts#L58">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getLogProfile.ts#L57">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3686,7 +3774,7 @@ List of categories of the logs.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetLogProfileResult-locations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getLogProfile.ts#L62">property <b>locations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getLogProfile.ts#L61">property <b>locations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locations: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3694,17 +3782,17 @@ The provider-assigned unique ID for this managed resource.
 List of regions for which Activity Log events are stored or streamed.
 
 <h4 class="pdoc-member-header" id="GetLogProfileResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getLogProfile.ts#L63">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getLogProfile.ts#L62">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLogProfileResult-retentionPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getLogProfile.ts#L64">property <b>retentionPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getLogProfile.ts#L63">property <b>retentionPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetLogProfileRetentionPolicy'>GetLogProfileRetentionPolicy</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetLogProfileResult-servicebusRuleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getLogProfile.ts#L68">property <b>servicebusRuleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getLogProfile.ts#L67">property <b>servicebusRuleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicebusRuleId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3712,7 +3800,7 @@ List of regions for which Activity Log events are stored or streamed.
 The service bus (or event hub) rule ID of the service bus (or event hub) namespace in which the Activity Log is streamed to.
 
 <h4 class="pdoc-member-header" id="GetLogProfileResult-storageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getLogProfile.ts#L72">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getLogProfile.ts#L71">property <b>storageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3720,7 +3808,7 @@ The service bus (or event hub) rule ID of the service bus (or event hub) namespa
 The resource id of the storage account in which the Activity Log is stored.
 
 <h3 class="pdoc-module-header" id="GetScheduledQueryRulesAlertArgs" data-link-title="GetScheduledQueryRulesAlertArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L42">
         interface <strong>GetScheduledQueryRulesAlertArgs</strong>
     </a>
 </h3>
@@ -3730,7 +3818,7 @@ The resource id of the storage account in which the Activity Log is stored.
 A collection of arguments for invoking getScheduledQueryRulesAlert.
 
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesAlertArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L47">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L46">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3738,7 +3826,7 @@ A collection of arguments for invoking getScheduledQueryRulesAlert.
 Specifies the name of the scheduled query rule.
 
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesAlertArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L51">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L50">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3746,7 +3834,7 @@ Specifies the name of the scheduled query rule.
 Specifies the name of the resource group where the scheduled query rule is located.
 
 <h3 class="pdoc-module-header" id="GetScheduledQueryRulesAlertResult" data-link-title="GetScheduledQueryRulesAlertResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L56">
         interface <strong>GetScheduledQueryRulesAlertResult</strong>
     </a>
 </h3>
@@ -3756,7 +3844,7 @@ Specifies the name of the resource group where the scheduled query rule is locat
 A collection of values returned by getScheduledQueryRulesAlert.
 
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesAlertResult-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L61">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L60">property <b>actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetScheduledQueryRulesAlertAction'>GetScheduledQueryRulesAlertAction</a>[];</code></pre>
@@ -3764,7 +3852,7 @@ A collection of values returned by getScheduledQueryRulesAlert.
 An `action` block as defined below.
 
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesAlertResult-authorizedResourceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L65">property <b>authorizedResourceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L64">property <b>authorizedResourceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizedResourceIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3772,7 +3860,7 @@ An `action` block as defined below.
 The list of Resource IDs referred into query.
 
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesAlertResult-dataSourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L69">property <b>dataSourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L68">property <b>dataSourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataSourceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3780,7 +3868,7 @@ The list of Resource IDs referred into query.
 The resource URI over which log search query is to be run.
 
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesAlertResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L73">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L72">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3788,7 +3876,7 @@ The resource URI over which log search query is to be run.
 The description of the scheduled query rule.
 
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesAlertResult-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L77">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L76">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -3796,7 +3884,7 @@ The description of the scheduled query rule.
 Whether this scheduled query rule is enabled.
 
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesAlertResult-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L81">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L80">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequency: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3804,7 +3892,7 @@ Whether this scheduled query rule is enabled.
 Frequency at which rule condition should be evaluated.
 
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesAlertResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L85">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L84">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3812,17 +3900,17 @@ Frequency at which rule condition should be evaluated.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesAlertResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L86">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L85">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesAlertResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L87">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L86">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesAlertResult-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L91">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L90">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>query: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3830,17 +3918,17 @@ The provider-assigned unique ID for this managed resource.
 Log search query.
 
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesAlertResult-queryType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L92">property <b>queryType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L91">property <b>queryType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queryType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesAlertResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L93">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L92">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesAlertResult-severity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L97">property <b>severity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L96">property <b>severity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>severity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3848,12 +3936,12 @@ Log search query.
 Severity of the alert.
 
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesAlertResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L98">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L97">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesAlertResult-throttling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L102">property <b>throttling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L101">property <b>throttling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>throttling: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3861,7 +3949,7 @@ Severity of the alert.
 Time for which alerts should be throttled or suppressed.
 
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesAlertResult-timeWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L106">property <b>timeWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L105">property <b>timeWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeWindow: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3869,7 +3957,7 @@ Time for which alerts should be throttled or suppressed.
 Time window for which data needs to be fetched for query.
 
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesAlertResult-triggers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L110">property <b>triggers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesAlert.ts#L109">property <b>triggers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggers: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetScheduledQueryRulesAlertTrigger'>GetScheduledQueryRulesAlertTrigger</a>[];</code></pre>
@@ -3877,7 +3965,7 @@ Time window for which data needs to be fetched for query.
 A `trigger` block as defined below.
 
 <h3 class="pdoc-module-header" id="GetScheduledQueryRulesLogArgs" data-link-title="GetScheduledQueryRulesLogArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L42">
         interface <strong>GetScheduledQueryRulesLogArgs</strong>
     </a>
 </h3>
@@ -3887,7 +3975,7 @@ A `trigger` block as defined below.
 A collection of arguments for invoking getScheduledQueryRulesLog.
 
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesLogArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L47">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L46">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3895,7 +3983,7 @@ A collection of arguments for invoking getScheduledQueryRulesLog.
 Specifies the name of the scheduled query rule.
 
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesLogArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L51">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L50">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3903,7 +3991,7 @@ Specifies the name of the scheduled query rule.
 Specifies the name of the resource group where the scheduled query rule is located.
 
 <h3 class="pdoc-module-header" id="GetScheduledQueryRulesLogResult" data-link-title="GetScheduledQueryRulesLogResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L56">
         interface <strong>GetScheduledQueryRulesLogResult</strong>
     </a>
 </h3>
@@ -3913,12 +4001,12 @@ Specifies the name of the resource group where the scheduled query rule is locat
 A collection of values returned by getScheduledQueryRulesLog.
 
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesLogResult-authorizedResourceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L58">property <b>authorizedResourceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L57">property <b>authorizedResourceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizedResourceIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesLogResult-criterias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L62">property <b>criterias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L61">property <b>criterias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>criterias: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetScheduledQueryRulesLogCriteria'>GetScheduledQueryRulesLogCriteria</a>[];</code></pre>
@@ -3926,7 +4014,7 @@ A collection of values returned by getScheduledQueryRulesLog.
 A `criteria` block as defined below.
 
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesLogResult-dataSourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L66">property <b>dataSourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L65">property <b>dataSourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataSourceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3934,7 +4022,7 @@ A `criteria` block as defined below.
 The resource URI over which log search query is to be run.
 
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesLogResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L70">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L69">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3942,7 +4030,7 @@ The resource URI over which log search query is to be run.
 The description of the scheduled query rule.
 
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesLogResult-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L74">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L73">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -3950,7 +4038,7 @@ The description of the scheduled query rule.
 Whether this scheduled query rule is enabled.
 
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesLogResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L77">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3958,12 +4046,12 @@ Whether this scheduled query rule is enabled.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesLogResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L79">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L78">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesLogResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L83">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3971,17 +4059,17 @@ The provider-assigned unique ID for this managed resource.
 Name of the dimension.
 
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesLogResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L84">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L83">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetScheduledQueryRulesLogResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L85">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/getScheduledQueryRulesLog.ts#L84">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h3 class="pdoc-module-header" id="LogProfileArgs" data-link-title="LogProfileArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L187">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L194">
         interface <strong>LogProfileArgs</strong>
     </a>
 </h3>
@@ -3991,7 +4079,7 @@ Name of the dimension.
 The set of arguments for constructing a LogProfile resource.
 
 <h4 class="pdoc-member-header" id="LogProfileArgs-categories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L191">property <b>categories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L198">property <b>categories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>categories: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3999,7 +4087,7 @@ The set of arguments for constructing a LogProfile resource.
 List of categories of the logs.
 
 <h4 class="pdoc-member-header" id="LogProfileArgs-locations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L195">property <b>locations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L202">property <b>locations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4007,7 +4095,7 @@ List of categories of the logs.
 List of regions for which Activity Log events are stored or streamed.
 
 <h4 class="pdoc-member-header" id="LogProfileArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L200">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L207">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4016,7 +4104,7 @@ The name of the Log Profile. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="LogProfileArgs-retentionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L204">property <b>retentionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L211">property <b>retentionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LogProfileRetentionPolicy'>LogProfileRetentionPolicy</a>&gt;;</code></pre>
@@ -4024,7 +4112,7 @@ new resource to be created.
 A `retentionPolicy` block as documented below. A retention policy for how long Activity Logs are retained in the storage account.
 
 <h4 class="pdoc-member-header" id="LogProfileArgs-servicebusRuleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L208">property <b>servicebusRuleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L215">property <b>servicebusRuleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicebusRuleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4032,7 +4120,7 @@ A `retentionPolicy` block as documented below. A retention policy for how long A
 The service bus (or event hub) rule ID of the service bus (or event hub) namespace in which the Activity Log is streamed to. At least one of `storageAccountId` or `servicebusRuleId` must be set.
 
 <h4 class="pdoc-member-header" id="LogProfileArgs-storageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L212">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L219">property <b>storageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4040,7 +4128,7 @@ The service bus (or event hub) rule ID of the service bus (or event hub) namespa
 The resource ID of the storage account in which the Activity Log is stored. At least one of `storageAccountId` or `servicebusRuleId` must be set.
 
 <h3 class="pdoc-module-header" id="LogProfileState" data-link-title="LogProfileState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L163">
         interface <strong>LogProfileState</strong>
     </a>
 </h3>
@@ -4050,7 +4138,7 @@ The resource ID of the storage account in which the Activity Log is stored. At l
 Input properties used for looking up and filtering LogProfile resources.
 
 <h4 class="pdoc-member-header" id="LogProfileState-categories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L160">property <b>categories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L167">property <b>categories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>categories?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4058,7 +4146,7 @@ Input properties used for looking up and filtering LogProfile resources.
 List of categories of the logs.
 
 <h4 class="pdoc-member-header" id="LogProfileState-locations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L164">property <b>locations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L171">property <b>locations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4066,7 +4154,7 @@ List of categories of the logs.
 List of regions for which Activity Log events are stored or streamed.
 
 <h4 class="pdoc-member-header" id="LogProfileState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L169">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L176">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4075,7 +4163,7 @@ The name of the Log Profile. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="LogProfileState-retentionPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L173">property <b>retentionPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L180">property <b>retentionPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retentionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LogProfileRetentionPolicy'>LogProfileRetentionPolicy</a>&gt;;</code></pre>
@@ -4083,7 +4171,7 @@ new resource to be created.
 A `retentionPolicy` block as documented below. A retention policy for how long Activity Logs are retained in the storage account.
 
 <h4 class="pdoc-member-header" id="LogProfileState-servicebusRuleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L177">property <b>servicebusRuleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L184">property <b>servicebusRuleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicebusRuleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4091,7 +4179,7 @@ A `retentionPolicy` block as documented below. A retention policy for how long A
 The service bus (or event hub) rule ID of the service bus (or event hub) namespace in which the Activity Log is streamed to. At least one of `storageAccountId` or `servicebusRuleId` must be set.
 
 <h4 class="pdoc-member-header" id="LogProfileState-storageAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/logProfile.ts#L181">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/logProfile.ts#L188">property <b>storageAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4099,7 +4187,7 @@ The service bus (or event hub) rule ID of the service bus (or event hub) namespa
 The resource ID of the storage account in which the Activity Log is stored. At least one of `storageAccountId` or `servicebusRuleId` must be set.
 
 <h3 class="pdoc-module-header" id="MetricAlertArgs" data-link-title="MetricAlertArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L285">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L292">
         interface <strong>MetricAlertArgs</strong>
     </a>
 </h3>
@@ -4109,7 +4197,7 @@ The resource ID of the storage account in which the Activity Log is stored. At l
 The set of arguments for constructing a MetricAlert resource.
 
 <h4 class="pdoc-member-header" id="MetricAlertArgs-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L289">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L296">property <b>actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertAction'>MetricAlertAction</a>&gt;[]&gt;;</code></pre>
@@ -4117,7 +4205,7 @@ The set of arguments for constructing a MetricAlert resource.
 One or more `action` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="MetricAlertArgs-applicationInsightsWebTestLocationAvailabilityCriteria">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L293">property <b>applicationInsightsWebTestLocationAvailabilityCriteria</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L300">property <b>applicationInsightsWebTestLocationAvailabilityCriteria</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationInsightsWebTestLocationAvailabilityCriteria?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria'>MetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria</a>&gt;;</code></pre>
@@ -4125,7 +4213,7 @@ One or more `action` blocks as defined below.
 A `applicationInsightsWebTestLocationAvailabilityCriteria` block as defined below.
 
 <h4 class="pdoc-member-header" id="MetricAlertArgs-autoMitigate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L297">property <b>autoMitigate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L304">property <b>autoMitigate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoMitigate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4133,7 +4221,7 @@ A `applicationInsightsWebTestLocationAvailabilityCriteria` block as defined belo
 Should the alerts in this Metric Alert be auto resolved? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="MetricAlertArgs-criterias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L301">property <b>criterias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L308">property <b>criterias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>criterias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertCriteria'>MetricAlertCriteria</a>&gt;[]&gt;;</code></pre>
@@ -4141,7 +4229,7 @@ Should the alerts in this Metric Alert be auto resolved? Defaults to `true`.
 One or more (static) `criteria` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="MetricAlertArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L305">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L312">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4149,7 +4237,7 @@ One or more (static) `criteria` blocks as defined below.
 The description of this Metric Alert.
 
 <h4 class="pdoc-member-header" id="MetricAlertArgs-dynamicCriteria">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L309">property <b>dynamicCriteria</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L316">property <b>dynamicCriteria</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dynamicCriteria?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertDynamicCriteria'>MetricAlertDynamicCriteria</a>&gt;;</code></pre>
@@ -4157,7 +4245,7 @@ The description of this Metric Alert.
 A `dynamicCriteria` block as defined below.
 
 <h4 class="pdoc-member-header" id="MetricAlertArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L313">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L320">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4165,7 +4253,7 @@ A `dynamicCriteria` block as defined below.
 Should this Metric Alert be enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="MetricAlertArgs-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L317">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L324">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4173,7 +4261,7 @@ Should this Metric Alert be enabled? Defaults to `true`.
 The evaluation frequency of this Metric Alert, represented in ISO 8601 duration format. Possible values are `PT1M`, `PT5M`, `PT15M`, `PT30M` and `PT1H`. Defaults to `PT1M`.
 
 <h4 class="pdoc-member-header" id="MetricAlertArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L321">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L328">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4181,7 +4269,7 @@ The evaluation frequency of this Metric Alert, represented in ISO 8601 duration 
 The name of the Metric Alert. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MetricAlertArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L325">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L332">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4189,7 +4277,7 @@ The name of the Metric Alert. Changing this forces a new resource to be created.
 The name of the resource group in which to create the Metric Alert instance.
 
 <h4 class="pdoc-member-header" id="MetricAlertArgs-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L329">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L336">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4197,7 +4285,7 @@ The name of the resource group in which to create the Metric Alert instance.
 A set of strings of resource IDs at which the metric criteria should be applied.
 
 <h4 class="pdoc-member-header" id="MetricAlertArgs-severity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L333">property <b>severity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L340">property <b>severity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>severity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4205,7 +4293,7 @@ A set of strings of resource IDs at which the metric criteria should be applied.
 The severity of this Metric Alert. Possible values are `0`, `1`, `2`, `3` and `4`. Defaults to `3`.
 
 <h4 class="pdoc-member-header" id="MetricAlertArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L337">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L344">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -4213,7 +4301,7 @@ The severity of this Metric Alert. Possible values are `0`, `1`, `2`, `3` and `4
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="MetricAlertArgs-targetResourceLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L341">property <b>targetResourceLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L348">property <b>targetResourceLocation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetResourceLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4221,7 +4309,7 @@ A mapping of tags to assign to the resource.
 The location of the target resource.
 
 <h4 class="pdoc-member-header" id="MetricAlertArgs-targetResourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L345">property <b>targetResourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L352">property <b>targetResourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetResourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4229,7 +4317,7 @@ The location of the target resource.
 The resource type (e.g. `Microsoft.Compute/virtualMachines`) of the target resource.
 
 <h4 class="pdoc-member-header" id="MetricAlertArgs-windowSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L349">property <b>windowSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L356">property <b>windowSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>windowSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4237,7 +4325,7 @@ The resource type (e.g. `Microsoft.Compute/virtualMachines`) of the target resou
 The period of time that is used to monitor alert activity, represented in ISO 8601 duration format. This value must be greater than `frequency`. Possible values are `PT1M`, `PT5M`, `PT15M`, `PT30M`, `PT1H`, `PT6H`, `PT12H` and `P1D`. Defaults to `PT5M`.
 
 <h3 class="pdoc-module-header" id="MetricAlertState" data-link-title="MetricAlertState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L215">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L222">
         interface <strong>MetricAlertState</strong>
     </a>
 </h3>
@@ -4247,7 +4335,7 @@ The period of time that is used to monitor alert activity, represented in ISO 86
 Input properties used for looking up and filtering MetricAlert resources.
 
 <h4 class="pdoc-member-header" id="MetricAlertState-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L219">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L226">property <b>actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertAction'>MetricAlertAction</a>&gt;[]&gt;;</code></pre>
@@ -4255,7 +4343,7 @@ Input properties used for looking up and filtering MetricAlert resources.
 One or more `action` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="MetricAlertState-applicationInsightsWebTestLocationAvailabilityCriteria">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L223">property <b>applicationInsightsWebTestLocationAvailabilityCriteria</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L230">property <b>applicationInsightsWebTestLocationAvailabilityCriteria</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationInsightsWebTestLocationAvailabilityCriteria?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria'>MetricAlertApplicationInsightsWebTestLocationAvailabilityCriteria</a>&gt;;</code></pre>
@@ -4263,7 +4351,7 @@ One or more `action` blocks as defined below.
 A `applicationInsightsWebTestLocationAvailabilityCriteria` block as defined below.
 
 <h4 class="pdoc-member-header" id="MetricAlertState-autoMitigate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L227">property <b>autoMitigate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L234">property <b>autoMitigate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoMitigate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4271,7 +4359,7 @@ A `applicationInsightsWebTestLocationAvailabilityCriteria` block as defined belo
 Should the alerts in this Metric Alert be auto resolved? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="MetricAlertState-criterias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L231">property <b>criterias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L238">property <b>criterias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>criterias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertCriteria'>MetricAlertCriteria</a>&gt;[]&gt;;</code></pre>
@@ -4279,7 +4367,7 @@ Should the alerts in this Metric Alert be auto resolved? Defaults to `true`.
 One or more (static) `criteria` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="MetricAlertState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L235">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L242">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4287,7 +4375,7 @@ One or more (static) `criteria` blocks as defined below.
 The description of this Metric Alert.
 
 <h4 class="pdoc-member-header" id="MetricAlertState-dynamicCriteria">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L239">property <b>dynamicCriteria</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L246">property <b>dynamicCriteria</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dynamicCriteria?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MetricAlertDynamicCriteria'>MetricAlertDynamicCriteria</a>&gt;;</code></pre>
@@ -4295,7 +4383,7 @@ The description of this Metric Alert.
 A `dynamicCriteria` block as defined below.
 
 <h4 class="pdoc-member-header" id="MetricAlertState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L243">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L250">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4303,7 +4391,7 @@ A `dynamicCriteria` block as defined below.
 Should this Metric Alert be enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="MetricAlertState-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L247">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L254">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4311,7 +4399,7 @@ Should this Metric Alert be enabled? Defaults to `true`.
 The evaluation frequency of this Metric Alert, represented in ISO 8601 duration format. Possible values are `PT1M`, `PT5M`, `PT15M`, `PT30M` and `PT1H`. Defaults to `PT1M`.
 
 <h4 class="pdoc-member-header" id="MetricAlertState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L251">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L258">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4319,7 +4407,7 @@ The evaluation frequency of this Metric Alert, represented in ISO 8601 duration 
 The name of the Metric Alert. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="MetricAlertState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L255">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L262">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4327,7 +4415,7 @@ The name of the Metric Alert. Changing this forces a new resource to be created.
 The name of the resource group in which to create the Metric Alert instance.
 
 <h4 class="pdoc-member-header" id="MetricAlertState-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L259">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L266">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4335,7 +4423,7 @@ The name of the resource group in which to create the Metric Alert instance.
 A set of strings of resource IDs at which the metric criteria should be applied.
 
 <h4 class="pdoc-member-header" id="MetricAlertState-severity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L263">property <b>severity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L270">property <b>severity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>severity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4343,7 +4431,7 @@ A set of strings of resource IDs at which the metric criteria should be applied.
 The severity of this Metric Alert. Possible values are `0`, `1`, `2`, `3` and `4`. Defaults to `3`.
 
 <h4 class="pdoc-member-header" id="MetricAlertState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L267">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L274">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -4351,7 +4439,7 @@ The severity of this Metric Alert. Possible values are `0`, `1`, `2`, `3` and `4
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="MetricAlertState-targetResourceLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L271">property <b>targetResourceLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L278">property <b>targetResourceLocation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetResourceLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4359,7 +4447,7 @@ A mapping of tags to assign to the resource.
 The location of the target resource.
 
 <h4 class="pdoc-member-header" id="MetricAlertState-targetResourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L275">property <b>targetResourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L282">property <b>targetResourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetResourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4367,7 +4455,7 @@ The location of the target resource.
 The resource type (e.g. `Microsoft.Compute/virtualMachines`) of the target resource.
 
 <h4 class="pdoc-member-header" id="MetricAlertState-windowSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/metricAlert.ts#L279">property <b>windowSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/metricAlert.ts#L286">property <b>windowSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>windowSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4375,7 +4463,7 @@ The resource type (e.g. `Microsoft.Compute/virtualMachines`) of the target resou
 The period of time that is used to monitor alert activity, represented in ISO 8601 duration format. This value must be greater than `frequency`. Possible values are `PT1M`, `PT5M`, `PT15M`, `PT30M`, `PT1H`, `PT6H`, `PT12H` and `P1D`. Defaults to `PT5M`.
 
 <h3 class="pdoc-module-header" id="ScheduledQueryRulesAlertArgs" data-link-title="ScheduledQueryRulesAlertArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L239">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L246">
         interface <strong>ScheduledQueryRulesAlertArgs</strong>
     </a>
 </h3>
@@ -4385,7 +4473,7 @@ The period of time that is used to monitor alert activity, represented in ISO 86
 The set of arguments for constructing a ScheduledQueryRulesAlert resource.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertArgs-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L243">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L250">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduledQueryRulesAlertAction'>ScheduledQueryRulesAlertAction</a>&gt;;</code></pre>
@@ -4393,7 +4481,7 @@ The set of arguments for constructing a ScheduledQueryRulesAlert resource.
 An `action` block as defined below.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertArgs-authorizedResourceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L247">property <b>authorizedResourceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L254">property <b>authorizedResourceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizedResourceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4401,7 +4489,7 @@ An `action` block as defined below.
 List of Resource IDs referred into query.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertArgs-dataSourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L251">property <b>dataSourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L258">property <b>dataSourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataSourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4409,7 +4497,7 @@ List of Resource IDs referred into query.
 The resource URI over which log search query is to be run.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L255">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L262">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4417,7 +4505,7 @@ The resource URI over which log search query is to be run.
 The description of the scheduled query rule.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L259">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L266">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4425,7 +4513,7 @@ The description of the scheduled query rule.
 Whether this scheduled query rule is enabled.  Default is `true`.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertArgs-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L263">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L270">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4433,12 +4521,12 @@ Whether this scheduled query rule is enabled.  Default is `true`.
 Frequency (in minutes) at which rule condition should be evaluated.  Values must be between 5 and 1440 (inclusive).
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L264">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L271">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L268">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L275">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4446,7 +4534,7 @@ Frequency (in minutes) at which rule condition should be evaluated.  Values must
 The name of the scheduled query rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertArgs-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L272">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L279">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4454,12 +4542,12 @@ The name of the scheduled query rule. Changing this forces a new resource to be 
 Log search query.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertArgs-queryType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L273">property <b>queryType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L280">property <b>queryType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queryType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L277">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L284">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4467,7 +4555,7 @@ Log search query.
 The name of the resource group in which to create the scheduled query rule instance.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertArgs-severity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L281">property <b>severity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L288">property <b>severity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>severity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4475,12 +4563,12 @@ The name of the resource group in which to create the scheduled query rule insta
 Severity of the alert. Possible values include: 0, 1, 2, 3, or 4.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L282">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L289">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertArgs-throttling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L286">property <b>throttling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L293">property <b>throttling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>throttling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4488,7 +4576,7 @@ Severity of the alert. Possible values include: 0, 1, 2, 3, or 4.
 Time (in minutes) for which Alerts should be throttled or suppressed.  Values must be between 0 and 10000 (inclusive).
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertArgs-timeWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L290">property <b>timeWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L297">property <b>timeWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4496,7 +4584,7 @@ Time (in minutes) for which Alerts should be throttled or suppressed.  Values mu
 Time window for which data needs to be fetched for query (must be greater than or equal to `frequency`).  Values must be between 5 and 2880 (inclusive).
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertArgs-trigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L294">property <b>trigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L301">property <b>trigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trigger: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduledQueryRulesAlertTrigger'>ScheduledQueryRulesAlertTrigger</a>&gt;;</code></pre>
@@ -4504,7 +4592,7 @@ Time window for which data needs to be fetched for query (must be greater than o
 The condition that results in the alert rule being run.
 
 <h3 class="pdoc-module-header" id="ScheduledQueryRulesAlertState" data-link-title="ScheduledQueryRulesAlertState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L178">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L185">
         interface <strong>ScheduledQueryRulesAlertState</strong>
     </a>
 </h3>
@@ -4514,7 +4602,7 @@ The condition that results in the alert rule being run.
 Input properties used for looking up and filtering ScheduledQueryRulesAlert resources.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertState-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L182">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L189">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduledQueryRulesAlertAction'>ScheduledQueryRulesAlertAction</a>&gt;;</code></pre>
@@ -4522,7 +4610,7 @@ Input properties used for looking up and filtering ScheduledQueryRulesAlert reso
 An `action` block as defined below.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertState-authorizedResourceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L186">property <b>authorizedResourceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L193">property <b>authorizedResourceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizedResourceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4530,7 +4618,7 @@ An `action` block as defined below.
 List of Resource IDs referred into query.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertState-dataSourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L190">property <b>dataSourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L197">property <b>dataSourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataSourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4538,7 +4626,7 @@ List of Resource IDs referred into query.
 The resource URI over which log search query is to be run.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L194">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L201">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4546,7 +4634,7 @@ The resource URI over which log search query is to be run.
 The description of the scheduled query rule.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L198">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L205">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4554,7 +4642,7 @@ The description of the scheduled query rule.
 Whether this scheduled query rule is enabled.  Default is `true`.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertState-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L202">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L209">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4562,12 +4650,12 @@ Whether this scheduled query rule is enabled.  Default is `true`.
 Frequency (in minutes) at which rule condition should be evaluated.  Values must be between 5 and 1440 (inclusive).
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L203">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L210">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L207">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L214">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4575,7 +4663,7 @@ Frequency (in minutes) at which rule condition should be evaluated.  Values must
 The name of the scheduled query rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertState-query">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L211">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L218">property <b>query</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>query?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4583,12 +4671,12 @@ The name of the scheduled query rule. Changing this forces a new resource to be 
 Log search query.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertState-queryType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L212">property <b>queryType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L219">property <b>queryType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queryType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L216">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L223">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4596,7 +4684,7 @@ Log search query.
 The name of the resource group in which to create the scheduled query rule instance.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertState-severity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L220">property <b>severity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L227">property <b>severity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>severity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4604,12 +4692,12 @@ The name of the resource group in which to create the scheduled query rule insta
 Severity of the alert. Possible values include: 0, 1, 2, 3, or 4.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L221">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L228">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertState-throttling">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L225">property <b>throttling</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L232">property <b>throttling</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>throttling?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4617,7 +4705,7 @@ Severity of the alert. Possible values include: 0, 1, 2, 3, or 4.
 Time (in minutes) for which Alerts should be throttled or suppressed.  Values must be between 0 and 10000 (inclusive).
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertState-timeWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L229">property <b>timeWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L236">property <b>timeWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4625,7 +4713,7 @@ Time (in minutes) for which Alerts should be throttled or suppressed.  Values mu
 Time window for which data needs to be fetched for query (must be greater than or equal to `frequency`).  Values must be between 5 and 2880 (inclusive).
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesAlertState-trigger">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L233">property <b>trigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesAlert.ts#L240">property <b>trigger</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trigger?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduledQueryRulesAlertTrigger'>ScheduledQueryRulesAlertTrigger</a>&gt;;</code></pre>
@@ -4633,7 +4721,7 @@ Time window for which data needs to be fetched for query (must be greater than o
 The condition that results in the alert rule being run.
 
 <h3 class="pdoc-module-header" id="ScheduledQueryRulesLogArgs" data-link-title="ScheduledQueryRulesLogArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L157">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L164">
         interface <strong>ScheduledQueryRulesLogArgs</strong>
     </a>
 </h3>
@@ -4643,12 +4731,12 @@ The condition that results in the alert rule being run.
 The set of arguments for constructing a ScheduledQueryRulesLog resource.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLogArgs-authorizedResourceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L158">property <b>authorizedResourceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L165">property <b>authorizedResourceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizedResourceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLogArgs-criteria">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L162">property <b>criteria</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L169">property <b>criteria</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>criteria: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduledQueryRulesLogCriteria'>ScheduledQueryRulesLogCriteria</a>&gt;;</code></pre>
@@ -4656,7 +4744,7 @@ The set of arguments for constructing a ScheduledQueryRulesLog resource.
 A `criteria` block as defined below.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLogArgs-dataSourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L166">property <b>dataSourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L173">property <b>dataSourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataSourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4664,7 +4752,7 @@ A `criteria` block as defined below.
 The resource uri over which log search query is to be run.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLogArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L170">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L177">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4672,7 +4760,7 @@ The resource uri over which log search query is to be run.
 The description of the scheduled query rule.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLogArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L174">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L181">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4680,12 +4768,12 @@ The description of the scheduled query rule.
 Whether this scheduled query rule is enabled.  Default is `true`.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLogArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L175">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L182">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLogArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L179">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L186">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4693,7 +4781,7 @@ Whether this scheduled query rule is enabled.  Default is `true`.
 The name of the scheduled query rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLogArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L183">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L190">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4701,12 +4789,12 @@ The name of the scheduled query rule. Changing this forces a new resource to be 
 The name of the resource group in which to create the scheduled query rule instance.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLogArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L184">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L191">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ScheduledQueryRulesLogState" data-link-title="ScheduledQueryRulesLogState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L124">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L131">
         interface <strong>ScheduledQueryRulesLogState</strong>
     </a>
 </h3>
@@ -4716,12 +4804,12 @@ The name of the resource group in which to create the scheduled query rule insta
 Input properties used for looking up and filtering ScheduledQueryRulesLog resources.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLogState-authorizedResourceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L125">property <b>authorizedResourceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L132">property <b>authorizedResourceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizedResourceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLogState-criteria">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L129">property <b>criteria</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L136">property <b>criteria</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>criteria?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScheduledQueryRulesLogCriteria'>ScheduledQueryRulesLogCriteria</a>&gt;;</code></pre>
@@ -4729,7 +4817,7 @@ Input properties used for looking up and filtering ScheduledQueryRulesLog resour
 A `criteria` block as defined below.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLogState-dataSourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L133">property <b>dataSourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L140">property <b>dataSourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataSourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4737,7 +4825,7 @@ A `criteria` block as defined below.
 The resource uri over which log search query is to be run.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLogState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L137">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L144">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4745,7 +4833,7 @@ The resource uri over which log search query is to be run.
 The description of the scheduled query rule.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLogState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L141">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L148">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4753,12 +4841,12 @@ The description of the scheduled query rule.
 Whether this scheduled query rule is enabled.  Default is `true`.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLogState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L142">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L149">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLogState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L146">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L153">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4766,7 +4854,7 @@ Whether this scheduled query rule is enabled.  Default is `true`.
 The name of the scheduled query rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLogState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L150">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L157">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4774,12 +4862,12 @@ The name of the scheduled query rule. Changing this forces a new resource to be 
 The name of the resource group in which to create the scheduled query rule instance.
 
 <h4 class="pdoc-member-header" id="ScheduledQueryRulesLogState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L151">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/scheduledQueryRulesLog.ts#L158">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="SmartDetectorAlertRuleArgs" data-link-title="SmartDetectorAlertRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L222">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L229">
         interface <strong>SmartDetectorAlertRuleArgs</strong>
     </a>
 </h3>
@@ -4789,7 +4877,7 @@ The name of the resource group in which to create the scheduled query rule insta
 The set of arguments for constructing a SmartDetectorAlertRule resource.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRuleArgs-actionGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L226">property <b>actionGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L233">property <b>actionGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SmartDetectorAlertRuleActionGroup'>SmartDetectorAlertRuleActionGroup</a>&gt;;</code></pre>
@@ -4797,7 +4885,7 @@ The set of arguments for constructing a SmartDetectorAlertRule resource.
 An `actionGroup` block as defined below.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRuleArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L230">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L237">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4805,7 +4893,7 @@ An `actionGroup` block as defined below.
 Specifies a description for the Smart Detector Alert Rule.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRuleArgs-detectorType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L234">property <b>detectorType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L241">property <b>detectorType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectorType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4813,7 +4901,7 @@ Specifies a description for the Smart Detector Alert Rule.
 Specifies the Built-In Smart Detector type that this alert rule will use. Currently the only possible value is `FailureAnomaliesDetector`.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRuleArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L238">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L245">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4821,7 +4909,7 @@ Specifies the Built-In Smart Detector type that this alert rule will use. Curren
 Is the Smart Detector Alert Rule enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRuleArgs-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L242">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L249">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4829,7 +4917,7 @@ Is the Smart Detector Alert Rule enabled? Defaults to `true`.
 Specifies the frequency of this Smart Detector Alert Rule in ISO8601 format.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L246">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L253">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4837,7 +4925,7 @@ Specifies the frequency of this Smart Detector Alert Rule in ISO8601 format.
 Specifies the name of the Monitor Smart Detector Alert Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L250">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L257">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4845,7 +4933,7 @@ Specifies the name of the Monitor Smart Detector Alert Rule. Changing this force
 Specifies the name of the resource group in which the Monitor Smart Detector Alert Rule should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRuleArgs-scopeResourceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L254">property <b>scopeResourceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L261">property <b>scopeResourceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopeResourceIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4853,7 +4941,7 @@ Specifies the name of the resource group in which the Monitor Smart Detector Ale
 Specifies the scopes of this Smart Detector Alert Rule.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRuleArgs-severity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L258">property <b>severity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L265">property <b>severity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>severity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4861,7 +4949,7 @@ Specifies the scopes of this Smart Detector Alert Rule.
 Specifies the severity of this Smart Detector Alert Rule. Possible values are `Sev0`, `Sev1`, `Sev2`, `Sev3` or `Sev4`.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRuleArgs-throttlingDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L262">property <b>throttlingDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L269">property <b>throttlingDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>throttlingDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4869,7 +4957,7 @@ Specifies the severity of this Smart Detector Alert Rule. Possible values are `S
 Specifies the duration (in ISO8601 format) to wait before notifying on the alert rule again.
 
 <h3 class="pdoc-module-header" id="SmartDetectorAlertRuleState" data-link-title="SmartDetectorAlertRuleState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L176">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L183">
         interface <strong>SmartDetectorAlertRuleState</strong>
     </a>
 </h3>
@@ -4879,7 +4967,7 @@ Specifies the duration (in ISO8601 format) to wait before notifying on the alert
 Input properties used for looking up and filtering SmartDetectorAlertRule resources.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRuleState-actionGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L180">property <b>actionGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L187">property <b>actionGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actionGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SmartDetectorAlertRuleActionGroup'>SmartDetectorAlertRuleActionGroup</a>&gt;;</code></pre>
@@ -4887,7 +4975,7 @@ Input properties used for looking up and filtering SmartDetectorAlertRule resour
 An `actionGroup` block as defined below.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRuleState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L184">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L191">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4895,7 +4983,7 @@ An `actionGroup` block as defined below.
 Specifies a description for the Smart Detector Alert Rule.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRuleState-detectorType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L188">property <b>detectorType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L195">property <b>detectorType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detectorType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4903,7 +4991,7 @@ Specifies a description for the Smart Detector Alert Rule.
 Specifies the Built-In Smart Detector type that this alert rule will use. Currently the only possible value is `FailureAnomaliesDetector`.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRuleState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L192">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L199">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4911,7 +4999,7 @@ Specifies the Built-In Smart Detector type that this alert rule will use. Curren
 Is the Smart Detector Alert Rule enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRuleState-frequency">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L196">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L203">property <b>frequency</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>frequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4919,7 +5007,7 @@ Is the Smart Detector Alert Rule enabled? Defaults to `true`.
 Specifies the frequency of this Smart Detector Alert Rule in ISO8601 format.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L200">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L207">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4927,7 +5015,7 @@ Specifies the frequency of this Smart Detector Alert Rule in ISO8601 format.
 Specifies the name of the Monitor Smart Detector Alert Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L204">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L211">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4935,7 +5023,7 @@ Specifies the name of the Monitor Smart Detector Alert Rule. Changing this force
 Specifies the name of the resource group in which the Monitor Smart Detector Alert Rule should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRuleState-scopeResourceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L208">property <b>scopeResourceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L215">property <b>scopeResourceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopeResourceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4943,7 +5031,7 @@ Specifies the name of the resource group in which the Monitor Smart Detector Ale
 Specifies the scopes of this Smart Detector Alert Rule.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRuleState-severity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L212">property <b>severity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L219">property <b>severity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>severity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4951,7 +5039,7 @@ Specifies the scopes of this Smart Detector Alert Rule.
 Specifies the severity of this Smart Detector Alert Rule. Possible values are `Sev0`, `Sev1`, `Sev2`, `Sev3` or `Sev4`.
 
 <h4 class="pdoc-member-header" id="SmartDetectorAlertRuleState-throttlingDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/edf6ad707defa77aa50be8a5aec9983f4d44d071/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L216">property <b>throttlingDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/monitoring/smartDetectorAlertRule.ts#L223">property <b>throttlingDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>throttlingDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

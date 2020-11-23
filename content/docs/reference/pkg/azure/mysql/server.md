@@ -12,7 +12,6 @@ meta_desc: "Explore the Server resource of the mysql module, including examples,
 
 Manages a MySQL Server.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3449,6 +3448,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+MySQL Server's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:mysql/server:Server server1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.DBforMySQL/servers/server1
+```
 
 
 

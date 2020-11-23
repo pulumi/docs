@@ -19,7 +19,6 @@ Below are some of the key scenarios that Azure Front Door Service addresses:
 * Use Front Door to improve application performance with SSL offload and routing requests to the fastest available application backend.
 * Use Front Door for application layer security and DDoS protection for your application.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -5088,6 +5087,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Front Doors can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:frontdoor/frontdoor:Frontdoor example /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/mygroup1/providers/Microsoft.Network/frontdoors/frontdoor1
+```
 
 
 

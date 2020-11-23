@@ -12,7 +12,6 @@ meta_desc: "Explore the StreamInputBlob resource of the streamanalytics module, 
 
 Manages a Stream Analytics Stream Input Blob.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1725,6 +1724,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Stream Analytics Stream Input Blob's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:streamanalytics/streamInputBlob:StreamInputBlob example /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/group1/providers/Microsoft.StreamAnalytics/streamingjobs/job1/inputs/input1
+```
 
 
 

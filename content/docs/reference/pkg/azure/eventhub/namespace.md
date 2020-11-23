@@ -13,7 +13,6 @@ meta_desc: "Explore the Namespace resource of the eventhub module, including exa
 
 Manages a ServiceBus Namespace.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1571,6 +1570,16 @@ create the namespace.
 
 
 
+
+
+## Import
+
+
+Service Bus Namespace can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:eventhub/namespace:Namespace example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/microsoft.servicebus/namespaces/sbns1
+```
 
 
 

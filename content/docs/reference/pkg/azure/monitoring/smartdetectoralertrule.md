@@ -12,7 +12,6 @@ meta_desc: "Explore the SmartDetectorAlertRule resource of the monitoring module
 
 Manages an Monitor Smart Detector Alert Rule.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1695,6 +1694,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Monitor Smart Detector Alert Rule can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:monitoring/smartDetectorAlertRule:SmartDetectorAlertRule example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.AlertsManagement/smartdetectoralertrules/rule1
+```
 
 
 

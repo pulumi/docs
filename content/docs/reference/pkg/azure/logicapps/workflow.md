@@ -12,7 +12,6 @@ meta_desc: "Explore the Workflow resource of the logicapps module, including exa
 
 Manages a Logic App Workflow.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1785,6 +1784,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Logic App Workflows can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:logicapps/workflow:Workflow workflow1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Logic/workflows/workflow1
+```
 
 
 

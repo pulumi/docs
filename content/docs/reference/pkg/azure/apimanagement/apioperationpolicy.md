@@ -12,7 +12,6 @@ meta_desc: "Explore the ApiOperationPolicy resource of the apimanagement module,
 
 Manages an API Management API Operation Policy
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1101,6 +1100,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+API Management API Operation Policy can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:apimanagement/apiOperationPolicy:ApiOperationPolicy example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.ApiManagement/service/instance1/apis/api1/operations/operation1/policies/policy
+```
 
 
 

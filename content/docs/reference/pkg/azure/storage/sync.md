@@ -12,7 +12,6 @@ meta_desc: "Explore the Sync resource of the storage module, including examples,
 
 Manages a Storage Sync.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1006,6 +1005,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Storage Syncs can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:storage/sync:Sync example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.StorageSync/storageSyncServices/sync1
+```
 
 
 

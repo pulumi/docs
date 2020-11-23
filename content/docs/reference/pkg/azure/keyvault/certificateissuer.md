@@ -12,7 +12,6 @@ meta_desc: "Explore the CertificateIssuer resource of the keyvault module, inclu
 
 Manages a Key Vault Certificate Issuer.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1443,6 +1442,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Key Vault Certificate Issuers can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:keyvault/certificateIssuer:CertificateIssuer example "https://key-vault-name.vault.azure.net/certificates/issuers/example"
+```
 
 
 

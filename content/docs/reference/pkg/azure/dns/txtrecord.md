@@ -12,7 +12,6 @@ meta_desc: "Explore the TxtRecord resource of the dns module, including examples
 
 Enables you to manage DNS TXT Records within Azure DNS.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1329,6 +1328,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+TXT records can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:dns/txtRecord:TxtRecord example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/dnszones/zone1/TXT/myrecord1
+```
 
 
 

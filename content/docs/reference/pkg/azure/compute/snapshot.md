@@ -12,7 +12,6 @@ meta_desc: "Explore the Snapshot resource of the compute module, including examp
 
 Manages a Disk Snapshot.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1888,6 +1887,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Snapshots can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:compute/snapshot:Snapshot example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Compute/snapshots/snapshot1
+```
 
 
 

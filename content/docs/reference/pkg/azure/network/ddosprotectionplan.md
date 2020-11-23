@@ -14,7 +14,6 @@ Manages an AzureNetwork DDoS Protection Plan.
 
 > **NOTE** Azure only allows `one` DDoS Protection Plan per region.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -995,6 +994,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Azure DDoS Protection Plan can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/ddosProtectionPlan:DdosProtectionPlan example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Network/ddosProtectionPlans/testddospplan
+```
 
 
 

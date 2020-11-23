@@ -12,7 +12,6 @@ meta_desc: "Explore the MxRecord resource of the dns module, including examples,
 
 Enables you to manage DNS MX Records within Azure DNS.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1381,6 +1380,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+MX records can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:dns/mxRecord:MxRecord example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/dnszones/zone1/MX/myrecord1
+```
 
 
 

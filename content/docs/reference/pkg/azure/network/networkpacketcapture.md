@@ -12,7 +12,6 @@ meta_desc: "Explore the NetworkPacketCapture resource of the network module, inc
 
 Configures Network Packet Capturing against a Virtual Machine using a Network Watcher.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1807,6 +1806,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Packet Captures can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/networkPacketCapture:NetworkPacketCapture capture1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/networkWatchers/watcher1/packetCaptures/capture1
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the ExpressRouteGateway resource of the network module, incl
 
 Manages an ExpressRoute gateway.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1148,6 +1147,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+ExpressRoute Gateways can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/expressRouteGateway:ExpressRouteGateway example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/expressRouteGateways/myExpressRouteGateway
+```
 
 
 

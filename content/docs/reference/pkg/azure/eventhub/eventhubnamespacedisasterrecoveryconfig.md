@@ -12,7 +12,6 @@ meta_desc: "Explore the EventhubNamespaceDisasterRecoveryConfig resource of the 
 
 Manages an Disaster Recovery Config for an Event Hub Namespace.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1043,6 +1042,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+EventHubs can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:eventhub/eventhubNamespaceDisasterRecoveryConfig:EventhubNamespaceDisasterRecoveryConfig config1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.EventHub/namespaces/namespace1/disasterRecoveryConfigs/config1
+```
 
 
 

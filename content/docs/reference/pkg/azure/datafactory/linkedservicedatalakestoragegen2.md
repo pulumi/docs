@@ -12,7 +12,6 @@ meta_desc: "Explore the LinkedServiceDataLakeStorageGen2 resource of the datafac
 
 Manages a Linked Service (connection) between Data Lake Storage Gen2 and Azure Data Factory.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1739,6 +1738,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Data Factory Data Lake Storage Gen2 Linked Services can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:datafactory/linkedServiceDataLakeStorageGen2:LinkedServiceDataLakeStorageGen2 example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example/providers/Microsoft.DataFactory/factories/example/linkedservices/example
+```
 
 
 

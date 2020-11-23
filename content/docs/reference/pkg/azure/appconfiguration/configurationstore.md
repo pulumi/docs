@@ -12,7 +12,6 @@ meta_desc: "Explore the ConfigurationStore resource of the appconfiguration modu
 
 Manages an Azure App Configuration.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2417,6 +2416,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+App Configurations can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:appconfiguration/configurationStore:ConfigurationStore appconf /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/resourceGroup1/providers/Microsoft.AppConfiguration/configurationStores/appConf1
+```
 
 
 

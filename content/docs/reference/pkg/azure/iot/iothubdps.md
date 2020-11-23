@@ -12,7 +12,6 @@ meta_desc: "Explore the IotHubDps resource of the iot module, including examples
 
 Manages an IotHub Device Provisioning Service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1856,6 +1855,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+IoT Device Provisioning Service can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:iot/iotHubDps:IotHubDps example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Devices/provisioningServices/example
+```
 
 
 

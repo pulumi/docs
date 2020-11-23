@@ -12,7 +12,6 @@ meta_desc: "Explore the VirtualNetworkGatewayConnection resource of the network 
 
 Manages a connection in an existing Virtual Network Gateway.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3544,6 +3543,16 @@ or `None`.
 
 
 
+
+
+## Import
+
+
+Virtual Network Gateway Connections can be imported using their `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/virtualNetworkGatewayConnection:VirtualNetworkGatewayConnection exampleConnection /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup1/providers/Microsoft.Network/connections/myConnection1
+```
 
 
 

@@ -14,7 +14,6 @@ Manages a Directline integration for a Bot Channel
 
 
 
-
 ## Create a ChannelDirectLine Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1262,6 +1261,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+The Directline Channel for a Bot can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:bot/channelDirectLine:ChannelDirectLine example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example/providers/Microsoft.BotService/botServices/example/channels/DirectlineChannel
+```
 
 
 

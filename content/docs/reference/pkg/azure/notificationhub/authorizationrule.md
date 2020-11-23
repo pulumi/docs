@@ -12,7 +12,6 @@ meta_desc: "Explore the AuthorizationRule resource of the notificationhub module
 
 Manages an Authorization Rule associated with a Notification Hub within a Notification Hub Namespace.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1411,6 +1410,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Notification Hub Authorization Rule can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:notificationhub/authorizationRule:AuthorizationRule rule1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.NotificationHubs/namespaces/{namespaceName}/notificationHubs/hub1/AuthorizationRules/rule1
+```
 
 
 

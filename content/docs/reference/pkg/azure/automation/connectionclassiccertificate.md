@@ -12,7 +12,6 @@ meta_desc: "Explore the ConnectionClassicCertificate resource of the automation 
 
 Manages an Automation Connection with type `AzureClassicCertificate`.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1122,6 +1121,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Automation Connection can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:automation/connectionClassicCertificate:ConnectionClassicCertificate conn1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Automation/automationAccounts/account1/connections/conn1
+```
 
 
 

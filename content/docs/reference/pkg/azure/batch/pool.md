@@ -14,7 +14,6 @@ Manages an Azure Batch pool.
 
 
 
-
 ## Create a Pool Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -4538,6 +4537,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Batch Pools can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:batch/pool:Pool example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myGroup1/providers/Microsoft.Batch/batchAccounts/myBatchAccount1/pools/myBatchPool1
+```
 
 
 

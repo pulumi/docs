@@ -14,7 +14,6 @@ Manages an App Service certificate.
 
 
 
-
 ## Create a Certificate Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1774,6 +1773,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+App Service Certificates can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:appservice/certificate:Certificate example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Web/certificates/certificate1
+```
 
 
 

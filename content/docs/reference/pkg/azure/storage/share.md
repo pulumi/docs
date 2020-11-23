@@ -14,7 +14,6 @@ Manages a File Share within Azure Storage.
 
 > **Note:** The storage share supports two storage tiers: premium and standard. Standard file shares are created in general purpose (GPv1 or GPv2) storage accounts and premium file shares are created in FileStorage storage accounts. For further information, refer to the section "What storage tiers are supported in Azure Files?" of [documentation](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-faq#general).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1568,6 +1567,16 @@ Changing this forces a new resource to be created.
 
 
 
+
+
+## Import
+
+
+Storage Shares can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:storage/share:Share exampleShare https://account1.file.core.windows.net/share1
+```
 
 
 

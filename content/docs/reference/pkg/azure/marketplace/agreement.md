@@ -12,7 +12,6 @@ meta_desc: "Explore the Agreement resource of the marketplace module, including 
 
 Allows accepting the Legal Terms for a Marketplace Image.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -968,6 +967,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Marketplace Agreement can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:marketplace/agreement:Agreement example /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.MarketplaceOrdering/agreements/publisher1/offers/offer1/plans/plan1
+```
 
 
 

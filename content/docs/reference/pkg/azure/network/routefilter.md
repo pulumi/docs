@@ -12,7 +12,6 @@ meta_desc: "Explore the RouteFilter resource of the network module, including ex
 
 Manages a Route Filter.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1238,6 +1237,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Route Filters can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/routeFilter:RouteFilter example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Network/routeFilters/routeFilter1
+```
 
 
 

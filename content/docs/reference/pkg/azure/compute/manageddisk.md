@@ -12,7 +12,6 @@ meta_desc: "Explore the ManagedDisk resource of the compute module, including ex
 
 Manages a managed disk.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2685,6 +2684,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Managed Disks can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:compute/managedDisk:ManagedDisk example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/microsoft.compute/disks/manageddisk1
+```
 
 
 

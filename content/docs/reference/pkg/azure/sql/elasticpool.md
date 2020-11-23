@@ -14,7 +14,6 @@ Allows you to manage an Azure SQL Elastic Pool.
 
 > **NOTE:** -  This version of the `Elasticpool` resource is being **deprecated** and should no longer be used. Please use the azure.mssql.ElasticPool version instead.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1578,6 +1577,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+SQL Elastic Pool's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:sql/elasticPool:ElasticPool pool1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.Sql/servers/myserver/elasticPools/pool1
+```
 
 
 

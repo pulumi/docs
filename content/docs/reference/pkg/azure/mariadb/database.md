@@ -12,7 +12,6 @@ meta_desc: "Explore the Database resource of the mariadb module, including examp
 
 Manages a MariaDB Database within a MariaDB Server
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1060,6 +1059,16 @@ new resource to be created.
 
 
 
+
+
+## Import
+
+
+MariaDB Database's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:mariadb/database:Database database1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.DBforMariaDB/servers/server1/databases/database1
+```
 
 
 

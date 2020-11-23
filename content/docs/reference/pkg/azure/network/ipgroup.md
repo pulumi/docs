@@ -12,7 +12,6 @@ meta_desc: "Explore the IPGroup resource of the network module, including exampl
 
 Manages an IP group that contains a list of CIDRs and/or IP addresses.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1027,6 +1026,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+IP Groups can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/iPGroup:IPGroup ipgroup1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/ipGroups/myIpGroup
+```
 
 
 

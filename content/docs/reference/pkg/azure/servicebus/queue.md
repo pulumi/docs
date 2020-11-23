@@ -12,7 +12,6 @@ meta_desc: "Explore the Queue resource of the servicebus module, including examp
 
 Manages a ServiceBus Queue.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2177,6 +2176,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Service Bus Queue can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:servicebus/queue:Queue example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/microsoft.servicebus/namespaces/sbns1/queues/snqueue1
+```
 
 
 

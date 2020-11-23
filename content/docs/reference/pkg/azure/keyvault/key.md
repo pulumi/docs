@@ -12,7 +12,6 @@ meta_desc: "Explore the Key resource of the keyvault module, including examples,
 
 Manages a Key Vault Key.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1949,6 +1948,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Key Vault Key which is Enabled can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:keyvault/key:Key net/keys/example/fdf067c93bbb4b22bff4d8b7a9a56217
+```
 
 
 

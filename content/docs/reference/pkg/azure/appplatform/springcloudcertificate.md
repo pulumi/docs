@@ -12,7 +12,6 @@ meta_desc: "Explore the SpringCloudCertificate resource of the appplatform modul
 
 Manages an Azure Spring Cloud Certificate.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1258,6 +1257,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Spring Cloud Certificate can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:appplatform/springCloudCertificate:SpringCloudCertificate example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resourcegroup1/providers/Microsoft.AppPlatform/Spring/spring1/certificates/cert1
+```
 
 
 

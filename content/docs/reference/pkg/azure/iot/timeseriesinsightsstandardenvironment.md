@@ -12,7 +12,6 @@ meta_desc: "Explore the TimeSeriesInsightsStandardEnvironment resource of the io
 
 Manages an Azure IoT Time Series Insights Standard Environment.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1265,6 +1264,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Azure IoT Time Series Insights Standard Environment can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:iot/timeSeriesInsightsStandardEnvironment:TimeSeriesInsightsStandardEnvironment example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example/providers/Microsoft.TimeSeriesInsights/environments/example
+```
 
 
 

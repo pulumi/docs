@@ -12,7 +12,6 @@ meta_desc: "Explore the SpringCloudService resource of the appplatform module, i
 
 Manages an Azure Spring Cloud Service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3083,6 +3082,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Spring Cloud services can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:appplatform/springCloudService:SpringCloudService example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.AppPlatform/Spring/spring1
+```
 
 
 

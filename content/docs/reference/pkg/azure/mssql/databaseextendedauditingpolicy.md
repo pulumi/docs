@@ -14,7 +14,6 @@ Manages a Ms Sql Database Extended Auditing Policy.
 
 > **NOTE:** The Database Extended Auditing Policy Can be set inline here as well as with the mssql_database_extended_auditing_policy resource resource. You can only use one or the other and using both will cause a conflict.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1078,6 +1077,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Ms Sql Database Extended Auditing Policys can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:mssql/databaseExtendedAuditingPolicy:DatabaseExtendedAuditingPolicy example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Sql/servers/sqlServer1/databases/db1/extendedAuditingSettings/default
+```
 
 
 

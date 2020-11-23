@@ -12,7 +12,6 @@ meta_desc: "Explore the Hub resource of the notificationhub module, including ex
 
 Manages a Notification Hub within a Notification Hub Namespace.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1562,6 +1561,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Notification Hubs can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:notificationhub/hub:Hub hub1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.NotificationHubs/namespaces/{namespaceName}/notificationHubs/hub1
+```
 
 
 

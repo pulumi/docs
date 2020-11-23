@@ -12,7 +12,6 @@ meta_desc: "Explore the Embedded resource of the powerbi module, including examp
 
 Manages a PowerBI Embedded.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1094,6 +1093,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+PowerBI Embedded can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:powerbi/embedded:Embedded example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.PowerBIDedicated/capacities/capacity1
+```
 
 
 

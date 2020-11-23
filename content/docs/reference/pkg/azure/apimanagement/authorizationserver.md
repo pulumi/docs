@@ -12,7 +12,6 @@ meta_desc: "Explore the AuthorizationServer resource of the apimanagement module
 
 Manages an Authorization Server within an API Management Service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2403,6 +2402,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+API Management Authorization Servers can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:apimanagement/authorizationServer:AuthorizationServer example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.ApiManagement/service/service1/authorizationServers/server1
+```
 
 
 

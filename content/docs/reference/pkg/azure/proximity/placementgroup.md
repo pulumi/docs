@@ -12,7 +12,6 @@ meta_desc: "Explore the PlacementGroup resource of the proximity module, includi
 
 Manages a proximity placement group for virtual machines, virtual machine scale sets and availability sets.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -918,6 +917,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Proximity Placement Groups can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:proximity/placementGroup:PlacementGroup example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example-rg/providers/Microsoft.Compute/proximityPlacementGroups/example-ppg
+```
 
 
 

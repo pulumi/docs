@@ -14,7 +14,6 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
 
 
 
-
 ## Create a ReplicatedVM Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -2136,6 +2135,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Site Recovery Replicated VM's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:siterecovery/replicatedVM:ReplicatedVM vmreplication /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resource-group-name/providers/Microsoft.RecoveryServices/vaults/recovery-vault-name/replicationFabrics/fabric-name/replicationProtectionContainers/protection-container-name/replicationProtectedItems/vm-replication-name
+```
 
 
 

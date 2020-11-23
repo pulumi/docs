@@ -12,7 +12,6 @@ meta_desc: "Explore the ManagementPolicy resource of the storage module, includi
 
 Manages an Azure Storage Account Management Policy.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1711,6 +1710,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Storage Account Management Policies can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:storage/managementPolicy:ManagementPolicy example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Storage/storageAccounts/myaccountname/managementPolicies/default
+```
 
 
 

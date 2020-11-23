@@ -12,7 +12,6 @@ meta_desc: "Explore the SubscriptionTemplateDeployment resource of the core modu
 
 Manages a Subscription Template Deployment.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1205,6 +1204,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Subscription Template Deployments can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:core/subscriptionTemplateDeployment:SubscriptionTemplateDeployment example /subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Resources/deployments/template1
+```
 
 
 

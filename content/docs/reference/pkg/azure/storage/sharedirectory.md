@@ -12,7 +12,6 @@ meta_desc: "Explore the ShareDirectory resource of the storage module, including
 
 Manages a Directory within an Azure Storage File Share.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -951,6 +950,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Directories within an Azure Storage File Share can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:storage/shareDirectory:ShareDirectory net/share1/directory1
+```
 
 
 

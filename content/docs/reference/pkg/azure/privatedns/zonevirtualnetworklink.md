@@ -12,7 +12,6 @@ meta_desc: "Explore the ZoneVirtualNetworkLink resource of the privatedns module
 
 Enables you to manage Private DNS zone Virtual Network Links. These Links enable DNS resolution and registration inside Azure Virtual Networks using Azure Private DNS.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1097,6 +1096,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Private DNS Zone Virtual Network Links can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:privatedns/zoneVirtualNetworkLink:ZoneVirtualNetworkLink link1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/privateDnsZones/zone1.com/virtualNetworkLinks/myVnetLink1
+```
 
 
 

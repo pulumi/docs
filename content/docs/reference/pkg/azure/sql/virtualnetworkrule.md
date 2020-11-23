@@ -12,7 +12,6 @@ meta_desc: "Explore the VirtualNetworkRule resource of the sql module, including
 
 Allows you to add, update, or remove an Azure SQL server to a subnet of a virtual network.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1094,6 +1093,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+SQL Virtual Network Rules can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:sql/virtualNetworkRule:VirtualNetworkRule rule1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.Sql/servers/myserver/virtualNetworkRules/vnetrulename
+```
 
 
 

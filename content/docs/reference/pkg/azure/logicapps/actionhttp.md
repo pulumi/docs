@@ -12,7 +12,6 @@ meta_desc: "Explore the ActionHttp resource of the logicapps module, including e
 
 Manages an HTTP Action within a Logic App Workflow
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1332,6 +1331,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Logic App HTTP Actions can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:logicapps/actionHttp:ActionHttp webhook1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Logic/workflows/workflow1/actions/webhook1
+```
 
 
 

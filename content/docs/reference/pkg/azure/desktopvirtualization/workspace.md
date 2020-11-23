@@ -12,7 +12,6 @@ meta_desc: "Explore the Workspace resource of the desktopvirtualization module, 
 
 Manages a Virtual Desktop Workspace.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1113,6 +1112,16 @@ a new resource to be created.
 
 
 
+
+
+## Import
+
+
+Virtual Desktop Workspaces can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:desktopvirtualization/workspace:Workspace example /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/myGroup1/providers/Microsoft.DesktopVirtualization/workspaces/myworkspace
+```
 
 
 

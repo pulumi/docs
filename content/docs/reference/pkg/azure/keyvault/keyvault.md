@@ -18,7 +18,6 @@ Manages a Key Vault.
 
 > **Note:** This provi will automatically recover a soft-deleted Key Vault during Creation if one is found - you can opt out of this using the `features` configuration within the Provider configuration block.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2959,6 +2958,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Key Vault's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:keyvault/keyVault:KeyVault example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.KeyVault/vaults/vault1
+```
 
 
 

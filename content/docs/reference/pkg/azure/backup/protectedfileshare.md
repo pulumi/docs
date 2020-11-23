@@ -16,7 +16,6 @@ Manages an Azure Backup Protected File Share to enable backups for file shares w
 
 > **NOTE** Azure Backup for Azure File Shares does not support Soft Delete at this time. Deleting this resource will also delete all associated backup data. Please exercise caution. Consider using [`protect`](https://www.pulumi.com/docs/intro/concepts/programming-model/#protect) to guard against accidental deletion.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1145,6 +1144,18 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Azure Backup Protected File Shares can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:backup/protectedFileShare:ProtectedFileShare item1 "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.RecoveryServices/vaults/example-recovery-vault/backupFabrics/Azure/protectionContainers/StorageContainer;storage;group2;example-storage-account/protectedItems/AzureFileShare;example-share"
+```
+
+ Note the ID requires quoting as there are semicolons
 
 
 

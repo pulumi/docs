@@ -12,7 +12,6 @@ meta_desc: "Explore the ApiVersionSet resource of the apimanagement module, incl
 
 Manages an API Version Set within an API Management Service.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1296,6 +1295,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+API Version Set can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:apimanagement/apiVersionSet:ApiVersionSet example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.ApiManagement/service/service1/apiVersionSets/set1
+```
 
 
 

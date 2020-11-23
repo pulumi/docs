@@ -12,7 +12,6 @@ meta_desc: "Explore the ExpressRouteCircuit resource of the network module, incl
 
 Manages an ExpressRoute circuit.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1703,6 +1702,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+ExpressRoute circuits can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/expressRouteCircuit:ExpressRouteCircuit myExpressRoute /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/expressRouteCircuits/myExpressRoute
+```
 
 
 

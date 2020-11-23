@@ -12,7 +12,6 @@ meta_desc: "Explore the FailoverGroup resource of the sql module, including exam
 
 Create a failover group of databases on a collection of Azure SQL servers.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1972,6 +1971,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+SQL Failover Groups can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:sql/failoverGroup:FailoverGroup example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.Sql/servers/myserver/failovergroups/group1
+```
 
 
 

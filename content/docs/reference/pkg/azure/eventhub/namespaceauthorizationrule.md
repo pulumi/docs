@@ -13,7 +13,6 @@ meta_desc: "Explore the NamespaceAuthorizationRule resource of the eventhub modu
 
 Manages a ServiceBus Namespace authorization Rule within a ServiceBus.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1482,6 +1481,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+ServiceBus Namespace authorization rules can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:eventhub/namespaceAuthorizationRule:NamespaceAuthorizationRule rule1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.ServiceBus/namespaces/namespace1/AuthorizationRules/rule1
+```
 
 
 

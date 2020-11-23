@@ -125,7 +125,6 @@ func main() {
 
 
 
-
 ## Create a Account Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1329,6 +1328,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+NetApp Accounts can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:netapp/account:Account example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.NetApp/netAppAccounts/account1
+```
 
 
 

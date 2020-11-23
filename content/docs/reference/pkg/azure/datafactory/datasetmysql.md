@@ -12,7 +12,6 @@ meta_desc: "Explore the DatasetMysql resource of the datafactory module, includi
 
 Manages a MySQL Dataset inside a Azure Data Factory.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1751,6 +1750,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Data Factory MySQL Datasets can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:datafactory/datasetMysql:DatasetMysql example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example/providers/Microsoft.DataFactory/factories/example/datasets/example
+```
 
 
 

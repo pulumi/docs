@@ -12,7 +12,6 @@ meta_desc: "Explore the SqlServer resource of the sql module, including examples
 
 Manages a Microsoft SQL Azure Database Server.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2005,6 +2004,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+SQL Servers can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:sql/sqlServer:SqlServer example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myresourcegroup/providers/Microsoft.Sql/servers/myserver
+```
 
 
 

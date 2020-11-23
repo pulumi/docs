@@ -12,7 +12,6 @@ meta_desc: "Explore the TrafficManagerEndpoint resource of the network module, i
 
 Manages a Traffic Manager Endpoint.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2489,6 +2488,16 @@ routing method. Supports values between 1 and 1000.
 
 
 
+
+
+## Import
+
+
+Traffic Manager Endpoints can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/trafficManagerEndpoint:TrafficManagerEndpoint exampleEndpoints /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/trafficManagerProfiles/mytrafficmanagerprofile1/azureEndpoints/mytrafficmanagerendpoint
+```
 
 
 

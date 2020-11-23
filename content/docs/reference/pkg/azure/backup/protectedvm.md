@@ -12,7 +12,6 @@ meta_desc: "Explore the ProtectedVM resource of the backup module, including exa
 
 Manages Azure Backup for an Azure VM
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1061,6 +1060,18 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Recovery Services Protected VMs can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:backup/protectedVM:ProtectedVM item1 "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.RecoveryServices/vaults/example-recovery-vault/backupFabrics/Azure/protectionContainers/iaasvmcontainer;iaasvmcontainerv2;group1;vm1/protectedItems/vm;iaasvmcontainerv2;group1;vm1"
+```
+
+ Note the ID requires quoting as there are semicolons
 
 
 

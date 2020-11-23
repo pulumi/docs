@@ -12,7 +12,6 @@ meta_desc: "Explore the RoleAssignment resource of the synapse module, including
 
 Allows you to Manages a Synapse Role Assignment.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -941,6 +940,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Synapse Role Assignment can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:synapse/roleAssignment:RoleAssignment example "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Synapse/workspaces/workspace1|000000000000"
+```
 
 
 

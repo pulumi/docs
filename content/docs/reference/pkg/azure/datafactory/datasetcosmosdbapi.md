@@ -14,7 +14,6 @@ Manages an Azure Cosmos DB SQL API Dataset inside an Azure Data Factory.
 
 
 
-
 ## Create a DatasetCosmosDBApi Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1614,6 +1613,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Data Factory Datasets can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:datafactory/datasetCosmosDBApi:DatasetCosmosDBApi example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/example/providers/Microsoft.DataFactory/factories/example/datasets/example
+```
 
 
 

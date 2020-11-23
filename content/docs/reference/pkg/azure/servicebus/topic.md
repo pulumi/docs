@@ -14,7 +14,6 @@ Manages a ServiceBus Topic.
 
 **Note** Topics can only be created in Namespaces with an SKU of `standard` or higher.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1867,6 +1866,16 @@ supports ordering. Defaults to false.
 
 
 
+
+
+## Import
+
+
+Service Bus Topics can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:servicebus/topic:Topic example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/microsoft.servicebus/namespaces/sbns1/topics/sntopic1
+```
 
 
 

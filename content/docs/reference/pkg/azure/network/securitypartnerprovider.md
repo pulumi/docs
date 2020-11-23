@@ -12,7 +12,6 @@ meta_desc: "Explore the SecurityPartnerProvider resource of the network module, 
 
 Manages a Security Partner Provider which could be associated to virtual hub.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1182,6 +1181,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Security Partner Providers can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/securityPartnerProvider:SecurityPartnerProvider example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Network/securityPartnerProviders/securityPartnerProvider1
+```
 
 
 

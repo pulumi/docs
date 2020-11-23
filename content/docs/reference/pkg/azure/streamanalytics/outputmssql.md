@@ -12,7 +12,6 @@ meta_desc: "Explore the OutputMssql resource of the streamanalytics module, incl
 
 Manages a Stream Analytics Output to Microsoft SQL Server Database.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1360,6 +1359,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Stream Analytics Outputs to Microsoft SQL Server Database can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:streamanalytics/outputMssql:OutputMssql example /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/group1/providers/Microsoft.StreamAnalytics/streamingjobs/job1/outputs/output1
+```
 
 
 

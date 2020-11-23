@@ -12,7 +12,6 @@ meta_desc: "Explore the SparkPool resource of the synapse module, including exam
 
 Manages a Synapse Spark Pool.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2099,6 +2098,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Synapse Spark Pool can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:synapse/sparkPool:SparkPool example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Synapse/workspaces/workspace1/bigDataPools/sparkPool1
+```
 
 
 

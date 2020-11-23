@@ -12,7 +12,6 @@ meta_desc: "Explore the ProtectionContainerMapping resource of the siterecovery 
 
 Manages a Azure recovery vault protection container mapping. A protection container mapping decides how to translate the protection container when a VM is migrated from one region to another.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1340,6 +1339,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Site Recovery Protection Container Mappings can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:siterecovery/protectionContainerMapping:ProtectionContainerMapping mymapping /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/resource-group-name/providers/Microsoft.RecoveryServices/vaults/recovery-vault-name
+```
 
 
 

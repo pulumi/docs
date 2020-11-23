@@ -12,7 +12,6 @@ meta_desc: "Explore the AutoscaleSetting resource of the monitoring module, incl
 
 Manages a AutoScale Setting which can be applied to Virtual Machine Scale Sets, App Services and other scalable resources.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4306,6 +4305,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+AutoScale Setting can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:monitoring/autoscaleSetting:AutoscaleSetting example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/microsoft.insights/autoscalesettings/setting1
+```
 
 
 

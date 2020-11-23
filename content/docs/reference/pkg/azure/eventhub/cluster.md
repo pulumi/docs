@@ -12,7 +12,6 @@ meta_desc: "Explore the Cluster resource of the eventhub module, including examp
 
 Manages an EventHub Cluster
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -997,6 +996,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+EventHub Cluster's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:eventhub/cluster:Cluster cluster1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.EventHub/clusters/cluster1
+```
 
 
 

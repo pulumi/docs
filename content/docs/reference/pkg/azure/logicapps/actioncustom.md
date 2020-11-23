@@ -12,7 +12,6 @@ meta_desc: "Explore the ActionCustom resource of the logicapps module, including
 
 Manages a Custom Action within a Logic App Workflow
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -880,6 +879,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Logic App Custom Actions can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:logicapps/actionCustom:ActionCustom custom1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Logic/workflows/workflow1/actions/custom1
+```
 
 
 

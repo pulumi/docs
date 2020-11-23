@@ -12,7 +12,6 @@ meta_desc: "Explore the ActionRuleSuppression resource of the monitoring module,
 
 Manages an Monitor Action Rule which type is suppression.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3131,6 +3130,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Monitor Action Rule can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:monitoring/actionRuleSuppression:ActionRuleSuppression example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.AlertsManagement/actionRules/actionRule1
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the Registry resource of the containerservice module, includ
 
 Manages an Azure Container Registry.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2486,6 +2485,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Container Registries can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:containerservice/registry:Registry example /subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/mygroup1/providers/Microsoft.ContainerRegistry/registries/myregistry1
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the Queue resource of the storage module, including examples
 
 Manages a Queue within an Azure Storage Account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -837,6 +836,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Storage Queue's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:storage/queue:Queue queue1 https://example.queue.core.windows.net/queue1
+```
 
 
 

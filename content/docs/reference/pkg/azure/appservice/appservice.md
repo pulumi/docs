@@ -14,7 +14,6 @@ Manages an App Service (within an App Service Plan).
 
 > **Note:** When using Slots - the `app_settings`, `connection_string` and `site_config` blocks on the `azure.appservice.AppService` resource will be overwritten when promoting a Slot using the `azure.appservice.ActiveSlot` resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -8511,6 +8510,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+App Services can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:appservice/appService:AppService instance1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Web/sites/instance1
+```
 
 
 

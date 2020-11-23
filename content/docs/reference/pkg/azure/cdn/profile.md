@@ -12,7 +12,6 @@ meta_desc: "Explore the Profile resource of the cdn module, including examples, 
 
 Manages a CDN Profile to create a collection of CDN Endpoints.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1030,6 +1029,16 @@ create the CDN Profile.
 
 
 
+
+
+## Import
+
+
+CDN Profiles can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:cdn/profile:Profile example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Cdn/profiles/myprofile1
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the NetworkInterface resource of the network module, includi
 
 Manages a Network Interface.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2315,6 +2314,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Network Interfaces can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:network/networkInterface:NetworkInterface example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Network/networkInterfaces/nic1
+```
 
 
 

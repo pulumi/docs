@@ -12,7 +12,6 @@ meta_desc: "Explore the DedicatedHost resource of the compute module, including 
 
 Manage a Dedicated Host within a Dedicated Host Group.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1288,6 +1287,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Dedicated Hosts can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:compute/dedicatedHost:DedicatedHost example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/mygroup1/providers/Microsoft.Compute/hostGroups/group1/hosts/host1
+```
 
 
 

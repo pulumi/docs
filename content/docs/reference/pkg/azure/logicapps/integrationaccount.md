@@ -12,7 +12,6 @@ meta_desc: "Explore the IntegrationAccount resource of the logicapps module, inc
 
 Manages a Logic App Integration Account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1010,6 +1009,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Logic App Integration Accounts can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:logicapps/integrationAccount:IntegrationAccount example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Logic/integrationAccounts/account1
+```
 
 
 

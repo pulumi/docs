@@ -12,7 +12,6 @@ meta_desc: "Explore the Table resource of the storage module, including examples
 
 Manages a Table within an Azure Storage Account.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1163,6 +1162,16 @@ Changing this forces a new resource to be created.
 
 
 
+
+
+## Import
+
+
+Table's within a Storage Account can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:storage/table:Table table1 "https://example.table.core.windows.net/Tables('replace-with-table-name')"
+```
 
 
 

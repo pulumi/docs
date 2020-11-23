@@ -14,7 +14,6 @@ Manages a Kusto (also known as Azure Data Explorer) Database Principal
 
 > **NOTE:** This resource is being **deprecated** due to API updates and should no longer be used.  Please use azure.kusto.DatabasePrincipalAssignment instead.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1617,6 +1616,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Kusto Database Principals can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:kusto/databasePrincipal:DatabasePrincipal example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Kusto/Clusters/cluster1/Databases/database1/Role/role1/FQN/some-guid
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the Application resource of the managedapplication module, i
 
 Manages a Managed Application.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1758,6 +1757,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Managed Application can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:managedapplication/application:Application example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Solutions/applications/app1
+```
 
 
 

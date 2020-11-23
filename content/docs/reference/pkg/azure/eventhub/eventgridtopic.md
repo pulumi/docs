@@ -15,7 +15,6 @@ Manages an EventGrid Topic
 
 > **Note:** at this time EventGrid Topic's are only available in a limited number of regions.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1943,6 +1942,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+EventGrid Topic's can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:eventhub/eventGridTopic:EventGridTopic topic1 /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.EventGrid/topics/topic1
+```
 
 
 

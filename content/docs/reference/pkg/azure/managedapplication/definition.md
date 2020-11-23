@@ -12,7 +12,6 @@ meta_desc: "Explore the Definition resource of the managedapplication module, in
 
 Manages a Managed Application Definition.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1794,6 +1793,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Managed Application Definition can be imported using the `resource id`, e.g.
+
+```sh
+ $ pulumi import azure:managedapplication/definition:Definition example /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/group1/providers/Microsoft.Solutions/applicationDefinitions/appDefinition1
+```
 
 
 
