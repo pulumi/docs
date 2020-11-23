@@ -1,11 +1,15 @@
 env:
   GITHUB_TOKEN: ${{ secrets.PULUMI_BOT_TOKEN }}
+  PROVIDER_SHORT_NAME: ${{ github.event.client_payload.project-shortname }}
+  PROVIDER_NAME: ${{ github.event.client_payload.project }}
+  PROVIDER_VERSION: ${{ github.event.client_payload.ref }}
 
 name: provider docs build
 on:
   repository_dispatch:
     types:
       - tfgen-provider
+
 jobs:
   pull-request:
     runs-on: ubuntu-latest
@@ -16,14 +20,15 @@ jobs:
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
-          source_branch: "${{ github.event.client_payload.project-shortname }}/${{ github.run_id }}-${{ github.run_number }}"
+          source_branch: "${{ env.PROVIDER_SHORT_NAME }}/${{ github.run_id }}-${{ github.run_number }}"
           destination_branch: "master"
-          pr_title: "Regen docs ${{ github.event.client_payload.project-shortname }}@${{ github.event.client_payload.ref }}"
+          pr_title: "Regen docs ${{ env.PROVIDER_SHORT_NAME }}@${{ env.PROVIDER_VERSION }}"
           pr_body: ""
           pr_label: "automation/tfgen-provider-docs"
           github_token: ${{ secrets.PULUMI_BOT_TOKEN }}
 
   build-tfgen-provider-docs:
+    name: Building ${{ env.PROVIDER_NAME }} docs @ ${{ env.PROVIDER_VERSION }}
     runs-on: ubuntu-latest
     steps:
       - name: checkout docs repo
@@ -39,8 +44,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: ${{ github.event.client_payload.repo }}
-          ref: ${{ github.event.client_payload.ref }}
-          path: ${{ github.event.client_payload.project }}
+          ref: ${{ env.PROVIDER_VERSION }}
+          path: ${{ env.PROVIDER_NAME }}
       - name: Install pulumictl
         uses: jaxxstorm/action-install-gh-release@v1.1.0
         with:
@@ -72,15 +77,15 @@ jobs:
         working-directory: docs
       - name: run yarn install in nodejs sdk
         run: yarn install && yarn run tsc
-        working-directory: ${{ github.event.client_payload.project }}/sdk/nodejs
+        working-directory: ${{ env.PROVIDER_NAME }}/sdk/nodejs
       - name: run typedoc
-        run: PKGS=${{ github.event.client_payload.project-shortname }} NOBUILD=true ./scripts/run_typedoc.sh
+        run: PKGS=${{ env.PROVIDER_SHORT_NAME }} NOBUILD=true ./scripts/run_typedoc.sh
         working-directory: docs
       - name: generate resource docs
-        run: ./scripts/gen_resource_docs.sh "${{ github.event.client_payload.project-shortname }}" true "${{ github.event.client_payload.ref }}"
+        run: ./scripts/gen_resource_docs.sh "${{ env.PROVIDER_SHORT_NAME }}" true "${{ env.PROVIDER_VERSION }}"
         working-directory: docs
       - name: generate python docs
-        run: ./scripts/generate_python_docs.sh "${{ github.event.client_payload.project-shortname }}"
+        run: ./scripts/generate_python_docs.sh "${{ env.PROVIDER_SHORT_NAME }}"
         working-directory: docs
       - name: git status
         run: git status && git diff
@@ -88,7 +93,7 @@ jobs:
       - name: commit changes
         uses: EndBug/add-and-commit@v4
         with:
-          ref: "${{ github.event.client_payload.project-shortname }}/${{ github.run_id }}-${{ github.run_number }}"
+          ref: "${{ env.PROVIDER_SHORT_NAME }}/${{ github.run_id }}-${{ github.run_number }}"
           author_name: pulumi-bot
           author_email: "bot@pulumi.com"
           cwd: docs
