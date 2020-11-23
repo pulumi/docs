@@ -10,8 +10,8 @@ In June 2019, Pulumi introduced the ability to import existing infrastructure re
 Today, we are happy to announce a richer resource import experience.
 
 As of [v2.12.0](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#2120-2020-10-14), Pulumi has introduced
-a `pulumi import` command. This command will not only import the resource, but it will also ensure that the user
-can have the resource code, in the appropriate language, available for their use.
+a `pulumi import` command. This command will import the cloud resource into the Pulumi state and generate the code
+for the user's Pulumi program, in the appropriate language.
 
 <!--more-->
 
@@ -33,57 +33,13 @@ A resource needs to be imported into an existing Pulumi project. Let's consider 
 that was manually created in their AWS Account. To do this, we can execute the following command:
 
 ```bash
-pulumi import aws:s3/bucket:Bucket infra-logs cloud-infra-logs
+pulumi import aws:s3/bucket:Bucket infra-logs company-infra-logs
 ```
 
-This command instructs Pulumi to import the S3 bucket called `cloud-infra-logs` with the Pulumi resource name
+This command instructs Pulumi to import the S3 bucket called `company-infra-logs` with the Pulumi resource name
 `infra-logs`. The import command will output as follows:
 
-```bash
-Previewing import (dev)
-
-View Live: https://app.pulumi.com/demo/import-example/dev/previews/74cafc2f-e9b8-42b1-9da2-09d1330b7950
-
-     Type                 Name                 Plan
- +   pulumi:pulumi:Stack  import-example-dev   create
- =   └─ aws:s3:Bucket     demo                 import
-
-Resources:
-    + 1 to create
-    = 1 to import
-    2 changes
-
-Do you want to perform this import?  [Use arrows to move, enter to select, type to filter]
-  yes
-> no
-  details
-```
-
-Let's instruct Pulumi to continue to import:
-
-```bash
-Importing (dev)
-
-View Live: https://app.pulumi.com/demo/import-example/dev/updates/1
-
-     Type                 Name                 Status
- +   pulumi:pulumi:Stack  import-example-dev   created
- =   └─ aws:s3:Bucket     demo                 imported
-
-Resources:
-    + 1 created
-    = 1 imported
-    2 changes
-
-Duration: 10s
-
-Please copy the following code into your Pulumi application. Not doing so
-will cause Pulumi to report that an update will happen on the next update command.
-
-Please note, that the imported resources are marked as protected. To destroy them
-you will need to remove the `protect` option and run `pulumi update` *before*
-the destroy will take effect.
-```
+{{< asciicast id="asciinema" >}}
 
 The user can then see the generated code they need to use as part of their application. I imported this resource into a
 TypeScript application:
@@ -97,7 +53,7 @@ import * as aws from "@pulumi/aws";
 
 const demo = new aws.s3.Bucket("infra-logs", {
     acl: "private",
-    bucket: "cloud-infra-logs",
+    bucket: "company-infra-logs",
     forceDestroy: false,
 }, {
     protect: true,
@@ -111,7 +67,7 @@ import pulumi_aws as aws
 
 demo = aws.s3.Bucket("infra-logs",
     acl="private",
-    bucket="cloud-infra-logs",
+    bucket="company-infra-logs",
     force_destroy=False,
     opts=ResourceOptions(protect=True))
 ```
@@ -129,7 +85,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := s3.NewBucket(ctx, "infra-logs", &s3.BucketArgs{
 			Acl:          pulumi.String("private"),
-			Bucket:       pulumi.String("cloud-infra-logs"),
+			Bucket:       pulumi.String("company-infra-logs"),
 			ForceDestroy: pulumi.Bool(false),
 		}, pulumi.Protect(true))
 		if err != nil {
@@ -152,7 +108,7 @@ class MyStack : Stack
         var demo = new Aws.S3.Bucket("infra-logs", new Aws.S3.BucketArgs
         {
             Acl = "private",
-            Bucket = "cloud-infra-logs",
+            Bucket = "company-infra-logs",
             ForceDestroy = false,
         }, new CustomResourceOptions
         {
@@ -210,57 +166,7 @@ We can then run the command:
 pulumi import -f resources.json
 ```
 
-Pulumi will preview that it will import the resources as expected:
-
-```bash
-Previewing import (dev3)
-
-View Live: https://app.pulumi.com/demo/import-example/dev/previews/53ff7162-2181-42e2-9712-72bbc0889e41
-
-     Type                 Name                 Plan
- +   pulumi:pulumi:Stack  import-example-dev   create
- =   ├─ aws:ec2:Subnet    public-1             import
- =   ├─ aws:ec2:Vpc       application-vpc      import
- =   └─ aws:ec2:Subnet    private-1            import
-
-Resources:
-    + 1 to create
-    = 3 to import
-    4 changes
-
-Do you want to perform this import?  [Use arrows to move, enter to select, type to filter]
-  yes
-> no
-  details
-```
-
-On instructing Pulumi to proceed, the resources will be imported and the resource generated code is as follows:
-
-```bash
-Importing (dev3)
-
-View Live: https://app.pulumi.com/demo/import-example/dev/updates/1
-
-     Type                 Name                 Status
- +   pulumi:pulumi:Stack  import-example-dev   created
- =   ├─ aws:ec2:Subnet    public-1             imported
- =   ├─ aws:ec2:Vpc       application-vpc      imported
- =   └─ aws:ec2:Subnet    private-1            imported
-
-Resources:
-    + 1 created
-    = 3 imported
-    4 changes
-
-Duration: 11s
-
-Please copy the following code into your Pulumi application. Not doing so
-will cause Pulumi to report that an update will happen on the next update command.
-
-Please note, that the imported resources are marked as protected. To destroy them
-you will need to remove the `protect` option and run `pulumi update` *before*
-the destroy will take effect.
-```
+{{< asciicast id="374901" >}}
 
 We can see the resultant code generation:
 
@@ -489,9 +395,6 @@ class MyStack : Stack
 ```
 {{< /choosable >}}
 {{< /chooser >}}
-
-
-```
 
 ## Documentation
 
