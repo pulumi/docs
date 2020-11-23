@@ -79,6 +79,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="glue/" title="glue"><span class="symbol module"></span>glue</a></li>
     <li><a href="guardduty/" title="guardduty"><span class="symbol module"></span>guardduty</a></li>
     <li><a href="iam/" title="iam"><span class="symbol module"></span>iam</a></li>
+    <li><a href="imagebuilder/" title="imagebuilder"><span class="symbol module"></span>imagebuilder</a></li>
     <li><a href="inspector/" title="inspector"><span class="symbol module"></span>inspector</a></li>
     <li><a href="iot/" title="iot"><span class="symbol module"></span>iot</a></li>
     <li><a href="kinesis/" title="kinesis"><span class="symbol module"></span>kinesis</a></li>
@@ -96,6 +97,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="mq/" title="mq"><span class="symbol module"></span>mq</a></li>
     <li><a href="msk/" title="msk"><span class="symbol module"></span>msk</a></li>
     <li><a href="neptune/" title="neptune"><span class="symbol module"></span>neptune</a></li>
+    <li><a href="networkfirewall/" title="networkfirewall"><span class="symbol module"></span>networkfirewall</a></li>
     <li><a href="opsworks/" title="opsworks"><span class="symbol module"></span>opsworks</a></li>
     <li><a href="organizations/" title="organizations"><span class="symbol module"></span>organizations</a></li>
     <li><a href="outposts/" title="outposts"><span class="symbol module"></span>outposts</a></li>
@@ -168,7 +170,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.13.0</dd>
+	<dd>3.14.0</dd>
 </dl>
 
 

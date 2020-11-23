@@ -30,6 +30,7 @@ Explore the resources and functions of the apigateway module in the AWS package.
     <li><a href="resource" title="Resource"><span class="symbol resource"></span>Resource</a></li>
     <li><a href="response" title="Response"><span class="symbol resource"></span>Response</a></li>
     <li><a href="restapi" title="RestApi"><span class="symbol resource"></span>RestApi</a></li>
+    <li><a href="restapipolicy" title="RestApiPolicy"><span class="symbol resource"></span>RestApiPolicy</a></li>
     <li><a href="stage" title="Stage"><span class="symbol resource"></span>Stage</a></li>
     <li><a href="usageplan" title="UsagePlan"><span class="symbol resource"></span>UsagePlan</a></li>
     <li><a href="usageplankey" title="UsagePlanKey"><span class="symbol resource"></span>UsagePlanKey</a></li>
@@ -53,7 +54,7 @@ Explore the resources and functions of the apigateway module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.13.0</dd>
+	<dd>3.14.0</dd>
 </dl>
 
 

@@ -36,6 +36,7 @@ class MyStack : Stack
                 new Aws.AutoScaling.Inputs.GroupTagArgs
                 {
                     Key = "AmazonECSManaged",
+                    Value = "",
                     PropagateAtLaunch = true,
                 },
             },
@@ -78,6 +79,7 @@ func main() {
 			Tags: autoscaling.GroupTagArray{
 				&autoscaling.GroupTagArgs{
 					Key:               pulumi.String("AmazonECSManaged"),
+					Value:             pulumi.String(""),
 					PropagateAtLaunch: pulumi.Bool(true),
 				},
 			},
@@ -115,6 +117,7 @@ import pulumi_aws as aws
 # ... other configuration, including potentially other tags ...
 test_group = aws.autoscaling.Group("testGroup", tags=[aws.autoscaling.GroupTagArgs(
     key="AmazonECSManaged",
+    value="",
     propagate_at_launch=True,
 )])
 test_capacity_provider = aws.ecs.CapacityProvider("testCapacityProvider", auto_scaling_group_provider=aws.ecs.CapacityProviderAutoScalingGroupProviderArgs(
@@ -140,6 +143,7 @@ import * as aws from "@pulumi/aws";
 // ... other configuration, including potentially other tags ...
 const testGroup = new aws.autoscaling.Group("testGroup", {tags: [{
     key: "AmazonECSManaged",
+    value: "",
     propagateAtLaunch: true,
 }]});
 const testCapacityProvider = new aws.ecs.CapacityProvider("testCapacityProvider", {autoScalingGroupProvider: {

@@ -410,7 +410,7 @@ Applicable for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the API.
+    <dd>{{% md %}}The description of the API. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -434,7 +434,7 @@ To require that clients use a custom domain name to invoke the API, disable the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the API.
+    <dd>{{% md %}}The name of the API. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -492,7 +492,7 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A version identifier for the API.
+    <dd>{{% md %}}A version identifier for the API. Must be between 1 and 64 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -567,7 +567,7 @@ Applicable for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the API.
+    <dd>{{% md %}}The description of the API. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -591,7 +591,7 @@ To require that clients use a custom domain name to invoke the API, disable the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the API.
+    <dd>{{% md %}}The name of the API. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -649,7 +649,7 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A version identifier for the API.
+    <dd>{{% md %}}A version identifier for the API. Must be between 1 and 64 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -724,7 +724,7 @@ Applicable for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the API.
+    <dd>{{% md %}}The description of the API. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -748,7 +748,7 @@ To require that clients use a custom domain name to invoke the API, disable the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the API.
+    <dd>{{% md %}}The name of the API. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -806,7 +806,7 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A version identifier for the API.
+    <dd>{{% md %}}A version identifier for the API. Must be between 1 and 64 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -881,7 +881,7 @@ Applicable for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The description of the API.
+    <dd>{{% md %}}The description of the API. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -905,7 +905,7 @@ To require that clients use a custom domain name to invoke the API, disable the 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the API.
+    <dd>{{% md %}}The name of the API. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -963,7 +963,7 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A version identifier for the API.
+    <dd>{{% md %}}A version identifier for the API. Must be between 1 and 64 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -1395,7 +1395,7 @@ Applicable for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the API.
+    <dd>{{% md %}}The description of the API. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1432,7 +1432,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the API.
+    <dd>{{% md %}}The name of the API. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1501,7 +1501,7 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A version identifier for the API.
+    <dd>{{% md %}}A version identifier for the API. Must be between 1 and 64 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -1587,7 +1587,7 @@ Applicable for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the API.
+    <dd>{{% md %}}The description of the API. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1624,7 +1624,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the API.
+    <dd>{{% md %}}The name of the API. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1693,7 +1693,7 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A version identifier for the API.
+    <dd>{{% md %}}A version identifier for the API. Must be between 1 and 64 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -1779,7 +1779,7 @@ Applicable for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the API.
+    <dd>{{% md %}}The description of the API. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1816,7 +1816,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the API.
+    <dd>{{% md %}}The name of the API. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1885,7 +1885,7 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A version identifier for the API.
+    <dd>{{% md %}}A version identifier for the API. Must be between 1 and 64 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -1971,7 +1971,7 @@ Applicable for WebSocket APIs.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The description of the API.
+    <dd>{{% md %}}The description of the API. Must be less than or equal to 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2008,7 +2008,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the API.
+    <dd>{{% md %}}The name of the API. Must be less than or equal to 128 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2077,7 +2077,7 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A version identifier for the API.
+    <dd>{{% md %}}A version identifier for the API. Must be between 1 and 64 characters in length.
 {{% /md %}}</dd>
 
 </dl>

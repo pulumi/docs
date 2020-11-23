@@ -273,9 +273,7 @@ The EventBus resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the new event bus.
-The names of custom event buses can't contain the / character.
-Please note that a partner event bus is not supported at the moment.
+    <dd>{{% md %}}The name of the new event bus. The names of custom event buses can't contain the / character. Please note that a partner event bus is not supported at the moment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -304,9 +302,7 @@ Please note that a partner event bus is not supported at the moment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the new event bus.
-The names of custom event buses can't contain the / character.
-Please note that a partner event bus is not supported at the moment.
+    <dd>{{% md %}}The name of the new event bus. The names of custom event buses can't contain the / character. Please note that a partner event bus is not supported at the moment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -335,9 +331,7 @@ Please note that a partner event bus is not supported at the moment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the new event bus.
-The names of custom event buses can't contain the / character.
-Please note that a partner event bus is not supported at the moment.
+    <dd>{{% md %}}The name of the new event bus. The names of custom event buses can't contain the / character. Please note that a partner event bus is not supported at the moment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -366,9 +360,7 @@ Please note that a partner event bus is not supported at the moment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the new event bus.
-The names of custom event buses can't contain the / character.
-Please note that a partner event bus is not supported at the moment.
+    <dd>{{% md %}}The name of the new event bus. The names of custom event buses can't contain the / character. Please note that a partner event bus is not supported at the moment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -658,9 +650,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the new event bus.
-The names of custom event buses can't contain the / character.
-Please note that a partner event bus is not supported at the moment.
+    <dd>{{% md %}}The name of the new event bus. The names of custom event buses can't contain the / character. Please note that a partner event bus is not supported at the moment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -700,9 +690,7 @@ Please note that a partner event bus is not supported at the moment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the new event bus.
-The names of custom event buses can't contain the / character.
-Please note that a partner event bus is not supported at the moment.
+    <dd>{{% md %}}The name of the new event bus. The names of custom event buses can't contain the / character. Please note that a partner event bus is not supported at the moment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -742,9 +730,7 @@ Please note that a partner event bus is not supported at the moment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the new event bus.
-The names of custom event buses can't contain the / character.
-Please note that a partner event bus is not supported at the moment.
+    <dd>{{% md %}}The name of the new event bus. The names of custom event buses can't contain the / character. Please note that a partner event bus is not supported at the moment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -784,9 +770,7 @@ Please note that a partner event bus is not supported at the moment.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the new event bus.
-The names of custom event buses can't contain the / character.
-Please note that a partner event bus is not supported at the moment.
+    <dd>{{% md %}}The name of the new event bus. The names of custom event buses can't contain the / character. Please note that a partner event bus is not supported at the moment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

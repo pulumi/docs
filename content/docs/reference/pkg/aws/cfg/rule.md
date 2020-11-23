@@ -567,8 +567,7 @@ The Rule resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesource">Rule<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Source specifies the rule owner, the rule identifier, and the notifications that cause
-the function to evaluate your AWS resources as documented below.
+    <dd>{{% md %}}Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -601,8 +600,7 @@ the function to evaluate your AWS resources as documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
-is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -653,8 +651,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesource">Rule<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}Source specifies the rule owner, the rule identifier, and the notifications that cause
-the function to evaluate your AWS resources as documented below.
+    <dd>{{% md %}}Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -687,8 +684,7 @@ the function to evaluate your AWS resources as documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
-is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -739,8 +735,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesource">Rule<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}Source specifies the rule owner, the rule identifier, and the notifications that cause
-the function to evaluate your AWS resources as documented below.
+    <dd>{{% md %}}Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -773,8 +768,7 @@ the function to evaluate your AWS resources as documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
-is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -825,8 +819,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesource">Rule<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Source specifies the rule owner, the rule identifier, and the notifications that cause
-the function to evaluate your AWS resources as documented below.
+    <dd>{{% md %}}Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -859,8 +852,7 @@ the function to evaluate your AWS resources as documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
-is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1238,8 +1230,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
-is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1283,8 +1274,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesource">Rule<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Source specifies the rule owner, the rule identifier, and the notifications that cause
-the function to evaluate your AWS resources as documented below.
+    <dd>{{% md %}}Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1346,8 +1336,7 @@ the function to evaluate your AWS resources as documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
-is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1391,8 +1380,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesource">Rule<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}Source specifies the rule owner, the rule identifier, and the notifications that cause
-the function to evaluate your AWS resources as documented below.
+    <dd>{{% md %}}Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1454,8 +1442,7 @@ the function to evaluate your AWS resources as documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
-is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1499,8 +1486,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesource">Rule<wbr>Source</a></span>
     </dt>
-    <dd>{{% md %}}Source specifies the rule owner, the rule identifier, and the notifications that cause
-the function to evaluate your AWS resources as documented below.
+    <dd>{{% md %}}Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1562,8 +1548,7 @@ the function to evaluate your AWS resources as documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
-is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1607,8 +1592,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulesource">Rule<wbr>Source<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Source specifies the rule owner, the rule identifier, and the notifications that cause
-the function to evaluate your AWS resources as documented below.
+    <dd>{{% md %}}Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1663,8 +1647,7 @@ the function to evaluate your AWS resources as documented below.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of the only AWS resource that you want to trigger an evaluation for the rule.
-If you specify a resource ID, you must specify one resource type for `compliance_resource_types`.
+    <dd>{{% md %}}The IDs of the only AWS resource that you want to trigger an evaluation for the rule. If you specify a resource ID, you must specify one resource type for `compliance_resource_types`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1675,9 +1658,7 @@ If you specify a resource ID, you must specify one resource type for `compliance
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A list of resource types of only those AWS resources that you want to trigger an
-evaluation for the rule. e.g. `AWS::EC2::Instance`. You can only specify one type if you also specify
-a resource ID for `compliance_resource_id`. See [relevant part of AWS Docs](http://docs.aws.amazon.com/config/latest/APIReference/API_ResourceIdentifier.html#config-Type-ResourceIdentifier-resourceType) for available types.
+    <dd>{{% md %}}A list of resource types of only those AWS resources that you want to trigger an evaluation for the rule. e.g. `AWS::EC2::Instance`. You can only specify one type if you also specify a resource ID for `compliance_resource_id`. See [relevant part of AWS Docs](http://docs.aws.amazon.com/config/latest/APIReference/API_ResourceIdentifier.html#config-Type-ResourceIdentifier-resourceType) for available types.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1688,8 +1669,7 @@ a resource ID for `compliance_resource_id`. See [relevant part of AWS Docs](http
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The tag key that is applied to only those AWS resources that you want you
-want to trigger an evaluation for the rule.
+    <dd>{{% md %}}The tag key that is applied to only those AWS resources that you want you want to trigger an evaluation for the rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1718,8 +1698,7 @@ want to trigger an evaluation for the rule.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of the only AWS resource that you want to trigger an evaluation for the rule.
-If you specify a resource ID, you must specify one resource type for `compliance_resource_types`.
+    <dd>{{% md %}}The IDs of the only AWS resource that you want to trigger an evaluation for the rule. If you specify a resource ID, you must specify one resource type for `compliance_resource_types`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1730,9 +1709,7 @@ If you specify a resource ID, you must specify one resource type for `compliance
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}A list of resource types of only those AWS resources that you want to trigger an
-evaluation for the rule. e.g. `AWS::EC2::Instance`. You can only specify one type if you also specify
-a resource ID for `compliance_resource_id`. See [relevant part of AWS Docs](http://docs.aws.amazon.com/config/latest/APIReference/API_ResourceIdentifier.html#config-Type-ResourceIdentifier-resourceType) for available types.
+    <dd>{{% md %}}A list of resource types of only those AWS resources that you want to trigger an evaluation for the rule. e.g. `AWS::EC2::Instance`. You can only specify one type if you also specify a resource ID for `compliance_resource_id`. See [relevant part of AWS Docs](http://docs.aws.amazon.com/config/latest/APIReference/API_ResourceIdentifier.html#config-Type-ResourceIdentifier-resourceType) for available types.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1743,8 +1720,7 @@ a resource ID for `compliance_resource_id`. See [relevant part of AWS Docs](http
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The tag key that is applied to only those AWS resources that you want you
-want to trigger an evaluation for the rule.
+    <dd>{{% md %}}The tag key that is applied to only those AWS resources that you want you want to trigger an evaluation for the rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1773,8 +1749,7 @@ want to trigger an evaluation for the rule.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of the only AWS resource that you want to trigger an evaluation for the rule.
-If you specify a resource ID, you must specify one resource type for `compliance_resource_types`.
+    <dd>{{% md %}}The IDs of the only AWS resource that you want to trigger an evaluation for the rule. If you specify a resource ID, you must specify one resource type for `compliance_resource_types`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1785,9 +1760,7 @@ If you specify a resource ID, you must specify one resource type for `compliance
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}A list of resource types of only those AWS resources that you want to trigger an
-evaluation for the rule. e.g. `AWS::EC2::Instance`. You can only specify one type if you also specify
-a resource ID for `compliance_resource_id`. See [relevant part of AWS Docs](http://docs.aws.amazon.com/config/latest/APIReference/API_ResourceIdentifier.html#config-Type-ResourceIdentifier-resourceType) for available types.
+    <dd>{{% md %}}A list of resource types of only those AWS resources that you want to trigger an evaluation for the rule. e.g. `AWS::EC2::Instance`. You can only specify one type if you also specify a resource ID for `compliance_resource_id`. See [relevant part of AWS Docs](http://docs.aws.amazon.com/config/latest/APIReference/API_ResourceIdentifier.html#config-Type-ResourceIdentifier-resourceType) for available types.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1798,8 +1771,7 @@ a resource ID for `compliance_resource_id`. See [relevant part of AWS Docs](http
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The tag key that is applied to only those AWS resources that you want you
-want to trigger an evaluation for the rule.
+    <dd>{{% md %}}The tag key that is applied to only those AWS resources that you want you want to trigger an evaluation for the rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1828,8 +1800,7 @@ want to trigger an evaluation for the rule.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The IDs of the only AWS resource that you want to trigger an evaluation for the rule.
-If you specify a resource ID, you must specify one resource type for `compliance_resource_types`.
+    <dd>{{% md %}}The IDs of the only AWS resource that you want to trigger an evaluation for the rule. If you specify a resource ID, you must specify one resource type for `compliance_resource_types`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1840,9 +1811,7 @@ If you specify a resource ID, you must specify one resource type for `compliance
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}A list of resource types of only those AWS resources that you want to trigger an
-evaluation for the rule. e.g. `AWS::EC2::Instance`. You can only specify one type if you also specify
-a resource ID for `compliance_resource_id`. See [relevant part of AWS Docs](http://docs.aws.amazon.com/config/latest/APIReference/API_ResourceIdentifier.html#config-Type-ResourceIdentifier-resourceType) for available types.
+    <dd>{{% md %}}A list of resource types of only those AWS resources that you want to trigger an evaluation for the rule. e.g. `AWS::EC2::Instance`. You can only specify one type if you also specify a resource ID for `compliance_resource_id`. See [relevant part of AWS Docs](http://docs.aws.amazon.com/config/latest/APIReference/API_ResourceIdentifier.html#config-Type-ResourceIdentifier-resourceType) for available types.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1853,8 +1822,7 @@ a resource ID for `compliance_resource_id`. See [relevant part of AWS Docs](http
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The tag key that is applied to only those AWS resources that you want you
-want to trigger an evaluation for the rule.
+    <dd>{{% md %}}The tag key that is applied to only those AWS resources that you want you want to trigger an evaluation for the rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2079,8 +2047,7 @@ want to trigger an evaluation for the rule.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The source of the event, such as an AWS service, that triggers AWS Config
-to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
+    <dd>{{% md %}}The source of the event, such as an AWS service, that triggers AWS Config to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2091,8 +2058,7 @@ to evaluate your AWS resources. This defaults to `aws.config` and is the only va
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
-is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2121,8 +2087,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The source of the event, such as an AWS service, that triggers AWS Config
-to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
+    <dd>{{% md %}}The source of the event, such as an AWS service, that triggers AWS Config to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2133,8 +2098,7 @@ to evaluate your AWS resources. This defaults to `aws.config` and is the only va
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
-is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2163,8 +2127,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The source of the event, such as an AWS service, that triggers AWS Config
-to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
+    <dd>{{% md %}}The source of the event, such as an AWS service, that triggers AWS Config to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2175,8 +2138,7 @@ to evaluate your AWS resources. This defaults to `aws.config` and is the only va
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
-is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2205,8 +2167,7 @@ is triggered periodically. If specified, requires `message_type` to be `Schedule
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The source of the event, such as an AWS service, that triggers AWS Config
-to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
+    <dd>{{% md %}}The source of the event, such as an AWS service, that triggers AWS Config to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2217,8 +2178,7 @@ to evaluate your AWS resources. This defaults to `aws.config` and is the only va
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that
-is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
+    <dd>{{% md %}}The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

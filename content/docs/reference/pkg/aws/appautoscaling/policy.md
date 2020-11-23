@@ -759,7 +759,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -843,7 +843,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -927,7 +927,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1011,7 +1011,7 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1323,7 +1323,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1418,7 +1418,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1513,7 +1513,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1608,7 +1608,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2738,7 +2738,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2767,7 +2767,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2796,7 +2796,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2825,7 +2825,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the policy.
+    <dd>{{% md %}}The name of the policy. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2883,7 +2883,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Reserved for future use.
+    <dd>{{% md %}}Reserved for future use. Must be less than or equal to 1023 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -2912,7 +2912,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Reserved for future use.
+    <dd>{{% md %}}Reserved for future use. Must be less than or equal to 1023 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -2941,7 +2941,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Reserved for future use.
+    <dd>{{% md %}}Reserved for future use. Must be less than or equal to 1023 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -2970,7 +2970,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Reserved for future use.
+    <dd>{{% md %}}Reserved for future use. Must be less than or equal to 1023 characters in length.
 {{% /md %}}</dd>
 
 </dl>

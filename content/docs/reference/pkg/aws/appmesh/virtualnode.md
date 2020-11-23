@@ -922,7 +922,7 @@ The VirtualNode resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
+    <dd>{{% md %}}The name of the service mesh in which to create the virtual node. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -955,7 +955,7 @@ The VirtualNode resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name to use for the virtual node.
+    <dd>{{% md %}}The name to use for the virtual node. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -984,7 +984,7 @@ The VirtualNode resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
+    <dd>{{% md %}}The name of the service mesh in which to create the virtual node. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1017,7 +1017,7 @@ The VirtualNode resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name to use for the virtual node.
+    <dd>{{% md %}}The name to use for the virtual node. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1046,7 +1046,7 @@ The VirtualNode resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
+    <dd>{{% md %}}The name of the service mesh in which to create the virtual node. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1079,7 +1079,7 @@ The VirtualNode resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name to use for the virtual node.
+    <dd>{{% md %}}The name to use for the virtual node. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1108,7 +1108,7 @@ The VirtualNode resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
+    <dd>{{% md %}}The name of the service mesh in which to create the virtual node. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1141,7 +1141,7 @@ The VirtualNode resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name to use for the virtual node.
+    <dd>{{% md %}}The name to use for the virtual node. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1585,7 +1585,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
+    <dd>{{% md %}}The name of the service mesh in which to create the virtual node. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1607,7 +1607,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name to use for the virtual node.
+    <dd>{{% md %}}The name to use for the virtual node. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1691,7 +1691,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
+    <dd>{{% md %}}The name of the service mesh in which to create the virtual node. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1713,7 +1713,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name to use for the virtual node.
+    <dd>{{% md %}}The name to use for the virtual node. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1797,7 +1797,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
+    <dd>{{% md %}}The name of the service mesh in which to create the virtual node. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1819,7 +1819,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name to use for the virtual node.
+    <dd>{{% md %}}The name to use for the virtual node. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1903,7 +1903,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the virtual node.
+    <dd>{{% md %}}The name of the service mesh in which to create the virtual node. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1925,7 +1925,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name to use for the virtual node.
+    <dd>{{% md %}}The name to use for the virtual node. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3026,7 +3026,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate.
+    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3044,7 +3044,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate.
+    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3062,7 +3062,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate.
+    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3080,7 +3080,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate.
+    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3116,7 +3116,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual service that is acting as a virtual node backend.
+    <dd>{{% md %}}The name of the virtual service that is acting as a virtual node backend. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3145,7 +3145,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual service that is acting as a virtual node backend.
+    <dd>{{% md %}}The name of the virtual service that is acting as a virtual node backend. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3174,7 +3174,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual service that is acting as a virtual node backend.
+    <dd>{{% md %}}The name of the virtual service that is acting as a virtual node backend. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3203,7 +3203,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the virtual service that is acting as a virtual node backend.
+    <dd>{{% md %}}The name of the virtual service that is acting as a virtual node backend. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3828,7 +3828,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate.
+    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3846,7 +3846,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate.
+    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3864,7 +3864,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate.
+    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -3882,7 +3882,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate.
+    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -6638,7 +6638,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate.
+    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6649,7 +6649,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The private key for a certificate stored on the file system of the virtual node that the proxy is running on.
+    <dd>{{% md %}}The private key for a certificate stored on the file system of the virtual node that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -6667,7 +6667,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate.
+    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6678,7 +6678,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The private key for a certificate stored on the file system of the virtual node that the proxy is running on.
+    <dd>{{% md %}}The private key for a certificate stored on the file system of the virtual node that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -6696,7 +6696,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate.
+    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6707,7 +6707,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The private key for a certificate stored on the file system of the virtual node that the proxy is running on.
+    <dd>{{% md %}}The private key for a certificate stored on the file system of the virtual node that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -6725,7 +6725,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The certificate chain for the certificate.
+    <dd>{{% md %}}The certificate chain for the certificate. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6736,7 +6736,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The private key for a certificate stored on the file system of the virtual node that the proxy is running on.
+    <dd>{{% md %}}The private key for a certificate stored on the file system of the virtual node that the proxy is running on. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -6952,7 +6952,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out.
+    <dd>{{% md %}}The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -6970,7 +6970,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out.
+    <dd>{{% md %}}The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -6988,7 +6988,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out.
+    <dd>{{% md %}}The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -7006,7 +7006,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out.
+    <dd>{{% md %}}The file path to write access logs to. You can use `/dev/stdout` to send access logs to standard out. Must be between 1 and 255 characters in length.
 {{% /md %}}</dd>
 
 </dl>
@@ -7177,7 +7177,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the AWS Cloud Map namespace to use.
-Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map namespace.
+Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map namespace. Must be between 1 and 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -7188,7 +7188,7 @@ Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the `aws.servicediscovery.Service` resource to configure a Cloud Map service.
+    <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the `aws.servicediscovery.Service` resource to configure a Cloud Map service. Must be between 1 and 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7218,7 +7218,7 @@ Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map n
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the AWS Cloud Map namespace to use.
-Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map namespace.
+Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map namespace. Must be between 1 and 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -7229,7 +7229,7 @@ Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the `aws.servicediscovery.Service` resource to configure a Cloud Map service.
+    <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the `aws.servicediscovery.Service` resource to configure a Cloud Map service. Must be between 1 and 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7259,7 +7259,7 @@ Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map n
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the AWS Cloud Map namespace to use.
-Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map namespace.
+Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map namespace. Must be between 1 and 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -7270,7 +7270,7 @@ Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the `aws.servicediscovery.Service` resource to configure a Cloud Map service.
+    <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the `aws.servicediscovery.Service` resource to configure a Cloud Map service. Must be between 1 and 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7300,7 +7300,7 @@ Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map n
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the AWS Cloud Map namespace to use.
-Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map namespace.
+Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map namespace. Must be between 1 and 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -7311,7 +7311,7 @@ Use the `aws.servicediscovery.HttpNamespace` resource to configure a Cloud Map n
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the `aws.servicediscovery.Service` resource to configure a Cloud Map service.
+    <dd>{{% md %}}The name of the AWS Cloud Map service to use. Use the `aws.servicediscovery.Service` resource to configure a Cloud Map service. Must be between 1 and 1024 characters in length.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
