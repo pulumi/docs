@@ -13,6 +13,7 @@ meta_desc: "Explore the GetPublicKey function of the TLS package, including exam
 Use this data source to get the public key from a PEM-encoded private key for use in other
 resources.
 
+
 {{% examples %}}
 ## Example Usage
 
