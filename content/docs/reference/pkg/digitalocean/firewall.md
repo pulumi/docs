@@ -13,7 +13,6 @@ meta_desc: "Explore the Firewall resource of the DigitalOcean package, including
 Provides a DigitalOcean Cloud Firewall resource. This can be used to create,
 modify, and delete Firewalls.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2377,6 +2376,16 @@ This can be "waiting", "succeeded", or "failed".
 
 
 
+
+
+## Import
+
+
+Firewalls can be imported using the firewall `id`, e.g.
+
+```sh
+ $ pulumi import digitalocean:index/firewall:Firewall myfirewall b8ecd2ab-2267-4a5e-8692-cbf1d32583e3
+```
 
 
 

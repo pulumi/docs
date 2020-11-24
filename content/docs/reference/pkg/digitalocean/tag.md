@@ -15,7 +15,6 @@ Droplet resource in order to better organize or facilitate the lookups and
 actions on it. Tags created with this resource can be referenced in your Droplet
 configuration via their ID or name.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1187,6 +1186,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Tags can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import digitalocean:index/tag:Tag mytag tagname
+```
 
 
 

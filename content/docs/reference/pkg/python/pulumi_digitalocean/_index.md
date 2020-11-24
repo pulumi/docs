@@ -102,6 +102,10 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="p">))</span>
 </pre></div>
 </div>
+<p>An app can be imported using its <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index/app:App myapp fb06ad00-351f-45c8-b5eb-13523c438661
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -411,6 +415,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">certificate_name</span><span class="o">=</span><span class="n">cert</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>CDN Endpoints can be imported using the CDN <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index/cdn:Cdn mycdn fb06ad00-351f-45c8-b5eb-13523c438661
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -575,6 +583,10 @@ including the <code class="docutils literal notranslate"><span class="pre">LoadB
     <span class="p">)])</span>
 </pre></div>
 </div>
+<p>Certificates can be imported using the certificate <code class="docutils literal notranslate"><span class="pre">name</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index/certificate:Certificate mycertificate cert-01
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -737,6 +749,10 @@ a secure, private location to store your containers for rapid deployment.</p>
 
 <span class="c1"># Create a new container registry</span>
 <span class="n">foobar</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">ContainerRegistry</span><span class="p">(</span><span class="s2">&quot;foobar&quot;</span><span class="p">,</span> <span class="n">subscription_tier_slug</span><span class="o">=</span><span class="s2">&quot;starter&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Container Registries can be imported using the <code class="docutils literal notranslate"><span class="pre">name</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index/containerRegistry:ContainerRegistry myregistry registryname
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1058,6 +1074,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">version</span><span class="o">=</span><span class="s2">&quot;5&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Database clusters can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code> returned from DigitalOcean, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index/databaseCluster:DatabaseCluster mycluster 245bcfd0-7f31-4ce6-a2bc-475a116cca97
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1292,6 +1312,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">user</span><span class="o">=</span><span class="s2">&quot;doadmin&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Database connection pools can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code> of the source database cluster and the <code class="docutils literal notranslate"><span class="pre">name</span></code> of the connection pool joined with a comma. For example</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index/databaseConnectionPool:DatabaseConnectionPool pool-01 245bcfd0-7f31-4ce6-a2bc-475a116cca97,pool-01
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1460,6 +1484,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">database_example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">DatabaseDb</span><span class="p">(</span><span class="s2">&quot;database-example&quot;</span><span class="p">,</span> <span class="n">cluster_id</span><span class="o">=</span><span class="n">postgres_example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Database can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code> of the source database cluster and the <code class="docutils literal notranslate"><span class="pre">name</span></code> of the database joined with a comma. For example</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index:DatabaseDb database-example 245bcfd0-7f31-4ce6-a2bc-475a116cca97,foobar
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1588,6 +1616,10 @@ specific Droplets, Kubernetes clusters, or IP addresses.</p>
     <span class="p">)])</span>
 </pre></div>
 </div>
+<p>Database firewalls can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code> of the target database cluster For example</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index:DatabaseFirewall example-fw 5f55c6cd-863b-4907-99b8-7e09b0275d54
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1683,6 +1715,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">cluster_id</span><span class="o">=</span><span class="n">postgres_example</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">size</span><span class="o">=</span><span class="s2">&quot;db-s-1vcpu-1gb&quot;</span><span class="p">,</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Database replicas can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code> of the source database cluster and the <code class="docutils literal notranslate"><span class="pre">name</span></code> of the replica joined with a comma. For example</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index/databaseReplica:DatabaseReplica read-replica 245bcfd0-7f31-4ce6-a2bc-475a116cca97,read-replica
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1854,6 +1890,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">user_example</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">DatabaseUser</span><span class="p">(</span><span class="s2">&quot;user-example&quot;</span><span class="p">,</span> <span class="n">cluster_id</span><span class="o">=</span><span class="n">postgres_example</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Database user can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code> of the source database cluster and the <code class="docutils literal notranslate"><span class="pre">name</span></code> of the user joined with a comma. For example</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index:DatabaseUser user-example 245bcfd0-7f31-4ce6-a2bc-475a116cca97,foobar
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1975,6 +2015,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">value</span><span class="o">=</span><span class="s2">&quot;mail.example.com.&quot;</span><span class="p">)</span>
 <span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;wwwFqdn&quot;</span><span class="p">,</span> <span class="n">www</span><span class="o">.</span><span class="n">fqdn</span><span class="p">)</span>
 <span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;mxFqdn&quot;</span><span class="p">,</span> <span class="n">mx</span><span class="o">.</span><span class="n">fqdn</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Records can be imported using the domain name and record <code class="docutils literal notranslate"><span class="pre">id</span></code> when joined with a comma. See the following example</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index/dnsRecord:DnsRecord example_record example.com,12345678
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2139,6 +2183,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">ip_address</span><span class="o">=</span><span class="n">digitalocean_droplet</span><span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">][</span><span class="s2">&quot;ipv4_address&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
+<p>Domains can be imported using the <code class="docutils literal notranslate"><span class="pre">domain</span> <span class="pre">name</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index/domain:Domain mydomain mytestdomain.com
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2241,6 +2289,10 @@ modify, and delete Droplets. Droplets also support
     <span class="n">image</span><span class="o">=</span><span class="s2">&quot;ubuntu-18-04-x64&quot;</span><span class="p">,</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc2&quot;</span><span class="p">,</span>
     <span class="n">size</span><span class="o">=</span><span class="s2">&quot;s-1vcpu-1gb&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Droplets can be imported using the Droplet <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index/droplet:Droplet mydroplet <span class="m">100823</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2549,6 +2601,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">web_snapshot</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">DropletSnapshot</span><span class="p">(</span><span class="s2">&quot;web-snapshot&quot;</span><span class="p">,</span> <span class="n">droplet_id</span><span class="o">=</span><span class="n">web</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Droplet Snapshots can be imported using the <code class="docutils literal notranslate"><span class="pre">snapshot</span> <span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index/dropletSnapshot:DropletSnapshot mysnapshot <span class="m">123456</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2729,6 +2785,10 @@ modify, and delete Firewalls.</p>
     <span class="p">])</span>
 </pre></div>
 </div>
+<p>Firewalls can be imported using the firewall <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index/firewall:Firewall myfirewall b8ecd2ab-2267-4a5e-8692-cbf1d32583e3
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2890,6 +2950,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">foobar_floating_ip</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">FloatingIp</span><span class="p">(</span><span class="s2">&quot;foobarFloatingIp&quot;</span><span class="p">,</span>
     <span class="n">droplet_id</span><span class="o">=</span><span class="n">foobar_droplet</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">region</span><span class="o">=</span><span class="n">foobar_droplet</span><span class="o">.</span><span class="n">region</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Floating IPs can be imported using the <code class="docutils literal notranslate"><span class="pre">ip</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index/floatingIp:FloatingIp myip <span class="m">192</span>.168.0.1
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -4323,17 +4387,26 @@ the following attributes:</p>
 <dl class="py class">
 <dt id="pulumi_digitalocean.KubernetesCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">KubernetesCluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_upgrade</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_pool</span><span class="p">:</span> <span class="n">Union[KubernetesClusterNodePoolArgs, Mapping[str, Any], Awaitable[Union[KubernetesClusterNodePoolArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">surge_upgrade</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_uuid</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesCluster" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a KubernetesCluster resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] auto_upgrade: A boolean value indicating whether the cluster will be automatically upgraded to new patch releases during its maintenance window.
-:param pulumi.Input[str] name: A name for the node pool.
-:param pulumi.Input[pulumi.InputType[‘KubernetesClusterNodePoolArgs’]] node_pool: A block representing the cluster’s default node pool. Additional node pools may be added to the cluster using the <code class="docutils literal notranslate"><span class="pre">KubernetesNodePool</span></code> resource. The following arguments may be specified:
-:param pulumi.Input[str] region: The slug identifier for the region where the Kubernetes cluster will be created.
-:param pulumi.Input[bool] surge_upgrade: Enable/disable surge upgrades for a cluster. Default: false
-:param pulumi.Input[Sequence[pulumi.Input[str]]] tags: A list of tag names to be applied to the Kubernetes cluster.
-:param pulumi.Input[str] version: The slug identifier for the version of Kubernetes used for the cluster. Use <a class="reference external" href="https://github.com/digitalocean/doctl">doctl</a> to find the available versions <code class="docutils literal notranslate"><span class="pre">doctl</span> <span class="pre">kubernetes</span> <span class="pre">options</span> <span class="pre">versions</span></code>. (<strong>Note:</strong> A cluster may only be upgraded to newer versions in-place. If the version is decreased, a new resource will be created.)
-:param pulumi.Input[str] vpc_uuid: The ID of the VPC where the Kubernetes cluster will be located.</p>
+<dd><p>Before importing a Kubernetes cluster, the cluster’s default node pool must be tagged with the <code class="docutils literal notranslate"><span class="pre">terraform:default-node-pool</span></code> tag. The provider will automatically add this tag if the cluster has a single node pool. Clusters with more than one node pool, however, will require that you manually add the <code class="docutils literal notranslate"><span class="pre">terraform:default-node-pool</span></code> tag to the node pool that you intend to be the default node pool. Then the Kubernetes cluster and all of its node pools can be imported using the cluster’s <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index/kubernetesCluster:KubernetesCluster mycluster 1b8b2100-0e9f-4e8f-ad78-9eb578c2a0af
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auto_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean value indicating whether the cluster will be automatically upgraded to new patch releases during its maintenance window.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the node pool.</p></li>
+<li><p><strong>node_pool</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'KubernetesClusterNodePoolArgs'</em><em>]</em><em>]</em>) – A block representing the cluster’s default node pool. Additional node pools may be added to the cluster using the <code class="docutils literal notranslate"><span class="pre">KubernetesNodePool</span></code> resource. The following arguments may be specified:</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The slug identifier for the region where the Kubernetes cluster will be created.</p></li>
+<li><p><strong>surge_upgrade</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable/disable surge upgrades for a cluster. Default: false</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of tag names to be applied to the Kubernetes cluster.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The slug identifier for the version of Kubernetes used for the cluster. Use <a class="reference external" href="https://github.com/digitalocean/doctl">doctl</a> to find the available versions <code class="docutils literal notranslate"><span class="pre">doctl</span> <span class="pre">kubernetes</span> <span class="pre">options</span> <span class="pre">versions</span></code>. (<strong>Note:</strong> A cluster may only be upgraded to newer versions in-place. If the version is decreased, a new resource will be created.)</p></li>
+<li><p><strong>vpc_uuid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC where the Kubernetes cluster will be located.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="pulumi_digitalocean.KubernetesCluster.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auto_upgrade</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cluster_subnet</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_at</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv4_address</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kube_configs</span><span class="p">:</span> <span class="n">Union[Sequence[Union[KubernetesClusterKubeConfigArgs, Mapping[str, Any], Awaitable[Union[KubernetesClusterKubeConfigArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[KubernetesClusterKubeConfigArgs, Mapping[str, Any], Awaitable[Union[KubernetesClusterKubeConfigArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_pool</span><span class="p">:</span> <span class="n">Union[KubernetesClusterNodePoolArgs, Mapping[str, Any], Awaitable[Union[KubernetesClusterNodePoolArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_subnet</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">surge_upgrade</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">updated_at</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">version</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_uuid</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_digitalocean.kubernetes_cluster.KubernetesCluster<a class="headerlink" href="#pulumi_digitalocean.KubernetesCluster.get" title="Permalink to this definition">¶</a></dt>
@@ -4531,6 +4604,12 @@ For example:</p>
     <span class="n">auto_scale</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">min_nodes</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
     <span class="n">max_nodes</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you are importing an existing Kubernetes cluster, just import the cluster. Importing a cluster also imports all of its associated node pools. If you still need to import a single node pool, then import it by using its <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import digitalocean:index/kubernetesNodePool:KubernetesNodePool mynodepool 9d76f410-9284-4436-9633-4066852442c8
+
+NoteIf the node pool has the <span class="sb">``</span>terraform:default-node-pool<span class="sb">``</span> tag, <span class="k">then</span> it is a default node pool <span class="k">for</span> an existing cluster. The provider will refuse to import the node pool in that <span class="k">case</span> because the node pool is managed by the <span class="sb">``</span>digitalocean_kubernetes_cluster<span class="sb">``</span> resource and not by this <span class="sb">``</span>digitalocean_kubernetes_node_pool<span class="sb">``</span> resource.
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -4740,6 +4819,10 @@ as there cannot be multiple certificates with the same name in an account.</p>
     <span class="n">droplet_ids</span><span class="o">=</span><span class="p">[</span><span class="n">web</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
 </pre></div>
 </div>
+<p>Load Balancers can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index/loadBalancer:LoadBalancer myloadbalancer 4de7ac8b-495b-4884-9a69-1050c6793cd6
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4935,14 +5018,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_digitalocean.Project">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">environment</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">purpose</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resources</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Project" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Project resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: the description of the project
-:param pulumi.Input[str] environment: the environment of the project’s resources. The possible values are: <code class="docutils literal notranslate"><span class="pre">Development</span></code>, <code class="docutils literal notranslate"><span class="pre">Staging</span></code>, <code class="docutils literal notranslate"><span class="pre">Production</span></code>)
-:param pulumi.Input[str] name: The name of the Project
-:param pulumi.Input[str] purpose: the purpose of the project, (Default: “Web Application”)
-:param pulumi.Input[Sequence[pulumi.Input[str]]] resources: a list of uniform resource names (URNs) for the resources associated with the project</p>
+<dd><p>Projects can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code> returned from DigitalOcean, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index/project:Project myproject 245bcfd0-7f31-4ce6-a2bc-475a116cca97
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the description of the project</p></li>
+<li><p><strong>environment</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the environment of the project’s resources. The possible values are: <code class="docutils literal notranslate"><span class="pre">Development</span></code>, <code class="docutils literal notranslate"><span class="pre">Staging</span></code>, <code class="docutils literal notranslate"><span class="pre">Production</span></code>)</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Project</p></li>
+<li><p><strong>purpose</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the purpose of the project, (Default: “Web Application”)</p></li>
+<li><p><strong>resources</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – a list of uniform resource names (URNs) for the resources associated with the project</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="pulumi_digitalocean.Project.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">created_at</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">environment</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">is_default</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_uuid</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">purpose</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resources</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">updated_at</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_digitalocean.project.Project<a class="headerlink" href="#pulumi_digitalocean.Project.get" title="Permalink to this definition">¶</a></dt>
@@ -5063,11 +5155,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_digitalocean.ProjectResources">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">ProjectResources</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resources</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.ProjectResources" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ProjectResources resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] project: the ID of the project
-:param pulumi.Input[Sequence[pulumi.Input[str]]] resources: a list of uniform resource names (URNs) for the resources associated with the project</p>
+<dd><p>Importing this resource is not supported.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the ID of the project</p></li>
+<li><p><strong>resources</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – a list of uniform resource names (URNs) for the resources associated with the project</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="pulumi_digitalocean.ProjectResources.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">resources</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_digitalocean.project_resources.ProjectResources<a class="headerlink" href="#pulumi_digitalocean.ProjectResources.get" title="Permalink to this definition">¶</a></dt>
@@ -5247,6 +5345,10 @@ example:</p>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc3&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Buckets can be imported using the <code class="docutils literal notranslate"><span class="pre">region</span></code> and <code class="docutils literal notranslate"><span class="pre">name</span></code> attributes (delimited by a comma)</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index/spacesBucket:SpacesBucket foobar <span class="sb">`</span>region<span class="sb">`</span>,<span class="sb">`</span>name<span class="sb">`</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5382,26 +5484,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_digitalocean.SpacesBucketObject">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">SpacesBucketObject</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">acl</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bucket</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_control</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_base64</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_disposition</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_encoding</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_language</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">etag</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_destroy</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">metadata</span><span class="p">:</span> <span class="n">Union[Mapping[str, Union[str, Awaitable[str], Output[T]]], Awaitable[Mapping[str, Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">website_redirect</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a SpacesBucketObject resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] acl: The canned ACL to apply. DigitalOcean supports “private” and “public-read”. (Defaults to “private”.)
-:param pulumi.Input[str] bucket: The name of the bucket to put the file in.
-:param pulumi.Input[str] cache_control: Specifies caching behavior along the request/reply chain Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9">w3c cache_control</a> for further details.
-:param pulumi.Input[str] content: Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
-:param pulumi.Input[str] content_base64: Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the <code class="docutils literal notranslate"><span class="pre">gzipbase64</span></code> function with small text strings. For larger objects, use <code class="docutils literal notranslate"><span class="pre">source</span></code> to stream the content from a disk file.
-:param pulumi.Input[str] content_disposition: Specifies presentational information for the object. Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1">w3c content_disposition</a> for further information.
-:param pulumi.Input[str] content_encoding: Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11">w3c content encoding</a> for further information.
-:param pulumi.Input[str] content_language: The language the content is in e.g. en-US or en-GB.
-:param pulumi.Input[str] content_type: A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
-:param pulumi.Input[str] etag: the ETag generated for the object (an MD5 sum of the object content). The hash is an MD5 digest of the</p>
-<blockquote>
-<div><p>object data. For objects created by either the Multipart Upload or Part Copy operation, the hash is not an MD5
-digest. More information on possible values can be found on <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTCommonResponseHeaders.html">Common Response Headers</a>.</p>
-</div></blockquote>
+<dd><p>Importing this resource is not supported.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The canned ACL to apply. DigitalOcean supports “private” and “public-read”. (Defaults to “private”.)</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket to put the file in.</p></li>
+<li><p><strong>cache_control</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies caching behavior along the request/reply chain Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9">w3c cache_control</a> for further details.</p></li>
+<li><p><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.</p></li>
+<li><p><strong>content_base64</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the <code class="docutils literal notranslate"><span class="pre">gzipbase64</span></code> function with small text strings. For larger objects, use <code class="docutils literal notranslate"><span class="pre">source</span></code> to stream the content from a disk file.</p></li>
+<li><p><strong>content_disposition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies presentational information for the object. Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1">w3c content_disposition</a> for further information.</p></li>
+<li><p><strong>content_encoding</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11">w3c content encoding</a> for further information.</p></li>
+<li><p><strong>content_language</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The language the content is in e.g. en-US or en-GB.</p></li>
+<li><p><strong>content_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.</p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the ETag generated for the object (an MD5 sum of the object content). The hash is an MD5 digest of the
+object data. For objects created by either the Multipart Upload or Part Copy operation, the hash is not an MD5
+digest. More information on possible values can be found on <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTCommonResponseHeaders.html">Common Response Headers</a>.</p></li>
 <li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the object to be deleted by removing any legal hold on any object version.
 Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>. This value should be set to <code class="docutils literal notranslate"><span class="pre">true</span></code> only if the bucket has S3 object lock enabled.</p></li>
 <li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the object once it is in the bucket.</p></li>
@@ -5616,6 +5716,10 @@ fingerprint.</p>
     <span class="n">ssh_keys</span><span class="o">=</span><span class="p">[</span><span class="n">default</span><span class="o">.</span><span class="n">fingerprint</span><span class="p">])</span>
 </pre></div>
 </div>
+<p>SSH Keys can be imported using the <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">key</span> <span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index/sshKey:SshKey mykey <span class="m">263654</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5722,6 +5826,10 @@ configuration via their ID or name.</p>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc3&quot;</span><span class="p">,</span>
     <span class="n">size</span><span class="o">=</span><span class="s2">&quot;s-1vcpu-1gb&quot;</span><span class="p">,</span>
     <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="n">foobar</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Tags can be imported using the <code class="docutils literal notranslate"><span class="pre">name</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index/tag:Tag mytag tagname
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -5866,6 +5974,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;lon1&quot;</span><span class="p">,</span>
     <span class="n">size</span><span class="o">=</span><span class="n">foobar_volume_snapshot</span><span class="o">.</span><span class="n">min_disk_size</span><span class="p">,</span>
     <span class="n">snapshot_id</span><span class="o">=</span><span class="n">foobar_volume_snapshot</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Volumes can be imported using the <code class="docutils literal notranslate"><span class="pre">volume</span> <span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index/volume:Volume volume 506f78a4-e098-11e5-ad9f-000f53306ae1
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -6139,6 +6251,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">foobar_volume_snapshot</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">VolumeSnapshot</span><span class="p">(</span><span class="s2">&quot;foobarVolumeSnapshot&quot;</span><span class="p">,</span> <span class="n">volume_id</span><span class="o">=</span><span class="n">foobar_volume</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Volume Snapshots can be imported using the <code class="docutils literal notranslate"><span class="pre">snapshot</span> <span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index/volumeSnapshot:VolumeSnapshot snapshot 506f78a4-e098-11e5-ad9f-000f53306ae1
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6279,6 +6395,10 @@ may be assigned to a VPC by referencing its <code class="docutils literal notran
     <span class="n">image</span><span class="o">=</span><span class="s2">&quot;ubuntu-18-04-x64&quot;</span><span class="p">,</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc3&quot;</span><span class="p">,</span>
     <span class="n">vpc_uuid</span><span class="o">=</span><span class="n">example_vpc</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>A VPC can be imported using its <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import digitalocean:index/vpc:Vpc example 506f78a4-e098-11e5-ad9f-000f53306ae1
 </pre></div>
 </div>
 <dl class="field-list simple">

@@ -12,7 +12,6 @@ meta_desc: "Explore the KubernetesNodePool resource of the DigitalOcean package,
 
 Provides a DigitalOcean Kubernetes node pool resource. While the default node pool must be defined in the `digitalocean.KubernetesCluster` resource, this resource can be used to add additional ones to a cluster.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1979,6 +1978,18 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+If you are importing an existing Kubernetes cluster, just import the cluster. Importing a cluster also imports all of its associated node pools. If you still need to import a single node pool, then import it by using its `id`, e.g.
+
+```sh
+ $ pulumi import digitalocean:index/kubernetesNodePool:KubernetesNodePool mynodepool 9d76f410-9284-4436-9633-4066852442c8
+```
+
+ NoteIf the node pool has the `terraform:default-node-pool` tag, then it is a default node pool for an existing cluster. The provider will refuse to import the node pool in that case because the node pool is managed by the `digitalocean_kubernetes_cluster` resource and not by this `digitalocean_kubernetes_node_pool` resource.
 
 
 

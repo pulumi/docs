@@ -75,7 +75,6 @@ func main() {
 
 For more information, See [An Introduction to DigitalOcean Spaces](https://www.digitalocean.com/community/tutorials/an-introduction-to-digitalocean-spaces)
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2472,6 +2471,16 @@ state. You can, however, suspend versioning on that bucket.
 
 
 
+
+
+## Import
+
+
+Buckets can be imported using the `region` and `name` attributes (delimited by a comma)
+
+```sh
+ $ pulumi import digitalocean:index/spacesBucket:SpacesBucket foobar `region`,`name`
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the DropletSnapshot resource of the DigitalOcean package, in
 
 Provides a resource which can be used to create a snapshot from an existing DigitalOcean Droplet.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1084,6 +1083,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Droplet Snapshots can be imported using the `snapshot id`, e.g.
+
+```sh
+ $ pulumi import digitalocean:index/dropletSnapshot:DropletSnapshot mysnapshot 123456
+```
 
 
 

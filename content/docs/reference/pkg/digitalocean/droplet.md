@@ -14,7 +14,6 @@ Provides a DigitalOcean Droplet resource. This can be used to create,
 modify, and delete Droplets. Droplets also support
 [provisioning](https://www.terraform.io/docs/provisioners/index.html).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2917,6 +2916,16 @@ to retrieve them.
 
 
 
+
+
+## Import
+
+
+Droplets can be imported using the Droplet `id`, e.g.
+
+```sh
+ $ pulumi import digitalocean:index/droplet:Droplet mydroplet 100823
+```
 
 
 

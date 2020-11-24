@@ -12,7 +12,6 @@ meta_desc: "Explore the DnsRecord resource of the DigitalOcean package, includin
 
 Provides a DigitalOcean DNS record resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1569,6 +1568,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Records can be imported using the domain name and record `id` when joined with a comma. See the following example
+
+```sh
+ $ pulumi import digitalocean:index/dnsRecord:DnsRecord example_record example.com,12345678
+```
 
 
 
