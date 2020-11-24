@@ -96,7 +96,11 @@
         <p class="text-3xl font-bold mb-16">AWS RE:INVENT NEWS & ANNOUNCEMENTS</p>
         <div class="flex justify-center">
             <div class="w-10/12">
-                {{ range first 3 $blog }}
+                <!-- This is a bit of hack to avoid listing an Azure blog post on the AWS page
+                     during the re:Invent takeover. Once we publish another blog we should remove
+                     this exclusion.
+                -->
+                {{ range first 3 ( where $blog ".Params.title" "ne" "Deploying Minecraft on Azure" ) }}
                     <div class="flex flex-col lg:flex-row mb-5">
                         <div class="w-full lg:w-1/2 mr-8 aws-reinvent-blog-image">
                             {{ partial "blog/poster" . }}
