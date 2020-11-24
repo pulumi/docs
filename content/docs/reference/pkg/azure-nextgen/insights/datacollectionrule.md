@@ -12,6 +12,7 @@ meta_desc: "Explore the DataCollectionRule resource of the insights module, incl
 
 Definition of ARM tracked top level resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -4305,6 +4306,8 @@ A stream indicates what schema will be used for this data and usually what table
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

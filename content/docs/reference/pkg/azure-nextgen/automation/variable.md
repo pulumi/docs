@@ -12,6 +12,7 @@ meta_desc: "Explore the Variable resource of the automation module, including ex
 
 Definition of the variable.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -801,6 +802,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

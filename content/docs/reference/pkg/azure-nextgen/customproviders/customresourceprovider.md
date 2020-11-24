@@ -12,6 +12,7 @@ meta_desc: "Explore the CustomResourceProvider resource of the customproviders m
 
 A manifest file that defines the custom resource provider resources.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1720,6 +1721,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

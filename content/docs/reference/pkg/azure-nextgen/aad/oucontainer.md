@@ -12,6 +12,7 @@ meta_desc: "Explore the OuContainer resource of the aad module, including exampl
 
 Resource for OuContainer.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -596,6 +597,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="distinguishedname_csharp">
+<a href="#distinguishedname_csharp" style="color: inherit; text-decoration: inherit;">Distinguished<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Distinguished Name of OuContainer instance{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="domainname_csharp">
 <a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
 </span> 
@@ -730,6 +741,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Deployment id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="distinguishedname_go">
+<a href="#distinguishedname_go" style="color: inherit; text-decoration: inherit;">Distinguished<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Distinguished Name of OuContainer instance{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -870,6 +891,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="distinguishedname_nodejs">
+<a href="#distinguishedname_nodejs" style="color: inherit; text-decoration: inherit;">distinguished<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Distinguished Name of OuContainer instance{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="domainname_nodejs">
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span> 
@@ -1004,6 +1035,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Deployment id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="distinguished_name_python">
+<a href="#distinguished_name_python" style="color: inherit; text-decoration: inherit;">distinguished_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Distinguished Name of OuContainer instance{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1285,6 +1326,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

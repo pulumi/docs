@@ -12,6 +12,7 @@ meta_desc: "Explore the Invitation resource of the datashare module, including e
 
 A Invitation data transfer object.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1001,6 +1002,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the Blueprint resource of the management module, including e
 
 Represents a Blueprint definition.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2182,6 +2183,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the OpenShiftManagedCluster resource of the containerservice
 
 OpenShift Managed cluster.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -4070,6 +4071,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

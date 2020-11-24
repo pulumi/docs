@@ -12,6 +12,7 @@ meta_desc: "Explore the PrivateEndpointConnection resource of the synapse module
 
 A private endpoint connection
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1088,6 +1089,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

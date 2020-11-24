@@ -12,6 +12,7 @@ meta_desc: "Explore the GalleryImage resource of the compute module, including e
 
 Specifies information about the gallery image definition that you want to create or update.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2779,6 +2780,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

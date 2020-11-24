@@ -12,6 +12,7 @@ meta_desc: "Explore the SynchronizationSetting resource of the datashare module,
 
 A Synchronization Setting data transfer object.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -673,6 +674,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

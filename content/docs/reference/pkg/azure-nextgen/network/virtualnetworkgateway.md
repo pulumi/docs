@@ -12,6 +12,7 @@ meta_desc: "Explore the VirtualNetworkGateway resource of the network module, in
 
 A common class for general resource information.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -6546,6 +6547,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

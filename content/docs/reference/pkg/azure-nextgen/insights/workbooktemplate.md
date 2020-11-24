@@ -12,6 +12,7 @@ meta_desc: "Explore the WorkbookTemplate resource of the insights module, includ
 
 An Application Insights workbook template definition.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1596,6 +1597,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

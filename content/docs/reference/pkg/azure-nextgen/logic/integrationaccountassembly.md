@@ -12,6 +12,7 @@ meta_desc: "Explore the IntegrationAccountAssembly resource of the logic module,
 
 The assembly definition.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2333,6 +2334,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

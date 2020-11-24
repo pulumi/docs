@@ -12,6 +12,7 @@ meta_desc: "Explore the AgentPool resource of the containerservice module, inclu
 
 Agent Pool.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -113,6 +114,205 @@ const agentPool = new azure_nextgen.containerservice.latest.AgentPool("agentPool
     orchestratorVersion: "",
     osDiskSizeGB: 64,
     osDiskType: "Ephemeral",
+    osType: "Linux",
+    resourceGroupName: "rg1",
+    resourceName: "clustername1",
+    vmSize: "Standard_DS2_v2",
+});
+
+```
+
+{{% /example %}}
+
+### Create Agent Pool with KubeletConfig and LinuxOSConfig
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var agentPool = new AzureNextGen.ContainerService.Latest.AgentPool("agentPool", new AzureNextGen.ContainerService.Latest.AgentPoolArgs
+        {
+            AgentPoolName = "agentpool1",
+            Count = 3,
+            KubeletConfig = new AzureNextGen.ContainerService.Latest.Inputs.KubeletConfigArgs
+            {
+                AllowedUnsafeSysctls = 
+                {
+                    "kernel.msg*",
+                    "net.core.somaxconn",
+                },
+                CpuCfsQuota = true,
+                CpuCfsQuotaPeriod = "200ms",
+                CpuManagerPolicy = "static",
+                FailSwapOn = false,
+                ImageGcHighThreshold = 90,
+                ImageGcLowThreshold = 70,
+                TopologyManagerPolicy = "best-effort",
+            },
+            LinuxOSConfig = new AzureNextGen.ContainerService.Latest.Inputs.LinuxOSConfigArgs
+            {
+                SwapFileSizeMB = 1500,
+                Sysctls = new AzureNextGen.ContainerService.Latest.Inputs.SysctlConfigArgs
+                {
+                    KernelThreadsMax = 99999,
+                    NetIpv4IpLocalPortRange = "20000 60000",
+                    NetIpv4TcpTwReuse = true,
+                    NetIpv4TcpWmem = 12345,
+                },
+                TransparentHugePageDefrag = "madvise",
+                TransparentHugePageEnabled = "always",
+            },
+            OrchestratorVersion = "",
+            OsType = "Linux",
+            ResourceGroupName = "rg1",
+            ResourceName = "clustername1",
+            VmSize = "Standard_DS2_v2",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	containerservice "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/containerservice/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := containerservice.NewAgentPool(ctx, "agentPool", &containerservice.AgentPoolArgs{
+			AgentPoolName: pulumi.String("agentpool1"),
+			Count:         pulumi.Int(3),
+			KubeletConfig: &containerservice.KubeletConfigArgs{
+				AllowedUnsafeSysctls: pulumi.StringArray{
+					pulumi.String("kernel.msg*"),
+					pulumi.String("net.core.somaxconn"),
+				},
+				CpuCfsQuota:           pulumi.Bool(true),
+				CpuCfsQuotaPeriod:     pulumi.String("200ms"),
+				CpuManagerPolicy:      pulumi.String("static"),
+				FailSwapOn:            pulumi.Bool(false),
+				ImageGcHighThreshold:  pulumi.Int(90),
+				ImageGcLowThreshold:   pulumi.Int(70),
+				TopologyManagerPolicy: pulumi.String("best-effort"),
+			},
+			LinuxOSConfig: &containerservice.LinuxOSConfigArgs{
+				SwapFileSizeMB: pulumi.Int(1500),
+				Sysctls: &containerservice.SysctlConfigArgs{
+					KernelThreadsMax:        pulumi.Int(99999),
+					NetIpv4IpLocalPortRange: pulumi.String("20000 60000"),
+					NetIpv4TcpTwReuse:       pulumi.Bool(true),
+					NetIpv4TcpWmem:          pulumi.Int(12345),
+				},
+				TransparentHugePageDefrag:  pulumi.String("madvise"),
+				TransparentHugePageEnabled: pulumi.String("always"),
+			},
+			OrchestratorVersion: pulumi.String(""),
+			OsType:              pulumi.String("Linux"),
+			ResourceGroupName:   pulumi.String("rg1"),
+			ResourceName:        pulumi.String("clustername1"),
+			VmSize:              pulumi.String("Standard_DS2_v2"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+agent_pool = azure_nextgen.containerservice.latest.AgentPool("agentPool",
+    agent_pool_name="agentpool1",
+    count=3,
+    kubelet_config=azure_nextgen.containerservice.latest.KubeletConfigArgs(
+        allowed_unsafe_sysctls=[
+            "kernel.msg*",
+            "net.core.somaxconn",
+        ],
+        cpu_cfs_quota=True,
+        cpu_cfs_quota_period="200ms",
+        cpu_manager_policy="static",
+        fail_swap_on=False,
+        image_gc_high_threshold=90,
+        image_gc_low_threshold=70,
+        topology_manager_policy="best-effort",
+    ),
+    linux_os_config=azure_nextgen.containerservice.latest.LinuxOSConfigArgs(
+        swap_file_size_mb=1500,
+        sysctls=azure_nextgen.containerservice.latest.SysctlConfigArgs(
+            kernel_threads_max=99999,
+            net_ipv4_ip_local_port_range="20000 60000",
+            net_ipv4_tcp_tw_reuse=True,
+            net_ipv4_tcp_wmem=12345,
+        ),
+        transparent_huge_page_defrag="madvise",
+        transparent_huge_page_enabled="always",
+    ),
+    orchestrator_version="",
+    os_type="Linux",
+    resource_group_name="rg1",
+    resource_name="clustername1",
+    vm_size="Standard_DS2_v2")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const agentPool = new azure_nextgen.containerservice.latest.AgentPool("agentPool", {
+    agentPoolName: "agentpool1",
+    count: 3,
+    kubeletConfig: {
+        allowedUnsafeSysctls: [
+            "kernel.msg*",
+            "net.core.somaxconn",
+        ],
+        cpuCfsQuota: true,
+        cpuCfsQuotaPeriod: "200ms",
+        cpuManagerPolicy: "static",
+        failSwapOn: false,
+        imageGcHighThreshold: 90,
+        imageGcLowThreshold: 70,
+        topologyManagerPolicy: "best-effort",
+    },
+    linuxOSConfig: {
+        swapFileSizeMB: 1500,
+        sysctls: {
+            kernelThreadsMax: 99999,
+            netIpv4IpLocalPortRange: "20000 60000",
+            netIpv4TcpTwReuse: true,
+            netIpv4TcpWmem: 12345,
+        },
+        transparentHugePageDefrag: "madvise",
+        transparentHugePageEnabled: "always",
+    },
+    orchestratorVersion: "",
     osType: "Linux",
     resourceGroupName: "rg1",
     resourceName: "clustername1",
@@ -654,7 +854,7 @@ const agentPool = new azure_nextgen.containerservice.latest.AgentPool("agentPool
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AgentPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agent_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enable_auto_scaling</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_node_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_pods</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">node_taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">orchestrator_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">os_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_set_eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_set_priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spot_max_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_settings</span><span class="p">:</span> <span class="nx">Optional[AgentPoolUpgradeSettingsArgs]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vnet_subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">AgentPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">agent_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enable_auto_scaling</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_node_public_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">kubelet_config</span><span class="p">:</span> <span class="nx">Optional[KubeletConfigArgs]</span> = None<span class="p">, </span><span class="nx">linux_os_config</span><span class="p">:</span> <span class="nx">Optional[LinuxOSConfigArgs]</span> = None<span class="p">, </span><span class="nx">max_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_pods</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_labels</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">node_taints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">orchestrator_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">os_disk_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">pod_subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_set_eviction_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_set_priority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spot_max_price</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">upgrade_settings</span><span class="p">:</span> <span class="nx">Optional[AgentPoolUpgradeSettingsArgs]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vnet_subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -898,6 +1098,26 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="kubeletconfig_csharp">
+<a href="#kubeletconfig_csharp" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubeletconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Kubelet<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linuxosconfig_csharp">
+<a href="#linuxosconfig_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>OSConfig</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxosconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Linux<wbr>OSConfig<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="maxcount_csharp">
 <a href="#maxcount_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Count</a>
 </span> 
@@ -998,6 +1218,16 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="podsubnetid_csharp">
+<a href="#podsubnetid_csharp" style="color: inherit; text-decoration: inherit;">Pod<wbr>Subnet<wbr>ID</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Pod SubnetID specifies the VNet's subnet identifier for pods.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="proximityplacementgroupid_csharp">
 <a href="#proximityplacementgroupid_csharp" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>ID</a>
 </span> 
@@ -1084,7 +1314,7 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier.{{% /md %}}</dd>
+    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1162,6 +1392,26 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kubeletconfig_go">
+<a href="#kubeletconfig_go" style="color: inherit; text-decoration: inherit;">Kubelet<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubeletconfig">Kubelet<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linuxosconfig_go">
+<a href="#linuxosconfig_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>OSConfig</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxosconfig">Linux<wbr>OSConfig</a></span>
+    </dt>
+    <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1265,6 +1515,16 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="podsubnetid_go">
+<a href="#podsubnetid_go" style="color: inherit; text-decoration: inherit;">Pod<wbr>Subnet<wbr>ID</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Pod SubnetID specifies the VNet's subnet identifier for pods.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="proximityplacementgroupid_go">
 <a href="#proximityplacementgroupid_go" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group<wbr>ID</a>
 </span> 
@@ -1351,7 +1611,7 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier.{{% /md %}}</dd>
+    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1429,6 +1689,26 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kubeletconfig_nodejs">
+<a href="#kubeletconfig_nodejs" style="color: inherit; text-decoration: inherit;">kubelet<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubeletconfig">Kubelet<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linuxosconfig_nodejs">
+<a href="#linuxosconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>OSConfig</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxosconfig">Linux<wbr>OSConfig</a></span>
+    </dt>
+    <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1532,6 +1812,16 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="podsubnetid_nodejs">
+<a href="#podsubnetid_nodejs" style="color: inherit; text-decoration: inherit;">pod<wbr>Subnet<wbr>ID</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Pod SubnetID specifies the VNet's subnet identifier for pods.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="proximityplacementgroupid_nodejs">
 <a href="#proximityplacementgroupid_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group<wbr>ID</a>
 </span> 
@@ -1618,7 +1908,7 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier.{{% /md %}}</dd>
+    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1696,6 +1986,26 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable public IP for nodes{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kubelet_config_python">
+<a href="#kubelet_config_python" style="color: inherit; text-decoration: inherit;">kubelet_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#kubeletconfig">Kubelet<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}KubeletConfig specifies the configuration of kubelet on agent nodes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="linux_os_config_python">
+<a href="#linux_os_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>os_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linuxosconfig">Linux<wbr>OSConfig<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}LinuxOSConfig specifies the OS configuration of linux agent nodes.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1799,6 +2109,16 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="pod_subnet_id_python">
+<a href="#pod_subnet_id_python" style="color: inherit; text-decoration: inherit;">pod_<wbr>subnet_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Pod SubnetID specifies the VNet's subnet identifier for pods.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="proximity_placement_group_id_python">
 <a href="#proximity_placement_group_id_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group_<wbr>id</a>
 </span> 
@@ -1885,7 +2205,7 @@ The AgentPool resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier.{{% /md %}}</dd>
+    <dd>{{% md %}}VNet SubnetID specifies the VNet's subnet identifier for nodes and maybe pods{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2300,6 +2620,1122 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="kubeletconfig">Kubelet<wbr>Config</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedunsafesysctls_csharp">
+<a href="#allowedunsafesysctls_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Unsafe<wbr>Sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpucfsquota_csharp">
+<a href="#cpucfsquota_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpucfsquotaperiod_csharp">
+<a href="#cpucfsquotaperiod_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpumanagerpolicy_csharp">
+<a href="#cpumanagerpolicy_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Manager<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="failswapon_csharp">
+<a href="#failswapon_csharp" style="color: inherit; text-decoration: inherit;">Fail<wbr>Swap<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imagegchighthreshold_csharp">
+<a href="#imagegchighthreshold_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Gc<wbr>High<wbr>Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imagegclowthreshold_csharp">
+<a href="#imagegclowthreshold_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Gc<wbr>Low<wbr>Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="topologymanagerpolicy_csharp">
+<a href="#topologymanagerpolicy_csharp" style="color: inherit; text-decoration: inherit;">Topology<wbr>Manager<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedunsafesysctls_go">
+<a href="#allowedunsafesysctls_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Unsafe<wbr>Sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpucfsquota_go">
+<a href="#cpucfsquota_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpucfsquotaperiod_go">
+<a href="#cpucfsquotaperiod_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpumanagerpolicy_go">
+<a href="#cpumanagerpolicy_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Manager<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="failswapon_go">
+<a href="#failswapon_go" style="color: inherit; text-decoration: inherit;">Fail<wbr>Swap<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imagegchighthreshold_go">
+<a href="#imagegchighthreshold_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Gc<wbr>High<wbr>Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imagegclowthreshold_go">
+<a href="#imagegclowthreshold_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Gc<wbr>Low<wbr>Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="topologymanagerpolicy_go">
+<a href="#topologymanagerpolicy_go" style="color: inherit; text-decoration: inherit;">Topology<wbr>Manager<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedunsafesysctls_nodejs">
+<a href="#allowedunsafesysctls_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Unsafe<wbr>Sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpucfsquota_nodejs">
+<a href="#cpucfsquota_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cfs<wbr>Quota</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpucfsquotaperiod_nodejs">
+<a href="#cpucfsquotaperiod_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpumanagerpolicy_nodejs">
+<a href="#cpumanagerpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Manager<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="failswapon_nodejs">
+<a href="#failswapon_nodejs" style="color: inherit; text-decoration: inherit;">fail<wbr>Swap<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imagegchighthreshold_nodejs">
+<a href="#imagegchighthreshold_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Gc<wbr>High<wbr>Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imagegclowthreshold_nodejs">
+<a href="#imagegclowthreshold_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Gc<wbr>Low<wbr>Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="topologymanagerpolicy_nodejs">
+<a href="#topologymanagerpolicy_nodejs" style="color: inherit; text-decoration: inherit;">topology<wbr>Manager<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowed_unsafe_sysctls_python">
+<a href="#allowed_unsafe_sysctls_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>unsafe_<wbr>sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpu_cfs_quota_python">
+<a href="#cpu_cfs_quota_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cfs_<wbr>quota</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpu_cfs_quota_period_python">
+<a href="#cpu_cfs_quota_period_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cfs_<wbr>quota_<wbr>period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpu_manager_policy_python">
+<a href="#cpu_manager_policy_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>manager_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fail_swap_on_python">
+<a href="#fail_swap_on_python" style="color: inherit; text-decoration: inherit;">fail_<wbr>swap_<wbr>on</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="image_gc_high_threshold_python">
+<a href="#image_gc_high_threshold_python" style="color: inherit; text-decoration: inherit;">image_<wbr>gc_<wbr>high_<wbr>threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="image_gc_low_threshold_python">
+<a href="#image_gc_low_threshold_python" style="color: inherit; text-decoration: inherit;">image_<wbr>gc_<wbr>low_<wbr>threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="topology_manager_policy_python">
+<a href="#topology_manager_policy_python" style="color: inherit; text-decoration: inherit;">topology_<wbr>manager_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="kubeletconfigresponse">Kubelet<wbr>Config<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedunsafesysctls_csharp">
+<a href="#allowedunsafesysctls_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Unsafe<wbr>Sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpucfsquota_csharp">
+<a href="#cpucfsquota_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpucfsquotaperiod_csharp">
+<a href="#cpucfsquotaperiod_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpumanagerpolicy_csharp">
+<a href="#cpumanagerpolicy_csharp" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Manager<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="failswapon_csharp">
+<a href="#failswapon_csharp" style="color: inherit; text-decoration: inherit;">Fail<wbr>Swap<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imagegchighthreshold_csharp">
+<a href="#imagegchighthreshold_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Gc<wbr>High<wbr>Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imagegclowthreshold_csharp">
+<a href="#imagegclowthreshold_csharp" style="color: inherit; text-decoration: inherit;">Image<wbr>Gc<wbr>Low<wbr>Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="topologymanagerpolicy_csharp">
+<a href="#topologymanagerpolicy_csharp" style="color: inherit; text-decoration: inherit;">Topology<wbr>Manager<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedunsafesysctls_go">
+<a href="#allowedunsafesysctls_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Unsafe<wbr>Sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpucfsquota_go">
+<a href="#cpucfsquota_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpucfsquotaperiod_go">
+<a href="#cpucfsquotaperiod_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpumanagerpolicy_go">
+<a href="#cpumanagerpolicy_go" style="color: inherit; text-decoration: inherit;">Cpu<wbr>Manager<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="failswapon_go">
+<a href="#failswapon_go" style="color: inherit; text-decoration: inherit;">Fail<wbr>Swap<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imagegchighthreshold_go">
+<a href="#imagegchighthreshold_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Gc<wbr>High<wbr>Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imagegclowthreshold_go">
+<a href="#imagegclowthreshold_go" style="color: inherit; text-decoration: inherit;">Image<wbr>Gc<wbr>Low<wbr>Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="topologymanagerpolicy_go">
+<a href="#topologymanagerpolicy_go" style="color: inherit; text-decoration: inherit;">Topology<wbr>Manager<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowedunsafesysctls_nodejs">
+<a href="#allowedunsafesysctls_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Unsafe<wbr>Sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpucfsquota_nodejs">
+<a href="#cpucfsquota_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cfs<wbr>Quota</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpucfsquotaperiod_nodejs">
+<a href="#cpucfsquotaperiod_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Cfs<wbr>Quota<wbr>Period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpumanagerpolicy_nodejs">
+<a href="#cpumanagerpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cpu<wbr>Manager<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="failswapon_nodejs">
+<a href="#failswapon_nodejs" style="color: inherit; text-decoration: inherit;">fail<wbr>Swap<wbr>On</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imagegchighthreshold_nodejs">
+<a href="#imagegchighthreshold_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Gc<wbr>High<wbr>Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="imagegclowthreshold_nodejs">
+<a href="#imagegclowthreshold_nodejs" style="color: inherit; text-decoration: inherit;">image<wbr>Gc<wbr>Low<wbr>Threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="topologymanagerpolicy_nodejs">
+<a href="#topologymanagerpolicy_nodejs" style="color: inherit; text-decoration: inherit;">topology<wbr>Manager<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowed_unsafe_sysctls_python">
+<a href="#allowed_unsafe_sysctls_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>unsafe_<wbr>sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Allowlist of unsafe sysctls or unsafe sysctl patterns (ending in `*`).{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpu_cfs_quota_python">
+<a href="#cpu_cfs_quota_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cfs_<wbr>quota</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable CPU CFS quota enforcement for containers that specify CPU limits.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpu_cfs_quota_period_python">
+<a href="#cpu_cfs_quota_period_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>cfs_<wbr>quota_<wbr>period</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Sets CPU CFS quota period value.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cpu_manager_policy_python">
+<a href="#cpu_manager_policy_python" style="color: inherit; text-decoration: inherit;">cpu_<wbr>manager_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}CPU Manager policy to use.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fail_swap_on_python">
+<a href="#fail_swap_on_python" style="color: inherit; text-decoration: inherit;">fail_<wbr>swap_<wbr>on</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to true it will make the Kubelet fail to start if swap is enabled on the node.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="image_gc_high_threshold_python">
+<a href="#image_gc_high_threshold_python" style="color: inherit; text-decoration: inherit;">image_<wbr>gc_<wbr>high_<wbr>threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The percent of disk usage after which image garbage collection is always run.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="image_gc_low_threshold_python">
+<a href="#image_gc_low_threshold_python" style="color: inherit; text-decoration: inherit;">image_<wbr>gc_<wbr>low_<wbr>threshold</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The percent of disk usage before which image garbage collection is never run.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="topology_manager_policy_python">
+<a href="#topology_manager_policy_python" style="color: inherit; text-decoration: inherit;">topology_<wbr>manager_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Topology Manager policy to use.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="linuxosconfig">Linux<wbr>OSConfig</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="swapfilesizemb_csharp">
+<a href="#swapfilesizemb_csharp" style="color: inherit; text-decoration: inherit;">Swap<wbr>File<wbr>Size<wbr>MB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sysctls_csharp">
+<a href="#sysctls_csharp" style="color: inherit; text-decoration: inherit;">Sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sysctlconfig">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Sysctl<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transparenthugepagedefrag_csharp">
+<a href="#transparenthugepagedefrag_csharp" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Huge<wbr>Page<wbr>Defrag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transparenthugepageenabled_csharp">
+<a href="#transparenthugepageenabled_csharp" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Huge<wbr>Page<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="swapfilesizemb_go">
+<a href="#swapfilesizemb_go" style="color: inherit; text-decoration: inherit;">Swap<wbr>File<wbr>Size<wbr>MB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sysctls_go">
+<a href="#sysctls_go" style="color: inherit; text-decoration: inherit;">Sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sysctlconfig">Sysctl<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transparenthugepagedefrag_go">
+<a href="#transparenthugepagedefrag_go" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Huge<wbr>Page<wbr>Defrag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transparenthugepageenabled_go">
+<a href="#transparenthugepageenabled_go" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Huge<wbr>Page<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="swapfilesizemb_nodejs">
+<a href="#swapfilesizemb_nodejs" style="color: inherit; text-decoration: inherit;">swap<wbr>File<wbr>Size<wbr>MB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sysctls_nodejs">
+<a href="#sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sysctlconfig">Sysctl<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transparenthugepagedefrag_nodejs">
+<a href="#transparenthugepagedefrag_nodejs" style="color: inherit; text-decoration: inherit;">transparent<wbr>Huge<wbr>Page<wbr>Defrag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transparenthugepageenabled_nodejs">
+<a href="#transparenthugepageenabled_nodejs" style="color: inherit; text-decoration: inherit;">transparent<wbr>Huge<wbr>Page<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="swap_file_size_mb_python">
+<a href="#swap_file_size_mb_python" style="color: inherit; text-decoration: inherit;">swap_<wbr>file_<wbr>size_<wbr>mb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sysctls_python">
+<a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sysctlconfig">Sysctl<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transparent_huge_page_defrag_python">
+<a href="#transparent_huge_page_defrag_python" style="color: inherit; text-decoration: inherit;">transparent_<wbr>huge_<wbr>page_<wbr>defrag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transparent_huge_page_enabled_python">
+<a href="#transparent_huge_page_enabled_python" style="color: inherit; text-decoration: inherit;">transparent_<wbr>huge_<wbr>page_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="linuxosconfigresponse">Linux<wbr>OSConfig<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="swapfilesizemb_csharp">
+<a href="#swapfilesizemb_csharp" style="color: inherit; text-decoration: inherit;">Swap<wbr>File<wbr>Size<wbr>MB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sysctls_csharp">
+<a href="#sysctls_csharp" style="color: inherit; text-decoration: inherit;">Sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sysctlconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Service.<wbr>Inputs.<wbr>Sysctl<wbr>Config<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transparenthugepagedefrag_csharp">
+<a href="#transparenthugepagedefrag_csharp" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Huge<wbr>Page<wbr>Defrag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transparenthugepageenabled_csharp">
+<a href="#transparenthugepageenabled_csharp" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Huge<wbr>Page<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="swapfilesizemb_go">
+<a href="#swapfilesizemb_go" style="color: inherit; text-decoration: inherit;">Swap<wbr>File<wbr>Size<wbr>MB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sysctls_go">
+<a href="#sysctls_go" style="color: inherit; text-decoration: inherit;">Sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transparenthugepagedefrag_go">
+<a href="#transparenthugepagedefrag_go" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Huge<wbr>Page<wbr>Defrag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transparenthugepageenabled_go">
+<a href="#transparenthugepageenabled_go" style="color: inherit; text-decoration: inherit;">Transparent<wbr>Huge<wbr>Page<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="swapfilesizemb_nodejs">
+<a href="#swapfilesizemb_nodejs" style="color: inherit; text-decoration: inherit;">swap<wbr>File<wbr>Size<wbr>MB</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sysctls_nodejs">
+<a href="#sysctls_nodejs" style="color: inherit; text-decoration: inherit;">sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transparenthugepagedefrag_nodejs">
+<a href="#transparenthugepagedefrag_nodejs" style="color: inherit; text-decoration: inherit;">transparent<wbr>Huge<wbr>Page<wbr>Defrag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transparenthugepageenabled_nodejs">
+<a href="#transparenthugepageenabled_nodejs" style="color: inherit; text-decoration: inherit;">transparent<wbr>Huge<wbr>Page<wbr>Enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="swap_file_size_mb_python">
+<a href="#swap_file_size_mb_python" style="color: inherit; text-decoration: inherit;">swap_<wbr>file_<wbr>size_<wbr>mb</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}SwapFileSizeMB specifies size in MB of a swap file will be created on each node.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sysctls_python">
+<a href="#sysctls_python" style="color: inherit; text-decoration: inherit;">sysctls</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl settings for Linux agent nodes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transparent_huge_page_defrag_python">
+<a href="#transparent_huge_page_defrag_python" style="color: inherit; text-decoration: inherit;">transparent_<wbr>huge_<wbr>page_<wbr>defrag</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Transparent Huge Page defrag configuration.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transparent_huge_page_enabled_python">
+<a href="#transparent_huge_page_enabled_python" style="color: inherit; text-decoration: inherit;">transparent_<wbr>huge_<wbr>page_<wbr>enabled</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Transparent Huge Page enabled configuration.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="powerstateresponse">Power<wbr>State<wbr>Response</h4>
 
 
@@ -2374,6 +3810,2326 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
+
+
+
+<h4 id="sysctlconfig">Sysctl<wbr>Config</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsaiomaxnr_csharp">
+<a href="#fsaiomaxnr_csharp" style="color: inherit; text-decoration: inherit;">Fs<wbr>Aio<wbr>Max<wbr>Nr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsfilemax_csharp">
+<a href="#fsfilemax_csharp" style="color: inherit; text-decoration: inherit;">Fs<wbr>File<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsinotifymaxuserwatches_csharp">
+<a href="#fsinotifymaxuserwatches_csharp" style="color: inherit; text-decoration: inherit;">Fs<wbr>Inotify<wbr>Max<wbr>User<wbr>Watches</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsnropen_csharp">
+<a href="#fsnropen_csharp" style="color: inherit; text-decoration: inherit;">Fs<wbr>Nr<wbr>Open</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kernelthreadsmax_csharp">
+<a href="#kernelthreadsmax_csharp" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Threads<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorenetdevmaxbacklog_csharp">
+<a href="#netcorenetdevmaxbacklog_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Netdev<wbr>Max<wbr>Backlog</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcoreoptmemmax_csharp">
+<a href="#netcoreoptmemmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Optmem<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorermemmax_csharp">
+<a href="#netcorermemmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcoresomaxconn_csharp">
+<a href="#netcoresomaxconn_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Somaxconn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemmax_csharp">
+<a href="#netcorewmemmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4iplocalportrange_csharp">
+<a href="#netipv4iplocalportrange_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Ip<wbr>Local<wbr>Port<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh1_csharp">
+<a href="#netipv4neighdefaultgcthresh1_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh1</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh2_csharp">
+<a href="#netipv4neighdefaultgcthresh2_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh3_csharp">
+<a href="#netipv4neighdefaultgcthresh3_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh3</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpfintimeout_csharp">
+<a href="#netipv4tcpfintimeout_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Fin<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepaliveprobes_csharp">
+<a href="#netipv4tcpkeepaliveprobes_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Probes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepalivetime_csharp">
+<a href="#netipv4tcpkeepalivetime_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpmaxsynbacklog_csharp">
+<a href="#netipv4tcpmaxsynbacklog_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Max<wbr>Syn<wbr>Backlog</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpmaxtwbuckets_csharp">
+<a href="#netipv4tcpmaxtwbuckets_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Max<wbr>Tw<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcprmem_csharp">
+<a href="#netipv4tcprmem_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Rmem</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcptwreuse_csharp">
+<a href="#netipv4tcptwreuse_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpwmem_csharp">
+<a href="#netipv4tcpwmem_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Wmem</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepaliveintvl_csharp">
+<a href="#netipv4tcpkeepaliveintvl_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcpkeepalive<wbr>Intvl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netnetfilternfconntrackbuckets_csharp">
+<a href="#netnetfilternfconntrackbuckets_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netnetfilternfconntrackmax_csharp">
+<a href="#netnetfilternfconntrackmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmmaxmapcount_csharp">
+<a href="#vmmaxmapcount_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Max<wbr>Map<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmswappiness_csharp">
+<a href="#vmswappiness_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Swappiness</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmvfscachepressure_csharp">
+<a href="#vmvfscachepressure_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Vfs<wbr>Cache<wbr>Pressure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsaiomaxnr_go">
+<a href="#fsaiomaxnr_go" style="color: inherit; text-decoration: inherit;">Fs<wbr>Aio<wbr>Max<wbr>Nr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsfilemax_go">
+<a href="#fsfilemax_go" style="color: inherit; text-decoration: inherit;">Fs<wbr>File<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsinotifymaxuserwatches_go">
+<a href="#fsinotifymaxuserwatches_go" style="color: inherit; text-decoration: inherit;">Fs<wbr>Inotify<wbr>Max<wbr>User<wbr>Watches</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsnropen_go">
+<a href="#fsnropen_go" style="color: inherit; text-decoration: inherit;">Fs<wbr>Nr<wbr>Open</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kernelthreadsmax_go">
+<a href="#kernelthreadsmax_go" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Threads<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorenetdevmaxbacklog_go">
+<a href="#netcorenetdevmaxbacklog_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Netdev<wbr>Max<wbr>Backlog</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcoreoptmemmax_go">
+<a href="#netcoreoptmemmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Optmem<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorermemmax_go">
+<a href="#netcorermemmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcoresomaxconn_go">
+<a href="#netcoresomaxconn_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Somaxconn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemmax_go">
+<a href="#netcorewmemmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4iplocalportrange_go">
+<a href="#netipv4iplocalportrange_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Ip<wbr>Local<wbr>Port<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh1_go">
+<a href="#netipv4neighdefaultgcthresh1_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh1</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh2_go">
+<a href="#netipv4neighdefaultgcthresh2_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh3_go">
+<a href="#netipv4neighdefaultgcthresh3_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh3</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpfintimeout_go">
+<a href="#netipv4tcpfintimeout_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Fin<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepaliveprobes_go">
+<a href="#netipv4tcpkeepaliveprobes_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Probes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepalivetime_go">
+<a href="#netipv4tcpkeepalivetime_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpmaxsynbacklog_go">
+<a href="#netipv4tcpmaxsynbacklog_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Max<wbr>Syn<wbr>Backlog</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpmaxtwbuckets_go">
+<a href="#netipv4tcpmaxtwbuckets_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Max<wbr>Tw<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcprmem_go">
+<a href="#netipv4tcprmem_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Rmem</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcptwreuse_go">
+<a href="#netipv4tcptwreuse_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpwmem_go">
+<a href="#netipv4tcpwmem_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Wmem</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepaliveintvl_go">
+<a href="#netipv4tcpkeepaliveintvl_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcpkeepalive<wbr>Intvl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netnetfilternfconntrackbuckets_go">
+<a href="#netnetfilternfconntrackbuckets_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netnetfilternfconntrackmax_go">
+<a href="#netnetfilternfconntrackmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmmaxmapcount_go">
+<a href="#vmmaxmapcount_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Max<wbr>Map<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmswappiness_go">
+<a href="#vmswappiness_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Swappiness</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmvfscachepressure_go">
+<a href="#vmvfscachepressure_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Vfs<wbr>Cache<wbr>Pressure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsaiomaxnr_nodejs">
+<a href="#fsaiomaxnr_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Aio<wbr>Max<wbr>Nr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsfilemax_nodejs">
+<a href="#fsfilemax_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>File<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsinotifymaxuserwatches_nodejs">
+<a href="#fsinotifymaxuserwatches_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Inotify<wbr>Max<wbr>User<wbr>Watches</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsnropen_nodejs">
+<a href="#fsnropen_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Nr<wbr>Open</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kernelthreadsmax_nodejs">
+<a href="#kernelthreadsmax_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Threads<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorenetdevmaxbacklog_nodejs">
+<a href="#netcorenetdevmaxbacklog_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Netdev<wbr>Max<wbr>Backlog</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcoreoptmemmax_nodejs">
+<a href="#netcoreoptmemmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Optmem<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorermemmax_nodejs">
+<a href="#netcorermemmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Rmem<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcoresomaxconn_nodejs">
+<a href="#netcoresomaxconn_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Somaxconn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemmax_nodejs">
+<a href="#netcorewmemmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Wmem<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4iplocalportrange_nodejs">
+<a href="#netipv4iplocalportrange_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Ip<wbr>Local<wbr>Port<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh1_nodejs">
+<a href="#netipv4neighdefaultgcthresh1_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh1</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh2_nodejs">
+<a href="#netipv4neighdefaultgcthresh2_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh3_nodejs">
+<a href="#netipv4neighdefaultgcthresh3_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh3</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpfintimeout_nodejs">
+<a href="#netipv4tcpfintimeout_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Fin<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepaliveprobes_nodejs">
+<a href="#netipv4tcpkeepaliveprobes_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Probes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepalivetime_nodejs">
+<a href="#netipv4tcpkeepalivetime_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpmaxsynbacklog_nodejs">
+<a href="#netipv4tcpmaxsynbacklog_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Max<wbr>Syn<wbr>Backlog</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpmaxtwbuckets_nodejs">
+<a href="#netipv4tcpmaxtwbuckets_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Max<wbr>Tw<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcprmem_nodejs">
+<a href="#netipv4tcprmem_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Rmem</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcptwreuse_nodejs">
+<a href="#netipv4tcptwreuse_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpwmem_nodejs">
+<a href="#netipv4tcpwmem_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Wmem</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepaliveintvl_nodejs">
+<a href="#netipv4tcpkeepaliveintvl_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcpkeepalive<wbr>Intvl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netnetfilternfconntrackbuckets_nodejs">
+<a href="#netnetfilternfconntrackbuckets_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netnetfilternfconntrackmax_nodejs">
+<a href="#netnetfilternfconntrackmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmmaxmapcount_nodejs">
+<a href="#vmmaxmapcount_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Max<wbr>Map<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmswappiness_nodejs">
+<a href="#vmswappiness_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Swappiness</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmvfscachepressure_nodejs">
+<a href="#vmvfscachepressure_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Vfs<wbr>Cache<wbr>Pressure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fs_aio_max_nr_python">
+<a href="#fs_aio_max_nr_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>aio_<wbr>max_<wbr>nr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fs_file_max_python">
+<a href="#fs_file_max_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>file_<wbr>max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fs_inotify_max_user_watches_python">
+<a href="#fs_inotify_max_user_watches_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>inotify_<wbr>max_<wbr>user_<wbr>watches</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fs_nr_open_python">
+<a href="#fs_nr_open_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>nr_<wbr>open</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kernel_threads_max_python">
+<a href="#kernel_threads_max_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>threads_<wbr>max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_core_netdev_max_backlog_python">
+<a href="#net_core_netdev_max_backlog_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>netdev_<wbr>max_<wbr>backlog</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_core_optmem_max_python">
+<a href="#net_core_optmem_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>optmem_<wbr>max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_core_rmem_max_python">
+<a href="#net_core_rmem_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>rmem_<wbr>max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_core_somaxconn_python">
+<a href="#net_core_somaxconn_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>somaxconn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_core_wmem_max_python">
+<a href="#net_core_wmem_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>wmem_<wbr>max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_ip_local_port_range_python">
+<a href="#net_ipv4_ip_local_port_range_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>ip_<wbr>local_<wbr>port_<wbr>range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_neigh_default_gc_thresh1_python">
+<a href="#net_ipv4_neigh_default_gc_thresh1_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>neigh_<wbr>default_<wbr>gc_<wbr>thresh1</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_neigh_default_gc_thresh2_python">
+<a href="#net_ipv4_neigh_default_gc_thresh2_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>neigh_<wbr>default_<wbr>gc_<wbr>thresh2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_neigh_default_gc_thresh3_python">
+<a href="#net_ipv4_neigh_default_gc_thresh3_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>neigh_<wbr>default_<wbr>gc_<wbr>thresh3</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcp_fin_timeout_python">
+<a href="#net_ipv4_tcp_fin_timeout_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>fin_<wbr>timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcp_keepalive_probes_python">
+<a href="#net_ipv4_tcp_keepalive_probes_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>keepalive_<wbr>probes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcp_keepalive_time_python">
+<a href="#net_ipv4_tcp_keepalive_time_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>keepalive_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcp_max_syn_backlog_python">
+<a href="#net_ipv4_tcp_max_syn_backlog_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>max_<wbr>syn_<wbr>backlog</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcp_max_tw_buckets_python">
+<a href="#net_ipv4_tcp_max_tw_buckets_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>max_<wbr>tw_<wbr>buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcp_rmem_python">
+<a href="#net_ipv4_tcp_rmem_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>rmem</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcp_tw_reuse_python">
+<a href="#net_ipv4_tcp_tw_reuse_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>tw_<wbr>reuse</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcp_wmem_python">
+<a href="#net_ipv4_tcp_wmem_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>wmem</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcpkeepalive_intvl_python">
+<a href="#net_ipv4_tcpkeepalive_intvl_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcpkeepalive_<wbr>intvl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_netfilter_nf_conntrack_buckets_python">
+<a href="#net_netfilter_nf_conntrack_buckets_python" style="color: inherit; text-decoration: inherit;">net_<wbr>netfilter_<wbr>nf_<wbr>conntrack_<wbr>buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_netfilter_nf_conntrack_max_python">
+<a href="#net_netfilter_nf_conntrack_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>netfilter_<wbr>nf_<wbr>conntrack_<wbr>max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vm_max_map_count_python">
+<a href="#vm_max_map_count_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>max_<wbr>map_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vm_swappiness_python">
+<a href="#vm_swappiness_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>swappiness</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vm_vfs_cache_pressure_python">
+<a href="#vm_vfs_cache_pressure_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>vfs_<wbr>cache_<wbr>pressure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="sysctlconfigresponse">Sysctl<wbr>Config<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsaiomaxnr_csharp">
+<a href="#fsaiomaxnr_csharp" style="color: inherit; text-decoration: inherit;">Fs<wbr>Aio<wbr>Max<wbr>Nr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsfilemax_csharp">
+<a href="#fsfilemax_csharp" style="color: inherit; text-decoration: inherit;">Fs<wbr>File<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsinotifymaxuserwatches_csharp">
+<a href="#fsinotifymaxuserwatches_csharp" style="color: inherit; text-decoration: inherit;">Fs<wbr>Inotify<wbr>Max<wbr>User<wbr>Watches</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsnropen_csharp">
+<a href="#fsnropen_csharp" style="color: inherit; text-decoration: inherit;">Fs<wbr>Nr<wbr>Open</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kernelthreadsmax_csharp">
+<a href="#kernelthreadsmax_csharp" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Threads<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorenetdevmaxbacklog_csharp">
+<a href="#netcorenetdevmaxbacklog_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Netdev<wbr>Max<wbr>Backlog</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcoreoptmemmax_csharp">
+<a href="#netcoreoptmemmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Optmem<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorermemmax_csharp">
+<a href="#netcorermemmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcoresomaxconn_csharp">
+<a href="#netcoresomaxconn_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Somaxconn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemmax_csharp">
+<a href="#netcorewmemmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4iplocalportrange_csharp">
+<a href="#netipv4iplocalportrange_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Ip<wbr>Local<wbr>Port<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh1_csharp">
+<a href="#netipv4neighdefaultgcthresh1_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh1</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh2_csharp">
+<a href="#netipv4neighdefaultgcthresh2_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh3_csharp">
+<a href="#netipv4neighdefaultgcthresh3_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh3</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpfintimeout_csharp">
+<a href="#netipv4tcpfintimeout_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Fin<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepaliveprobes_csharp">
+<a href="#netipv4tcpkeepaliveprobes_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Probes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepalivetime_csharp">
+<a href="#netipv4tcpkeepalivetime_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpmaxsynbacklog_csharp">
+<a href="#netipv4tcpmaxsynbacklog_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Max<wbr>Syn<wbr>Backlog</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpmaxtwbuckets_csharp">
+<a href="#netipv4tcpmaxtwbuckets_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Max<wbr>Tw<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcprmem_csharp">
+<a href="#netipv4tcprmem_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Rmem</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcptwreuse_csharp">
+<a href="#netipv4tcptwreuse_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpwmem_csharp">
+<a href="#netipv4tcpwmem_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Wmem</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepaliveintvl_csharp">
+<a href="#netipv4tcpkeepaliveintvl_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcpkeepalive<wbr>Intvl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netnetfilternfconntrackbuckets_csharp">
+<a href="#netnetfilternfconntrackbuckets_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netnetfilternfconntrackmax_csharp">
+<a href="#netnetfilternfconntrackmax_csharp" style="color: inherit; text-decoration: inherit;">Net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmmaxmapcount_csharp">
+<a href="#vmmaxmapcount_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Max<wbr>Map<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmswappiness_csharp">
+<a href="#vmswappiness_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Swappiness</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmvfscachepressure_csharp">
+<a href="#vmvfscachepressure_csharp" style="color: inherit; text-decoration: inherit;">Vm<wbr>Vfs<wbr>Cache<wbr>Pressure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsaiomaxnr_go">
+<a href="#fsaiomaxnr_go" style="color: inherit; text-decoration: inherit;">Fs<wbr>Aio<wbr>Max<wbr>Nr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsfilemax_go">
+<a href="#fsfilemax_go" style="color: inherit; text-decoration: inherit;">Fs<wbr>File<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsinotifymaxuserwatches_go">
+<a href="#fsinotifymaxuserwatches_go" style="color: inherit; text-decoration: inherit;">Fs<wbr>Inotify<wbr>Max<wbr>User<wbr>Watches</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsnropen_go">
+<a href="#fsnropen_go" style="color: inherit; text-decoration: inherit;">Fs<wbr>Nr<wbr>Open</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kernelthreadsmax_go">
+<a href="#kernelthreadsmax_go" style="color: inherit; text-decoration: inherit;">Kernel<wbr>Threads<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorenetdevmaxbacklog_go">
+<a href="#netcorenetdevmaxbacklog_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Netdev<wbr>Max<wbr>Backlog</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcoreoptmemmax_go">
+<a href="#netcoreoptmemmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Optmem<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorermemmax_go">
+<a href="#netcorermemmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Rmem<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcoresomaxconn_go">
+<a href="#netcoresomaxconn_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Somaxconn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemmax_go">
+<a href="#netcorewmemmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Core<wbr>Wmem<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4iplocalportrange_go">
+<a href="#netipv4iplocalportrange_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Ip<wbr>Local<wbr>Port<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh1_go">
+<a href="#netipv4neighdefaultgcthresh1_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh1</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh2_go">
+<a href="#netipv4neighdefaultgcthresh2_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh3_go">
+<a href="#netipv4neighdefaultgcthresh3_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh3</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpfintimeout_go">
+<a href="#netipv4tcpfintimeout_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Fin<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepaliveprobes_go">
+<a href="#netipv4tcpkeepaliveprobes_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Probes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepalivetime_go">
+<a href="#netipv4tcpkeepalivetime_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpmaxsynbacklog_go">
+<a href="#netipv4tcpmaxsynbacklog_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Max<wbr>Syn<wbr>Backlog</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpmaxtwbuckets_go">
+<a href="#netipv4tcpmaxtwbuckets_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Max<wbr>Tw<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcprmem_go">
+<a href="#netipv4tcprmem_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Rmem</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcptwreuse_go">
+<a href="#netipv4tcptwreuse_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpwmem_go">
+<a href="#netipv4tcpwmem_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcp<wbr>Wmem</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepaliveintvl_go">
+<a href="#netipv4tcpkeepaliveintvl_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Ipv4Tcpkeepalive<wbr>Intvl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netnetfilternfconntrackbuckets_go">
+<a href="#netnetfilternfconntrackbuckets_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netnetfilternfconntrackmax_go">
+<a href="#netnetfilternfconntrackmax_go" style="color: inherit; text-decoration: inherit;">Net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmmaxmapcount_go">
+<a href="#vmmaxmapcount_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Max<wbr>Map<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmswappiness_go">
+<a href="#vmswappiness_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Swappiness</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmvfscachepressure_go">
+<a href="#vmvfscachepressure_go" style="color: inherit; text-decoration: inherit;">Vm<wbr>Vfs<wbr>Cache<wbr>Pressure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsaiomaxnr_nodejs">
+<a href="#fsaiomaxnr_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Aio<wbr>Max<wbr>Nr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsfilemax_nodejs">
+<a href="#fsfilemax_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>File<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsinotifymaxuserwatches_nodejs">
+<a href="#fsinotifymaxuserwatches_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Inotify<wbr>Max<wbr>User<wbr>Watches</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fsnropen_nodejs">
+<a href="#fsnropen_nodejs" style="color: inherit; text-decoration: inherit;">fs<wbr>Nr<wbr>Open</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kernelthreadsmax_nodejs">
+<a href="#kernelthreadsmax_nodejs" style="color: inherit; text-decoration: inherit;">kernel<wbr>Threads<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorenetdevmaxbacklog_nodejs">
+<a href="#netcorenetdevmaxbacklog_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Netdev<wbr>Max<wbr>Backlog</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcoreoptmemmax_nodejs">
+<a href="#netcoreoptmemmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Optmem<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorermemmax_nodejs">
+<a href="#netcorermemmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Rmem<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcoresomaxconn_nodejs">
+<a href="#netcoresomaxconn_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Somaxconn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netcorewmemmax_nodejs">
+<a href="#netcorewmemmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Core<wbr>Wmem<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4iplocalportrange_nodejs">
+<a href="#netipv4iplocalportrange_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Ip<wbr>Local<wbr>Port<wbr>Range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh1_nodejs">
+<a href="#netipv4neighdefaultgcthresh1_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh1</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh2_nodejs">
+<a href="#netipv4neighdefaultgcthresh2_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4neighdefaultgcthresh3_nodejs">
+<a href="#netipv4neighdefaultgcthresh3_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Neigh<wbr>Default<wbr>Gc<wbr>Thresh3</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpfintimeout_nodejs">
+<a href="#netipv4tcpfintimeout_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Fin<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepaliveprobes_nodejs">
+<a href="#netipv4tcpkeepaliveprobes_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Probes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepalivetime_nodejs">
+<a href="#netipv4tcpkeepalivetime_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Keepalive<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpmaxsynbacklog_nodejs">
+<a href="#netipv4tcpmaxsynbacklog_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Max<wbr>Syn<wbr>Backlog</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpmaxtwbuckets_nodejs">
+<a href="#netipv4tcpmaxtwbuckets_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Max<wbr>Tw<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcprmem_nodejs">
+<a href="#netipv4tcprmem_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Rmem</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcptwreuse_nodejs">
+<a href="#netipv4tcptwreuse_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Tw<wbr>Reuse</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpwmem_nodejs">
+<a href="#netipv4tcpwmem_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcp<wbr>Wmem</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netipv4tcpkeepaliveintvl_nodejs">
+<a href="#netipv4tcpkeepaliveintvl_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Ipv4Tcpkeepalive<wbr>Intvl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netnetfilternfconntrackbuckets_nodejs">
+<a href="#netnetfilternfconntrackbuckets_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="netnetfilternfconntrackmax_nodejs">
+<a href="#netnetfilternfconntrackmax_nodejs" style="color: inherit; text-decoration: inherit;">net<wbr>Netfilter<wbr>Nf<wbr>Conntrack<wbr>Max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmmaxmapcount_nodejs">
+<a href="#vmmaxmapcount_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Max<wbr>Map<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmswappiness_nodejs">
+<a href="#vmswappiness_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Swappiness</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vmvfscachepressure_nodejs">
+<a href="#vmvfscachepressure_nodejs" style="color: inherit; text-decoration: inherit;">vm<wbr>Vfs<wbr>Cache<wbr>Pressure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fs_aio_max_nr_python">
+<a href="#fs_aio_max_nr_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>aio_<wbr>max_<wbr>nr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.aio-max-nr.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fs_file_max_python">
+<a href="#fs_file_max_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>file_<wbr>max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.file-max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fs_inotify_max_user_watches_python">
+<a href="#fs_inotify_max_user_watches_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>inotify_<wbr>max_<wbr>user_<wbr>watches</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.inotify.max_user_watches.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fs_nr_open_python">
+<a href="#fs_nr_open_python" style="color: inherit; text-decoration: inherit;">fs_<wbr>nr_<wbr>open</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting fs.nr_open.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kernel_threads_max_python">
+<a href="#kernel_threads_max_python" style="color: inherit; text-decoration: inherit;">kernel_<wbr>threads_<wbr>max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting kernel.threads-max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_core_netdev_max_backlog_python">
+<a href="#net_core_netdev_max_backlog_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>netdev_<wbr>max_<wbr>backlog</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.netdev_max_backlog.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_core_optmem_max_python">
+<a href="#net_core_optmem_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>optmem_<wbr>max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.optmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_core_rmem_max_python">
+<a href="#net_core_rmem_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>rmem_<wbr>max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.rmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_core_somaxconn_python">
+<a href="#net_core_somaxconn_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>somaxconn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.somaxconn.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_core_wmem_max_python">
+<a href="#net_core_wmem_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>core_<wbr>wmem_<wbr>max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.core.wmem_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_ip_local_port_range_python">
+<a href="#net_ipv4_ip_local_port_range_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>ip_<wbr>local_<wbr>port_<wbr>range</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.ip_local_port_range.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_neigh_default_gc_thresh1_python">
+<a href="#net_ipv4_neigh_default_gc_thresh1_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>neigh_<wbr>default_<wbr>gc_<wbr>thresh1</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh1.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_neigh_default_gc_thresh2_python">
+<a href="#net_ipv4_neigh_default_gc_thresh2_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>neigh_<wbr>default_<wbr>gc_<wbr>thresh2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh2.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_neigh_default_gc_thresh3_python">
+<a href="#net_ipv4_neigh_default_gc_thresh3_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>neigh_<wbr>default_<wbr>gc_<wbr>thresh3</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.neigh.default.gc_thresh3.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcp_fin_timeout_python">
+<a href="#net_ipv4_tcp_fin_timeout_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>fin_<wbr>timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_fin_timeout.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcp_keepalive_probes_python">
+<a href="#net_ipv4_tcp_keepalive_probes_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>keepalive_<wbr>probes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_probes.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcp_keepalive_time_python">
+<a href="#net_ipv4_tcp_keepalive_time_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>keepalive_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_time.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcp_max_syn_backlog_python">
+<a href="#net_ipv4_tcp_max_syn_backlog_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>max_<wbr>syn_<wbr>backlog</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_syn_backlog.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcp_max_tw_buckets_python">
+<a href="#net_ipv4_tcp_max_tw_buckets_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>max_<wbr>tw_<wbr>buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_max_tw_buckets.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcp_rmem_python">
+<a href="#net_ipv4_tcp_rmem_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>rmem</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_rmem.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcp_tw_reuse_python">
+<a href="#net_ipv4_tcp_tw_reuse_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>tw_<wbr>reuse</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_tw_reuse.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcp_wmem_python">
+<a href="#net_ipv4_tcp_wmem_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcp_<wbr>wmem</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_wmem.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_ipv4_tcpkeepalive_intvl_python">
+<a href="#net_ipv4_tcpkeepalive_intvl_python" style="color: inherit; text-decoration: inherit;">net_<wbr>ipv4_<wbr>tcpkeepalive_<wbr>intvl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.ipv4.tcp_keepalive_intvl.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_netfilter_nf_conntrack_buckets_python">
+<a href="#net_netfilter_nf_conntrack_buckets_python" style="color: inherit; text-decoration: inherit;">net_<wbr>netfilter_<wbr>nf_<wbr>conntrack_<wbr>buckets</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_buckets.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="net_netfilter_nf_conntrack_max_python">
+<a href="#net_netfilter_nf_conntrack_max_python" style="color: inherit; text-decoration: inherit;">net_<wbr>netfilter_<wbr>nf_<wbr>conntrack_<wbr>max</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting net.netfilter.nf_conntrack_max.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vm_max_map_count_python">
+<a href="#vm_max_map_count_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>max_<wbr>map_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.max_map_count.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vm_swappiness_python">
+<a href="#vm_swappiness_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>swappiness</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.swappiness.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vm_vfs_cache_pressure_python">
+<a href="#vm_vfs_cache_pressure_python" style="color: inherit; text-decoration: inherit;">vm_<wbr>vfs_<wbr>cache_<wbr>pressure</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Sysctl setting vm.vfs_cache_pressure.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
 
 
 

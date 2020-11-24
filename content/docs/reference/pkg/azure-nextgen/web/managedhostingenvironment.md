@@ -14,6 +14,7 @@ Description of an hostingEnvironment (App Service Environment)
 
 
 
+
 ## Create a ManagedHostingEnvironment Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -6604,6 +6605,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

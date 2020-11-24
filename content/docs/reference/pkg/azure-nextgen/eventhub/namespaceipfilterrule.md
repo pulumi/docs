@@ -12,6 +12,7 @@ meta_desc: "Explore the NamespaceIpFilterRule resource of the eventhub module, i
 
 Single item in a List or Get IpFilterRules operation
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -717,6 +718,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

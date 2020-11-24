@@ -12,6 +12,7 @@ meta_desc: "Explore the QueryPack resource of the insights module, including exa
 
 An Log Analytics QueryPack definition.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -881,6 +882,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the DisasterRecoveryConfig resource of the eventhub module, 
 
 Single item in List or Get Alias(Disaster Recovery configuration) operation
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -789,6 +790,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

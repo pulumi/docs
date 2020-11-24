@@ -12,6 +12,7 @@ meta_desc: "Explore the Table resource of the storage module, including examples
 
 Properties of the table, including Id, resource name, resource type.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -585,6 +586,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

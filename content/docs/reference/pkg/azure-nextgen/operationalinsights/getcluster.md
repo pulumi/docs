@@ -1027,6 +1027,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="keyrsasize_csharp">
+<a href="#keyrsasize_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Rsa<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Selected key minimum required size.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="keyvaulturi_csharp">
 <a href="#keyvaulturi_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Uri</a>
 </span> 
@@ -1045,16 +1055,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The version of the key associated with the Log Analytics cluster.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rsakeysize_csharp">
-<a href="#rsakeysize_csharp" style="color: inherit; text-decoration: inherit;">Rsa<wbr>Key<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}Selected key minimum required key size.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1071,6 +1071,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the key associated with the Log Analytics cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyrsasize_go">
+<a href="#keyrsasize_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Rsa<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Selected key minimum required size.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1092,16 +1102,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The version of the key associated with the Log Analytics cluster.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rsakeysize_go">
-<a href="#rsakeysize_go" style="color: inherit; text-decoration: inherit;">Rsa<wbr>Key<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}Selected key minimum required key size.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1118,6 +1118,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the key associated with the Log Analytics cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyrsasize_nodejs">
+<a href="#keyrsasize_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Rsa<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Selected key minimum required size.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1139,16 +1149,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The version of the key associated with the Log Analytics cluster.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rsakeysize_nodejs">
-<a href="#rsakeysize_nodejs" style="color: inherit; text-decoration: inherit;">rsa<wbr>Key<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}Selected key minimum required key size.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1165,6 +1165,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the key associated with the Log Analytics cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_rsa_size_python">
+<a href="#key_rsa_size_python" style="color: inherit; text-decoration: inherit;">key_<wbr>rsa_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Selected key minimum required size.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1185,16 +1195,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The version of the key associated with the Log Analytics cluster.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rsa_key_size_python">
-<a href="#rsa_key_size_python" style="color: inherit; text-decoration: inherit;">rsa_<wbr>key_<wbr>size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}Selected key minimum required key size.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

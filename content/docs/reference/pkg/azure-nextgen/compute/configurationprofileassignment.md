@@ -12,6 +12,7 @@ meta_desc: "Explore the ConfigurationProfileAssignment resource of the compute m
 
 Configuration profile assignment is an association between a VM and automanage profile configuration.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1212,6 +1213,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

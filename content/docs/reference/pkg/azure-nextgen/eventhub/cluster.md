@@ -12,6 +12,7 @@ meta_desc: "Explore the Cluster resource of the eventhub module, including examp
 
 Single Event Hubs Cluster resource in List or Get operations.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1106,6 +1107,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the StaticSite resource of the web module, including example
 
 Static Site ARM resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2716,6 +2717,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

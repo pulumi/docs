@@ -12,6 +12,7 @@ meta_desc: "Explore the QueueAuthorizationRule resource of the servicebus module
 
 Description of a namespace authorization rule.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -686,6 +687,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

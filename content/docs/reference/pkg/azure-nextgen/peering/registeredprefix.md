@@ -12,6 +12,7 @@ meta_desc: "Explore the RegisteredPrefix resource of the peering module, includi
 
 The customer's prefix that is registered by the peering service provider.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -789,6 +790,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

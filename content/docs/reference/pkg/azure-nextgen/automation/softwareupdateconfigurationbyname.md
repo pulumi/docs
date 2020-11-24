@@ -12,6 +12,7 @@ meta_desc: "Explore the SoftwareUpdateConfigurationByName resource of the automa
 
 Software update configuration properties.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -6110,6 +6111,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

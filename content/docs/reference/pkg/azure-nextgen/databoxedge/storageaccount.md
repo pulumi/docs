@@ -12,6 +12,7 @@ meta_desc: "Explore the StorageAccount resource of the databoxedge module, inclu
 
 Represents a Storage Account on the  Data Box Edge/Gateway device.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -841,6 +842,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

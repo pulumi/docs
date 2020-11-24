@@ -12,6 +12,7 @@ meta_desc: "Explore the LogProfile resource of the insights module, including ex
 
 The log profile resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1087,6 +1088,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

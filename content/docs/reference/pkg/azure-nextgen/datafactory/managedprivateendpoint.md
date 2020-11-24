@@ -12,6 +12,7 @@ meta_desc: "Explore the ManagedPrivateEndpoint resource of the datafactory modul
 
 Managed private endpoint resource type.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1336,6 +1337,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

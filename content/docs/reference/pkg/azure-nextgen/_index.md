@@ -145,6 +145,7 @@ A Next Generation Pulumi package for creating and managing Azure resources.
     <li><a href="sqlvirtualmachine/" title="sqlvirtualmachine"><span class="symbol module"></span>sqlvirtualmachine</a></li>
     <li><a href="storage/" title="storage"><span class="symbol module"></span>storage</a></li>
     <li><a href="storagecache/" title="storagecache"><span class="symbol module"></span>storagecache</a></li>
+    <li><a href="storagepool/" title="storagepool"><span class="symbol module"></span>storagepool</a></li>
     <li><a href="storagesync/" title="storagesync"><span class="symbol module"></span>storagesync</a></li>
     <li><a href="storsimple/" title="storsimple"><span class="symbol module"></span>storsimple</a></li>
     <li><a href="streamanalytics/" title="streamanalytics"><span class="symbol module"></span>streamanalytics</a></li>
@@ -171,7 +172,7 @@ A Next Generation Pulumi package for creating and managing Azure resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.5</dd>
+	<dd>0.2.8</dd>
 </dl>
 
 

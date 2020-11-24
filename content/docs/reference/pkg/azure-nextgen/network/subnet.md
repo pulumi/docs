@@ -12,6 +12,7 @@ meta_desc: "Explore the Subnet resource of the network module, including example
 
 Subnet in a virtual network resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -18858,6 +18859,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

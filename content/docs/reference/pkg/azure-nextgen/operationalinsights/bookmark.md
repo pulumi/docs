@@ -12,6 +12,7 @@ meta_desc: "Explore the Bookmark resource of the operationalinsights module, inc
 
 Represents a bookmark in Azure Security Insights.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1741,6 +1742,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

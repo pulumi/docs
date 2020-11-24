@@ -12,6 +12,7 @@ meta_desc: "Explore the SqlVirtualMachine resource of the sqlvirtualmachine modu
 
 A SQL virtual machine.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -6403,6 +6404,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

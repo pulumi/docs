@@ -12,6 +12,7 @@ meta_desc: "Explore the ServerAzureADAdministrator resource of the sql module, i
 
 An server Active Directory Administrator.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -761,6 +762,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

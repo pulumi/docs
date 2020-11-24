@@ -12,6 +12,7 @@ meta_desc: "Explore the Link resource of the customerinsights module, including 
 
 The link resource format.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1720,6 +1721,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

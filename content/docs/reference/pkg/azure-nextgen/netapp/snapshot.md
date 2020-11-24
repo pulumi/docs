@@ -12,6 +12,7 @@ meta_desc: "Explore the Snapshot resource of the netapp module, including exampl
 
 Snapshot of a Volume
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -837,6 +838,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

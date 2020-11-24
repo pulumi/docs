@@ -12,6 +12,7 @@ meta_desc: "Explore the SavedSearch resource of the operationalinsights module, 
 
 Value object for saved search results.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1198,6 +1199,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

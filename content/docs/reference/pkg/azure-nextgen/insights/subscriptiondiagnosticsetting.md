@@ -12,6 +12,7 @@ meta_desc: "Explore the SubscriptionDiagnosticSetting resource of the insights m
 
 The subscription diagnostic setting resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1022,6 +1023,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

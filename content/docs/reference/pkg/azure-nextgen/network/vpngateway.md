@@ -12,6 +12,7 @@ meta_desc: "Explore the VpnGateway resource of the network module, including exa
 
 VpnGateway Resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -6787,6 +6788,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

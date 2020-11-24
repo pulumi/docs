@@ -12,6 +12,7 @@ meta_desc: "Explore the NamedValue resource of the apimanagement module, includi
 
 NamedValue details.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -774,6 +775,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

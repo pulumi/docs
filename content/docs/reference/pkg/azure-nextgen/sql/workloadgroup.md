@@ -12,6 +12,7 @@ meta_desc: "Explore the WorkloadGroup resource of the sql module, including exam
 
 Workload group operations for a data warehouse
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -992,6 +993,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

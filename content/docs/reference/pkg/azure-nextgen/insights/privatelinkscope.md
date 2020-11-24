@@ -12,6 +12,7 @@ meta_desc: "Explore the PrivateLinkScope resource of the insights module, includ
 
 An Azure Monitor PrivateLinkScope definition.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1327,6 +1328,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

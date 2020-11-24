@@ -12,6 +12,7 @@ meta_desc: "Explore the ApplicationGroup resource of the desktopvirtualization m
 
 Represents a ApplicationGroup definition.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var applicationGroup = new AzureNextGen.DesktopVirtualization.V20201102Preview.ApplicationGroup("applicationGroup", new AzureNextGen.DesktopVirtualization.V20201102Preview.ApplicationGroupArgs
+        var applicationGroup = new AzureNextGen.DesktopVirtualization.V20201110Preview.ApplicationGroup("applicationGroup", new AzureNextGen.DesktopVirtualization.V20201110Preview.ApplicationGroupArgs
         {
             ApplicationGroupName = "applicationGroup1",
             ApplicationGroupType = "RemoteApp",
@@ -55,7 +56,7 @@ class MyStack : Stack
 package main
 
 import (
-	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20201102preview"
+	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20201110preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -91,7 +92,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application_group = azure_nextgen.desktopvirtualization.v20201102preview.ApplicationGroup("applicationGroup",
+application_group = azure_nextgen.desktopvirtualization.v20201110preview.ApplicationGroup("applicationGroup",
     application_group_name="applicationGroup1",
     application_group_type="RemoteApp",
     description="des1",
@@ -114,7 +115,7 @@ application_group = azure_nextgen.desktopvirtualization.v20201102preview.Applica
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const applicationGroup = new azure_nextgen.desktopvirtualization.v20201102preview.ApplicationGroup("applicationGroup", {
+const applicationGroup = new azure_nextgen.desktopvirtualization.v20201110preview.ApplicationGroup("applicationGroup", {
     applicationGroupName: "applicationGroup1",
     applicationGroupType: "RemoteApp",
     description: "des1",
@@ -858,6 +859,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the MachineExtension resource of the hybridcompute module, i
 
 Describes a Machine Extension.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1423,6 +1424,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

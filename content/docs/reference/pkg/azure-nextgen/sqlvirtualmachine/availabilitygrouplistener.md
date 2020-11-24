@@ -12,6 +12,7 @@ meta_desc: "Explore the AvailabilityGroupListener resource of the sqlvirtualmach
 
 A SQL Server availability group listener.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1574,6 +1575,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

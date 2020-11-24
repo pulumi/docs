@@ -12,6 +12,7 @@ meta_desc: "Explore the Service resource of the windowsiot module, including exa
 
 The description of the Windows IoT Device Service.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -877,6 +878,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

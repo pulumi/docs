@@ -12,6 +12,7 @@ meta_desc: "Explore the BuildTask resource of the containerregistry module, incl
 
 The build task that has the resource properties and all build items. The build task will have all information to schedule a build against it.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2152,6 +2153,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

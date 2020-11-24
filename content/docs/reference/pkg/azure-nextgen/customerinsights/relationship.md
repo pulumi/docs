@@ -12,6 +12,7 @@ meta_desc: "Explore the Relationship resource of the customerinsights module, in
 
 The relationship resource format.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -3307,6 +3308,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -14,6 +14,7 @@ The base class for backup policy. Workload-specific backup policies are derived 
 
 
 
+
 ## Create a ProtectionPolicy Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -5084,6 +5085,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

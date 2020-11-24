@@ -12,6 +12,7 @@ meta_desc: "Explore the AlertRuleAction resource of the securityinsights module,
 
 Action for alert rule.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -847,6 +848,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

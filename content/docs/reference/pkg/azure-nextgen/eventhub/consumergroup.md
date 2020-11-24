@@ -12,6 +12,7 @@ meta_desc: "Explore the ConsumerGroup resource of the eventhub module, including
 
 Single item in List or Get Consumer group operation
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -753,6 +754,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the SqlPoolsV3 resource of the synapse module, including exa
 
 A sql pool resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1505,6 +1506,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

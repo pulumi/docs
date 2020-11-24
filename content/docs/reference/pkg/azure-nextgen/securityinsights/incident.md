@@ -12,6 +12,7 @@ meta_desc: "Explore the Incident resource of the securityinsights module, includ
 
 Represents an incident in Azure Security Insights.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2246,6 +2247,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

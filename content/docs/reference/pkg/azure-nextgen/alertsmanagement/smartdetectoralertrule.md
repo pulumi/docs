@@ -12,6 +12,7 @@ meta_desc: "Explore the SmartDetectorAlertRule resource of the alertsmanagement 
 
 The alert rule information
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2061,6 +2062,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

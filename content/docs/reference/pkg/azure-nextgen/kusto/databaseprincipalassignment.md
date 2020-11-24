@@ -12,6 +12,7 @@ meta_desc: "Explore the DatabasePrincipalAssignment resource of the kusto module
 
 Class representing a database principal assignment.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -925,6 +926,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

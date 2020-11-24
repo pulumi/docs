@@ -12,6 +12,7 @@ meta_desc: "Explore the ConsoleWithLocation resource of the portal module, inclu
 
 Cloud shell console
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -669,6 +670,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

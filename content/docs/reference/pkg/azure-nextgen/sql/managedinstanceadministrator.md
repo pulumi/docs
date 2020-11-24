@@ -12,6 +12,7 @@ meta_desc: "Explore the ManagedInstanceAdministrator resource of the sql module,
 
 An Azure SQL managed instance administrator.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -860,6 +861,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

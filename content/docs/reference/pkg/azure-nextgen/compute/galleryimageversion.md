@@ -12,6 +12,7 @@ meta_desc: "Explore the GalleryImageVersion resource of the compute module, incl
 
 Specifies information about the gallery image version that you want to create or update.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -4563,6 +4564,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

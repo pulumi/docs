@@ -5290,6 +5290,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Metadata for log analytics.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspaceresourceid_csharp">
+<a href="#workspaceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The workspace resource id for log analytics{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -5336,6 +5346,16 @@ The following output properties are available:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Metadata for log analytics.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspaceresourceid_go">
+<a href="#workspaceresourceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The workspace resource id for log analytics{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -5384,6 +5404,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Metadata for log analytics.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspaceresourceid_nodejs">
+<a href="#workspaceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The workspace resource id for log analytics{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -5430,6 +5460,16 @@ The following output properties are available:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata for log analytics.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspace_resource_id_python">
+<a href="#workspace_resource_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>resource_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The workspace resource id for log analytics{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

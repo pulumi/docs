@@ -12,6 +12,7 @@ meta_desc: "Explore the DataExport resource of the operationalinsights module, i
 
 The top level data export resource container.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -878,6 +879,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

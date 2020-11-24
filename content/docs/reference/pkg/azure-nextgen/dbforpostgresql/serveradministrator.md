@@ -12,6 +12,7 @@ meta_desc: "Explore the ServerAdministrator resource of the dbforpostgresql modu
 
 Represents a and external administrator to be created.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -717,6 +718,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

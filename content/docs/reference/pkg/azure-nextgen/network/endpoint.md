@@ -12,6 +12,7 @@ meta_desc: "Explore the Endpoint resource of the network module, including examp
 
 Class representing a Traffic Manager endpoint.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2114,6 +2115,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

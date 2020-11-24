@@ -12,6 +12,7 @@ meta_desc: "Explore the PolicyAssignment resource of the authorization module, i
 
 The policy assignment.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1830,6 +1831,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

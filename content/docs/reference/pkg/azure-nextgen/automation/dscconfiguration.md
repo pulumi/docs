@@ -12,6 +12,7 @@ meta_desc: "Explore the DscConfiguration resource of the automation module, incl
 
 Definition of the configuration type.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2255,6 +2256,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

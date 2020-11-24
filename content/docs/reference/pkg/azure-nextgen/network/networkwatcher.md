@@ -12,6 +12,7 @@ meta_desc: "Explore the NetworkWatcher resource of the network module, including
 
 Network watcher in a resource group.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -745,6 +746,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

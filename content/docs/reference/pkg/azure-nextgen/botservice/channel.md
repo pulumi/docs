@@ -12,6 +12,7 @@ meta_desc: "Explore the Channel resource of the botservice module, including exa
 
 Bot channel resource definition
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -10202,6 +10203,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

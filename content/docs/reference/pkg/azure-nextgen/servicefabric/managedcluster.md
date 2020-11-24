@@ -12,6 +12,7 @@ meta_desc: "Explore the ManagedCluster resource of the servicefabric module, inc
 
 The manged cluster resource
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -6189,6 +6190,8 @@ The check is performed after every upgrade domain upgrade completion to make sur
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

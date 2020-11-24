@@ -12,6 +12,7 @@ meta_desc: "Explore the ServerDnsAlias resource of the sql module, including exa
 
 A server DNS alias.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -625,6 +626,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

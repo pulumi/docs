@@ -12,6 +12,7 @@ meta_desc: "Explore the FrontDoor resource of the network module, including exam
 
 Front Door represents a collection of backend endpoints to route traffic to along with rules that specify how traffic is sent there.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -9478,6 +9479,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

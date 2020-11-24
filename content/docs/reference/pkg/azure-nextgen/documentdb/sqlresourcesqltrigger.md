@@ -12,6 +12,7 @@ meta_desc: "Explore the SqlResourceSqlTrigger resource of the documentdb module,
 
 An Azure Cosmos DB trigger.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1587,6 +1588,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

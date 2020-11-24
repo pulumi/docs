@@ -12,6 +12,7 @@ meta_desc: "Explore the TrustedIdProvider resource of the datalakestore module, 
 
 Data Lake Store trusted identity provider information.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -629,6 +630,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

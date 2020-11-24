@@ -12,6 +12,7 @@ meta_desc: "Explore the SqlResourceSqlRoleDefinition resource of the documentdb 
 
 An Azure Cosmos DB SQL Role Definition.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1012,6 +1013,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

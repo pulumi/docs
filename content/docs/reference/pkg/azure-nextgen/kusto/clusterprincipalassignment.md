@@ -12,6 +12,7 @@ meta_desc: "Explore the ClusterPrincipalAssignment resource of the kusto module,
 
 Class representing a cluster principal assignment.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -881,6 +882,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

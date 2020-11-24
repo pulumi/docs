@@ -12,6 +12,7 @@ meta_desc: "Explore the VirtualNetworkLink resource of the network module, inclu
 
 Describes a link to virtual network for a Private DNS zone.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1066,6 +1067,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

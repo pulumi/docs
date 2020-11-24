@@ -12,6 +12,7 @@ meta_desc: "Explore the Pipeline resource of the devops module, including exampl
 
 Azure DevOps Pipeline used to configure Continuous Integration (CI) & Continuous Delivery (CD) for Azure resources.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2471,6 +2472,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the Extension resource of the visualstudio module, including
 
 The response to an extension resource GET request.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1273,6 +1274,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

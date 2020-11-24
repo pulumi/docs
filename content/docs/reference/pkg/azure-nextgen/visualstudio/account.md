@@ -12,6 +12,7 @@ meta_desc: "Explore the Account resource of the visualstudio module, including e
 
 The response to an account resource GET request.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -761,6 +762,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the BillingRoleAssignmentByEnrollmentAccount resource of the
 
 The role assignment
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -997,6 +998,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

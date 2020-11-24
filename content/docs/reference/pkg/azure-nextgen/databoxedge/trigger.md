@@ -12,6 +12,7 @@ meta_desc: "Explore the Trigger resource of the databoxedge module, including ex
 
 Trigger details.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -589,6 +590,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

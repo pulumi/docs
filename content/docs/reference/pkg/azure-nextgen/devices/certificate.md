@@ -12,6 +12,7 @@ meta_desc: "Explore the Certificate resource of the devices module, including ex
 
 The X509 Certificate.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1045,6 +1046,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the Certificate resource of the web module, including exampl
 
 SSL certificate for an app.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1608,6 +1609,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

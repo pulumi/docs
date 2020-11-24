@@ -12,6 +12,7 @@ meta_desc: "Explore the Application resource of the desktopvirtualization module
 
 Schema for Application properties.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var application = new AzureNextGen.DesktopVirtualization.V20201102Preview.Application("application", new AzureNextGen.DesktopVirtualization.V20201102Preview.ApplicationArgs
+        var application = new AzureNextGen.DesktopVirtualization.V20201110Preview.Application("application", new AzureNextGen.DesktopVirtualization.V20201110Preview.ApplicationArgs
         {
             ApplicationGroupName = "applicationGroup1",
             ApplicationName = "application1",
@@ -54,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20201102preview"
+	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20201110preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,7 +91,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-application = azure_nextgen.desktopvirtualization.v20201102preview.Application("application",
+application = azure_nextgen.desktopvirtualization.v20201110preview.Application("application",
     application_group_name="applicationGroup1",
     application_name="application1",
     command_line_arguments="arguments",
@@ -113,7 +114,7 @@ application = azure_nextgen.desktopvirtualization.v20201102preview.Application("
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const application = new azure_nextgen.desktopvirtualization.v20201102preview.Application("application", {
+const application = new azure_nextgen.desktopvirtualization.v20201110preview.Application("application", {
     applicationGroupName: "applicationGroup1",
     applicationName: "application1",
     commandLineArguments: "arguments",
@@ -1137,6 +1138,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

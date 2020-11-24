@@ -12,6 +12,7 @@ meta_desc: "Explore the NamespaceVirtualNetworkRule resource of the eventhub mod
 
 Single item in a List or Get VirtualNetworkRules operation
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -629,6 +630,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

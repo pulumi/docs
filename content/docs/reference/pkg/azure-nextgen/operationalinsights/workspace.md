@@ -12,6 +12,7 @@ meta_desc: "Explore the Workspace resource of the operationalinsights module, in
 
 The top level Workspace resource container.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -141,7 +142,7 @@ const workspace = new azure_nextgen.operationalinsights.latest.Workspace("worksp
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_for_ingestion</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_for_query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[WorkspaceSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">workspace_capping</span><span class="p">:</span> <span class="nx">Optional[WorkspaceCappingArgs]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force_cmk_for_query</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_for_ingestion</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access_for_query</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">retention_in_days</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[WorkspaceSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">workspace_capping</span><span class="p">:</span> <span class="nx">Optional[WorkspaceCappingArgs]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -355,6 +356,16 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="forcecmkforquery_csharp">
+<a href="#forcecmkforquery_csharp" style="color: inherit; text-decoration: inherit;">Force<wbr>Cmk<wbr>For<wbr>Query</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether customer managed storage is mandatory for query management.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="provisioningstate_csharp">
 <a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
 </span> 
@@ -469,6 +480,16 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ETag of the workspace.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="forcecmkforquery_go">
+<a href="#forcecmkforquery_go" style="color: inherit; text-decoration: inherit;">Force<wbr>Cmk<wbr>For<wbr>Query</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether customer managed storage is mandatory for query management.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -589,6 +610,16 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="forcecmkforquery_nodejs">
+<a href="#forcecmkforquery_nodejs" style="color: inherit; text-decoration: inherit;">force<wbr>Cmk<wbr>For<wbr>Query</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether customer managed storage is mandatory for query management.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="provisioningstate_nodejs">
 <a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
 </span> 
@@ -703,6 +734,16 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ETag of the workspace.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="force_cmk_for_query_python">
+<a href="#force_cmk_for_query_python" style="color: inherit; text-decoration: inherit;">force_<wbr>cmk_<wbr>for_<wbr>query</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Indicates whether customer managed storage is mandatory for query management.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1699,6 +1740,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

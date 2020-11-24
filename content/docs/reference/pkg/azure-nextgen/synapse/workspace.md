@@ -12,6 +12,7 @@ meta_desc: "Explore the Workspace resource of the synapse module, including exam
 
 A workspace
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -28,10 +29,6 @@ class MyStack : Stack
     {
         var workspace = new AzureNextGen.Synapse.V20190601Preview.Workspace("workspace", new AzureNextGen.Synapse.V20190601Preview.WorkspaceArgs
         {
-            BabylonConfiguration = new AzureNextGen.Synapse.V20190601Preview.Inputs.BabylonConfigurationArgs
-            {
-                BabylonResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectBabylon/accounts/accountname1",
-            },
             DefaultDataLakeStorage = new AzureNextGen.Synapse.V20190601Preview.Inputs.DataLakeStorageAccountDetailsArgs
             {
                 AccountUrl = "https://accountname.dfs.core.windows.net",
@@ -53,6 +50,10 @@ class MyStack : Stack
                 LinkedAccessCheckOnTargetResource = false,
                 PreventDataExfiltration = false,
             },
+            PurviewConfiguration = new AzureNextGen.Synapse.V20190601Preview.Inputs.PurviewConfigurationArgs
+            {
+                PurviewResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectPurview/accounts/accountname1",
+            },
             ResourceGroupName = "resourceGroup1",
             SqlAdministratorLogin = "login",
             SqlAdministratorLoginPassword = "password",
@@ -61,6 +62,16 @@ class MyStack : Stack
                 { "key", "value" },
             },
             WorkspaceName = "workspace1",
+            WorkspaceRepositoryConfiguration = new AzureNextGen.Synapse.V20190601Preview.Inputs.WorkspaceRepositoryConfigurationArgs
+            {
+                AccountName = "mygithubaccount",
+                CollaborationBranch = "master",
+                HostName = "",
+                ProjectName = "myproject",
+                RepositoryName = "myrepository",
+                RootFolder = "/",
+                Type = "FactoryGitHubConfiguration",
+            },
         });
     }
 
@@ -83,9 +94,6 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := synapse.NewWorkspace(ctx, "workspace", &synapse.WorkspaceArgs{
-			BabylonConfiguration: &synapse.BabylonConfigurationArgs{
-				BabylonResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectBabylon/accounts/accountname1"),
-			},
 			DefaultDataLakeStorage: &synapse.DataLakeStorageAccountDetailsArgs{
 				AccountUrl: pulumi.String("https://accountname.dfs.core.windows.net"),
 				Filesystem: pulumi.String("default"),
@@ -103,6 +111,9 @@ func main() {
 				LinkedAccessCheckOnTargetResource: pulumi.Bool(false),
 				PreventDataExfiltration:           pulumi.Bool(false),
 			},
+			PurviewConfiguration: &synapse.PurviewConfigurationArgs{
+				PurviewResourceId: pulumi.String("/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectPurview/accounts/accountname1"),
+			},
 			ResourceGroupName:             pulumi.String("resourceGroup1"),
 			SqlAdministratorLogin:         pulumi.String("login"),
 			SqlAdministratorLoginPassword: pulumi.String("password"),
@@ -110,6 +121,15 @@ func main() {
 				"key": pulumi.String("value"),
 			},
 			WorkspaceName: pulumi.String("workspace1"),
+			WorkspaceRepositoryConfiguration: &synapse.WorkspaceRepositoryConfigurationArgs{
+				AccountName:         pulumi.String("mygithubaccount"),
+				CollaborationBranch: pulumi.String("master"),
+				HostName:            pulumi.String(""),
+				ProjectName:         pulumi.String("myproject"),
+				RepositoryName:      pulumi.String("myrepository"),
+				RootFolder:          pulumi.String("/"),
+				Type:                pulumi.String("FactoryGitHubConfiguration"),
+			},
 		})
 		if err != nil {
 			return err
@@ -129,9 +149,6 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 workspace = azure_nextgen.synapse.v20190601preview.Workspace("workspace",
-    babylon_configuration=azure_nextgen.synapse.v20190601preview.BabylonConfigurationArgs(
-        babylon_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectBabylon/accounts/accountname1",
-    ),
     default_data_lake_storage=azure_nextgen.synapse.v20190601preview.DataLakeStorageAccountDetailsArgs(
         account_url="https://accountname.dfs.core.windows.net",
         filesystem="default",
@@ -147,13 +164,25 @@ workspace = azure_nextgen.synapse.v20190601preview.Workspace("workspace",
         linked_access_check_on_target_resource=False,
         prevent_data_exfiltration=False,
     ),
+    purview_configuration=azure_nextgen.synapse.v20190601preview.PurviewConfigurationArgs(
+        purview_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectPurview/accounts/accountname1",
+    ),
     resource_group_name="resourceGroup1",
     sql_administrator_login="login",
     sql_administrator_login_password="password",
     tags={
         "key": "value",
     },
-    workspace_name="workspace1")
+    workspace_name="workspace1",
+    workspace_repository_configuration=azure_nextgen.synapse.v20190601preview.WorkspaceRepositoryConfigurationArgs(
+        account_name="mygithubaccount",
+        collaboration_branch="master",
+        host_name="",
+        project_name="myproject",
+        repository_name="myrepository",
+        root_folder="/",
+        type="FactoryGitHubConfiguration",
+    ))
 
 ```
 
@@ -166,9 +195,6 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const workspace = new azure_nextgen.synapse.v20190601preview.Workspace("workspace", {
-    babylonConfiguration: {
-        babylonResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectBabylon/accounts/accountname1",
-    },
     defaultDataLakeStorage: {
         accountUrl: "https://accountname.dfs.core.windows.net",
         filesystem: "default",
@@ -184,6 +210,9 @@ const workspace = new azure_nextgen.synapse.v20190601preview.Workspace("workspac
         linkedAccessCheckOnTargetResource: false,
         preventDataExfiltration: false,
     },
+    purviewConfiguration: {
+        purviewResourceId: "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectPurview/accounts/accountname1",
+    },
     resourceGroupName: "resourceGroup1",
     sqlAdministratorLogin: "login",
     sqlAdministratorLoginPassword: "password",
@@ -191,6 +220,15 @@ const workspace = new azure_nextgen.synapse.v20190601preview.Workspace("workspac
         key: "value",
     },
     workspaceName: "workspace1",
+    workspaceRepositoryConfiguration: {
+        accountName: "mygithubaccount",
+        collaborationBranch: "master",
+        hostName: "",
+        projectName: "myproject",
+        repositoryName: "myrepository",
+        rootFolder: "/",
+        type: "FactoryGitHubConfiguration",
+    },
 });
 
 ```
@@ -209,7 +247,7 @@ const workspace = new azure_nextgen.synapse.v20190601preview.Workspace("workspac
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">babylon_configuration</span><span class="p">:</span> <span class="nx">Optional[BabylonConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">connectivity_endpoints</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">default_data_lake_storage</span><span class="p">:</span> <span class="nx">Optional[DataLakeStorageAccountDetailsArgs]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionDetailsArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_virtual_network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_virtual_network_settings</span><span class="p">:</span> <span class="nx">Optional[ManagedVirtualNetworkSettingsArgs]</span> = None<span class="p">, </span><span class="nx">private_endpoint_connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[PrivateEndpointConnectionArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_profile</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Workspace</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connectivity_endpoints</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">default_data_lake_storage</span><span class="p">:</span> <span class="nx">Optional[DataLakeStorageAccountDetailsArgs]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionDetailsArgs]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_virtual_network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_virtual_network_settings</span><span class="p">:</span> <span class="nx">Optional[ManagedVirtualNetworkSettingsArgs]</span> = None<span class="p">, </span><span class="nx">private_endpoint_connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[PrivateEndpointConnectionArgs]]</span> = None<span class="p">, </span><span class="nx">purview_configuration</span><span class="p">:</span> <span class="nx">Optional[PurviewConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_administrator_login_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_profile</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_repository_configuration</span><span class="p">:</span> <span class="nx">Optional[WorkspaceRepositoryConfigurationArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -413,16 +451,6 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
-        <span id="babylonconfiguration_csharp">
-<a href="#babylonconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Babylon<wbr>Configuration</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#babylonconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Babylon<wbr>Configuration<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Babylon Configuration{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="connectivityendpoints_csharp">
 <a href="#connectivityendpoints_csharp" style="color: inherit; text-decoration: inherit;">Connectivity<wbr>Endpoints</a>
 </span> 
@@ -503,6 +531,16 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="purviewconfiguration_csharp">
+<a href="#purviewconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Purview<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#purviewconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Purview<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Purview Configuration{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sqladministratorlogin_csharp">
 <a href="#sqladministratorlogin_csharp" style="color: inherit; text-decoration: inherit;">Sql<wbr>Administrator<wbr>Login</a>
 </span> 
@@ -541,6 +579,16 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}Virtual Network profile{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspacerepositoryconfiguration_csharp">
+<a href="#workspacerepositoryconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Repository<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workspacerepositoryconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Workspace<wbr>Repository<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Git integration settings{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -577,16 +625,6 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the workspace{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="babylonconfiguration_go">
-<a href="#babylonconfiguration_go" style="color: inherit; text-decoration: inherit;">Babylon<wbr>Configuration</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#babylonconfiguration">Babylon<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}Babylon Configuration{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -670,6 +708,16 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="purviewconfiguration_go">
+<a href="#purviewconfiguration_go" style="color: inherit; text-decoration: inherit;">Purview<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#purviewconfiguration">Purview<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Purview Configuration{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sqladministratorlogin_go">
 <a href="#sqladministratorlogin_go" style="color: inherit; text-decoration: inherit;">Sql<wbr>Administrator<wbr>Login</a>
 </span> 
@@ -708,6 +756,16 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}Virtual Network profile{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspacerepositoryconfiguration_go">
+<a href="#workspacerepositoryconfiguration_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Repository<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workspacerepositoryconfiguration">Workspace<wbr>Repository<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Git integration settings{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -744,16 +802,6 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the workspace{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="babylonconfiguration_nodejs">
-<a href="#babylonconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">babylon<wbr>Configuration</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#babylonconfiguration">Babylon<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}Babylon Configuration{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -837,6 +885,16 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="purviewconfiguration_nodejs">
+<a href="#purviewconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">purview<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#purviewconfiguration">Purview<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Purview Configuration{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sqladministratorlogin_nodejs">
 <a href="#sqladministratorlogin_nodejs" style="color: inherit; text-decoration: inherit;">sql<wbr>Administrator<wbr>Login</a>
 </span> 
@@ -875,6 +933,16 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}Virtual Network profile{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspacerepositoryconfiguration_nodejs">
+<a href="#workspacerepositoryconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Repository<wbr>Configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workspacerepositoryconfiguration">Workspace<wbr>Repository<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Git integration settings{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -911,16 +979,6 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the workspace{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="babylon_configuration_python">
-<a href="#babylon_configuration_python" style="color: inherit; text-decoration: inherit;">babylon_<wbr>configuration</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#babylonconfiguration">Babylon<wbr>Configuration<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Babylon Configuration{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1004,6 +1062,16 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="purview_configuration_python">
+<a href="#purview_configuration_python" style="color: inherit; text-decoration: inherit;">purview_<wbr>configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#purviewconfiguration">Purview<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Purview Configuration{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sql_administrator_login_python">
 <a href="#sql_administrator_login_python" style="color: inherit; text-decoration: inherit;">sql_<wbr>administrator_<wbr>login</a>
 </span> 
@@ -1041,6 +1109,16 @@ The Workspace resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-type"><a href="#virtualnetworkprofile">Virtual<wbr>Network<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Virtual Network profile{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspace_repository_configuration_python">
+<a href="#workspace_repository_configuration_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>repository_<wbr>configuration</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#workspacerepositoryconfiguration">Workspace<wbr>Repository<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Git integration settings{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1335,164 +1413,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 ## Supporting Types
-
-
-<h4 id="babylonconfiguration">Babylon<wbr>Configuration</h4>
-
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="babylonresourceid_csharp">
-<a href="#babylonresourceid_csharp" style="color: inherit; text-decoration: inherit;">Babylon<wbr>Resource<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Babylon Resource ID{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="babylonresourceid_go">
-<a href="#babylonresourceid_go" style="color: inherit; text-decoration: inherit;">Babylon<wbr>Resource<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Babylon Resource ID{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="babylonresourceid_nodejs">
-<a href="#babylonresourceid_nodejs" style="color: inherit; text-decoration: inherit;">babylon<wbr>Resource<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Babylon Resource ID{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="babylon_resource_id_python">
-<a href="#babylon_resource_id_python" style="color: inherit; text-decoration: inherit;">babylon_<wbr>resource_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Babylon Resource ID{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-<h4 id="babylonconfigurationresponse">Babylon<wbr>Configuration<wbr>Response</h4>
-
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="babylonresourceid_csharp">
-<a href="#babylonresourceid_csharp" style="color: inherit; text-decoration: inherit;">Babylon<wbr>Resource<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Babylon Resource ID{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="babylonresourceid_go">
-<a href="#babylonresourceid_go" style="color: inherit; text-decoration: inherit;">Babylon<wbr>Resource<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Babylon Resource ID{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="babylonresourceid_nodejs">
-<a href="#babylonresourceid_nodejs" style="color: inherit; text-decoration: inherit;">babylon<wbr>Resource<wbr>Id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Babylon Resource ID{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="babylon_resource_id_python">
-<a href="#babylon_resource_id_python" style="color: inherit; text-decoration: inherit;">babylon_<wbr>resource_<wbr>id</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Babylon Resource ID{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
 
 
 <h4 id="customermanagedkeydetails">Customer<wbr>Managed<wbr>Key<wbr>Details</h4>
@@ -3400,6 +3320,164 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="purviewconfiguration">Purview<wbr>Configuration</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="purviewresourceid_csharp">
+<a href="#purviewresourceid_csharp" style="color: inherit; text-decoration: inherit;">Purview<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Purview Resource ID{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="purviewresourceid_go">
+<a href="#purviewresourceid_go" style="color: inherit; text-decoration: inherit;">Purview<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Purview Resource ID{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="purviewresourceid_nodejs">
+<a href="#purviewresourceid_nodejs" style="color: inherit; text-decoration: inherit;">purview<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Purview Resource ID{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="purview_resource_id_python">
+<a href="#purview_resource_id_python" style="color: inherit; text-decoration: inherit;">purview_<wbr>resource_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Purview Resource ID{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="purviewconfigurationresponse">Purview<wbr>Configuration<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="purviewresourceid_csharp">
+<a href="#purviewresourceid_csharp" style="color: inherit; text-decoration: inherit;">Purview<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Purview Resource ID{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="purviewresourceid_go">
+<a href="#purviewresourceid_go" style="color: inherit; text-decoration: inherit;">Purview<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Purview Resource ID{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="purviewresourceid_nodejs">
+<a href="#purviewresourceid_nodejs" style="color: inherit; text-decoration: inherit;">purview<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Purview Resource ID{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="purview_resource_id_python">
+<a href="#purview_resource_id_python" style="color: inherit; text-decoration: inherit;">purview_<wbr>resource_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Purview Resource ID{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="virtualnetworkprofile">Virtual<wbr>Network<wbr>Profile</h4>
 
 
@@ -3791,6 +3869,646 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
+
+
+
+<h4 id="workspacerepositoryconfiguration">Workspace<wbr>Repository<wbr>Configuration</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountname_csharp">
+<a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Account name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="collaborationbranch_csharp">
+<a href="#collaborationbranch_csharp" style="color: inherit; text-decoration: inherit;">Collaboration<wbr>Branch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Collaboration branch{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostname_csharp">
+<a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="projectname_csharp">
+<a href="#projectname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}VSTS project name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repositoryname_csharp">
+<a href="#repositoryname_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Repository name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rootfolder_csharp">
+<a href="#rootfolder_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Folder</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Root folder to use in the repository{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountname_go">
+<a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Account name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="collaborationbranch_go">
+<a href="#collaborationbranch_go" style="color: inherit; text-decoration: inherit;">Collaboration<wbr>Branch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Collaboration branch{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostname_go">
+<a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="projectname_go">
+<a href="#projectname_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}VSTS project name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repositoryname_go">
+<a href="#repositoryname_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Repository name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rootfolder_go">
+<a href="#rootfolder_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Folder</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Root folder to use in the repository{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountname_nodejs">
+<a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Account name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="collaborationbranch_nodejs">
+<a href="#collaborationbranch_nodejs" style="color: inherit; text-decoration: inherit;">collaboration<wbr>Branch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Collaboration branch{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostname_nodejs">
+<a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="projectname_nodejs">
+<a href="#projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}VSTS project name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repositoryname_nodejs">
+<a href="#repositoryname_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Repository name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rootfolder_nodejs">
+<a href="#rootfolder_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Folder</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Root folder to use in the repository{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="account_name_python">
+<a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Account name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="collaboration_branch_python">
+<a href="#collaboration_branch_python" style="color: inherit; text-decoration: inherit;">collaboration_<wbr>branch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Collaboration branch{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_name_python">
+<a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="project_name_python">
+<a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}VSTS project name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repository_name_python">
+<a href="#repository_name_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Repository name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="root_folder_python">
+<a href="#root_folder_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Root folder to use in the repository{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="workspacerepositoryconfigurationresponse">Workspace<wbr>Repository<wbr>Configuration<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountname_csharp">
+<a href="#accountname_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Account name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="collaborationbranch_csharp">
+<a href="#collaborationbranch_csharp" style="color: inherit; text-decoration: inherit;">Collaboration<wbr>Branch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Collaboration branch{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostname_csharp">
+<a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="projectname_csharp">
+<a href="#projectname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}VSTS project name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repositoryname_csharp">
+<a href="#repositoryname_csharp" style="color: inherit; text-decoration: inherit;">Repository<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Repository name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rootfolder_csharp">
+<a href="#rootfolder_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Folder</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Root folder to use in the repository{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountname_go">
+<a href="#accountname_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Account name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="collaborationbranch_go">
+<a href="#collaborationbranch_go" style="color: inherit; text-decoration: inherit;">Collaboration<wbr>Branch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Collaboration branch{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostname_go">
+<a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="projectname_go">
+<a href="#projectname_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}VSTS project name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repositoryname_go">
+<a href="#repositoryname_go" style="color: inherit; text-decoration: inherit;">Repository<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Repository name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rootfolder_go">
+<a href="#rootfolder_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Folder</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Root folder to use in the repository{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accountname_nodejs">
+<a href="#accountname_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Account name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="collaborationbranch_nodejs">
+<a href="#collaborationbranch_nodejs" style="color: inherit; text-decoration: inherit;">collaboration<wbr>Branch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Collaboration branch{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hostname_nodejs">
+<a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="projectname_nodejs">
+<a href="#projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}VSTS project name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repositoryname_nodejs">
+<a href="#repositoryname_nodejs" style="color: inherit; text-decoration: inherit;">repository<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Repository name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rootfolder_nodejs">
+<a href="#rootfolder_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Folder</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Root folder to use in the repository{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="account_name_python">
+<a href="#account_name_python" style="color: inherit; text-decoration: inherit;">account_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Account name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="collaboration_branch_python">
+<a href="#collaboration_branch_python" style="color: inherit; text-decoration: inherit;">collaboration_<wbr>branch</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Collaboration branch{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="host_name_python">
+<a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="project_name_python">
+<a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}VSTS project name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repository_name_python">
+<a href="#repository_name_python" style="color: inherit; text-decoration: inherit;">repository_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Repository name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="root_folder_python">
+<a href="#root_folder_python" style="color: inherit; text-decoration: inherit;">root_<wbr>folder</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Root folder to use in the repository{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
 
 
 

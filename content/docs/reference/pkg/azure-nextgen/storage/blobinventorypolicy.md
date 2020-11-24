@@ -12,6 +12,7 @@ meta_desc: "Explore the BlobInventoryPolicy resource of the storage module, incl
 
 The storage account blob inventory policy.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2372,6 +2373,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the LinkedService resource of the operationalinsights module
 
 The top level Linked service resource container.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -749,6 +750,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

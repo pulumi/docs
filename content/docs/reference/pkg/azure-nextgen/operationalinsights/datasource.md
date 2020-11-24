@@ -12,6 +12,7 @@ meta_desc: "Explore the DataSource resource of the operationalinsights module, i
 
 Datasources under OMS Workspace.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -762,6 +763,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

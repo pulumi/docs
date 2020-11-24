@@ -12,6 +12,7 @@ meta_desc: "Explore the BlobContainerImmutabilityPolicy resource of the storage 
 
 The ImmutabilityPolicy property of a blob container, including Id, resource name, resource type, Etag.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -797,6 +798,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

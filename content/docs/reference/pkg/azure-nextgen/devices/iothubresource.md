@@ -12,6 +12,7 @@ meta_desc: "Explore the IotHubResource resource of the devices module, including
 
 The description of the IoT hub.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -11153,6 +11154,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

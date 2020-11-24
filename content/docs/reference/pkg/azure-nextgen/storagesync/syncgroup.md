@@ -12,6 +12,7 @@ meta_desc: "Explore the SyncGroup resource of the storagesync module, including 
 
 Sync Group object.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -665,6 +666,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

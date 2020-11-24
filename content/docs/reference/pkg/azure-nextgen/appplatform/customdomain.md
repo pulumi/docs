@@ -12,6 +12,7 @@ meta_desc: "Explore the CustomDomain resource of the appplatform module, includi
 
 Custom domain resource payload.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -973,6 +974,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

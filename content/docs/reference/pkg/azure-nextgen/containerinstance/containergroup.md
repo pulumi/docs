@@ -12,6 +12,7 @@ meta_desc: "Explore the ContainerGroup resource of the containerinstance module,
 
 A container group.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -105,6 +106,10 @@ class MyStack : Stack
             Identity = new AzureNextGen.ContainerInstance.Latest.Inputs.ContainerGroupIdentityArgs
             {
                 Type = "SystemAssigned, UserAssigned",
+                UserAssignedIdentities = 
+                {
+                    { "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name",  },
+                },
             },
             ImageRegistryCredentials = {},
             IpAddress = new AzureNextGen.ContainerInstance.Latest.Inputs.IpAddressArgs
@@ -236,6 +241,9 @@ func main() {
 			},
 			Identity: &containerinstance.ContainerGroupIdentityArgs{
 				Type: pulumi.String("SystemAssigned, UserAssigned"),
+				UserAssignedIdentities: pulumi.MapMap{
+					"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name": nil,
+				},
 			},
 			ImageRegistryCredentials: containerinstance.ImageRegistryCredentialArray{},
 			IpAddress: &containerinstance.IpAddressArgs{
@@ -348,6 +356,9 @@ container_group = azure_nextgen.containerinstance.latest.ContainerGroup("contain
     ),
     identity=azure_nextgen.containerinstance.latest.ContainerGroupIdentityArgs(
         type="SystemAssigned, UserAssigned",
+        user_assigned_identities={
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name": {},
+        },
     ),
     image_registry_credentials=[],
     ip_address=azure_nextgen.containerinstance.latest.IpAddressArgs(
@@ -451,6 +462,9 @@ const containerGroup = new azure_nextgen.containerinstance.latest.ContainerGroup
     },
     identity: {
         type: "SystemAssigned, UserAssigned",
+        userAssignedIdentities: {
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity-name": {},
+        },
     },
     imageRegistryCredentials: [],
     ipAddress: {
@@ -2784,6 +2798,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The type of identity used for the container group. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the container group.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_csharp">
+<a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the container group. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2800,6 +2824,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the container group. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the container group.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_go">
+<a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the container group. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2818,6 +2852,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The type of identity used for the container group. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the container group.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_nodejs">
+<a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the container group. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2834,6 +2878,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the container group. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the container group.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identities_python">
+<a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the container group. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8821,6 +8875,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Metadata for log analytics.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspaceresourceid_csharp">
+<a href="#workspaceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The workspace resource id for log analytics{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -8867,6 +8931,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Metadata for log analytics.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspaceresourceid_go">
+<a href="#workspaceresourceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The workspace resource id for log analytics{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -8915,6 +8989,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Metadata for log analytics.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspaceresourceid_nodejs">
+<a href="#workspaceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The workspace resource id for log analytics{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -8961,6 +9045,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata for log analytics.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspace_resource_id_python">
+<a href="#workspace_resource_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>resource_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The workspace resource id for log analytics{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -9020,6 +9114,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Metadata for log analytics.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspaceresourceid_csharp">
+<a href="#workspaceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The workspace resource id for log analytics{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -9066,6 +9170,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Metadata for log analytics.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspaceresourceid_go">
+<a href="#workspaceresourceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The workspace resource id for log analytics{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -9114,6 +9228,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}Metadata for log analytics.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspaceresourceid_nodejs">
+<a href="#workspaceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The workspace resource id for log analytics{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -9160,6 +9284,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Metadata for log analytics.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspace_resource_id_python">
+<a href="#workspace_resource_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>resource_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The workspace resource id for log analytics{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -11071,6 +11205,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the Artifact resource of the blueprint module, including exa
 
 Represents a blueprint artifact.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1064,6 +1065,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

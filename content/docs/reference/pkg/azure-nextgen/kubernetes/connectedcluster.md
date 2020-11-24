@@ -12,6 +12,7 @@ meta_desc: "Explore the ConnectedCluster resource of the kubernetes module, incl
 
 Represents a connected cluster.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1512,6 +1513,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

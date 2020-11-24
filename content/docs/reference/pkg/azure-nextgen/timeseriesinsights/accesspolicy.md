@@ -12,6 +12,7 @@ meta_desc: "Explore the AccessPolicy resource of the timeseriesinsights module, 
 
 An access policy is used to grant users and applications access to the environment. Roles are assigned to service principals in Azure Active Directory. These roles define the actions the principal can perform through the Time Series Insights data plane APIs.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -722,6 +723,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

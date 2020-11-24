@@ -12,6 +12,7 @@ meta_desc: "Explore the EventChannel resource of the eventgrid module, including
 
 Event Channel.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -4430,6 +4431,8 @@ This represents a unique resource in the partner's resource model.{{% /md %}}</d
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

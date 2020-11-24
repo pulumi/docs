@@ -12,6 +12,7 @@ meta_desc: "Explore the CassandraResourceCassandraTable resource of the document
 
 An Azure Cosmos DB Cassandra table.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2724,6 +2725,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

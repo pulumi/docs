@@ -12,6 +12,7 @@ meta_desc: "Explore the ReplicationProtectionContainerMapping resource of the re
 
 Protection container mapping object.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -3455,6 +3456,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

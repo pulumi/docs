@@ -12,6 +12,7 @@ meta_desc: "Explore the PartnerRegistration resource of the eventgrid module, in
 
 Information about a partner registration.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1231,6 +1232,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

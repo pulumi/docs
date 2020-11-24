@@ -12,6 +12,7 @@ meta_desc: "Explore the Database resource of the dbforpostgresql module, includi
 
 Represents a Database.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -673,6 +674,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

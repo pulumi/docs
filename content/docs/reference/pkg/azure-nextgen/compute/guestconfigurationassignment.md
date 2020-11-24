@@ -12,6 +12,7 @@ meta_desc: "Explore the GuestConfigurationAssignment resource of the compute mod
 
 Guest configuration assignment is an association between a machine and guest configuration.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -3705,6 +3706,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

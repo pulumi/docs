@@ -12,6 +12,7 @@ meta_desc: "Explore the RedisEnterprise resource of the cache module, including 
 
 Describes the RedisEnterprise cluster
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1764,6 +1765,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

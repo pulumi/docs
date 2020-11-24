@@ -11,6 +11,7 @@ meta_desc: "Explore the Monitor resource of the datadog module, including exampl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1171,7 +1172,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1188,7 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1205,7 +1206,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1222,7 +1223,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1270,7 +1271,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1307,7 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1344,7 +1345,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1381,7 +1382,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1409,7 +1410,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Organization<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1449,7 +1450,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User info{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1466,7 +1467,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationproperties">Datadog<wbr>Organization<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1506,7 +1507,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinfo">User<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User info{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1523,7 +1524,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationproperties">Datadog<wbr>Organization<wbr>Properties</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1563,7 +1564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinfo">User<wbr>Info</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User info{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1580,7 +1581,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationproperties">Datadog<wbr>Organization<wbr>Properties<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1620,7 +1621,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinfo">User<wbr>Info<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User info{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1668,7 +1669,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Inputs.<wbr>Datadog<wbr>Organization<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1708,7 +1709,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Datadog.<wbr>Inputs.<wbr>User<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User info{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1745,7 +1746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Datadog<wbr>Organization<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1785,7 +1786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User info{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1822,7 +1823,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Datadog<wbr>Organization<wbr>Properties<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1862,7 +1863,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User info{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1899,7 +1900,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#datadogorganizationpropertiesresponse">Datadog<wbr>Organization<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Datadog organization properties{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1939,7 +1940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#userinforesponse">User<wbr>Info<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}User info{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2419,6 +2420,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

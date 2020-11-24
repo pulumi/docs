@@ -12,6 +12,7 @@ meta_desc: "Explore the PostgresInstance resource of the azuredata module, inclu
 
 A Postgres Instance.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1322,6 +1323,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

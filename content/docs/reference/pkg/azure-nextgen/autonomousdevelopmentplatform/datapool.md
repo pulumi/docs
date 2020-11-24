@@ -12,6 +12,7 @@ meta_desc: "Explore the DataPool resource of the autonomousdevelopmentplatform m
 
 An ADP Data Pool.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -890,6 +891,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

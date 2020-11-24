@@ -12,6 +12,7 @@ meta_desc: "Explore the PolicyDefinitionAtManagementGroup resource of the manage
 
 The policy definition.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1552,6 +1553,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

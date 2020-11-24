@@ -12,6 +12,7 @@ meta_desc: "Explore the PrivateEndpointConnection resource of the devices module
 
 The private endpoint connection of an IotHub
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1255,6 +1256,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

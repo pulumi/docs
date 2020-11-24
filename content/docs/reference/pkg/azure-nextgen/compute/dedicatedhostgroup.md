@@ -12,6 +12,7 @@ meta_desc: "Explore the DedicatedHostGroup resource of the compute module, inclu
 
 Specifies information about the dedicated host group that the dedicated hosts should be assigned to. <br><br> Currently, a dedicated host can only be added to a dedicated host group at creation time. An existing dedicated host cannot be added to another dedicated host group.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1658,6 +1659,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

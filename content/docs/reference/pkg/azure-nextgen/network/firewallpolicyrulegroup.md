@@ -12,6 +12,7 @@ meta_desc: "Explore the FirewallPolicyRuleGroup resource of the network module, 
 
 Rule Group resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -164,9 +165,9 @@ class MyStack : Stack
             {
                 
                 {
-                    { "action", new AzureNextGen.Network.Latest.Inputs.FirewallPolicyFilterRuleActionArgs
+                    { "action", 
                     {
-                        Type = "Deny",
+                        { "type", "Deny" },
                     } },
                     { "name", "Example-Filter-Rule" },
                     { "ruleConditions", 
@@ -221,9 +222,9 @@ firewall_policy_rule_group = azure_nextgen.network.latest.FirewallPolicyRuleGrou
     resource_group_name="rg1",
     rule_group_name="ruleGroup1",
     rules=[{
-        "action": azure_nextgen.network.latest.FirewallPolicyFilterRuleActionArgs(
-            type="Deny",
-        ),
+        "action": {
+            "type": "Deny",
+        },
         "name": "Example-Filter-Rule",
         "ruleConditions": [{
             "destinationIpGroups": ["/subscriptions/subid/providers/Microsoft.Network/resourceGroup/rg1/ipGroups/ipGroups2"],
@@ -4551,6 +4552,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

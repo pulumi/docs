@@ -12,6 +12,7 @@ meta_desc: "Explore the ApplicationSecurityGroup resource of the network module,
 
 An application security group in a resource group.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -785,6 +786,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

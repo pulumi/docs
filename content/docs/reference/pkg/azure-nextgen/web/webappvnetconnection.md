@@ -14,6 +14,7 @@ Virtual Network information contract.
 
 
 
+
 ## Create a WebAppVnetConnection Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1129,6 +1130,8 @@ These values will be used for syncing an app's routes with those from a Virtual 
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

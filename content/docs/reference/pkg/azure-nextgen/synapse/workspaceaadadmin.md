@@ -12,6 +12,7 @@ meta_desc: "Explore the WorkspaceAadAdmin resource of the synapse module, includ
 
 Workspace active directory administrator
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -717,6 +718,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -26,7 +26,7 @@ Explore the resources and functions of the subscription module in the Azure Next
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.5</dd>
+	<dd>0.2.8</dd>
 </dl>
 
 

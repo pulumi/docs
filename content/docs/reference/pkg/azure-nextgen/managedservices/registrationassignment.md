@@ -12,6 +12,7 @@ meta_desc: "Explore the RegistrationAssignment resource of the managedservices m
 
 Registration assignment.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -639,6 +640,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The role definition identifier. This role will define all the permissions that the security group/service principal/user must have on the projected subscription. This role cannot be an owner role.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delegatedroledefinitionids_csharp">
+<a href="#delegatedroledefinitionids_csharp" style="color: inherit; text-decoration: inherit;">Delegated<wbr>Role<wbr>Definition<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="principaliddisplayname_csharp">
+<a href="#principaliddisplayname_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id<wbr>Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Display name of the principal Id.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -665,6 +686,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The role definition identifier. This role will define all the permissions that the security group/service principal/user must have on the projected subscription. This role cannot be an owner role.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delegatedroledefinitionids_go">
+<a href="#delegatedroledefinitionids_go" style="color: inherit; text-decoration: inherit;">Delegated<wbr>Role<wbr>Definition<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="principaliddisplayname_go">
+<a href="#principaliddisplayname_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id<wbr>Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Display name of the principal Id.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -693,6 +734,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The role definition identifier. This role will define all the permissions that the security group/service principal/user must have on the projected subscription. This role cannot be an owner role.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delegatedroledefinitionids_nodejs">
+<a href="#delegatedroledefinitionids_nodejs" style="color: inherit; text-decoration: inherit;">delegated<wbr>Role<wbr>Definition<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="principaliddisplayname_nodejs">
+<a href="#principaliddisplayname_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id<wbr>Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Display name of the principal Id.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -719,6 +780,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The role definition identifier. This role will define all the permissions that the security group/service principal/user must have on the projected subscription. This role cannot be an owner role.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="delegated_role_definition_ids_python">
+<a href="#delegated_role_definition_ids_python" style="color: inherit; text-decoration: inherit;">delegated_<wbr>role_<wbr>definition_<wbr>ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="principal_id_display_name_python">
+<a href="#principal_id_display_name_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id_<wbr>display_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Display name of the principal Id.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1757,6 +1838,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

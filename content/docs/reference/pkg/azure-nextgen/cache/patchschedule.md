@@ -12,6 +12,7 @@ meta_desc: "Explore the PatchSchedule resource of the cache module, including ex
 
 Response to put/get patch schedules for Redis cache.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -959,6 +960,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

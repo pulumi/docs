@@ -12,6 +12,7 @@ meta_desc: "Explore the WebTest resource of the insights module, including examp
 
 An Application Insights web test definition.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1604,6 +1605,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

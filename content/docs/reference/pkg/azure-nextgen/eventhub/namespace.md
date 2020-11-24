@@ -12,6 +12,7 @@ meta_desc: "Explore the Namespace resource of the eventhub module, including exa
 
 Single Namespace item in List or Get Operation
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1346,6 +1347,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

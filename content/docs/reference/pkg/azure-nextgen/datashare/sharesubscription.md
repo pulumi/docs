@@ -12,6 +12,7 @@ meta_desc: "Explore the ShareSubscription resource of the datashare module, incl
 
 A share subscription data transfer object.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1153,6 +1154,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

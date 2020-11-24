@@ -12,6 +12,7 @@ meta_desc: "Explore the InstanceFailoverGroup resource of the sql module, includ
 
 An instance failover group.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1736,6 +1737,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

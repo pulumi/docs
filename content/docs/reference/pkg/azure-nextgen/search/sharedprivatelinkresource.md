@@ -12,6 +12,7 @@ meta_desc: "Explore the SharedPrivateLinkResource resource of the search module,
 
 Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1213,6 +1214,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

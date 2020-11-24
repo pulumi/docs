@@ -12,6 +12,7 @@ meta_desc: "Explore the SecurityContact resource of the security module, includi
 
 Contact details and configurations for notifications coming from Azure Security Center.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -901,6 +902,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -14,6 +14,7 @@ Describes a virtual machine scale set virtual machine.
 
 
 
+
 ## Create a VirtualMachineScaleSetVM Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -17175,6 +17176,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the Rollout resource of the deploymentmanager module, includ
 
 Defines the PUT rollout request body.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1904,6 +1905,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

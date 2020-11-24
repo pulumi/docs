@@ -12,6 +12,7 @@ meta_desc: "Explore the Service resource of the search module, including example
 
 Describes an Azure Cognitive Search service and its current state.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -3322,6 +3323,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

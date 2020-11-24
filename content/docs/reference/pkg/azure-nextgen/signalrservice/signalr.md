@@ -12,6 +12,7 @@ meta_desc: "Explore the SignalR resource of the signalrservice module, including
 
 A class represent a SignalR service resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -4536,6 +4537,8 @@ There are 3 kind of patterns supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

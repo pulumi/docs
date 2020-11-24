@@ -12,6 +12,7 @@ meta_desc: "Explore the HostPool resource of the desktopvirtualization module, i
 
 Represents a HostPool definition.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var hostPool = new AzureNextGen.DesktopVirtualization.V20201102Preview.HostPool("hostPool", new AzureNextGen.DesktopVirtualization.V20201102Preview.HostPoolArgs
+        var hostPool = new AzureNextGen.DesktopVirtualization.V20201110Preview.HostPool("hostPool", new AzureNextGen.DesktopVirtualization.V20201110Preview.HostPoolArgs
         {
             Description = "des1",
             FriendlyName = "friendly",
@@ -37,7 +38,7 @@ class MyStack : Stack
             MaxSessionLimit = 999999,
             PersonalDesktopAssignmentType = "Automatic",
             PreferredAppGroupType = "Desktop",
-            RegistrationInfo = new AzureNextGen.DesktopVirtualization.V20201102Preview.Inputs.RegistrationInfoArgs
+            RegistrationInfo = new AzureNextGen.DesktopVirtualization.V20201110Preview.Inputs.RegistrationInfoArgs
             {
                 ExpirationTime = "2020-10-01T14:01:54.9571247Z",
                 RegistrationTokenOperation = "Update",
@@ -70,7 +71,7 @@ class MyStack : Stack
 package main
 
 import (
-	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20201102preview"
+	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20201110preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -120,7 +121,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-host_pool = azure_nextgen.desktopvirtualization.v20201102preview.HostPool("hostPool",
+host_pool = azure_nextgen.desktopvirtualization.v20201110preview.HostPool("hostPool",
     description="des1",
     friendly_name="friendly",
     host_pool_name="hostPool1",
@@ -130,7 +131,7 @@ host_pool = azure_nextgen.desktopvirtualization.v20201102preview.HostPool("hostP
     max_session_limit=999999,
     personal_desktop_assignment_type="Automatic",
     preferred_app_group_type="Desktop",
-    registration_info=azure_nextgen.desktopvirtualization.v20201102preview.RegistrationInfoArgs(
+    registration_info=azure_nextgen.desktopvirtualization.v20201110preview.RegistrationInfoArgs(
         expiration_time="2020-10-01T14:01:54.9571247Z",
         registration_token_operation="Update",
     ),
@@ -157,7 +158,7 @@ host_pool = azure_nextgen.desktopvirtualization.v20201102preview.HostPool("hostP
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const hostPool = new azure_nextgen.desktopvirtualization.v20201102preview.HostPool("hostPool", {
+const hostPool = new azure_nextgen.desktopvirtualization.v20201110preview.HostPool("hostPool", {
     description: "des1",
     friendlyName: "friendly",
     hostPoolName: "hostPool1",
@@ -1802,6 +1803,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the QueueServiceProperties resource of the storage module, i
 
 The properties of a storage account’s Queue service.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1507,6 +1508,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

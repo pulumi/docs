@@ -12,6 +12,7 @@ meta_desc: "Explore the ProtectionContainer resource of the recoveryservices mod
 
 Base class for container with backup items. Containers with specific workloads are derived from this class.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -9261,6 +9262,8 @@ InProgress | Failed | Succeeded{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

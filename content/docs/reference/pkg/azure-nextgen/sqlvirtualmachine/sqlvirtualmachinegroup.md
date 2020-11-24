@@ -12,6 +12,7 @@ meta_desc: "Explore the SqlVirtualMachineGroup resource of the sqlvirtualmachine
 
 A SQL virtual machine group.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1690,6 +1691,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

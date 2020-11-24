@@ -12,6 +12,7 @@ meta_desc: "Explore the TagAtScope resource of the resources module, including e
 
 Wrapper resource for tags API requests and responses.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -831,6 +832,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the UserAssignedIdentity resource of the managedidentity mod
 
 Describes an identity resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -762,6 +763,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

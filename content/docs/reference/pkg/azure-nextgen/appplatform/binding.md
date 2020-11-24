@@ -12,6 +12,7 @@ meta_desc: "Explore the Binding resource of the appplatform module, including ex
 
 Binding resource payload
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1230,6 +1231,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

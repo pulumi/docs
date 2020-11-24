@@ -12,6 +12,7 @@ meta_desc: "Explore the CustomDomain resource of the cdn module, including examp
 
 Friendly domain name mapping to the endpoint hostname that the customer provides for branding purposes, e.g. www.contoso.com.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -873,6 +874,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the PrivateZone resource of the network module, including ex
 
 Describes a Private DNS zone.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -547,6 +548,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="internalid_csharp">
+<a href="#internalid_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Private zone internal Id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="maxnumberofrecordsets_csharp">
 <a href="#maxnumberofrecordsets_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Record<wbr>Sets</a>
 </span> 
@@ -651,6 +662,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="internalid_go">
+<a href="#internalid_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Private zone internal Id{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -761,6 +782,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="internalid_nodejs">
+<a href="#internalid_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Private zone internal Id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="maxnumberofrecordsets_nodejs">
 <a href="#maxnumberofrecordsets_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Number<wbr>Of<wbr>Record<wbr>Sets</a>
 </span> 
@@ -868,6 +899,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="internal_id_python">
+<a href="#internal_id_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Private zone internal Id{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="max_number_of_record_sets_python">
 <a href="#max_number_of_record_sets_python" style="color: inherit; text-decoration: inherit;">max_<wbr>number_<wbr>of_<wbr>record_<wbr>sets</a>
 </span> 
@@ -958,6 +999,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

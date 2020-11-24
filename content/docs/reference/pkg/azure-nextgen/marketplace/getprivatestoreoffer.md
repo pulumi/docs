@@ -268,9 +268,19 @@ The following output properties are available:
 <a href="#iconfileuris_csharp" style="color: inherit; text-decoration: inherit;">Icon<wbr>File<wbr>Uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iconresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Marketplace.<wbr>Outputs.<wbr>Icon<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#offerpropertiesresponseiconfileuris">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Marketplace.<wbr>Outputs.<wbr>Offer<wbr>Properties<wbr>Response<wbr>Icon<wbr>File<wbr>Uris</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Icon File Uris{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="plans_csharp">
+<a href="#plans_csharp" style="color: inherit; text-decoration: inherit;">Plans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#planresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Marketplace.<wbr>Outputs.<wbr>Plan<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Offer plans{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -395,9 +405,19 @@ The following output properties are available:
 <a href="#iconfileuris_go" style="color: inherit; text-decoration: inherit;">Icon<wbr>File<wbr>Uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iconresponse">[]Icon<wbr>Response</a></span>
+        <span class="property-type"><a href="#offerpropertiesresponseiconfileuris">Offer<wbr>Properties<wbr>Response<wbr>Icon<wbr>File<wbr>Uris</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Icon File Uris{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="plans_go">
+<a href="#plans_go" style="color: inherit; text-decoration: inherit;">Plans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#planresponse">[]Plan<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Offer plans{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -522,9 +542,19 @@ The following output properties are available:
 <a href="#iconfileuris_nodejs" style="color: inherit; text-decoration: inherit;">icon<wbr>File<wbr>Uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iconresponse">Icon<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#offerpropertiesresponseiconfileuris">Offer<wbr>Properties<wbr>Response<wbr>Icon<wbr>File<wbr>Uris</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Icon File Uris{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="plans_nodejs">
+<a href="#plans_nodejs" style="color: inherit; text-decoration: inherit;">plans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#planresponse">Plan<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Offer plans{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -649,9 +679,19 @@ The following output properties are available:
 <a href="#icon_file_uris_python" style="color: inherit; text-decoration: inherit;">icon_<wbr>file_<wbr>uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iconresponse">Sequence[Icon<wbr>Response]</a></span>
+        <span class="property-type"><a href="#offerpropertiesresponseiconfileuris">Offer<wbr>Properties<wbr>Response<wbr>Icon<wbr>File<wbr>Uris</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Icon File Uris{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="plans_python">
+<a href="#plans_python" style="color: inherit; text-decoration: inherit;">plans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#planresponse">Sequence[Plan<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Offer plans{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -686,7 +726,7 @@ The following output properties are available:
 ## Supporting Types
 
 
-<h4 id="iconresponse">Icon<wbr>Response</h4>
+<h4 id="offerpropertiesresponseiconfileuris">Offer<wbr>Properties<wbr>Response<wbr>Icon<wbr>File<wbr>Uris</h4>
 
 
 
@@ -797,6 +837,285 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Icon uri{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="planresponse">Plan<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="altstackreference_csharp">
+<a href="#altstackreference_csharp" style="color: inherit; text-decoration: inherit;">Alt<wbr>Stack<wbr>Reference</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Alternative stack type{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="plandisplayname_csharp">
+<a href="#plandisplayname_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name for the plan for display in the marketplace{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="planid_csharp">
+<a href="#planid_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Text identifier for this plan{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="skuid_csharp">
+<a href="#skuid_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Identifier for this plan{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="stacktype_csharp">
+<a href="#stacktype_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Stack type (classic or arm){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accessibility_csharp">
+<a href="#accessibility_csharp" style="color: inherit; text-decoration: inherit;">Accessibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="altstackreference_go">
+<a href="#altstackreference_go" style="color: inherit; text-decoration: inherit;">Alt<wbr>Stack<wbr>Reference</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Alternative stack type{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="plandisplayname_go">
+<a href="#plandisplayname_go" style="color: inherit; text-decoration: inherit;">Plan<wbr>Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name for the plan for display in the marketplace{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="planid_go">
+<a href="#planid_go" style="color: inherit; text-decoration: inherit;">Plan<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Text identifier for this plan{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="skuid_go">
+<a href="#skuid_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Identifier for this plan{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="stacktype_go">
+<a href="#stacktype_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Stack type (classic or arm){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accessibility_go">
+<a href="#accessibility_go" style="color: inherit; text-decoration: inherit;">Accessibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="altstackreference_nodejs">
+<a href="#altstackreference_nodejs" style="color: inherit; text-decoration: inherit;">alt<wbr>Stack<wbr>Reference</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Alternative stack type{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="plandisplayname_nodejs">
+<a href="#plandisplayname_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name for the plan for display in the marketplace{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="planid_nodejs">
+<a href="#planid_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Text identifier for this plan{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="skuid_nodejs">
+<a href="#skuid_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Identifier for this plan{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="stacktype_nodejs">
+<a href="#stacktype_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Stack type (classic or arm){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accessibility_nodejs">
+<a href="#accessibility_nodejs" style="color: inherit; text-decoration: inherit;">accessibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="alt_stack_reference_python">
+<a href="#alt_stack_reference_python" style="color: inherit; text-decoration: inherit;">alt_<wbr>stack_<wbr>reference</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Alternative stack type{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="plan_display_name_python">
+<a href="#plan_display_name_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>display_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name for the plan for display in the marketplace{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="plan_id_python">
+<a href="#plan_id_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Text identifier for this plan{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sku_id_python">
+<a href="#sku_id_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Identifier for this plan{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="stack_type_python">
+<a href="#stack_type_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Stack type (classic or arm){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accessibility_python">
+<a href="#accessibility_python" style="color: inherit; text-decoration: inherit;">accessibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

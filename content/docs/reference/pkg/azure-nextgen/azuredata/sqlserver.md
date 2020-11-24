@@ -12,6 +12,7 @@ meta_desc: "Explore the SqlServer resource of the azuredata module, including ex
 
 A SQL server.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -805,6 +806,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

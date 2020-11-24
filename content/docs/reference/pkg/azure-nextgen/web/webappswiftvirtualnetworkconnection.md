@@ -14,6 +14,7 @@ Swift Virtual Network Contract. This is used to enable the new Swift way of doin
 
 
 
+
 ## Create a WebAppSwiftVirtualNetworkConnection Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -537,6 +538,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

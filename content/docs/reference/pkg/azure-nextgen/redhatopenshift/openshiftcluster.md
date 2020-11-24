@@ -12,6 +12,7 @@ meta_desc: "Explore the OpenShiftCluster resource of the redhatopenshift module,
 
 OpenShiftCluster represents an Azure Red Hat OpenShift cluster.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -3536,6 +3537,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

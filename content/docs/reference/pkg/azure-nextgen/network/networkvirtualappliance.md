@@ -12,6 +12,7 @@ meta_desc: "Explore the NetworkVirtualAppliance resource of the network module, 
 
 NetworkVirtualAppliance Resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -39,6 +40,10 @@ class MyStack : Stack
             Identity = new AzureNextGen.Network.Latest.Inputs.ManagedServiceIdentityArgs
             {
                 Type = "UserAssigned",
+                UserAssignedIdentities = 
+                {
+                    { "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1",  },
+                },
             },
             Location = "West US",
             NetworkVirtualApplianceName = "nva",
@@ -88,6 +93,9 @@ func main() {
 			},
 			Identity: &network.ManagedServiceIdentityArgs{
 				Type: pulumi.String("UserAssigned"),
+				UserAssignedIdentities: pulumi.MapMap{
+					"/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": nil,
+				},
 			},
 			Location:                    pulumi.String("West US"),
 			NetworkVirtualApplianceName: pulumi.String("nva"),
@@ -127,6 +135,9 @@ network_virtual_appliance = azure_nextgen.network.latest.NetworkVirtualAppliance
     cloud_init_configuration_blobs=["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrcloudinitconfig"],
     identity=azure_nextgen.network.latest.ManagedServiceIdentityArgs(
         type="UserAssigned",
+        user_assigned_identities={
+            "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": {},
+        },
     ),
     location="West US",
     network_virtual_appliance_name="nva",
@@ -159,6 +170,9 @@ const networkVirtualAppliance = new azure_nextgen.network.latest.NetworkVirtualA
     cloudInitConfigurationBlobs: ["https://csrncvhdstorage1.blob.core.windows.net/csrncvhdstoragecont/csrcloudinitconfig"],
     identity: {
         type: "UserAssigned",
+        userAssignedIdentities: {
+            "/subscriptions/subid/resourcegroups/rg1/providers/Microsoft.ManagedIdentity/userAssignedIdentities/identity1": {},
+        },
     },
     location: "West US",
     networkVirtualApplianceName: "nva",
@@ -1302,6 +1316,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_csharp">
+<a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1318,6 +1342,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_go">
+<a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1336,6 +1370,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_nodejs">
+<a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1352,6 +1396,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the virtual machine.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identities_python">
+<a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2308,6 +2362,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

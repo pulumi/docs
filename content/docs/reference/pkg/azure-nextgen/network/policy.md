@@ -12,6 +12,7 @@ meta_desc: "Explore the Policy resource of the network module, including example
 
 Defines web application firewall policy.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -4352,6 +4353,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

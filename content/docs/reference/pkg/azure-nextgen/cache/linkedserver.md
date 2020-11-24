@@ -12,6 +12,7 @@ meta_desc: "Explore the LinkedServer resource of the cache module, including exa
 
 Response to put/get linked server (with properties) for Redis cache.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -717,6 +718,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

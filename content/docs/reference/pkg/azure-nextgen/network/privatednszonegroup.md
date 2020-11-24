@@ -12,6 +12,7 @@ meta_desc: "Explore the PrivateDnsZoneGroup resource of the network module, incl
 
 Private dns zone group resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1289,6 +1290,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

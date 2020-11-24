@@ -12,6 +12,7 @@ meta_desc: "Explore the SupportPlanType resource of the addons module, including
 
 The status of the Canonical support plan.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -581,6 +582,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

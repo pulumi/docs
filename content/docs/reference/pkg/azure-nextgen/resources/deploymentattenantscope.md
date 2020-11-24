@@ -12,6 +12,7 @@ meta_desc: "Explore the DeploymentAtTenantScope resource of the resources module
 
 Deployment information.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -5174,6 +5175,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

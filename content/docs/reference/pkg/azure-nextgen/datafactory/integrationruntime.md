@@ -12,6 +12,7 @@ meta_desc: "Explore the IntegrationRuntime resource of the datafactory module, i
 
 Integration runtime resource type.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -6583,6 +6584,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

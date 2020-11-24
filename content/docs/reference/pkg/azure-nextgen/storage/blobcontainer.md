@@ -12,6 +12,7 @@ meta_desc: "Explore the BlobContainer resource of the storage module, including 
 
 Properties of the blob container, including Id, resource name, resource type, Etag.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2241,6 +2242,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

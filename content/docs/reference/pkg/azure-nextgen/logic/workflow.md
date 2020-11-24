@@ -12,6 +12,7 @@ meta_desc: "Explore the Workflow resource of the logic module, including example
 
 The workflow type.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -4073,6 +4074,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

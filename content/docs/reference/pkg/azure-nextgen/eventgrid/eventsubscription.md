@@ -12,6 +12,7 @@ meta_desc: "Explore the EventSubscription resource of the eventgrid module, incl
 
 Event Subscription
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -336,8 +337,8 @@ class MyStack : Stack
         {
             Destination = 
             {
-                { "endpointType", "EventHub" },
-                { "resourceId", "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1" },
+                { "endpointType", "WebHook" },
+                { "endpointUrl", "https://azurefunctionexample.azurewebsites.net/runtime/webhooks/EventGrid?functionName=EventGridTrigger1&code=PASSWORDCODE" },
             },
             EventSubscriptionName = "examplesubscription1",
             Filter = new AzureNextGen.EventGrid.Latest.Inputs.EventSubscriptionFilterArgs
@@ -368,8 +369,8 @@ import pulumi_azure_nextgen as azure_nextgen
 
 event_subscription = azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription",
     destination={
-        "endpointType": "EventHub",
-        "resourceId": "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1",
+        "endpointType": "WebHook",
+        "endpointUrl": "https://azurefunctionexample.azurewebsites.net/runtime/webhooks/EventGrid?functionName=EventGridTrigger1&code=PASSWORDCODE",
     },
     event_subscription_name="examplesubscription1",
     filter=azure_nextgen.eventgrid.latest.EventSubscriptionFilterArgs(
@@ -391,8 +392,8 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const eventSubscription = new azure_nextgen.eventgrid.latest.EventSubscription("eventSubscription", {
     destination: {
-        endpointType: "EventHub",
-        resourceId: "/subscriptions/55f3dcd4-cac7-43b4-990b-a139d62a1eb2/resourceGroups/TestRG/providers/Microsoft.EventHub/namespaces/ContosoNamespace/eventhubs/EH1",
+        endpointType: "WebHook",
+        endpointUrl: "https://azurefunctionexample.azurewebsites.net/runtime/webhooks/EventGrid?functionName=EventGridTrigger1&code=PASSWORDCODE",
     },
     eventSubscriptionName: "examplesubscription1",
     filter: {
@@ -7019,6 +7020,8 @@ Wildcard characters are not supported in this path.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

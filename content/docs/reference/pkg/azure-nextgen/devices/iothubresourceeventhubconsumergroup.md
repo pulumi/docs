@@ -12,6 +12,7 @@ meta_desc: "Explore the IotHubResourceEventHubConsumerGroup resource of the devi
 
 The properties of the EventHubConsumerGroupInfo object.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -770,6 +771,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

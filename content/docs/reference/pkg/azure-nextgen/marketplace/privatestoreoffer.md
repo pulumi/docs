@@ -12,6 +12,7 @@ meta_desc: "Explore the PrivateStoreOffer resource of the marketplace module, in
 
 The privateStore offer data structure.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -107,7 +108,7 @@ const privateStoreOffer = new azure_nextgen.marketplace.latest.PrivateStoreOffer
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PrivateStoreOffer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">icon_file_uris</span><span class="p">:</span> <span class="nx">Optional[Sequence[IconArgs]]</span> = None<span class="p">, </span><span class="nx">offer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_store_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">specific_plan_ids_limitation</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">update_suppressed_due_idempotence</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">PrivateStoreOffer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">icon_file_uris</span><span class="p">:</span> <span class="nx">Optional[OfferPropertiesIconFileUrisArgs]</span> = None<span class="p">, </span><span class="nx">offer_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">plans</span><span class="p">:</span> <span class="nx">Optional[Sequence[PlanArgs]]</span> = None<span class="p">, </span><span class="nx">private_store_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">specific_plan_ids_limitation</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">update_suppressed_due_idempotence</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -315,9 +316,19 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
 <a href="#iconfileuris_csharp" style="color: inherit; text-decoration: inherit;">Icon<wbr>File<wbr>Uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#icon">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Marketplace.<wbr>Inputs.<wbr>Icon<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#offerpropertiesiconfileuris">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Marketplace.<wbr>Inputs.<wbr>Offer<wbr>Properties<wbr>Icon<wbr>File<wbr>Uris<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Icon File Uris{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="plans_csharp">
+<a href="#plans_csharp" style="color: inherit; text-decoration: inherit;">Plans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#plan">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Marketplace.<wbr>Inputs.<wbr>Plan<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Offer plans{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -382,9 +393,19 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
 <a href="#iconfileuris_go" style="color: inherit; text-decoration: inherit;">Icon<wbr>File<wbr>Uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#icon">[]Icon</a></span>
+        <span class="property-type"><a href="#offerpropertiesiconfileuris">Offer<wbr>Properties<wbr>Icon<wbr>File<wbr>Uris</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Icon File Uris{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="plans_go">
+<a href="#plans_go" style="color: inherit; text-decoration: inherit;">Plans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#plan">[]Plan</a></span>
+    </dt>
+    <dd>{{% md %}}Offer plans{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -449,9 +470,19 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
 <a href="#iconfileuris_nodejs" style="color: inherit; text-decoration: inherit;">icon<wbr>File<wbr>Uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#icon">Icon[]</a></span>
+        <span class="property-type"><a href="#offerpropertiesiconfileuris">Offer<wbr>Properties<wbr>Icon<wbr>File<wbr>Uris</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Icon File Uris{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="plans_nodejs">
+<a href="#plans_nodejs" style="color: inherit; text-decoration: inherit;">plans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#plan">Plan[]</a></span>
+    </dt>
+    <dd>{{% md %}}Offer plans{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -516,9 +547,19 @@ The PrivateStoreOffer resource accepts the following [input]({{< relref "/docs/i
 <a href="#icon_file_uris_python" style="color: inherit; text-decoration: inherit;">icon_<wbr>file_<wbr>uris</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#icon">Sequence[Icon<wbr>Args]</a></span>
+        <span class="property-type"><a href="#offerpropertiesiconfileuris">Offer<wbr>Properties<wbr>Icon<wbr>File<wbr>Uris<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Icon File Uris{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="plans_python">
+<a href="#plans_python" style="color: inherit; text-decoration: inherit;">plans</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#plan">Sequence[Plan<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Offer plans{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -915,7 +956,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
-<h4 id="icon">Icon</h4>
+<h4 id="offerpropertiesiconfileuris">Offer<wbr>Properties<wbr>Icon<wbr>File<wbr>Uris</h4>
 
 
 
@@ -1034,7 +1075,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="iconresponse">Icon<wbr>Response</h4>
+<h4 id="offerpropertiesresponseiconfileuris">Offer<wbr>Properties<wbr>Response<wbr>Icon<wbr>File<wbr>Uris</h4>
 
 
 
@@ -1148,6 +1189,366 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
+
+
+
+<h4 id="plan">Plan</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accessibility_csharp">
+<a href="#accessibility_csharp" style="color: inherit; text-decoration: inherit;">Accessibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accessibility_go">
+<a href="#accessibility_go" style="color: inherit; text-decoration: inherit;">Accessibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accessibility_nodejs">
+<a href="#accessibility_nodejs" style="color: inherit; text-decoration: inherit;">accessibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accessibility_python">
+<a href="#accessibility_python" style="color: inherit; text-decoration: inherit;">accessibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="planresponse">Plan<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="altstackreference_csharp">
+<a href="#altstackreference_csharp" style="color: inherit; text-decoration: inherit;">Alt<wbr>Stack<wbr>Reference</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Alternative stack type{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="plandisplayname_csharp">
+<a href="#plandisplayname_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name for the plan for display in the marketplace{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="planid_csharp">
+<a href="#planid_csharp" style="color: inherit; text-decoration: inherit;">Plan<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Text identifier for this plan{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="skuid_csharp">
+<a href="#skuid_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Identifier for this plan{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="stacktype_csharp">
+<a href="#stacktype_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Stack type (classic or arm){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accessibility_csharp">
+<a href="#accessibility_csharp" style="color: inherit; text-decoration: inherit;">Accessibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="altstackreference_go">
+<a href="#altstackreference_go" style="color: inherit; text-decoration: inherit;">Alt<wbr>Stack<wbr>Reference</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Alternative stack type{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="plandisplayname_go">
+<a href="#plandisplayname_go" style="color: inherit; text-decoration: inherit;">Plan<wbr>Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name for the plan for display in the marketplace{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="planid_go">
+<a href="#planid_go" style="color: inherit; text-decoration: inherit;">Plan<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Text identifier for this plan{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="skuid_go">
+<a href="#skuid_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Identifier for this plan{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="stacktype_go">
+<a href="#stacktype_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Stack type (classic or arm){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accessibility_go">
+<a href="#accessibility_go" style="color: inherit; text-decoration: inherit;">Accessibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="altstackreference_nodejs">
+<a href="#altstackreference_nodejs" style="color: inherit; text-decoration: inherit;">alt<wbr>Stack<wbr>Reference</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Alternative stack type{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="plandisplayname_nodejs">
+<a href="#plandisplayname_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name for the plan for display in the marketplace{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="planid_nodejs">
+<a href="#planid_nodejs" style="color: inherit; text-decoration: inherit;">plan<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Text identifier for this plan{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="skuid_nodejs">
+<a href="#skuid_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Identifier for this plan{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="stacktype_nodejs">
+<a href="#stacktype_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Stack type (classic or arm){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accessibility_nodejs">
+<a href="#accessibility_nodejs" style="color: inherit; text-decoration: inherit;">accessibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="alt_stack_reference_python">
+<a href="#alt_stack_reference_python" style="color: inherit; text-decoration: inherit;">alt_<wbr>stack_<wbr>reference</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Alternative stack type{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="plan_display_name_python">
+<a href="#plan_display_name_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>display_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly name for the plan for display in the marketplace{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="plan_id_python">
+<a href="#plan_id_python" style="color: inherit; text-decoration: inherit;">plan_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Text identifier for this plan{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sku_id_python">
+<a href="#sku_id_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Identifier for this plan{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="stack_type_python">
+<a href="#stack_type_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Stack type (classic or arm){{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="accessibility_python">
+<a href="#accessibility_python" style="color: inherit; text-decoration: inherit;">accessibility</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Plan accessibility{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
 
 
 

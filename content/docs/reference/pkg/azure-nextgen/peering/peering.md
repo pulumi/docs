@@ -12,6 +12,7 @@ meta_desc: "Explore the Peering resource of the peering module, including exampl
 
 Peering is a logical representation of a set of connections to the Microsoft Cloud Edge at a location.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -4583,6 +4584,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

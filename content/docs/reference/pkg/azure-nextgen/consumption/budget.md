@@ -12,6 +12,7 @@ meta_desc: "Explore the Budget resource of the consumption module, including exa
 
 A budget resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2912,6 +2913,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

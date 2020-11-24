@@ -12,6 +12,7 @@ meta_desc: "Explore the ArtifactSource resource of the deploymentmanager module,
 
 The resource that defines the source location where the artifacts are located.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1053,6 +1054,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

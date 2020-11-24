@@ -12,6 +12,7 @@ meta_desc: "Explore the Application resource of the batch module, including exam
 
 Contains information about an application in a Batch account.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -753,6 +754,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

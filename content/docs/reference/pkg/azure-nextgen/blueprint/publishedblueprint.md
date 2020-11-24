@@ -12,6 +12,7 @@ meta_desc: "Explore the PublishedBlueprint resource of the blueprint module, inc
 
 Represents a published blueprint.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2272,6 +2273,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

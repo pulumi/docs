@@ -12,6 +12,7 @@ meta_desc: "Explore the SqlPoolSensitivityLabel resource of the synapse module, 
 
 A sensitivity label.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -977,6 +978,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
