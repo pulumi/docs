@@ -14,7 +14,7 @@ This page details how to use the [Pulumi Kubernetes Operator](https://github.com
 ## Overview
 
 The Pulumi Kubernetes Operator is an [extension pattern][k8s-ext-pattern] that
-enables Kuberentes users to create a `Stack` as a first-class API
+enables Kubernetes users to create a `Stack` as a first-class API
 resource, and use the `StackController` to drive the updates of the Stack until
 success.
 
