@@ -1644,6 +1644,16 @@ issued using this role.
 
 
 
+## Import
+
+
+Github team mappings can be imported using the `path`, e.g.
+
+```sh
+ $ pulumi import vault:github/team:Team tf_devs auth/github/map/teams/terraform-developers
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

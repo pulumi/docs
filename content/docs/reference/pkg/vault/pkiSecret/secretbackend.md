@@ -898,6 +898,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+PKI secret backends can be imported using the `path`, e.g.
+
+```sh
+ $ pulumi import vault:pkiSecret/secretBackend:SecretBackend pki pki
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -1118,6 +1118,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+GCP authentication backends can be imported using the backend name, e.g.
+
+```sh
+ $ pulumi import vault:gcp/authBackend:AuthBackend gcp gcp
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

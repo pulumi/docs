@@ -953,6 +953,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+LDAP authentication backend users can be imported using the `path`, e.g.
+
+```sh
+ $ pulumi import vault:ldap/authBackendUser:AuthBackendUser foo auth/ldap/users/foo
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

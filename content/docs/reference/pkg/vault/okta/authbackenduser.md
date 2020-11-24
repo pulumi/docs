@@ -13,6 +13,7 @@ meta_desc: "Explore the AuthBackendUser resource of the okta module, including e
 Provides a resource to create a user in an
 [Okta auth backend within Vault](https://www.vaultproject.io/docs/auth/okta.html).
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -858,6 +858,16 @@ rule. The `rate` must be positive.
 
 
 
+## Import
+
+
+Rate limit quotas can be imported using their names
+
+```sh
+ $ pulumi import vault:index/quotaRateLimit:QuotaRateLimit global global
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

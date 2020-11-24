@@ -14,6 +14,7 @@ Provides a resource to manage Endpoint Governing Policy (EGP) via [Sentinel](htt
 
 **Note** this feature is available only with Vault Enterprise.
 
+
 {{% examples %}}
 ## Example Usage
 

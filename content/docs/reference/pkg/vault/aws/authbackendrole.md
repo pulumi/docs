@@ -3981,6 +3981,16 @@ using this role, provided as a number of seconds.
 
 
 
+## Import
+
+
+AWS auth backend roles can be imported using `auth/`, the `backend` path, `/role/`, and the `role` name e.g.
+
+```sh
+ $ pulumi import vault:aws/authBackendRole:AuthBackendRole example auth/aws/role/test-role
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

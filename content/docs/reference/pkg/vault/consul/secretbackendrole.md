@@ -1277,6 +1277,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Consul secret backend roles can be imported using the `backend`, `/roles/`, and the `name` e.g.
+
+```sh
+ $ pulumi import vault:consul/secretBackendRole:SecretBackendRole example consul/roles/my-role
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

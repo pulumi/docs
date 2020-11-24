@@ -1218,6 +1218,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Mounts can be imported using the `path`, e.g.
+
+```sh
+ $ pulumi import vault:index/mfaDuo:MfaDuo my_duo my_duo
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

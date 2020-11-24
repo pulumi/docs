@@ -12,6 +12,7 @@ meta_desc: "Explore the SecretBackendRootSignIntermediate resource of the pkiSec
 
 Creates an PKI certificate.
 
+
 {{% examples %}}
 ## Example Usage
 

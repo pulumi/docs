@@ -3,7 +3,7 @@ title: "Module ldap"
 title_tag: "Module ldap | Package @pulumi/vault | Node.js SDK"
 linktitle: "ldap"
 meta_desc: "Explore members of the ldap module in the @pulumi/vault package."
-git_sha: "7f3a154bc46dac6b757990292d938f6d391d33ae"
+git_sha: "2dce476d2b85de30e6b63dd882e5f90000adc81f"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AuthBackend" data-link-title="AuthBackend">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L36">
         Resource <strong>AuthBackend</strong>
     </a>
 </h3>
@@ -63,8 +63,16 @@ const ldap = new vault.ldap.AuthBackend("ldap", {
 });
 ```
 
+#### Import
+
+LDAP authentication backends can be imported using the `path`, e.g.
+
+```sh
+ $ pulumi import vault:ldap/authBackend:AuthBackend ldap ldap
+```
+
 <h4 class="pdoc-member-header" id="AuthBackend-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L183"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L191"> <b>constructor</b></a>
 </h4>
 
 
@@ -78,7 +86,7 @@ Create a AuthBackend resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AuthBackend-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -89,14 +97,14 @@ Get an existing AuthBackend resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AuthBackend-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L28">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AuthBackend-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L49">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -107,7 +115,7 @@ Returns true if the given object is an instance of AuthBackend.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AuthBackend-accessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L59">property <b>accessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L67">property <b>accessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -115,7 +123,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The accessor for this auth mount.
 
 <h4 class="pdoc-member-header" id="AuthBackend-binddn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L63">property <b>binddn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L71">property <b>binddn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>binddn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -123,7 +131,7 @@ The accessor for this auth mount.
 DN of object to bind when performing user search
 
 <h4 class="pdoc-member-header" id="AuthBackend-bindpass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L67">property <b>bindpass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L75">property <b>bindpass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bindpass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -131,7 +139,7 @@ DN of object to bind when performing user search
 Password to use with `binddn` when performing user search
 
 <h4 class="pdoc-member-header" id="AuthBackend-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L71">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L79">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -139,12 +147,12 @@ Password to use with `binddn` when performing user search
 Trusted CA to validate TLS certificate
 
 <h4 class="pdoc-member-header" id="AuthBackend-denyNullBind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L72">property <b>denyNullBind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L80">property <b>denyNullBind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>denyNullBind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AuthBackend-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L76">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L84">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -152,12 +160,12 @@ Trusted CA to validate TLS certificate
 Description for the LDAP auth backend mount
 
 <h4 class="pdoc-member-header" id="AuthBackend-discoverdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L77">property <b>discoverdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L85">property <b>discoverdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>discoverdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AuthBackend-groupattr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L81">property <b>groupattr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L89">property <b>groupattr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupattr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -165,7 +173,7 @@ Description for the LDAP auth backend mount
 LDAP attribute to follow on objects returned by groupfilter
 
 <h4 class="pdoc-member-header" id="AuthBackend-groupdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L85">property <b>groupdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L93">property <b>groupdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -173,7 +181,7 @@ LDAP attribute to follow on objects returned by groupfilter
 Base DN under which to perform group search
 
 <h4 class="pdoc-member-header" id="AuthBackend-groupfilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L89">property <b>groupfilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L97">property <b>groupfilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupfilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -181,7 +189,7 @@ Base DN under which to perform group search
 Go template used to construct group membership query
 
 <h4 class="pdoc-member-header" id="AuthBackend-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L28">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -190,7 +198,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AuthBackend-insecureTls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L93">property <b>insecureTls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L101">property <b>insecureTls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>insecureTls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -198,7 +206,7 @@ deployments and may be missing (undefined) during planning phases.
 Control whether or TLS certificates must be validated
 
 <h4 class="pdoc-member-header" id="AuthBackend-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L97">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L105">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -206,7 +214,7 @@ Control whether or TLS certificates must be validated
 Path to mount the LDAP auth backend under
 
 <h4 class="pdoc-member-header" id="AuthBackend-starttls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L101">property <b>starttls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L109">property <b>starttls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>starttls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -214,7 +222,7 @@ Path to mount the LDAP auth backend under
 Control use of TLS when conecting to LDAP
 
 <h4 class="pdoc-member-header" id="AuthBackend-tlsMaxVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L105">property <b>tlsMaxVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L113">property <b>tlsMaxVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tlsMaxVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -222,7 +230,7 @@ Control use of TLS when conecting to LDAP
 Maximum acceptable version of TLS
 
 <h4 class="pdoc-member-header" id="AuthBackend-tlsMinVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L109">property <b>tlsMinVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L117">property <b>tlsMinVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tlsMinVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -230,7 +238,7 @@ Maximum acceptable version of TLS
 Minimum acceptable version of TLS
 
 <h4 class="pdoc-member-header" id="AuthBackend-tokenBoundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L115">property <b>tokenBoundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L123">property <b>tokenBoundCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenBoundCidrs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -240,7 +248,7 @@ addresses which can authenticate successfully, and ties the resulting token to t
 as well.
 
 <h4 class="pdoc-member-header" id="AuthBackend-tokenExplicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L122">property <b>tokenExplicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L130">property <b>tokenExplicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenExplicitMaxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -251,7 +259,7 @@ onto the token in number of seconds. This is a hard cap even if `tokenTtl` and
 `tokenMaxTtl` would otherwise allow a renewal.
 
 <h4 class="pdoc-member-header" id="AuthBackend-tokenMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L127">property <b>tokenMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L135">property <b>tokenMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenMaxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -260,7 +268,7 @@ The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackend-tokenNoDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L132">property <b>tokenNoDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L140">property <b>tokenNoDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenNoDefaultPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -269,7 +277,7 @@ If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 
 <h4 class="pdoc-member-header" id="AuthBackend-tokenNumUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L138">property <b>tokenNumUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L146">property <b>tokenNumUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenNumUses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -279,7 +287,7 @@ The
 if any, in number of seconds to set on the token.
 
 <h4 class="pdoc-member-header" id="AuthBackend-tokenPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L145">property <b>tokenPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L153">property <b>tokenPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -290,7 +298,7 @@ duration specified by this value. At each renewal, the token's TTL will be set t
 value of this field. Specified in seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackend-tokenPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L150">property <b>tokenPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L158">property <b>tokenPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -299,7 +307,7 @@ List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 
 <h4 class="pdoc-member-header" id="AuthBackend-tokenTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L155">property <b>tokenTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L163">property <b>tokenTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -308,7 +316,7 @@ The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackend-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L163">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L171">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -320,7 +328,7 @@ The type of token that should be generated. Can be `service`,
 requests a different type at generation time.
 
 <h4 class="pdoc-member-header" id="AuthBackend-upndomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L167">property <b>upndomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L175">property <b>upndomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>upndomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -328,7 +336,7 @@ requests a different type at generation time.
 The userPrincipalDomain used to construct UPN string
 
 <h4 class="pdoc-member-header" id="AuthBackend-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L171">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L179">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -336,7 +344,7 @@ The userPrincipalDomain used to construct UPN string
 The URL of the LDAP server
 
 <h4 class="pdoc-member-header" id="AuthBackend-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L28">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -345,7 +353,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="AuthBackend-useTokenGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L175">property <b>useTokenGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L183">property <b>useTokenGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>useTokenGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -353,7 +361,7 @@ deployments.
 Use the Active Directory tokenGroups constructed attribute of the user to find the group memberships
 
 <h4 class="pdoc-member-header" id="AuthBackend-userattr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L179">property <b>userattr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L187">property <b>userattr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userattr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -361,7 +369,7 @@ Use the Active Directory tokenGroups constructed attribute of the user to find t
 Attribute on user object matching username passed in
 
 <h4 class="pdoc-member-header" id="AuthBackend-userdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L183">property <b>userdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L191">property <b>userdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -369,7 +377,7 @@ Attribute on user object matching username passed in
 Base DN under which to perform user search
 
 <h3 class="pdoc-module-header" id="AuthBackendGroup" data-link-title="AuthBackendGroup">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendGroup.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendGroup.ts#L41">
         Resource <strong>AuthBackendGroup</strong>
     </a>
 </h3>
@@ -401,8 +409,16 @@ const group = new vault.ldap.AuthBackendGroup("group", {
 });
 ```
 
+#### Import
+
+LDAP authentication backend groups can be imported using the `path`, e.g.
+
+```sh
+ $ pulumi import vault:ldap/authBackendGroup:AuthBackendGroup foo auth/ldap/groups/foo
+```
+
 <h4 class="pdoc-member-header" id="AuthBackendGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendGroup.ts#L72"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendGroup.ts#L80"> <b>constructor</b></a>
 </h4>
 
 
@@ -416,7 +432,7 @@ Create a AuthBackendGroup resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AuthBackendGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendGroup.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendGroup.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -427,14 +443,14 @@ Get an existing AuthBackendGroup resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AuthBackendGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendGroup.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendGroup.ts#L41">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AuthBackendGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendGroup.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendGroup.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -445,7 +461,7 @@ Returns true if the given object is an instance of AuthBackendGroup.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AuthBackendGroup-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendGroup.ts#L64">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendGroup.ts#L72">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -453,7 +469,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Path to the authentication backend
 
 <h4 class="pdoc-member-header" id="AuthBackendGroup-groupname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendGroup.ts#L68">property <b>groupname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendGroup.ts#L76">property <b>groupname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -461,7 +477,7 @@ Path to the authentication backend
 The LDAP groupname
 
 <h4 class="pdoc-member-header" id="AuthBackendGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendGroup.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendGroup.ts#L41">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -470,7 +486,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AuthBackendGroup-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendGroup.ts#L72">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendGroup.ts#L80">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -478,7 +494,7 @@ deployments and may be missing (undefined) during planning phases.
 Policies which should be granted to members of the group
 
 <h4 class="pdoc-member-header" id="AuthBackendGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendGroup.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendGroup.ts#L41">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -487,7 +503,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AuthBackendUser" data-link-title="AuthBackendUser">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendUser.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendUser.ts#L44">
         Resource <strong>AuthBackendUser</strong>
     </a>
 </h3>
@@ -522,8 +538,16 @@ const user = new vault.ldap.AuthBackendUser("user", {
 });
 ```
 
+#### Import
+
+LDAP authentication backend users can be imported using the `path`, e.g.
+
+```sh
+ $ pulumi import vault:ldap/authBackendUser:AuthBackendUser foo auth/ldap/users/foo
+```
+
 <h4 class="pdoc-member-header" id="AuthBackendUser-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendUser.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendUser.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -537,7 +561,7 @@ Create a AuthBackendUser resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AuthBackendUser-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendUser.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendUser.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -548,14 +572,14 @@ Get an existing AuthBackendUser resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AuthBackendUser-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendUser.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendUser.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AuthBackendUser-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendUser.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendUser.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -566,7 +590,7 @@ Returns true if the given object is an instance of AuthBackendUser.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AuthBackendUser-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendUser.ts#L67">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendUser.ts#L75">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -574,7 +598,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Path to the authentication backend
 
 <h4 class="pdoc-member-header" id="AuthBackendUser-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendUser.ts#L71">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendUser.ts#L79">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -582,7 +606,7 @@ Path to the authentication backend
 Override LDAP groups which should be granted to user
 
 <h4 class="pdoc-member-header" id="AuthBackendUser-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendUser.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendUser.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -591,7 +615,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AuthBackendUser-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendUser.ts#L75">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendUser.ts#L83">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -599,7 +623,7 @@ deployments and may be missing (undefined) during planning phases.
 Policies which should be granted to user
 
 <h4 class="pdoc-member-header" id="AuthBackendUser-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendUser.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendUser.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -608,7 +632,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="AuthBackendUser-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendUser.ts#L79">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendUser.ts#L87">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -619,7 +643,7 @@ The LDAP username
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AuthBackendArgs" data-link-title="AuthBackendArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L409">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L417">
         interface <strong>AuthBackendArgs</strong>
     </a>
 </h3>
@@ -629,7 +653,7 @@ The LDAP username
 The set of arguments for constructing a AuthBackend resource.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-binddn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L413">property <b>binddn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L421">property <b>binddn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>binddn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -637,7 +661,7 @@ The set of arguments for constructing a AuthBackend resource.
 DN of object to bind when performing user search
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-bindpass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L417">property <b>bindpass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L425">property <b>bindpass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bindpass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -645,7 +669,7 @@ DN of object to bind when performing user search
 Password to use with `binddn` when performing user search
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L421">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L429">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -653,12 +677,12 @@ Password to use with `binddn` when performing user search
 Trusted CA to validate TLS certificate
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-denyNullBind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L422">property <b>denyNullBind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L430">property <b>denyNullBind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>denyNullBind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AuthBackendArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L426">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L434">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -666,12 +690,12 @@ Trusted CA to validate TLS certificate
 Description for the LDAP auth backend mount
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-discoverdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L427">property <b>discoverdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L435">property <b>discoverdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>discoverdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AuthBackendArgs-groupattr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L431">property <b>groupattr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L439">property <b>groupattr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupattr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -679,7 +703,7 @@ Description for the LDAP auth backend mount
 LDAP attribute to follow on objects returned by groupfilter
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-groupdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L435">property <b>groupdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L443">property <b>groupdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -687,7 +711,7 @@ LDAP attribute to follow on objects returned by groupfilter
 Base DN under which to perform group search
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-groupfilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L439">property <b>groupfilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L447">property <b>groupfilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupfilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -695,7 +719,7 @@ Base DN under which to perform group search
 Go template used to construct group membership query
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-insecureTls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L443">property <b>insecureTls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L451">property <b>insecureTls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>insecureTls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -703,7 +727,7 @@ Go template used to construct group membership query
 Control whether or TLS certificates must be validated
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L447">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L455">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -711,7 +735,7 @@ Control whether or TLS certificates must be validated
 Path to mount the LDAP auth backend under
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-starttls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L451">property <b>starttls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L459">property <b>starttls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>starttls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -719,7 +743,7 @@ Path to mount the LDAP auth backend under
 Control use of TLS when conecting to LDAP
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-tlsMaxVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L455">property <b>tlsMaxVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L463">property <b>tlsMaxVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsMaxVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -727,7 +751,7 @@ Control use of TLS when conecting to LDAP
 Maximum acceptable version of TLS
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-tlsMinVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L459">property <b>tlsMinVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L467">property <b>tlsMinVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsMinVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -735,7 +759,7 @@ Maximum acceptable version of TLS
 Minimum acceptable version of TLS
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-tokenBoundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L465">property <b>tokenBoundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L473">property <b>tokenBoundCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenBoundCidrs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -745,7 +769,7 @@ addresses which can authenticate successfully, and ties the resulting token to t
 as well.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-tokenExplicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L472">property <b>tokenExplicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L480">property <b>tokenExplicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenExplicitMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -756,7 +780,7 @@ onto the token in number of seconds. This is a hard cap even if `tokenTtl` and
 `tokenMaxTtl` would otherwise allow a renewal.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-tokenMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L477">property <b>tokenMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L485">property <b>tokenMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -765,7 +789,7 @@ The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-tokenNoDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L482">property <b>tokenNoDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L490">property <b>tokenNoDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNoDefaultPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -774,7 +798,7 @@ If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-tokenNumUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L488">property <b>tokenNumUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L496">property <b>tokenNumUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNumUses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -784,7 +808,7 @@ The
 if any, in number of seconds to set on the token.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-tokenPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L495">property <b>tokenPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L503">property <b>tokenPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -795,7 +819,7 @@ duration specified by this value. At each renewal, the token's TTL will be set t
 value of this field. Specified in seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-tokenPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L500">property <b>tokenPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L508">property <b>tokenPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -804,7 +828,7 @@ List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-tokenTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L505">property <b>tokenTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L513">property <b>tokenTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -813,7 +837,7 @@ The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L513">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L521">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -825,7 +849,7 @@ The type of token that should be generated. Can be `service`,
 requests a different type at generation time.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-upndomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L517">property <b>upndomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L525">property <b>upndomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>upndomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -833,7 +857,7 @@ requests a different type at generation time.
 The userPrincipalDomain used to construct UPN string
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L521">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L529">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -841,7 +865,7 @@ The userPrincipalDomain used to construct UPN string
 The URL of the LDAP server
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-useTokenGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L525">property <b>useTokenGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L533">property <b>useTokenGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useTokenGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -849,7 +873,7 @@ The URL of the LDAP server
 Use the Active Directory tokenGroups constructed attribute of the user to find the group memberships
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-userattr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L529">property <b>userattr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L537">property <b>userattr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userattr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -857,7 +881,7 @@ Use the Active Directory tokenGroups constructed attribute of the user to find t
 Attribute on user object matching username passed in
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-userdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L533">property <b>userdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L541">property <b>userdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -865,7 +889,7 @@ Attribute on user object matching username passed in
 Base DN under which to perform user search
 
 <h3 class="pdoc-module-header" id="AuthBackendGroupArgs" data-link-title="AuthBackendGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendGroup.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendGroup.ts#L138">
         interface <strong>AuthBackendGroupArgs</strong>
     </a>
 </h3>
@@ -875,7 +899,7 @@ Base DN under which to perform user search
 The set of arguments for constructing a AuthBackendGroup resource.
 
 <h4 class="pdoc-member-header" id="AuthBackendGroupArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendGroup.ts#L134">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendGroup.ts#L142">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -883,7 +907,7 @@ The set of arguments for constructing a AuthBackendGroup resource.
 Path to the authentication backend
 
 <h4 class="pdoc-member-header" id="AuthBackendGroupArgs-groupname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendGroup.ts#L138">property <b>groupname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendGroup.ts#L146">property <b>groupname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -891,7 +915,7 @@ Path to the authentication backend
 The LDAP groupname
 
 <h4 class="pdoc-member-header" id="AuthBackendGroupArgs-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendGroup.ts#L142">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendGroup.ts#L150">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -899,7 +923,7 @@ The LDAP groupname
 Policies which should be granted to members of the group
 
 <h3 class="pdoc-module-header" id="AuthBackendGroupState" data-link-title="AuthBackendGroupState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendGroup.ts#L112">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendGroup.ts#L120">
         interface <strong>AuthBackendGroupState</strong>
     </a>
 </h3>
@@ -909,7 +933,7 @@ Policies which should be granted to members of the group
 Input properties used for looking up and filtering AuthBackendGroup resources.
 
 <h4 class="pdoc-member-header" id="AuthBackendGroupState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendGroup.ts#L116">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendGroup.ts#L124">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -917,7 +941,7 @@ Input properties used for looking up and filtering AuthBackendGroup resources.
 Path to the authentication backend
 
 <h4 class="pdoc-member-header" id="AuthBackendGroupState-groupname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendGroup.ts#L120">property <b>groupname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendGroup.ts#L128">property <b>groupname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -925,7 +949,7 @@ Path to the authentication backend
 The LDAP groupname
 
 <h4 class="pdoc-member-header" id="AuthBackendGroupState-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendGroup.ts#L124">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendGroup.ts#L132">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -933,7 +957,7 @@ The LDAP groupname
 Policies which should be granted to members of the group
 
 <h3 class="pdoc-module-header" id="AuthBackendState" data-link-title="AuthBackendState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L275">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L283">
         interface <strong>AuthBackendState</strong>
     </a>
 </h3>
@@ -943,7 +967,7 @@ Policies which should be granted to members of the group
 Input properties used for looking up and filtering AuthBackend resources.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-accessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L279">property <b>accessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L287">property <b>accessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -951,7 +975,7 @@ Input properties used for looking up and filtering AuthBackend resources.
 The accessor for this auth mount.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-binddn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L283">property <b>binddn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L291">property <b>binddn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>binddn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -959,7 +983,7 @@ The accessor for this auth mount.
 DN of object to bind when performing user search
 
 <h4 class="pdoc-member-header" id="AuthBackendState-bindpass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L287">property <b>bindpass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L295">property <b>bindpass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bindpass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -967,7 +991,7 @@ DN of object to bind when performing user search
 Password to use with `binddn` when performing user search
 
 <h4 class="pdoc-member-header" id="AuthBackendState-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L291">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L299">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -975,12 +999,12 @@ Password to use with `binddn` when performing user search
 Trusted CA to validate TLS certificate
 
 <h4 class="pdoc-member-header" id="AuthBackendState-denyNullBind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L292">property <b>denyNullBind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L300">property <b>denyNullBind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>denyNullBind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AuthBackendState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L296">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L304">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -988,12 +1012,12 @@ Trusted CA to validate TLS certificate
 Description for the LDAP auth backend mount
 
 <h4 class="pdoc-member-header" id="AuthBackendState-discoverdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L297">property <b>discoverdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L305">property <b>discoverdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>discoverdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AuthBackendState-groupattr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L301">property <b>groupattr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L309">property <b>groupattr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupattr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1001,7 +1025,7 @@ Description for the LDAP auth backend mount
 LDAP attribute to follow on objects returned by groupfilter
 
 <h4 class="pdoc-member-header" id="AuthBackendState-groupdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L305">property <b>groupdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L313">property <b>groupdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1009,7 +1033,7 @@ LDAP attribute to follow on objects returned by groupfilter
 Base DN under which to perform group search
 
 <h4 class="pdoc-member-header" id="AuthBackendState-groupfilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L309">property <b>groupfilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L317">property <b>groupfilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupfilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1017,7 +1041,7 @@ Base DN under which to perform group search
 Go template used to construct group membership query
 
 <h4 class="pdoc-member-header" id="AuthBackendState-insecureTls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L313">property <b>insecureTls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L321">property <b>insecureTls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>insecureTls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1025,7 +1049,7 @@ Go template used to construct group membership query
 Control whether or TLS certificates must be validated
 
 <h4 class="pdoc-member-header" id="AuthBackendState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L317">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L325">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1033,7 +1057,7 @@ Control whether or TLS certificates must be validated
 Path to mount the LDAP auth backend under
 
 <h4 class="pdoc-member-header" id="AuthBackendState-starttls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L321">property <b>starttls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L329">property <b>starttls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>starttls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1041,7 +1065,7 @@ Path to mount the LDAP auth backend under
 Control use of TLS when conecting to LDAP
 
 <h4 class="pdoc-member-header" id="AuthBackendState-tlsMaxVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L325">property <b>tlsMaxVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L333">property <b>tlsMaxVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsMaxVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1049,7 +1073,7 @@ Control use of TLS when conecting to LDAP
 Maximum acceptable version of TLS
 
 <h4 class="pdoc-member-header" id="AuthBackendState-tlsMinVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L329">property <b>tlsMinVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L337">property <b>tlsMinVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsMinVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1057,7 +1081,7 @@ Maximum acceptable version of TLS
 Minimum acceptable version of TLS
 
 <h4 class="pdoc-member-header" id="AuthBackendState-tokenBoundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L335">property <b>tokenBoundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L343">property <b>tokenBoundCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenBoundCidrs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1067,7 +1091,7 @@ addresses which can authenticate successfully, and ties the resulting token to t
 as well.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-tokenExplicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L342">property <b>tokenExplicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L350">property <b>tokenExplicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenExplicitMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1078,7 +1102,7 @@ onto the token in number of seconds. This is a hard cap even if `tokenTtl` and
 `tokenMaxTtl` would otherwise allow a renewal.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-tokenMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L347">property <b>tokenMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L355">property <b>tokenMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1087,7 +1111,7 @@ The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-tokenNoDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L352">property <b>tokenNoDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L360">property <b>tokenNoDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNoDefaultPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1096,7 +1120,7 @@ If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-tokenNumUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L358">property <b>tokenNumUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L366">property <b>tokenNumUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNumUses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1106,7 +1130,7 @@ The
 if any, in number of seconds to set on the token.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-tokenPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L365">property <b>tokenPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L373">property <b>tokenPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1117,7 +1141,7 @@ duration specified by this value. At each renewal, the token's TTL will be set t
 value of this field. Specified in seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-tokenPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L370">property <b>tokenPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L378">property <b>tokenPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1126,7 +1150,7 @@ List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-tokenTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L375">property <b>tokenTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L383">property <b>tokenTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1135,7 +1159,7 @@ The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L383">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L391">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1147,7 +1171,7 @@ The type of token that should be generated. Can be `service`,
 requests a different type at generation time.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-upndomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L387">property <b>upndomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L395">property <b>upndomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>upndomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1155,7 +1179,7 @@ requests a different type at generation time.
 The userPrincipalDomain used to construct UPN string
 
 <h4 class="pdoc-member-header" id="AuthBackendState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L391">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L399">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1163,7 +1187,7 @@ The userPrincipalDomain used to construct UPN string
 The URL of the LDAP server
 
 <h4 class="pdoc-member-header" id="AuthBackendState-useTokenGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L395">property <b>useTokenGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L403">property <b>useTokenGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useTokenGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1171,7 +1195,7 @@ The URL of the LDAP server
 Use the Active Directory tokenGroups constructed attribute of the user to find the group memberships
 
 <h4 class="pdoc-member-header" id="AuthBackendState-userattr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L399">property <b>userattr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L407">property <b>userattr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userattr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1179,7 +1203,7 @@ Use the Active Directory tokenGroups constructed attribute of the user to find t
 Attribute on user object matching username passed in
 
 <h4 class="pdoc-member-header" id="AuthBackendState-userdn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackend.ts#L403">property <b>userdn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackend.ts#L411">property <b>userdn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1187,7 +1211,7 @@ Attribute on user object matching username passed in
 Base DN under which to perform user search
 
 <h3 class="pdoc-module-header" id="AuthBackendUserArgs" data-link-title="AuthBackendUserArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendUser.ts#L143">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendUser.ts#L151">
         interface <strong>AuthBackendUserArgs</strong>
     </a>
 </h3>
@@ -1197,7 +1221,7 @@ Base DN under which to perform user search
 The set of arguments for constructing a AuthBackendUser resource.
 
 <h4 class="pdoc-member-header" id="AuthBackendUserArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendUser.ts#L147">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendUser.ts#L155">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1205,7 +1229,7 @@ The set of arguments for constructing a AuthBackendUser resource.
 Path to the authentication backend
 
 <h4 class="pdoc-member-header" id="AuthBackendUserArgs-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendUser.ts#L151">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendUser.ts#L159">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1213,7 +1237,7 @@ Path to the authentication backend
 Override LDAP groups which should be granted to user
 
 <h4 class="pdoc-member-header" id="AuthBackendUserArgs-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendUser.ts#L155">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendUser.ts#L163">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1221,7 +1245,7 @@ Override LDAP groups which should be granted to user
 Policies which should be granted to user
 
 <h4 class="pdoc-member-header" id="AuthBackendUserArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendUser.ts#L159">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendUser.ts#L167">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1229,7 +1253,7 @@ Policies which should be granted to user
 The LDAP username
 
 <h3 class="pdoc-module-header" id="AuthBackendUserState" data-link-title="AuthBackendUserState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendUser.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendUser.ts#L129">
         interface <strong>AuthBackendUserState</strong>
     </a>
 </h3>
@@ -1239,7 +1263,7 @@ The LDAP username
 Input properties used for looking up and filtering AuthBackendUser resources.
 
 <h4 class="pdoc-member-header" id="AuthBackendUserState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendUser.ts#L125">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendUser.ts#L133">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1247,7 +1271,7 @@ Input properties used for looking up and filtering AuthBackendUser resources.
 Path to the authentication backend
 
 <h4 class="pdoc-member-header" id="AuthBackendUserState-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendUser.ts#L129">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendUser.ts#L137">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1255,7 +1279,7 @@ Path to the authentication backend
 Override LDAP groups which should be granted to user
 
 <h4 class="pdoc-member-header" id="AuthBackendUserState-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendUser.ts#L133">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendUser.ts#L141">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1263,7 +1287,7 @@ Override LDAP groups which should be granted to user
 Policies which should be granted to user
 
 <h4 class="pdoc-member-header" id="AuthBackendUserState-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/ldap/authBackendUser.ts#L137">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/ldap/authBackendUser.ts#L145">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

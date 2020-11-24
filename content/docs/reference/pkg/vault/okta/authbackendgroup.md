@@ -842,6 +842,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Okta authentication backend groups can be imported using the format `backend/groupName` e.g.
+
+```sh
+ $ pulumi import vault:okta/authBackendGroup:AuthBackendGroup foo okta/foo
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

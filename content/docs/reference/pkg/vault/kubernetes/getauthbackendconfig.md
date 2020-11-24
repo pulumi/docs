@@ -14,6 +14,7 @@ Reads the Role of an Kubernetes from a Vault server. See the [Vault
 documentation](https://www.vaultproject.io/api-docs/auth/kubernetes#read-config) for more
 information.
 
+
 {{% examples %}}
 ## Example Usage
 

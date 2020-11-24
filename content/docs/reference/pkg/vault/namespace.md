@@ -14,6 +14,7 @@ Provides a resource to manage [Namespaces](https://www.vaultproject.io/docs/ente
 
 **Note** this feature is available only with Vault Enterprise.
 
+
 {{% examples %}}
 ## Example Usage
 

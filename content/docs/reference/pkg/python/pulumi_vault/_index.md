@@ -42,6 +42,10 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;socket&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Audit devices can be imported using the <code class="docutils literal notranslate"><span class="pre">path</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import vault:index/audit:Audit <span class="nb">test</span> syslog
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -148,6 +152,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="n">max_lease_ttl</span><span class="o">=</span><span class="s2">&quot;90000s&quot;</span><span class="p">,</span>
     <span class="p">),</span>
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;github&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Auth methods can be imported using the <code class="docutils literal notranslate"><span class="pre">path</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import vault:index/authBackend:AuthBackend example github
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -859,6 +867,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">secret_key</span><span class="o">=</span><span class="s2">&quot;8C7THtrIigh2rPZQMbguugt8IUftWhMRCOBzbuyz&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Mounts can be imported using the <code class="docutils literal notranslate"><span class="pre">path</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import vault:index/mfaDuo:MfaDuo my_duo my_duo
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1005,6 +1017,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;This is an example mount&quot;</span><span class="p">,</span>
     <span class="n">path</span><span class="o">=</span><span class="s2">&quot;dummy&quot;</span><span class="p">,</span>
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;generic&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Mounts can be imported using the <code class="docutils literal notranslate"><span class="pre">path</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import vault:index/mount:Mount example dummy
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1249,6 +1265,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Policies can be imported using the <code class="docutils literal notranslate"><span class="pre">name</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import vault:index/policy:Policy example dev-team
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1407,6 +1427,10 @@ information.</p>
 <span class="n">global_</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">QuotaRateLimit</span><span class="p">(</span><span class="s2">&quot;global&quot;</span><span class="p">,</span>
     <span class="n">path</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
     <span class="n">rate</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Rate limit quotas can be imported using their names</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import vault:index/quotaRateLimit:QuotaRateLimit global global
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1619,23 +1643,32 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_vault.Token">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.</code><code class="sig-name descname">Token</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">explicit_max_ttl</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">no_default_policy</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">no_parent</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_uses</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">period</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pgp_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renew_increment</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renew_min_lease</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renewable</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wrapping_ttl</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.Token" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Token resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] display_name: String containing the token display name
-:param pulumi.Input[str] explicit_max_ttl: The explicit max TTL of this token
-:param pulumi.Input[bool] no_default_policy: Flag to not attach the default policy to this token
-:param pulumi.Input[bool] no_parent: Flag to create a token without parent
-:param pulumi.Input[int] num_uses: The number of allowed uses of this token
-:param pulumi.Input[str] period: The period of this token
-:param pulumi.Input[str] pgp_key: The PGP key (base64 encoded) to encrypt the token.
-:param pulumi.Input[Sequence[pulumi.Input[str]]] policies: List of policies to attach to this token
-:param pulumi.Input[int] renew_increment: The renew increment
-:param pulumi.Input[int] renew_min_lease: The minimal lease to renew this token
-:param pulumi.Input[bool] renewable: Flag to allow to renew this token
-:param pulumi.Input[str] role_name: The token role name
-:param pulumi.Input[str] ttl: The TTL period of this token
-:param pulumi.Input[str] wrapping_ttl: The TTL period of the wrapped token.</p>
+<dd><p>Tokens can be imported using its <code class="docutils literal notranslate"><span class="pre">id</span></code> as accessor id, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import vault:index/token:Token example &lt;accessor_id&gt;
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>display_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – String containing the token display name</p></li>
+<li><p><strong>explicit_max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The explicit max TTL of this token</p></li>
+<li><p><strong>no_default_policy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Flag to not attach the default policy to this token</p></li>
+<li><p><strong>no_parent</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Flag to create a token without parent</p></li>
+<li><p><strong>num_uses</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of allowed uses of this token</p></li>
+<li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The period of this token</p></li>
+<li><p><strong>pgp_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The PGP key (base64 encoded) to encrypt the token.</p></li>
+<li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – List of policies to attach to this token</p></li>
+<li><p><strong>renew_increment</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The renew increment</p></li>
+<li><p><strong>renew_min_lease</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The minimal lease to renew this token</p></li>
+<li><p><strong>renewable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Flag to allow to renew this token</p></li>
+<li><p><strong>role_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The token role name</p></li>
+<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The TTL period of this token</p></li>
+<li><p><strong>wrapping_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The TTL period of the wrapped token.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="pulumi_vault.Token.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">display_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">encrypted_client_token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">explicit_max_ttl</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lease_duration</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lease_started</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">no_default_policy</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">no_parent</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">num_uses</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">period</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pgp_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renew_increment</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renew_min_lease</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renewable</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wrapped_token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wrapping_accessor</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wrapping_ttl</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_vault.token.Token<a class="headerlink" href="#pulumi_vault.Token.get" title="Permalink to this definition">¶</a></dt>

@@ -1326,6 +1326,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+A roleset can be imported using its Vault Path. For example, referencing the example above,
+
+```sh
+ $ pulumi import vault:gcp/secretRoleset:SecretRoleset roleset gcp/roleset/project_viewer
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

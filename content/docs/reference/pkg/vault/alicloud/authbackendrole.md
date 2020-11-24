@@ -1781,6 +1781,16 @@ requests a different type at generation time.
 
 
 
+## Import
+
+
+Alicloud authentication roles can be imported using the `path`, e.g.
+
+```sh
+ $ pulumi import vault:alicloud/authBackendRole:AuthBackendRole my_role auth/alicloud/role/my_role
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

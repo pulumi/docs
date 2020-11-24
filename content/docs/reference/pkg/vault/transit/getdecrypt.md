@@ -12,6 +12,7 @@ meta_desc: "Explore the GetDecrypt function of the transit module, including exa
 
 This is a data source which can be used to decrypt ciphertext using a Vault Transit key.
 
+
 {{% examples %}}
 ## Example Usage
 

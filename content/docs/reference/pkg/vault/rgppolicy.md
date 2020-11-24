@@ -14,6 +14,7 @@ Provides a resource to manage Role Governing Policy (RGP) via [Sentinel](https:/
 
 **Note** this feature is available only with Vault Enterprise.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -14,6 +14,7 @@ Configure the cache for the Transit Secret Backend in Vault.
 
 
 
+
 ## Create a SecretCacheConfig Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 

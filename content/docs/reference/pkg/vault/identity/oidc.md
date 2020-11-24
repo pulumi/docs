@@ -17,6 +17,7 @@ the clients who are recognized by Vault.
 
 > **NOTE:** Each Vault server may only have one Identity Tokens Backend configuration. Multiple configurations of the resource against the same Vault server will cause a perpetual difference.
 
+
 {{% examples %}}
 ## Example Usage
 

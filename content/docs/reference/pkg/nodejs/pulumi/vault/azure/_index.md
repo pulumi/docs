@@ -3,7 +3,7 @@ title: "Module azure"
 title_tag: "Module azure | Package @pulumi/vault | Node.js SDK"
 linktitle: "azure"
 meta_desc: "Explore members of the azure module in the @pulumi/vault package."
-git_sha: "7f3a154bc46dac6b757990292d938f6d391d33ae"
+git_sha: "2dce476d2b85de30e6b63dd882e5f90000adc81f"
 block_external_search_index: true
 ---
 
@@ -45,14 +45,23 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AuthBackendConfig" data-link-title="AuthBackendConfig">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L16">
         Resource <strong>AuthBackendConfig</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>AuthBackendConfig</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+#### Import
+
+Azure auth backends can be imported using `auth/`, the `backend` path, and `/config` e.g.
+
+```sh
+ $ pulumi import vault:azure/authBackendConfig:AuthBackendConfig example auth/azure/config
+```
+
 <h4 class="pdoc-member-header" id="AuthBackendConfig-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L74"> <b>constructor</b></a>
 </h4>
 
 
@@ -66,7 +75,7 @@ Create a AuthBackendConfig resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AuthBackendConfig-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -77,14 +86,14 @@ Get an existing AuthBackendConfig resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AuthBackendConfig-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AuthBackendConfig-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -95,7 +104,7 @@ Returns true if the given object is an instance of AuthBackendConfig.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AuthBackendConfig-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L39">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L48">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -104,7 +113,7 @@ The path the Azure auth backend being configured was
 mounted at.  Defaults to `azure`.
 
 <h4 class="pdoc-member-header" id="AuthBackendConfig-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L44">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L53">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -113,7 +122,7 @@ The client id for credentials to query the Azure APIs.
 Currently read permissions to query compute resources are required.
 
 <h4 class="pdoc-member-header" id="AuthBackendConfig-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L49">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L58">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -122,7 +131,7 @@ The client secret for credentials to query the
 Azure APIs.
 
 <h4 class="pdoc-member-header" id="AuthBackendConfig-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L55">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L64">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>environment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -132,7 +141,7 @@ AzurePublicCloud, AzureUSGovernmentCloud, AzureChinaCloud,
 AzureGermanCloud.  Defaults to `AzurePublicCloud`.
 
 <h4 class="pdoc-member-header" id="AuthBackendConfig-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -141,7 +150,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AuthBackendConfig-resource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L60">property <b>resource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L69">property <b>resource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -150,7 +159,7 @@ The configured URL for the application registered in
 Azure Active Directory.
 
 <h4 class="pdoc-member-header" id="AuthBackendConfig-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L65">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L74">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -159,7 +168,7 @@ The tenant id for the Azure Active Directory
 organization.
 
 <h4 class="pdoc-member-header" id="AuthBackendConfig-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -168,7 +177,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AuthBackendRole" data-link-title="AuthBackendRole">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L46">
         Resource <strong>AuthBackendRole</strong>
     </a>
 </h3>
@@ -205,8 +214,16 @@ const example = new vault.azure.AuthBackendRole("example", {
 });
 ```
 
+#### Import
+
+Azure auth backend roles can be imported using `auth/`, the `backend` path, `/role/`, and the `role` name e.g.
+
+```sh
+ $ pulumi import vault:azure/authBackendRole:AuthBackendRole example auth/azure/role/test-role
+```
+
 <h4 class="pdoc-member-header" id="AuthBackendRole-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L193"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L201"> <b>constructor</b></a>
 </h4>
 
 
@@ -220,7 +237,7 @@ Create a AuthBackendRole resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L56">method <b>get</b></a>
 </h4>
 
 
@@ -231,14 +248,14 @@ Get an existing AuthBackendRole resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L46">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L67">method <b>isInstance</b></a>
 </h4>
 
 
@@ -249,7 +266,7 @@ Returns true if the given object is an instance of AuthBackendRole.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L69">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L77">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -257,7 +274,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Unique name of the auth backend to configure.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-boundGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L75">property <b>boundGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L83">property <b>boundGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>boundGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -267,7 +284,7 @@ that can perform the login operation that they should be using the group
 ID specified by this field.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-boundLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L81">property <b>boundLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L89">property <b>boundLocations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>boundLocations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -277,7 +294,7 @@ that can perform the login operation that the location in their identity
 document must match the one specified by this field.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-boundResourceGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L87">property <b>boundResourceGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L95">property <b>boundResourceGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>boundResourceGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -287,7 +304,7 @@ machiness that can perform the login operation that they be associated with
 the resource group that matches the value specified by this field.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-boundScaleSets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L93">property <b>boundScaleSets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L101">property <b>boundScaleSets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>boundScaleSets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -297,7 +314,7 @@ machines that can perform the login operation that they must match the scale set
 specified by this field.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-boundServicePrincipalIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L99">property <b>boundServicePrincipalIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L107">property <b>boundServicePrincipalIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>boundServicePrincipalIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -307,7 +324,7 @@ service principals that can perform the login operation that they should be poss
 the ids specified by this field.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-boundSubscriptionIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L105">property <b>boundSubscriptionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L113">property <b>boundSubscriptionIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>boundSubscriptionIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -317,7 +334,7 @@ that can perform the login operation to ones which  matches the value specified 
 field.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L46">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -326,7 +343,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L112">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L120">property <b>maxTtl</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -339,7 +356,7 @@ The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L121">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L129">property <b>period</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -354,7 +371,7 @@ duration specified by this value. At each renewal, the token's TTL will be set t
 value of this field. Specified in seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L128">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L136">property <b>policies</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -367,7 +384,7 @@ An array of strings
 specifying the policies to be set on tokens issued using this role.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L132">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L140">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -375,7 +392,7 @@ specifying the policies to be set on tokens issued using this role.
 The name of the role.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-tokenBoundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L138">property <b>tokenBoundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L146">property <b>tokenBoundCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenBoundCidrs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -385,7 +402,7 @@ addresses which can authenticate successfully, and ties the resulting token to t
 as well.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-tokenExplicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L145">property <b>tokenExplicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L153">property <b>tokenExplicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenExplicitMaxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -396,7 +413,7 @@ onto the token in number of seconds. This is a hard cap even if `tokenTtl` and
 `tokenMaxTtl` would otherwise allow a renewal.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-tokenMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L150">property <b>tokenMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L158">property <b>tokenMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenMaxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -405,7 +422,7 @@ The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-tokenNoDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L155">property <b>tokenNoDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L163">property <b>tokenNoDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenNoDefaultPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -414,7 +431,7 @@ If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-tokenNumUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L161">property <b>tokenNumUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L169">property <b>tokenNumUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenNumUses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -424,7 +441,7 @@ The
 if any, in number of seconds to set on the token.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-tokenPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L168">property <b>tokenPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L176">property <b>tokenPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -435,7 +452,7 @@ duration specified by this value. At each renewal, the token's TTL will be set t
 value of this field. Specified in seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-tokenPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L173">property <b>tokenPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L181">property <b>tokenPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -444,7 +461,7 @@ List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-tokenTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L178">property <b>tokenTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L186">property <b>tokenTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -453,7 +470,7 @@ The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L186">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L194">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -465,7 +482,7 @@ The type of token that should be generated. Can be `service`,
 requests a different type at generation time.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L193">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L201">property <b>ttl</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -478,7 +495,7 @@ The TTL period of tokens issued
 using this role, provided as a number of seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackendRole-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L46">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -487,14 +504,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Backend" data-link-title="Backend">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L7">
         Resource <strong>Backend</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Backend</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Backend-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L62"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L62"> <b>constructor</b></a>
 </h4>
 
 
@@ -508,7 +525,7 @@ Create a Backend resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Backend-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -519,14 +536,14 @@ Get an existing Backend resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Backend-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Backend-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -537,7 +554,7 @@ Returns true if the given object is an instance of Backend.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Backend-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L38">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L38">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -545,7 +562,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 - The OAuth2 client id to connect to Azure.
 
 <h4 class="pdoc-member-header" id="Backend-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L42">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L42">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -553,7 +570,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 - The OAuth2 client secret to connect to Azure.
 
 <h4 class="pdoc-member-header" id="Backend-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L46">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L46">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -561,7 +578,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Human-friendly description of the mount for the backend.
 
 <h4 class="pdoc-member-header" id="Backend-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L50">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L50">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>environment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -569,7 +586,7 @@ Human-friendly description of the mount for the backend.
 - The Azure environment.
 
 <h4 class="pdoc-member-header" id="Backend-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -578,7 +595,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Backend-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L54">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L54">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -586,7 +603,7 @@ deployments and may be missing (undefined) during planning phases.
 - The unique path this backend should be mounted at. Defaults to `azure`.
 
 <h4 class="pdoc-member-header" id="Backend-subscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L58">property <b>subscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L58">property <b>subscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subscriptionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -594,7 +611,7 @@ deployments and may be missing (undefined) during planning phases.
 - The subscription id for the Azure Active Directory.
 
 <h4 class="pdoc-member-header" id="Backend-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L62">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L62">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -602,7 +619,7 @@ deployments and may be missing (undefined) during planning phases.
 - The tenant id for the Azure Active Directory.
 
 <h4 class="pdoc-member-header" id="Backend-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -611,14 +628,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BackendRole" data-link-title="BackendRole">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L8">
         Resource <strong>BackendRole</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>BackendRole</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="BackendRole-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L67"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L66"> <b>constructor</b></a>
 </h4>
 
 
@@ -632,7 +649,7 @@ Create a BackendRole resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BackendRole-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L18">method <b>get</b></a>
 </h4>
 
 
@@ -643,14 +660,14 @@ Get an existing BackendRole resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BackendRole-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L8">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BackendRole-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L29">method <b>isInstance</b></a>
 </h4>
 
 
@@ -661,7 +678,7 @@ Returns true if the given object is an instance of BackendRole.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BackendRole-applicationObjectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L41">property <b>applicationObjectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L40">property <b>applicationObjectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationObjectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -670,7 +687,7 @@ Application Object ID for an existing service principal that will
 be used instead of creating dynamic service principals. If present, `azureRoles` will be ignored.
 
 <h4 class="pdoc-member-header" id="BackendRole-azureRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L45">property <b>azureRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L44">property <b>azureRoles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>azureRoles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/output/#BackendRoleAzureRole'>BackendRoleAzureRole</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -678,7 +695,7 @@ be used instead of creating dynamic service principals. If present, `azureRoles`
 List of Azure roles to be assigned to the generated service principal.
 
 <h4 class="pdoc-member-header" id="BackendRole-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L49">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L48">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -686,7 +703,7 @@ List of Azure roles to be assigned to the generated service principal.
 Path to the mounted Azure auth backend
 
 <h4 class="pdoc-member-header" id="BackendRole-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L53">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L52">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -694,7 +711,7 @@ Path to the mounted Azure auth backend
 Human-friendly description of the mount for the backend.
 
 <h4 class="pdoc-member-header" id="BackendRole-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L8">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -703,7 +720,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BackendRole-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L58">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L57">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -712,7 +729,7 @@ Specifies the maximum TTL for service principals generated using this role. Acce
 suffixed strings ("1h") or an integer number of seconds. Defaults to the system/engine max TTL time.
 
 <h4 class="pdoc-member-header" id="BackendRole-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L62">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L61">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -720,7 +737,7 @@ suffixed strings ("1h") or an integer number of seconds. Defaults to the system/
 Name of the Azure role
 
 <h4 class="pdoc-member-header" id="BackendRole-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L67">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L66">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -729,7 +746,7 @@ Specifies the default TTL for service principals generated using this role.
 Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults to the system/engine default TTL time.
 
 <h4 class="pdoc-member-header" id="BackendRole-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L8">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -740,7 +757,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getAccessCredentials" data-link-title="getAccessCredentials">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/getAccessCredentials.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/getAccessCredentials.ts#L8">
         Function <strong>getAccessCredentials</strong>
     </a>
 </h3>
@@ -751,7 +768,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AuthBackendConfigArgs" data-link-title="AuthBackendConfigArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L151">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L160">
         interface <strong>AuthBackendConfigArgs</strong>
     </a>
 </h3>
@@ -761,7 +778,7 @@ deployments.
 The set of arguments for constructing a AuthBackendConfig resource.
 
 <h4 class="pdoc-member-header" id="AuthBackendConfigArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L156">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L165">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -770,7 +787,7 @@ The path the Azure auth backend being configured was
 mounted at.  Defaults to `azure`.
 
 <h4 class="pdoc-member-header" id="AuthBackendConfigArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L161">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L170">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -779,7 +796,7 @@ The client id for credentials to query the Azure APIs.
 Currently read permissions to query compute resources are required.
 
 <h4 class="pdoc-member-header" id="AuthBackendConfigArgs-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L166">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L175">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -788,7 +805,7 @@ The client secret for credentials to query the
 Azure APIs.
 
 <h4 class="pdoc-member-header" id="AuthBackendConfigArgs-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L172">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L181">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -798,7 +815,7 @@ AzurePublicCloud, AzureUSGovernmentCloud, AzureChinaCloud,
 AzureGermanCloud.  Defaults to `AzurePublicCloud`.
 
 <h4 class="pdoc-member-header" id="AuthBackendConfigArgs-resource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L177">property <b>resource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L186">property <b>resource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -807,7 +824,7 @@ The configured URL for the application registered in
 Azure Active Directory.
 
 <h4 class="pdoc-member-header" id="AuthBackendConfigArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L182">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L191">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -816,7 +833,7 @@ The tenant id for the Azure Active Directory
 organization.
 
 <h3 class="pdoc-module-header" id="AuthBackendConfigState" data-link-title="AuthBackendConfigState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L114">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L123">
         interface <strong>AuthBackendConfigState</strong>
     </a>
 </h3>
@@ -826,7 +843,7 @@ organization.
 Input properties used for looking up and filtering AuthBackendConfig resources.
 
 <h4 class="pdoc-member-header" id="AuthBackendConfigState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L119">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L128">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -835,7 +852,7 @@ The path the Azure auth backend being configured was
 mounted at.  Defaults to `azure`.
 
 <h4 class="pdoc-member-header" id="AuthBackendConfigState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L124">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L133">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -844,7 +861,7 @@ The client id for credentials to query the Azure APIs.
 Currently read permissions to query compute resources are required.
 
 <h4 class="pdoc-member-header" id="AuthBackendConfigState-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L129">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L138">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -853,7 +870,7 @@ The client secret for credentials to query the
 Azure APIs.
 
 <h4 class="pdoc-member-header" id="AuthBackendConfigState-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L135">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L144">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -863,7 +880,7 @@ AzurePublicCloud, AzureUSGovernmentCloud, AzureChinaCloud,
 AzureGermanCloud.  Defaults to `AzurePublicCloud`.
 
 <h4 class="pdoc-member-header" id="AuthBackendConfigState-resource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L140">property <b>resource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L149">property <b>resource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -872,7 +889,7 @@ The configured URL for the application registered in
 Azure Active Directory.
 
 <h4 class="pdoc-member-header" id="AuthBackendConfigState-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendConfig.ts#L145">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendConfig.ts#L154">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -881,7 +898,7 @@ The tenant id for the Azure Active Directory
 organization.
 
 <h3 class="pdoc-module-header" id="AuthBackendRoleArgs" data-link-title="AuthBackendRoleArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L403">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L411">
         interface <strong>AuthBackendRoleArgs</strong>
     </a>
 </h3>
@@ -891,7 +908,7 @@ organization.
 The set of arguments for constructing a AuthBackendRole resource.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L407">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L415">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -899,7 +916,7 @@ The set of arguments for constructing a AuthBackendRole resource.
 Unique name of the auth backend to configure.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-boundGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L413">property <b>boundGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L421">property <b>boundGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>boundGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -909,7 +926,7 @@ that can perform the login operation that they should be using the group
 ID specified by this field.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-boundLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L419">property <b>boundLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L427">property <b>boundLocations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>boundLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -919,7 +936,7 @@ that can perform the login operation that the location in their identity
 document must match the one specified by this field.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-boundResourceGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L425">property <b>boundResourceGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L433">property <b>boundResourceGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>boundResourceGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -929,7 +946,7 @@ machiness that can perform the login operation that they be associated with
 the resource group that matches the value specified by this field.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-boundScaleSets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L431">property <b>boundScaleSets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L439">property <b>boundScaleSets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>boundScaleSets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -939,7 +956,7 @@ machines that can perform the login operation that they must match the scale set
 specified by this field.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-boundServicePrincipalIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L437">property <b>boundServicePrincipalIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L445">property <b>boundServicePrincipalIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>boundServicePrincipalIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -949,7 +966,7 @@ service principals that can perform the login operation that they should be poss
 the ids specified by this field.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-boundSubscriptionIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L443">property <b>boundSubscriptionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L451">property <b>boundSubscriptionIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>boundSubscriptionIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -959,7 +976,7 @@ that can perform the login operation to ones which  matches the value specified 
 field.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L450">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L458">property <b>maxTtl</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -972,7 +989,7 @@ The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L459">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L467">property <b>period</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -987,7 +1004,7 @@ duration specified by this value. At each renewal, the token's TTL will be set t
 value of this field. Specified in seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L466">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L474">property <b>policies</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1000,7 +1017,7 @@ An array of strings
 specifying the policies to be set on tokens issued using this role.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L470">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L478">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1008,7 +1025,7 @@ specifying the policies to be set on tokens issued using this role.
 The name of the role.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-tokenBoundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L476">property <b>tokenBoundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L484">property <b>tokenBoundCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenBoundCidrs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1018,7 +1035,7 @@ addresses which can authenticate successfully, and ties the resulting token to t
 as well.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-tokenExplicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L483">property <b>tokenExplicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L491">property <b>tokenExplicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenExplicitMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1029,7 +1046,7 @@ onto the token in number of seconds. This is a hard cap even if `tokenTtl` and
 `tokenMaxTtl` would otherwise allow a renewal.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-tokenMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L488">property <b>tokenMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L496">property <b>tokenMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1038,7 +1055,7 @@ The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-tokenNoDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L493">property <b>tokenNoDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L501">property <b>tokenNoDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNoDefaultPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1047,7 +1064,7 @@ If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-tokenNumUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L499">property <b>tokenNumUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L507">property <b>tokenNumUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNumUses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1057,7 +1074,7 @@ The
 if any, in number of seconds to set on the token.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-tokenPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L506">property <b>tokenPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L514">property <b>tokenPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1068,7 +1085,7 @@ duration specified by this value. At each renewal, the token's TTL will be set t
 value of this field. Specified in seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-tokenPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L511">property <b>tokenPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L519">property <b>tokenPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1077,7 +1094,7 @@ List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-tokenTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L516">property <b>tokenTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L524">property <b>tokenTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1086,7 +1103,7 @@ The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L524">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L532">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1098,7 +1115,7 @@ The type of token that should be generated. Can be `service`,
 requests a different type at generation time.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L531">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L539">property <b>ttl</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1111,7 +1128,7 @@ The TTL period of tokens issued
 using this role, provided as a number of seconds.
 
 <h3 class="pdoc-module-header" id="AuthBackendRoleState" data-link-title="AuthBackendRoleState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L269">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L277">
         interface <strong>AuthBackendRoleState</strong>
     </a>
 </h3>
@@ -1121,7 +1138,7 @@ using this role, provided as a number of seconds.
 Input properties used for looking up and filtering AuthBackendRole resources.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L273">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L281">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1129,7 +1146,7 @@ Input properties used for looking up and filtering AuthBackendRole resources.
 Unique name of the auth backend to configure.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-boundGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L279">property <b>boundGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L287">property <b>boundGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>boundGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1139,7 +1156,7 @@ that can perform the login operation that they should be using the group
 ID specified by this field.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-boundLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L285">property <b>boundLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L293">property <b>boundLocations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>boundLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1149,7 +1166,7 @@ that can perform the login operation that the location in their identity
 document must match the one specified by this field.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-boundResourceGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L291">property <b>boundResourceGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L299">property <b>boundResourceGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>boundResourceGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1159,7 +1176,7 @@ machiness that can perform the login operation that they be associated with
 the resource group that matches the value specified by this field.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-boundScaleSets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L297">property <b>boundScaleSets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L305">property <b>boundScaleSets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>boundScaleSets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1169,7 +1186,7 @@ machines that can perform the login operation that they must match the scale set
 specified by this field.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-boundServicePrincipalIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L303">property <b>boundServicePrincipalIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L311">property <b>boundServicePrincipalIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>boundServicePrincipalIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1179,7 +1196,7 @@ service principals that can perform the login operation that they should be poss
 the ids specified by this field.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-boundSubscriptionIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L309">property <b>boundSubscriptionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L317">property <b>boundSubscriptionIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>boundSubscriptionIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1189,7 +1206,7 @@ that can perform the login operation to ones which  matches the value specified 
 field.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L316">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L324">property <b>maxTtl</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1202,7 +1219,7 @@ The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L325">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L333">property <b>period</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1217,7 +1234,7 @@ duration specified by this value. At each renewal, the token's TTL will be set t
 value of this field. Specified in seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L332">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L340">property <b>policies</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1230,7 +1247,7 @@ An array of strings
 specifying the policies to be set on tokens issued using this role.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L336">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L344">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1238,7 +1255,7 @@ specifying the policies to be set on tokens issued using this role.
 The name of the role.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-tokenBoundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L342">property <b>tokenBoundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L350">property <b>tokenBoundCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenBoundCidrs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1248,7 +1265,7 @@ addresses which can authenticate successfully, and ties the resulting token to t
 as well.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-tokenExplicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L349">property <b>tokenExplicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L357">property <b>tokenExplicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenExplicitMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1259,7 +1276,7 @@ onto the token in number of seconds. This is a hard cap even if `tokenTtl` and
 `tokenMaxTtl` would otherwise allow a renewal.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-tokenMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L354">property <b>tokenMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L362">property <b>tokenMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1268,7 +1285,7 @@ The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-tokenNoDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L359">property <b>tokenNoDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L367">property <b>tokenNoDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNoDefaultPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1277,7 +1294,7 @@ If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-tokenNumUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L365">property <b>tokenNumUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L373">property <b>tokenNumUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNumUses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1287,7 +1304,7 @@ The
 if any, in number of seconds to set on the token.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-tokenPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L372">property <b>tokenPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L380">property <b>tokenPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1298,7 +1315,7 @@ duration specified by this value. At each renewal, the token's TTL will be set t
 value of this field. Specified in seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-tokenPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L377">property <b>tokenPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L385">property <b>tokenPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1307,7 +1324,7 @@ List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-tokenTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L382">property <b>tokenTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L390">property <b>tokenTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1316,7 +1333,7 @@ The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L390">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L398">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1328,7 +1345,7 @@ The type of token that should be generated. Can be `service`,
 requests a different type at generation time.
 
 <h4 class="pdoc-member-header" id="AuthBackendRoleState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/authBackendRole.ts#L397">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/authBackendRole.ts#L405">property <b>ttl</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1341,7 +1358,7 @@ The TTL period of tokens issued
 using this role, provided as a number of seconds.
 
 <h3 class="pdoc-module-header" id="BackendArgs" data-link-title="BackendArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L147">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L147">
         interface <strong>BackendArgs</strong>
     </a>
 </h3>
@@ -1351,7 +1368,7 @@ using this role, provided as a number of seconds.
 The set of arguments for constructing a Backend resource.
 
 <h4 class="pdoc-member-header" id="BackendArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L151">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L151">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1359,7 +1376,7 @@ The set of arguments for constructing a Backend resource.
 - The OAuth2 client id to connect to Azure.
 
 <h4 class="pdoc-member-header" id="BackendArgs-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L155">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L155">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1367,7 +1384,7 @@ The set of arguments for constructing a Backend resource.
 - The OAuth2 client secret to connect to Azure.
 
 <h4 class="pdoc-member-header" id="BackendArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L159">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L159">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1375,7 +1392,7 @@ The set of arguments for constructing a Backend resource.
 Human-friendly description of the mount for the backend.
 
 <h4 class="pdoc-member-header" id="BackendArgs-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L163">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L163">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1383,7 +1400,7 @@ Human-friendly description of the mount for the backend.
 - The Azure environment.
 
 <h4 class="pdoc-member-header" id="BackendArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L167">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L167">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1391,7 +1408,7 @@ Human-friendly description of the mount for the backend.
 - The unique path this backend should be mounted at. Defaults to `azure`.
 
 <h4 class="pdoc-member-header" id="BackendArgs-subscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L171">property <b>subscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L171">property <b>subscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1399,7 +1416,7 @@ Human-friendly description of the mount for the backend.
 - The subscription id for the Azure Active Directory.
 
 <h4 class="pdoc-member-header" id="BackendArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L175">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L175">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1407,7 +1424,7 @@ Human-friendly description of the mount for the backend.
 - The tenant id for the Azure Active Directory.
 
 <h3 class="pdoc-module-header" id="BackendRoleArgs" data-link-title="BackendRoleArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L151">
         interface <strong>BackendRoleArgs</strong>
     </a>
 </h3>
@@ -1417,7 +1434,7 @@ Human-friendly description of the mount for the backend.
 The set of arguments for constructing a BackendRole resource.
 
 <h4 class="pdoc-member-header" id="BackendRoleArgs-applicationObjectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L157">property <b>applicationObjectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L156">property <b>applicationObjectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationObjectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1426,7 +1443,7 @@ Application Object ID for an existing service principal that will
 be used instead of creating dynamic service principals. If present, `azureRoles` will be ignored.
 
 <h4 class="pdoc-member-header" id="BackendRoleArgs-azureRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L161">property <b>azureRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L160">property <b>azureRoles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#BackendRoleAzureRole'>BackendRoleAzureRole</a>&gt;[]&gt;;</code></pre>
@@ -1434,7 +1451,7 @@ be used instead of creating dynamic service principals. If present, `azureRoles`
 List of Azure roles to be assigned to the generated service principal.
 
 <h4 class="pdoc-member-header" id="BackendRoleArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L165">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L164">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1442,7 +1459,7 @@ List of Azure roles to be assigned to the generated service principal.
 Path to the mounted Azure auth backend
 
 <h4 class="pdoc-member-header" id="BackendRoleArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L169">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L168">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1450,7 +1467,7 @@ Path to the mounted Azure auth backend
 Human-friendly description of the mount for the backend.
 
 <h4 class="pdoc-member-header" id="BackendRoleArgs-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L174">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L173">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1459,7 +1476,7 @@ Specifies the maximum TTL for service principals generated using this role. Acce
 suffixed strings ("1h") or an integer number of seconds. Defaults to the system/engine max TTL time.
 
 <h4 class="pdoc-member-header" id="BackendRoleArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L178">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L177">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1467,7 +1484,7 @@ suffixed strings ("1h") or an integer number of seconds. Defaults to the system/
 Name of the Azure role
 
 <h4 class="pdoc-member-header" id="BackendRoleArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L183">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L182">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1476,7 +1493,7 @@ Specifies the default TTL for service principals generated using this role.
 Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults to the system/engine default TTL time.
 
 <h3 class="pdoc-module-header" id="BackendRoleState" data-link-title="BackendRoleState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L115">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L114">
         interface <strong>BackendRoleState</strong>
     </a>
 </h3>
@@ -1486,7 +1503,7 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 Input properties used for looking up and filtering BackendRole resources.
 
 <h4 class="pdoc-member-header" id="BackendRoleState-applicationObjectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L120">property <b>applicationObjectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L119">property <b>applicationObjectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationObjectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1495,7 +1512,7 @@ Application Object ID for an existing service principal that will
 be used instead of creating dynamic service principals. If present, `azureRoles` will be ignored.
 
 <h4 class="pdoc-member-header" id="BackendRoleState-azureRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L124">property <b>azureRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L123">property <b>azureRoles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>azureRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#BackendRoleAzureRole'>BackendRoleAzureRole</a>&gt;[]&gt;;</code></pre>
@@ -1503,7 +1520,7 @@ be used instead of creating dynamic service principals. If present, `azureRoles`
 List of Azure roles to be assigned to the generated service principal.
 
 <h4 class="pdoc-member-header" id="BackendRoleState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L128">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L127">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1511,7 +1528,7 @@ List of Azure roles to be assigned to the generated service principal.
 Path to the mounted Azure auth backend
 
 <h4 class="pdoc-member-header" id="BackendRoleState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L132">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L131">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1519,7 +1536,7 @@ Path to the mounted Azure auth backend
 Human-friendly description of the mount for the backend.
 
 <h4 class="pdoc-member-header" id="BackendRoleState-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L137">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L136">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1528,7 +1545,7 @@ Specifies the maximum TTL for service principals generated using this role. Acce
 suffixed strings ("1h") or an integer number of seconds. Defaults to the system/engine max TTL time.
 
 <h4 class="pdoc-member-header" id="BackendRoleState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L141">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L140">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1536,7 +1553,7 @@ suffixed strings ("1h") or an integer number of seconds. Defaults to the system/
 Name of the Azure role
 
 <h4 class="pdoc-member-header" id="BackendRoleState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backendRole.ts#L146">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backendRole.ts#L145">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1545,7 +1562,7 @@ Specifies the default TTL for service principals generated using this role.
 Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults to the system/engine default TTL time.
 
 <h3 class="pdoc-module-header" id="BackendState" data-link-title="BackendState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L113">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L113">
         interface <strong>BackendState</strong>
     </a>
 </h3>
@@ -1555,7 +1572,7 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 Input properties used for looking up and filtering Backend resources.
 
 <h4 class="pdoc-member-header" id="BackendState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L117">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L117">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1563,7 +1580,7 @@ Input properties used for looking up and filtering Backend resources.
 - The OAuth2 client id to connect to Azure.
 
 <h4 class="pdoc-member-header" id="BackendState-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L121">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L121">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1571,7 +1588,7 @@ Input properties used for looking up and filtering Backend resources.
 - The OAuth2 client secret to connect to Azure.
 
 <h4 class="pdoc-member-header" id="BackendState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L125">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L125">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1579,7 +1596,7 @@ Input properties used for looking up and filtering Backend resources.
 Human-friendly description of the mount for the backend.
 
 <h4 class="pdoc-member-header" id="BackendState-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L129">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L129">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1587,7 +1604,7 @@ Human-friendly description of the mount for the backend.
 - The Azure environment.
 
 <h4 class="pdoc-member-header" id="BackendState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L133">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L133">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1595,7 +1612,7 @@ Human-friendly description of the mount for the backend.
 - The unique path this backend should be mounted at. Defaults to `azure`.
 
 <h4 class="pdoc-member-header" id="BackendState-subscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L137">property <b>subscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L137">property <b>subscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1603,7 +1620,7 @@ Human-friendly description of the mount for the backend.
 - The subscription id for the Azure Active Directory.
 
 <h4 class="pdoc-member-header" id="BackendState-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/backend.ts#L141">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/backend.ts#L141">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1611,7 +1628,7 @@ Human-friendly description of the mount for the backend.
 - The tenant id for the Azure Active Directory.
 
 <h3 class="pdoc-module-header" id="GetAccessCredentialsArgs" data-link-title="GetAccessCredentialsArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/getAccessCredentials.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/getAccessCredentials.ts#L29">
         interface <strong>GetAccessCredentialsArgs</strong>
     </a>
 </h3>
@@ -1621,7 +1638,7 @@ Human-friendly description of the mount for the backend.
 A collection of arguments for invoking getAccessCredentials.
 
 <h4 class="pdoc-member-header" id="GetAccessCredentialsArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/getAccessCredentials.ts#L35">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/getAccessCredentials.ts#L34">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1630,7 +1647,7 @@ The path to the Azure secret backend to
 read credentials from, with no leading or trailing `/`s.
 
 <h4 class="pdoc-member-header" id="GetAccessCredentialsArgs-maxCredValidationSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/getAccessCredentials.ts#L41">property <b>maxCredValidationSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/getAccessCredentials.ts#L40">property <b>maxCredValidationSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxCredValidationSeconds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1640,7 +1657,7 @@ the number of seconds after which to give up validating credentials. Defaults
 to 1,200 (20 minutes).
 
 <h4 class="pdoc-member-header" id="GetAccessCredentialsArgs-numSecondsBetweenTests">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/getAccessCredentials.ts#L47">property <b>numSecondsBetweenTests</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/getAccessCredentials.ts#L46">property <b>numSecondsBetweenTests</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numSecondsBetweenTests?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1650,7 +1667,7 @@ the number of seconds to wait between each test of generated credentials.
 Defaults to 7.
 
 <h4 class="pdoc-member-header" id="GetAccessCredentialsArgs-numSequentialSuccesses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/getAccessCredentials.ts#L53">property <b>numSequentialSuccesses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/getAccessCredentials.ts#L52">property <b>numSequentialSuccesses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numSequentialSuccesses?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1660,7 +1677,7 @@ the number of sequential successes required to validate generated
 credentials. Defaults to 8.
 
 <h4 class="pdoc-member-header" id="GetAccessCredentialsArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/getAccessCredentials.ts#L58">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/getAccessCredentials.ts#L57">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1669,7 +1686,7 @@ The name of the Azure secret backend role to read
 credentials from, with no leading or trailing `/`s.
 
 <h4 class="pdoc-member-header" id="GetAccessCredentialsArgs-validateCreds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/getAccessCredentials.ts#L65">property <b>validateCreds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/getAccessCredentials.ts#L64">property <b>validateCreds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validateCreds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1680,7 +1697,7 @@ credentials without checking whether they have fully propagated throughout
 Azure Active Directory. Designating `true` activates testing.
 
 <h3 class="pdoc-module-header" id="GetAccessCredentialsResult" data-link-title="GetAccessCredentialsResult">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/getAccessCredentials.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/getAccessCredentials.ts#L70">
         interface <strong>GetAccessCredentialsResult</strong>
     </a>
 </h3>
@@ -1690,12 +1707,12 @@ Azure Active Directory. Designating `true` activates testing.
 A collection of values returned by getAccessCredentials.
 
 <h4 class="pdoc-member-header" id="GetAccessCredentialsResult-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/getAccessCredentials.ts#L72">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/getAccessCredentials.ts#L71">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccessCredentialsResult-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/getAccessCredentials.ts#L76">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/getAccessCredentials.ts#L75">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1703,7 +1720,7 @@ A collection of values returned by getAccessCredentials.
 The client id for credentials to query the Azure APIs.
 
 <h4 class="pdoc-member-header" id="GetAccessCredentialsResult-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/getAccessCredentials.ts#L80">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/getAccessCredentials.ts#L79">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1711,7 +1728,7 @@ The client id for credentials to query the Azure APIs.
 The client secret for credentials to query the Azure APIs.
 
 <h4 class="pdoc-member-header" id="GetAccessCredentialsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/getAccessCredentials.ts#L84">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/getAccessCredentials.ts#L83">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1719,7 +1736,7 @@ The client secret for credentials to query the Azure APIs.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAccessCredentialsResult-leaseDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/getAccessCredentials.ts#L90">property <b>leaseDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/getAccessCredentials.ts#L89">property <b>leaseDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>leaseDuration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1729,7 +1746,7 @@ to the time the data was requested. Once this time has passed any plan
 generated with this data may fail to apply.
 
 <h4 class="pdoc-member-header" id="GetAccessCredentialsResult-leaseId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/getAccessCredentials.ts#L94">property <b>leaseId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/getAccessCredentials.ts#L93">property <b>leaseId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>leaseId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1737,37 +1754,37 @@ generated with this data may fail to apply.
 The lease identifier assigned by Vault.
 
 <h4 class="pdoc-member-header" id="GetAccessCredentialsResult-leaseRenewable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/getAccessCredentials.ts#L95">property <b>leaseRenewable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/getAccessCredentials.ts#L94">property <b>leaseRenewable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>leaseRenewable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccessCredentialsResult-leaseStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/getAccessCredentials.ts#L96">property <b>leaseStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/getAccessCredentials.ts#L95">property <b>leaseStartTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>leaseStartTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccessCredentialsResult-maxCredValidationSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/getAccessCredentials.ts#L97">property <b>maxCredValidationSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/getAccessCredentials.ts#L96">property <b>maxCredValidationSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxCredValidationSeconds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccessCredentialsResult-numSecondsBetweenTests">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/getAccessCredentials.ts#L98">property <b>numSecondsBetweenTests</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/getAccessCredentials.ts#L97">property <b>numSecondsBetweenTests</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numSecondsBetweenTests?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccessCredentialsResult-numSequentialSuccesses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/getAccessCredentials.ts#L99">property <b>numSequentialSuccesses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/getAccessCredentials.ts#L98">property <b>numSequentialSuccesses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numSequentialSuccesses?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccessCredentialsResult-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/getAccessCredentials.ts#L100">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/getAccessCredentials.ts#L99">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccessCredentialsResult-validateCreds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/azure/getAccessCredentials.ts#L101">property <b>validateCreds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/azure/getAccessCredentials.ts#L100">property <b>validateCreds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validateCreds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>

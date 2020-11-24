@@ -1145,6 +1145,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Database secret backend static roles can be imported using the `backend`, `/static-roles/`, and the `name` e.g.
+
+```sh
+ $ pulumi import vault:database/secretBackendStaticRole:SecretBackendStaticRole example postgres/static-roles/my-role
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>
