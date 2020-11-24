@@ -315,7 +315,6 @@ func main() {
 }
 ```
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3522,6 +3521,18 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+New Relic dashboards can be imported using their ID, e.g.
+
+```sh
+ $ pulumi import newrelic:index/dashboard:Dashboard my_dashboard 8675309
+```
+
+ ~> **NOTE** Due to API restrictions, importing a dashboard resource will set the `grid_column_count` attribute to `3`. If your dashboard is a New Relic One dashboard _and_ uses a 12 column grid, you will need to make sure `grid_column_count` is set to `12` in your configuration, then run `terraform apply` after importing to sync remote state with Terraform state. Also note, cross-account widgets cannot be imported due to API restrictions.
 
 
 

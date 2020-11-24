@@ -20,7 +20,6 @@ exists in New Relic.
 > **NOTE:** Applications that have reported data in the last twelve hours
 cannot be deleted.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -904,6 +903,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Applications can be imported using notation `application_id`, e.g.
+
+```sh
+ $ pulumi import newrelic:plugins/applicationSettings:ApplicationSettings main 6789012345
+```
 
 
 

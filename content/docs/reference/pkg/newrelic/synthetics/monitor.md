@@ -12,7 +12,6 @@ meta_desc: "Explore the Monitor resource of the synthetics module, including exa
 
 Use this resource to create, update, and delete a synthetics monitor in New Relic.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1542,6 +1541,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Synthetics monitors can be imported using the `id`, e.g. bash
+
+```sh
+ $ pulumi import newrelic:synthetics/monitor:Monitor main <id>
+```
 
 
 

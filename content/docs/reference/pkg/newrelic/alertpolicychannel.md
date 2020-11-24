@@ -12,7 +12,6 @@ meta_desc: "Explore the AlertPolicyChannel resource of the New Relic package, in
 
 Use this resource to map alert policies to alert channels in New Relic.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -819,6 +818,18 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Alert policy channels can be imported using the following notation`<policyID>:<channelID>:<channelID>`, e.g.
+
+```sh
+ $ pulumi import newrelic:index/alertPolicyChannel:AlertPolicyChannel foo 123456:3462754:2938324
+```
+
+ When importing `newrelic_alert_policy_channel` resource, the attribute `channel_ids`\* will be set in your Terraform state. You can import multiple channels as long as those channel IDs are included as part of the import ID hash.
 
 
 

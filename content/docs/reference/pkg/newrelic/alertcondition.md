@@ -23,7 +23,6 @@ The `term` mapping supports the following arguments:
   * `threshold` - (Required) Must be 0 or greater.
   * `time_function` - (Required) `all` or `any`.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2371,6 +2370,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Alert conditions can be imported using notation `alert_policy_id:alert_condition_id`, e.g.
+
+```sh
+ $ pulumi import newrelic:index/alertCondition:AlertCondition main 123456:6789012345
+```
 
 
 

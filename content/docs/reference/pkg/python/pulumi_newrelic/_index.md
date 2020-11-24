@@ -114,6 +114,10 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;webhook&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Alert channels can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g. bash</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import newrelic:index/alertChannel:AlertChannel main &lt;id&gt;
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -238,6 +242,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">threshold</span></code> - (Required) Must be 0 or greater.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">time_function</span></code> - (Required) <code class="docutils literal notranslate"><span class="pre">all</span></code> or <code class="docutils literal notranslate"><span class="pre">any</span></code>.</p></li>
 </ul>
+<p>Alert conditions can be imported using notation <code class="docutils literal notranslate"><span class="pre">alert_policy_id:alert_condition_id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import newrelic:index/alertCondition:AlertCondition main <span class="m">123456</span>:6789012345
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -552,14 +560,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_newrelic.AlertMutingRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.</code><code class="sig-name descname">AlertMutingRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="p">:</span> <span class="n">Union[AlertMutingRuleConditionArgs, Mapping[str, Any], Awaitable[Union[AlertMutingRuleConditionArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.AlertMutingRule" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a AlertMutingRule resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[int] account_id: The account id of the MutingRule.
-:param pulumi.Input[pulumi.InputType[‘AlertMutingRuleConditionArgs’]] condition: The condition that defines which violations to target. See Nested condition blocks below for details.
-:param pulumi.Input[str] description: The description of the MutingRule.
-:param pulumi.Input[bool] enabled: Whether the MutingRule is enabled.
-:param pulumi.Input[str] name: The name of the MutingRule.</p>
+<dd><p>Alert conditions can be imported using a composite ID of <code class="docutils literal notranslate"><span class="pre">&lt;account_id&gt;:&lt;muting_rule_id&gt;</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import newrelic:index/alertMutingRule:AlertMutingRule foo <span class="m">538291</span>:6789035
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The account id of the MutingRule.</p></li>
+<li><p><strong>condition</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'AlertMutingRuleConditionArgs'</em><em>]</em><em>]</em>) – The condition that defines which violations to target. See Nested condition blocks below for details.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the MutingRule.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the MutingRule is enabled.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the MutingRule.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="pulumi_newrelic.AlertMutingRule.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">condition</span><span class="p">:</span> <span class="n">Union[AlertMutingRuleConditionArgs, Mapping[str, Any], Awaitable[Union[AlertMutingRuleConditionArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_newrelic.alert_muting_rule.AlertMutingRule<a class="headerlink" href="#pulumi_newrelic.AlertMutingRule.get" title="Permalink to this definition">¶</a></dt>
@@ -699,6 +716,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">])</span>
 </pre></div>
 </div>
+<p>Alert policies can be imported using a composite ID of <code class="docutils literal notranslate"><span class="pre">&lt;id&gt;:&lt;account_id&gt;</span></code>, where <code class="docutils literal notranslate"><span class="pre">account_id</span></code> is the account number scoped to the alert policy resource. Example import</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import newrelic:index/alertPolicy:AlertPolicy foo <span class="m">23423556</span>:4593020
+
+Please note that channel IDs <span class="o">(</span><span class="se">\ </span><span class="sb">``</span>channel_ids<span class="sb">``</span><span class="se">\ </span><span class="o">)</span> *cannot* be imported due channels being a separate resource. However, to add channels to an imported alert policy, you can import the policy, add the <span class="sb">``</span>channel_ids<span class="sb">``</span> attribute with the associated channel IDs, <span class="k">then</span> run <span class="sb">``</span>terraform apply<span class="sb">``</span>. This will result in the original alert policy being destroyed and a new alert policy being created along with the channels being added to the policy.
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -826,6 +849,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">])</span>
 </pre></div>
 </div>
+<p>Alert policy channels can be imported using the following notation<code class="docutils literal notranslate"><span class="pre">&lt;policyID&gt;:&lt;channelID&gt;:&lt;channelID&gt;</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import newrelic:index/alertPolicyChannel:AlertPolicyChannel foo <span class="m">123456</span>:3462754:2938324
+
+When importing <span class="sb">``</span>newrelic_alert_policy_channel<span class="sb">``</span> resource, the attribute <span class="sb">``</span>channel_ids<span class="sb">``</span><span class="se">\ </span>* will be <span class="nb">set</span> in your Terraform state. You can import multiple channels as long as those channel IDs are included as part of the import ID hash.
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -933,6 +962,10 @@ invalidate the previous API key(s).</p>
     <span class="n">ingest_type</span><span class="o">=</span><span class="s2">&quot;LICENSE&quot;</span><span class="p">,</span>
     <span class="n">key_type</span><span class="o">=</span><span class="s2">&quot;INGEST&quot;</span><span class="p">,</span>
     <span class="n">notes</span><span class="o">=</span><span class="s2">&quot;To be used with service X&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Existing API access keys can be imported using a composite ID of <code class="docutils literal notranslate"><span class="pre">&lt;api_access_key_id&gt;:&lt;key_type&gt;</span></code>. <code class="docutils literal notranslate"><span class="pre">&lt;key_type&gt;</span></code> will be either <code class="docutils literal notranslate"><span class="pre">INGEST</span></code> or <code class="docutils literal notranslate"><span class="pre">USER</span></code>. For example</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import newrelic:index/apiAccessKey:ApiAccessKey foobar <span class="s2">&quot;1234567:INGEST&quot;</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1213,6 +1246,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">])</span>
 </pre></div>
 </div>
+<p>New Relic dashboards can be imported using their ID, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import newrelic:index/dashboard:Dashboard my_dashboard <span class="m">8675309</span>
+
+~&gt; **NOTE** Due to API restrictions, importing a dashboard resource will <span class="nb">set</span> the <span class="sb">``</span>grid_column_count<span class="sb">``</span> attribute to <span class="sb">``</span><span class="m">3</span><span class="sb">``</span>. If your dashboard is a New Relic One dashboard *and* uses a <span class="m">12</span> column grid, you will need to make sure <span class="sb">``</span>grid_column_count<span class="sb">``</span> is <span class="nb">set</span> to <span class="sb">``</span><span class="m">12</span><span class="sb">``</span> in your configuration, <span class="k">then</span> run <span class="sb">``</span>terraform apply<span class="sb">``</span> after importing to sync remote state with Terraform state. Also note, cross-account widgets cannot be imported due to API restrictions.
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1365,6 +1404,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">])</span>
 </pre></div>
 </div>
+<p>New Relic One entity tags can be imported using a concatenated string of the format</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;guid&gt;</span></code>, e.g. bash</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import newrelic:index/entityTags:EntityTags foo MjUyMDUyOHxBUE18QVBRTElDQVRJT058MjE1MDM3Nzk1
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1454,6 +1498,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">account_id</span><span class="o">=</span><span class="mi">12345</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Example description&quot;</span><span class="p">,</span>
     <span class="n">nrql</span><span class="o">=</span><span class="s2">&quot;SELECT uniqueCount(account_id) AS ``Transaction.account_id`` FROM Transaction FACET appName, name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>New Relic Events to Metrics rules can be imported using a concatenated string of the format</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;account_id&gt;:&lt;rule_id&gt;</span></code>, e.g. bash</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import newrelic:index/eventsToMetricsRule:EventsToMetricsRule foo <span class="m">12345</span>:34567
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1769,6 +1818,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> - (Optional) Threshold value, computed against the <code class="docutils literal notranslate"><span class="pre">comparison</span></code> operator. Supported by <code class="docutils literal notranslate"><span class="pre">infra_metric</span></code> and <code class="docutils literal notranslate"><span class="pre">infra_process_running</span></code> alert condition types.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">time_function</span></code> - (Optional) Indicates if the condition needs to be sustained or to just break the threshold once; <code class="docutils literal notranslate"><span class="pre">all</span></code> or <code class="docutils literal notranslate"><span class="pre">any</span></code>. Supported by the <code class="docutils literal notranslate"><span class="pre">infra_metric</span></code> alert condition type.</p></li>
 </ul>
+<p>Infrastructure alert conditions can be imported using a composite ID of <code class="docutils literal notranslate"><span class="pre">&lt;policy_id&gt;:&lt;condition_id&gt;</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import newrelic:index/infraAlertCondition:InfraAlertCondition main <span class="m">12345</span>:67890
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1993,6 +2046,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">duration</span></code> - (Optional) <strong>DEPRECATED:</strong> Use <code class="docutils literal notranslate"><span class="pre">threshold_duration</span></code> instead. The duration of time, in <em>minutes</em>, that the threshold must violate for in order to create a violation. Must be within 1-120 (inclusive).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">time_function</span></code> - (Optional) <strong>DEPRECATED:</strong> Use <code class="docutils literal notranslate"><span class="pre">threshold_occurrences</span></code> instead. The criteria for how many data points must be in violation for the specified threshold duration. Valid values are: <code class="docutils literal notranslate"><span class="pre">all</span></code> or <code class="docutils literal notranslate"><span class="pre">any</span></code>.</p></li>
 </ul>
+<p>Alert conditions can be imported using a composite ID of <code class="docutils literal notranslate"><span class="pre">&lt;policy_id&gt;:&lt;condition_id&gt;:&lt;conditionType&gt;</span></code>, e.g. // For <code class="docutils literal notranslate"><span class="pre">baseline</span></code> conditions</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import newrelic:index/nrqlAlertCondition:NrqlAlertCondition foo <span class="m">538291</span>:6789035:baseline
+
+// For <span class="sb">``</span>static<span class="sb">``</span> conditions
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import newrelic:index/nrqlAlertCondition:NrqlAlertCondition foo <span class="m">538291</span>:6789035:static
+
+// For <span class="sb">``</span>outlier<span class="sb">``</span> conditions
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import newrelic:index/nrqlAlertCondition:NrqlAlertCondition foo <span class="m">538291</span>:6789035:outlier
+
+The actual values <span class="k">for</span> <span class="sb">``</span>policy_id<span class="sb">``</span> and <span class="sb">``</span>condition_id<span class="sb">``</span> can be retrieved from the following New Relic URL when viewing the NRQL alert condition you want to import<span class="se">\ </span>:raw-html-m2r:<span class="sb">`</span>&lt;small&gt;alerts.newrelic.com/accounts/**<span class="se">\&lt;</span>account_id<span class="se">\&gt;</span>**/policies/**<span class="se">\&lt;</span>policy_id<span class="se">\&gt;</span>**/conditions/**<span class="se">\&lt;</span>condition_id<span class="se">\&gt;</span>**/edit&lt;/small&gt;<span class="sb">`</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
