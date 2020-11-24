@@ -28,9 +28,9 @@ jobs:
           github_token: ${{ secrets.PULUMI_BOT_TOKEN }}
 
   build-tfgen-provider-docs:
-    name: Building ${{ env.PROVIDER_NAME }} docs @ ${{ env.PROVIDER_VERSION }}
     runs-on: ubuntu-latest
     steps:
+      - run: echo "Building ${{ env.PROVIDER_NAME }} docs @ ${{ env.PROVIDER_VERSION }}"
       - name: checkout docs repo
         uses: actions/checkout@v2
         with:
