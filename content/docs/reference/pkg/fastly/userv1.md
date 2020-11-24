@@ -802,6 +802,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+A Fastly User can be imported using their user ID, e.g.
+
+```sh
+ $ pulumi import fastly:index/userv1:Userv1 demo xxxxxxxxxxxxxxxxxxxx
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
