@@ -14,6 +14,7 @@ meta_desc: "Explore the PipelineScheduleVariable resource of the GitLab package,
 
 This resource allows you to create and manage variables for pipeline schedules.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -919,6 +920,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

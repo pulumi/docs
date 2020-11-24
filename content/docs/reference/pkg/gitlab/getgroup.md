@@ -14,6 +14,7 @@ meta_desc: "Explore the GetGroup function of the GitLab package, including examp
 
 Provides details about a specific group in the gitlab provider.
 
+
 {{% examples %}}
 ## Example Usage
 

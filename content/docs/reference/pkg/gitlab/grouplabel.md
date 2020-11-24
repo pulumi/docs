@@ -901,6 +901,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Gitlab group labels can be imported using an id made up of `{group_id}:{group_label_id}`, e.g.
+
+```sh
+ $ pulumi import gitlab:index/groupLabel:GroupLabel example 12345:fixme
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

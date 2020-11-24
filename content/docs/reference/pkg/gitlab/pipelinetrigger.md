@@ -14,6 +14,7 @@ meta_desc: "Explore the PipelineTrigger resource of the GitLab package, includin
 
 This resource allows you to create and manage pipeline triggers
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -788,6 +789,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

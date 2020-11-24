@@ -1174,6 +1174,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+GitLab project variables can be imported using an id made up of `project:key:environment_scope`, e.g.
+
+```sh
+ $ pulumi import gitlab:index/projectVariable:ProjectVariable example '12345:project_variable_key:*'
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

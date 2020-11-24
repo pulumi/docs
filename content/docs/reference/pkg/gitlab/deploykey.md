@@ -899,6 +899,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+GitLab deploy keys can be imported using an id made up of `{project_id}:{deploy_key_id}`, e.g.
+
+```sh
+ $ pulumi import gitlab:index/deployKey:DeployKey test 1:3
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
