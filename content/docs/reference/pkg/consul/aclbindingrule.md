@@ -13,6 +13,7 @@ meta_desc: "Explore the AclBindingRule resource of the Consul package, including
 Starting with Consul 1.5.0, the consul.AclBindingRule resource can be used to
 managed Consul ACL binding rules.
 
+
 {{% examples %}}
 ## Example Usage
 

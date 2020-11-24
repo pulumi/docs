@@ -20,6 +20,7 @@ communication, and relationships can be made between independent pairs of
 datacenters, so not all servers need to be fully connected. This allows for
 complex topologies among Consul datacenters like hub/spoke and more general trees.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -13,6 +13,7 @@ meta_desc: "Explore the Node resource of the Consul package, including examples,
 Provides access to Node data in Consul. This can be used to define a
 node. Currently, defining health checks is not supported.
 
+
 {{% examples %}}
 ## Example Usage
 

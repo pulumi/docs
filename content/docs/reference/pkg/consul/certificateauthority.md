@@ -735,6 +735,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+`certificate_authority` can be imported
+
+```sh
+ $ pulumi import consul:index/certificateAuthority:CertificateAuthority connect connect-ca
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

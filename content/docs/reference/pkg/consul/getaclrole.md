@@ -13,6 +13,7 @@ meta_desc: "Explore the GetAclRole function of the Consul package, including exa
 The `consul.AclRole` data source returns the information related to a
 [Consul ACL Role](https://www.consul.io/api/acl/roles.html).
 
+
 {{% examples %}}
 ## Example Usage
 

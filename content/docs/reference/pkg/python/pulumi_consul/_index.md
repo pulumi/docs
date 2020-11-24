@@ -380,6 +380,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p><code class="docutils literal notranslate"><span class="pre">consul_acl_policy</span></code> can be imported</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import consul:index/aclPolicy:AclPolicy my-policy 1c90ef03-a6dd-6a8c-ac49-042ad3752896
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -498,6 +502,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">service_identities</span><span class="o">=</span><span class="p">[</span><span class="n">consul</span><span class="o">.</span><span class="n">AclRoleServiceIdentityArgs</span><span class="p">(</span>
         <span class="n">service_name</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
     <span class="p">)])</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">consul_acl_role</span></code> can be imported</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import consul:index/aclRole:AclRole <span class="nb">read</span> 816a195f-6cb1-2e8d-92af-3011ae706318
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -623,6 +631,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">policies</span><span class="o">=</span><span class="p">[</span><span class="n">agent</span><span class="o">.</span><span class="n">name</span><span class="p">])</span>
 </pre></div>
 </div>
+<p><code class="docutils literal notranslate"><span class="pre">consul_acl_token</span></code> can be imported. This is especially useful to manage the anonymous and the master token with Terraform</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import consul:index/aclToken:AclToken anonymous <span class="m">00000000</span>-0000-0000-0000-000000000002
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import consul:index/aclToken:AclToken master-token 624d94ca-bc5c-f960-4e83-0a609cf588be
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -739,11 +754,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_consul.AclTokenPolicyAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AclTokenPolicyAttachment</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclTokenPolicyAttachment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a AclTokenPolicyAttachment resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] policy: The name of the policy attached to the token.
-:param pulumi.Input[str] token_id: The id of the token.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">consul_acl_token_policy_attachment</span></code> can be imported. This is especially useful to manage the policies attached to the anonymous and the master tokens with Terraform</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import consul:index/aclTokenPolicyAttachment:AclTokenPolicyAttachment anonymous <span class="m">00000000</span>-0000-0000-0000-000000000002:policy_name
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import consul:index/aclTokenPolicyAttachment:AclTokenPolicyAttachment master-token 624d94ca-bc5c-f960-4e83-0a609cf588be:policy_name
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the policy attached to the token.</p></li>
+<li><p><strong>token_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the token.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="pulumi_consul.AclTokenPolicyAttachment.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_consul.acl_token_policy_attachment.AclTokenPolicyAttachment<a class="headerlink" href="#pulumi_consul.AclTokenPolicyAttachment.get" title="Permalink to this definition">¶</a></dt>
@@ -1383,6 +1410,10 @@ the Certificate Authority used by <a class="reference external" href="https://ww
         <span class="s2">&quot;existing_arn&quot;</span><span class="p">:</span> <span class="s2">&quot;arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-123456789012&quot;</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="n">connect_provider</span><span class="o">=</span><span class="s2">&quot;aws-pca&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">certificate_authority</span></code> can be imported</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import consul:index/certificateAuthority:CertificateAuthority connect connect-ca
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2311,6 +2342,10 @@ registered on nodes that have a running Consul agent.</p>
 <span class="n">pg</span> <span class="o">=</span> <span class="n">consul</span><span class="o">.</span><span class="n">get_service</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;postgresql&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p><code class="docutils literal notranslate"><span class="pre">consul_intention</span></code> can be imported</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import consul:index/intention:Intention database 657a57d6-0d56-57e2-31cb-e9f1ed3c18dd
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2461,16 +2496,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_consul.KeyPrefix">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">KeyPrefix</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">namespace</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path_prefix</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subkey_collection</span><span class="p">:</span> <span class="n">Union[Sequence[Union[KeyPrefixSubkeyCollectionArgs, Mapping[str, Any], Awaitable[Union[KeyPrefixSubkeyCollectionArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[KeyPrefixSubkeyCollectionArgs, Mapping[str, Any], Awaitable[Union[KeyPrefixSubkeyCollectionArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subkeys</span><span class="p">:</span> <span class="n">Union[Mapping[str, Union[str, Awaitable[str], Output[T]]], Awaitable[Mapping[str, Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.KeyPrefix" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a KeyPrefix resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] datacenter: The datacenter to use. This overrides the</p>
-<blockquote>
-<div><p>agent’s default datacenter and the datacenter in the provider setup.</p>
-</div></blockquote>
+<dd><p><code class="docutils literal notranslate"><span class="pre">consul_key_prefix</span></code> can be imported. This is useful when the path already and you know all keys in path must be removed.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import consul:index/keyPrefix:KeyPrefix myapp_config myapp/config/
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>datacenter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The datacenter to use. This overrides the
+agent’s default datacenter and the datacenter in the provider setup.</p></li>
 <li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace to create the keys within.</p></li>
 <li><p><strong>path_prefix</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the common prefix shared by all keys
 that will be managed by this resource instance. In most cases this will
@@ -3256,17 +3292,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_consul.PreparedQuery">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">PreparedQuery</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connect</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datacenter</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dns</span><span class="p">:</span> <span class="n">Union[PreparedQueryDnsArgs, Mapping[str, Any], Awaitable[Union[PreparedQueryDnsArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">failover</span><span class="p">:</span> <span class="n">Union[PreparedQueryFailoverArgs, Mapping[str, Any], Awaitable[Union[PreparedQueryFailoverArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ignore_check_ids</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">near</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">node_meta</span><span class="p">:</span> <span class="n">Union[Mapping[str, Union[str, Awaitable[str], Output[T]]], Awaitable[Mapping[str, Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">only_passing</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_meta</span><span class="p">:</span> <span class="n">Union[Mapping[str, Union[str, Awaitable[str], Output[T]]], Awaitable[Mapping[str, Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">session</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stored_token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">template</span><span class="p">:</span> <span class="n">Union[PreparedQueryTemplateArgs, Mapping[str, Any], Awaitable[Union[PreparedQueryTemplateArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.PreparedQuery" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a PreparedQuery resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] connect: When <code class="docutils literal notranslate"><span class="pre">true</span></code> the prepared query will return connect</p>
-<blockquote>
-<div><p>proxy services for a queried service.  Conditions such as <code class="docutils literal notranslate"><span class="pre">tags</span></code> in the
-prepared query will be matched against the proxy service. Defaults to false.</p>
-</div></blockquote>
+<dd><p><code class="docutils literal notranslate"><span class="pre">consul_prepared_query</span></code> can be imported with the query’s ID in the Consul HTTP API.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import consul:index/preparedQuery:PreparedQuery my_service 71ecfb82-717a-4258-b4b6-2fb75144d856
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>connect</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When <code class="docutils literal notranslate"><span class="pre">true</span></code> the prepared query will return connect
+proxy services for a queried service.  Conditions such as <code class="docutils literal notranslate"><span class="pre">tags</span></code> in the
+prepared query will be matched against the proxy service. Defaults to false.</p></li>
 <li><p><strong>datacenter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The datacenter to use. This overrides the
 agent’s default datacenter and the datacenter in the provider setup.</p></li>
 <li><p><strong>dns</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'PreparedQueryDnsArgs'</em><em>]</em><em>]</em>) – Settings for controlling the DNS response details.</p></li>

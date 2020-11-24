@@ -15,6 +15,7 @@ meta_desc: "Explore the GetNetworkAreaMembers function of the Consul package, in
 The `consul.getNetworkAreaMembers` data source provides a list of the Consul
 servers present in a specific network area.
 
+
 {{% examples %}}
 ## Example Usage
 

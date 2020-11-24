@@ -13,6 +13,7 @@ meta_desc: "Explore the GetKeys function of the Consul package, including exampl
 The `consul.Keys` resource reads values from the Consul key/value store.
 This is a powerful way dynamically set values in templates.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -14,6 +14,7 @@ The [Configuration Entry](https://www.consul.io/docs/agent/config_entries.html)
 resource can be used to provide cluster-wide defaults for various aspects of
 Consul.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -16,6 +16,7 @@ The `consul.AclToken` data source returns the information related to the
 If you want to get the secret ID associated with a token, use the
 [`consul.getAclTokenSecretId` data source](https://www.terraform.io/docs/providers/consul/d/acl_token_secret_id.html).
 
+
 {{% examples %}}
 ## Example Usage
 

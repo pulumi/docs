@@ -16,6 +16,7 @@ of Consul to automatically manage Consul servers.
 It includes to automatically cleanup dead servers, monitor the status of the Raft
 cluster and stable server introduction.
 
+
 {{% examples %}}
 ## Example Usage
 

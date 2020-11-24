@@ -17,6 +17,7 @@ nodes from a different WAN-attached Consul datacenter.
 
 
 
+
 ## Using GetNodes {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

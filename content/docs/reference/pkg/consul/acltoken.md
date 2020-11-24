@@ -1113,6 +1113,20 @@ generate a random uuid.
 
 
 
+## Import
+
+
+`consul_acl_token` can be imported. This is especially useful to manage the anonymous and the master token with Terraform
+
+```sh
+ $ pulumi import consul:index/aclToken:AclToken anonymous 00000000-0000-0000-0000-000000000002
+```
+
+```sh
+ $ pulumi import consul:index/aclToken:AclToken master-token 624d94ca-bc5c-f960-4e83-0a609cf588be
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>
