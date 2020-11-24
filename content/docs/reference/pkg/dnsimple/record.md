@@ -1260,6 +1260,20 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+DNSimple resources can be imported using their domain name and numeric ID, e.g.
+
+```sh
+ $ pulumi import dnsimple:index/record:Record resource_name example.com_1234
+```
+
+ The numeric ID can be found in the URL when editing a record on the dnsimple web dashboard.
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

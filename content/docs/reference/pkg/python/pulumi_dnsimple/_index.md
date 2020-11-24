@@ -99,6 +99,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">value</span><span class="o">=</span><span class="s2">&quot;192.168.0.11&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>DNSimple resources can be imported using their domain name and numeric ID, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import dnsimple:index/record:Record resource_name example.com_1234
+
+The numeric ID can be found in the URL when editing a record on the dnsimple web dashboard.
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
