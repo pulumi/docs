@@ -12,6 +12,7 @@ meta_desc: "Explore the GetWafRules function of the Cloudflare package, includin
 
 Use this data source to look up [WAF Rules](https://api.cloudflare.com/#waf-rule-groups-properties).
 
+
 {{% examples %}}
 ## Example Usage
 

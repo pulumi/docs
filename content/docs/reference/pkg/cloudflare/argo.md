@@ -809,6 +809,20 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Argo settings can be imported the zone ID.
+
+```sh
+ $ pulumi import cloudflare:index/argo:Argo example d41d8cd98f00b204e9800998ecf8427e
+```
+
+ where `d41d8cd98f00b204e9800998ecf8427e` is the zone ID.
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

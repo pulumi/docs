@@ -809,6 +809,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+The current settings for Bring-Your-Own-IP prefixes can be imported using the prefix ID.
+
+```sh
+ $ pulumi import cloudflare:index/byoIpPrefix:ByoIpPrefix example d41d8cd98f00b204e9800998ecf8427e
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

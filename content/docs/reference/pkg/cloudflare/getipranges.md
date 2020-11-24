@@ -12,6 +12,7 @@ meta_desc: "Explore the GetIpRanges function of the Cloudflare package, includin
 
 Use this data source to get the [IP ranges](https://www.cloudflare.com/ips/) of Cloudflare edge nodes.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -174,13 +175,35 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="chinaipv4cidrblocks_csharp">
+<a href="#chinaipv4cidrblocks_csharp" style="color: inherit; text-decoration: inherit;">China<wbr>Ipv4Cidr<wbr>Blocks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The lexically ordered list of only the IPv4 China CIDR blocks.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="chinaipv6cidrblocks_csharp">
+<a href="#chinaipv6cidrblocks_csharp" style="color: inherit; text-decoration: inherit;">China<wbr>Ipv6Cidr<wbr>Blocks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The lexically ordered list of only the IPv6 China CIDR blocks.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="cidrblocks_csharp">
 <a href="#cidrblocks_csharp" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Blocks</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The lexically ordered list of all CIDR blocks.
+    <dd>{{% md %}}The lexically ordered list of all non-China CIDR blocks.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -225,13 +248,35 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="chinaipv4cidrblocks_go">
+<a href="#chinaipv4cidrblocks_go" style="color: inherit; text-decoration: inherit;">China<wbr>Ipv4Cidr<wbr>Blocks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The lexically ordered list of only the IPv4 China CIDR blocks.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="chinaipv6cidrblocks_go">
+<a href="#chinaipv6cidrblocks_go" style="color: inherit; text-decoration: inherit;">China<wbr>Ipv6Cidr<wbr>Blocks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The lexically ordered list of only the IPv6 China CIDR blocks.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="cidrblocks_go">
 <a href="#cidrblocks_go" style="color: inherit; text-decoration: inherit;">Cidr<wbr>Blocks</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The lexically ordered list of all CIDR blocks.
+    <dd>{{% md %}}The lexically ordered list of all non-China CIDR blocks.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -276,13 +321,35 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="chinaipv4cidrblocks_nodejs">
+<a href="#chinaipv4cidrblocks_nodejs" style="color: inherit; text-decoration: inherit;">china<wbr>Ipv4Cidr<wbr>Blocks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The lexically ordered list of only the IPv4 China CIDR blocks.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="chinaipv6cidrblocks_nodejs">
+<a href="#chinaipv6cidrblocks_nodejs" style="color: inherit; text-decoration: inherit;">china<wbr>Ipv6Cidr<wbr>Blocks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The lexically ordered list of only the IPv6 China CIDR blocks.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="cidrblocks_nodejs">
 <a href="#cidrblocks_nodejs" style="color: inherit; text-decoration: inherit;">cidr<wbr>Blocks</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The lexically ordered list of all CIDR blocks.
+    <dd>{{% md %}}The lexically ordered list of all non-China CIDR blocks.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -327,13 +394,35 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="china_ipv4_cidr_blocks_python">
+<a href="#china_ipv4_cidr_blocks_python" style="color: inherit; text-decoration: inherit;">china_<wbr>ipv4_<wbr>cidr_<wbr>blocks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The lexically ordered list of only the IPv4 China CIDR blocks.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="china_ipv6_cidr_blocks_python">
+<a href="#china_ipv6_cidr_blocks_python" style="color: inherit; text-decoration: inherit;">china_<wbr>ipv6_<wbr>cidr_<wbr>blocks</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The lexically ordered list of only the IPv6 China CIDR blocks.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="cidr_blocks_python">
 <a href="#cidr_blocks_python" style="color: inherit; text-decoration: inherit;">cidr_<wbr>blocks</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}The lexically ordered list of all CIDR blocks.
+    <dd>{{% md %}}The lexically ordered list of all non-China CIDR blocks.
 {{% /md %}}</dd>
 
     <dt class="property-"

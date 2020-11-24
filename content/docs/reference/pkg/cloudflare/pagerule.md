@@ -4187,6 +4187,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Page rules can be imported using a composite ID formed of zone ID and page rule ID, e.g.
+
+```sh
+ $ pulumi import cloudflare:index/pageRule:PageRule default d41d8cd98f00b204e9800998ecf8427e/ch8374ftwdghsif43
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

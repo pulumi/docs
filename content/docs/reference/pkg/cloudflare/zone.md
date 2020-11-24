@@ -1556,6 +1556,20 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Zone resource can be imported using a zone ID, e.g.
+
+```sh
+ $ pulumi import cloudflare:index/zone:Zone example d41d8cd98f00b204e9800998ecf8427e
+```
+
+ where* `d41d8cd98f00b204e9800998ecf8427e` - zone ID, as returned from [API](https://api.cloudflare.com/#zone-list-zones)
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

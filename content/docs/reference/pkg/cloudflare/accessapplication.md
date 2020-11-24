@@ -1954,6 +1954,18 @@ request will be cached.
 
 
 
+## Import
+
+
+Access Applications can be imported using a composite ID formed of zone ID and application ID.
+
+```sh
+ $ pulumi import cloudflare:index/accessApplication:AccessApplication staging cb029e245cfdd66dc8d2e570d5dd3322/d41d8cd98f00b204e9800998ecf8427e
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

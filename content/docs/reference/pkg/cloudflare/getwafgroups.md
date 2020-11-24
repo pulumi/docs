@@ -14,6 +14,7 @@ Use this data source to look up [WAF Rule Groups](https://api.cloudflare.com/#wa
 
 
 
+
 ## Using GetWafGroups {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

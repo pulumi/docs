@@ -1165,6 +1165,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+An existing IP List can be imported using the account ID and list ID
+
+```sh
+ $ pulumi import cloudflare:index/ipList:IpList example d41d8cd98f00b204e9800998ecf8427e/cb029e245cfdd66dc8d2e570d5dd3322
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

@@ -1497,6 +1497,20 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+To import a script, use a script name, e.g. `script_name`
+
+```sh
+ $ pulumi import cloudflare:index/workerScript:WorkerScript default script_name
+```
+
+ where* `script_name` - the script name
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

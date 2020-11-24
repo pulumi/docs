@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/cloudflare | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/cloudflare package."
-git_sha: "f4d3f7a27df5ec9fb3d467a2b1b66099b04ad865"
+git_sha: "ad00fca86bcb72e7bf7125bacc18544a982b2943"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="accountId" data-link-title="accountId">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f4d3f7a27df5ec9fb3d467a2b1b66099b04ad865/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/ad00fca86bcb72e7bf7125bacc18544a982b2943/sdk/nodejs/config/vars.ts#L12">
         let <strong>accountId</strong>
     </a>
 </h3>
@@ -46,7 +46,7 @@ block_external_search_index: true
 Configure API client to always use that account.
 
 <h3 class="pdoc-module-header" id="apiClientLogging" data-link-title="apiClientLogging">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f4d3f7a27df5ec9fb3d467a2b1b66099b04ad865/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/ad00fca86bcb72e7bf7125bacc18544a982b2943/sdk/nodejs/config/vars.ts#L16">
         let <strong>apiClientLogging</strong>
     </a>
 </h3>
@@ -56,7 +56,7 @@ Configure API client to always use that account.
 Whether to print logs from the API client (using the default log library logger)
 
 <h3 class="pdoc-module-header" id="apiKey" data-link-title="apiKey">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f4d3f7a27df5ec9fb3d467a2b1b66099b04ad865/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/ad00fca86bcb72e7bf7125bacc18544a982b2943/sdk/nodejs/config/vars.ts#L20">
         let <strong>apiKey</strong>
     </a>
 </h3>
@@ -66,7 +66,7 @@ Whether to print logs from the API client (using the default log library logger)
 The API key for operations.
 
 <h3 class="pdoc-module-header" id="apiToken" data-link-title="apiToken">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f4d3f7a27df5ec9fb3d467a2b1b66099b04ad865/sdk/nodejs/config/vars.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/ad00fca86bcb72e7bf7125bacc18544a982b2943/sdk/nodejs/config/vars.ts#L24">
         let <strong>apiToken</strong>
     </a>
 </h3>
@@ -76,7 +76,7 @@ The API key for operations.
 The API Token for operations.
 
 <h3 class="pdoc-module-header" id="apiUserServiceKey" data-link-title="apiUserServiceKey">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f4d3f7a27df5ec9fb3d467a2b1b66099b04ad865/sdk/nodejs/config/vars.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/ad00fca86bcb72e7bf7125bacc18544a982b2943/sdk/nodejs/config/vars.ts#L28">
         let <strong>apiUserServiceKey</strong>
     </a>
 </h3>
@@ -86,7 +86,7 @@ The API Token for operations.
 A special Cloudflare API key good for a restricted set of endpoints.
 
 <h3 class="pdoc-module-header" id="email" data-link-title="email">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f4d3f7a27df5ec9fb3d467a2b1b66099b04ad865/sdk/nodejs/config/vars.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/ad00fca86bcb72e7bf7125bacc18544a982b2943/sdk/nodejs/config/vars.ts#L32">
         let <strong>email</strong>
     </a>
 </h3>
@@ -96,7 +96,7 @@ A special Cloudflare API key good for a restricted set of endpoints.
 A registered Cloudflare email address.
 
 <h3 class="pdoc-module-header" id="maxBackoff" data-link-title="maxBackoff">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f4d3f7a27df5ec9fb3d467a2b1b66099b04ad865/sdk/nodejs/config/vars.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/ad00fca86bcb72e7bf7125bacc18544a982b2943/sdk/nodejs/config/vars.ts#L36">
         let <strong>maxBackoff</strong>
     </a>
 </h3>
@@ -106,7 +106,7 @@ A registered Cloudflare email address.
 Maximum backoff period in seconds after failed API calls
 
 <h3 class="pdoc-module-header" id="minBackoff" data-link-title="minBackoff">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f4d3f7a27df5ec9fb3d467a2b1b66099b04ad865/sdk/nodejs/config/vars.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/ad00fca86bcb72e7bf7125bacc18544a982b2943/sdk/nodejs/config/vars.ts#L40">
         let <strong>minBackoff</strong>
     </a>
 </h3>
@@ -116,7 +116,7 @@ Maximum backoff period in seconds after failed API calls
 Minimum backoff period in seconds after failed API calls
 
 <h3 class="pdoc-module-header" id="retries" data-link-title="retries">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f4d3f7a27df5ec9fb3d467a2b1b66099b04ad865/sdk/nodejs/config/vars.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/ad00fca86bcb72e7bf7125bacc18544a982b2943/sdk/nodejs/config/vars.ts#L44">
         let <strong>retries</strong>
     </a>
 </h3>
@@ -126,7 +126,7 @@ Minimum backoff period in seconds after failed API calls
 Maximum number of retries to perform when an API request fails
 
 <h3 class="pdoc-module-header" id="rps" data-link-title="rps">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/f4d3f7a27df5ec9fb3d467a2b1b66099b04ad865/sdk/nodejs/config/vars.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/ad00fca86bcb72e7bf7125bacc18544a982b2943/sdk/nodejs/config/vars.ts#L48">
         let <strong>rps</strong>
     </a>
 </h3>

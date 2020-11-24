@@ -901,6 +901,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Packages can be imported using a composite ID formed of zone ID and the WAF Package ID, e.g.
+
+```sh
+ $ pulumi import cloudflare:index/wafPackage:WafPackage owasp ae36f999674d196762efcc5abb06b345/a25a9a7e9c00afc1fb2e0245519d725b
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

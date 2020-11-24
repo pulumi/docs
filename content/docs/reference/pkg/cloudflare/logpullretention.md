@@ -717,6 +717,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+You can import existing Logpull Retention using the zone ID as the identifier.
+
+```sh
+ $ pulumi import cloudflare:index/logpullRetention:LogpullRetention example fb54f084ca7f7b732d3d3ecbd8ef7bf2
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

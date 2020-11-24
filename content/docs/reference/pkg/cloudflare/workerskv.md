@@ -821,6 +821,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+```sh
+ $ pulumi import cloudflare:index/workersKv:WorkersKv example beaeb6716c9443eaa4deef11763ccca6_test-key
+```
+
+ where- `beaeb6716c9443eaa4deef11763ccca6` is the ID of the namespace and `test-key` is the key
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
