@@ -1289,6 +1289,24 @@ base64 encoded.
 
 
 
+## Import
+
+
+Random Ids can be imported using the `b64_url` with an optional `prefix`. This can be used to replace a config value with a value interpolated from the random provider without experiencing diffs. Example with no prefix
+
+```sh
+ $ pulumi import random:index/randomId:RandomId server p-9hUg
+```
+
+ Example with prefix (prefix is separated by a `,`)
+
+```sh
+ $ pulumi import random:index/randomId:RandomId server my-prefix-,p-9hUg
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

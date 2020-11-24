@@ -13,6 +13,7 @@ meta_desc: "Explore the RandomShuffle resource of the Random package, including 
 The resource `random.RandomShuffle` generates a random permutation of a list
 of strings given as an argument.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1092,6 +1093,8 @@ all time.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
