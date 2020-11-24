@@ -12,7 +12,6 @@ meta_desc: "Explore the Volume resource of the DigitalOcean package, including e
 
 Provides a DigitalOcean Block Storage volume which can be attached to a Droplet in order to provide expanded storage.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1646,6 +1645,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Volumes can be imported using the `volume id`, e.g.
+
+```sh
+ $ pulumi import digitalocean:index/volume:Volume volume 506f78a4-e098-11e5-ad9f-000f53306ae1
+```
 
 
 

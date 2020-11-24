@@ -12,7 +12,6 @@ meta_desc: "Explore the Cdn resource of the DigitalOcean package, including exam
 
 Provides a DigitalOcean CDN Endpoint resource for use with Spaces.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1309,6 +1308,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+CDN Endpoints can be imported using the CDN `id`, e.g.
+
+```sh
+ $ pulumi import digitalocean:index/cdn:Cdn mycdn fb06ad00-351f-45c8-b5eb-13523c438661
+```
 
 
 

@@ -15,7 +15,6 @@ keys for Droplet access. Keys created with this resource
 can be referenced in your Droplet configuration via their ID or
 fingerprint.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -817,6 +816,16 @@ can be read using the file interpolation function
 
 
 
+
+
+## Import
+
+
+SSH Keys can be imported using the `ssh key id`, e.g.
+
+```sh
+ $ pulumi import digitalocean:index/sshKey:SshKey mykey 263654
+```
 
 
 

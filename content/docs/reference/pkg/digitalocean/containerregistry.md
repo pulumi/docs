@@ -13,7 +13,6 @@ meta_desc: "Explore the ContainerRegistry resource of the DigitalOcean package, 
 Provides a DigitalOcean Container Registry resource. A Container Registry is
 a secure, private location to store your containers for rapid deployment.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -875,6 +874,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Container Registries can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import digitalocean:index/containerRegistry:ContainerRegistry myregistry registryname
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the App resource of the DigitalOcean package, including exam
 
 Provides a DigitalOcean App resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -6177,6 +6176,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+An app can be imported using its `id`, e.g.
+
+```sh
+ $ pulumi import digitalocean:index/app:App myapp fb06ad00-351f-45c8-b5eb-13523c438661
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the DatabaseCluster resource of the DigitalOcean package, in
 
 Provides a DigitalOcean database cluster resource.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2619,6 +2618,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Database clusters can be imported using the `id` returned from DigitalOcean, e.g.
+
+```sh
+ $ pulumi import digitalocean:index/databaseCluster:DatabaseCluster mycluster 245bcfd0-7f31-4ce6-a2bc-475a116cca97
+```
 
 
 

@@ -12,7 +12,6 @@ meta_desc: "Explore the DatabaseDb resource of the DigitalOcean package, includi
 
 Provides a DigitalOcean database resource. When creating a new database cluster, a default database with name `defaultdb` will be created. Then, this resource can be used to provide additional database inside the cluster.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -739,6 +738,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Database can be imported using the `id` of the source database cluster and the `name` of the database joined with a comma. For example
+
+```sh
+ $ pulumi import digitalocean:index:DatabaseDb database-example 245bcfd0-7f31-4ce6-a2bc-475a116cca97,foobar
+```
 
 
 

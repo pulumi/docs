@@ -14,7 +14,6 @@ Provides a DigitalOcean database user resource. When creating a new database clu
 
 > **NOTE:** Any new users created will always have `normal` role, only the default user that comes with database cluster creation has `primary` role. Additional permissions must be managed manually.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1005,6 +1004,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Database user can be imported using the `id` of the source database cluster and the `name` of the user joined with a comma. For example
+
+```sh
+ $ pulumi import digitalocean:index:DatabaseUser user-example 245bcfd0-7f31-4ce6-a2bc-475a116cca97,foobar
+```
 
 
 

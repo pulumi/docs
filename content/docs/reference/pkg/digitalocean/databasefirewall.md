@@ -14,7 +14,6 @@ Provides a DigitalOcean database firewall resource allowing you to restrict
 connections to your database to trusted sources. You may limit connections to
 specific Droplets, Kubernetes clusters, or IP addresses.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1161,6 +1160,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Database firewalls can be imported using the `id` of the target database cluster For example
+
+```sh
+ $ pulumi import digitalocean:index:DatabaseFirewall example-fw 5f55c6cd-863b-4907-99b8-7e09b0275d54
+```
 
 
 

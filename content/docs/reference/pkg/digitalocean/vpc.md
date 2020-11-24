@@ -15,7 +15,6 @@ Provides a [DigitalOcean VPC](https://developers.digitalocean.com/documentation/
 VPCs are virtual networks containing resources that can communicate with each
 other in full isolation, using private IP addresses.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1252,6 +1251,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+A VPC can be imported using its `id`, e.g.
+
+```sh
+ $ pulumi import digitalocean:index/vpc:Vpc example 506f78a4-e098-11e5-ad9f-000f53306ae1
+```
 
 
 
