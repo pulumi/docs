@@ -12,7 +12,6 @@ meta_desc: "Explore the AlertChannel resource of the New Relic package, includin
 
 Use this resource to create and manage New Relic alert channels.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1808,6 +1807,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Alert channels can be imported using the `id`, e.g. bash
+
+```sh
+ $ pulumi import newrelic:index/alertChannel:AlertChannel main <id>
+```
 
 
 

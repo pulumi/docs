@@ -24,7 +24,6 @@ Please be very careful when updating existing `newrelic.ApiAccessKey` resources 
 and `newrelic_api_access_key.notes` are updatable. All other resource attributes will force a resource recreation which will
 invalidate the previous API key(s).
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1176,6 +1175,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Existing API access keys can be imported using a composite ID of `<api_access_key_id>:<key_type>`. `<key_type>` will be either `INGEST` or `USER`. For example
+
+```sh
+ $ pulumi import newrelic:index/apiAccessKey:ApiAccessKey foobar "1234567:INGEST"
+```
 
 
 

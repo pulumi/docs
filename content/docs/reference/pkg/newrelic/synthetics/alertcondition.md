@@ -14,7 +14,6 @@ Use this resource to create and manage synthetics alert conditions in New Relic.
 
 > **NOTE:** The newrelic.NrqlAlertCondition resource is preferred for configuring alerts conditions. In most cases feature parity can be achieved with a NRQL query. Other condition types may be deprecated in the future and receive fewer product updates.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1000,6 +999,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Synthetics alert conditions can be imported using a composite ID of `<policy_id>:<condition_id>`, e.g.
+
+```sh
+ $ pulumi import newrelic:synthetics/alertCondition:AlertCondition main 12345:67890
+```
 
 
 

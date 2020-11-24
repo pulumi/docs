@@ -12,7 +12,6 @@ meta_desc: "Explore the MonitorScript resource of the synthetics module, includi
 
 Use this resource to update a synthetics monitor script in New Relic.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -718,6 +717,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Synthetics monitor scripts can be imported using the `id`, e.g. bash
+
+```sh
+ $ pulumi import newrelic:synthetics/monitorScript:MonitorScript main <id>
+```
 
 
 

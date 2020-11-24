@@ -43,7 +43,6 @@ The `term` block the following arguments:
 
 
 
-
 ## Create a NrqlAlertCondition Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -3689,6 +3688,30 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Alert conditions can be imported using a composite ID of `<policy_id>:<condition_id>:<conditionType>`, e.g. // For `baseline` conditions
+
+```sh
+ $ pulumi import newrelic:index/nrqlAlertCondition:NrqlAlertCondition foo 538291:6789035:baseline
+```
+
+ // For `static` conditions
+
+```sh
+ $ pulumi import newrelic:index/nrqlAlertCondition:NrqlAlertCondition foo 538291:6789035:static
+```
+
+ // For `outlier` conditions
+
+```sh
+ $ pulumi import newrelic:index/nrqlAlertCondition:NrqlAlertCondition foo 538291:6789035:outlier
+```
+
+ The actual values for `policy_id` and `condition_id` can be retrieved from the following New Relic URL when viewing the NRQL alert condition you want to import<small>alerts.newrelic.com/accounts/**\<account_id\>**/policies/**\<policy_id\>**/conditions/**\<condition_id\>**/edit</small>
 
 
 

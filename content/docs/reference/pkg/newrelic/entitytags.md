@@ -12,7 +12,6 @@ meta_desc: "Explore the EntityTags resource of the New Relic package, including 
 
 Use this resource to create, update, and delete tags for a New Relic One entity.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -937,6 +936,18 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+New Relic One entity tags can be imported using a concatenated string of the format
+
+`<guid>`, e.g. bash
+
+```sh
+ $ pulumi import newrelic:index/entityTags:EntityTags foo MjUyMDUyOHxBUE18QVBRTElDQVRJT058MjE1MDM3Nzk1
+```
 
 
 
