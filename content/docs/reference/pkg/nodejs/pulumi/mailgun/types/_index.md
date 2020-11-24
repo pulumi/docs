@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/mailgun | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/mailgun package."
-git_sha: "f4aada507c7c5f156286bc2625d7ccd73501c33c"
+git_sha: "974040fb63dcd14c659fba8a47de589d357bbbd6"
 block_external_search_index: true
 ---
 

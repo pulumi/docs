@@ -989,6 +989,20 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Routes can be imported using `ROUTE_ID` and `region` via `import` command. Route ID can be found on Mailgun portal in section `Receiving/Routes`. Region has to be chosen from `eu` or `us` (when no selection `us` is applied).
+
+hcl
+
+```sh
+ $ pulumi import mailgun:index/route:Route test eu:123456789
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
