@@ -3933,6 +3933,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+An Okta User can be imported via the ID.
+
+```sh
+ $ pulumi import okta:user/user:User example <user id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

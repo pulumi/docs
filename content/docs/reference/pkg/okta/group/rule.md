@@ -996,6 +996,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+An Okta Group Rule can be imported via the Okta ID.
+
+```sh
+ $ pulumi import okta:group/rule:Rule example <group rule id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

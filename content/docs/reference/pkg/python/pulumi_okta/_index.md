@@ -41,6 +41,10 @@ anything, please consult the source <a class="reference external" href="https://
     <span class="p">])</span>
 </pre></div>
 </div>
+<p>An event hook can be imported via the Okta ID.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import okta:index/eventHook:EventHook example &lt;hook id&gt;
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -227,6 +231,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="p">),</span>
     <span class="p">],</span>
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;SMS_VERIFY_CODE&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>An Okta SMS Template can be imported via the template type.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import okta:index/templateSms:TemplateSms example &lt;template type&gt;
 </pre></div>
 </div>
 <dl class="field-list simple">

@@ -1733,6 +1733,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+An inline hook can be imported via the Okta ID.
+
+```sh
+ $ pulumi import okta:inline/hook:Hook example <hook id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

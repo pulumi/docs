@@ -3632,6 +3632,16 @@ no-op, use client_id for that behavior instead.
 
 
 
+## Import
+
+
+An OIDC Application can be imported via the Okta ID.
+
+```sh
+ $ pulumi import okta:app/oAuth:OAuth example <app id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

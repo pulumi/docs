@@ -2472,6 +2472,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+A Three Field App can be imported via the Okta ID.
+
+```sh
+ $ pulumi import okta:app/threeField:ThreeField example <app id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

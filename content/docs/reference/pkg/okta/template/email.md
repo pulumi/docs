@@ -1040,6 +1040,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+An Okta Email Template can be imported via the template type.
+
+```sh
+ $ pulumi import okta:template/email:Email example <template type>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

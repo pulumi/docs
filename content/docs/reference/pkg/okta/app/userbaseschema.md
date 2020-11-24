@@ -1171,6 +1171,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+App user base schema property can be imported via the property index and app id.
+
+```sh
+ $ pulumi import okta:app/userBaseSchema:UserBaseSchema example <app id>/<property name>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

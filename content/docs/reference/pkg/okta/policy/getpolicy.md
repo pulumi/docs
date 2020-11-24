@@ -12,6 +12,7 @@ meta_desc: "Explore the GetPolicy function of the policy module, including examp
 
 Use this data source to retrieve a policy from Okta.
 
+
 {{% examples %}}
 ## Example Usage
 

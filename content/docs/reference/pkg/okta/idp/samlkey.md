@@ -1159,6 +1159,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+A SAML IdP Signing Key can be imported via the key id.
+
+```sh
+ $ pulumi import okta:idp/samlKey:SamlKey example <key id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

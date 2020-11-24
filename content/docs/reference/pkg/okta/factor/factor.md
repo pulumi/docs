@@ -14,6 +14,7 @@ Allows you to manage the activation of Okta MFA methods.
 
 This resource allows you to manage Okta MFA methods.
 
+
 {{% examples %}}
 ## Example Usage
 

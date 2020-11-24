@@ -1079,6 +1079,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+User base schema property can be imported via the property index.
+
+```sh
+ $ pulumi import okta:user/baseSchema:BaseSchema example <property name>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

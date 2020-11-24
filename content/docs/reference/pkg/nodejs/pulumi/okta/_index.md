@@ -3,7 +3,7 @@ title: "Package @pulumi/okta"
 title_tag: "Package @pulumi/okta | Node.js SDK"
 linktitle: "@pulumi/okta"
 meta_desc: "Explore members of the @pulumi/okta package."
-git_sha: "9eb6765cb5c172fee12abf7c2e74f88b3878a206"
+git_sha: "c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a"
 block_external_search_index: true
 ---
 
@@ -81,7 +81,7 @@ import * as okta from "@pulumi/okta";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="EventHook" data-link-title="EventHook">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L45">
         Resource <strong>EventHook</strong>
     </a>
 </h3>
@@ -116,8 +116,16 @@ const example = new okta.EventHook("example", {
 });
 ```
 
+#### Import
+
+An event hook can be imported via the Okta ID.
+
+```sh
+ $ pulumi import okta:index/eventHook:EventHook example <hook id>
+```
+
 <h4 class="pdoc-member-header" id="EventHook-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L86"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L93"> <b>constructor</b></a>
 </h4>
 
 
@@ -131,7 +139,7 @@ Create a EventHook resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EventHook-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L55">method <b>get</b></a>
 </h4>
 
 
@@ -142,14 +150,14 @@ Get an existing EventHook resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EventHook-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L45">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EventHook-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L66">method <b>isInstance</b></a>
 </h4>
 
 
@@ -160,7 +168,7 @@ Returns true if the given object is an instance of EventHook.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EventHook-auth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L69">property <b>auth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L76">property <b>auth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>auth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#EventHookAuth'>EventHookAuth</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -168,7 +176,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Authentication required for event hook request.
 
 <h4 class="pdoc-member-header" id="EventHook-channel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L73">property <b>channel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L80">property <b>channel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>channel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#EventHookChannel'>EventHookChannel</a>&gt;;</code></pre>
@@ -176,7 +184,7 @@ Authentication required for event hook request.
 Details of the endpoint the event hook will hit.
 
 <h4 class="pdoc-member-header" id="EventHook-events">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L77">property <b>events</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L84">property <b>events</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>events: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -184,7 +192,7 @@ Details of the endpoint the event hook will hit.
 The events that will be delivered to this hook. [See here for a list of supported events](https://developer.okta.com/docs/reference/api/event-types/?q=event-hook-eligible).
 
 <h4 class="pdoc-member-header" id="EventHook-headers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L81">property <b>headers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L88">property <b>headers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>headers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#EventHookHeader'>EventHookHeader</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -192,7 +200,7 @@ The events that will be delivered to this hook. [See here for a list of supporte
 Map of headers to send along in event hook request.
 
 <h4 class="pdoc-member-header" id="EventHook-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -201,7 +209,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EventHook-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L85">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L92">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -209,12 +217,12 @@ deployments and may be missing (undefined) during planning phases.
 The event hook display name.
 
 <h4 class="pdoc-member-header" id="EventHook-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L86">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L93">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventHook-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L45">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -223,7 +231,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/provider.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/provider.ts#L13">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -236,7 +244,7 @@ construction to achieve fine-grained programmatic control over provider settings
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
 </h4>
 
 
@@ -250,14 +258,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
 </h4>
 
 
@@ -268,14 +276,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -284,7 +292,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -293,7 +301,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="TemplateSms" data-link-title="TemplateSms">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/templateSms.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/templateSms.ts#L43">
         Resource <strong>TemplateSms</strong>
     </a>
 </h3>
@@ -326,8 +334,16 @@ const example = new okta.TemplateSms("example", {
 });
 ```
 
+#### Import
+
+An Okta SMS Template can be imported via the template type.
+
+```sh
+ $ pulumi import okta:index/templateSms:TemplateSms example <template type>
+```
+
 <h4 class="pdoc-member-header" id="TemplateSms-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/templateSms.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/templateSms.ts#L82"> <b>constructor</b></a>
 </h4>
 
 
@@ -341,7 +357,7 @@ Create a TemplateSms resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TemplateSms-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/templateSms.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/templateSms.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -352,14 +368,14 @@ Get an existing TemplateSms resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TemplateSms-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/templateSms.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/templateSms.ts#L43">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TemplateSms-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/templateSms.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/templateSms.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -370,7 +386,7 @@ Returns true if the given object is an instance of TemplateSms.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TemplateSms-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/templateSms.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/templateSms.ts#L43">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -379,7 +395,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TemplateSms-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/templateSms.ts#L67">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/templateSms.ts#L74">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>template: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -387,7 +403,7 @@ deployments and may be missing (undefined) during planning phases.
 The SMS message.
 
 <h4 class="pdoc-member-header" id="TemplateSms-translations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/templateSms.ts#L71">property <b>translations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/templateSms.ts#L78">property <b>translations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>translations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#TemplateSmsTranslation'>TemplateSmsTranslation</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -395,7 +411,7 @@ The SMS message.
 Set of translations for particular template.
 
 <h4 class="pdoc-member-header" id="TemplateSms-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/templateSms.ts#L75">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/templateSms.ts#L82">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -403,7 +419,7 @@ Set of translations for particular template.
 SMS template type
 
 <h4 class="pdoc-member-header" id="TemplateSms-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/templateSms.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/templateSms.ts#L43">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -415,7 +431,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="EventHookArgs" data-link-title="EventHookArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L162">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L169">
         interface <strong>EventHookArgs</strong>
     </a>
 </h3>
@@ -425,7 +441,7 @@ deployments.
 The set of arguments for constructing a EventHook resource.
 
 <h4 class="pdoc-member-header" id="EventHookArgs-auth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L166">property <b>auth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L173">property <b>auth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>auth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#EventHookAuth'>EventHookAuth</a>&gt;;</code></pre>
@@ -433,7 +449,7 @@ The set of arguments for constructing a EventHook resource.
 Authentication required for event hook request.
 
 <h4 class="pdoc-member-header" id="EventHookArgs-channel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L170">property <b>channel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L177">property <b>channel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>channel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#EventHookChannel'>EventHookChannel</a>&gt;;</code></pre>
@@ -441,7 +457,7 @@ Authentication required for event hook request.
 Details of the endpoint the event hook will hit.
 
 <h4 class="pdoc-member-header" id="EventHookArgs-events">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L174">property <b>events</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L181">property <b>events</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>events: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -449,7 +465,7 @@ Details of the endpoint the event hook will hit.
 The events that will be delivered to this hook. [See here for a list of supported events](https://developer.okta.com/docs/reference/api/event-types/?q=event-hook-eligible).
 
 <h4 class="pdoc-member-header" id="EventHookArgs-headers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L178">property <b>headers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L185">property <b>headers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>headers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#EventHookHeader'>EventHookHeader</a>&gt;[]&gt;;</code></pre>
@@ -457,7 +473,7 @@ The events that will be delivered to this hook. [See here for a list of supporte
 Map of headers to send along in event hook request.
 
 <h4 class="pdoc-member-header" id="EventHookArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L182">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L189">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -465,12 +481,12 @@ Map of headers to send along in event hook request.
 The event hook display name.
 
 <h4 class="pdoc-member-header" id="EventHookArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L183">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L190">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="EventHookState" data-link-title="EventHookState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L142">
         interface <strong>EventHookState</strong>
     </a>
 </h3>
@@ -480,7 +496,7 @@ The event hook display name.
 Input properties used for looking up and filtering EventHook resources.
 
 <h4 class="pdoc-member-header" id="EventHookState-auth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L139">property <b>auth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L146">property <b>auth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>auth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#EventHookAuth'>EventHookAuth</a>&gt;;</code></pre>
@@ -488,7 +504,7 @@ Input properties used for looking up and filtering EventHook resources.
 Authentication required for event hook request.
 
 <h4 class="pdoc-member-header" id="EventHookState-channel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L143">property <b>channel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L150">property <b>channel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>channel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#EventHookChannel'>EventHookChannel</a>&gt;;</code></pre>
@@ -496,7 +512,7 @@ Authentication required for event hook request.
 Details of the endpoint the event hook will hit.
 
 <h4 class="pdoc-member-header" id="EventHookState-events">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L147">property <b>events</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L154">property <b>events</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>events?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -504,7 +520,7 @@ Details of the endpoint the event hook will hit.
 The events that will be delivered to this hook. [See here for a list of supported events](https://developer.okta.com/docs/reference/api/event-types/?q=event-hook-eligible).
 
 <h4 class="pdoc-member-header" id="EventHookState-headers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L151">property <b>headers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L158">property <b>headers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>headers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#EventHookHeader'>EventHookHeader</a>&gt;[]&gt;;</code></pre>
@@ -512,7 +528,7 @@ The events that will be delivered to this hook. [See here for a list of supporte
 Map of headers to send along in event hook request.
 
 <h4 class="pdoc-member-header" id="EventHookState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L155">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L162">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -520,12 +536,12 @@ Map of headers to send along in event hook request.
 The event hook display name.
 
 <h4 class="pdoc-member-header" id="EventHookState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/eventHook.ts#L156">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/eventHook.ts#L163">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -534,7 +550,7 @@ The event hook display name.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -543,7 +559,7 @@ The event hook display name.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -552,7 +568,7 @@ The event hook display name.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -561,7 +577,7 @@ The event hook display name.
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/provider.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/provider.ts#L62">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -571,7 +587,7 @@ The event hook display name.
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-apiToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/provider.ts#L66">property <b>apiToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/provider.ts#L66">property <b>apiToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -579,7 +595,7 @@ The set of arguments for constructing a Provider resource.
 API Token granting privileges to Okta API.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-backoff">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/provider.ts#L70">property <b>backoff</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/provider.ts#L70">property <b>backoff</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backoff?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -587,7 +603,7 @@ API Token granting privileges to Okta API.
 Use exponential back off strategy for rate limits.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-baseUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/provider.ts#L74">property <b>baseUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/provider.ts#L74">property <b>baseUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baseUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -595,7 +611,7 @@ Use exponential back off strategy for rate limits.
 The Okta url. (Use 'oktapreview.com' for Okta testing)
 
 <h4 class="pdoc-member-header" id="ProviderArgs-maxRetries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/provider.ts#L78">property <b>maxRetries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/provider.ts#L78">property <b>maxRetries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxRetries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -603,7 +619,7 @@ The Okta url. (Use 'oktapreview.com' for Okta testing)
 maximum number of retries to attempt before erroring out.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-maxWaitSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/provider.ts#L82">property <b>maxWaitSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/provider.ts#L82">property <b>maxWaitSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxWaitSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -611,7 +627,7 @@ maximum number of retries to attempt before erroring out.
 maximum seconds to wait when rate limit is hit. We use exponential backoffs when backoff is enabled.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-minWaitSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/provider.ts#L86">property <b>minWaitSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/provider.ts#L86">property <b>minWaitSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minWaitSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -619,7 +635,7 @@ maximum seconds to wait when rate limit is hit. We use exponential backoffs when
 minimum seconds to wait when rate limit is hit. We use exponential backoffs when backoff is enabled.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-orgName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/provider.ts#L90">property <b>orgName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/provider.ts#L90">property <b>orgName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>orgName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -627,7 +643,7 @@ minimum seconds to wait when rate limit is hit. We use exponential backoffs when
 The organization to manage in Okta.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-parallelism">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/provider.ts#L95">property <b>parallelism</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/provider.ts#L95">property <b>parallelism</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parallelism?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -636,7 +652,7 @@ Number of concurrent requests to make within a resource where bulk operations ar
 https://developer.okta.com/docs/api/getting_started/rate-limits.
 
 <h3 class="pdoc-module-header" id="TemplateSmsArgs" data-link-title="TemplateSmsArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/templateSms.ts#L136">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/templateSms.ts#L143">
         interface <strong>TemplateSmsArgs</strong>
     </a>
 </h3>
@@ -646,7 +662,7 @@ https://developer.okta.com/docs/api/getting_started/rate-limits.
 The set of arguments for constructing a TemplateSms resource.
 
 <h4 class="pdoc-member-header" id="TemplateSmsArgs-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/templateSms.ts#L140">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/templateSms.ts#L147">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>template: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -654,7 +670,7 @@ The set of arguments for constructing a TemplateSms resource.
 The SMS message.
 
 <h4 class="pdoc-member-header" id="TemplateSmsArgs-translations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/templateSms.ts#L144">property <b>translations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/templateSms.ts#L151">property <b>translations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>translations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#TemplateSmsTranslation'>TemplateSmsTranslation</a>&gt;[]&gt;;</code></pre>
@@ -662,7 +678,7 @@ The SMS message.
 Set of translations for particular template.
 
 <h4 class="pdoc-member-header" id="TemplateSmsArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/templateSms.ts#L148">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/templateSms.ts#L155">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -670,7 +686,7 @@ Set of translations for particular template.
 SMS template type
 
 <h3 class="pdoc-module-header" id="TemplateSmsState" data-link-title="TemplateSmsState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/templateSms.ts#L118">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/templateSms.ts#L125">
         interface <strong>TemplateSmsState</strong>
     </a>
 </h3>
@@ -680,7 +696,7 @@ SMS template type
 Input properties used for looking up and filtering TemplateSms resources.
 
 <h4 class="pdoc-member-header" id="TemplateSmsState-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/templateSms.ts#L122">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/templateSms.ts#L129">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>template?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -688,7 +704,7 @@ Input properties used for looking up and filtering TemplateSms resources.
 The SMS message.
 
 <h4 class="pdoc-member-header" id="TemplateSmsState-translations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/templateSms.ts#L126">property <b>translations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/templateSms.ts#L133">property <b>translations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>translations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#TemplateSmsTranslation'>TemplateSmsTranslation</a>&gt;[]&gt;;</code></pre>
@@ -696,7 +712,7 @@ The SMS message.
 Set of translations for particular template.
 
 <h4 class="pdoc-member-header" id="TemplateSmsState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/9eb6765cb5c172fee12abf7c2e74f88b3878a206/sdk/nodejs/templateSms.ts#L130">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/templateSms.ts#L137">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

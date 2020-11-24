@@ -1610,6 +1610,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+An event hook can be imported via the Okta ID.
+
+```sh
+ $ pulumi import okta:index/eventHook:EventHook example <hook id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

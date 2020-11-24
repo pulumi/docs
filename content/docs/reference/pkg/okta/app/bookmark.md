@@ -1727,6 +1727,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+A Bookmark App can be imported via the Okta ID.
+
+```sh
+ $ pulumi import okta:app/bookmark:Bookmark example <app id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

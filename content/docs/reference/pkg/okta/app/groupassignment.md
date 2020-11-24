@@ -809,6 +809,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+An application group assignment can be imported via the `app_id` and the `group_id`.
+
+```sh
+ $ pulumi import okta:app/groupAssignment:GroupAssignment example <app_id>/<group_id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

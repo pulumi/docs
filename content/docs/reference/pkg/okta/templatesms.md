@@ -992,6 +992,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+An Okta SMS Template can be imported via the template type.
+
+```sh
+ $ pulumi import okta:index/templateSms:TemplateSms example <template type>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -1520,6 +1520,12 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+There is no reason to import this resource. You can simply create the resource config and point it to a source ID. Once the source is deleted this resources will no longer exist.
+
+
 
 
 <h2 id="package-details">Package Details</h2>

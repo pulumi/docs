@@ -1323,6 +1323,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Authorization Server Claim can be imported via the Auth Server ID and Claim ID.
+
+```sh
+ $ pulumi import okta:auth/serverClaim:ServerClaim example <auth server id>/<claim id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>
