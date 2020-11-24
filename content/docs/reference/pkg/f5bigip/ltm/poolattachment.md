@@ -12,6 +12,7 @@ meta_desc: "Explore the PoolAttachment resource of the ltm module, including exa
 
 `f5bigip.ltm.PoolAttachment` Manages nodes membership in pools
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1322,6 +1323,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

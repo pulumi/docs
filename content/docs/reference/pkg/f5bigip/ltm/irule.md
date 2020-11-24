@@ -16,6 +16,7 @@ For resources should be named with their "full path". The full path is the combi
 
 
 
+
 ## Create a IRule Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -630,6 +631,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

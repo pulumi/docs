@@ -14,6 +14,7 @@ meta_desc: "Explore the Device resource of the cm module, including examples, in
 
 This resource is helpful when configuring the BIG-IP device in cluster or in HA mode.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -892,6 +893,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

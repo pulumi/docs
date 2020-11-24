@@ -14,6 +14,7 @@ meta_desc: "Explore the Do resource of the f5 BIG-IP package, including examples
 
 This resource is helpful to configure do declarative JSON on BIG-IP.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -777,6 +778,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the DeviceGroup resource of the cm module, including example
 
 `f5bigip.cm.DeviceGroup` A device group is a collection of BIG-IP devices that are configured to securely synchronize their BIG-IP configuration data, and fail over when needed.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1591,6 +1592,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
