@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSslVpnClientCerts function of the vpc module, includi
 
 The SSL-VPN client certificates data source lists lots of SSL-VPN client certificates resource information owned by an Alicloud account.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetGroups function of the dns module, including examples
 
 This data source provides a list of DNS Domain Groups in an Alibaba Cloud account according to the specified filters.
 
+
 {{% examples %}}
 ## Example Usage
 

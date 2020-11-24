@@ -3116,6 +3116,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+DMS Enterprise can be imported using host and port, e.g.
+
+```sh
+ $ pulumi import alicloud:dms/enterpriseInstance:EnterpriseInstance example rm-uf648hgs7874xxxx.mysql.rds.aliyuncs.com:3306
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

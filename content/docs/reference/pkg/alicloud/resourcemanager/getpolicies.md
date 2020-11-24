@@ -14,6 +14,7 @@ This data source provides the Resource Manager Policies of the current Alibaba C
 
 > **NOTE:**  Available in 1.86.0+.
 
+
 {{% examples %}}
 ## Example Usage
 

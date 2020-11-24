@@ -1019,6 +1019,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Log Dashboard can be imported using the id or name, e.g.
+
+```sh
+ $ pulumi import alicloud:log/dashboard:Dashboard example tf-project:tf-logstore:tf-dashboard
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

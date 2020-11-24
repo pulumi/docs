@@ -1012,6 +1012,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Resource Manager Policy can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:resourcemanager/policy:Policy example abc12345
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

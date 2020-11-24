@@ -14,6 +14,7 @@ The `alicloud.ecs.getSecurityGroupRules` data source provides a collection of se
 Each collection item represents a single `ingress` or `egress` permission rule.
 The ID of the security group can be provided via a variable or the result from the other data source `alicloud.ecs.getSecurityGroups`.
 
+
 {{% examples %}}
 ## Example Usage
 

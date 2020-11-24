@@ -14,6 +14,7 @@ This data source provides a list of Route Tables owned by an Alibaba Cloud accou
 
 > **NOTE:** Available in 1.36.0+.
 
+
 {{% examples %}}
 ## Example Usage
 

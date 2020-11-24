@@ -1284,6 +1284,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Container Registry repository can be imported using the `namespace/repository`, e.g.
+
+```sh
+ $ pulumi import alicloud:cr/repo:Repo default `my-namespace/my-repo`
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

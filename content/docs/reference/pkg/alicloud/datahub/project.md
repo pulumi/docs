@@ -890,6 +890,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Datahub project can be imported using the *name* or ID, e.g.
+
+```sh
+ $ pulumi import alicloud:datahub/project:Project example tf_datahub_project
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

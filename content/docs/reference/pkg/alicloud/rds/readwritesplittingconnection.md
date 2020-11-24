@@ -1344,6 +1344,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+RDS read write splitting connection can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:rds/readWriteSplittingConnection:ReadWriteSplittingConnection example abc12345678
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

@@ -14,6 +14,7 @@ This data source provides the Resource Manager Policy Attachments of the current
 
 > **NOTE:**  Available in 1.93.0+.
 
+
 {{% examples %}}
 ## Example Usage
 

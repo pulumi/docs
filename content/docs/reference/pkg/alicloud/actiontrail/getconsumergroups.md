@@ -14,6 +14,7 @@ This data source provides a list of ALIKAFKA Consumer Groups in an Alibaba Cloud
 
 > **NOTE:** Available in 1.56.0+
 
+
 {{% examples %}}
 ## Example Usage
 

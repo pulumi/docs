@@ -12,6 +12,7 @@ meta_desc: "Explore the GetZones function of the pvtz module, including examples
 
 This data source lists a number of Private Zones resource information owned by an Alibaba Cloud account.
 
+
 {{% examples %}}
 ## Example Usage
 

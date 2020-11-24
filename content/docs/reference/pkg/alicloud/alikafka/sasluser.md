@@ -1100,6 +1100,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+ALIKAFKA GROUP can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:alikafka/saslUser:SaslUser user alikafka_post-cn-123455abc:username
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

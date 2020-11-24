@@ -14,6 +14,7 @@ This data source provides a list of Nat Gateways owned by an Alibaba Cloud accou
 
 > **NOTE:** Available in 1.37.0+.
 
+
 {{% examples %}}
 ## Example Usage
 

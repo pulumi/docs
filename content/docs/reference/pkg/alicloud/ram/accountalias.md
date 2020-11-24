@@ -627,6 +627,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+RAM account alias can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:ram/accountAlias:AccountAlias example my-alias
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

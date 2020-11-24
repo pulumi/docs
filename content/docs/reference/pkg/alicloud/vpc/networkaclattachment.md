@@ -14,6 +14,7 @@ Provides a network acl attachment resource to associate network acls to vswitche
 
 > **NOTE:** Available in 1.44.0+. Currently, the resource are only available in Hongkong(cn-hongkong), India(ap-south-1), and Indonesia(ap-southeast-1) regions.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -945,6 +946,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

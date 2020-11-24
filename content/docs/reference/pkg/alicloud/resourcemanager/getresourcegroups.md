@@ -14,6 +14,7 @@ This data source provides resource groups of the current Alibaba Cloud user.
 
 > **NOTE:** Available in v1.84.0+.
 
+
 {{% examples %}}
 ## Example Usage
 

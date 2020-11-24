@@ -916,6 +916,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+RAM User Policy attachment can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:ram/userPolicyAttachment:UserPolicyAttachment example user:my-policy:Custom:my-user
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

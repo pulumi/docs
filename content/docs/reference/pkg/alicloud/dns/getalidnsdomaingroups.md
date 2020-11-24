@@ -14,6 +14,7 @@ This data source provides a list of Alidns Domain Groups in an Alibaba Cloud acc
 
 > **NOTE:**  Available in 1.85.0+.
 
+
 {{% examples %}}
 ## Example Usage
 

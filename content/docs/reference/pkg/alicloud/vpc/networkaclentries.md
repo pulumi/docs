@@ -18,6 +18,7 @@ Provides a network acl entries resource to create ingress and egress entries.
 
 > **NOTE:** Using this resource need to open a whitelist.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1710,6 +1711,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

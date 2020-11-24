@@ -730,6 +730,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+image can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:ecs/imageSharePermission:ImageSharePermission default m-uf66yg1q:123456789
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

@@ -30,6 +30,7 @@ The following arguments are supported:
 * `output_file` - (Optional) The name of output file that saves the filter results.
 * `resource_group_id` - (Optional, ForceNew, Available in 1.57.0+) The Id of resource group which the network interface belongs.
 
+
 {{% examples %}}
 ## Example Usage
 

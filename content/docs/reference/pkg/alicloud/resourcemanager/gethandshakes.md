@@ -14,6 +14,7 @@ This data source provides the Resource Manager Handshakes of the current Alibaba
 
 > **NOTE:**  Available in 1.86.0+.
 
+
 {{% examples %}}
 ## Example Usage
 

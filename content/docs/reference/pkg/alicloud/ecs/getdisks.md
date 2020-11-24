@@ -12,6 +12,7 @@ meta_desc: "Explore the GetDisks function of the ecs module, including examples,
 
 This data source provides the disks of the current Alibaba Cloud user.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetGateways function of the vpn module, including exampl
 
 The VPNs data source lists a number of VPNs resource information owned by an Alicloud account.
 
+
 {{% examples %}}
 ## Example Usage
 

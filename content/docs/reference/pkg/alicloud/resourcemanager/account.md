@@ -1351,6 +1351,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Resource Manager Account can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:resourcemanager/account:Account example 13148890145*****
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

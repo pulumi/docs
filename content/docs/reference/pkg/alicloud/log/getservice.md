@@ -16,6 +16,7 @@ For information about Log service and how to use it, see [What is Log Service](h
 
 > **NOTE:** Available in v1.96.0+
 
+
 {{% examples %}}
 ## Example Usage
 

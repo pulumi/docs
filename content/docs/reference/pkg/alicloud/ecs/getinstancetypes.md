@@ -16,6 +16,7 @@ This data source provides the ECS instance types of Alibaba Cloud.
 
 > **NOTE:** If one instance type is sold out, it will not be exported.
 
+
 {{% examples %}}
 ## Example Usage
 

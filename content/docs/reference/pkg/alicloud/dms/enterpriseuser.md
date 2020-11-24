@@ -1348,6 +1348,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+DMS Enterprise User can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:dms/enterpriseUser:EnterpriseUser example 24356xxx
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

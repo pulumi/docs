@@ -14,6 +14,7 @@ This data source provides user-available access groups. Use when you can create 
 
 > NOTE: Available in 1.35.0+
 
+
 {{% examples %}}
 ## Example Usage
 

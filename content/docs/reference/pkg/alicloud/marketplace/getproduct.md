@@ -14,6 +14,7 @@ This data source provides the Market product item details of Alibaba Cloud.
 
 > **NOTE:** Available in 1.69.0+
 
+
 {{% examples %}}
 ## Example Usage
 

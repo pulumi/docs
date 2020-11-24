@@ -1928,6 +1928,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Cloud disk can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:ecs/disk:Disk example d-abc12345678
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

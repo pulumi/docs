@@ -1206,6 +1206,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+CEN instance can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:cen/instanceAttachment:InstanceAttachment example cen-m7i7pjmkon********:vpc-2ze2w07mcy9nz********:VPC:cn-beijing
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

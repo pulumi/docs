@@ -11,6 +11,14 @@ meta_desc: "Explore the TrailDeprecated resource of the actiontrail module, incl
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 <p class="resource-deprecated">Deprecated: {{% md %}}Resource renamed to `Trail`{{% /md %}}</p>
 
+## Import
+
+Action trail can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:actiontrail/trailDeprecated:TrailDeprecated foo abc12345678
+```
+
 
 
 
@@ -1468,6 +1476,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

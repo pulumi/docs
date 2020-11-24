@@ -2171,6 +2171,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+HBase can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:hbase/instance:Instance example hb-wz96815u13k659fvd
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

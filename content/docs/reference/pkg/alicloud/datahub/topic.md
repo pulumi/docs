@@ -1385,6 +1385,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Datahub topic can be imported using the ID, e.g.
+
+```sh
+ $ pulumi import alicloud:datahub/topic:Topic example tf_datahub_project:tf_datahub_topic
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

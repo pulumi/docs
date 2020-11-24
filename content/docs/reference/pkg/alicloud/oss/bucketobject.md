@@ -12,6 +12,7 @@ meta_desc: "Explore the BucketObject resource of the oss module, including examp
 
 Provides a resource to put a object(content or file) to a oss bucket.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2038,6 +2039,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

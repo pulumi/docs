@@ -12,6 +12,7 @@ meta_desc: "Explore the GetRegionRouteEntries function of the cen module, includ
 
 This data source provides CEN Regional Route Entries available to the user.
 
+
 {{% examples %}}
 ## Example Usage
 

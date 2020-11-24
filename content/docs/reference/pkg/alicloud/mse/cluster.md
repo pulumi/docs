@@ -1720,6 +1720,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+MSE Cluster can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:mse/cluster:Cluster example mse-cn-0d9xxxx
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

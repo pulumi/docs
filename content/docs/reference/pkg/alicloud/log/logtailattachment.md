@@ -972,6 +972,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Logtial to machine group can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:log/logTailAttachment:LogTailAttachment example tf-log:tf-log-config:tf-log-machine-group
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

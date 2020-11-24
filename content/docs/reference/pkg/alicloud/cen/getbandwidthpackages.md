@@ -12,6 +12,7 @@ meta_desc: "Explore the GetBandwidthPackages function of the cen module, includi
 
 This data source provides CEN Bandwidth Packages available to the user.
 
+
 {{% examples %}}
 ## Example Usage
 

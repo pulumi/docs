@@ -18,6 +18,7 @@ Provides a CAS Certificate resource.
 
 > **NOTE:** Available in 1.35.0+ .
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -784,6 +785,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -1077,6 +1077,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+CEN Private Zone can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:cen/privateZone:PrivateZone example cen-abc123456:cn-hangzhou
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

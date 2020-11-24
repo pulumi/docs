@@ -14,6 +14,7 @@ This data source provides a list Container Registry namespaces on Alibaba Cloud.
 
 > **NOTE:** Available in v1.35.0+
 
+
 {{% examples %}}
 ## Example Usage
 

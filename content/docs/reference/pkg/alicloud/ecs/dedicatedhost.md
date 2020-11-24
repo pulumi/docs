@@ -2288,6 +2288,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Ecs dedicated host can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:ecs/dedicatedHost:DedicatedHost default dh-2zedmxxxx
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

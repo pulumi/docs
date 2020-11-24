@@ -12,6 +12,7 @@ meta_desc: "Explore the GetPolicies function of the ram module, including exampl
 
 This data source provides a list of RAM policies in an Alibaba Cloud account according to the specified filters.
 
+
 {{% examples %}}
 ## Example Usage
 

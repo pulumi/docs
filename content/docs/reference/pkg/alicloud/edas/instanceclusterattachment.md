@@ -14,6 +14,7 @@ Provides an EDAS instance cluster attachment resource.
 
 > **NOTE:** Available in 1.82.0+
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -972,6 +973,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

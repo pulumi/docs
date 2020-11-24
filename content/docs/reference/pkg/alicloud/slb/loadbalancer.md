@@ -2117,6 +2117,18 @@ Launching "[Performance-guaranteed](https://www.alibabacloud.com/help/doc-detail
 
 
 
+## Import
+
+
+Load balancer can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:slb/loadBalancer:LoadBalancer example lb-abc123456
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

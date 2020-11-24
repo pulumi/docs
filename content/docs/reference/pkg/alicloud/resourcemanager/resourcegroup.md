@@ -1207,6 +1207,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Resource Manager Resource Group can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:resourcemanager/resourceGroup:ResourceGroup example abc123456
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

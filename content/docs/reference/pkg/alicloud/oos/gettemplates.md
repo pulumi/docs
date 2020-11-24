@@ -14,6 +14,7 @@ This data source provides a list of OOS Templates in an Alibaba Cloud account ac
 
 > **NOTE:** Available in v1.92.0+.
 
+
 {{% examples %}}
 ## Example Usage
 

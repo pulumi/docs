@@ -1263,6 +1263,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+DNS instance be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:dns/alidnsInstance:AlidnsInstance example dns-cn-v0h1ldjhfff
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

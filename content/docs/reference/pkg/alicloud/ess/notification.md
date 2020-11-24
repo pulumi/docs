@@ -1010,6 +1010,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Ess notification can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:ess/notification:Notification example 'scaling_group_id:notification_arn'
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

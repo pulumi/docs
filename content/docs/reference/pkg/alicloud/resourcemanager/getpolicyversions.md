@@ -14,6 +14,7 @@ This data source provides the Resource Manager Policy Versions of the current Al
 
 > **NOTE:**  Available in 1.85.0+.
 
+
 {{% examples %}}
 ## Example Usage
 

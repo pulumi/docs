@@ -3446,6 +3446,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Elasticsearch can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:elasticsearch/instance:Instance example es-cn-abcde123456
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

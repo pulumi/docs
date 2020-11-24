@@ -814,6 +814,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+RAM Group membership can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:ram/groupMembership:GroupMembership example my-group
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

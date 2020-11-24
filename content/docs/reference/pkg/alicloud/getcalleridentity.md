@@ -14,6 +14,7 @@ This data source provides the identity of the current user.
 
 > **NOTE:** Available in 1.65.0+.
 
+
 {{% examples %}}
 ## Example Usage
 

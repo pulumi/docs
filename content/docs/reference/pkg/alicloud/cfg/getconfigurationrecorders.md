@@ -16,6 +16,7 @@ This data source provides the Config Configuration Recorders of the current Alib
 
 > **NOTE:** The Cloud Config region only support `cn-shanghai` and `ap-northeast-1`.
 
+
 {{% examples %}}
 ## Example Usage
 

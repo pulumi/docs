@@ -1073,6 +1073,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Datahub subscription can be imported using the ID, e.g.
+
+```sh
+ $ pulumi import alicloud:datahub/subscription:Subscription example tf_datahub_project:tf_datahub_topic:1539073399567UgCzY
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

@@ -809,6 +809,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Container Registry namespace can be imported using the namespace, e.g.
+
+```sh
+ $ pulumi import alicloud:cr/namespace:Namespace default my-namespace
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetBuckets function of the oss module, including example
 
 This data source provides the OSS buckets of the current Alibaba Cloud user.
 
+
 {{% examples %}}
 ## Example Usage
 

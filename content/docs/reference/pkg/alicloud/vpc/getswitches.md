@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSwitches function of the vpc module, including exampl
 
 This data source provides a list of VSwitches owned by an Alibaba Cloud account.
 
+
 {{% examples %}}
 ## Example Usage
 

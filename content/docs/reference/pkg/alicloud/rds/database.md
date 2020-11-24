@@ -1030,6 +1030,18 @@ and have no more than 64 characters.
 
 
 
+## Import
+
+
+RDS database can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:rds/database:Database example "rm-12345:tf_database"
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

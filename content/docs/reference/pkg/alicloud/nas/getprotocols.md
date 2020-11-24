@@ -14,6 +14,7 @@ Provide  a data source to retrieve the type of protocol used to create NAS file 
 
 > **NOTE:** Available in 1.42.0
 
+
 {{% examples %}}
 ## Example Usage
 

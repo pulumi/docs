@@ -12,6 +12,7 @@ meta_desc: "Explore the GetServerCertificates function of the slb module, includ
 
 This data source provides the server certificate list.
 
+
 {{% examples %}}
 ## Example Usage
 

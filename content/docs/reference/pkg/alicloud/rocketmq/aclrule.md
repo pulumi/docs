@@ -1390,6 +1390,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+The Sag Acl Rule can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:rocketmq/aclRule:AclRule example acr-abc123456
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

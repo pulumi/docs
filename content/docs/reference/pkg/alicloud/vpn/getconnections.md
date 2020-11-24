@@ -12,6 +12,7 @@ meta_desc: "Explore the GetConnections function of the vpn module, including exa
 
 The VPN connections data source lists lots of VPN connections resource information owned by an Alicloud account.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -1197,6 +1197,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+ADB account can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:adb/account:Account example "am-12345:tf_account"
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

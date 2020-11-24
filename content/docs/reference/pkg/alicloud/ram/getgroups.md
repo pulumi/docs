@@ -12,6 +12,7 @@ meta_desc: "Explore the GetGroups function of the ram module, including examples
 
 This data source provides a list of RAM Groups in an Alibaba Cloud account according to the specified filters.
 
+
 {{% examples %}}
 ## Example Usage
 

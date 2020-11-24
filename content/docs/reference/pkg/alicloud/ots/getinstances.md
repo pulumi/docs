@@ -12,6 +12,7 @@ meta_desc: "Explore the GetInstances function of the ots module, including examp
 
 This data source provides the ots instances of the current Alibaba Cloud user.
 
+
 {{% examples %}}
 ## Example Usage
 

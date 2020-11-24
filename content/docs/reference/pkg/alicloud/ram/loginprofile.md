@@ -927,6 +927,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+RAM login profile can be imported using the id or user name, e.g.
+
+```sh
+ $ pulumi import alicloud:ram/loginProfile:LoginProfile example my-login
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

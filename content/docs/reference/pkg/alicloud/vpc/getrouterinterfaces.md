@@ -13,6 +13,7 @@ meta_desc: "Explore the GetRouterInterfaces function of the vpc module, includin
 This data source provides information about [router interfaces](https://www.alibabacloud.com/help/doc-detail/52412.htm)
 that connect VPCs together.
 
+
 {{% examples %}}
 ## Example Usage
 

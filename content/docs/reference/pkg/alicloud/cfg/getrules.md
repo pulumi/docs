@@ -16,6 +16,7 @@ This data source provides the Config Rules of the current Alibaba Cloud user.
 
 > **NOTE:** The Cloud Config region only support `cn-shanghai` and `ap-northeast-1`.
 
+
 {{% examples %}}
 ## Example Usage
 

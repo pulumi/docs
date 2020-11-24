@@ -2041,6 +2041,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+WAF instance can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:waf/instance:Instance default waf-cn-132435
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

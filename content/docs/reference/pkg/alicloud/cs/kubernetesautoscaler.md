@@ -20,6 +20,7 @@ This resource will help you to manager cluster-autoscaler in Kubernetes Cluster.
 
 > **NOTE:** Available in 1.65.0+.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -34,21 +35,72 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var @default = new AliCloud.CS.KubernetesAutoscaler("default", new AliCloud.CS.KubernetesAutoscalerArgs
+        var config = new Config();
+        var name = config.Get("name") ?? "autoscaler";
+        var defaultNetworks = Output.Create(AliCloud.Vpc.GetNetworks.InvokeAsync());
+        var defaultImages = Output.Create(AliCloud.Ecs.GetImages.InvokeAsync(new AliCloud.Ecs.GetImagesArgs
         {
-            ClusterId = @var.Cluster_id,
+            Owners = "system",
+            NameRegex = "^centos_7",
+            MostRecent = true,
+        }));
+        var defaultManagedKubernetesClusters = Output.Create(AliCloud.CS.GetManagedKubernetesClusters.InvokeAsync());
+        var defaultInstanceTypes = Output.Create(AliCloud.Ecs.GetInstanceTypes.InvokeAsync(new AliCloud.Ecs.GetInstanceTypesArgs
+        {
+            CpuCoreCount = 2,
+            MemorySize = 4,
+        }));
+        var defaultSecurityGroup = new AliCloud.Ecs.SecurityGroup("defaultSecurityGroup", new AliCloud.Ecs.SecurityGroupArgs
+        {
+            VpcId = defaultNetworks.Apply(defaultNetworks => defaultNetworks.Vpcs[0].Id),
+        });
+        var defaultScalingGroup = new AliCloud.Ess.ScalingGroup("defaultScalingGroup", new AliCloud.Ess.ScalingGroupArgs
+        {
+            ScalingGroupName = name,
+            MinSize = @var.Min_size,
+            MaxSize = @var.Max_size,
+            VswitchIds = 
+            {
+                defaultNetworks.Apply(defaultNetworks => defaultNetworks.Vpcs[0].VswitchIds[0]),
+            },
+            RemovalPolicies = 
+            {
+                "OldestInstance",
+                "NewestInstance",
+            },
+        });
+        var defaultScalingConfiguration = new AliCloud.Ess.ScalingConfiguration("defaultScalingConfiguration", new AliCloud.Ess.ScalingConfigurationArgs
+        {
+            ImageId = defaultImages.Apply(defaultImages => defaultImages.Images[0].Id),
+            SecurityGroupId = defaultSecurityGroup.Id,
+            ScalingGroupId = defaultScalingGroup.Id,
+            InstanceType = defaultInstanceTypes.Apply(defaultInstanceTypes => defaultInstanceTypes.InstanceTypes[0].Id),
+            InternetChargeType = "PayByTraffic",
+            ForceDelete = true,
+            Enable = true,
+            Active = true,
+        });
+        var defaultKubernetesAutoscaler = new AliCloud.CS.KubernetesAutoscaler("defaultKubernetesAutoscaler", new AliCloud.CS.KubernetesAutoscalerArgs
+        {
+            ClusterId = defaultManagedKubernetesClusters.Apply(defaultManagedKubernetesClusters => defaultManagedKubernetesClusters.Clusters[0].Id),
             Nodepools = 
             {
                 new AliCloud.CS.Inputs.KubernetesAutoscalerNodepoolArgs
                 {
-                    Id = "scaling_group_id",
-                    Taints = "c=d:NoSchedule",
+                    Id = defaultScalingGroup.Id,
                     Labels = "a=b",
                 },
             },
             Utilization = @var.Utilization,
             CoolDownDuration = @var.Cool_down_duration,
             DeferScaleInDuration = @var.Defer_scale_in_duration,
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                alicloud_ess_scaling_group.Defalut,
+                defaultScalingConfiguration,
+            },
         });
     }
 
@@ -63,24 +115,97 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cs"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ecs"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/ess"
+	"github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpc"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi/config"
 )
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := cs.NewKubernetesAutoscaler(ctx, "_default", &cs.KubernetesAutoscalerArgs{
-			ClusterId: pulumi.Any(_var.Cluster_id),
+		cfg := config.New(ctx, "")
+		name := "autoscaler"
+		if param := cfg.Get("name"); param != "" {
+			name = param
+		}
+		defaultNetworks, err := vpc.GetNetworks(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		opt0 := "system"
+		opt1 := "^centos_7"
+		opt2 := true
+		defaultImages, err := ecs.GetImages(ctx, &ecs.GetImagesArgs{
+			Owners:     &opt0,
+			NameRegex:  &opt1,
+			MostRecent: &opt2,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		defaultManagedKubernetesClusters, err := cs.GetManagedKubernetesClusters(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		opt3 := 2
+		opt4 := 4
+		defaultInstanceTypes, err := ecs.GetInstanceTypes(ctx, &ecs.GetInstanceTypesArgs{
+			CpuCoreCount: &opt3,
+			MemorySize:   &opt4,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		defaultSecurityGroup, err := ecs.NewSecurityGroup(ctx, "defaultSecurityGroup", &ecs.SecurityGroupArgs{
+			VpcId: pulumi.String(defaultNetworks.Vpcs[0].Id),
+		})
+		if err != nil {
+			return err
+		}
+		defaultScalingGroup, err := ess.NewScalingGroup(ctx, "defaultScalingGroup", &ess.ScalingGroupArgs{
+			ScalingGroupName: pulumi.String(name),
+			MinSize:          pulumi.Any(_var.Min_size),
+			MaxSize:          pulumi.Any(_var.Max_size),
+			VswitchIds: pulumi.StringArray{
+				pulumi.String(defaultNetworks.Vpcs[0].VswitchIds[0]),
+			},
+			RemovalPolicies: pulumi.StringArray{
+				pulumi.String("OldestInstance"),
+				pulumi.String("NewestInstance"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		defaultScalingConfiguration, err := ess.NewScalingConfiguration(ctx, "defaultScalingConfiguration", &ess.ScalingConfigurationArgs{
+			ImageId:            pulumi.String(defaultImages.Images[0].Id),
+			SecurityGroupId:    defaultSecurityGroup.ID(),
+			ScalingGroupId:     defaultScalingGroup.ID(),
+			InstanceType:       pulumi.String(defaultInstanceTypes.InstanceTypes[0].Id),
+			InternetChargeType: pulumi.String("PayByTraffic"),
+			ForceDelete:        pulumi.Bool(true),
+			Enable:             pulumi.Bool(true),
+			Active:             pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cs.NewKubernetesAutoscaler(ctx, "defaultKubernetesAutoscaler", &cs.KubernetesAutoscalerArgs{
+			ClusterId: pulumi.String(defaultManagedKubernetesClusters.Clusters[0].Id),
 			Nodepools: cs.KubernetesAutoscalerNodepoolArray{
 				&cs.KubernetesAutoscalerNodepoolArgs{
-					Id:     pulumi.String("scaling_group_id"),
-					Taints: pulumi.String("c=d:NoSchedule"),
+					Id:     defaultScalingGroup.ID(),
 					Labels: pulumi.String("a=b"),
 				},
 			},
 			Utilization:          pulumi.Any(_var.Utilization),
 			CoolDownDuration:     pulumi.Any(_var.Cool_down_duration),
 			DeferScaleInDuration: pulumi.Any(_var.Defer_scale_in_duration),
-		})
+		}, pulumi.DependsOn([]pulumi.Resource{
+			alicloud_ess_scaling_group.Defalut,
+			defaultScalingConfiguration,
+		}))
 		if err != nil {
 			return err
 		}
@@ -96,16 +221,49 @@ func main() {
 import pulumi
 import pulumi_alicloud as alicloud
 
-default = alicloud.cs.KubernetesAutoscaler("default",
-    cluster_id=var["cluster_id"],
+config = pulumi.Config()
+name = config.get("name")
+if name is None:
+    name = "autoscaler"
+default_networks = alicloud.vpc.get_networks()
+default_images = alicloud.ecs.get_images(owners="system",
+    name_regex="^centos_7",
+    most_recent=True)
+default_managed_kubernetes_clusters = alicloud.cs.get_managed_kubernetes_clusters()
+default_instance_types = alicloud.ecs.get_instance_types(cpu_core_count=2,
+    memory_size=4)
+default_security_group = alicloud.ecs.SecurityGroup("defaultSecurityGroup", vpc_id=default_networks.vpcs[0].id)
+default_scaling_group = alicloud.ess.ScalingGroup("defaultScalingGroup",
+    scaling_group_name=name,
+    min_size=var["min_size"],
+    max_size=var["max_size"],
+    vswitch_ids=[default_networks.vpcs[0].vswitch_ids[0]],
+    removal_policies=[
+        "OldestInstance",
+        "NewestInstance",
+    ])
+default_scaling_configuration = alicloud.ess.ScalingConfiguration("defaultScalingConfiguration",
+    image_id=default_images.images[0].id,
+    security_group_id=default_security_group.id,
+    scaling_group_id=default_scaling_group.id,
+    instance_type=default_instance_types.instance_types[0].id,
+    internet_charge_type="PayByTraffic",
+    force_delete=True,
+    enable=True,
+    active=True)
+default_kubernetes_autoscaler = alicloud.cs.KubernetesAutoscaler("defaultKubernetesAutoscaler",
+    cluster_id=default_managed_kubernetes_clusters.clusters[0].id,
     nodepools=[alicloud.cs.KubernetesAutoscalerNodepoolArgs(
-        id="scaling_group_id",
-        taints="c=d:NoSchedule",
+        id=default_scaling_group.id,
         labels="a=b",
     )],
     utilization=var["utilization"],
     cool_down_duration=var["cool_down_duration"],
-    defer_scale_in_duration=var["defer_scale_in_duration"])
+    defer_scale_in_duration=var["defer_scale_in_duration"],
+    opts=ResourceOptions(depends_on=[
+            alicloud_ess_scaling_group["defalut"],
+            default_scaling_configuration,
+        ]))
 ```
 
 {{% /example %}}
@@ -116,16 +274,54 @@ default = alicloud.cs.KubernetesAutoscaler("default",
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const _default = new alicloud.cs.KubernetesAutoscaler("default", {
-    clusterId: _var.cluster_id,
+const config = new pulumi.Config();
+const name = config.get("name") || "autoscaler";
+const defaultNetworks = alicloud.vpc.getNetworks({});
+const defaultImages = alicloud.ecs.getImages({
+    owners: "system",
+    nameRegex: "^centos_7",
+    mostRecent: true,
+});
+const defaultManagedKubernetesClusters = alicloud.cs.getManagedKubernetesClusters({});
+const defaultInstanceTypes = alicloud.ecs.getInstanceTypes({
+    cpuCoreCount: 2,
+    memorySize: 4,
+});
+const defaultSecurityGroup = new alicloud.ecs.SecurityGroup("defaultSecurityGroup", {vpcId: defaultNetworks.then(defaultNetworks => defaultNetworks.vpcs[0].id)});
+const defaultScalingGroup = new alicloud.ess.ScalingGroup("defaultScalingGroup", {
+    scalingGroupName: name,
+    minSize: _var.min_size,
+    maxSize: _var.max_size,
+    vswitchIds: [defaultNetworks.then(defaultNetworks => defaultNetworks.vpcs[0].vswitchIds[0])],
+    removalPolicies: [
+        "OldestInstance",
+        "NewestInstance",
+    ],
+});
+const defaultScalingConfiguration = new alicloud.ess.ScalingConfiguration("defaultScalingConfiguration", {
+    imageId: defaultImages.then(defaultImages => defaultImages.images[0].id),
+    securityGroupId: defaultSecurityGroup.id,
+    scalingGroupId: defaultScalingGroup.id,
+    instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.instanceTypes[0].id),
+    internetChargeType: "PayByTraffic",
+    forceDelete: true,
+    enable: true,
+    active: true,
+});
+const defaultKubernetesAutoscaler = new alicloud.cs.KubernetesAutoscaler("defaultKubernetesAutoscaler", {
+    clusterId: defaultManagedKubernetesClusters.then(defaultManagedKubernetesClusters => defaultManagedKubernetesClusters.clusters[0].id),
     nodepools: [{
-        id: "scaling_group_id",
-        taints: "c=d:NoSchedule",
+        id: defaultScalingGroup.id,
         labels: "a=b",
     }],
     utilization: _var.utilization,
     coolDownDuration: _var.cool_down_duration,
     deferScaleInDuration: _var.defer_scale_in_duration,
+}, {
+    dependsOn: [
+        alicloud_ess_scaling_group.defalut,
+        defaultScalingConfiguration,
+    ],
 });
 ```
 
@@ -1290,6 +1486,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

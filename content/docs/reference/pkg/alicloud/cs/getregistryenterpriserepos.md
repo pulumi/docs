@@ -14,6 +14,7 @@ This data source provides a list Container Registry Enterprise Edition repositor
 
 > **NOTE:** Available in v1.87.0+
 
+
 {{% examples %}}
 ## Example Usage
 

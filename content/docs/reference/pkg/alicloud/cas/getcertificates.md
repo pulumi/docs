@@ -12,6 +12,7 @@ meta_desc: "Explore the GetCertificates function of the cas module, including ex
 
 This data source provides a list of CAS Certificates in an Alibaba Cloud account according to the specified filters.
 
+
 {{% examples %}}
 ## Example Usage
 

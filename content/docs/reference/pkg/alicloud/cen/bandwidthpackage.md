@@ -1607,6 +1607,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+CEN bandwidth package can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:cen/bandwidthPackage:BandwidthPackage example cenbwp-abc123456
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

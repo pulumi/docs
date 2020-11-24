@@ -995,6 +995,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+EDAS cluster can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:edas/cluster:Cluster cluster cluster_id
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

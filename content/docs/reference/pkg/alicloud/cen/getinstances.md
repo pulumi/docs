@@ -12,6 +12,7 @@ meta_desc: "Explore the GetInstances function of the cen module, including examp
 
 This data source provides CEN instances available to the user.
 
+
 {{% examples %}}
 ## Example Usage
 

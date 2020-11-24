@@ -1096,6 +1096,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+AnalyticDB for PostgreSQL's connection can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:gpdb/connection:Connection example abc12345678
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

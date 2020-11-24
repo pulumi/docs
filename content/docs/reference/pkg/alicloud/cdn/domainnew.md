@@ -1867,6 +1867,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+CDN domain can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:cdn/domainNew:DomainNew example xxxx.com
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

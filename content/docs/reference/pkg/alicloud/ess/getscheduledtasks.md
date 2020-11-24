@@ -14,6 +14,7 @@ This data source provides available scheduled task resources.
 
 > **NOTE:** Available in 1.72.0+
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -892,6 +892,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+CMS Alarm Contact Group can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:cms/alarmContactGroup:AlarmContactGroup example tf-testacc123
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

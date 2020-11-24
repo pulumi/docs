@@ -13,6 +13,7 @@ meta_desc: "Explore the GetImages function of the ecs module, including examples
 This data source provides available image resources. It contains user's private images, system images provided by Alibaba Cloud,
 other public images and the ones available on the image market.
 
+
 {{% examples %}}
 ## Example Usage
 

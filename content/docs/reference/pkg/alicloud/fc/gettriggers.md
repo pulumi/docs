@@ -12,6 +12,7 @@ meta_desc: "Explore the GetTriggers function of the fc module, including example
 
 This data source provides the Function Compute triggers of the current Alibaba Cloud user.
 
+
 {{% examples %}}
 ## Example Usage
 

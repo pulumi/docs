@@ -2363,6 +2363,18 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 
 
 
+## Import
+
+
+WAF domain can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:waf/domain:Domain domain waf-132435:www.domain.com
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
