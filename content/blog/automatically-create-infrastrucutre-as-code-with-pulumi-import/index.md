@@ -1,7 +1,8 @@
 ---
-title: "Introducing The Pulumi Import Command"
-date: "2020-11-23"
-meta_desc: "Introducing the new pulumi import command that will scaffold your Pulumi application code."
+title: "Automatically Create Infrastructure Code with Pulumi"
+date: "2020-11-24"
+meta_desc: "Introducing the new pulumi import command that will automatically scaffold your Pulumi application code when importing existing resources."
+meta_image: cloud_engineering.png
 authors: ["paul-stack"]
 tags: ["import","New-Features", "Pulumi-News", "Features"]
 ---
