@@ -837,6 +837,18 @@ options are: management, policymaker, monitoring, and administrator.
 
 
 
+## Import
+
+
+Users can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import rabbitmq:index/user:User test mctest
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

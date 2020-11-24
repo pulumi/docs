@@ -1575,6 +1575,18 @@ Either this or source_exchange must be specified but not both.
 
 
 
+## Import
+
+
+Shovels can be imported using the `name` and `vhost` E.g.
+
+```sh
+ $ pulumi import rabbitmq:index/shovel:Shovel test shovelTest@test
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

@@ -3,7 +3,7 @@ title: "Package @pulumi/rabbitmq"
 title_tag: "Package @pulumi/rabbitmq | Node.js SDK"
 linktitle: "@pulumi/rabbitmq"
 meta_desc: "Explore members of the @pulumi/rabbitmq package."
-git_sha: "13f236672d6d633f9af92b6a1971f7cc49de07cf"
+git_sha: "dbb3ec30655f767ca0721cbca77ff09981cb2a74"
 block_external_search_index: true
 ---
 
@@ -92,7 +92,7 @@ import * as rabbitmq from "@pulumi/rabbitmq";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Binding" data-link-title="Binding">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L61">
         Resource <strong>Binding</strong>
     </a>
 </h3>
@@ -142,8 +142,18 @@ const testBinding = new rabbitmq.Binding("test", {
 });
 ```
 
+#### Import
+
+Bindings can be imported using the `id` which is composed of
+
+ `vhost/source/destination/destination_type/properties_key`. E.g.
+
+```sh
+ $ pulumi import rabbitmq:index/binding:Binding test test/test/test/queue/%23
+```
+
 <h4 class="pdoc-member-header" id="Binding-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L107"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L117"> <b>constructor</b></a>
 </h4>
 
 
@@ -157,7 +167,7 @@ Create a Binding resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Binding-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L61">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L71">method <b>get</b></a>
 </h4>
 
 
@@ -168,14 +178,14 @@ Get an existing Binding resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Binding-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L51">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L61">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Binding-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L72">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L82">method <b>isInstance</b></a>
 </h4>
 
 
@@ -186,7 +196,7 @@ Returns true if the given object is an instance of Binding.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Binding-arguments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L82">property <b>arguments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L92">property <b>arguments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arguments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -194,12 +204,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Additional key/value arguments for the binding.
 
 <h4 class="pdoc-member-header" id="Binding-argumentsJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L83">property <b>argumentsJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L93">property <b>argumentsJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>argumentsJson: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Binding-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L87">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L97">property <b>destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -207,7 +217,7 @@ Additional key/value arguments for the binding.
 The destination queue or exchange.
 
 <h4 class="pdoc-member-header" id="Binding-destinationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L91">property <b>destinationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L101">property <b>destinationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destinationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -215,7 +225,7 @@ The destination queue or exchange.
 The type of destination (queue or exchange).
 
 <h4 class="pdoc-member-header" id="Binding-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L51">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L61">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -224,7 +234,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Binding-propertiesKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L95">property <b>propertiesKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L105">property <b>propertiesKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>propertiesKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -232,7 +242,7 @@ deployments and may be missing (undefined) during planning phases.
 A unique key to refer to the binding.
 
 <h4 class="pdoc-member-header" id="Binding-routingKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L99">property <b>routingKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L109">property <b>routingKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>routingKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -240,7 +250,7 @@ A unique key to refer to the binding.
 A routing key for the binding.
 
 <h4 class="pdoc-member-header" id="Binding-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L103">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L113">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -248,7 +258,7 @@ A routing key for the binding.
 The source exchange.
 
 <h4 class="pdoc-member-header" id="Binding-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L51">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L61">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -257,7 +267,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Binding-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L107">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L117">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vhost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -265,7 +275,7 @@ deployments.
 The vhost to create the resource in.
 
 <h3 class="pdoc-module-header" id="Exchange" data-link-title="Exchange">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/exchange.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/exchange.ts#L47">
         Resource <strong>Exchange</strong>
     </a>
 </h3>
@@ -300,8 +310,18 @@ const testExchange = new rabbitmq.Exchange("test", {
 });
 ```
 
+#### Import
+
+Exchanges can be imported using the `id` which is composed of
+
+`name@vhost`. E.g.
+
+```sh
+ $ pulumi import rabbitmq:index/exchange:Exchange test test@vhost
+```
+
 <h4 class="pdoc-member-header" id="Exchange-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/exchange.ts#L78"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/exchange.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -315,7 +335,7 @@ Create a Exchange resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Exchange-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/exchange.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/exchange.ts#L57">method <b>get</b></a>
 </h4>
 
 
@@ -326,14 +346,14 @@ Get an existing Exchange resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Exchange-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/exchange.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/exchange.ts#L47">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Exchange-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/exchange.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/exchange.ts#L68">method <b>isInstance</b></a>
 </h4>
 
 
@@ -344,7 +364,7 @@ Returns true if the given object is an instance of Exchange.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Exchange-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/exchange.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/exchange.ts#L47">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -353,7 +373,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Exchange-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/exchange.ts#L69">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/exchange.ts#L78">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -361,7 +381,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the exchange.
 
 <h4 class="pdoc-member-header" id="Exchange-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/exchange.ts#L74">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/exchange.ts#L83">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/rabbitmq/types/output/#ExchangeSettings'>ExchangeSettings</a>&gt;;</code></pre>
@@ -370,7 +390,7 @@ The settings of the exchange. The structure is
 described below.
 
 <h4 class="pdoc-member-header" id="Exchange-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/exchange.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/exchange.ts#L47">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -379,7 +399,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Exchange-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/exchange.ts#L78">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/exchange.ts#L87">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vhost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -387,14 +407,14 @@ deployments.
 The vhost to create the resource in.
 
 <h3 class="pdoc-module-header" id="FederationUpstream" data-link-title="FederationUpstream">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/federationUpstream.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/federationUpstream.ts#L8">
         Resource <strong>FederationUpstream</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>FederationUpstream</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="FederationUpstream-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/federationUpstream.ts#L40"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/federationUpstream.ts#L39"> <b>constructor</b></a>
 </h4>
 
 
@@ -408,7 +428,7 @@ Create a FederationUpstream resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FederationUpstream-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/federationUpstream.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/federationUpstream.ts#L18">method <b>get</b></a>
 </h4>
 
 
@@ -419,14 +439,14 @@ Get an existing FederationUpstream resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FederationUpstream-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/federationUpstream.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/federationUpstream.ts#L8">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FederationUpstream-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/federationUpstream.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/federationUpstream.ts#L29">method <b>isInstance</b></a>
 </h4>
 
 
@@ -437,17 +457,17 @@ Returns true if the given object is an instance of FederationUpstream.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FederationUpstream-component">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/federationUpstream.ts#L37">property <b>component</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/federationUpstream.ts#L36">property <b>component</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>component: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FederationUpstream-definition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/federationUpstream.ts#L38">property <b>definition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/federationUpstream.ts#L37">property <b>definition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>definition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/rabbitmq/types/output/#FederationUpstreamDefinition'>FederationUpstreamDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FederationUpstream-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/federationUpstream.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/federationUpstream.ts#L8">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -456,12 +476,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FederationUpstream-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/federationUpstream.ts#L39">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/federationUpstream.ts#L38">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FederationUpstream-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/federationUpstream.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/federationUpstream.ts#L8">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -470,12 +490,12 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="FederationUpstream-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/federationUpstream.ts#L40">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/federationUpstream.ts#L39">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vhost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="Permissions" data-link-title="Permissions">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/permissions.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/permissions.ts#L44">
         Resource <strong>Permissions</strong>
     </a>
 </h3>
@@ -507,8 +527,18 @@ const testPermissions = new rabbitmq.Permissions("test", {
 });
 ```
 
+#### Import
+
+Permissions can be imported using the `id` which is composed of
+
+`user@vhost`. E.g.
+
+```sh
+ $ pulumi import rabbitmq:index/permissions:Permissions test user@vhost
+```
+
 <h4 class="pdoc-member-header" id="Permissions-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/permissions.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/permissions.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -522,7 +552,7 @@ Create a Permissions resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Permissions-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/permissions.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/permissions.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -533,14 +563,14 @@ Get an existing Permissions resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Permissions-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/permissions.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/permissions.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Permissions-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/permissions.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/permissions.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -551,7 +581,7 @@ Returns true if the given object is an instance of Permissions.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Permissions-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/permissions.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/permissions.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -560,7 +590,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Permissions-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/permissions.ts#L67">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/permissions.ts#L76">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/rabbitmq/types/output/#PermissionsPermissions'>PermissionsPermissions</a>&gt;;</code></pre>
@@ -569,7 +599,7 @@ The settings of the permissions. The structure is
 described below.
 
 <h4 class="pdoc-member-header" id="Permissions-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/permissions.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/permissions.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -578,7 +608,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Permissions-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/permissions.ts#L71">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/permissions.ts#L80">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -586,7 +616,7 @@ deployments.
 The user to apply the permissions to.
 
 <h4 class="pdoc-member-header" id="Permissions-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/permissions.ts#L75">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/permissions.ts#L84">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vhost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -594,7 +624,7 @@ The user to apply the permissions to.
 The vhost to create the resource in.
 
 <h3 class="pdoc-module-header" id="Policy" data-link-title="Policy">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/policy.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/policy.ts#L49">
         Resource <strong>Policy</strong>
     </a>
 </h3>
@@ -633,8 +663,16 @@ const testPolicy = new rabbitmq.Policy("test", {
 });
 ```
 
+#### Import
+
+Policies can be imported using the `id` which is composed of `name@vhost`. E.g.
+
+```sh
+ $ pulumi import rabbitmq:index/policy:Policy test name@vhost
+```
+
 <h4 class="pdoc-member-header" id="Policy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/policy.ts#L82"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/policy.ts#L89"> <b>constructor</b></a>
 </h4>
 
 
@@ -648,7 +686,7 @@ Create a Policy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Policy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/policy.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/policy.ts#L59">method <b>get</b></a>
 </h4>
 
 
@@ -659,14 +697,14 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Policy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/policy.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/policy.ts#L49">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Policy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/policy.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/policy.ts#L70">method <b>isInstance</b></a>
 </h4>
 
 
@@ -677,7 +715,7 @@ Returns true if the given object is an instance of Policy.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Policy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/policy.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/policy.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -686,7 +724,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Policy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/policy.ts#L73">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/policy.ts#L80">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -694,7 +732,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the policy.
 
 <h4 class="pdoc-member-header" id="Policy-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/policy.ts#L78">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/policy.ts#L85">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/rabbitmq/types/output/#PolicyPolicy'>PolicyPolicy</a>&gt;;</code></pre>
@@ -703,7 +741,7 @@ The settings of the policy. The structure is
 described below.
 
 <h4 class="pdoc-member-header" id="Policy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/policy.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/policy.ts#L49">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -712,7 +750,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Policy-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/policy.ts#L82">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/policy.ts#L89">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vhost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -720,7 +758,7 @@ deployments.
 The vhost to create the resource in.
 
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/provider.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/provider.ts#L13">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -733,7 +771,7 @@ construction to achieve fine-grained programmatic control over provider settings
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
 </h4>
 
 
@@ -747,14 +785,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
 </h4>
 
 
@@ -765,14 +803,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -781,7 +819,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -790,7 +828,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Queue" data-link-title="Queue">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/queue.ts#L69">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/queue.ts#L76">
         Resource <strong>Queue</strong>
     </a>
 </h3>
@@ -856,8 +894,16 @@ const testQueue = new rabbitmq.Queue("test", {
 });
 ```
 
+#### Import
+
+Queues can be imported using the `id` which is composed of `name@vhost`. E.g.
+
+```sh
+ $ pulumi import rabbitmq:index/queue:Queue test name@vhost
+```
+
 <h4 class="pdoc-member-header" id="Queue-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/queue.ts#L109"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/queue.ts#L116"> <b>constructor</b></a>
 </h4>
 
 
@@ -871,7 +917,7 @@ Create a Queue resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Queue-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/queue.ts#L79">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/queue.ts#L86">method <b>get</b></a>
 </h4>
 
 
@@ -882,14 +928,14 @@ Get an existing Queue resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Queue-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/queue.ts#L69">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/queue.ts#L76">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Queue-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/queue.ts#L90">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/queue.ts#L97">method <b>isInstance</b></a>
 </h4>
 
 
@@ -900,7 +946,7 @@ Returns true if the given object is an instance of Queue.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Queue-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/queue.ts#L69">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/queue.ts#L76">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -909,7 +955,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Queue-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/queue.ts#L100">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/queue.ts#L107">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -917,7 +963,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the queue.
 
 <h4 class="pdoc-member-header" id="Queue-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/queue.ts#L105">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/queue.ts#L112">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/rabbitmq/types/output/#QueueSettings'>QueueSettings</a>&gt;;</code></pre>
@@ -926,7 +972,7 @@ The settings of the queue. The structure is
 described below.
 
 <h4 class="pdoc-member-header" id="Queue-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/queue.ts#L69">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/queue.ts#L76">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -935,7 +981,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Queue-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/queue.ts#L109">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/queue.ts#L116">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vhost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -943,7 +989,7 @@ deployments.
 The vhost to create the resource in.
 
 <h3 class="pdoc-module-header" id="Shovel" data-link-title="Shovel">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/shovel.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/shovel.ts#L53">
         Resource <strong>Shovel</strong>
     </a>
 </h3>
@@ -986,8 +1032,16 @@ const shovelTest = new rabbitmq.Shovel("shovelTest", {
 });
 ```
 
+#### Import
+
+Shovels can be imported using the `name` and `vhost` E.g.
+
+```sh
+ $ pulumi import rabbitmq:index/shovel:Shovel test shovelTest@test
+```
+
 <h4 class="pdoc-member-header" id="Shovel-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/shovel.ts#L86"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/shovel.ts#L93"> <b>constructor</b></a>
 </h4>
 
 
@@ -1001,7 +1055,7 @@ Create a Shovel resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Shovel-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/shovel.ts#L56">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/shovel.ts#L63">method <b>get</b></a>
 </h4>
 
 
@@ -1012,14 +1066,14 @@ Get an existing Shovel resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Shovel-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/shovel.ts#L46">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/shovel.ts#L53">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Shovel-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/shovel.ts#L67">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/shovel.ts#L74">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1030,7 +1084,7 @@ Returns true if the given object is an instance of Shovel.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Shovel-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/shovel.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/shovel.ts#L53">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1039,7 +1093,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Shovel-info">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/shovel.ts#L78">property <b>info</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/shovel.ts#L85">property <b>info</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>info: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/rabbitmq/types/output/#ShovelInfo'>ShovelInfo</a>&gt;;</code></pre>
@@ -1048,7 +1102,7 @@ The settings of the shovel. The structure is
 described below.
 
 <h4 class="pdoc-member-header" id="Shovel-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/shovel.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/shovel.ts#L89">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1056,7 +1110,7 @@ described below.
 The shovel name.
 
 <h4 class="pdoc-member-header" id="Shovel-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/shovel.ts#L46">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/shovel.ts#L53">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1065,7 +1119,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Shovel-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/shovel.ts#L86">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/shovel.ts#L93">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vhost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1073,7 +1127,7 @@ deployments.
 The vhost to create the resource in.
 
 <h3 class="pdoc-module-header" id="TopicPermissions" data-link-title="TopicPermissions">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/topicPermissions.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/topicPermissions.ts#L44">
         Resource <strong>TopicPermissions</strong>
     </a>
 </h3>
@@ -1105,8 +1159,18 @@ const testTopicPermissions = new rabbitmq.TopicPermissions("test", {
 });
 ```
 
+#### Import
+
+Permissions can be imported using the `id` which is composed of
+
+`user@vhost`. E.g.
+
+```sh
+ $ pulumi import rabbitmq:index/topicPermissions:TopicPermissions test user@vhost
+```
+
 <h4 class="pdoc-member-header" id="TopicPermissions-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/topicPermissions.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/topicPermissions.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -1120,7 +1184,7 @@ Create a TopicPermissions resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TopicPermissions-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/topicPermissions.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/topicPermissions.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -1131,14 +1195,14 @@ Get an existing TopicPermissions resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TopicPermissions-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/topicPermissions.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/topicPermissions.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TopicPermissions-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/topicPermissions.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/topicPermissions.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1149,7 +1213,7 @@ Returns true if the given object is an instance of TopicPermissions.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TopicPermissions-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/topicPermissions.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/topicPermissions.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1158,7 +1222,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TopicPermissions-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/topicPermissions.ts#L67">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/topicPermissions.ts#L76">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/rabbitmq/types/output/#TopicPermissionsPermission'>TopicPermissionsPermission</a>[]&gt;;</code></pre>
@@ -1167,7 +1231,7 @@ The settings of the permissions. The structure is
 described below.
 
 <h4 class="pdoc-member-header" id="TopicPermissions-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/topicPermissions.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/topicPermissions.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1176,7 +1240,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="TopicPermissions-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/topicPermissions.ts#L71">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/topicPermissions.ts#L80">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1184,7 +1248,7 @@ deployments.
 The user to apply the permissions to.
 
 <h4 class="pdoc-member-header" id="TopicPermissions-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/topicPermissions.ts#L75">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/topicPermissions.ts#L84">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vhost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1192,7 +1256,7 @@ The user to apply the permissions to.
 The vhost to create the resource in.
 
 <h3 class="pdoc-module-header" id="User" data-link-title="User">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/user.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/user.ts#L36">
         Resource <strong>User</strong>
     </a>
 </h3>
@@ -1219,8 +1283,16 @@ const test = new rabbitmq.User("test", {
 });
 ```
 
+#### Import
+
+Users can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import rabbitmq:index/user:User test mctest
+```
+
 <h4 class="pdoc-member-header" id="User-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/user.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/user.ts#L77"> <b>constructor</b></a>
 </h4>
 
 
@@ -1234,7 +1306,7 @@ Create a User resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="User-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/user.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/user.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -1245,14 +1317,14 @@ Get an existing User resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="User-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/user.ts#L28">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/user.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="User-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/user.ts#L49">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/user.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1263,7 +1335,7 @@ Returns true if the given object is an instance of User.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="User-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/user.ts#L28">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/user.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1272,7 +1344,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="User-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/user.ts#L59">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/user.ts#L67">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1280,7 +1352,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the user.
 
 <h4 class="pdoc-member-header" id="User-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/user.ts#L64">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/user.ts#L72">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1289,7 +1361,7 @@ The password of the user. The value of this argument
 is plain-text so make sure to secure where this is defined.
 
 <h4 class="pdoc-member-header" id="User-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/user.ts#L69">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/user.ts#L77">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1298,7 +1370,7 @@ Which permission model to apply to the user. Valid
 options are: management, policymaker, monitoring, and administrator.
 
 <h4 class="pdoc-member-header" id="User-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/user.ts#L28">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/user.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1307,7 +1379,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="VHost" data-link-title="VHost">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/vhost.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/vhost.ts#L27">
         Resource <strong>VHost</strong>
     </a>
 </h3>
@@ -1325,8 +1397,16 @@ import * as rabbitmq from "@pulumi/rabbitmq";
 const myVhost = new rabbitmq.VHost("my_vhost", {});
 ```
 
+#### Import
+
+Vhosts can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import rabbitmq:index/vHost:VHost my_vhost my_vhost
+```
+
 <h4 class="pdoc-member-header" id="VHost-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/vhost.ts#L50"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/vhost.ts#L58"> <b>constructor</b></a>
 </h4>
 
 
@@ -1340,7 +1420,7 @@ Create a VHost resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VHost-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/vhost.ts#L29">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/vhost.ts#L37">method <b>get</b></a>
 </h4>
 
 
@@ -1351,14 +1431,14 @@ Get an existing VHost resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VHost-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/vhost.ts#L19">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/vhost.ts#L27">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VHost-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/vhost.ts#L40">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/vhost.ts#L48">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1369,7 +1449,7 @@ Returns true if the given object is an instance of VHost.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VHost-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/vhost.ts#L19">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/vhost.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1378,7 +1458,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VHost-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/vhost.ts#L50">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/vhost.ts#L58">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1386,7 +1466,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the vhost.
 
 <h4 class="pdoc-member-header" id="VHost-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/vhost.ts#L19">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/vhost.ts#L27">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1398,7 +1478,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="BindingArgs" data-link-title="BindingArgs">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L201">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L211">
         interface <strong>BindingArgs</strong>
     </a>
 </h3>
@@ -1408,7 +1488,7 @@ deployments.
 The set of arguments for constructing a Binding resource.
 
 <h4 class="pdoc-member-header" id="BindingArgs-arguments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L205">property <b>arguments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L215">property <b>arguments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arguments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1416,12 +1496,12 @@ The set of arguments for constructing a Binding resource.
 Additional key/value arguments for the binding.
 
 <h4 class="pdoc-member-header" id="BindingArgs-argumentsJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L206">property <b>argumentsJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L216">property <b>argumentsJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>argumentsJson?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BindingArgs-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L210">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L220">property <b>destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1429,7 +1509,7 @@ Additional key/value arguments for the binding.
 The destination queue or exchange.
 
 <h4 class="pdoc-member-header" id="BindingArgs-destinationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L214">property <b>destinationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L224">property <b>destinationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1437,7 +1517,7 @@ The destination queue or exchange.
 The type of destination (queue or exchange).
 
 <h4 class="pdoc-member-header" id="BindingArgs-routingKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L218">property <b>routingKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L228">property <b>routingKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routingKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1445,7 +1525,7 @@ The type of destination (queue or exchange).
 A routing key for the binding.
 
 <h4 class="pdoc-member-header" id="BindingArgs-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L222">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L232">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1453,7 +1533,7 @@ A routing key for the binding.
 The source exchange.
 
 <h4 class="pdoc-member-header" id="BindingArgs-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L226">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L236">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vhost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1461,7 +1541,7 @@ The source exchange.
 The vhost to create the resource in.
 
 <h3 class="pdoc-module-header" id="BindingState" data-link-title="BindingState">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L176">
         interface <strong>BindingState</strong>
     </a>
 </h3>
@@ -1471,7 +1551,7 @@ The vhost to create the resource in.
 Input properties used for looking up and filtering Binding resources.
 
 <h4 class="pdoc-member-header" id="BindingState-arguments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L170">property <b>arguments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L180">property <b>arguments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arguments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1479,12 +1559,12 @@ Input properties used for looking up and filtering Binding resources.
 Additional key/value arguments for the binding.
 
 <h4 class="pdoc-member-header" id="BindingState-argumentsJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L171">property <b>argumentsJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L181">property <b>argumentsJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>argumentsJson?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="BindingState-destination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L175">property <b>destination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L185">property <b>destination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1492,7 +1572,7 @@ Additional key/value arguments for the binding.
 The destination queue or exchange.
 
 <h4 class="pdoc-member-header" id="BindingState-destinationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L179">property <b>destinationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L189">property <b>destinationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1500,7 +1580,7 @@ The destination queue or exchange.
 The type of destination (queue or exchange).
 
 <h4 class="pdoc-member-header" id="BindingState-propertiesKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L183">property <b>propertiesKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L193">property <b>propertiesKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>propertiesKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1508,7 +1588,7 @@ The type of destination (queue or exchange).
 A unique key to refer to the binding.
 
 <h4 class="pdoc-member-header" id="BindingState-routingKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L187">property <b>routingKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L197">property <b>routingKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routingKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1516,7 +1596,7 @@ A unique key to refer to the binding.
 A routing key for the binding.
 
 <h4 class="pdoc-member-header" id="BindingState-source">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L191">property <b>source</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L201">property <b>source</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>source?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1524,7 +1604,7 @@ A routing key for the binding.
 The source exchange.
 
 <h4 class="pdoc-member-header" id="BindingState-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/binding.ts#L195">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/binding.ts#L205">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vhost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1532,7 +1612,7 @@ The source exchange.
 The vhost to create the resource in.
 
 <h3 class="pdoc-module-header" id="ExchangeArgs" data-link-title="ExchangeArgs">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/exchange.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/exchange.ts#L146">
         interface <strong>ExchangeArgs</strong>
     </a>
 </h3>
@@ -1542,7 +1622,7 @@ The vhost to create the resource in.
 The set of arguments for constructing a Exchange resource.
 
 <h4 class="pdoc-member-header" id="ExchangeArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/exchange.ts#L141">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/exchange.ts#L150">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1550,7 +1630,7 @@ The set of arguments for constructing a Exchange resource.
 The name of the exchange.
 
 <h4 class="pdoc-member-header" id="ExchangeArgs-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/exchange.ts#L146">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/exchange.ts#L155">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/rabbitmq/types/input/#ExchangeSettings'>ExchangeSettings</a>&gt;;</code></pre>
@@ -1559,7 +1639,7 @@ The settings of the exchange. The structure is
 described below.
 
 <h4 class="pdoc-member-header" id="ExchangeArgs-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/exchange.ts#L150">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/exchange.ts#L159">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vhost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1567,7 +1647,7 @@ described below.
 The vhost to create the resource in.
 
 <h3 class="pdoc-module-header" id="ExchangeState" data-link-title="ExchangeState">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/exchange.ts#L118">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/exchange.ts#L127">
         interface <strong>ExchangeState</strong>
     </a>
 </h3>
@@ -1577,7 +1657,7 @@ The vhost to create the resource in.
 Input properties used for looking up and filtering Exchange resources.
 
 <h4 class="pdoc-member-header" id="ExchangeState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/exchange.ts#L122">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/exchange.ts#L131">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1585,7 +1665,7 @@ Input properties used for looking up and filtering Exchange resources.
 The name of the exchange.
 
 <h4 class="pdoc-member-header" id="ExchangeState-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/exchange.ts#L127">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/exchange.ts#L136">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/rabbitmq/types/input/#ExchangeSettings'>ExchangeSettings</a>&gt;;</code></pre>
@@ -1594,7 +1674,7 @@ The settings of the exchange. The structure is
 described below.
 
 <h4 class="pdoc-member-header" id="ExchangeState-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/exchange.ts#L131">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/exchange.ts#L140">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vhost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1602,7 +1682,7 @@ described below.
 The vhost to create the resource in.
 
 <h3 class="pdoc-module-header" id="FederationUpstreamArgs" data-link-title="FederationUpstreamArgs">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/federationUpstream.ts#L95">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/federationUpstream.ts#L94">
         interface <strong>FederationUpstreamArgs</strong>
     </a>
 </h3>
@@ -1612,22 +1692,22 @@ The vhost to create the resource in.
 The set of arguments for constructing a FederationUpstream resource.
 
 <h4 class="pdoc-member-header" id="FederationUpstreamArgs-definition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/federationUpstream.ts#L96">property <b>definition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/federationUpstream.ts#L95">property <b>definition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>definition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/rabbitmq/types/input/#FederationUpstreamDefinition'>FederationUpstreamDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FederationUpstreamArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/federationUpstream.ts#L97">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/federationUpstream.ts#L96">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FederationUpstreamArgs-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/federationUpstream.ts#L98">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/federationUpstream.ts#L97">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vhost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="FederationUpstreamState" data-link-title="FederationUpstreamState">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/federationUpstream.ts#L85">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/federationUpstream.ts#L84">
         interface <strong>FederationUpstreamState</strong>
     </a>
 </h3>
@@ -1637,27 +1717,27 @@ The set of arguments for constructing a FederationUpstream resource.
 Input properties used for looking up and filtering FederationUpstream resources.
 
 <h4 class="pdoc-member-header" id="FederationUpstreamState-component">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/federationUpstream.ts#L86">property <b>component</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/federationUpstream.ts#L85">property <b>component</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>component?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FederationUpstreamState-definition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/federationUpstream.ts#L87">property <b>definition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/federationUpstream.ts#L86">property <b>definition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>definition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/rabbitmq/types/input/#FederationUpstreamDefinition'>FederationUpstreamDefinition</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FederationUpstreamState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/federationUpstream.ts#L88">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/federationUpstream.ts#L87">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FederationUpstreamState-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/federationUpstream.ts#L89">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/federationUpstream.ts#L88">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vhost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -1666,7 +1746,7 @@ Input properties used for looking up and filtering FederationUpstream resources.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -1675,7 +1755,7 @@ Input properties used for looking up and filtering FederationUpstream resources.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -1684,7 +1764,7 @@ Input properties used for looking up and filtering FederationUpstream resources.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -1693,7 +1773,7 @@ Input properties used for looking up and filtering FederationUpstream resources.
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="PermissionsArgs" data-link-title="PermissionsArgs">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/permissions.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/permissions.ts#L146">
         interface <strong>PermissionsArgs</strong>
     </a>
 </h3>
@@ -1703,7 +1783,7 @@ Input properties used for looking up and filtering FederationUpstream resources.
 The set of arguments for constructing a Permissions resource.
 
 <h4 class="pdoc-member-header" id="PermissionsArgs-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/permissions.ts#L142">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/permissions.ts#L151">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/rabbitmq/types/input/#PermissionsPermissions'>PermissionsPermissions</a>&gt;;</code></pre>
@@ -1712,7 +1792,7 @@ The settings of the permissions. The structure is
 described below.
 
 <h4 class="pdoc-member-header" id="PermissionsArgs-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/permissions.ts#L146">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/permissions.ts#L155">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1720,7 +1800,7 @@ described below.
 The user to apply the permissions to.
 
 <h4 class="pdoc-member-header" id="PermissionsArgs-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/permissions.ts#L150">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/permissions.ts#L159">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vhost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1728,7 +1808,7 @@ The user to apply the permissions to.
 The vhost to create the resource in.
 
 <h3 class="pdoc-module-header" id="PermissionsState" data-link-title="PermissionsState">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/permissions.ts#L118">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/permissions.ts#L127">
         interface <strong>PermissionsState</strong>
     </a>
 </h3>
@@ -1738,7 +1818,7 @@ The vhost to create the resource in.
 Input properties used for looking up and filtering Permissions resources.
 
 <h4 class="pdoc-member-header" id="PermissionsState-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/permissions.ts#L123">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/permissions.ts#L132">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/rabbitmq/types/input/#PermissionsPermissions'>PermissionsPermissions</a>&gt;;</code></pre>
@@ -1747,7 +1827,7 @@ The settings of the permissions. The structure is
 described below.
 
 <h4 class="pdoc-member-header" id="PermissionsState-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/permissions.ts#L127">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/permissions.ts#L136">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1755,7 +1835,7 @@ described below.
 The user to apply the permissions to.
 
 <h4 class="pdoc-member-header" id="PermissionsState-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/permissions.ts#L131">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/permissions.ts#L140">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vhost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1763,7 +1843,7 @@ The user to apply the permissions to.
 The vhost to create the resource in.
 
 <h3 class="pdoc-module-header" id="PolicyArgs" data-link-title="PolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/policy.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/policy.ts#L151">
         interface <strong>PolicyArgs</strong>
     </a>
 </h3>
@@ -1773,7 +1853,7 @@ The vhost to create the resource in.
 The set of arguments for constructing a Policy resource.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/policy.ts#L148">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/policy.ts#L155">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1781,7 +1861,7 @@ The set of arguments for constructing a Policy resource.
 The name of the policy.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/policy.ts#L153">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/policy.ts#L160">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/rabbitmq/types/input/#PolicyPolicy'>PolicyPolicy</a>&gt;;</code></pre>
@@ -1790,7 +1870,7 @@ The settings of the policy. The structure is
 described below.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/policy.ts#L157">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/policy.ts#L164">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vhost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1798,7 +1878,7 @@ described below.
 The vhost to create the resource in.
 
 <h3 class="pdoc-module-header" id="PolicyState" data-link-title="PolicyState">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/policy.ts#L125">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/policy.ts#L132">
         interface <strong>PolicyState</strong>
     </a>
 </h3>
@@ -1808,7 +1888,7 @@ The vhost to create the resource in.
 Input properties used for looking up and filtering Policy resources.
 
 <h4 class="pdoc-member-header" id="PolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/policy.ts#L129">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/policy.ts#L136">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1816,7 +1896,7 @@ Input properties used for looking up and filtering Policy resources.
 The name of the policy.
 
 <h4 class="pdoc-member-header" id="PolicyState-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/policy.ts#L134">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/policy.ts#L141">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/rabbitmq/types/input/#PolicyPolicy'>PolicyPolicy</a>&gt;;</code></pre>
@@ -1825,7 +1905,7 @@ The settings of the policy. The structure is
 described below.
 
 <h4 class="pdoc-member-header" id="PolicyState-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/policy.ts#L138">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/policy.ts#L145">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vhost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1833,7 +1913,7 @@ described below.
 The vhost to create the resource in.
 
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/provider.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/provider.ts#L61">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -1843,42 +1923,42 @@ The vhost to create the resource in.
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-cacertFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/provider.ts#L62">property <b>cacertFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/provider.ts#L62">property <b>cacertFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cacertFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-clientcertFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/provider.ts#L63">property <b>clientcertFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/provider.ts#L63">property <b>clientcertFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientcertFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-clientkeyFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/provider.ts#L64">property <b>clientkeyFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/provider.ts#L64">property <b>clientkeyFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientkeyFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/provider.ts#L65">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/provider.ts#L65">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-insecure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/provider.ts#L66">property <b>insecure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/provider.ts#L66">property <b>insecure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>insecure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/provider.ts#L67">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/provider.ts#L67">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/provider.ts#L68">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/provider.ts#L68">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="QueueArgs" data-link-title="QueueArgs">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/queue.ts#L168">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/queue.ts#L175">
         interface <strong>QueueArgs</strong>
     </a>
 </h3>
@@ -1888,7 +1968,7 @@ The set of arguments for constructing a Provider resource.
 The set of arguments for constructing a Queue resource.
 
 <h4 class="pdoc-member-header" id="QueueArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/queue.ts#L172">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/queue.ts#L179">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1896,7 +1976,7 @@ The set of arguments for constructing a Queue resource.
 The name of the queue.
 
 <h4 class="pdoc-member-header" id="QueueArgs-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/queue.ts#L177">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/queue.ts#L184">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/rabbitmq/types/input/#QueueSettings'>QueueSettings</a>&gt;;</code></pre>
@@ -1905,7 +1985,7 @@ The settings of the queue. The structure is
 described below.
 
 <h4 class="pdoc-member-header" id="QueueArgs-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/queue.ts#L181">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/queue.ts#L188">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vhost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1913,7 +1993,7 @@ described below.
 The vhost to create the resource in.
 
 <h3 class="pdoc-module-header" id="QueueState" data-link-title="QueueState">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/queue.ts#L149">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/queue.ts#L156">
         interface <strong>QueueState</strong>
     </a>
 </h3>
@@ -1923,7 +2003,7 @@ The vhost to create the resource in.
 Input properties used for looking up and filtering Queue resources.
 
 <h4 class="pdoc-member-header" id="QueueState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/queue.ts#L153">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/queue.ts#L160">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1931,7 +2011,7 @@ Input properties used for looking up and filtering Queue resources.
 The name of the queue.
 
 <h4 class="pdoc-member-header" id="QueueState-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/queue.ts#L158">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/queue.ts#L165">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/rabbitmq/types/input/#QueueSettings'>QueueSettings</a>&gt;;</code></pre>
@@ -1940,7 +2020,7 @@ The settings of the queue. The structure is
 described below.
 
 <h4 class="pdoc-member-header" id="QueueState-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/queue.ts#L162">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/queue.ts#L169">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vhost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1948,7 +2028,7 @@ described below.
 The vhost to create the resource in.
 
 <h3 class="pdoc-module-header" id="ShovelArgs" data-link-title="ShovelArgs">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/shovel.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/shovel.ts#L155">
         interface <strong>ShovelArgs</strong>
     </a>
 </h3>
@@ -1958,7 +2038,7 @@ The vhost to create the resource in.
 The set of arguments for constructing a Shovel resource.
 
 <h4 class="pdoc-member-header" id="ShovelArgs-info">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/shovel.ts#L153">property <b>info</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/shovel.ts#L160">property <b>info</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>info: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/rabbitmq/types/input/#ShovelInfo'>ShovelInfo</a>&gt;;</code></pre>
@@ -1967,7 +2047,7 @@ The settings of the shovel. The structure is
 described below.
 
 <h4 class="pdoc-member-header" id="ShovelArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/shovel.ts#L157">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/shovel.ts#L164">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1975,7 +2055,7 @@ described below.
 The shovel name.
 
 <h4 class="pdoc-member-header" id="ShovelArgs-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/shovel.ts#L161">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/shovel.ts#L168">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vhost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1983,7 +2063,7 @@ The shovel name.
 The vhost to create the resource in.
 
 <h3 class="pdoc-module-header" id="ShovelState" data-link-title="ShovelState">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/shovel.ts#L129">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/shovel.ts#L136">
         interface <strong>ShovelState</strong>
     </a>
 </h3>
@@ -1993,7 +2073,7 @@ The vhost to create the resource in.
 Input properties used for looking up and filtering Shovel resources.
 
 <h4 class="pdoc-member-header" id="ShovelState-info">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/shovel.ts#L134">property <b>info</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/shovel.ts#L141">property <b>info</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>info?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/rabbitmq/types/input/#ShovelInfo'>ShovelInfo</a>&gt;;</code></pre>
@@ -2002,7 +2082,7 @@ The settings of the shovel. The structure is
 described below.
 
 <h4 class="pdoc-member-header" id="ShovelState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/shovel.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/shovel.ts#L145">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2010,7 +2090,7 @@ described below.
 The shovel name.
 
 <h4 class="pdoc-member-header" id="ShovelState-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/shovel.ts#L142">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/shovel.ts#L149">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vhost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2018,7 +2098,7 @@ The shovel name.
 The vhost to create the resource in.
 
 <h3 class="pdoc-module-header" id="TopicPermissionsArgs" data-link-title="TopicPermissionsArgs">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/topicPermissions.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/topicPermissions.ts#L146">
         interface <strong>TopicPermissionsArgs</strong>
     </a>
 </h3>
@@ -2028,7 +2108,7 @@ The vhost to create the resource in.
 The set of arguments for constructing a TopicPermissions resource.
 
 <h4 class="pdoc-member-header" id="TopicPermissionsArgs-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/topicPermissions.ts#L142">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/topicPermissions.ts#L151">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/rabbitmq/types/input/#TopicPermissionsPermission'>TopicPermissionsPermission</a>&gt;[]&gt;;</code></pre>
@@ -2037,7 +2117,7 @@ The settings of the permissions. The structure is
 described below.
 
 <h4 class="pdoc-member-header" id="TopicPermissionsArgs-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/topicPermissions.ts#L146">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/topicPermissions.ts#L155">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2045,7 +2125,7 @@ described below.
 The user to apply the permissions to.
 
 <h4 class="pdoc-member-header" id="TopicPermissionsArgs-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/topicPermissions.ts#L150">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/topicPermissions.ts#L159">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vhost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2053,7 +2133,7 @@ The user to apply the permissions to.
 The vhost to create the resource in.
 
 <h3 class="pdoc-module-header" id="TopicPermissionsState" data-link-title="TopicPermissionsState">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/topicPermissions.ts#L118">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/topicPermissions.ts#L127">
         interface <strong>TopicPermissionsState</strong>
     </a>
 </h3>
@@ -2063,7 +2143,7 @@ The vhost to create the resource in.
 Input properties used for looking up and filtering TopicPermissions resources.
 
 <h4 class="pdoc-member-header" id="TopicPermissionsState-permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/topicPermissions.ts#L123">property <b>permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/topicPermissions.ts#L132">property <b>permissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/rabbitmq/types/input/#TopicPermissionsPermission'>TopicPermissionsPermission</a>&gt;[]&gt;;</code></pre>
@@ -2072,7 +2152,7 @@ The settings of the permissions. The structure is
 described below.
 
 <h4 class="pdoc-member-header" id="TopicPermissionsState-user">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/topicPermissions.ts#L127">property <b>user</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/topicPermissions.ts#L136">property <b>user</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2080,7 +2160,7 @@ described below.
 The user to apply the permissions to.
 
 <h4 class="pdoc-member-header" id="TopicPermissionsState-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/topicPermissions.ts#L131">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/topicPermissions.ts#L140">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vhost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2088,7 +2168,7 @@ The user to apply the permissions to.
 The vhost to create the resource in.
 
 <h3 class="pdoc-module-header" id="UserArgs" data-link-title="UserArgs">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/user.ts#L129">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/user.ts#L137">
         interface <strong>UserArgs</strong>
     </a>
 </h3>
@@ -2098,7 +2178,7 @@ The vhost to create the resource in.
 The set of arguments for constructing a User resource.
 
 <h4 class="pdoc-member-header" id="UserArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/user.ts#L133">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/user.ts#L141">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2106,7 +2186,7 @@ The set of arguments for constructing a User resource.
 The name of the user.
 
 <h4 class="pdoc-member-header" id="UserArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/user.ts#L138">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/user.ts#L146">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2115,7 +2195,7 @@ The password of the user. The value of this argument
 is plain-text so make sure to secure where this is defined.
 
 <h4 class="pdoc-member-header" id="UserArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/user.ts#L143">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/user.ts#L151">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2124,7 +2204,7 @@ Which permission model to apply to the user. Valid
 options are: management, policymaker, monitoring, and administrator.
 
 <h3 class="pdoc-module-header" id="UserState" data-link-title="UserState">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/user.ts#L109">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/user.ts#L117">
         interface <strong>UserState</strong>
     </a>
 </h3>
@@ -2134,7 +2214,7 @@ options are: management, policymaker, monitoring, and administrator.
 Input properties used for looking up and filtering User resources.
 
 <h4 class="pdoc-member-header" id="UserState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/user.ts#L113">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/user.ts#L121">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2142,7 +2222,7 @@ Input properties used for looking up and filtering User resources.
 The name of the user.
 
 <h4 class="pdoc-member-header" id="UserState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/user.ts#L118">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/user.ts#L126">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2151,7 +2231,7 @@ The password of the user. The value of this argument
 is plain-text so make sure to secure where this is defined.
 
 <h4 class="pdoc-member-header" id="UserState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/user.ts#L123">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/user.ts#L131">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2160,7 +2240,7 @@ Which permission model to apply to the user. Valid
 options are: management, policymaker, monitoring, and administrator.
 
 <h3 class="pdoc-module-header" id="VHostArgs" data-link-title="VHostArgs">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/vhost.ts#L93">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/vhost.ts#L101">
         interface <strong>VHostArgs</strong>
     </a>
 </h3>
@@ -2170,7 +2250,7 @@ options are: management, policymaker, monitoring, and administrator.
 The set of arguments for constructing a VHost resource.
 
 <h4 class="pdoc-member-header" id="VHostArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/vhost.ts#L97">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/vhost.ts#L105">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2178,7 +2258,7 @@ The set of arguments for constructing a VHost resource.
 The name of the vhost.
 
 <h3 class="pdoc-module-header" id="VHostState" data-link-title="VHostState">
-    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/vhost.ts#L83">
+    <a href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/vhost.ts#L91">
         interface <strong>VHostState</strong>
     </a>
 </h3>
@@ -2188,7 +2268,7 @@ The name of the vhost.
 Input properties used for looking up and filtering VHost resources.
 
 <h4 class="pdoc-member-header" id="VHostState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/13f236672d6d633f9af92b6a1971f7cc49de07cf/sdk/nodejs/vhost.ts#L87">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-rabbitmq/blob/dbb3ec30655f767ca0721cbca77ff09981cb2a74/sdk/nodejs/vhost.ts#L95">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

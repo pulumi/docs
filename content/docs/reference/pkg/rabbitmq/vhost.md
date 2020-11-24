@@ -619,6 +619,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Vhosts can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import rabbitmq:index/vHost:VHost my_vhost my_vhost
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

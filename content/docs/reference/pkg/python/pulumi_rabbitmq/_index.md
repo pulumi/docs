@@ -54,6 +54,13 @@ between a queue an exchange.</p>
     <span class="n">vhost</span><span class="o">=</span><span class="n">test_v_host</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Bindings can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code> which is composed of</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">vhost/source/destination/destination_type/properties_key</span></code>. E.g.</p>
+</div></blockquote>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import rabbitmq:index/binding:Binding <span class="nb">test</span> test/test/test/queue/%23
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -194,6 +201,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;fanout&quot;</span><span class="p">,</span>
     <span class="p">),</span>
     <span class="n">vhost</span><span class="o">=</span><span class="n">guest</span><span class="o">.</span><span class="n">vhost</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Exchanges can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code> which is composed of</p>
+<p><code class="docutils literal notranslate"><span class="pre">name&#64;vhost</span></code>. E.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import rabbitmq:index/exchange:Exchange <span class="nb">test</span> test@vhost
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -367,6 +379,11 @@ permissions.</p>
     <span class="n">vhost</span><span class="o">=</span><span class="n">test_v_host</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Permissions can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code> which is composed of</p>
+<p><code class="docutils literal notranslate"><span class="pre">user&#64;vhost</span></code>. E.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import rabbitmq:index/permissions:Permissions <span class="nb">test</span> user@vhost
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -483,6 +500,10 @@ and queues.</p>
         <span class="n">priority</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
     <span class="p">),</span>
     <span class="n">vhost</span><span class="o">=</span><span class="n">guest</span><span class="o">.</span><span class="n">vhost</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Policies can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code> which is composed of <code class="docutils literal notranslate"><span class="pre">name&#64;vhost</span></code>. E.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import rabbitmq:index/policy:Policy <span class="nb">test</span> name@vhost
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -680,6 +701,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">vhost</span><span class="o">=</span><span class="n">guest</span><span class="o">.</span><span class="n">vhost</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Queues can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code> which is composed of <code class="docutils literal notranslate"><span class="pre">name&#64;vhost</span></code>. E.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import rabbitmq:index/queue:Queue <span class="nb">test</span> name@vhost
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -801,6 +826,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">vhost</span><span class="o">=</span><span class="n">test_v_host</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Shovels can be imported using the <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">vhost</span></code> E.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import rabbitmq:index/shovel:Shovel <span class="nb">test</span> shovelTest@test
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -912,6 +941,11 @@ topic permissions.</p>
     <span class="n">vhost</span><span class="o">=</span><span class="n">test_v_host</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Permissions can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code> which is composed of</p>
+<p><code class="docutils literal notranslate"><span class="pre">user&#64;vhost</span></code>. E.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import rabbitmq:index/topicPermissions:TopicPermissions <span class="nb">test</span> user@vhost
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1020,6 +1054,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">])</span>
 </pre></div>
 </div>
+<p>Users can be imported using the <code class="docutils literal notranslate"><span class="pre">name</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import rabbitmq:index/user:User <span class="nb">test</span> mctest
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1120,6 +1158,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="kn">import</span> <span class="nn">pulumi_rabbitmq</span> <span class="k">as</span> <span class="nn">rabbitmq</span>
 
 <span class="n">my_vhost</span> <span class="o">=</span> <span class="n">rabbitmq</span><span class="o">.</span><span class="n">VHost</span><span class="p">(</span><span class="s2">&quot;myVhost&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Vhosts can be imported using the <code class="docutils literal notranslate"><span class="pre">name</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import rabbitmq:index/vHost:VHost my_vhost my_vhost
 </pre></div>
 </div>
 <dl class="field-list simple">
