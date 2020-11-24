@@ -12,6 +12,7 @@ meta_desc: "Explore the SqlServerInstance resource of the azuredata module, incl
 
 A SqlServerInstance.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1266,6 +1267,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

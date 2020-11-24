@@ -12,6 +12,7 @@ meta_desc: "Explore the Workspace resource of the databricks module, including e
 
 Information about workspace.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -4127,6 +4128,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

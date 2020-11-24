@@ -12,6 +12,7 @@ meta_desc: "Explore the Gallery resource of the compute module, including exampl
 
 Specifies information about the Shared Image Gallery that you want to create or update.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1294,6 +1295,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

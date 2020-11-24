@@ -12,6 +12,7 @@ meta_desc: "Explore the MachineGroup resource of the operationalinsights module,
 
 A user-defined logical grouping of machines.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1150,6 +1151,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

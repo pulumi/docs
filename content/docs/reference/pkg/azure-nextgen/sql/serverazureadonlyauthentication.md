@@ -12,6 +12,7 @@ meta_desc: "Explore the ServerAzureADOnlyAuthentication resource of the sql modu
 
 Azure Active Directory only authentication.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -629,6 +630,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

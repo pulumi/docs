@@ -12,6 +12,7 @@ meta_desc: "Explore the FailoverGroup resource of the sql module, including exam
 
 A failover group.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1613,6 +1614,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

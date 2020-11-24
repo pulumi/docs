@@ -12,6 +12,7 @@ meta_desc: "Explore the ApplicationTypeVersion resource of the servicefabric mod
 
 An application type version resource for the specified application type name resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -873,6 +874,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

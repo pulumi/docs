@@ -12,6 +12,7 @@ meta_desc: "Explore the MyWorkbook resource of the insights module, including ex
 
 An Application Insights private workbook definition.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1401,6 +1402,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

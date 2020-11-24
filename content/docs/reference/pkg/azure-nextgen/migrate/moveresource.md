@@ -14,6 +14,7 @@ Defines the move resource.
 
 
 
+
 ## Create a MoveResource Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -9070,6 +9071,8 @@ DDOS protection should be switched on.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

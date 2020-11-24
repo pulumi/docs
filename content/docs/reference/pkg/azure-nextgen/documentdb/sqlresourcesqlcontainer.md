@@ -12,6 +12,7 @@ meta_desc: "Explore the SqlResourceSqlContainer resource of the documentdb modul
 
 An Azure Cosmos DB container.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -4842,6 +4843,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the JobAgent resource of the sql module, including examples,
 
 An Azure SQL job agent.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1401,6 +1402,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

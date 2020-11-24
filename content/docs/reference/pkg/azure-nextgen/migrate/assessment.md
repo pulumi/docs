@@ -12,6 +12,7 @@ meta_desc: "Explore the Assessment resource of the migrate module, including exa
 
 An assessment created for a group in the Migration project.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -3021,6 +3022,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

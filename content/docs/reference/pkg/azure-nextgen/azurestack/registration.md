@@ -12,6 +12,7 @@ meta_desc: "Explore the Registration resource of the azurestack module, includin
 
 Registration information.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -829,6 +830,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

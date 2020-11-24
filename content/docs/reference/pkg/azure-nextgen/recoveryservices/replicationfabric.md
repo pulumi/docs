@@ -12,6 +12,7 @@ meta_desc: "Explore the ReplicationFabric resource of the recoveryservices modul
 
 Fabric definition.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -11117,6 +11118,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

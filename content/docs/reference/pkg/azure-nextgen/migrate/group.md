@@ -12,6 +12,7 @@ meta_desc: "Explore the Group resource of the migrate module, including examples
 
 A group created in a Migration project.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -957,6 +958,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

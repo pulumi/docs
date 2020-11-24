@@ -12,6 +12,7 @@ meta_desc: "Explore the NetworkInterfaceTapConfiguration resource of the network
 
 Tap configuration in a Network Interface.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -22180,6 +22181,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

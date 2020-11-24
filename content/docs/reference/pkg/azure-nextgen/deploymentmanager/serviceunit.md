@@ -12,6 +12,7 @@ meta_desc: "Explore the ServiceUnit resource of the deploymentmanager module, in
 
 Represents the response of a service unit resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1391,6 +1392,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

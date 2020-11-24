@@ -12,6 +12,7 @@ meta_desc: "Explore the DatabaseAccount resource of the documentdb module, inclu
 
 An Azure Cosmos DB database account.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -4944,6 +4945,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

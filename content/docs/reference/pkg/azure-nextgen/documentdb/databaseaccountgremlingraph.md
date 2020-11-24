@@ -12,6 +12,7 @@ meta_desc: "Explore the DatabaseAccountGremlinGraph resource of the documentdb m
 
 An Azure Cosmos DB Gremlin graph.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -4279,6 +4280,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the ProtectedItem resource of the recoveryservices module, i
 
 Base class for backup items.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -16838,6 +16839,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

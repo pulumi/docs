@@ -12,6 +12,7 @@ meta_desc: "Explore the Image resource of the compute module, including examples
 
 The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -4175,6 +4176,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

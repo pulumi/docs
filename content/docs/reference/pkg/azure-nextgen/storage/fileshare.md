@@ -12,6 +12,7 @@ meta_desc: "Explore the FileShare resource of the storage module, including exam
 
 Properties of the file share, including Id, resource name, resource type, Etag.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1319,6 +1320,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

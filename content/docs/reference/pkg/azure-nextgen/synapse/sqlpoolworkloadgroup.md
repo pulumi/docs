@@ -12,6 +12,7 @@ meta_desc: "Explore the SqlPoolWorkloadGroup resource of the synapse module, inc
 
 Workload group operations for a sql pool
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -992,6 +993,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

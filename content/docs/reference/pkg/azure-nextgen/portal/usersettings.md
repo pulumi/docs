@@ -12,6 +12,7 @@ meta_desc: "Explore the UserSettings resource of the portal module, including ex
 
 Response to get user settings
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1559,6 +1560,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

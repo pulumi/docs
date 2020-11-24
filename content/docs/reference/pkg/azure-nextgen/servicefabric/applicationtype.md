@@ -12,6 +12,7 @@ meta_desc: "Explore the ApplicationType resource of the servicefabric module, in
 
 The application type name resource
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -745,6 +746,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

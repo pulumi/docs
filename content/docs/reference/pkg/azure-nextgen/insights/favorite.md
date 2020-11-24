@@ -12,6 +12,7 @@ meta_desc: "Explore the Favorite resource of the insights module, including exam
 
 Properties that define a favorite that is associated to an Application Insights component.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -942,6 +943,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

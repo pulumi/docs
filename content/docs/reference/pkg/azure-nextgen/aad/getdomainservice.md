@@ -244,6 +244,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="domainconfigurationtype_csharp">
+<a href="#domainconfigurationtype_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Configuration<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Domain Configuration Type{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="domainname_csharp">
 <a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
 </span> 
@@ -321,6 +331,26 @@ The following output properties are available:
         <span class="property-type"><a href="#replicasetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Outputs.<wbr>Replica<wbr>Set<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of ReplicaSets{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="resourceforestsettings_csharp">
+<a href="#resourceforestsettings_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Forest<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceforestsettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Outputs.<wbr>Resource<wbr>Forest<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Forest Settings{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sku Type{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -411,6 +441,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="domainconfigurationtype_go">
+<a href="#domainconfigurationtype_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Configuration<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Domain Configuration Type{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="domainname_go">
 <a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
 </span> 
@@ -488,6 +528,26 @@ The following output properties are available:
         <span class="property-type"><a href="#replicasetresponse">[]Replica<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}List of ReplicaSets{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="resourceforestsettings_go">
+<a href="#resourceforestsettings_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Forest<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceforestsettingsresponse">Resource<wbr>Forest<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Forest Settings{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sku Type{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -578,6 +638,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="domainconfigurationtype_nodejs">
+<a href="#domainconfigurationtype_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Configuration<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Domain Configuration Type{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="domainname_nodejs">
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span> 
@@ -655,6 +725,26 @@ The following output properties are available:
         <span class="property-type"><a href="#replicasetresponse">Replica<wbr>Set<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}List of ReplicaSets{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="resourceforestsettings_nodejs">
+<a href="#resourceforestsettings_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Forest<wbr>Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceforestsettingsresponse">Resource<wbr>Forest<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Forest Settings{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sku Type{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -745,6 +835,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="domain_configuration_type_python">
+<a href="#domain_configuration_type_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>configuration_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Domain Configuration Type{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="domain_name_python">
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span> 
@@ -825,6 +925,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="resource_forest_settings_python">
+<a href="#resource_forest_settings_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>forest_<wbr>settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceforestsettingsresponse">Resource<wbr>Forest<wbr>Settings<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Forest Settings{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Sku Type{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -869,6 +989,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="synckerberospasswords_csharp">
+<a href="#synckerberospasswords_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Kerberos<wbr>Passwords</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="syncntlmpasswords_csharp">
 <a href="#syncntlmpasswords_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Ntlm<wbr>Passwords</a>
 </span> 
@@ -876,6 +1006,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="synconprempasswords_csharp">
+<a href="#synconprempasswords_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>On<wbr>Prem<wbr>Passwords</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -906,6 +1046,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="synckerberospasswords_go">
+<a href="#synckerberospasswords_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Kerberos<wbr>Passwords</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="syncntlmpasswords_go">
 <a href="#syncntlmpasswords_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Ntlm<wbr>Passwords</a>
 </span> 
@@ -913,6 +1063,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="synconprempasswords_go">
+<a href="#synconprempasswords_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>On<wbr>Prem<wbr>Passwords</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -943,6 +1103,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="synckerberospasswords_nodejs">
+<a href="#synckerberospasswords_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Kerberos<wbr>Passwords</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="syncntlmpasswords_nodejs">
 <a href="#syncntlmpasswords_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Ntlm<wbr>Passwords</a>
 </span> 
@@ -950,6 +1120,16 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="synconprempasswords_nodejs">
+<a href="#synconprempasswords_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>On<wbr>Prem<wbr>Passwords</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -980,6 +1160,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="sync_kerberos_passwords_python">
+<a href="#sync_kerberos_passwords_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>kerberos_<wbr>passwords</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sync_ntlm_passwords_python">
 <a href="#sync_ntlm_passwords_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>ntlm_<wbr>passwords</a>
 </span> 
@@ -990,6 +1180,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="sync_on_prem_passwords_python">
+<a href="#sync_on_prem_passwords_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>on_<wbr>prem_<wbr>passwords</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tls_v1_python">
 <a href="#tls_v1_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>v1</a>
 </span> 
@@ -997,6 +1197,245 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A flag to determine whether or not TlsV1 is enabled or disabled.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="foresttrustresponse">Forest<wbr>Trust<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_csharp">
+<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="remotednsips_csharp">
+<a href="#remotednsips_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Dns<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Remote Dns ips{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trustdirection_csharp">
+<a href="#trustdirection_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Direction</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Trust Direction{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trustpassword_csharp">
+<a href="#trustpassword_csharp" style="color: inherit; text-decoration: inherit;">Trust<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Trust Password{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trusteddomainfqdn_csharp">
+<a href="#trusteddomainfqdn_csharp" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Domain<wbr>Fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Trusted Domain FQDN{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_go">
+<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="remotednsips_go">
+<a href="#remotednsips_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Dns<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Remote Dns ips{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trustdirection_go">
+<a href="#trustdirection_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Direction</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Trust Direction{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trustpassword_go">
+<a href="#trustpassword_go" style="color: inherit; text-decoration: inherit;">Trust<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Trust Password{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trusteddomainfqdn_go">
+<a href="#trusteddomainfqdn_go" style="color: inherit; text-decoration: inherit;">Trusted<wbr>Domain<wbr>Fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Trusted Domain FQDN{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_nodejs">
+<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="remotednsips_nodejs">
+<a href="#remotednsips_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Dns<wbr>Ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Remote Dns ips{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trustdirection_nodejs">
+<a href="#trustdirection_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Direction</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Trust Direction{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trustpassword_nodejs">
+<a href="#trustpassword_nodejs" style="color: inherit; text-decoration: inherit;">trust<wbr>Password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Trust Password{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trusteddomainfqdn_nodejs">
+<a href="#trusteddomainfqdn_nodejs" style="color: inherit; text-decoration: inherit;">trusted<wbr>Domain<wbr>Fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Trusted Domain FQDN{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendly_name_python">
+<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Friendly Name{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="remote_dns_ips_python">
+<a href="#remote_dns_ips_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>dns_<wbr>ips</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Remote Dns ips{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trust_direction_python">
+<a href="#trust_direction_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>direction</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Trust Direction{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trust_password_python">
+<a href="#trust_password_python" style="color: inherit; text-decoration: inherit;">trust_<wbr>password</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Trust Password{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trusted_domain_fqdn_python">
+<a href="#trusted_domain_fqdn_python" style="color: inherit; text-decoration: inherit;">trusted_<wbr>domain_<wbr>fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Trusted Domain FQDN{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2392,6 +2831,125 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the virtual network that Domain Services will be deployed on. The id of the subnet that Domain Services will be deployed on. /virtualNetwork/vnetName/subnets/subnetName.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="resourceforestsettingsresponse">Resource<wbr>Forest<wbr>Settings<wbr>Response</h4>
+
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceforest_csharp">
+<a href="#resourceforest_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Forest</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Forest{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="settings_csharp">
+<a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#foresttrustresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Aad.<wbr>Inputs.<wbr>Forest<wbr>Trust<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of settings for Resource Forest{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceforest_go">
+<a href="#resourceforest_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Forest</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Forest{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="settings_go">
+<a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#foresttrustresponse">[]Forest<wbr>Trust<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of settings for Resource Forest{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceforest_nodejs">
+<a href="#resourceforest_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Forest</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Forest{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="settings_nodejs">
+<a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#foresttrustresponse">Forest<wbr>Trust<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of settings for Resource Forest{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_forest_python">
+<a href="#resource_forest_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>forest</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Resource Forest{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="settings_python">
+<a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#foresttrustresponse">Sequence[Forest<wbr>Trust<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of settings for Resource Forest{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

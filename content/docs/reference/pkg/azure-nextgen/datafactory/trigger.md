@@ -12,6 +12,7 @@ meta_desc: "Explore the Trigger resource of the datafactory module, including ex
 
 Trigger resource type.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -4762,6 +4763,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

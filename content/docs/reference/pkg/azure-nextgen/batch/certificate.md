@@ -12,6 +12,7 @@ meta_desc: "Explore the Certificate resource of the batch module, including exam
 
 Contains information about a certificate.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1475,6 +1476,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

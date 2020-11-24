@@ -12,6 +12,7 @@ meta_desc: "Explore the SqlDatabase resource of the synapse module, including ex
 
 A sql database resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1170,6 +1171,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

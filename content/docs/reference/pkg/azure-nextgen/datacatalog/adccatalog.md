@@ -12,6 +12,7 @@ meta_desc: "Explore the ADCCatalog resource of the datacatalog module, including
 
 Azure Data Catalog.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1225,6 +1226,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

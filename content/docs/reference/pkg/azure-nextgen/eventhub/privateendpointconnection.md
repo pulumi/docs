@@ -12,6 +12,7 @@ meta_desc: "Explore the PrivateEndpointConnection resource of the eventhub modul
 
 Properties of the PrivateEndpointConnection.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1144,6 +1145,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

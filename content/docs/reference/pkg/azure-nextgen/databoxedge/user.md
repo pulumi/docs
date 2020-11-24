@@ -12,6 +12,7 @@ meta_desc: "Explore the User resource of the databoxedge module, including examp
 
 Represents a user who has access to one or more shares on the Data Box Edge/Gateway device.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1259,6 +1260,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

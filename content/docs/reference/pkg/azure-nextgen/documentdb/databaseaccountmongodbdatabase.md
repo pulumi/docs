@@ -12,6 +12,7 @@ meta_desc: "Explore the DatabaseAccountMongoDBDatabase resource of the documentd
 
 An Azure Cosmos DB MongoDB database.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -850,6 +851,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

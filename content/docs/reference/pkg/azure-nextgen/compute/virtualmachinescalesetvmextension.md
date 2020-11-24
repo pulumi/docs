@@ -12,6 +12,7 @@ meta_desc: "Explore the VirtualMachineScaleSetVMExtension resource of the comput
 
 Describes a VMSS VM Extension.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1983,6 +1984,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the BackupPolicy resource of the storsimple module, includin
 
 The backup policy.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -970,6 +971,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

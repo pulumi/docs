@@ -12,6 +12,7 @@ meta_desc: "Explore the ServerCommunicationLink resource of the sql module, incl
 
 Server communication link.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -749,6 +750,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

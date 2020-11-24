@@ -12,11 +12,12 @@ meta_desc: "Explore the Database resource of the cache module, including example
 
 Describes a database on the RedisEnterprise cluster
 
+
 {{% examples %}}
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### RedisEnterpriseDatabaseCreate
+### RedisEnterpriseDatabasesCreate
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -1224,6 +1225,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the App resource of the appplatform module, including exampl
 
 App resource payload
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2289,6 +2290,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

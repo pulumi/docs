@@ -12,6 +12,7 @@ meta_desc: "Explore the Job resource of the databox module, including examples, 
 
 Job Resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -755,6 +756,10 @@ class MyStack : Stack
             Identity = new AzureNextGen.DataBox.Latest.Inputs.ResourceIdentityArgs
             {
                 Type = "UserAssigned",
+                UserAssignedIdentities = 
+                {
+                    { "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/akvenkat/providers/Microsoft.ManagedIdentity/userAssignedIdentities/sdkIdentity",  },
+                },
             },
             JobName = "SdkJob5337",
             Location = "westus",
@@ -811,6 +816,9 @@ job = azure_nextgen.databox.latest.Job("job",
     },
     identity=azure_nextgen.databox.latest.ResourceIdentityArgs(
         type="UserAssigned",
+        user_assigned_identities={
+            "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/akvenkat/providers/Microsoft.ManagedIdentity/userAssignedIdentities/sdkIdentity": {},
+        },
     ),
     job_name="SdkJob5337",
     location="westus",
@@ -858,6 +866,9 @@ const job = new azure_nextgen.databox.latest.Job("job", {
     },
     identity: {
         type: "UserAssigned",
+        userAssignedIdentities: {
+            "/subscriptions/fa68082f-8ff7-4a25-95c7-ce9da541242f/resourceGroups/akvenkat/providers/Microsoft.ManagedIdentity/userAssignedIdentities/sdkIdentity": {},
+        },
     },
     jobName: "SdkJob5337",
     location: "westus",
@@ -10518,6 +10529,16 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Identity type{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_csharp">
+<a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -10534,6 +10555,16 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Identity type{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_go">
+<a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -10552,6 +10583,16 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
     </dt>
     <dd>{{% md %}}Identity type{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_nodejs">
+<a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -10568,6 +10609,16 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Identity type{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identities_python">
+<a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}User Assigned Identities{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -13910,6 +13961,8 @@ Until this is true, the TotalBytesToProcess may not be valid.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

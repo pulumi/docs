@@ -12,6 +12,7 @@ meta_desc: "Explore the Account resource of the maps module, including examples,
 
 An Azure resource which represents access to a suite of Maps REST APIs.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1017,6 +1018,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

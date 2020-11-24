@@ -12,6 +12,7 @@ meta_desc: "Explore the ManagerExtendedInfo resource of the storsimple module, i
 
 The extended info of the manager.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -869,6 +870,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

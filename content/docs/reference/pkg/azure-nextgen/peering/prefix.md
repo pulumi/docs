@@ -12,6 +12,7 @@ meta_desc: "Explore the Prefix resource of the peering module, including example
 
 The peering service prefix class.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1121,6 +1122,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

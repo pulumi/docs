@@ -12,6 +12,7 @@ meta_desc: "Explore the AttachedDatabaseConfiguration resource of the kusto modu
 
 Class representing an attached database configuration.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -841,6 +842,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

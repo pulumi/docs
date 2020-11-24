@@ -12,6 +12,7 @@ meta_desc: "Explore the ControllerDetails resource of the delegatednetwork modul
 
 Represents an instance of a DNC controller.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -825,6 +826,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the NatGateway resource of the network module, including exa
 
 Nat Gateway resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1399,6 +1400,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

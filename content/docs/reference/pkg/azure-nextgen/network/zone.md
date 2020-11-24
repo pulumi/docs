@@ -12,6 +12,7 @@ meta_desc: "Explore the Zone resource of the network module, including examples,
 
 Describes a DNS zone.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -677,6 +678,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="maxnumberofrecordsperrecordset_csharp">
+<a href="#maxnumberofrecordsperrecordset_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Records<wbr>Per<wbr>Record<wbr>Set</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of records per record set that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -741,6 +752,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of record sets that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="maxnumberofrecordsperrecordset_go">
+<a href="#maxnumberofrecordsperrecordset_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Number<wbr>Of<wbr>Records<wbr>Per<wbr>Record<wbr>Set</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of records per record set that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -811,6 +832,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="maxnumberofrecordsperrecordset_nodejs">
+<a href="#maxnumberofrecordsperrecordset_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Number<wbr>Of<wbr>Records<wbr>Per<wbr>Record<wbr>Set</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of records per record set that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -875,6 +906,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of record sets that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="max_number_of_records_per_record_set_python">
+<a href="#max_number_of_records_per_record_set_python" style="color: inherit; text-decoration: inherit;">max_<wbr>number_<wbr>of_<wbr>records_<wbr>per_<wbr>record_<wbr>set</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The maximum number of records per record set that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1085,6 +1126,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

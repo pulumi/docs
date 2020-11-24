@@ -12,6 +12,7 @@ meta_desc: "Explore the ApplianceDefinition resource of the solutions module, in
 
 Information about appliance definition.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2384,6 +2385,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

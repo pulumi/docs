@@ -12,6 +12,7 @@ meta_desc: "Explore the Workspace resource of the batchai module, including exam
 
 Batch AI Workspace information.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -745,6 +746,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

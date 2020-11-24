@@ -13,6 +13,7 @@ meta_desc: "Explore the Task resource of the containerregistry module, including
 The task that has the ARM resource and task properties.
 The task will have all information to schedule a run against it.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -8018,6 +8019,8 @@ the source registry during the run.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

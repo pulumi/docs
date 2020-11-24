@@ -12,6 +12,7 @@ meta_desc: "Explore the ProximityPlacementGroup resource of the compute module, 
 
 Specifies information about the proximity placement group.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1435,6 +1436,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

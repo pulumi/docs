@@ -12,6 +12,7 @@ meta_desc: "Explore the Runbook resource of the automation module, including exa
 
 Definition of the runbook type.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -3029,6 +3030,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

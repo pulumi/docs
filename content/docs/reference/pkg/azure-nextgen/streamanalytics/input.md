@@ -12,6 +12,7 @@ meta_desc: "Explore the Input resource of the streamanalytics module, including 
 
 An input object, containing all information associated with the named input. All inputs are contained under a streaming job.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -4669,6 +4670,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

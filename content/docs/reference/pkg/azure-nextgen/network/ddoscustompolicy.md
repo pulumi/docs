@@ -12,6 +12,7 @@ meta_desc: "Explore the DdosCustomPolicy resource of the network module, includi
 
 A DDoS custom policy in a resource group.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1369,6 +1370,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

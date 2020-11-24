@@ -12,6 +12,7 @@ meta_desc: "Explore the BandwidthSchedule resource of the databoxedge module, in
 
 The bandwidth schedule details.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -734,6 +735,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

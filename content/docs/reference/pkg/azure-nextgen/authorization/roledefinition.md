@@ -12,6 +12,7 @@ meta_desc: "Explore the RoleDefinition resource of the authorization module, inc
 
 Role definition.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -988,6 +989,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

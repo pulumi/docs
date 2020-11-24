@@ -12,6 +12,7 @@ meta_desc: "Explore the OriginGroup resource of the cdn module, including exampl
 
 Origin group comprising of origins is used for load balancing to origins when the content cannot be served from CDN.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2050,6 +2051,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

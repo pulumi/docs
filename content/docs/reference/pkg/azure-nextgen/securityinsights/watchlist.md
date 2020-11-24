@@ -12,6 +12,7 @@ meta_desc: "Explore the Watchlist resource of the securityinsights module, inclu
 
 Represents a Watchlist in Azure Security Insights.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1668,6 +1669,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

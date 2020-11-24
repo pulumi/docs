@@ -12,6 +12,7 @@ meta_desc: "Explore the DataManager resource of the hybriddata module, including
 
 The DataManager resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -964,6 +965,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

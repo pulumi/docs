@@ -12,6 +12,7 @@ meta_desc: "Explore the PublicIPAddress resource of the network module, includin
 
 Public IP address resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -17194,6 +17195,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

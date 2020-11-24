@@ -12,6 +12,7 @@ meta_desc: "Explore the Transform resource of the media module, including exampl
 
 A Transform encapsulates the rules or instructions for generating desired outputs from input media, such as by transcoding or by extracting insights. After the Transform is created, it can be applied to input media by creating Jobs.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -6162,6 +6163,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

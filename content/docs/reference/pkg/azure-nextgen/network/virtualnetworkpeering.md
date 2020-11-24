@@ -12,6 +12,7 @@ meta_desc: "Explore the VirtualNetworkPeering resource of the network module, in
 
 Peerings in a virtual network resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -36,7 +37,6 @@ class MyStack : Stack
                 Id = "/subscriptions/subid/resourceGroups/peerTest/providers/Microsoft.Network/virtualNetworks/vnet2",
             },
             ResourceGroupName = "peerTest",
-            SyncRemoteAddressSpace = true,
             UseRemoteGateways = false,
             VirtualNetworkName = "vnet1",
             VirtualNetworkPeeringName = "peer",
@@ -69,7 +69,6 @@ func main() {
 				Id: pulumi.String("/subscriptions/subid/resourceGroups/peerTest/providers/Microsoft.Network/virtualNetworks/vnet2"),
 			},
 			ResourceGroupName:         pulumi.String("peerTest"),
-			SyncRemoteAddressSpace:    pulumi.Bool(true),
 			UseRemoteGateways:         pulumi.Bool(false),
 			VirtualNetworkName:        pulumi.String("vnet1"),
 			VirtualNetworkPeeringName: pulumi.String("peer"),
@@ -99,7 +98,6 @@ virtual_network_peering = azure_nextgen.network.latest.VirtualNetworkPeering("vi
         id="/subscriptions/subid/resourceGroups/peerTest/providers/Microsoft.Network/virtualNetworks/vnet2",
     ),
     resource_group_name="peerTest",
-    sync_remote_address_space=True,
     use_remote_gateways=False,
     virtual_network_name="vnet1",
     virtual_network_peering_name="peer")
@@ -122,7 +120,6 @@ const virtualNetworkPeering = new azure_nextgen.network.latest.VirtualNetworkPee
         id: "/subscriptions/subid/resourceGroups/peerTest/providers/Microsoft.Network/virtualNetworks/vnet2",
     },
     resourceGroupName: "peerTest",
-    syncRemoteAddressSpace: true,
     useRemoteGateways: false,
     virtualNetworkName: "vnet1",
     virtualNetworkPeeringName: "peer",
@@ -144,7 +141,7 @@ const virtualNetworkPeering = new azure_nextgen.network.latest.VirtualNetworkPee
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualNetworkPeering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_forwarded_traffic</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_gateway_transit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_virtual_network_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_sync_level</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_address_space</span><span class="p">:</span> <span class="nx">Optional[AddressSpaceArgs]</span> = None<span class="p">, </span><span class="nx">remote_bgp_communities</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkBgpCommunitiesArgs]</span> = None<span class="p">, </span><span class="nx">remote_virtual_network</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">remote_virtual_network_address_space</span><span class="p">:</span> <span class="nx">Optional[AddressSpaceArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sync_remote_address_space</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">use_remote_gateways</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">virtual_network_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_network_peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VirtualNetworkPeering</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allow_forwarded_traffic</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_gateway_transit</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allow_virtual_network_access</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">peering_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">remote_address_space</span><span class="p">:</span> <span class="nx">Optional[AddressSpaceArgs]</span> = None<span class="p">, </span><span class="nx">remote_bgp_communities</span><span class="p">:</span> <span class="nx">Optional[VirtualNetworkBgpCommunitiesArgs]</span> = None<span class="p">, </span><span class="nx">remote_virtual_network</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">use_remote_gateways</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">virtual_network_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_network_peering_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -408,23 +405,13 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span id="peeringsynclevel_csharp">
-<a href="#peeringsynclevel_csharp" style="color: inherit; text-decoration: inherit;">Peering<wbr>Sync<wbr>Level</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The peering sync status of the virtual network peering.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="remoteaddressspace_csharp">
 <a href="#remoteaddressspace_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Space</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspace">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the address space peered with the remote virtual network.{{% /md %}}</dd>
+    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -445,26 +432,6 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#subresource">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="remotevirtualnetworkaddressspace_csharp">
-<a href="#remotevirtualnetworkaddressspace_csharp" style="color: inherit; text-decoration: inherit;">Remote<wbr>Virtual<wbr>Network<wbr>Address<wbr>Space</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Address<wbr>Space<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The reference to the current address space of the remote virtual network.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="syncremoteaddressspace_csharp">
-<a href="#syncremoteaddressspace_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Remote<wbr>Address<wbr>Space</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Provided when user wants to sync the peering with address space on the remote virtual network after the address space is updated.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -575,23 +542,13 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span id="peeringsynclevel_go">
-<a href="#peeringsynclevel_go" style="color: inherit; text-decoration: inherit;">Peering<wbr>Sync<wbr>Level</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The peering sync status of the virtual network peering.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="remoteaddressspace_go">
 <a href="#remoteaddressspace_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Address<wbr>Space</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspace">Address<wbr>Space</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the address space peered with the remote virtual network.{{% /md %}}</dd>
+    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -612,26 +569,6 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="remotevirtualnetworkaddressspace_go">
-<a href="#remotevirtualnetworkaddressspace_go" style="color: inherit; text-decoration: inherit;">Remote<wbr>Virtual<wbr>Network<wbr>Address<wbr>Space</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Address<wbr>Space</a></span>
-    </dt>
-    <dd>{{% md %}}The reference to the current address space of the remote virtual network.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="syncremoteaddressspace_go">
-<a href="#syncremoteaddressspace_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Remote<wbr>Address<wbr>Space</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Provided when user wants to sync the peering with address space on the remote virtual network after the address space is updated.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -742,23 +679,13 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span id="peeringsynclevel_nodejs">
-<a href="#peeringsynclevel_nodejs" style="color: inherit; text-decoration: inherit;">peering<wbr>Sync<wbr>Level</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The peering sync status of the virtual network peering.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="remoteaddressspace_nodejs">
 <a href="#remoteaddressspace_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Address<wbr>Space</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspace">Address<wbr>Space</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the address space peered with the remote virtual network.{{% /md %}}</dd>
+    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -779,26 +706,6 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="remotevirtualnetworkaddressspace_nodejs">
-<a href="#remotevirtualnetworkaddressspace_nodejs" style="color: inherit; text-decoration: inherit;">remote<wbr>Virtual<wbr>Network<wbr>Address<wbr>Space</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Address<wbr>Space</a></span>
-    </dt>
-    <dd>{{% md %}}The reference to the current address space of the remote virtual network.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="syncremoteaddressspace_nodejs">
-<a href="#syncremoteaddressspace_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Remote<wbr>Address<wbr>Space</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
-    </dt>
-    <dd>{{% md %}}Provided when user wants to sync the peering with address space on the remote virtual network after the address space is updated.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -909,23 +816,13 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
 
     <dt class="property-optional"
             title="Optional">
-        <span id="peering_sync_level_python">
-<a href="#peering_sync_level_python" style="color: inherit; text-decoration: inherit;">peering_<wbr>sync_<wbr>level</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The peering sync status of the virtual network peering.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span id="remote_address_space_python">
 <a href="#remote_address_space_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>address_<wbr>space</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#addressspace">Address<wbr>Space<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The reference to the address space peered with the remote virtual network.{{% /md %}}</dd>
+    <dd>{{% md %}}The reference to the remote virtual network address space.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -946,26 +843,6 @@ The VirtualNetworkPeering resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="#subresource">Sub<wbr>Resource<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="remote_virtual_network_address_space_python">
-<a href="#remote_virtual_network_address_space_python" style="color: inherit; text-decoration: inherit;">remote_<wbr>virtual_<wbr>network_<wbr>address_<wbr>space</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#addressspace">Address<wbr>Space<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The reference to the current address space of the remote virtual network.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="sync_remote_address_space_python">
-<a href="#sync_remote_address_space_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>remote_<wbr>address_<wbr>space</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Provided when user wants to sync the peering with address space on the remote virtual network after the address space is updated.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1661,6 +1538,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

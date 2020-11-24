@@ -12,6 +12,7 @@ meta_desc: "Explore the DataController resource of the azuredata module, includi
 
 Data controller resource
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1421,6 +1422,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the ScheduledQueryRule resource of the insights module, incl
 
 The Log Search Rule resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -4027,6 +4028,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

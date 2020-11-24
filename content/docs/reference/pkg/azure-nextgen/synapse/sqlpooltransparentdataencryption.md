@@ -12,6 +12,7 @@ meta_desc: "Explore the SqlPoolTransparentDataEncryption resource of the synapse
 
 Represents a Sql pool transparent data encryption configuration.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -713,6 +714,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

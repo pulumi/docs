@@ -12,6 +12,7 @@ meta_desc: "Explore the ManagementPolicy resource of the storage module, includi
 
 The Get Storage Account ManagementPolicies operation response.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -3453,6 +3454,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

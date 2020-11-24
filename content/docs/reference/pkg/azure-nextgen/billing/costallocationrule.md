@@ -12,6 +12,7 @@ meta_desc: "Explore the CostAllocationRule resource of the billing module, inclu
 
 The cost allocation rule model definition
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2536,6 +2537,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

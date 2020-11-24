@@ -12,6 +12,7 @@ meta_desc: "Explore the MigrationConfig resource of the servicebus module, inclu
 
 Single item in List or Get Migration Config operation
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -795,6 +796,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

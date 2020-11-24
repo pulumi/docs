@@ -12,6 +12,7 @@ meta_desc: "Explore the Assignment resource of the blueprint module, including e
 
 Represents a blueprint assignment.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -3669,6 +3670,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

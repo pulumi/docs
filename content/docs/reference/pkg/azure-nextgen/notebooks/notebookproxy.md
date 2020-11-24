@@ -12,6 +12,7 @@ meta_desc: "Explore the NotebookProxy resource of the notebooks module, includin
 
 A NotebookProxy resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -625,6 +626,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

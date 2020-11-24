@@ -29,7 +29,7 @@ Explore the resources and functions of the cache module in the Azure NextGen pac
     <li><a href="getprivateendpointconnection" title="GetPrivateEndpointConnection"><span class="symbol function"></span>GetPrivateEndpointConnection</a></li>
     <li><a href="getredis" title="GetRedis"><span class="symbol function"></span>GetRedis</a></li>
     <li><a href="getredisenterprise" title="GetRedisEnterprise"><span class="symbol function"></span>GetRedisEnterprise</a></li>
-    <li><a href="listredisenterprisedatabasekeys" title="ListRedisEnterpriseDatabaseKeys"><span class="symbol function"></span>ListRedisEnterpriseDatabaseKeys</a></li>
+    <li><a href="listdatabasekeys" title="ListDatabaseKeys"><span class="symbol function"></span>ListDatabaseKeys</a></li>
     <li><a href="listrediskeys" title="ListRedisKeys"><span class="symbol function"></span>ListRedisKeys</a></li>
 </ul>
 
@@ -40,7 +40,7 @@ Explore the resources and functions of the cache module in the Azure NextGen pac
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.5</dd>
+	<dd>0.2.8</dd>
 </dl>
 
 

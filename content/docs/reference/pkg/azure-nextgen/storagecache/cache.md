@@ -12,6 +12,7 @@ meta_desc: "Explore the Cache resource of the storagecache module, including exa
 
 A Cache instance. Follows Azure Resource Manager standards: https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/resource-api-reference.md
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2772,6 +2773,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the Connection resource of the web module, including example
 
 API connection
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -3414,6 +3415,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

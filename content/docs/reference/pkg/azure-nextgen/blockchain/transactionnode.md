@@ -12,6 +12,7 @@ meta_desc: "Explore the TransactionNode resource of the blockchain module, inclu
 
 Payload of the transaction node which is the request/response of the resource provider.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1200,6 +1201,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

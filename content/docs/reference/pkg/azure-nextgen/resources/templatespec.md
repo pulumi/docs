@@ -12,6 +12,7 @@ meta_desc: "Explore the TemplateSpec resource of the resources module, including
 
 Template Spec object.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1236,6 +1237,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

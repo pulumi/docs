@@ -13,16 +13,26 @@ Explore the resources and functions of the avs module in the Azure NextGen packa
 <ul class="api">
     <li><a href="authorization" title="Authorization"><span class="symbol resource"></span>Authorization</a></li>
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
+    <li><a href="globalreachconnection" title="GlobalReachConnection"><span class="symbol resource"></span>GlobalReachConnection</a></li>
     <li><a href="hcxenterprisesite" title="HcxEnterpriseSite"><span class="symbol resource"></span>HcxEnterpriseSite</a></li>
     <li><a href="privatecloud" title="PrivateCloud"><span class="symbol resource"></span>PrivateCloud</a></li>
+    <li><a href="workloadnetworkdhcp" title="WorkloadNetworkDhcp"><span class="symbol resource"></span>WorkloadNetworkDhcp</a></li>
+    <li><a href="workloadnetworkportmirroring" title="WorkloadNetworkPortMirroring"><span class="symbol resource"></span>WorkloadNetworkPortMirroring</a></li>
+    <li><a href="workloadnetworksegment" title="WorkloadNetworkSegment"><span class="symbol resource"></span>WorkloadNetworkSegment</a></li>
+    <li><a href="workloadnetworkvmgroup" title="WorkloadNetworkVMGroup"><span class="symbol resource"></span>WorkloadNetworkVMGroup</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getauthorization" title="GetAuthorization"><span class="symbol function"></span>GetAuthorization</a></li>
     <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
+    <li><a href="getglobalreachconnection" title="GetGlobalReachConnection"><span class="symbol function"></span>GetGlobalReachConnection</a></li>
     <li><a href="gethcxenterprisesite" title="GetHcxEnterpriseSite"><span class="symbol function"></span>GetHcxEnterpriseSite</a></li>
     <li><a href="getprivatecloud" title="GetPrivateCloud"><span class="symbol function"></span>GetPrivateCloud</a></li>
+    <li><a href="getworkloadnetworkdhcp" title="GetWorkloadNetworkDhcp"><span class="symbol function"></span>GetWorkloadNetworkDhcp</a></li>
+    <li><a href="getworkloadnetworkportmirroring" title="GetWorkloadNetworkPortMirroring"><span class="symbol function"></span>GetWorkloadNetworkPortMirroring</a></li>
+    <li><a href="getworkloadnetworksegment" title="GetWorkloadNetworkSegment"><span class="symbol function"></span>GetWorkloadNetworkSegment</a></li>
+    <li><a href="getworkloadnetworkvmgroup" title="GetWorkloadNetworkVMGroup"><span class="symbol function"></span>GetWorkloadNetworkVMGroup</a></li>
     <li><a href="listprivatecloudadmincredentials" title="ListPrivateCloudAdminCredentials"><span class="symbol function"></span>ListPrivateCloudAdminCredentials</a></li>
 </ul>
 
@@ -33,7 +43,7 @@ Explore the resources and functions of the avs module in the Azure NextGen packa
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.5</dd>
+	<dd>0.2.8</dd>
 </dl>
 
 

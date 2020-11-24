@@ -14,6 +14,7 @@ Describes a Virtual Machine Scale Set Extension.
 
 
 
+
 ## Create a VirtualMachineScaleSetExtension Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -857,6 +858,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

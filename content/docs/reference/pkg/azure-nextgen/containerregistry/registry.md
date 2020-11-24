@@ -12,6 +12,7 @@ meta_desc: "Explore the Registry resource of the containerregistry module, inclu
 
 An object that represents a container registry.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -3325,6 +3326,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

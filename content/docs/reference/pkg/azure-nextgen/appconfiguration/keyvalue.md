@@ -12,6 +12,7 @@ meta_desc: "Explore the KeyValue resource of the appconfiguration module, includ
 
 The key-value resource along with all resource properties.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -944,6 +945,8 @@ A locked key-value may not be modified until it is unlocked.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the SyncGroup resource of the sql module, including examples
 
 An Azure SQL Database sync group.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1959,6 +1960,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

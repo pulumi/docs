@@ -12,6 +12,7 @@ meta_desc: "Explore the Pool resource of the batch module, including examples, i
 
 Contains information about a pool.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -16120,6 +16121,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

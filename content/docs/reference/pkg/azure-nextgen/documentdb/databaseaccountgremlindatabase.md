@@ -12,6 +12,7 @@ meta_desc: "Explore the DatabaseAccountGremlinDatabase resource of the documentd
 
 An Azure Cosmos DB Gremlin database.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -970,6 +971,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

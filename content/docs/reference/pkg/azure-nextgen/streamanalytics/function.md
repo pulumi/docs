@@ -12,6 +12,7 @@ meta_desc: "Explore the Function resource of the streamanalytics module, includi
 
 A function object, containing all information associated with the named function. All functions are contained under a streaming job.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2996,6 +2997,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the SapMonitor resource of the hanaonazure module, including
 
 SAP monitor info on Azure (ARM properties and SAP monitor properties)
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -978,6 +979,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

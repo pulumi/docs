@@ -12,6 +12,7 @@ meta_desc: "Explore the Workspace resource of the desktopvirtualization module, 
 
 Represents a Workspace definition.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.DesktopVirtualization.V20201102Preview.Workspace("workspace", new AzureNextGen.DesktopVirtualization.V20201102Preview.WorkspaceArgs
+        var workspace = new AzureNextGen.DesktopVirtualization.V20201110Preview.Workspace("workspace", new AzureNextGen.DesktopVirtualization.V20201110Preview.WorkspaceArgs
         {
             Description = "des1",
             FriendlyName = "friendly",
@@ -53,7 +54,7 @@ class MyStack : Stack
 package main
 
 import (
-	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20201102preview"
+	desktopvirtualization "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/desktopvirtualization/v20201110preview"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -87,7 +88,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.desktopvirtualization.v20201102preview.Workspace("workspace",
+workspace = azure_nextgen.desktopvirtualization.v20201110preview.Workspace("workspace",
     description="des1",
     friendly_name="friendly",
     location="centralus",
@@ -108,7 +109,7 @@ workspace = azure_nextgen.desktopvirtualization.v20201102preview.Workspace("work
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.desktopvirtualization.v20201102preview.Workspace("workspace", {
+const workspace = new azure_nextgen.desktopvirtualization.v20201110preview.Workspace("workspace", {
     description: "des1",
     friendlyName: "friendly",
     location: "centralus",
@@ -770,6 +771,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the ProtectionIntent resource of the recoveryservices module
 
 Base class for backup ProtectionIntent.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1825,6 +1826,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

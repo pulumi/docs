@@ -12,6 +12,7 @@ meta_desc: "Explore the DataCollectionRuleAssociation resource of the insights m
 
 Definition of generic ARM proxy resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -705,6 +706,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

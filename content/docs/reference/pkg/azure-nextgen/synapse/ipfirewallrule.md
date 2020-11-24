@@ -12,6 +12,7 @@ meta_desc: "Explore the IpFirewallRule resource of the synapse module, including
 
 IP firewall rule
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -713,6 +714,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the DdosProtectionPlan resource of the network module, inclu
 
 A DDoS protection plan in a resource group.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -873,6 +874,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the IpGroup resource of the network module, including exampl
 
 The IpGroups resource information.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -987,6 +988,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

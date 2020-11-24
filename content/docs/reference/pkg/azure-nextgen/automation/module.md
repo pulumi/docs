@@ -12,6 +12,7 @@ meta_desc: "Explore the Module resource of the automation module, including exam
 
 Definition of the module type.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1863,6 +1864,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -15,6 +15,7 @@ Explore the resources and functions of the desktopvirtualization module in the A
     <li><a href="applicationgroup" title="ApplicationGroup"><span class="symbol resource"></span>ApplicationGroup</a></li>
     <li><a href="hostpool" title="HostPool"><span class="symbol resource"></span>HostPool</a></li>
     <li><a href="msixpackage" title="MSIXPackage"><span class="symbol resource"></span>MSIXPackage</a></li>
+    <li><a href="scalingplan" title="ScalingPlan"><span class="symbol resource"></span>ScalingPlan</a></li>
     <li><a href="workspace" title="Workspace"><span class="symbol resource"></span>Workspace</a></li>
 </ul>
 
@@ -24,6 +25,7 @@ Explore the resources and functions of the desktopvirtualization module in the A
     <li><a href="getapplicationgroup" title="GetApplicationGroup"><span class="symbol function"></span>GetApplicationGroup</a></li>
     <li><a href="gethostpool" title="GetHostPool"><span class="symbol function"></span>GetHostPool</a></li>
     <li><a href="getmsixpackage" title="GetMSIXPackage"><span class="symbol function"></span>GetMSIXPackage</a></li>
+    <li><a href="getscalingplan" title="GetScalingPlan"><span class="symbol function"></span>GetScalingPlan</a></li>
     <li><a href="getworkspace" title="GetWorkspace"><span class="symbol function"></span>GetWorkspace</a></li>
 </ul>
 
@@ -34,7 +36,7 @@ Explore the resources and functions of the desktopvirtualization module in the A
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.2.5</dd>
+	<dd>0.2.8</dd>
 </dl>
 
 

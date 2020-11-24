@@ -12,6 +12,7 @@ meta_desc: "Explore the PolicyExemption resource of the authorization module, in
 
 The policy exemption.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1187,6 +1188,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the EventHub resource of the eventhub module, including exam
 
 Single item in List or Get Event Hub operation
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1892,6 +1893,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

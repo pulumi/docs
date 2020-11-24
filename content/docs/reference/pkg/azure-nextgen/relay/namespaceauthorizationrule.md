@@ -12,6 +12,7 @@ meta_desc: "Explore the NamespaceAuthorizationRule resource of the relay module,
 
 Description of a namespace authorization rule.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -642,6 +643,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

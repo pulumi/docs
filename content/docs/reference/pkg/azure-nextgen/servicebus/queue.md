@@ -12,6 +12,7 @@ meta_desc: "Explore the Queue resource of the servicebus module, including examp
 
 Description of queue Resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1677,6 +1678,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

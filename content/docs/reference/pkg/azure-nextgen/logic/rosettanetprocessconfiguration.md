@@ -12,6 +12,7 @@ meta_desc: "Explore the RosettaNetProcessConfiguration resource of the logic mod
 
 The integration account RosettaNet process configuration.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -3499,6 +3500,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -14,6 +14,7 @@ A domain specific resource identifier.
 
 
 
+
 ## Create a WebAppDomainOwnershipIdentifier Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -537,6 +538,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

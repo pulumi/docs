@@ -12,6 +12,7 @@ meta_desc: "Explore the DisasterRecoveryConfiguration resource of the sql module
 
 Represents a disaster recovery configuration.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -905,6 +906,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

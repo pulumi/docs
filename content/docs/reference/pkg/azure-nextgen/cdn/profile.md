@@ -12,6 +12,7 @@ meta_desc: "Explore the Profile resource of the cdn module, including examples, 
 
 CDN profile is a logical grouping of endpoints that share the same settings, such as CDN provider and pricing tier.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -925,6 +926,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

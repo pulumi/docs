@@ -12,6 +12,7 @@ meta_desc: "Explore the Component resource of the insights module, including exa
 
 An Application Insights component definition.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1633,6 +1634,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

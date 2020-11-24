@@ -12,6 +12,7 @@ meta_desc: "Explore the BlobServiceProperties resource of the storage module, in
 
 The properties of a storage account’s Blob service.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2698,6 +2699,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

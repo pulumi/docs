@@ -12,6 +12,7 @@ meta_desc: "Explore the AnalyticsItem resource of the insights module, including
 
 Properties that define an Analytics item that is associated to an Application Insights component.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1124,6 +1125,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

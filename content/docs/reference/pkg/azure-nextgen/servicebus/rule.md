@@ -12,6 +12,7 @@ meta_desc: "Explore the Rule resource of the servicebus module, including exampl
 
 Description of Rule Resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2581,6 +2582,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

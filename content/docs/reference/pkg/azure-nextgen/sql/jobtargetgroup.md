@@ -12,6 +12,7 @@ meta_desc: "Explore the JobTargetGroup resource of the sql module, including exa
 
 A group of job targets.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1528,6 +1529,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

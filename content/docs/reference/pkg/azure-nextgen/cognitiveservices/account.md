@@ -12,6 +12,7 @@ meta_desc: "Explore the Account resource of the cognitiveservices module, includ
 
 Cognitive Services Account is an Azure resource representing the provisioned account, its type, location and SKU.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2107,6 +2108,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="datecreated_csharp">
+<a href="#datecreated_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Created</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the date of cognitive services account creation.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span> 
@@ -2221,6 +2232,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#skucapabilityresponse">[]Sku<wbr>Capability<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="datecreated_go">
+<a href="#datecreated_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Created</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the date of cognitive services account creation.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2341,6 +2362,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
+        <span id="datecreated_nodejs">
+<a href="#datecreated_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Created</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the date of cognitive services account creation.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span> 
@@ -2455,6 +2486,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#skucapabilityresponse">Sequence[Sku<wbr>Capability<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="date_created_python">
+<a href="#date_created_python" style="color: inherit; text-decoration: inherit;">date_<wbr>created</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Gets the date of cognitive services account creation.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5892,6 +5933,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

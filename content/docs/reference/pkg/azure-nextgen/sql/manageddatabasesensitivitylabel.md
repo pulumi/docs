@@ -12,6 +12,7 @@ meta_desc: "Explore the ManagedDatabaseSensitivityLabel resource of the sql modu
 
 A sensitivity label.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1017,6 +1018,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

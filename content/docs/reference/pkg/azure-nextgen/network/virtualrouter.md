@@ -12,6 +12,7 @@ meta_desc: "Explore the VirtualRouter resource of the network module, including 
 
 VirtualRouter Resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1138,6 +1139,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

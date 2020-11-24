@@ -14,6 +14,7 @@ Profile of a lab user.
 
 
 
+
 ## Create a User Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1462,6 +1463,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

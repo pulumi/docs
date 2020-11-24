@@ -12,6 +12,7 @@ meta_desc: "Explore the Project resource of the migrate module, including exampl
 
 Azure Migrate Project.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1457,6 +1458,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

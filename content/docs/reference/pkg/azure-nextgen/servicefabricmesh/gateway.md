@@ -12,6 +12,7 @@ meta_desc: "Explore the Gateway resource of the servicefabricmesh module, includ
 
 This type describes a gateway resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -3986,6 +3987,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

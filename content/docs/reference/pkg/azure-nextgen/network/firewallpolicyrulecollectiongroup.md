@@ -12,6 +12,7 @@ meta_desc: "Explore the FirewallPolicyRuleCollectionGroup resource of the networ
 
 Rule Collection Group resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -5243,6 +5244,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

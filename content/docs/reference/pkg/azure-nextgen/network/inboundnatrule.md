@@ -12,6 +12,7 @@ meta_desc: "Explore the InboundNatRule resource of the network module, including
 
 Inbound NAT rule of the load balancer.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -16108,6 +16109,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the Workbook resource of the insights module, including exam
 
 An Application Insights workbook definition.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1492,6 +1493,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

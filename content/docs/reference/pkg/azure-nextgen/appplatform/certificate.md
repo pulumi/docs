@@ -12,6 +12,7 @@ meta_desc: "Explore the Certificate resource of the appplatform module, includin
 
 Certificate resource payload.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1253,6 +1254,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

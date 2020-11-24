@@ -12,6 +12,7 @@ meta_desc: "Explore the ManagedNetworkGroup resource of the managednetwork modul
 
 The Managed Network Group resource
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1133,6 +1134,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

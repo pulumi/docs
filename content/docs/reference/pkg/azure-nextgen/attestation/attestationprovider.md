@@ -14,6 +14,7 @@ Attestation service response message.
 
 
 
+
 ## Create a AttestationProvider Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -2018,6 +2019,8 @@ desired.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the ApplicationPackage resource of the batch module, includi
 
 An application package which represents a particular version of an application.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -869,6 +870,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

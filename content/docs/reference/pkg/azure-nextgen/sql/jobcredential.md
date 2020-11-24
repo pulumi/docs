@@ -12,6 +12,7 @@ meta_desc: "Explore the JobCredential resource of the sql module, including exam
 
 A stored credential that can be used by a job to connect to target databases.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -717,6 +718,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the Database resource of the sql module, including examples,
 
 Represents a database.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -5170,6 +5171,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

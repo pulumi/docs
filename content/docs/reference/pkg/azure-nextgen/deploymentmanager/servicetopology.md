@@ -12,6 +12,7 @@ meta_desc: "Explore the ServiceTopology resource of the deploymentmanager module
 
 The resource representation of a service topology.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -760,6 +761,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

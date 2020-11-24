@@ -12,6 +12,7 @@ meta_desc: "Explore the Factory resource of the datafactory module, including ex
 
 Factory resource type.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2626,6 +2627,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

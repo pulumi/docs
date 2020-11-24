@@ -12,6 +12,7 @@ meta_desc: "Explore the Service resource of the servicefabric module, including 
 
 The service resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2854,6 +2855,8 @@ should be split between the partition ‘count’
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

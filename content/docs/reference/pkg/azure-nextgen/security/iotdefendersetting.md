@@ -12,6 +12,7 @@ meta_desc: "Explore the IotDefenderSetting resource of the security module, incl
 
 IoT Defender settings
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -546,6 +547,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

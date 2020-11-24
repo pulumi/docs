@@ -12,6 +12,7 @@ meta_desc: "Explore the Kpi resource of the customerinsights module, including e
 
 The KPI resource format.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2448,6 +2449,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

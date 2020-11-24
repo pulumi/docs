@@ -12,6 +12,7 @@ meta_desc: "Explore the SqlResourceSqlDatabase resource of the documentdb module
 
 An Azure Cosmos DB SQL database.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1533,6 +1534,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

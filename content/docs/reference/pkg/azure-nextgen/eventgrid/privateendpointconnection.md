@@ -11,6 +11,7 @@ meta_desc: "Explore the PrivateEndpointConnection resource of the eventgrid modu
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1294,6 +1295,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

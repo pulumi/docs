@@ -12,6 +12,7 @@ meta_desc: "Explore the Endpoint resource of the cdn module, including examples,
 
 CDN endpoint is the entity within a CDN profile containing configuration information such as origin, protocol, content caching and delivery behavior. The CDN endpoint uses the URL format <endpointname>.azureedge.net.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -19188,6 +19189,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

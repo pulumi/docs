@@ -12,6 +12,7 @@ meta_desc: "Explore the Policy resource of the cdn module, including examples, i
 
 Defines web application firewall policy for Azure CDN.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -5214,6 +5215,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

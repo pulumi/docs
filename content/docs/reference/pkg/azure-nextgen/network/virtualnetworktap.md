@@ -12,6 +12,7 @@ meta_desc: "Explore the VirtualNetworkTap resource of the network module, includ
 
 Virtual Network Tap resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -22380,6 +22381,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

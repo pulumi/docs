@@ -12,6 +12,7 @@ meta_desc: "Explore the EventHubConnection resource of the kusto module, includi
 
 Class representing an event hub connection.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -881,6 +882,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

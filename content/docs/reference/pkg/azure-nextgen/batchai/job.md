@@ -12,6 +12,7 @@ meta_desc: "Explore the Job resource of the batchai module, including examples, 
 
 Information about a Job.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -11053,6 +11054,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

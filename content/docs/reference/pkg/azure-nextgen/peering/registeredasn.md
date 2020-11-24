@@ -12,6 +12,7 @@ meta_desc: "Explore the RegisteredAsn resource of the peering module, including 
 
 The customer's ASN that is registered by the peering service provider.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -709,6 +710,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

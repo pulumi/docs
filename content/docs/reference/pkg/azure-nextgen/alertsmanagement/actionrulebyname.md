@@ -12,6 +12,7 @@ meta_desc: "Explore the ActionRuleByName resource of the alertsmanagement module
 
 Action rule object containing target scope, conditions and suppression logic
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -4463,6 +4464,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the VirtualWan resource of the network module, including exa
 
 VirtualWAN Resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1094,6 +1095,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

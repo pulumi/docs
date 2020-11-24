@@ -12,6 +12,7 @@ meta_desc: "Explore the DataConnection resource of the kusto module, including e
 
 Class representing an data connection.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -717,6 +718,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

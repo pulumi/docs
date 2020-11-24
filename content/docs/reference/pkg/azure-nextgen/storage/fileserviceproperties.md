@@ -12,6 +12,7 @@ meta_desc: "Explore the FileServiceProperties resource of the storage module, in
 
 The properties of File services in storage account.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1944,6 +1945,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

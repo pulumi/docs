@@ -12,6 +12,7 @@ meta_desc: "Explore the CapacityDetails resource of the powerbidedicated module,
 
 Represents an instance of a Dedicated Capacity resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1246,6 +1247,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

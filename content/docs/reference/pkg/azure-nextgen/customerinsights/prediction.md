@@ -12,6 +12,7 @@ meta_desc: "Explore the Prediction resource of the customerinsights module, incl
 
 The prediction resource format.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2116,6 +2117,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

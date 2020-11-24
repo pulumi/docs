@@ -3783,13 +3783,23 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="querystring_csharp">
+<a href="#querystring_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="relativepath_csharp">
 <a href="#relativepath_csharp" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Applicable only if this template link references a Template Spec. This relativePath property can optionally be used to reference a Template Spec artifact by path.{{% /md %}}</dd>
+    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3830,13 +3840,23 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="querystring_go">
+<a href="#querystring_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="relativepath_go">
 <a href="#relativepath_go" style="color: inherit; text-decoration: inherit;">Relative<wbr>Path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Applicable only if this template link references a Template Spec. This relativePath property can optionally be used to reference a Template Spec artifact by path.{{% /md %}}</dd>
+    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3877,13 +3897,23 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="querystring_nodejs">
+<a href="#querystring_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="relativepath_nodejs">
 <a href="#relativepath_nodejs" style="color: inherit; text-decoration: inherit;">relative<wbr>Path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Applicable only if this template link references a Template Spec. This relativePath property can optionally be used to reference a Template Spec artifact by path.{{% /md %}}</dd>
+    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3924,13 +3954,23 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="query_string_python">
+<a href="#query_string_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The query string (for example, a SAS token) to be used with the templateLink URI.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="relative_path_python">
 <a href="#relative_path_python" style="color: inherit; text-decoration: inherit;">relative_<wbr>path</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Applicable only if this template link references a Template Spec. This relativePath property can optionally be used to reference a Template Spec artifact by path.{{% /md %}}</dd>
+    <dd>{{% md %}}The relativePath property can be used to deploy a linked template at a location relative to the parent. If the parent template was linked with a TemplateSpec, this will reference an artifact in the TemplateSpec.  If the parent was linked with a URI, the child deployment will be a combination of the parent and relativePath URIs{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

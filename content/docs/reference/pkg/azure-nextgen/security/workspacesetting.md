@@ -12,6 +12,7 @@ meta_desc: "Explore the WorkspaceSetting resource of the security module, includ
 
 Configures where to store the OMS agent data for workspaces under a scope
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -585,6 +586,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

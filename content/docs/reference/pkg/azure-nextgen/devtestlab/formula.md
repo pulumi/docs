@@ -14,6 +14,7 @@ A formula for creating a VM, specifying an image base and other parameters
 
 
 
+
 ## Create a Formula Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -9632,6 +9633,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

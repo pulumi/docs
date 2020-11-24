@@ -12,6 +12,7 @@ meta_desc: "Explore the ManagementGroupSubscription resource of the management m
 
 The details of subscription under management group.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -742,6 +743,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

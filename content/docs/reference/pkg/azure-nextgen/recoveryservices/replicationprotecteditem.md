@@ -12,6 +12,7 @@ meta_desc: "Explore the ReplicationProtectedItem resource of the recoveryservice
 
 Replication protected item.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -25908,6 +25909,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

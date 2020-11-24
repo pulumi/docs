@@ -12,6 +12,7 @@ meta_desc: "Explore the Cluster resource of the operationalinsights module, incl
 
 The top level Log Analytics cluster resource container.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1248,6 +1249,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_csharp">
+<a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1264,6 +1275,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_go">
+<a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1282,6 +1303,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_nodejs">
+<a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1298,6 +1329,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identities_python">
+<a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1528,6 +1569,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="keyrsasize_csharp">
+<a href="#keyrsasize_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Rsa<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Selected key minimum required size.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="keyvaulturi_csharp">
 <a href="#keyvaulturi_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Uri</a>
 </span> 
@@ -1546,16 +1597,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The version of the key associated with the Log Analytics cluster.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rsakeysize_csharp">
-<a href="#rsakeysize_csharp" style="color: inherit; text-decoration: inherit;">Rsa<wbr>Key<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}Selected key minimum required key size.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1572,6 +1613,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the key associated with the Log Analytics cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyrsasize_go">
+<a href="#keyrsasize_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Rsa<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Selected key minimum required size.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1593,16 +1644,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The version of the key associated with the Log Analytics cluster.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rsakeysize_go">
-<a href="#rsakeysize_go" style="color: inherit; text-decoration: inherit;">Rsa<wbr>Key<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}Selected key minimum required key size.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1619,6 +1660,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the key associated with the Log Analytics cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyrsasize_nodejs">
+<a href="#keyrsasize_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Rsa<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Selected key minimum required size.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1640,16 +1691,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The version of the key associated with the Log Analytics cluster.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rsakeysize_nodejs">
-<a href="#rsakeysize_nodejs" style="color: inherit; text-decoration: inherit;">rsa<wbr>Key<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}Selected key minimum required key size.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1666,6 +1707,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the key associated with the Log Analytics cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_rsa_size_python">
+<a href="#key_rsa_size_python" style="color: inherit; text-decoration: inherit;">key_<wbr>rsa_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Selected key minimum required size.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1686,16 +1737,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The version of the key associated with the Log Analytics cluster.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rsa_key_size_python">
-<a href="#rsa_key_size_python" style="color: inherit; text-decoration: inherit;">rsa_<wbr>key_<wbr>size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}Selected key minimum required key size.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1727,6 +1768,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="keyrsasize_csharp">
+<a href="#keyrsasize_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Rsa<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Selected key minimum required size.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="keyvaulturi_csharp">
 <a href="#keyvaulturi_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Uri</a>
 </span> 
@@ -1745,16 +1796,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The version of the key associated with the Log Analytics cluster.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rsakeysize_csharp">
-<a href="#rsakeysize_csharp" style="color: inherit; text-decoration: inherit;">Rsa<wbr>Key<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}Selected key minimum required key size.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1771,6 +1812,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the key associated with the Log Analytics cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyrsasize_go">
+<a href="#keyrsasize_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Rsa<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Selected key minimum required size.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1792,16 +1843,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The version of the key associated with the Log Analytics cluster.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rsakeysize_go">
-<a href="#rsakeysize_go" style="color: inherit; text-decoration: inherit;">Rsa<wbr>Key<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}Selected key minimum required key size.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1818,6 +1859,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the key associated with the Log Analytics cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyrsasize_nodejs">
+<a href="#keyrsasize_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Rsa<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Selected key minimum required size.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1839,16 +1890,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     </dt>
     <dd>{{% md %}}The version of the key associated with the Log Analytics cluster.{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rsakeysize_nodejs">
-<a href="#rsakeysize_nodejs" style="color: inherit; text-decoration: inherit;">rsa<wbr>Key<wbr>Size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}Selected key minimum required key size.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1865,6 +1906,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the key associated with the Log Analytics cluster.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_rsa_size_python">
+<a href="#key_rsa_size_python" style="color: inherit; text-decoration: inherit;">key_<wbr>rsa_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Selected key minimum required size.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1885,16 +1936,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The version of the key associated with the Log Analytics cluster.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="rsa_key_size_python">
-<a href="#rsa_key_size_python" style="color: inherit; text-decoration: inherit;">rsa_<wbr>key_<wbr>size</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}Selected key minimum required key size.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2017,6 +2058,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

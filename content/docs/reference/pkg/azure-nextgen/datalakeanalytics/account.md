@@ -12,6 +12,7 @@ meta_desc: "Explore the Account resource of the datalakeanalytics module, includ
 
 A Data Lake Analytics account object, containing all information associated with the named Data Lake Analytics account.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -3303,6 +3304,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

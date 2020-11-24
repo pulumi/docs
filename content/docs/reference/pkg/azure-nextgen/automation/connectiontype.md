@@ -12,6 +12,7 @@ meta_desc: "Explore the ConnectionType resource of the automation module, includ
 
 Definition of the connection type.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1192,6 +1193,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

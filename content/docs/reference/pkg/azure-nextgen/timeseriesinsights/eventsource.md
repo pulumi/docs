@@ -12,6 +12,7 @@ meta_desc: "Explore the EventSource resource of the timeseriesinsights module, i
 
 An environment receives data from one or more event sources. Each event source has associated connection info that allows the Time Series Insights ingress pipeline to connect to and pull data from the event source
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -960,6 +961,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

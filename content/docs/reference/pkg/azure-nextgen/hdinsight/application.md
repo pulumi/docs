@@ -12,6 +12,7 @@ meta_desc: "Explore the Application resource of the hdinsight module, including 
 
 The HDInsight cluster application
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -7165,6 +7166,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the CustomIPPrefix resource of the network module, including
 
 Custom IP prefix resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1037,6 +1038,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

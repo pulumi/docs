@@ -12,6 +12,7 @@ meta_desc: "Explore the IntegrationAccountCertificate resource of the logic modu
 
 The integration account certificate.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1468,6 +1469,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

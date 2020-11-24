@@ -12,6 +12,7 @@ meta_desc: "Explore the SqlResourceSqlStoredProcedure resource of the documentdb
 
 An Azure Cosmos DB storedProcedure.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1419,6 +1420,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

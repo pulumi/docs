@@ -12,6 +12,7 @@ meta_desc: "Explore the ApplicationDefinition resource of the solutions module, 
 
 Information about managed application definition.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -3534,6 +3535,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

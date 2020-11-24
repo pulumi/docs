@@ -12,6 +12,7 @@ meta_desc: "Explore the IntegrationAccountSchema resource of the logic module, i
 
 The integration account schema.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1933,6 +1934,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

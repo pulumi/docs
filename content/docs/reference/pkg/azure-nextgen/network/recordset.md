@@ -12,6 +12,7 @@ meta_desc: "Explore the RecordSet resource of the network module, including exam
 
 Describes a DNS record set (a collection of DNS records with the same name and type) in a Private DNS zone.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -4154,6 +4155,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the Gateway resource of the apimanagement module, including 
 
 Gateway details.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1089,6 +1090,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

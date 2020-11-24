@@ -12,6 +12,7 @@ meta_desc: "Explore the BlockchainMember resource of the blockchain module, incl
 
 Payload of the blockchain member which is exposed in the request/response of the resource provider.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1977,6 +1978,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

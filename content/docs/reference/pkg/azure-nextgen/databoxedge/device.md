@@ -12,6 +12,7 @@ meta_desc: "Explore the Device resource of the databoxedge module, including exa
 
 The Data Box Edge/Gateway device.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1533,6 +1534,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

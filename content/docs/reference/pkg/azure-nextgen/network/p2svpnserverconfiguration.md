@@ -12,6 +12,7 @@ meta_desc: "Explore the P2sVpnServerConfiguration resource of the network module
 
 P2SVpnServerConfiguration Resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -3734,6 +3735,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

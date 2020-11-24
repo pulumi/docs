@@ -12,6 +12,7 @@ meta_desc: "Explore the BatchAccount resource of the batch module, including exa
 
 Contains information about an Azure Batch account.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -3368,6 +3369,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

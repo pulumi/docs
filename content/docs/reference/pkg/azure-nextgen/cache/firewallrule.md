@@ -12,6 +12,7 @@ meta_desc: "Explore the FirewallRule resource of the cache module, including exa
 
 A firewall rule on a redis cache has a name, and describes a contiguous range of IP addresses permitted to connect
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -673,6 +674,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

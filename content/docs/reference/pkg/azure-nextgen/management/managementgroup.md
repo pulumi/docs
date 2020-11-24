@@ -12,6 +12,7 @@ meta_desc: "Explore the ManagementGroup resource of the management module, inclu
 
 The management group details.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1606,6 +1607,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

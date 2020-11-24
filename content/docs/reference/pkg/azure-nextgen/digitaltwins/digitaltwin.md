@@ -12,6 +12,7 @@ meta_desc: "Explore the DigitalTwin resource of the digitaltwins module, includi
 
 The description of the DigitalTwins service.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -785,6 +786,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
