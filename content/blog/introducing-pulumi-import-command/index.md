@@ -6,8 +6,12 @@ authors: ["paul-stack"]
 tags: ["import","New-Features", "Pulumi-News", "Features"]
 ---
 
-In June 2019, Pulumi introduced the ability to [import existing infrastructure resources](https://www.pulumi.com/docs/guides/adopting/import/)
-to be part of Pulumi management. Today, we are happy to announce a richer resource import experience.
+Most infrastructure projects require working with existing cloud resources, either by building on top of existing resources
+or adopting existing resources under management with a new and more robust infrastructure provisioning solution.
+
+In June 2019, Pulumi introduced the ability to [import existing infrastructure resources to be under Pulumi management](https://www.pulumi.com/docs/guides/adopting/import/)
+no matter how you’ve provisioned these resources — manually in your cloud provider’s console or CLI, using an infrastructure
+as code tool like Terraform or AWS CloudFormation. Today, we are happy to announce a richer resource import experience.
 
 As of [v2.12.0](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#2120-2020-10-14), Pulumi has introduced
 a `pulumi import` command. This command will import the cloud resource into the Pulumi state and generate the code
@@ -50,6 +54,7 @@ TypeScript application:
 {{< chooser language "typescript,python,csharp,go" >}}
 
 {{< choosable language typescript >}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -62,8 +67,10 @@ const demo = new aws.s3.Bucket("infra-logs", {
     protect: true,
 });
 ```
+
 {{< /choosable >}}
 {{< choosable language python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -74,8 +81,10 @@ demo = aws.s3.Bucket("infra-logs",
     force_destroy=False,
     opts=ResourceOptions(protect=True))
 ```
+
 {{< /choosable >}}
 {{< choosable language go >}}
+
 ```go
 package main
 
@@ -98,8 +107,10 @@ func main() {
 	})
 }
 ```
+
 {{< /choosable >}}
 {{< choosable language csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -121,6 +132,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{< /choosable >}}
 {{< /chooser >}}
 
@@ -177,6 +189,7 @@ We can see the resultant code generation:
 {{< chooser language "typescript,python,csharp,go" >}}
 
 {{< choosable language typescript >}}
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
@@ -225,8 +238,10 @@ const private_1 = new aws.ec2.Subnet("private-1", {
     protect: true,
 });
 ```
+
 {{< /choosable >}}
 {{< choosable language python >}}
+
 ```python
 import pulumi
 import pulumi_aws as aws
@@ -269,8 +284,10 @@ private_1 = aws.ec2.Subnet("private-1",
     vpc_id="vpc-0ad77710973388316",
     opts=ResourceOptions(protect=True))
 ```
+
 {{< /choosable >}}
 {{< choosable language go >}}
+
 ```go
 package main
 
@@ -331,8 +348,10 @@ func main() {
 	})
 }
 ```
+
 {{< /choosable >}}
 {{< choosable language csharp >}}
+
 ```csharp
 using Pulumi;
 using Aws = Pulumi.Aws;
@@ -397,6 +416,7 @@ class MyStack : Stack
 
 }
 ```
+
 {{< /choosable >}}
 {{< /chooser >}}
 
