@@ -15,7 +15,7 @@ as code tool like Terraform or AWS CloudFormation. Today, we are happy to announ
 
 As of [v2.12.0](https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md#2120-2020-10-14), Pulumi has introduced
 a `pulumi import` command. This command will import the cloud resource into the Pulumi state and generate the code
-for the user's Pulumi program, in the appropriate language.
+for the user's Pulumi program in the appropriate language.
 
 <!--more-->
 
@@ -28,16 +28,16 @@ part of your infrastructure project. The `pulumi import` command is made of the 
 pulumi import [type] [name] [id]
 ```
 
-When Pulumi performs an import the resource is added to the Pulumi [state](https://www.pulumi.com/docs/intro/concepts/state/#state),
-it is marked as a [protected](https://www.pulumi.com/docs/intro/concepts/programming-model/#protect) resource (by default)
+When Pulumi performs an import, the resource is added to the Pulumi [state](https://www.pulumi.com/docs/intro/concepts/state/#state),
+it is marked as a [protected](https://www.pulumi.com/docs/intro/concepts/programming-model/#protect) resource (by default),
 and it will emit the generated code that the user can add to their program before running a `pulumi up`. The resources are
-marked as protected to ensure that imported infrastructure is not accidentally deleted in case the user forgets to include
+marked as protected to ensure that imported infrastructure is not accidentally deleted if the user forgets to include
 the code for the resource in their program before doing a deployment.
 
 ### Importing an S3 Bucket
 
 A resource needs to be imported into an existing Pulumi project. Let's consider that a user wants to import an S3 bucket
-that was manually created in their AWS Account. To do this, we can execute the following command:
+manually created in their AWS Account. To do this, we can execute the following command:
 
 ```bash
 pulumi import aws:s3/bucket:Bucket infra-logs company-infra-logs
@@ -420,9 +420,13 @@ class MyStack : Stack
 {{< /choosable >}}
 {{< /chooser >}}
 
+Check out the video clip below for a demo.
+
+{{< youtube "6qHVbu8vb4w" >}}
+
 ## Documentation
 
-Full CLI Documentation is [available](https://www.pulumi.com/docs/reference/cli/pulumi_import/) so that all of the different
-import command flags can be examined. The flags include writing directly to a file and also specifing the ability to ensure
+Full CLI Documentation is [available](https://www.pulumi.com/docs/reference/cli/pulumi_import/), showing all of the different
+import command flags. The flags include writing directly to a file and the ability to ensure
 a resource is not protected on import. Examples of importing resources can be found on their specifc resource documentation
-pages, such an example for importing a VPC can be found in the [VPC import documentation](https://www.pulumi.com/docs/reference/pkg/aws/ec2/vpc/#import).
+pages. Such an example for importing a VPC can be found in the [VPC import documentation](https://www.pulumi.com/docs/reference/pkg/aws/ec2/vpc/#import).
