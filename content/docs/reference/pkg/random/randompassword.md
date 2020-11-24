@@ -1548,6 +1548,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Random Password can be imported by specifying the value of the string
+
+```sh
+ $ pulumi import random:index/randomPassword:RandomPassword password securepassword
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

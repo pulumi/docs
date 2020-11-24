@@ -1707,6 +1707,18 @@ in random string.
 
 
 
+## Import
+
+
+Strings can be imported by just specifying the value of the string
+
+```sh
+ $ pulumi import random:index/randomString:RandomString test test
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

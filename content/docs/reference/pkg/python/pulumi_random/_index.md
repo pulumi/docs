@@ -100,6 +100,15 @@ instance that changes each time a new AMI id is selected.</p>
     <span class="p">})</span>
 </pre></div>
 </div>
+<p>Random Ids can be imported using the <code class="docutils literal notranslate"><span class="pre">b64_url</span></code> with an optional <code class="docutils literal notranslate"><span class="pre">prefix</span></code>. This can be used to replace a config value with a value interpolated from the random provider without experiencing diffs. Example with no prefix</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import random:index/randomId:RandomId server p-9hUg
+
+Example with prefix <span class="o">(</span>prefix is separated by a <span class="sb">``</span>,<span class="sb">``</span><span class="se">\ </span><span class="o">)</span>
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import random:index/randomId:RandomId server my-prefix-,p-9hUg
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -257,6 +266,10 @@ a <code class="docutils literal notranslate"><span class="pre">aws_alb_listener_
 </pre></div>
 </div>
 <p>The result of the above will set a random priority.</p>
+<p>Random integers can be imported using the <code class="docutils literal notranslate"><span class="pre">result</span></code>, <code class="docutils literal notranslate"><span class="pre">min</span></code>, and <code class="docutils literal notranslate"><span class="pre">max</span></code>, with an optional <code class="docutils literal notranslate"><span class="pre">seed</span></code>. This can be used to replace a config value with a value interpolated from the random provider without experiencing diffs. Example (values are separated by a <code class="docutils literal notranslate"><span class="pre">,</span></code>)</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import random:index/randomInteger:RandomInteger priority <span class="m">15390</span>,1,50000
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -385,6 +398,10 @@ the raw state as plain-text.</p>
     <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;mysql&quot;</span><span class="p">,</span>
     <span class="n">username</span><span class="o">=</span><span class="s2">&quot;someone&quot;</span><span class="p">,</span>
     <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="o">.</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Random Password can be imported by specifying the value of the string</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import random:index/randomPassword:RandomPassword password securepassword
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -743,6 +760,10 @@ random values please use the <code class="docutils literal notranslate"><span cl
     <span class="n">special</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Strings can be imported by just specifying the value of the string</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import random:index/randomString:RandomString <span class="nb">test</span> <span class="nb">test</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -952,6 +973,10 @@ for use with services needed a unique string identifier.</p>
 
 <span class="n">test_random_uuid</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">RandomUuid</span><span class="p">(</span><span class="s2">&quot;testRandomUuid&quot;</span><span class="p">)</span>
 <span class="n">test_resource_group</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ResourceGroup</span><span class="p">(</span><span class="s2">&quot;testResourceGroup&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;Central US&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Random UUID’s can be imported. This can be used to replace a config value with a value interpolated from the random provider without experiencing diffs. Example</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import random:index/randomUuid:RandomUuid main aabbccdd-eeff-0011-2233-445566778899
 </pre></div>
 </div>
 <dl class="field-list simple">
