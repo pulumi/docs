@@ -589,7 +589,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-- `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
+-   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -691,7 +691,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-- `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
+-   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -793,7 +793,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-- `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
+-   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -895,7 +895,7 @@ The ServiceLevelObjective resource accepts the following [input]({{< relref "/do
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-- `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
+-   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1183,7 +1183,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-- `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
+-   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1285,7 +1285,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-- `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
+-   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1387,7 +1387,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-- `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
+-   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1489,7 +1489,7 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of tags to associate with your service level objective. This can help you categorize and filter service level objectives in the service level objectives page of the UI. Note: it's not currently possible to filter by these tags when querying via the API
-- `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
+-   `thresholds`: (Required) - A list of thresholds and targets that define the service level objectives from the provided SLIs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1700,13 +1700,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}the time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
-- `7d`
-- `30d`
-- `90d`
-- `target`: (Required) the objective's target `[0,100]`
-- `target_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
-- `warning`: (Optional) the objective's warning value `[0,100]`. This must be `> target` value.
-- `warning_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
+-   `7d`
+-   `30d`
+-   `90d`
+-   `target`: (Required) the objective's target `[0,100]`
+-   `target_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
+-   `warning`: (Optional) the objective's warning value `[0,100]`. This must be `> target` value.
+-   `warning_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1765,13 +1765,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}the time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
-- `7d`
-- `30d`
-- `90d`
-- `target`: (Required) the objective's target `[0,100]`
-- `target_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
-- `warning`: (Optional) the objective's warning value `[0,100]`. This must be `> target` value.
-- `warning_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
+-   `7d`
+-   `30d`
+-   `90d`
+-   `target`: (Required) the objective's target `[0,100]`
+-   `target_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
+-   `warning`: (Optional) the objective's warning value `[0,100]`. This must be `> target` value.
+-   `warning_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1830,13 +1830,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}the time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
-- `7d`
-- `30d`
-- `90d`
-- `target`: (Required) the objective's target `[0,100]`
-- `target_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
-- `warning`: (Optional) the objective's warning value `[0,100]`. This must be `> target` value.
-- `warning_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
+-   `7d`
+-   `30d`
+-   `90d`
+-   `target`: (Required) the objective's target `[0,100]`
+-   `target_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
+-   `warning`: (Optional) the objective's warning value `[0,100]`. This must be `> target` value.
+-   `warning_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1895,13 +1895,13 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}the time frame for the objective. The mapping from these types to the types found in the Datadog Web UI can be found in the Datadog API [documentation](https://docs.datadoghq.com/api/v1/service-level-objectives/#create-a-slo-object) page. Available options to choose from are:
-- `7d`
-- `30d`
-- `90d`
-- `target`: (Required) the objective's target `[0,100]`
-- `target_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
-- `warning`: (Optional) the objective's warning value `[0,100]`. This must be `> target` value.
-- `warning_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
+-   `7d`
+-   `30d`
+-   `90d`
+-   `target`: (Required) the objective's target `[0,100]`
+-   `target_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
+-   `warning`: (Optional) the objective's warning value `[0,100]`. This must be `> target` value.
+-   `warning_display`: (Optional) the string version to specify additional digits in the case of `99` but want 3 digits like `99.000` to display.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1941,6 +1941,18 @@ The following state arguments are supported:
 
 
 
+
+
+
+
+## Import
+
+
+Service Level Objectives can be imported using their string ID, e.g.
+
+```sh
+ $ pulumi import datadog:index/serviceLevelObjective:ServiceLevelObjective baz 12345678901234567890123456789012
+```
 
 
 

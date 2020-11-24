@@ -709,6 +709,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Amazon Web Services log collection integrations can be imported using the `account ID`.
+
+```sh
+ $ pulumi import datadog:aws/integrationLogCollection:IntegrationLogCollection test 1234567890
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

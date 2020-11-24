@@ -1085,6 +1085,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+dashboard lists can be imported using their id, e.g.
+
+```sh
+ $ pulumi import datadog:index/dashboardList:DashboardList new_list 123456
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

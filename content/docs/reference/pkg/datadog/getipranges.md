@@ -12,6 +12,7 @@ meta_desc: "Explore the GetIpRanges function of the Datadog package, including e
 
 Use this data source to retrieve information about Datadog's IP addresses.
 
+
 {{% examples %}}
 ## Example Usage
 

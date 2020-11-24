@@ -9075,6 +9075,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+screenboards can be imported using their numeric ID, e.g.
+
+```sh
+ $ pulumi import datadog:index/screenBoard:ScreenBoard my_service_screenboard 2081
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

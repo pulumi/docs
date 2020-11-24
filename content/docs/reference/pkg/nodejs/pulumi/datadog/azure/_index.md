@@ -3,7 +3,7 @@ title: "Module azure"
 title_tag: "Module azure | Package @pulumi/datadog | Node.js SDK"
 linktitle: "azure"
 meta_desc: "Explore members of the azure module in the @pulumi/datadog package."
-git_sha: "67ae1239827972df34ce31c76f449a608e85dfc7"
+git_sha: "521bb808d9e3e29f4493b13daecf66be755e4c32"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Integration" data-link-title="Integration">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/67ae1239827972df34ce31c76f449a608e85dfc7/sdk/nodejs/azure/integration.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/521bb808d9e3e29f4493b13daecf66be755e4c32/sdk/nodejs/azure/integration.ts#L33">
         Resource <strong>Integration</strong>
     </a>
 </h3>
@@ -54,8 +54,16 @@ const sandbox = new datadog.azure.Integration("sandbox", {
 });
 ```
 
+#### Import
+
+Microsoft Azure integrations can be imported using their `tenant name` and `client id` separated with a colon (`:`).
+
+```sh
+ $ pulumi import datadog:azure/integration:Integration sandbox ${tenant_name}:${client_id}
+```
+
 <h4 class="pdoc-member-header" id="Integration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/67ae1239827972df34ce31c76f449a608e85dfc7/sdk/nodejs/azure/integration.ts#L56"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/521bb808d9e3e29f4493b13daecf66be755e4c32/sdk/nodejs/azure/integration.ts#L64"> <b>constructor</b></a>
 </h4>
 
 
@@ -69,7 +77,7 @@ Create a Integration resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Integration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/67ae1239827972df34ce31c76f449a608e85dfc7/sdk/nodejs/azure/integration.ts#L35">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/521bb808d9e3e29f4493b13daecf66be755e4c32/sdk/nodejs/azure/integration.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -80,14 +88,14 @@ Get an existing Integration resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Integration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/67ae1239827972df34ce31c76f449a608e85dfc7/sdk/nodejs/azure/integration.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/521bb808d9e3e29f4493b13daecf66be755e4c32/sdk/nodejs/azure/integration.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Integration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/67ae1239827972df34ce31c76f449a608e85dfc7/sdk/nodejs/azure/integration.ts#L46">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/521bb808d9e3e29f4493b13daecf66be755e4c32/sdk/nodejs/azure/integration.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -98,22 +106,22 @@ Returns true if the given object is an instance of Integration.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Integration-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/67ae1239827972df34ce31c76f449a608e85dfc7/sdk/nodejs/azure/integration.ts#L53">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/521bb808d9e3e29f4493b13daecf66be755e4c32/sdk/nodejs/azure/integration.ts#L61">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Integration-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/67ae1239827972df34ce31c76f449a608e85dfc7/sdk/nodejs/azure/integration.ts#L54">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/521bb808d9e3e29f4493b13daecf66be755e4c32/sdk/nodejs/azure/integration.ts#L62">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Integration-hostFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/67ae1239827972df34ce31c76f449a608e85dfc7/sdk/nodejs/azure/integration.ts#L55">property <b>hostFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/521bb808d9e3e29f4493b13daecf66be755e4c32/sdk/nodejs/azure/integration.ts#L63">property <b>hostFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Integration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/67ae1239827972df34ce31c76f449a608e85dfc7/sdk/nodejs/azure/integration.ts#L25">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/521bb808d9e3e29f4493b13daecf66be755e4c32/sdk/nodejs/azure/integration.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -122,12 +130,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Integration-tenantName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/67ae1239827972df34ce31c76f449a608e85dfc7/sdk/nodejs/azure/integration.ts#L56">property <b>tenantName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/521bb808d9e3e29f4493b13daecf66be755e4c32/sdk/nodejs/azure/integration.ts#L64">property <b>tenantName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tenantName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Integration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/67ae1239827972df34ce31c76f449a608e85dfc7/sdk/nodejs/azure/integration.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/521bb808d9e3e29f4493b13daecf66be755e4c32/sdk/nodejs/azure/integration.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -139,7 +147,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="IntegrationArgs" data-link-title="IntegrationArgs">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/67ae1239827972df34ce31c76f449a608e85dfc7/sdk/nodejs/azure/integration.ts#L114">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/521bb808d9e3e29f4493b13daecf66be755e4c32/sdk/nodejs/azure/integration.ts#L122">
         interface <strong>IntegrationArgs</strong>
     </a>
 </h3>
@@ -149,27 +157,27 @@ deployments.
 The set of arguments for constructing a Integration resource.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/67ae1239827972df34ce31c76f449a608e85dfc7/sdk/nodejs/azure/integration.ts#L115">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/521bb808d9e3e29f4493b13daecf66be755e4c32/sdk/nodejs/azure/integration.ts#L123">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IntegrationArgs-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/67ae1239827972df34ce31c76f449a608e85dfc7/sdk/nodejs/azure/integration.ts#L116">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/521bb808d9e3e29f4493b13daecf66be755e4c32/sdk/nodejs/azure/integration.ts#L124">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IntegrationArgs-hostFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/67ae1239827972df34ce31c76f449a608e85dfc7/sdk/nodejs/azure/integration.ts#L117">property <b>hostFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/521bb808d9e3e29f4493b13daecf66be755e4c32/sdk/nodejs/azure/integration.ts#L125">property <b>hostFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IntegrationArgs-tenantName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/67ae1239827972df34ce31c76f449a608e85dfc7/sdk/nodejs/azure/integration.ts#L118">property <b>tenantName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/521bb808d9e3e29f4493b13daecf66be755e4c32/sdk/nodejs/azure/integration.ts#L126">property <b>tenantName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="IntegrationState" data-link-title="IntegrationState">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/67ae1239827972df34ce31c76f449a608e85dfc7/sdk/nodejs/azure/integration.ts#L104">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/521bb808d9e3e29f4493b13daecf66be755e4c32/sdk/nodejs/azure/integration.ts#L112">
         interface <strong>IntegrationState</strong>
     </a>
 </h3>
@@ -179,22 +187,22 @@ The set of arguments for constructing a Integration resource.
 Input properties used for looking up and filtering Integration resources.
 
 <h4 class="pdoc-member-header" id="IntegrationState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/67ae1239827972df34ce31c76f449a608e85dfc7/sdk/nodejs/azure/integration.ts#L105">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/521bb808d9e3e29f4493b13daecf66be755e4c32/sdk/nodejs/azure/integration.ts#L113">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IntegrationState-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/67ae1239827972df34ce31c76f449a608e85dfc7/sdk/nodejs/azure/integration.ts#L106">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/521bb808d9e3e29f4493b13daecf66be755e4c32/sdk/nodejs/azure/integration.ts#L114">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IntegrationState-hostFilters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/67ae1239827972df34ce31c76f449a608e85dfc7/sdk/nodejs/azure/integration.ts#L107">property <b>hostFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/521bb808d9e3e29f4493b13daecf66be755e4c32/sdk/nodejs/azure/integration.ts#L115">property <b>hostFilters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IntegrationState-tenantName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/67ae1239827972df34ce31c76f449a608e85dfc7/sdk/nodejs/azure/integration.ts#L108">property <b>tenantName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-datadog/blob/521bb808d9e3e29f4493b13daecf66be755e4c32/sdk/nodejs/azure/integration.ts#L116">property <b>tenantName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

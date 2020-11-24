@@ -618,6 +618,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+```sh
+ $ pulumi import datadog:index/logsIntegrationPipeline:LogsIntegrationPipeline name> <pipelineID>`
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

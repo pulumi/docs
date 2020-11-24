@@ -45,6 +45,7 @@ A Pulumi package for creating and managing Datadog resources.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getdashboard" title="GetDashboard"><span class="symbol function"></span>GetDashboard</a></li>
     <li><a href="getdashboardlist" title="GetDashboardList"><span class="symbol function"></span>GetDashboardList</a></li>
     <li><a href="getipranges" title="GetIpRanges"><span class="symbol function"></span>GetIpRanges</a></li>
     <li><a href="getmonitor" title="GetMonitor"><span class="symbol function"></span>GetMonitor</a></li>
@@ -60,7 +61,7 @@ A Pulumi package for creating and managing Datadog resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
 	<dt>Version</dt>
-	<dd>2.10.0</dd>
+	<dd>2.11.0</dd>
 </dl>
 
 

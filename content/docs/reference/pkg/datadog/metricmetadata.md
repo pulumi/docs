@@ -12,6 +12,7 @@ meta_desc: "Explore the MetricMetadata resource of the Datadog package, includin
 
 Provides a Datadog metric_metadata resource. This can be used to manage a metric's metadata.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1105,6 +1106,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

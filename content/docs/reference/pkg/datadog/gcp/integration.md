@@ -1053,6 +1053,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Google Cloud Platform integrations can be imported using their project ID, e.g.
+
+```sh
+ $ pulumi import datadog:gcp/integration:Integration awesome_gcp_project_integration project_id
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

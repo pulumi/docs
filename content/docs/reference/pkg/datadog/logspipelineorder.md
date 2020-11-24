@@ -733,6 +733,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+There must be at most one `datadog_logs_pipeline_order` resource. Pipeline order creation is not supported from logs config API. You can import the `datadog_logs_pipeline_order` or create a pipeline order (which is actually doing the update operation).
+
+```sh
+ $ pulumi import datadog:index/logsPipelineOrder:LogsPipelineOrder name> <name>
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

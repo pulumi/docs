@@ -14,6 +14,7 @@ Use this data source to retrieve Datadog's Synthetics Locations (to be used in S
 
 
 
+
 ## Using GetSyntheticsLocations {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
