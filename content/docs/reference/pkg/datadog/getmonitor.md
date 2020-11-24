@@ -12,6 +12,7 @@ meta_desc: "Explore the GetMonitor function of the Datadog package, including ex
 
 Use this data source to retrieve information about an existing monitor for use in other resources.
 
+
 {{% examples %}}
 ## Example Usage
 

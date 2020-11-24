@@ -12,6 +12,7 @@ meta_desc: "Explore the ServiceObject resource of the pagerduty module, includin
 
 Provides access to individual Service Objects of Datadog - PagerDuty integrations. Note that the Datadog - PagerDuty integration must be activated in the Datadog UI in order for this resource to be usable.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -709,6 +710,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

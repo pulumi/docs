@@ -885,6 +885,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Synthetics global variables can be imported using their string ID, e.g.
+
+```sh
+ $ pulumi import datadog:index/syntheticsGlobalVariable:SyntheticsGlobalVariable fizz abcde123-fghi-456-jkl-mnopqrstuv
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

@@ -872,6 +872,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Microsoft Azure integrations can be imported using their `tenant name` and `client id` separated with a colon (`:`).
+
+```sh
+ $ pulumi import datadog:azure/integration:Integration sandbox ${tenant_name}:${client_id}
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

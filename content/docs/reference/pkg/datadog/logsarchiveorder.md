@@ -606,6 +606,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+There must be at most one `datadog_logs_archive_order` resource. You can import the `datadog_logs_archive_order` or create an archive order.
+
+```sh
+ $ pulumi import datadog:index/logsArchiveOrder:LogsArchiveOrder name> archiveOrderID
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetDashboardList function of the Datadog package, includ
 
 Use this data source to retrieve information about an existing dashboard list, for use in other resources. In particular, it can be used in a dashboard to register it in the list.
 
+
 {{% examples %}}
 ## Example Usage
 

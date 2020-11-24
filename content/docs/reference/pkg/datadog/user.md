@@ -1188,6 +1188,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+users can be imported using their handle, e.g.
+
+```sh
+ $ pulumi import datadog:index/user:User example_user existing@example.com
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
