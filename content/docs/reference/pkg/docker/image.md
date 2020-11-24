@@ -12,6 +12,7 @@ meta_desc: "Explore the Image resource of the Docker package, including examples
 
 A docker.Image resource represents a Docker image built locally which is published and made available via a remote Docker registry. This can be used to ensure that a Docker source directory from a local deployment environment is built and pushed to a cloud-hosted Docker registry as part of a Pulumi deployment, so that it can be referenced as an image input from other cloud services that reference Docker images - including Kubernetes Pods, AWS ECS Tasks, and Azure Container Instances.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1426,6 +1427,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

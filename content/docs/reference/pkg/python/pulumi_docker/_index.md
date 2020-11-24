@@ -54,6 +54,12 @@ built explicitly and pushed to the target repository. A given stage’s image wi
 <span class="n">ubuntu_container</span> <span class="o">=</span> <span class="n">docker</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="s2">&quot;ubuntuContainer&quot;</span><span class="p">,</span> <span class="n">image</span><span class="o">=</span><span class="n">ubuntu_remote_image</span><span class="o">.</span><span class="n">latest</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Docker containers can be imported using the long id, e.g. for a container named <code class="docutils literal notranslate"><span class="pre">foo</span></code></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import docker:index/container:Container foo <span class="k">$(</span>docker inspect -f <span class="o">&#x7B;&#x7B;</span>.ID<span class="o">&#x7D;&#x7D;</span> foo<span class="k">)</span>
+
+<span class="o">[</span>linkdoc<span class="o">]</span> https://docs.docker.com/network/links/
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -746,6 +752,10 @@ to create virtual networks within the docker environment.</p>
 <span class="n">private_network</span> <span class="o">=</span> <span class="n">docker</span><span class="o">.</span><span class="n">Network</span><span class="p">(</span><span class="s2">&quot;privateNetwork&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Docker networks can be imported using the long id, e.g. for a network with the short id <code class="docutils literal notranslate"><span class="pre">p73jelnrme5f</span></code></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import docker:index/network:Network foo <span class="k">$(</span>docker network inspect -f <span class="o">&#x7B;&#x7B;</span>.ID<span class="o">&#x7D;&#x7D;</span> p73<span class="k">)</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1122,12 +1132,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_docker.Secret">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">Secret</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Sequence[Union[SecretLabelArgs, Mapping[str, Any], Awaitable[Union[SecretLabelArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[SecretLabelArgs, Mapping[str, Any], Awaitable[Union[SecretLabelArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.Secret" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Secret resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] data: The base64 encoded data of the secret.
-:param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType[‘SecretLabelArgs’]]]] labels: See Labels below for details.
-:param pulumi.Input[str] name: The name of the Docker secret.</p>
+<dd><p>Docker secret cannot be imported as the secret data, once set, is never exposed again.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The base64 encoded data of the secret.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'SecretLabelArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – See Labels below for details.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Docker secret.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="pulumi_docker.Secret.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Sequence[Union[SecretLabelArgs, Mapping[str, Any], Awaitable[Union[SecretLabelArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[SecretLabelArgs, Mapping[str, Any], Awaitable[Union[SecretLabelArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_docker.secret.Secret<a class="headerlink" href="#pulumi_docker.Secret.get" title="Permalink to this definition">¶</a></dt>
@@ -1206,18 +1222,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_docker.Service">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">Service</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auth</span><span class="p">:</span> <span class="n">Union[ServiceAuthArgs, Mapping[str, Any], Awaitable[Union[ServiceAuthArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">converge_config</span><span class="p">:</span> <span class="n">Union[ServiceConvergeConfigArgs, Mapping[str, Any], Awaitable[Union[ServiceConvergeConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_spec</span><span class="p">:</span> <span class="n">Union[ServiceEndpointSpecArgs, Mapping[str, Any], Awaitable[Union[ServiceEndpointSpecArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Sequence[Union[ServiceLabelArgs, Mapping[str, Any], Awaitable[Union[ServiceLabelArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[ServiceLabelArgs, Mapping[str, Any], Awaitable[Union[ServiceLabelArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mode</span><span class="p">:</span> <span class="n">Union[ServiceModeArgs, Mapping[str, Any], Awaitable[Union[ServiceModeArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rollback_config</span><span class="p">:</span> <span class="n">Union[ServiceRollbackConfigArgs, Mapping[str, Any], Awaitable[Union[ServiceRollbackConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">task_spec</span><span class="p">:</span> <span class="n">Union[ServiceTaskSpecArgs, Mapping[str, Any], Awaitable[Union[ServiceTaskSpecArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_config</span><span class="p">:</span> <span class="n">Union[ServiceUpdateConfigArgs, Mapping[str, Any], Awaitable[Union[ServiceUpdateConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.Service" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a Service resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[pulumi.InputType[‘ServiceAuthArgs’]] auth: See Auth below for details.
-:param pulumi.Input[pulumi.InputType[‘ServiceConvergeConfigArgs’]] converge_config: See Converge Config below for details.
-:param pulumi.Input[pulumi.InputType[‘ServiceEndpointSpecArgs’]] endpoint_spec: See EndpointSpec below for details.
-:param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType[‘ServiceLabelArgs’]]]] labels: See Labels below for details.
-:param pulumi.Input[pulumi.InputType[‘ServiceModeArgs’]] mode: See Mode below for details.
-:param pulumi.Input[str] name: The name of the Docker service.
-:param pulumi.Input[pulumi.InputType[‘ServiceRollbackConfigArgs’]] rollback_config: See RollbackConfig below for details.
-:param pulumi.Input[pulumi.InputType[‘ServiceTaskSpecArgs’]] task_spec: See TaskSpec below for details.
-:param pulumi.Input[pulumi.InputType[‘ServiceUpdateConfigArgs’]] update_config: See UpdateConfig below for details.</p>
+<dd><p>Docker service can be imported using the long id, e.g. for a service with the short id <code class="docutils literal notranslate"><span class="pre">55ba873dd</span></code></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import docker:index/service:Service foo <span class="k">$(</span>docker service inspect -f <span class="o">&#x7B;&#x7B;</span>.ID<span class="o">&#x7D;&#x7D;</span> 55b<span class="k">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auth</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceAuthArgs'</em><em>]</em><em>]</em>) – See Auth below for details.</p></li>
+<li><p><strong>converge_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceConvergeConfigArgs'</em><em>]</em><em>]</em>) – See Converge Config below for details.</p></li>
+<li><p><strong>endpoint_spec</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceEndpointSpecArgs'</em><em>]</em><em>]</em>) – See EndpointSpec below for details.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceLabelArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – See Labels below for details.</p></li>
+<li><p><strong>mode</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceModeArgs'</em><em>]</em><em>]</em>) – See Mode below for details.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Docker service.</p></li>
+<li><p><strong>rollback_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceRollbackConfigArgs'</em><em>]</em><em>]</em>) – See RollbackConfig below for details.</p></li>
+<li><p><strong>task_spec</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceTaskSpecArgs'</em><em>]</em><em>]</em>) – See TaskSpec below for details.</p></li>
+<li><p><strong>update_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceUpdateConfigArgs'</em><em>]</em><em>]</em>) – See UpdateConfig below for details.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="pulumi_docker.Service.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auth</span><span class="p">:</span> <span class="n">Union[ServiceAuthArgs, Mapping[str, Any], Awaitable[Union[ServiceAuthArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">converge_config</span><span class="p">:</span> <span class="n">Union[ServiceConvergeConfigArgs, Mapping[str, Any], Awaitable[Union[ServiceConvergeConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_spec</span><span class="p">:</span> <span class="n">Union[ServiceEndpointSpecArgs, Mapping[str, Any], Awaitable[Union[ServiceEndpointSpecArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">labels</span><span class="p">:</span> <span class="n">Union[Sequence[Union[ServiceLabelArgs, Mapping[str, Any], Awaitable[Union[ServiceLabelArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[ServiceLabelArgs, Mapping[str, Any], Awaitable[Union[ServiceLabelArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mode</span><span class="p">:</span> <span class="n">Union[ServiceModeArgs, Mapping[str, Any], Awaitable[Union[ServiceModeArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rollback_config</span><span class="p">:</span> <span class="n">Union[ServiceRollbackConfigArgs, Mapping[str, Any], Awaitable[Union[ServiceRollbackConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">task_spec</span><span class="p">:</span> <span class="n">Union[ServiceTaskSpecArgs, Mapping[str, Any], Awaitable[Union[ServiceTaskSpecArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_config</span><span class="p">:</span> <span class="n">Union[ServiceUpdateConfigArgs, Mapping[str, Any], Awaitable[Union[ServiceUpdateConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_docker.service.Service<a class="headerlink" href="#pulumi_docker.Service.get" title="Permalink to this definition">¶</a></dt>
@@ -1338,11 +1363,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_docker.ServiceConfig">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_docker.</code><code class="sig-name descname">ServiceConfig</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_docker.ServiceConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a ServiceConfig resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] data: The base64 encoded data of the config.
-:param pulumi.Input[str] name: The name of the Docker config.</p>
+<dd><p>Docker config can be imported using the long id, e.g. for a config with the short id <code class="docutils literal notranslate"><span class="pre">p73jelnrme5f</span></code></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import docker:index/serviceConfig:ServiceConfig foo <span class="k">$(</span>docker config inspect -f <span class="o">&#x7B;&#x7B;</span>.ID<span class="o">&#x7D;&#x7D;</span> p73<span class="k">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The base64 encoded data of the config.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Docker config.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="pulumi_docker.ServiceConfig.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_docker.service_config.ServiceConfig<a class="headerlink" href="#pulumi_docker.ServiceConfig.get" title="Permalink to this definition">¶</a></dt>
@@ -1422,6 +1456,10 @@ to prepare volumes that can be shared across containers.</p>
 
 <span class="c1"># Creates a docker volume &quot;shared_volume&quot;.</span>
 <span class="n">shared_volume</span> <span class="o">=</span> <span class="n">docker</span><span class="o">.</span><span class="n">Volume</span><span class="p">(</span><span class="s2">&quot;sharedVolume&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Docker volume can be imported using the long id, e.g. for a volume with the short id <code class="docutils literal notranslate"><span class="pre">ecae276c5</span></code></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import docker:index/volume:Volume foo <span class="k">$(</span>docker volume inspect -f <span class="o">&#x7B;&#x7B;</span>.ID<span class="o">&#x7D;&#x7D;</span> eca<span class="k">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">

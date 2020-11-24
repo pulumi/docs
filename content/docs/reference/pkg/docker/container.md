@@ -9050,6 +9050,20 @@ should be mounted.
 
 
 
+## Import
+
+
+Docker containers can be imported using the long id, e.g. for a container named `foo`
+
+```sh
+ $ pulumi import docker:index/container:Container foo $(docker inspect -f {{.ID}} foo)
+```
+
+ [linkdoc] https://docs.docker.com/network/links/
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

@@ -16,6 +16,7 @@ This resource will *not* pull new layers of the image automatically unless used 
 conjunction with [`docker.getRegistryImage`](https://www.terraform.io/docs/providers/docker/d/registry_image.html)
 data source to update the `pull_triggers` field.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1097,6 +1098,8 @@ to trigger an image update.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
