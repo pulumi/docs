@@ -3,7 +3,7 @@ title: "Module types/input"
 title_tag: "Module types/input | Package @pulumi/gitlab | Node.js SDK"
 linktitle: "input"
 meta_desc: "Explore members of the input module in the @pulumi/gitlab package."
-git_sha: "4392b3d01d99f029457dc8732b04680d536edddb"
+git_sha: "1c850ddb233dfa8235de9770a46aef8ca908c71e"
 block_external_search_index: true
 ---
 
@@ -27,14 +27,14 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="ProjectPushRules" data-link-title="ProjectPushRules">
-    <a href="https://github.com/pulumi/pulumi-gitlab/blob/4392b3d01d99f029457dc8732b04680d536edddb/sdk/nodejs/types/input.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-gitlab/blob/1c850ddb233dfa8235de9770a46aef8ca908c71e/sdk/nodejs/types/input.ts#L7">
         interface <strong>ProjectPushRules</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ProjectPushRules</span></code></pre>
 <h4 class="pdoc-member-header" id="ProjectPushRules-authorEmailRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/4392b3d01d99f029457dc8732b04680d536edddb/sdk/nodejs/types/input.ts#L12">property <b>authorEmailRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/1c850ddb233dfa8235de9770a46aef8ca908c71e/sdk/nodejs/types/input.ts#L11">property <b>authorEmailRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorEmailRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -42,7 +42,7 @@ block_external_search_index: true
 All commit author emails must match this regex, e.g. `@my-company.com$`.
 
 <h4 class="pdoc-member-header" id="ProjectPushRules-branchNameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/4392b3d01d99f029457dc8732b04680d536edddb/sdk/nodejs/types/input.ts#L16">property <b>branchNameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/1c850ddb233dfa8235de9770a46aef8ca908c71e/sdk/nodejs/types/input.ts#L15">property <b>branchNameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>branchNameRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -50,7 +50,7 @@ All commit author emails must match this regex, e.g. `@my-company.com$`.
 All branch names must match this regex, e.g. `(feature|hotfix)\/*`.
 
 <h4 class="pdoc-member-header" id="ProjectPushRules-commitCommitterCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/4392b3d01d99f029457dc8732b04680d536edddb/sdk/nodejs/types/input.ts#L20">property <b>commitCommitterCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/1c850ddb233dfa8235de9770a46aef8ca908c71e/sdk/nodejs/types/input.ts#L19">property <b>commitCommitterCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commitCommitterCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -58,7 +58,7 @@ All branch names must match this regex, e.g. `(feature|hotfix)\/*`.
 Users can only push commits to this repository that were committed with one of their own verified emails.
 
 <h4 class="pdoc-member-header" id="ProjectPushRules-commitMessageNegativeRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/4392b3d01d99f029457dc8732b04680d536edddb/sdk/nodejs/types/input.ts#L24">property <b>commitMessageNegativeRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/1c850ddb233dfa8235de9770a46aef8ca908c71e/sdk/nodejs/types/input.ts#L23">property <b>commitMessageNegativeRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commitMessageNegativeRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -66,7 +66,7 @@ Users can only push commits to this repository that were committed with one of t
 No commit message is allowed to match this regex, for example `ssh\:\/\/`.
 
 <h4 class="pdoc-member-header" id="ProjectPushRules-commitMessageRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/4392b3d01d99f029457dc8732b04680d536edddb/sdk/nodejs/types/input.ts#L28">property <b>commitMessageRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/1c850ddb233dfa8235de9770a46aef8ca908c71e/sdk/nodejs/types/input.ts#L27">property <b>commitMessageRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commitMessageRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -74,7 +74,7 @@ No commit message is allowed to match this regex, for example `ssh\:\/\/`.
 All commit messages must match this regex, e.g. `Fixed \d+\..*`.
 
 <h4 class="pdoc-member-header" id="ProjectPushRules-denyDeleteTag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/4392b3d01d99f029457dc8732b04680d536edddb/sdk/nodejs/types/input.ts#L32">property <b>denyDeleteTag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/1c850ddb233dfa8235de9770a46aef8ca908c71e/sdk/nodejs/types/input.ts#L31">property <b>denyDeleteTag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>denyDeleteTag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -82,7 +82,7 @@ All commit messages must match this regex, e.g. `Fixed \d+\..*`.
 Deny deleting a tag.
 
 <h4 class="pdoc-member-header" id="ProjectPushRules-fileNameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/4392b3d01d99f029457dc8732b04680d536edddb/sdk/nodejs/types/input.ts#L36">property <b>fileNameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/1c850ddb233dfa8235de9770a46aef8ca908c71e/sdk/nodejs/types/input.ts#L35">property <b>fileNameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fileNameRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -90,7 +90,7 @@ Deny deleting a tag.
 All commited filenames must not match this regex, e.g. `(jar|exe)$`.
 
 <h4 class="pdoc-member-header" id="ProjectPushRules-maxFileSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/4392b3d01d99f029457dc8732b04680d536edddb/sdk/nodejs/types/input.ts#L40">property <b>maxFileSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/1c850ddb233dfa8235de9770a46aef8ca908c71e/sdk/nodejs/types/input.ts#L39">property <b>maxFileSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxFileSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -98,7 +98,7 @@ All commited filenames must not match this regex, e.g. `(jar|exe)$`.
 Maximum file size (MB).
 
 <h4 class="pdoc-member-header" id="ProjectPushRules-memberCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/4392b3d01d99f029457dc8732b04680d536edddb/sdk/nodejs/types/input.ts#L44">property <b>memberCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/1c850ddb233dfa8235de9770a46aef8ca908c71e/sdk/nodejs/types/input.ts#L43">property <b>memberCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -106,7 +106,7 @@ Maximum file size (MB).
 Restrict commits by author (email) to existing GitLab users.
 
 <h4 class="pdoc-member-header" id="ProjectPushRules-preventSecrets">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/4392b3d01d99f029457dc8732b04680d536edddb/sdk/nodejs/types/input.ts#L48">property <b>preventSecrets</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/1c850ddb233dfa8235de9770a46aef8ca908c71e/sdk/nodejs/types/input.ts#L47">property <b>preventSecrets</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preventSecrets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -114,7 +114,7 @@ Restrict commits by author (email) to existing GitLab users.
 GitLab will reject any files that are likely to contain secrets.
 
 <h4 class="pdoc-member-header" id="ProjectPushRules-rejectUnsignedCommits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/4392b3d01d99f029457dc8732b04680d536edddb/sdk/nodejs/types/input.ts#L52">property <b>rejectUnsignedCommits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/1c850ddb233dfa8235de9770a46aef8ca908c71e/sdk/nodejs/types/input.ts#L51">property <b>rejectUnsignedCommits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rejectUnsignedCommits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>

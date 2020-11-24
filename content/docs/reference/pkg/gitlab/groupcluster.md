@@ -1875,6 +1875,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+GitLab group clusters can be imported using an id made up of `groupid:clusterid`, e.g.
+
+```sh
+ $ pulumi import gitlab:index/groupCluster:GroupCluster bar 123:321
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

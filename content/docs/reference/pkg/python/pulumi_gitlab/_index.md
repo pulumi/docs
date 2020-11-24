@@ -175,6 +175,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Example deploy key&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>GitLab deploy keys can be imported using an id made up of <code class="docutils literal notranslate"><span class="pre">{project_id}:{deploy_key_id}</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import gitlab:index/deployKey:DeployKey <span class="nb">test</span> <span class="m">1</span>:3
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -290,6 +294,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">foo_deploy_key_enable</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">DeployKeyEnable</span><span class="p">(</span><span class="s2">&quot;fooDeployKeyEnable&quot;</span><span class="p">,</span>
     <span class="n">key_id</span><span class="o">=</span><span class="n">parent_deploy_key</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">project</span><span class="o">=</span><span class="n">foo_project</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>GitLab enabled deploy keys can be imported using an id made up of <code class="docutils literal notranslate"><span class="pre">{project_id}:{deploy_key_id}</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import gitlab:index/deployKeyEnable:DeployKeyEnable example <span class="m">12345</span>:67890
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1225,6 +1233,10 @@ documentation</a>.</p>
     <span class="n">management_project_id</span><span class="o">=</span><span class="s2">&quot;123456&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>GitLab group clusters can be imported using an id made up of <code class="docutils literal notranslate"><span class="pre">groupid:clusterid</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import gitlab:index/groupCluster:GroupCluster bar <span class="m">123</span>:321
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1390,6 +1402,10 @@ documentation</a>.</p>
     <span class="n">group</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Gitlab group labels can be imported using an id made up of <code class="docutils literal notranslate"><span class="pre">{group_id}:{group_label_id}</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import gitlab:index/groupLabel:GroupLabel example <span class="m">12345</span>:fixme
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1499,6 +1515,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">ldap_provider</span><span class="o">=</span><span class="s2">&quot;ldapmain&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>GitLab group ldap links can be imported using an id made up of <code class="docutils literal notranslate"><span class="pre">ldap_provider:cn</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import gitlab:index/groupLdapLink:GroupLdapLink <span class="nb">test</span> <span class="s2">&quot;ldapmain:testuser&quot;</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1605,6 +1625,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">expires_at</span><span class="o">=</span><span class="s2">&quot;2020-12-31&quot;</span><span class="p">,</span>
     <span class="n">group_id</span><span class="o">=</span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
     <span class="n">user_id</span><span class="o">=</span><span class="mi">1337</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>GitLab group membership can be imported using an id made up of <code class="docutils literal notranslate"><span class="pre">group_id:user_id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import gitlab:index/groupMembership:GroupMembership <span class="nb">test</span> <span class="s2">&quot;12345:1337&quot;</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1716,6 +1740,10 @@ documentation</a>.</p>
     <span class="n">masked</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">protected</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">value</span><span class="o">=</span><span class="s2">&quot;group_variable_value&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>GitLab group variables can be imported using an id made up of <code class="docutils literal notranslate"><span class="pre">groupid:variablename</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import gitlab:index/groupVariable:GroupVariable example <span class="m">12345</span>:group_variable_key
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1839,6 +1867,10 @@ documentation</a>.</p>
     <span class="n">kubernetes_namespace</span><span class="o">=</span><span class="s2">&quot;namespace&quot;</span><span class="p">,</span>
     <span class="n">kubernetes_token</span><span class="o">=</span><span class="s2">&quot;some-token&quot;</span><span class="p">,</span>
     <span class="n">management_project_id</span><span class="o">=</span><span class="s2">&quot;123456&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>GitLab instance clusters can be imported using a <code class="docutils literal notranslate"><span class="pre">clusterid</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import gitlab:index/instanceCluster:InstanceCluster bar <span class="m">123</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2816,6 +2848,10 @@ documentation</a>.</p>
     <span class="n">project</span><span class="o">=</span><span class="n">foo</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>GitLab project clusters can be imported using an id made up of <code class="docutils literal notranslate"><span class="pre">projectid:clusterid</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import gitlab:index/projectCluster:ProjectCluster bar <span class="m">123</span>:321
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3277,6 +3313,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">user_id</span><span class="o">=</span><span class="mi">1337</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>GitLab group membership can be imported using an id made up of <code class="docutils literal notranslate"><span class="pre">group_id:user_id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import gitlab:index/projectMembership:ProjectMembership <span class="nb">test</span> <span class="s2">&quot;12345:1337&quot;</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3373,6 +3413,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">foo</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">ProjectMirror</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
     <span class="n">project</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
     <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://username:password@github.com/org/repository.git&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>GitLab project mirror can be imported using an id made up of <code class="docutils literal notranslate"><span class="pre">project_id:mirror_id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import gitlab:index/projectMirror:ProjectMirror foo <span class="s2">&quot;12345:1337&quot;</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -3490,6 +3534,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">project_id</span><span class="o">=</span><span class="s2">&quot;12345&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>GitLab project group shares can be imported using an id made up of <code class="docutils literal notranslate"><span class="pre">projectid:groupid</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import gitlab:index/projectShareGroup:ProjectShareGroup <span class="nb">test</span> <span class="m">12345</span>:1337
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3596,6 +3644,10 @@ there is another variable with the same key and different environment scope. See
     <span class="n">project</span><span class="o">=</span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
     <span class="n">protected</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">value</span><span class="o">=</span><span class="s2">&quot;project_variable_value&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>GitLab project variables can be imported using an id made up of <code class="docutils literal notranslate"><span class="pre">project:key:environment_scope</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import gitlab:index/projectVariable:ProjectVariable example <span class="s1">&#39;12345:project_variable_key:*&#39;</span>
 </pre></div>
 </div>
 <dl class="field-list simple">

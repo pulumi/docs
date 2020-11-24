@@ -811,6 +811,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+GitLab project group shares can be imported using an id made up of `projectid:groupid`, e.g.
+
+```sh
+ $ pulumi import gitlab:index/projectShareGroup:ProjectShareGroup test 12345:1337
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

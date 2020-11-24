@@ -918,6 +918,8 @@ also need to be included in the approvers list in order to be able to approve th
 
 
 
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

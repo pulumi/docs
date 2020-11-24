@@ -16,6 +16,7 @@ Provides details about a list of projects in the Gitlab provider. Listing all pr
 
 > NOTE: This data source supports all available filters exposed by the `xanzy/go-gitlab` package, which might not expose all available filters exposed by the Gitlab APIs.
 
+
 {{% examples %}}
 ## Example Usage
 

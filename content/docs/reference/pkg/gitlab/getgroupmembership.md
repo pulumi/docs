@@ -14,6 +14,7 @@ meta_desc: "Explore the GetGroupMembership function of the GitLab package, inclu
 
 Provides details about a list of group members in the gitlab provider. The results include id, username, name and more about the requested members.
 
+
 {{% examples %}}
 ## Example Usage
 

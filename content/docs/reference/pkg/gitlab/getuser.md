@@ -14,6 +14,7 @@ meta_desc: "Explore the GetUser function of the GitLab package, including exampl
 
 Provides details about a specific user in the gitlab provider. Especially the ability to lookup the id for linking to other resources.
 
+
 {{% examples %}}
 ## Example Usage
 

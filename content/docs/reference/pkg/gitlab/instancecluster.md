@@ -1861,6 +1861,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+GitLab instance clusters can be imported using a `clusterid`, e.g.
+
+```sh
+ $ pulumi import gitlab:index/instanceCluster:InstanceCluster bar 123
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

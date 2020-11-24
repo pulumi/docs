@@ -16,6 +16,7 @@ Provides details about a list of users in the gitlab provider. The results inclu
 
 **NOTE**: Some of the available options require administrator privileges. Please visit [Gitlab API documentation][users_for_admins] for more information.
 
+
 {{% examples %}}
 ## Example Usage
 

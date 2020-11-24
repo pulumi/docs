@@ -983,6 +983,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+GitLab group ldap links can be imported using an id made up of `ldap_provider:cn`, e.g.
+
+```sh
+ $ pulumi import gitlab:index/groupLdapLink:GroupLdapLink test "ldapmain:testuser"
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

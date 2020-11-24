@@ -16,6 +16,7 @@ This resource allows you to create and manage pipeline schedules.
 For further information on clusters, consult the [gitlab
 documentation](https://docs.gitlab.com/ce/user/project/pipelines/schedules.html).
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1070,6 +1071,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
