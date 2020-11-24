@@ -14,6 +14,7 @@ Provides a resource which manages Cloudflare Logpush ownership challenges to use
 in a Logpush Job. On it's own, doesn't do much however this resource should
 be used in conjunction to create Logpush jobs.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -804,6 +805,8 @@ contains the contents required for Logpush Job creation.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

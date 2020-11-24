@@ -982,6 +982,20 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+~> **Important:** If you are importing an Access Service Token you will not have the `client_secret` available in the state for use. The `client_secret` is only available once, at creation. In most cases, it is better to just create a new resource should you need to reference it in other resources. Access Service Tokens can be imported using a composite ID formed of account ID and Service Token ID.
+
+```sh
+ $ pulumi import cloudflare:index/accessServiceToken:AccessServiceToken my_app cb029e245cfdd66dc8d2e570d5dd3322/d41d8cd98f00b204e9800998ecf8427e
+```
+
+ where * `cb029e245cfdd66dc8d2e570d5dd3322` - Account ID * `d41d8cd98f00b204e9800998ecf8427e` - Access Service Token ID
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

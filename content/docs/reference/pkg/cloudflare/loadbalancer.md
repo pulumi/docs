@@ -12,6 +12,7 @@ meta_desc: "Explore the LoadBalancer resource of the Cloudflare package, includi
 
 Provides a Cloudflare Load Balancer resource. This sits in front of a number of defined pools of origins and provides various options for geographically-aware load balancing. Note that the load balancing feature must be enabled in your Cloudflare account before you can use this resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2167,6 +2168,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

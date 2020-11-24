@@ -12,7 +12,7 @@ meta_desc: "Explore the OriginCaCertificate resource of the Cloudflare package, 
 
 Provides a Cloudflare Origin CA certificate used to protect traffic to your origin without involving a third party Certificate Authority.
 
-**This resource requires you use your Origin CA Key as the `api_user_service_key`.**
+**This resource requires you use your Origin CA Key as the `api_user_service_key`, in conjunction with an `api_token` or `email` and `api_key`.**
 
 {{% examples %}}
 ## Example Usage
@@ -1140,6 +1140,18 @@ The following state arguments are supported:
 
 
 
+
+
+
+
+## Import
+
+
+Origin CA certificate resource can be imported using an ID, e.g.
+
+```sh
+ $ pulumi import cloudflare:index/originCaCertificate:OriginCaCertificate example 276266538771611802607153687288146423901027769273
+```
 
 
 

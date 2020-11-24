@@ -1029,6 +1029,24 @@ updated. Either `zone_id` or `account_id` must be provided.
 
 
 
+## Import
+
+
+Custom pages can be imported using a composite ID formed of* `customPageLevel` - Either `account` or `zone`. * `identifier` - The ID of the account or zone you intend to manage. * `pageType` - The value from the `type` argument. Example for a zone
+
+```sh
+ $ pulumi import cloudflare:index/customPages:CustomPages basic_challenge zone/d41d8cd98f00b204e9800998ecf8427e/basic_challenge
+```
+
+ Example for an account
+
+```sh
+ $ pulumi import cloudflare:index/customPages:CustomPages basic_challenge account/e268443e43d93dab7ebef303bbe9642f/basic_challenge
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

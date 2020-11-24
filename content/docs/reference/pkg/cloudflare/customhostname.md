@@ -2153,6 +2153,18 @@ support. Valid values are `"1.0"`, `"1.1"`, `"1.2"` and `"1.3"`.
 
 
 
+## Import
+
+
+Custom hostname certificates can be imported using a composite ID formed of the zone ID and [hostname ID](https://api.cloudflare.com/#custom-hostname-for-a-zone-properties), separated by a "/" e.g.
+
+```sh
+ $ pulumi import cloudflare:index/customHostname:CustomHostname example d41d8cd98f00b204e9800998ecf8427e/0d89c70d-ad9f-4843-b99f-6cc0252067e9
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

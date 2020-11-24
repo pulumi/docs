@@ -897,6 +897,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+WAF Rule Groups can be imported using a composite ID formed of zone ID and the WAF Rule Group ID, e.g.
+
+```sh
+ $ pulumi import cloudflare:index/wafGroup:WafGroup honey_pot ae36f999674d196762efcc5abb06b345/de677e5818985db1285d0e80225f06e5
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

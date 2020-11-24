@@ -43,6 +43,10 @@ authorisation gateway managed by Cloudflare.</p>
     <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;1d5fdc9e88c8a8c4518b068cd94331fe&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Access Applications can be imported using a composite ID formed of zone ID and application ID.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudflare:index/accessApplication:AccessApplication staging cb029e245cfdd66dc8d2e570d5dd3322/d41d8cd98f00b204e9800998ecf8427e
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -258,6 +262,12 @@ Custom values are also supported.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">saml</span></code> - (Optional) Use an external SAML setup as the <code class="docutils literal notranslate"><span class="pre">include</span></code> condition.
 Example:</p></li>
 </ul>
+<p>Access Groups can be imported using a composite ID formed of account ID and group ID.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import cloudflare:index/accessGroup:AccessGroup staging 975ecf5a45e3bcb680dba0722a420ad9/67ea780ce4982c1cfbe6b7293afc765d
+
+where * <span class="sb">``</span>975ecf5a45e3bcb680dba0722a420ad9<span class="sb">``</span> - Account ID * <span class="sb">``</span>67ea780ce4982c1cfbe6b7293afc765d<span class="sb">``</span> - Access Group ID
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -420,6 +430,12 @@ used as an authentication or authorisation source within Access.</p>
 </div>
 <p>Please refer to the [developers.cloudflare.com Access documentation][access_identity_provider_guide]
 for full reference on what is available and how to configure your provider.</p>
+<p>Access Identity Providers can be imported using a composite ID formed of account ID and Access Identity Provider ID.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import cloudflare:index/accessIdentityProvider:AccessIdentityProvider my_idp cb029e245cfdd66dc8d2e570d5dd3322/e00e1c13-e350-44fe-96c5-fb75c954871c
+
+<span class="o">[</span>access_identity_provider_guide<span class="o">]</span>https://developers.cloudflare.com/access/configuring-identity-providers/
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -561,6 +577,12 @@ particular resource.</p>
     <span class="n">requires</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;ips&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;office_ip&quot;</span><span class="p">]],</span>
     <span class="p">})</span>
+</pre></div>
+</div>
+<p>Access Policies can be imported using a composite ID formed of zone ID, application ID and policy ID.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import cloudflare:index/accessPolicy:AccessPolicy staging cb029e245cfdd66dc8d2e570d5dd3322/d41d8cd98f00b204e9800998ecf8427e/67ea780ce4982c1cfbe6b7293afc765d
+
+where * <span class="sb">``</span>cb029e245cfdd66dc8d2e570d5dd3322<span class="sb">``</span> - Zone ID * <span class="sb">``</span>d41d8cd98f00b204e9800998ecf8427e<span class="sb">``</span> - Access Application ID * <span class="sb">``</span>67ea780ce4982c1cfbe6b7293afc765d<span class="sb">``</span> - Access Policy ID
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -709,6 +731,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.AccessRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AccessRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">configuration</span><span class="p">:</span> <span class="n">Union[AccessRuleConfigurationArgs, Mapping[str, Any], Awaitable[Union[AccessRuleConfigurationArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mode</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notes</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AccessRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare IP Firewall Access Rule resource. Access control can be applied on basis of IP addresses, IP ranges, AS numbers or countries.</p>
+<p>Records can be imported using a composite ID formed of access rule type, access rule type identifier and identifer value, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import cloudflare:index/accessRule:AccessRule default zone/cb029e245cfdd66dc8d2e570d5dd3322/d41d8cd98f00b204e9800998ecf8427e
+
+where<span class="se">\ </span>* <span class="sb">``</span>zone<span class="sb">``</span> - access rule <span class="nb">type</span> <span class="o">(</span><span class="se">\ </span><span class="sb">``</span>account<span class="sb">``</span><span class="se">\ </span>, <span class="sb">``</span>zone<span class="sb">``</span> or <span class="sb">``</span>user<span class="sb">``</span><span class="se">\ </span><span class="o">)</span> * <span class="sb">``</span>cb029e245cfdd66dc8d2e570d5dd3322<span class="sb">``</span> - access rule <span class="nb">type</span> ID <span class="o">(</span>i.e the zone ID
+
+or account ID you wish to target<span class="o">)</span> * <span class="sb">``</span>d41d8cd98f00b204e9800998ecf8427e<span class="sb">``</span> - access rule ID as returned by
+
+respective API endpoint <span class="k">for</span> the <span class="nb">type</span> you are attempting to import.
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -814,6 +846,12 @@ when an application is behind Cloudflare Access.</p>
 <span class="n">my_app</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">AccessServiceToken</span><span class="p">(</span><span class="s2">&quot;myApp&quot;</span><span class="p">,</span>
     <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span><span class="p">,</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;CI/CD app&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>~&gt; <strong>Important:</strong> If you are importing an Access Service Token you will not have the <code class="docutils literal notranslate"><span class="pre">client_secret</span></code> available in the state for use. The <code class="docutils literal notranslate"><span class="pre">client_secret</span></code> is only available once, at creation. In most cases, it is better to just create a new resource should you need to reference it in other resources. Access Service Tokens can be imported using a composite ID formed of account ID and Service Token ID.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import cloudflare:index/accessServiceToken:AccessServiceToken my_app cb029e245cfdd66dc8d2e570d5dd3322/d41d8cd98f00b204e9800998ecf8427e
+
+where * <span class="sb">``</span>cb029e245cfdd66dc8d2e570d5dd3322<span class="sb">``</span> - Account ID * <span class="sb">``</span>d41d8cd98f00b204e9800998ecf8427e<span class="sb">``</span> - Access Service Token ID
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -931,6 +969,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">])</span>
 </pre></div>
 </div>
+<p>Account members can be imported using a composite ID formed of account ID and account member ID, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import cloudflare:index/accountMember:AccountMember example_user d41d8cd98f00b204e9800998ecf8427e/b58c6f14d292556214bd64909bcdb118
+
+where<span class="se">\ </span>* <span class="sb">``</span>d41d8cd98f00b204e9800998ecf8427e<span class="sb">``</span> - account ID as returned by the <span class="sb">`</span>API &lt;https://api.cloudflare.com/#accounts-account-details&gt;<span class="sb">`</span>_ * <span class="sb">``</span>b58c6f14d292556214bd64909bcdb118<span class="sb">``</span> - account member ID as returned by the <span class="sb">`</span>API &lt;https://api.cloudflare.com/#account-members-member-details&gt;<span class="sb">`</span>_
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1020,6 +1064,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">smart_routing</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="p">,</span>
     <span class="n">tiered_caching</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="p">,</span>
     <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Argo settings can be imported the zone ID.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import cloudflare:index/argo:Argo example d41d8cd98f00b204e9800998ecf8427e
+
+where <span class="sb">``</span>d41d8cd98f00b204e9800998ecf8427e<span class="sb">``</span> is the zone ID.
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1143,6 +1193,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">enabled</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Authenticated Origin Pull configuration can be imported using a composite ID formed of the zone ID, the form of Authenticated Origin Pulls, and the certificate ID, with each section filled or left blank e.g. # Import Authenticated Origin Pull configuration</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudflare:index/authenticatedOriginPulls:AuthenticatedOriginPulls my_aop 023e105f4ecef8ad9ca31a8372d0c353//
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudflare:index/authenticatedOriginPulls:AuthenticatedOriginPulls my_per_zone_aop 023e105f4ecef8ad9ca31a8372d0c353/2458ce5a-0c35-4c7f-82c7-8e9487d3ff60/
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudflare:index/authenticatedOriginPulls:AuthenticatedOriginPulls my_per_hostname_aop 023e105f4ecef8ad9ca31a8372d0c353/2458ce5a-0c35-4c7f-82c7-8e9487d3ff60/aop.example.com
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1258,6 +1318,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">zone_id</span><span class="o">=</span><span class="n">var</span><span class="p">[</span><span class="s2">&quot;cloudflare_zone_id&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
+<p>Authenticated Origin Pull certificates can be imported using a composite ID formed of the zone ID, the form of Authenticated Origin Pulls, and the certificate ID, e.g. # Import Per-Zone Authenticated Origin Pull certificate</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudflare:index/authenticatedOriginPullsCertificate:AuthenticatedOriginPullsCertificate 2458ce5a-0c35-4c7f-82c7-8e9487d3ff60 023e105f4ecef8ad9ca31a8372d0c353/per-zone/2458ce5a-0c35-4c7f-82c7-8e9487d3ff60
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudflare:index/authenticatedOriginPullsCertificate:AuthenticatedOriginPullsCertificate 2458ce5a-0c35-4c7f-82c7-8e9487d3ff60 023e105f4ecef8ad9ca31a8372d0c353/per-hostname/2458ce5a-0c35-4c7f-82c7-8e9487d3ff60
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1354,7 +1421,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_cloudflare.AwaitableGetIpRangesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AwaitableGetIpRangesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv4_cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AwaitableGetIpRangesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">AwaitableGetIpRangesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">china_ipv4_cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">china_ipv6_cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv4_cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.AwaitableGetIpRangesResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -1388,6 +1455,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">advertisement</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Example IP Prefix&quot;</span><span class="p">,</span>
     <span class="n">prefix_id</span><span class="o">=</span><span class="s2">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The current settings for Bring-Your-Own-IP prefixes can be imported using the prefix ID.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudflare:index/byoIpPrefix:ByoIpPrefix example d41d8cd98f00b204e9800998ecf8427e
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1479,17 +1550,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_cloudflare.CertificatePack">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">CertificatePack</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">certificate_authority</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloudflare_branding</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hosts</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">validation_method</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">validity_days</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">zone_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.CertificatePack" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a CertificatePack resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] certificate_authority: Which certificate</p>
-<blockquote>
-<div><p>authority to issue the certificate pack. Allowed values: <code class="docutils literal notranslate"><span class="pre">&quot;digicert&quot;</span></code>,
-<code class="docutils literal notranslate"><span class="pre">&quot;lets_encrypt&quot;</span></code>.</p>
-</div></blockquote>
+<dd><p>Certificate packs can be imported using a composite ID of the zone ID and certificate pack ID. This isn’t recommended and it is advised to replace the certificate entirely instead.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudflare:index/certificatePack:CertificatePack example cb029e245cfdd66dc8d2e570d5dd3322/8fda82e2-6af9-4eb2-992a-5ab65b792ef1
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>certificate_authority</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Which certificate
+authority to issue the certificate pack. Allowed values: <code class="docutils literal notranslate"><span class="pre">&quot;digicert&quot;</span></code>,
+<code class="docutils literal notranslate"><span class="pre">&quot;lets_encrypt&quot;</span></code>.</p></li>
 <li><p><strong>cloudflare_branding</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether or not to include
 Cloudflare branding. This will add <code class="docutils literal notranslate"><span class="pre">sni.cloudflaressl.com</span></code> as the Common Name
 if set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
@@ -1645,6 +1717,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Custom hostname certificates can be imported using a composite ID formed of the zone ID and <a class="reference external" href="https://api.cloudflare.com/#custom-hostname-for-a-zone-properties">hostname ID</a>, separated by a “/” e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudflare:index/customHostname:CustomHostname example d41d8cd98f00b204e9800998ecf8427e/0d89c70d-ad9f-4843-b99f-6cc0252067e9
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1751,6 +1827,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Custom hostname fallback origins can be imported using a composite ID formed of the zone ID and <a class="reference external" href="https://api.cloudflare.com/#custom-hostname-fallback-origin-for-a-zone-properties">fallback origin</a>, separated by a “/” e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudflare:index/customHostnameFallbackOrigin:CustomHostnameFallbackOrigin example d41d8cd98f00b204e9800998ecf8427e/fallback.example.com
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1848,6 +1928,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;basic_challenge&quot;</span><span class="p">,</span>
     <span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://example.com/challenge.html&quot;</span><span class="p">,</span>
     <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Custom pages can be imported using a composite ID formed of* <code class="docutils literal notranslate"><span class="pre">customPageLevel</span></code> - Either <code class="docutils literal notranslate"><span class="pre">account</span></code> or <code class="docutils literal notranslate"><span class="pre">zone</span></code>. * <code class="docutils literal notranslate"><span class="pre">identifier</span></code> - The ID of the account or zone you intend to manage. * <code class="docutils literal notranslate"><span class="pre">pageType</span></code> - The value from the <code class="docutils literal notranslate"><span class="pre">type</span></code> argument. Example for a zone</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import cloudflare:index/customPages:CustomPages basic_challenge zone/d41d8cd98f00b204e9800998ecf8427e/basic_challenge
+
+Example <span class="k">for</span> an account
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudflare:index/customPages:CustomPages basic_challenge account/e268443e43d93dab7ebef303bbe9642f/basic_challenge
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1985,6 +2074,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">zone_id</span><span class="o">=</span><span class="n">cloudflare_zone_id</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Custom SSL Certs can be imported using a composite ID formed of the zone ID and <a class="reference external" href="https://api.cloudflare.com/#custom-ssl-for-a-zone-properties">certificate ID</a>, separated by a “/” e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudflare:index/customSsl:CustomSsl default 1d5fdc9e88c8a8c4518b068cd94331fe/0123f0ab-9cde-45b2-80bd-4da3010f1337
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2074,6 +2167,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Wordpress break-in attempts that are outside of the office&quot;</span><span class="p">,</span>
     <span class="n">expression</span><span class="o">=</span><span class="s2">&quot;(http.request.uri.path ~ &quot;</span><span class="o">.*</span><span class="n">wp</span><span class="o">-</span><span class="n">login</span><span class="o">.</span><span class="n">php</span><span class="s2">&quot; or http.request.uri.path ~ &quot;</span><span class="o">.*</span><span class="n">xmlrpc</span><span class="o">.</span><span class="n">php</span><span class="s2">&quot;) and ip.src ne 192.0.2.1&quot;</span><span class="p">,</span>
     <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Filter can be imported using a composite ID formed of zone ID and filter ID, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import cloudflare:index/filter:Filter default d41d8cd98f00b204e9800998ecf8427e/9e107d9d372bb6826bd81d3542a419d6
+
+where<span class="se">\ </span>* <span class="sb">``</span>d41d8cd98f00b204e9800998ecf8427e<span class="sb">``</span> - zone ID * <span class="sb">``</span>9e107d9d372bb6826bd81d3542a419d6<span class="sb">``</span> - filter ID as returned by <span class="sb">`</span>API &lt;https://api.cloudflare.com/#zone-firewall-filters&gt;<span class="sb">`</span>_
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2198,6 +2297,12 @@ A filter expression permits selecting traffic by multiple criteria allowing grea
     <span class="n">action</span><span class="o">=</span><span class="s2">&quot;block&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Firewall Rule can be imported using a composite ID formed of zone ID and rule ID, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import cloudflare:index/firewallRule:FirewallRule default d41d8cd98f00b204e9800998ecf8427e/9e107d9d372bb6826bd81d3542a419d6
+
+where<span class="se">\ </span>* <span class="sb">``</span>d41d8cd98f00b204e9800998ecf8427e<span class="sb">``</span> - zone ID * <span class="sb">``</span>9e107d9d372bb6826bd81d3542a419d6<span class="sb">``</span> - rule ID as returned by <span class="sb">`</span>API &lt;https://api.cloudflare.com/#zone-firewall-filter-rules&gt;<span class="sb">`</span>_
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2310,12 +2415,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_cloudflare.GetIpRangesResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">GetIpRangesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv4_cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.GetIpRangesResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">GetIpRangesResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">china_ipv4_cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">china_ipv6_cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv4_cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ipv6_cidr_blocks</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.GetIpRangesResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getIpRanges.</p>
+<dl class="py method">
+<dt id="pulumi_cloudflare.GetIpRangesResult.china_ipv4_cidr_blocks">
+<em class="property">property </em><code class="sig-name descname">china_ipv4_cidr_blocks</code><a class="headerlink" href="#pulumi_cloudflare.GetIpRangesResult.china_ipv4_cidr_blocks" title="Permalink to this definition">¶</a></dt>
+<dd><p>The lexically ordered list of only the IPv4 China CIDR blocks.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudflare.GetIpRangesResult.china_ipv6_cidr_blocks">
+<em class="property">property </em><code class="sig-name descname">china_ipv6_cidr_blocks</code><a class="headerlink" href="#pulumi_cloudflare.GetIpRangesResult.china_ipv6_cidr_blocks" title="Permalink to this definition">¶</a></dt>
+<dd><p>The lexically ordered list of only the IPv6 China CIDR blocks.</p>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pulumi_cloudflare.GetIpRangesResult.cidr_blocks">
 <em class="property">property </em><code class="sig-name descname">cidr_blocks</code><a class="headerlink" href="#pulumi_cloudflare.GetIpRangesResult.cidr_blocks" title="Permalink to this definition">¶</a></dt>
-<dd><p>The lexically ordered list of all CIDR blocks.</p>
+<dd><p>The lexically ordered list of all non-China CIDR blocks.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2750,6 +2867,10 @@ used in Firewall Rules across all zones within the same account.</p>
     <span class="p">],</span>
     <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;ip&quot;</span><span class="p">,</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;example_list&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>An existing IP List can be imported using the account ID and list ID</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudflare:index/ipList:IpList example d41d8cd98f00b204e9800998ecf8427e/cb029e245cfdd66dc8d2e570d5dd3322
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -3545,6 +3666,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;fb54f084ca7f7b732d3d3ecbd8ef7bf2&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>You can import existing Logpull Retention using the zone ID as the identifier.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudflare:index/logpullRetention:LogpullRetention example fb54f084ca7f7b732d3d3ecbd8ef7bf2
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3746,7 +3871,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.OriginCaCertificate">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">OriginCaCertificate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">csr</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hostnames</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">request_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">requested_validity</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.OriginCaCertificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare Origin CA certificate used to protect traffic to your origin without involving a third party Certificate Authority.</p>
-<p><strong>This resource requires you use your Origin CA Key as the ``api_user_service_key``.</strong></p>
+<p><strong>This resource requires you use your Origin CA Key as the ``api_user_service_key``, in conjunction with an ``api_token`` or ``email`` and ``api_key``.</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
 <span class="kn">import</span> <span class="nn">pulumi_tls</span> <span class="k">as</span> <span class="nn">tls</span>
@@ -3765,6 +3890,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">hostnames</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;example.com&quot;</span><span class="p">],</span>
     <span class="n">request_type</span><span class="o">=</span><span class="s2">&quot;origin-rsa&quot;</span><span class="p">,</span>
     <span class="n">requested_validity</span><span class="o">=</span><span class="mi">7</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Origin CA certificate resource can be imported using an ID, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudflare:index/originCaCertificate:OriginCaCertificate example <span class="m">276266538771611802607153687288146423901027769273</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -3896,6 +4025,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="n">js</span><span class="o">=</span><span class="s2">&quot;on&quot;</span><span class="p">,</span>
         <span class="p">)],</span>
     <span class="p">))</span>
+</pre></div>
+</div>
+<p>Page rules can be imported using a composite ID formed of zone ID and page rule ID, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudflare:index/pageRule:PageRule default d41d8cd98f00b204e9800998ecf8427e/ch8374ftwdghsif43
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -4121,6 +4254,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">])</span>
 </pre></div>
 </div>
+<p>Rate limits can be imported using a composite ID formed of zone name and rate limit ID, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudflare:index/rateLimit:RateLimit default d41d8cd98f00b204e9800998ecf8427e/ch8374ftwdghsif43
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4283,6 +4420,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="n">port</span><span class="o">=</span><span class="mi">443</span><span class="p">,</span>
         <span class="n">target</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
     <span class="p">))</span>
+</pre></div>
+</div>
+<p>Records can be imported using a composite ID formed of zone ID and record ID, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import cloudflare:index/record:Record default ae36f999674d196762efcc5abb06b345/d41d8cd98f00b204e9800998ecf8427e
+
+where<span class="se">\ </span>* <span class="sb">``</span>ae36f999674d196762efcc5abb06b345<span class="sb">``</span> - the zone ID * <span class="sb">``</span>d41d8cd98f00b204e9800998ecf8427e<span class="sb">``</span> - record ID as returned by <span class="sb">`</span>API &lt;https://api.cloudflare.com/#dns-records-for-a-zone-list-dns-records&gt;<span class="sb">`</span>_
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -4464,6 +4607,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ssh.example.com&quot;</span><span class="p">,</span>
     <span class="p">),</span>
     <span class="n">origin_directs</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;tcp://109.151.40.129:22&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Spectrum resource can be imported using a zone ID and Application ID, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import cloudflare:index/spectrumApplication:SpectrumApplication example d41d8cd98f00b204e9800998ecf8427e/9a7806061c88ada191ed06f989cc3dac
+
+where<span class="se">\ </span>* <span class="sb">``</span>d41d8cd98f00b204e9800998ecf8427e<span class="sb">``</span> - zone ID, as returned from <span class="sb">`</span>API &lt;https://api.cloudflare.com/#zone-list-zones&gt;<span class="sb">`</span>_ * <span class="sb">``</span>9a7806061c88ada191ed06f989cc3dac<span class="sb">``</span> - Application ID
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -4654,6 +4803,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;ae36f999674d196762efcc5abb06b345&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>WAF Rule Groups can be imported using a composite ID formed of zone ID and the WAF Rule Group ID, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudflare:index/wafGroup:WafGroup honey_pot ae36f999674d196762efcc5abb06b345/de677e5818985db1285d0e80225f06e5
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4772,6 +4925,10 @@ WAF rules and groups on or off based on URIs.</p>
         <span class="s2">&quot;default&quot;</span><span class="p">:</span> <span class="s2">&quot;block&quot;</span><span class="p">,</span>
         <span class="s2">&quot;challenge&quot;</span><span class="p">:</span> <span class="s2">&quot;block&quot;</span><span class="p">,</span>
     <span class="p">})</span>
+</pre></div>
+</div>
+<p>WAF Overrides can be imported using a composite ID formed of zone ID and override ID.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudflare:index/wafOverride:WafOverride my_example_waf_override 3abe5b950053dbddf1516d89f9ef1e8a/9d4e66d7649c178663bf62e06dbacb23
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -4914,6 +5071,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;ae36f999674d196762efcc5abb06b345&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Packages can be imported using a composite ID formed of zone ID and the WAF Package ID, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudflare:index/wafPackage:WafPackage owasp ae36f999674d196762efcc5abb06b345/a25a9a7e9c00afc1fb2e0245519d725b
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5019,6 +5180,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;simulate&quot;</span><span class="p">,</span>
     <span class="n">rule_id</span><span class="o">=</span><span class="s2">&quot;100000&quot;</span><span class="p">,</span>
     <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;ae36f999674d196762efcc5abb06b345&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Rules can be imported using a composite ID formed of zone ID and the WAF Rule ID, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudflare:index/wafRule:WafRule <span class="m">100000</span> ae36f999674d196762efcc5abb06b345/100000
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -5138,6 +5303,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">script_name</span><span class="o">=</span><span class="n">my_script</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Records can be imported using a composite ID formed of zone ID and route ID, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import cloudflare:index/workerRoute:WorkerRoute default d41d8cd98f00b204e9800998ecf8427e/9a7806061c88ada191ed06f989cc3dac
+
+where<span class="se">\ </span>* <span class="sb">``</span>d41d8cd98f00b204e9800998ecf8427e<span class="sb">``</span> - zone ID * <span class="sb">``</span>9a7806061c88ada191ed06f989cc3dac<span class="sb">``</span> - route ID as returned by <span class="sb">`</span>API &lt;https://api.cloudflare.com/#worker-filters-list-filters&gt;<span class="sb">`</span>_
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5229,6 +5400,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_cloudflare.WorkerScript">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">WorkerScript</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">content</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kv_namespace_bindings</span><span class="p">:</span> <span class="n">Union[Sequence[Union[WorkerScriptKvNamespaceBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptKvNamespaceBindingArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[WorkerScriptKvNamespaceBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptKvNamespaceBindingArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plain_text_bindings</span><span class="p">:</span> <span class="n">Union[Sequence[Union[WorkerScriptPlainTextBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptPlainTextBindingArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[WorkerScriptPlainTextBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptPlainTextBindingArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_text_bindings</span><span class="p">:</span> <span class="n">Union[Sequence[Union[WorkerScriptSecretTextBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptSecretTextBindingArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[WorkerScriptSecretTextBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptSecretTextBindingArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">webassembly_bindings</span><span class="p">:</span> <span class="n">Union[Sequence[Union[WorkerScriptWebassemblyBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptWebassemblyBindingArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[WorkerScriptWebassemblyBindingArgs, Mapping[str, Any], Awaitable[Union[WorkerScriptWebassemblyBindingArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.WorkerScript" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Cloudflare worker script resource. In order for a script to be active, you’ll also need to setup a <code class="docutils literal notranslate"><span class="pre">WorkerRoute</span></code>. <em>NOTE:</em>  This resource uses the Cloudflare account APIs. This requires setting the <code class="docutils literal notranslate"><span class="pre">CLOUDFLARE_ACCOUNT_ID</span></code> environment variable or <code class="docutils literal notranslate"><span class="pre">account_id</span></code> provider argument.</p>
+<p>To import a script, use a script name, e.g. <code class="docutils literal notranslate"><span class="pre">script_name</span></code></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import cloudflare:index/workerScript:WorkerScript default script_name
+
+where* <span class="sb">``</span>script_name<span class="sb">``</span> - the script name
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5319,6 +5496,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">namespace_id</span><span class="o">=</span><span class="n">example_ns</span><span class="o">.</span><span class="n">id</span><span class="p">,</span>
     <span class="n">key</span><span class="o">=</span><span class="s2">&quot;test-key&quot;</span><span class="p">,</span>
     <span class="n">value</span><span class="o">=</span><span class="s2">&quot;test value&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import cloudflare:index/workersKv:WorkersKv example beaeb6716c9443eaa4deef11763ccca6_test-key
+
+where- <span class="sb">``</span>beaeb6716c9443eaa4deef11763ccca6<span class="sb">``</span> is the ID of the namespace and <span class="sb">``</span>test-key<span class="sb">``</span> is the key
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -5417,6 +5599,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="n">example</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">WorkersKvNamespace</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;test-namespace&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Workers KV Namespace settings can be imported using it’s ID</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import cloudflare:index/workersKvNamespace:WorkersKvNamespace example beaeb6716c9443eaa4deef11763ccca6
+
+where- <span class="sb">``</span>beaeb6716c9443eaa4deef11763ccca6<span class="sb">``</span> is the ID of the namespace
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5495,6 +5683,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <span class="kn">import</span> <span class="nn">pulumi_cloudflare</span> <span class="k">as</span> <span class="nn">cloudflare</span>
 
 <span class="n">example</span> <span class="o">=</span> <span class="n">cloudflare</span><span class="o">.</span><span class="n">Zone</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span> <span class="n">zone</span><span class="o">=</span><span class="s2">&quot;example.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Zone resource can be imported using a zone ID, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import cloudflare:index/zone:Zone example d41d8cd98f00b204e9800998ecf8427e
+
+where* <span class="sb">``</span>d41d8cd98f00b204e9800998ecf8427e<span class="sb">``</span> - zone ID, as returned from <span class="sb">`</span>API &lt;https://api.cloudflare.com/#zone-list-zones&gt;<span class="sb">`</span>_
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -5658,6 +5852,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">paused</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">urls</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;api.mysite.com/some/endpoint*&quot;</span><span class="p">],</span>
     <span class="n">zone_id</span><span class="o">=</span><span class="s2">&quot;d41d8cd98f00b204e9800998ecf8427e&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Records can be imported using a composite ID formed of zone name and record ID, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import cloudflare:index/zoneLockdown:ZoneLockdown cloudflare_zone_lockdown d41d8cd98f00b204e9800998ecf8427e/37cb64fe4a90adb5ca3afc04f2c82a2f
+
+where<span class="se">\ </span>* <span class="sb">``</span>d41d8cd98f00b204e9800998ecf8427e<span class="sb">``</span> - zone ID * <span class="sb">``</span>37cb64fe4a90adb5ca3afc04f2c82a2f<span class="sb">``</span> - zone lockdown ID as returned by <span class="sb">`</span>API &lt;https://api.cloudflare.com/#zone-lockdown-list-lockdown-rules&gt;<span class="sb">`</span>_
 </pre></div>
 </div>
 <dl class="field-list simple">
