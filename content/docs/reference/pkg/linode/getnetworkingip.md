@@ -33,6 +33,7 @@ The Linode Network IP Address resource exports the following attributes:
 
 * `region` - The Region this IP address resides in.
 
+
 {{% examples %}}
 ## Example Usage
 

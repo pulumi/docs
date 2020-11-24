@@ -31,6 +31,7 @@ The Linode Instance Type resource exports the following attributes:
 
 * `addons.0.backups.0.price.0.monthly` - The cost (in US dollars) per month to add Backups service.
 
+
 {{% examples %}}
 ## Example Usage
 

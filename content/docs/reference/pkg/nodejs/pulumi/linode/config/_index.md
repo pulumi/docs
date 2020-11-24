@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/linode | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/linode package."
-git_sha: "0a4eb117a3b277c38e99d56109ce2d84e98896a5"
+git_sha: "1f0f0b31562fc9815b7bc4b2ed1734d7f39274ef"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="apiVersion" data-link-title="apiVersion">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/1f0f0b31562fc9815b7bc4b2ed1734d7f39274ef/sdk/nodejs/config/vars.ts#L12">
         let <strong>apiVersion</strong>
     </a>
 </h3>
@@ -40,7 +40,7 @@ block_external_search_index: true
 An HTTP User-Agent Prefix to prepend in API requests.
 
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/1f0f0b31562fc9815b7bc4b2ed1734d7f39274ef/sdk/nodejs/config/vars.ts#L16">
         let <strong>token</strong>
     </a>
 </h3>
@@ -50,7 +50,7 @@ An HTTP User-Agent Prefix to prepend in API requests.
 The token that allows you access to your Linode account
 
 <h3 class="pdoc-module-header" id="uaPrefix" data-link-title="uaPrefix">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/1f0f0b31562fc9815b7bc4b2ed1734d7f39274ef/sdk/nodejs/config/vars.ts#L20">
         let <strong>uaPrefix</strong>
     </a>
 </h3>
@@ -60,7 +60,7 @@ The token that allows you access to your Linode account
 An HTTP User-Agent Prefix to prepend in API requests.
 
 <h3 class="pdoc-module-header" id="url" data-link-title="url">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/0a4eb117a3b277c38e99d56109ce2d84e98896a5/sdk/nodejs/config/vars.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/1f0f0b31562fc9815b7bc4b2ed1734d7f39274ef/sdk/nodejs/config/vars.ts#L24">
         let <strong>url</strong>
     </a>
 </h3>

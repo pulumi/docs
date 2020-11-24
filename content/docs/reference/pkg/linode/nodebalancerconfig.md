@@ -2408,6 +2408,20 @@ the response body of a check request, the backend is considered to be down
 
 
 
+## Import
+
+
+NodeBalancer Configs can be imported using the NodeBalancer `nodebalancer_id` followed by the NodeBalancer Config `id` separated by a comma, e.g.
+
+```sh
+ $ pulumi import linode:index/nodeBalancerConfig:NodeBalancerConfig http-foobar 1234567,7654321
+```
+
+ The Linode Guide, [Import Existing Infrastructure to Terraform](https://www.linode.com/docs/applications/configuration-management/import-existing-infrastructure-to-terraform/), offers resource importing examples for NodeBalancer Configs and other Linode resource types.
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

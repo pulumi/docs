@@ -1210,6 +1210,20 @@ Volume label.
 
 
 
+## Import
+
+
+Linodes Volumes can be imported using the Linode Volume `id`, e.g.
+
+```sh
+ $ pulumi import linode:index/volume:Volume myvolume 1234567
+```
+
+ The Linode Guide, [Import Existing Infrastructure to Terraform](https://www.linode.com/docs/applications/configuration-management/import-existing-infrastructure-to-terraform/), offers resource importing examples for Block Storage Volumes and other Linode resource types.
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

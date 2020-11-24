@@ -23,6 +23,7 @@ The Linode Object Storage Cluster resource exports the following attributes:
 
 * `static_site_domain` - The base URL for this cluster used when hosting static sites.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -33,6 +33,7 @@ The Linode Image resource exports the following attributes:
 
 * `vendor` - The upstream distribution vendor. `None` for private Images.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -53,6 +53,7 @@ This resource exports the following attributes:
   
   * `default` - The default value. If not specified, this value will be used.
 
+
 {{% examples %}}
 ## Example Usage
 

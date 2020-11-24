@@ -643,6 +643,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Linodes RDNS resources can be imported using the address as the `id`.
+
+```sh
+ $ pulumi import linode:index/rdns:Rdns foo 123.123.123.123
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
