@@ -46,7 +46,7 @@ pulumi import aws:s3/bucket:Bucket infra-logs company-infra-logs
 This command instructs Pulumi to import the S3 bucket called `company-infra-logs` with the Pulumi resource name
 `infra-logs`. The import command will output as follows:
 
-{{< asciicast id="asciinema" >}}
+{{< asciicast id="374902" >}}
 
 The user can then see the generated code they need to use as part of their application. I imported this resource into a
 TypeScript application:
