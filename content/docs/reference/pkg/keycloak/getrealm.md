@@ -13,6 +13,7 @@ meta_desc: "Explore the GetRealm function of the Keycloak package, including exa
 This data source can be used to fetch properties of a Keycloak realm for
 usage with other resources.
 
+
 {{% examples %}}
 ## Example Usage
 

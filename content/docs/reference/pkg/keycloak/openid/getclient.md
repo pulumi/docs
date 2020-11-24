@@ -12,6 +12,7 @@ meta_desc: "Explore the GetClient function of the openid module, including examp
 
 This data source can be used to fetch properties of a Keycloak OpenID client for usage with other resources.
 
+
 {{% examples %}}
 ## Example Usage
 

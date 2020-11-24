@@ -7596,6 +7596,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Realms can be imported using their name. Examplebash
+
+```sh
+ $ pulumi import keycloak:index/realm:Realm realm my-realm
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

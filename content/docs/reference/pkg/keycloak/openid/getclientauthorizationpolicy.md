@@ -12,6 +12,7 @@ meta_desc: "Explore the GetClientAuthorizationPolicy function of the openid modu
 
 This data source can be used to fetch policy and permission information for an OpenID client that has authorization enabled.
 
+
 {{% examples %}}
 ## Example Usage
 

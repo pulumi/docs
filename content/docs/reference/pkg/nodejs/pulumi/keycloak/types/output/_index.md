@@ -3,7 +3,7 @@ title: "Module types/output"
 title_tag: "Module types/output | Package @pulumi/keycloak | Node.js SDK"
 linktitle: "output"
 meta_desc: "Explore members of the output module in the @pulumi/keycloak package."
-git_sha: "ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec"
+git_sha: "2fb38fb228936f63925eba4ba61d995ae0c597ea"
 block_external_search_index: true
 ---
 
@@ -57,14 +57,14 @@ block_external_search_index: true
 
 <h2 id="ldap" data-link-title="ldap">namespace <strong>ldap</strong></h2>
 <h3 class="pdoc-module-header" id="UserFederationCache" data-link-title="UserFederationCache">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L359">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L358">
         interface <strong>UserFederationCache</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>UserFederationCache</span></code></pre>
 <h4 class="pdoc-member-header" id="UserFederationCache-evictionDay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L363">property <b>evictionDay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L362">property <b>evictionDay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evictionDay?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -72,7 +72,7 @@ block_external_search_index: true
 Minute of day the entry will become invalid on.
 
 <h4 class="pdoc-member-header" id="UserFederationCache-evictionHour">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L367">property <b>evictionHour</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L366">property <b>evictionHour</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evictionHour?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -80,12 +80,12 @@ Minute of day the entry will become invalid on.
 Hour of day the entry will become invalid on.
 
 <h4 class="pdoc-member-header" id="UserFederationCache-evictionMinute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L368">property <b>evictionMinute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L367">property <b>evictionMinute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evictionMinute?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="UserFederationCache-maxLifespan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L372">property <b>maxLifespan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L371">property <b>maxLifespan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLifespan?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -93,7 +93,7 @@ Hour of day the entry will become invalid on.
 Max lifespan of cache entry (duration string).
 
 <h4 class="pdoc-member-header" id="UserFederationCache-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L376">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L375">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -101,14 +101,14 @@ Max lifespan of cache entry (duration string).
 Can be one of `DEFAULT`, `EVICT_DAILY`, `EVICT_WEEKLY`, `MAX_LIFESPAN`, or `NO_CACHE`. Defaults to `DEFAULT`.
 
 <h3 class="pdoc-module-header" id="UserFederationKerberos" data-link-title="UserFederationKerberos">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L379">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L378">
         interface <strong>UserFederationKerberos</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>UserFederationKerberos</span></code></pre>
 <h4 class="pdoc-member-header" id="UserFederationKerberos-kerberosRealm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L383">property <b>kerberosRealm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L382">property <b>kerberosRealm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kerberosRealm: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -116,7 +116,7 @@ Can be one of `DEFAULT`, `EVICT_DAILY`, `EVICT_WEEKLY`, `MAX_LIFESPAN`, or `NO_C
 The name of the kerberos realm, e.g. FOO.LOCAL.
 
 <h4 class="pdoc-member-header" id="UserFederationKerberos-keyTab">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L387">property <b>keyTab</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L386">property <b>keyTab</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyTab: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -124,7 +124,7 @@ The name of the kerberos realm, e.g. FOO.LOCAL.
 Path to the kerberos keytab file on the server with credentials of the service principal.
 
 <h4 class="pdoc-member-header" id="UserFederationKerberos-serverPrincipal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L391">property <b>serverPrincipal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L390">property <b>serverPrincipal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverPrincipal: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -132,7 +132,7 @@ Path to the kerberos keytab file on the server with credentials of the service p
 The kerberos server principal, e.g. 'HTTP/host.foo.com@FOO.LOCAL'.
 
 <h4 class="pdoc-member-header" id="UserFederationKerberos-useKerberosForPasswordAuthentication">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L395">property <b>useKerberosForPasswordAuthentication</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L394">property <b>useKerberosForPasswordAuthentication</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useKerberosForPasswordAuthentication?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -141,14 +141,14 @@ Use kerberos login module instead of ldap service api. Defaults to `false`.
 
 <h2 id="openid" data-link-title="openid">namespace <strong>openid</strong></h2>
 <h3 class="pdoc-module-header" id="ClientAuthenticationFlowBindingOverrides" data-link-title="ClientAuthenticationFlowBindingOverrides">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L400">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L399">
         interface <strong>ClientAuthenticationFlowBindingOverrides</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClientAuthenticationFlowBindingOverrides</span></code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthenticationFlowBindingOverrides-browserId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L404">property <b>browserId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L403">property <b>browserId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>browserId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -156,7 +156,7 @@ Use kerberos login module instead of ldap service api. Defaults to `false`.
 Browser flow id, (flow needs to exist)
 
 <h4 class="pdoc-member-header" id="ClientAuthenticationFlowBindingOverrides-directGrantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L408">property <b>directGrantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L407">property <b>directGrantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directGrantId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -164,14 +164,14 @@ Browser flow id, (flow needs to exist)
 Direct grant flow id (flow needs to exist)
 
 <h3 class="pdoc-module-header" id="ClientAuthorization" data-link-title="ClientAuthorization">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L411">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L410">
         interface <strong>ClientAuthorization</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClientAuthorization</span></code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorization-allowRemoteResourceManagement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L415">property <b>allowRemoteResourceManagement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L414">property <b>allowRemoteResourceManagement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowRemoteResourceManagement?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -179,7 +179,7 @@ Direct grant flow id (flow needs to exist)
 When `true`, resources can be managed remotely by the resource server. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ClientAuthorization-keepDefaults">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L419">property <b>keepDefaults</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L418">property <b>keepDefaults</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keepDefaults?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -187,7 +187,7 @@ When `true`, resources can be managed remotely by the resource server. Defaults 
 When `true`, defaults set by Keycloak will be respected. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ClientAuthorization-policyEnforcementMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L423">property <b>policyEnforcementMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L422">property <b>policyEnforcementMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyEnforcementMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -195,102 +195,102 @@ When `true`, defaults set by Keycloak will be respected. Defaults to `false`.
 Dictates how policies are enforced when evaluating authorization requests. Can be one of `ENFORCING`, `PERMISSIVE`, or `DISABLED`.
 
 <h3 class="pdoc-module-header" id="ClientGroupPolicyGroup" data-link-title="ClientGroupPolicyGroup">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L426">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L425">
         interface <strong>ClientGroupPolicyGroup</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClientGroupPolicyGroup</span></code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicyGroup-extendChildren">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L427">property <b>extendChildren</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L426">property <b>extendChildren</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendChildren: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicyGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L428">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L427">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicyGroup-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L429">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L428">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ClientRolePolicyRole" data-link-title="ClientRolePolicyRole">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L432">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L431">
         interface <strong>ClientRolePolicyRole</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ClientRolePolicyRole</span></code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicyRole-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L433">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L432">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicyRole-required">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L434">property <b>required</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L433">property <b>required</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>required: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetClientAuthenticationFlowBindingOverride" data-link-title="GetClientAuthenticationFlowBindingOverride">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L437">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L436">
         interface <strong>GetClientAuthenticationFlowBindingOverride</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetClientAuthenticationFlowBindingOverride</span></code></pre>
 <h4 class="pdoc-member-header" id="GetClientAuthenticationFlowBindingOverride-browserId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L438">property <b>browserId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L437">property <b>browserId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>browserId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientAuthenticationFlowBindingOverride-directGrantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L439">property <b>directGrantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L438">property <b>directGrantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directGrantId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetClientAuthorization" data-link-title="GetClientAuthorization">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L442">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L441">
         interface <strong>GetClientAuthorization</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetClientAuthorization</span></code></pre>
 <h4 class="pdoc-member-header" id="GetClientAuthorization-allowRemoteResourceManagement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L443">property <b>allowRemoteResourceManagement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L442">property <b>allowRemoteResourceManagement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowRemoteResourceManagement: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientAuthorization-keepDefaults">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L444">property <b>keepDefaults</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L443">property <b>keepDefaults</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keepDefaults: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientAuthorization-policyEnforcementMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L445">property <b>policyEnforcementMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L444">property <b>policyEnforcementMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyEnforcementMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetClientServiceAccountUserFederatedIdentity" data-link-title="GetClientServiceAccountUserFederatedIdentity">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L448">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L447">
         interface <strong>GetClientServiceAccountUserFederatedIdentity</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetClientServiceAccountUserFederatedIdentity</span></code></pre>
 <h4 class="pdoc-member-header" id="GetClientServiceAccountUserFederatedIdentity-identityProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L449">property <b>identityProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L448">property <b>identityProvider</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identityProvider: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientServiceAccountUserFederatedIdentity-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L450">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L449">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientServiceAccountUserFederatedIdentity-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L451">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L450">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -299,31 +299,31 @@ Dictates how policies are enforced when evaluating authorization requests. Can b
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="GetRealmInternationalization" data-link-title="GetRealmInternationalization">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L7">
         interface <strong>GetRealmInternationalization</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetRealmInternationalization</span></code></pre>
 <h4 class="pdoc-member-header" id="GetRealmInternationalization-defaultLocale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L9">property <b>defaultLocale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L8">property <b>defaultLocale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultLocale: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmInternationalization-supportedLocales">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L10">property <b>supportedLocales</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L9">property <b>supportedLocales</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supportedLocales: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetRealmKeysKey" data-link-title="GetRealmKeysKey">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L12">
         interface <strong>GetRealmKeysKey</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetRealmKeysKey</span></code></pre>
 <h4 class="pdoc-member-header" id="GetRealmKeysKey-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L17">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L16">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>algorithm: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -331,7 +331,7 @@ Dictates how policies are enforced when evaluating authorization requests. Can b
 Key algorithm (string)
 
 <h4 class="pdoc-member-header" id="GetRealmKeysKey-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L21">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L20">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -339,7 +339,7 @@ Key algorithm (string)
 Key certificate (string)
 
 <h4 class="pdoc-member-header" id="GetRealmKeysKey-kid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L25">property <b>kid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L24">property <b>kid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -347,7 +347,7 @@ Key certificate (string)
 Key ID (string)
 
 <h4 class="pdoc-member-header" id="GetRealmKeysKey-providerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L29">property <b>providerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L28">property <b>providerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -355,7 +355,7 @@ Key ID (string)
 Key provider ID (string)
 
 <h4 class="pdoc-member-header" id="GetRealmKeysKey-providerPriority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L33">property <b>providerPriority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L32">property <b>providerPriority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>providerPriority: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -363,7 +363,7 @@ Key provider ID (string)
 Key provider priority (int64)
 
 <h4 class="pdoc-member-header" id="GetRealmKeysKey-publicKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L37">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L36">property <b>publicKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -371,7 +371,7 @@ Key provider priority (int64)
 Key public key (string)
 
 <h4 class="pdoc-member-header" id="GetRealmKeysKey-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L41">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L40">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -379,7 +379,7 @@ Key public key (string)
 When specified, keys will be filtered by status. The statuses can be any of `ACTIVE`, `DISABLED` and `PASSIVE`.
 
 <h4 class="pdoc-member-header" id="GetRealmKeysKey-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L45">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L44">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -387,303 +387,303 @@ When specified, keys will be filtered by status. The statuses can be any of `ACT
 Key type (string)
 
 <h3 class="pdoc-module-header" id="GetRealmSecurityDefense" data-link-title="GetRealmSecurityDefense">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L47">
         interface <strong>GetRealmSecurityDefense</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetRealmSecurityDefense</span></code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSecurityDefense-bruteForceDetections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L49">property <b>bruteForceDetections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L48">property <b>bruteForceDetections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bruteForceDetections: <a href='#GetRealmSecurityDefenseBruteForceDetection'>GetRealmSecurityDefenseBruteForceDetection</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSecurityDefense-headers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L50">property <b>headers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L49">property <b>headers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>headers: <a href='#GetRealmSecurityDefenseHeader'>GetRealmSecurityDefenseHeader</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetRealmSecurityDefenseBruteForceDetection" data-link-title="GetRealmSecurityDefenseBruteForceDetection">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L52">
         interface <strong>GetRealmSecurityDefenseBruteForceDetection</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetRealmSecurityDefenseBruteForceDetection</span></code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSecurityDefenseBruteForceDetection-failureResetTimeSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L54">property <b>failureResetTimeSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L53">property <b>failureResetTimeSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>failureResetTimeSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSecurityDefenseBruteForceDetection-maxFailureWaitSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L55">property <b>maxFailureWaitSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L54">property <b>maxFailureWaitSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxFailureWaitSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSecurityDefenseBruteForceDetection-maxLoginFailures">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L56">property <b>maxLoginFailures</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L55">property <b>maxLoginFailures</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLoginFailures: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSecurityDefenseBruteForceDetection-minimumQuickLoginWaitSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L57">property <b>minimumQuickLoginWaitSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L56">property <b>minimumQuickLoginWaitSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minimumQuickLoginWaitSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSecurityDefenseBruteForceDetection-permanentLockout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L58">property <b>permanentLockout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L57">property <b>permanentLockout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permanentLockout: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSecurityDefenseBruteForceDetection-quickLoginCheckMilliSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L59">property <b>quickLoginCheckMilliSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L58">property <b>quickLoginCheckMilliSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>quickLoginCheckMilliSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSecurityDefenseBruteForceDetection-waitIncrementSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L60">property <b>waitIncrementSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L59">property <b>waitIncrementSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitIncrementSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRealmSecurityDefenseHeader" data-link-title="GetRealmSecurityDefenseHeader">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L63">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L62">
         interface <strong>GetRealmSecurityDefenseHeader</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetRealmSecurityDefenseHeader</span></code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSecurityDefenseHeader-contentSecurityPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L64">property <b>contentSecurityPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L63">property <b>contentSecurityPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentSecurityPolicy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSecurityDefenseHeader-contentSecurityPolicyReportOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L65">property <b>contentSecurityPolicyReportOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L64">property <b>contentSecurityPolicyReportOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentSecurityPolicyReportOnly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSecurityDefenseHeader-strictTransportSecurity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L66">property <b>strictTransportSecurity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L65">property <b>strictTransportSecurity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>strictTransportSecurity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSecurityDefenseHeader-xContentTypeOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L67">property <b>xContentTypeOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L66">property <b>xContentTypeOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xContentTypeOptions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSecurityDefenseHeader-xFrameOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L68">property <b>xFrameOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L67">property <b>xFrameOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xFrameOptions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSecurityDefenseHeader-xRobotsTag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L69">property <b>xRobotsTag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L68">property <b>xRobotsTag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xRobotsTag: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSecurityDefenseHeader-xXssProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L70">property <b>xXssProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L69">property <b>xXssProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xXssProtection: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRealmSmtpServer" data-link-title="GetRealmSmtpServer">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L73">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L72">
         interface <strong>GetRealmSmtpServer</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetRealmSmtpServer</span></code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSmtpServer-auths">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L74">property <b>auths</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L73">property <b>auths</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>auths: <a href='#GetRealmSmtpServerAuth'>GetRealmSmtpServerAuth</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSmtpServer-envelopeFrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L75">property <b>envelopeFrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L74">property <b>envelopeFrom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>envelopeFrom: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSmtpServer-from">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L76">property <b>from</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L75">property <b>from</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>from: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSmtpServer-fromDisplayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L77">property <b>fromDisplayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L76">property <b>fromDisplayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fromDisplayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSmtpServer-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L78">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L77">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSmtpServer-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L79">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L78">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSmtpServer-replyTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L80">property <b>replyTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L79">property <b>replyTo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replyTo: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSmtpServer-replyToDisplayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L81">property <b>replyToDisplayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L80">property <b>replyToDisplayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replyToDisplayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSmtpServer-ssl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L82">property <b>ssl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L81">property <b>ssl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ssl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSmtpServer-starttls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L83">property <b>starttls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L82">property <b>starttls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>starttls: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRealmSmtpServerAuth" data-link-title="GetRealmSmtpServerAuth">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L86">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L85">
         interface <strong>GetRealmSmtpServerAuth</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetRealmSmtpServerAuth</span></code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSmtpServerAuth-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L87">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L86">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmSmtpServerAuth-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L88">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L87">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRealmWebAuthnPasswordlessPolicy" data-link-title="GetRealmWebAuthnPasswordlessPolicy">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L91">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L90">
         interface <strong>GetRealmWebAuthnPasswordlessPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetRealmWebAuthnPasswordlessPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="GetRealmWebAuthnPasswordlessPolicy-acceptableAaguids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L92">property <b>acceptableAaguids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L91">property <b>acceptableAaguids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acceptableAaguids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmWebAuthnPasswordlessPolicy-attestationConveyancePreference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L93">property <b>attestationConveyancePreference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L92">property <b>attestationConveyancePreference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attestationConveyancePreference: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmWebAuthnPasswordlessPolicy-authenticatorAttachment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L94">property <b>authenticatorAttachment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L93">property <b>authenticatorAttachment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticatorAttachment: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmWebAuthnPasswordlessPolicy-avoidSameAuthenticatorRegister">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L95">property <b>avoidSameAuthenticatorRegister</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L94">property <b>avoidSameAuthenticatorRegister</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>avoidSameAuthenticatorRegister: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmWebAuthnPasswordlessPolicy-createTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L96">property <b>createTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L95">property <b>createTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTimeout: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmWebAuthnPasswordlessPolicy-relyingPartyEntityName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L97">property <b>relyingPartyEntityName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L96">property <b>relyingPartyEntityName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relyingPartyEntityName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmWebAuthnPasswordlessPolicy-relyingPartyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L98">property <b>relyingPartyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L97">property <b>relyingPartyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relyingPartyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmWebAuthnPasswordlessPolicy-requireResidentKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L99">property <b>requireResidentKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L98">property <b>requireResidentKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireResidentKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmWebAuthnPasswordlessPolicy-signatureAlgorithms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L100">property <b>signatureAlgorithms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L99">property <b>signatureAlgorithms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signatureAlgorithms: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmWebAuthnPasswordlessPolicy-userVerificationRequirement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L101">property <b>userVerificationRequirement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L100">property <b>userVerificationRequirement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userVerificationRequirement: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRealmWebAuthnPolicy" data-link-title="GetRealmWebAuthnPolicy">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L104">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L103">
         interface <strong>GetRealmWebAuthnPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetRealmWebAuthnPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="GetRealmWebAuthnPolicy-acceptableAaguids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L105">property <b>acceptableAaguids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L104">property <b>acceptableAaguids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acceptableAaguids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmWebAuthnPolicy-attestationConveyancePreference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L106">property <b>attestationConveyancePreference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L105">property <b>attestationConveyancePreference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attestationConveyancePreference: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmWebAuthnPolicy-authenticatorAttachment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L107">property <b>authenticatorAttachment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L106">property <b>authenticatorAttachment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticatorAttachment: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmWebAuthnPolicy-avoidSameAuthenticatorRegister">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L108">property <b>avoidSameAuthenticatorRegister</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L107">property <b>avoidSameAuthenticatorRegister</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>avoidSameAuthenticatorRegister: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmWebAuthnPolicy-createTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L109">property <b>createTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L108">property <b>createTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTimeout: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmWebAuthnPolicy-relyingPartyEntityName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L110">property <b>relyingPartyEntityName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L109">property <b>relyingPartyEntityName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relyingPartyEntityName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmWebAuthnPolicy-relyingPartyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L111">property <b>relyingPartyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L110">property <b>relyingPartyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relyingPartyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmWebAuthnPolicy-requireResidentKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L112">property <b>requireResidentKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L111">property <b>requireResidentKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireResidentKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmWebAuthnPolicy-signatureAlgorithms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L113">property <b>signatureAlgorithms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L112">property <b>signatureAlgorithms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signatureAlgorithms: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetRealmWebAuthnPolicy-userVerificationRequirement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L114">property <b>userVerificationRequirement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L113">property <b>userVerificationRequirement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userVerificationRequirement: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="RealmInternationalization" data-link-title="RealmInternationalization">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L116">
         interface <strong>RealmInternationalization</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RealmInternationalization</span></code></pre>
 <h4 class="pdoc-member-header" id="RealmInternationalization-defaultLocale">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L121">property <b>defaultLocale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L120">property <b>defaultLocale</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultLocale: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -691,7 +691,7 @@ Key type (string)
 The locale to use by default. This locale code must be present within the `supportedLocales` list.
 
 <h4 class="pdoc-member-header" id="RealmInternationalization-supportedLocales">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L125">property <b>supportedLocales</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L124">property <b>supportedLocales</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supportedLocales: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -699,31 +699,31 @@ The locale to use by default. This locale code must be present within the `suppo
 A list of [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) locale codes that the realm should support.
 
 <h3 class="pdoc-module-header" id="RealmSecurityDefenses" data-link-title="RealmSecurityDefenses">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L127">
         interface <strong>RealmSecurityDefenses</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RealmSecurityDefenses</span></code></pre>
 <h4 class="pdoc-member-header" id="RealmSecurityDefenses-bruteForceDetection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L129">property <b>bruteForceDetection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L128">property <b>bruteForceDetection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bruteForceDetection?: <a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#RealmSecurityDefensesBruteForceDetection'>outputs.RealmSecurityDefensesBruteForceDetection</a>;</code></pre>
 <h4 class="pdoc-member-header" id="RealmSecurityDefenses-headers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L130">property <b>headers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L129">property <b>headers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>headers?: <a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#RealmSecurityDefensesHeaders'>outputs.RealmSecurityDefensesHeaders</a>;</code></pre>
 <h3 class="pdoc-module-header" id="RealmSecurityDefensesBruteForceDetection" data-link-title="RealmSecurityDefensesBruteForceDetection">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L133">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L132">
         interface <strong>RealmSecurityDefensesBruteForceDetection</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RealmSecurityDefensesBruteForceDetection</span></code></pre>
 <h4 class="pdoc-member-header" id="RealmSecurityDefensesBruteForceDetection-failureResetTimeSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L137">property <b>failureResetTimeSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L136">property <b>failureResetTimeSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>failureResetTimeSeconds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -731,12 +731,12 @@ A list of [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) loc
 When will failure count be reset?
 
 <h4 class="pdoc-member-header" id="RealmSecurityDefensesBruteForceDetection-maxFailureWaitSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L138">property <b>maxFailureWaitSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L137">property <b>maxFailureWaitSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxFailureWaitSeconds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="RealmSecurityDefensesBruteForceDetection-maxLoginFailures">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L142">property <b>maxLoginFailures</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L141">property <b>maxLoginFailures</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLoginFailures?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -744,7 +744,7 @@ When will failure count be reset?
 How many failures before wait is triggered.
 
 <h4 class="pdoc-member-header" id="RealmSecurityDefensesBruteForceDetection-minimumQuickLoginWaitSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L147">property <b>minimumQuickLoginWaitSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L146">property <b>minimumQuickLoginWaitSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minimumQuickLoginWaitSeconds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -753,7 +753,7 @@ How long to wait after a quick login failure.
 - `maxFailureWaitSeconds ` - (Optional) Max. time a user will be locked out.
 
 <h4 class="pdoc-member-header" id="RealmSecurityDefensesBruteForceDetection-permanentLockout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L151">property <b>permanentLockout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L150">property <b>permanentLockout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permanentLockout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -761,7 +761,7 @@ How long to wait after a quick login failure.
 When `true`, this will lock the user permanently when the user exceeds the maximum login failures.
 
 <h4 class="pdoc-member-header" id="RealmSecurityDefensesBruteForceDetection-quickLoginCheckMilliSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L155">property <b>quickLoginCheckMilliSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L154">property <b>quickLoginCheckMilliSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>quickLoginCheckMilliSeconds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -769,7 +769,7 @@ When `true`, this will lock the user permanently when the user exceeds the maxim
 Configures the amount of time, in milliseconds, for consecutive failures to lock a user out.
 
 <h4 class="pdoc-member-header" id="RealmSecurityDefensesBruteForceDetection-waitIncrementSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L159">property <b>waitIncrementSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L158">property <b>waitIncrementSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>waitIncrementSeconds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -777,14 +777,14 @@ Configures the amount of time, in milliseconds, for consecutive failures to lock
 This represents the amount of time a user should be locked out when the login failure threshold has been met.
 
 <h3 class="pdoc-module-header" id="RealmSecurityDefensesHeaders" data-link-title="RealmSecurityDefensesHeaders">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L162">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L161">
         interface <strong>RealmSecurityDefensesHeaders</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RealmSecurityDefensesHeaders</span></code></pre>
 <h4 class="pdoc-member-header" id="RealmSecurityDefensesHeaders-contentSecurityPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L166">property <b>contentSecurityPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L165">property <b>contentSecurityPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentSecurityPolicy?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -792,7 +792,7 @@ This represents the amount of time a user should be locked out when the login fa
 Sets the Content Security Policy, which can be used for prevent pages from being included by non-origin iframes. More information can be found in the [W3C-CSP](https://www.w3.org/TR/CSP/) Abstract.
 
 <h4 class="pdoc-member-header" id="RealmSecurityDefensesHeaders-contentSecurityPolicyReportOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L170">property <b>contentSecurityPolicyReportOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L169">property <b>contentSecurityPolicyReportOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentSecurityPolicyReportOnly?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -800,7 +800,7 @@ Sets the Content Security Policy, which can be used for prevent pages from being
 Used for testing Content Security Policies.
 
 <h4 class="pdoc-member-header" id="RealmSecurityDefensesHeaders-strictTransportSecurity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L174">property <b>strictTransportSecurity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L173">property <b>strictTransportSecurity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>strictTransportSecurity?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -808,7 +808,7 @@ Used for testing Content Security Policies.
 The Script-Transport-Security HTTP header tells browsers to always use HTTPS.
 
 <h4 class="pdoc-member-header" id="RealmSecurityDefensesHeaders-xContentTypeOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L178">property <b>xContentTypeOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L177">property <b>xContentTypeOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xContentTypeOptions?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -816,7 +816,7 @@ The Script-Transport-Security HTTP header tells browsers to always use HTTPS.
 Sets the X-Content-Type-Options, which can be used for prevent MIME-sniffing a response away from the declared content-type
 
 <h4 class="pdoc-member-header" id="RealmSecurityDefensesHeaders-xFrameOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L182">property <b>xFrameOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L181">property <b>xFrameOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xFrameOptions?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -824,7 +824,7 @@ Sets the X-Content-Type-Options, which can be used for prevent MIME-sniffing a r
 Sets the x-frame-option, which can be used to prevent pages from being included by non-origin iframes. More information can be found in the [RFC7034](https://tools.ietf.org/html/rfc7034)
 
 <h4 class="pdoc-member-header" id="RealmSecurityDefensesHeaders-xRobotsTag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L186">property <b>xRobotsTag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L185">property <b>xRobotsTag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xRobotsTag?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -832,7 +832,7 @@ Sets the x-frame-option, which can be used to prevent pages from being included 
 Prevent pages from appearing in search engines.
 
 <h4 class="pdoc-member-header" id="RealmSecurityDefensesHeaders-xXssProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L190">property <b>xXssProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L189">property <b>xXssProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xXssProtection?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -840,14 +840,14 @@ Prevent pages from appearing in search engines.
 This header configures the Cross-site scripting (XSS) filter in your browser.
 
 <h3 class="pdoc-module-header" id="RealmSmtpServer" data-link-title="RealmSmtpServer">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L193">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L192">
         interface <strong>RealmSmtpServer</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RealmSmtpServer</span></code></pre>
 <h4 class="pdoc-member-header" id="RealmSmtpServer-auth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L197">property <b>auth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L196">property <b>auth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>auth?: <a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#RealmSmtpServerAuth'>outputs.RealmSmtpServerAuth</a>;</code></pre>
@@ -855,7 +855,7 @@ This header configures the Cross-site scripting (XSS) filter in your browser.
 Enables authentication to the SMTP server.  This block supports the following arguments:
 
 <h4 class="pdoc-member-header" id="RealmSmtpServer-envelopeFrom">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L201">property <b>envelopeFrom</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L200">property <b>envelopeFrom</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>envelopeFrom?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -863,7 +863,7 @@ Enables authentication to the SMTP server.  This block supports the following ar
 The email address uses for bounces.
 
 <h4 class="pdoc-member-header" id="RealmSmtpServer-from">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L205">property <b>from</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L204">property <b>from</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>from: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -871,7 +871,7 @@ The email address uses for bounces.
 The email address for the sender.
 
 <h4 class="pdoc-member-header" id="RealmSmtpServer-fromDisplayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L209">property <b>fromDisplayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L208">property <b>fromDisplayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fromDisplayName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -879,7 +879,7 @@ The email address for the sender.
 The display name of the sender email address.
 
 <h4 class="pdoc-member-header" id="RealmSmtpServer-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L213">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L212">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -887,7 +887,7 @@ The display name of the sender email address.
 The host of the SMTP server.
 
 <h4 class="pdoc-member-header" id="RealmSmtpServer-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L217">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L216">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -895,7 +895,7 @@ The host of the SMTP server.
 The port of the SMTP server (defaults to 25).
 
 <h4 class="pdoc-member-header" id="RealmSmtpServer-replyTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L221">property <b>replyTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L220">property <b>replyTo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replyTo?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -903,7 +903,7 @@ The port of the SMTP server (defaults to 25).
 The "reply to" email address.
 
 <h4 class="pdoc-member-header" id="RealmSmtpServer-replyToDisplayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L225">property <b>replyToDisplayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L224">property <b>replyToDisplayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replyToDisplayName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -911,7 +911,7 @@ The "reply to" email address.
 The display name of the "reply to" email address.
 
 <h4 class="pdoc-member-header" id="RealmSmtpServer-ssl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L229">property <b>ssl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L228">property <b>ssl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ssl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -919,7 +919,7 @@ The display name of the "reply to" email address.
 When `true`, enables SSL. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="RealmSmtpServer-starttls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L233">property <b>starttls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L232">property <b>starttls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>starttls?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -927,14 +927,14 @@ When `true`, enables SSL. Defaults to `false`.
 When `true`, enables StartTLS. Defaults to `false`.
 
 <h3 class="pdoc-module-header" id="RealmSmtpServerAuth" data-link-title="RealmSmtpServerAuth">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L236">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L235">
         interface <strong>RealmSmtpServerAuth</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RealmSmtpServerAuth</span></code></pre>
 <h4 class="pdoc-member-header" id="RealmSmtpServerAuth-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L240">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L239">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -942,7 +942,7 @@ When `true`, enables StartTLS. Defaults to `false`.
 The SMTP server password.
 
 <h4 class="pdoc-member-header" id="RealmSmtpServerAuth-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L244">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L243">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -950,14 +950,14 @@ The SMTP server password.
 The SMTP server username.
 
 <h3 class="pdoc-module-header" id="RealmWebAuthnPasswordlessPolicy" data-link-title="RealmWebAuthnPasswordlessPolicy">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L247">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L246">
         interface <strong>RealmWebAuthnPasswordlessPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RealmWebAuthnPasswordlessPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="RealmWebAuthnPasswordlessPolicy-acceptableAaguids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L251">property <b>acceptableAaguids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L250">property <b>acceptableAaguids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acceptableAaguids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -965,7 +965,7 @@ The SMTP server username.
 A set of AAGUIDs for which an authenticator can be registered.
 
 <h4 class="pdoc-member-header" id="RealmWebAuthnPasswordlessPolicy-attestationConveyancePreference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L255">property <b>attestationConveyancePreference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L254">property <b>attestationConveyancePreference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attestationConveyancePreference?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -973,7 +973,7 @@ A set of AAGUIDs for which an authenticator can be registered.
 The preference of how to generate a WebAuthn attestation statement. Valid options are `not specified`, `none`, `indirect`, `direct`, or `enterprise`. Defaults to `not specified`.
 
 <h4 class="pdoc-member-header" id="RealmWebAuthnPasswordlessPolicy-authenticatorAttachment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L259">property <b>authenticatorAttachment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L258">property <b>authenticatorAttachment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticatorAttachment?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -981,7 +981,7 @@ The preference of how to generate a WebAuthn attestation statement. Valid option
 The acceptable attachment pattern for the WebAuthn authenticator. Valid options are `not specified`, `platform`, or `cross-platform`. Defaults to `not specified`.
 
 <h4 class="pdoc-member-header" id="RealmWebAuthnPasswordlessPolicy-avoidSameAuthenticatorRegister">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L263">property <b>avoidSameAuthenticatorRegister</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L262">property <b>avoidSameAuthenticatorRegister</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>avoidSameAuthenticatorRegister?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -989,7 +989,7 @@ The acceptable attachment pattern for the WebAuthn authenticator. Valid options 
 When `true`, Keycloak will avoid registering the authenticator for WebAuthn if it has already been registered. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="RealmWebAuthnPasswordlessPolicy-createTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L267">property <b>createTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L266">property <b>createTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -997,7 +997,7 @@ When `true`, Keycloak will avoid registering the authenticator for WebAuthn if i
 The timeout value for creating a user's public key credential in seconds. When set to `0`, this timeout option is not adapted. Defaults to `0`.
 
 <h4 class="pdoc-member-header" id="RealmWebAuthnPasswordlessPolicy-relyingPartyEntityName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L271">property <b>relyingPartyEntityName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L270">property <b>relyingPartyEntityName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relyingPartyEntityName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1005,7 +1005,7 @@ The timeout value for creating a user's public key credential in seconds. When s
 A human readable server name for the WebAuthn Relying Party. Defaults to `keycloak`.
 
 <h4 class="pdoc-member-header" id="RealmWebAuthnPasswordlessPolicy-relyingPartyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L275">property <b>relyingPartyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L274">property <b>relyingPartyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relyingPartyId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1013,7 +1013,7 @@ A human readable server name for the WebAuthn Relying Party. Defaults to `keyclo
 The WebAuthn relying party ID.
 
 <h4 class="pdoc-member-header" id="RealmWebAuthnPasswordlessPolicy-requireResidentKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L279">property <b>requireResidentKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L278">property <b>requireResidentKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireResidentKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1021,7 +1021,7 @@ The WebAuthn relying party ID.
 Specifies whether or not a public key should be created to represent the resident key. Valid options are `not specified`, `Yes`, or `No`. Defaults to `not specified`.
 
 <h4 class="pdoc-member-header" id="RealmWebAuthnPasswordlessPolicy-signatureAlgorithms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L283">property <b>signatureAlgorithms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L282">property <b>signatureAlgorithms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signatureAlgorithms: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1029,7 +1029,7 @@ Specifies whether or not a public key should be created to represent the residen
 A set of signature algorithms that should be used for the authentication assertion. Valid options at the time these docs were written are `ES256`, `ES384`, `ES512`, `RS256`, `RS384`, `RS512`, and `RS1`.
 
 <h4 class="pdoc-member-header" id="RealmWebAuthnPasswordlessPolicy-userVerificationRequirement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L287">property <b>userVerificationRequirement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L286">property <b>userVerificationRequirement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userVerificationRequirement?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1037,14 +1037,14 @@ A set of signature algorithms that should be used for the authentication asserti
 Specifies the policy for verifying a user logging in via WebAuthn. Valid options are `not specified`, `required`, `preferred`, or `discouraged`. Defaults to `not specified`.
 
 <h3 class="pdoc-module-header" id="RealmWebAuthnPolicy" data-link-title="RealmWebAuthnPolicy">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L290">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L289">
         interface <strong>RealmWebAuthnPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RealmWebAuthnPolicy</span></code></pre>
 <h4 class="pdoc-member-header" id="RealmWebAuthnPolicy-acceptableAaguids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L294">property <b>acceptableAaguids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L293">property <b>acceptableAaguids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acceptableAaguids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1052,7 +1052,7 @@ Specifies the policy for verifying a user logging in via WebAuthn. Valid options
 A set of AAGUIDs for which an authenticator can be registered.
 
 <h4 class="pdoc-member-header" id="RealmWebAuthnPolicy-attestationConveyancePreference">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L298">property <b>attestationConveyancePreference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L297">property <b>attestationConveyancePreference</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attestationConveyancePreference?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1060,7 +1060,7 @@ A set of AAGUIDs for which an authenticator can be registered.
 The preference of how to generate a WebAuthn attestation statement. Valid options are `not specified`, `none`, `indirect`, `direct`, or `enterprise`. Defaults to `not specified`.
 
 <h4 class="pdoc-member-header" id="RealmWebAuthnPolicy-authenticatorAttachment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L302">property <b>authenticatorAttachment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L301">property <b>authenticatorAttachment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticatorAttachment?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1068,7 +1068,7 @@ The preference of how to generate a WebAuthn attestation statement. Valid option
 The acceptable attachment pattern for the WebAuthn authenticator. Valid options are `not specified`, `platform`, or `cross-platform`. Defaults to `not specified`.
 
 <h4 class="pdoc-member-header" id="RealmWebAuthnPolicy-avoidSameAuthenticatorRegister">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L306">property <b>avoidSameAuthenticatorRegister</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L305">property <b>avoidSameAuthenticatorRegister</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>avoidSameAuthenticatorRegister?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1076,7 +1076,7 @@ The acceptable attachment pattern for the WebAuthn authenticator. Valid options 
 When `true`, Keycloak will avoid registering the authenticator for WebAuthn if it has already been registered. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="RealmWebAuthnPolicy-createTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L310">property <b>createTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L309">property <b>createTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -1084,7 +1084,7 @@ When `true`, Keycloak will avoid registering the authenticator for WebAuthn if i
 The timeout value for creating a user's public key credential in seconds. When set to `0`, this timeout option is not adapted. Defaults to `0`.
 
 <h4 class="pdoc-member-header" id="RealmWebAuthnPolicy-relyingPartyEntityName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L314">property <b>relyingPartyEntityName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L313">property <b>relyingPartyEntityName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relyingPartyEntityName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1092,7 +1092,7 @@ The timeout value for creating a user's public key credential in seconds. When s
 A human readable server name for the WebAuthn Relying Party. Defaults to `keycloak`.
 
 <h4 class="pdoc-member-header" id="RealmWebAuthnPolicy-relyingPartyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L318">property <b>relyingPartyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L317">property <b>relyingPartyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>relyingPartyId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1100,7 +1100,7 @@ A human readable server name for the WebAuthn Relying Party. Defaults to `keyclo
 The WebAuthn relying party ID.
 
 <h4 class="pdoc-member-header" id="RealmWebAuthnPolicy-requireResidentKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L322">property <b>requireResidentKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L321">property <b>requireResidentKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireResidentKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1108,7 +1108,7 @@ The WebAuthn relying party ID.
 Specifies whether or not a public key should be created to represent the resident key. Valid options are `not specified`, `Yes`, or `No`. Defaults to `not specified`.
 
 <h4 class="pdoc-member-header" id="RealmWebAuthnPolicy-signatureAlgorithms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L326">property <b>signatureAlgorithms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L325">property <b>signatureAlgorithms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>signatureAlgorithms: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1116,7 +1116,7 @@ Specifies whether or not a public key should be created to represent the residen
 A set of signature algorithms that should be used for the authentication assertion. Valid options at the time these docs were written are `ES256`, `ES384`, `ES512`, `RS256`, `RS384`, `RS512`, and `RS1`.
 
 <h4 class="pdoc-member-header" id="RealmWebAuthnPolicy-userVerificationRequirement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L330">property <b>userVerificationRequirement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L329">property <b>userVerificationRequirement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userVerificationRequirement?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1124,14 +1124,14 @@ A set of signature algorithms that should be used for the authentication asserti
 Specifies the policy for verifying a user logging in via WebAuthn. Valid options are `not specified`, `required`, `preferred`, or `discouraged`. Defaults to `not specified`.
 
 <h3 class="pdoc-module-header" id="UserFederatedIdentity" data-link-title="UserFederatedIdentity">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L333">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L332">
         interface <strong>UserFederatedIdentity</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>UserFederatedIdentity</span></code></pre>
 <h4 class="pdoc-member-header" id="UserFederatedIdentity-identityProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L337">property <b>identityProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L336">property <b>identityProvider</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identityProvider: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1139,7 +1139,7 @@ Specifies the policy for verifying a user logging in via WebAuthn. Valid options
 The name of the identity provider
 
 <h4 class="pdoc-member-header" id="UserFederatedIdentity-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L341">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L340">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1147,7 +1147,7 @@ The name of the identity provider
 The ID of the user defined in the identity provider
 
 <h4 class="pdoc-member-header" id="UserFederatedIdentity-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L345">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L344">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1155,14 +1155,14 @@ The ID of the user defined in the identity provider
 The user name of the user defined in the identity provider
 
 <h3 class="pdoc-module-header" id="UserInitialPassword" data-link-title="UserInitialPassword">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L348">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L347">
         interface <strong>UserInitialPassword</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>UserInitialPassword</span></code></pre>
 <h4 class="pdoc-member-header" id="UserInitialPassword-temporary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L352">property <b>temporary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L351">property <b>temporary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>temporary?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1170,7 +1170,7 @@ The user name of the user defined in the identity provider
 If set to `true`, the initial password is set up for renewal on first use. Default to `false`.
 
 <h4 class="pdoc-member-header" id="UserInitialPassword-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/types/output.ts#L356">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/types/output.ts#L355">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>

@@ -755,6 +755,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Default groups can be imported using the format `{{realm_id}}` where `realm_id` is the realm the group exists in. Examplebash
+
+```sh
+ $ pulumi import keycloak:index/defaultGroups:DefaultGroups default my-realm
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

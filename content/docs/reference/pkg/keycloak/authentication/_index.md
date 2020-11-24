@@ -26,7 +26,7 @@ Explore the resources and functions of the authentication module in the Keycloak
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
+	<dd>3.1.1</dd>
 </dl>
 
 

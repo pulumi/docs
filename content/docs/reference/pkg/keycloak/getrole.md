@@ -13,6 +13,7 @@ meta_desc: "Explore the GetRole function of the Keycloak package, including exam
 This data source can be used to fetch properties of a Keycloak role for
 usage with other resources, such as `keycloak.GroupRoles`.
 
+
 {{% examples %}}
 ## Example Usage
 
