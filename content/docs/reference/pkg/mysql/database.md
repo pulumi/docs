@@ -852,6 +852,18 @@ the operating system on which the MySQL server is running.
 
 
 
+## Import
+
+
+Databases can be imported using their name, e.g.
+
+```sh
+ $ pulumi import mysql:index/database:Database example my-example-database
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

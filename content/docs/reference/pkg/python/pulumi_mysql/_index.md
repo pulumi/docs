@@ -27,6 +27,10 @@ server.</p>
 <span class="n">app</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">Database</span><span class="p">(</span><span class="s2">&quot;app&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Databases can be imported using their name, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import mysql:index/database:Database example my-example-database
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
