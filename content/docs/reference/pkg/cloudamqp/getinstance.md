@@ -32,6 +32,7 @@ Use this data source to retrieve information about an already created CloudAMQP 
 
 
 
+
 ## Using GetInstance {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

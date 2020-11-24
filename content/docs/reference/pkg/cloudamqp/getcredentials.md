@@ -24,6 +24,7 @@ Use this data source to retrieve information about the credentials of the config
 
 This data source depends on CloudAMQP instance identifier, `cloudamqp_instance.instance.id`.
 
+
 {{% examples %}}
 ## Example Usage
 

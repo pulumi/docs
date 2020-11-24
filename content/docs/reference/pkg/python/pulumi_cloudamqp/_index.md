@@ -20,6 +20,10 @@ block_external_search_index: true
 <p>Required arguments for all alarms: <em>instance_id</em>, <em>type</em> and <em>enabled</em><span class="raw-html-m2r"><br></span>
 Optional argument for all alarms: <em>tags</em>, <em>queue_regex</em>, <em>vhost_regex</em></p>
 <p>This resource depends on CloudAMQP instance identifier, <code class="docutils literal notranslate"><span class="pre">cloudamqp_instance.instance.id</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cloudamqp_alarm</span></code> can be imported using CloudAMQP internal identifier of the alarm together (CSV separated) with the instance identifier. To retrieve the alarm identifier, use <a class="reference external" href="https://docs.cloudamqp.com/cloudamqp_api.html#list-alarms">CloudAMQP API</a></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudamqp:index/alarm:Alarm alarm &lt;alarm_id&gt;,&lt;instance_id&gt;<span class="sb">`</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -312,6 +316,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;terraform&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
+<p><code class="docutils literal notranslate"><span class="pre">cloudamqp_instance</span></code>can be imported using CloudAMQP internal identifier. To retrieve the identifier for an instance, use <a class="reference external" href="https://docs.cloudamqp.com/#list-instances">CloudAMQP customer API</a>.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudamqp:index/instance:Instance instance &lt;instance_id&gt;<span class="sb">`</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -339,7 +347,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>apikey</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) API key needed to communicate to CloudAMQP’s second API. The second API is used to manage alarms, integration and more, full description <a class="reference external" href="https://docs.cloudamqp.com/cloudamqp_api.html">CloudAMQP API</a>.</p></li>
+<li><p><strong>apikey</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>(Computed) API key needed to communicate to CloudAMQP’s second API. The second API is used to manage alarms, integration and more, full description <a class="reference external" href="https://docs.cloudamqp.com/cloudamqp_api.html">CloudAMQP API</a>.</p>
+</p></li>
 <li><p><strong>dedicated</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is the instance hosted on a dedicated server</p></li>
 <li><p><strong>host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The host name for the CloudAMQP instance.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the CloudAMQP instance.</p></li>
@@ -607,6 +616,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </tbody>
 </table>
 <p>This resource depends on CloudAMQP instance identifier, <code class="docutils literal notranslate"><span class="pre">cloudamqp_instance.instance.id</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cloudamqp_integration_log</span></code>can be imported using the name argument of the resource together with CloudAMQP instance identifier. The name and identifier are CSV separated, see example below.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudamqp:index/integrationLog:IntegrationLog &lt;resource_name&gt; &lt;name&gt;,&lt;instance_id&gt;<span class="sb">`</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -886,6 +899,10 @@ Optional arguments for all integrations: <em>tags</em>, <em>queue_whitelist</em>
 </tbody>
 </table>
 <p>This resource depends on CloudAMQP instance identifier, <code class="docutils literal notranslate"><span class="pre">cloudamqp_instance.instance.id</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cloudamqp_integration_metric</span></code>can be imported using the name argument of the resource together with CloudAMQP instance identifier. The name and identifier are CSV separated, see example below.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudamqp:index/integrationMetric:IntegrationMetric &lt;resource_name&gt; &lt;name&gt;,&lt;instance_id&gt;<span class="sb">`</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1086,6 +1103,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>slack</p></li>
 </ul>
 <p>This resource depends on CloudAMQP instance identifier, <code class="docutils literal notranslate"><span class="pre">cloudamqp_instance.instance.id</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cloudamqp_notification</span></code> can be imported using CloudAMQP internal identifier of a recipient together (CSV separated) with the instance identifier. To retrieve the identifier of a recipient, use <a class="reference external" href="https://docs.cloudamqp.com/cloudamqp_api.html#list-notification-recipients">CloudAMQP API</a></p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudamqp:index/notification:Notification recipient &lt;recpient_id&gt;,&lt;indstance_id&gt;<span class="sb">`</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1194,6 +1215,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </pre></div>
 </div>
 <p>This resource depends on CloudAMQP instance identifier, <code class="docutils literal notranslate"><span class="pre">cloudamqp_instance.instance.id</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cloudamqp_plugin</span></code> can be imported using the name argument of the resource together with CloudAMQP instance identifier. The name and identifier are CSV separated, see example below.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudamqp:index/plugin:Plugin rabbitmq_management rabbitmq_management,&lt;instance_id&gt;<span class="sb">`</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1294,6 +1319,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </pre></div>
 </div>
 <p>This resource depends on CloudAMQP instance identifier, <code class="docutils literal notranslate"><span class="pre">cloudamqp_instance.instance.id</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cloudamqp_plugin</span></code> can be imported using the name argument of the resource together with CloudAMQP instance identifier. The name and identifier are CSV separated, see example below.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudamqp:index/pluginCommunity:PluginCommunity &lt;resource_name&gt; &lt;plugin_name&gt;,&lt;instance_id&gt;<span class="sb">`</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1469,6 +1498,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </pre></div>
 </div>
 <p>This resource depends on CloudAMQP instance identifier, <code class="docutils literal notranslate"><span class="pre">cloudamqp_instance.instance.id</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cloudamqp_security_firewall</span></code> can be imported using CloudAMQP instance identifier.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudamqp:index/securityFirewall:SecurityFirewall firewall &lt;instance_id&gt;<span class="sb">`</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1550,11 +1583,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_cloudamqp.VpcPeering">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudamqp.</code><code class="sig-name descname">VpcPeering</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peering_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.VpcPeering" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a VpcPeering resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[int] instance_id: The CloudAMQP instance ID.
-:param pulumi.Input[str] peering_id: Peering identifier created by AW peering request.</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">cloudamqp_vpc_peering</span></code> can be imported using the CloudAMQP instance identifier.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudamqp:index/vpcPeering:VpcPeering &lt;resource_name&gt; &lt;instance_id&gt;<span class="sb">`</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The CloudAMQP instance ID.</p></li>
+<li><p><strong>peering_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Peering identifier created by AW peering request.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="pulumi_cloudamqp.VpcPeering.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peering_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">status</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_cloudamqp.vpc_peering.VpcPeering<a class="headerlink" href="#pulumi_cloudamqp.VpcPeering.get" title="Permalink to this definition">¶</a></dt>

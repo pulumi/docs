@@ -1821,6 +1821,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+`cloudamqp_instance`can be imported using CloudAMQP internal identifier. To retrieve the identifier for an instance, use [CloudAMQP customer API](https://docs.cloudamqp.com/#list-instances).
+
+```sh
+ $ pulumi import cloudamqp:index/instance:Instance instance <instance_id>`
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
