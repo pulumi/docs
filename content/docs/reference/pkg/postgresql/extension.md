@@ -63,6 +63,7 @@ func main() {
 
 
 
+
 ## Create a Extension Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -853,6 +854,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
