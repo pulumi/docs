@@ -15,6 +15,7 @@ server.
 
 > **Note:** MySQL introduced roles in version 8. They do not work on MySQL 5 and lower.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -611,6 +612,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
