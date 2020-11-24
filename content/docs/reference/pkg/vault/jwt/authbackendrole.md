@@ -3753,6 +3753,16 @@ in OIDC responses.
 
 
 
+## Import
+
+
+JWT authentication backend roles can be imported using the `path`, e.g.
+
+```sh
+ $ pulumi import vault:jwt/authBackendRole:AuthBackendRole example auth/jwt/role/test-role
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -3245,6 +3245,16 @@ requests a different type at generation time.
 
 
 
+## Import
+
+
+LDAP authentication backends can be imported using the `path`, e.g.
+
+```sh
+ $ pulumi import vault:ldap/authBackend:AuthBackend ldap ldap
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

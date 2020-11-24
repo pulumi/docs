@@ -16,6 +16,7 @@ It encodes the provided value using a named role.
 
 
 
+
 ## Using GetEncode {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

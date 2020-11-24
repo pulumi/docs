@@ -14,6 +14,7 @@ Manages an AppRole auth backend SecretID in a Vault server. See the [Vault
 documentation](https://www.vaultproject.io/docs/auth/approle) for more
 information.
 
+
 {{% examples %}}
 ## Example Usage
 

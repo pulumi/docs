@@ -12,6 +12,7 @@ meta_desc: "Explore the GetEncrypt function of the transit module, including exa
 
 This is a data source which can be used to encrypt plaintext using a Vault Transit key.
 
+
 {{% examples %}}
 ## Example Usage
 

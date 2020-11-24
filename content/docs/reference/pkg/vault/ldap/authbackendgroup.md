@@ -857,6 +857,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+LDAP authentication backend groups can be imported using the `path`, e.g.
+
+```sh
+ $ pulumi import vault:ldap/authBackendGroup:AuthBackendGroup foo auth/ldap/groups/foo
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

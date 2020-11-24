@@ -12,6 +12,7 @@ meta_desc: "Explore the CertAuthBackendRole resource of the Vault package, inclu
 
 Provides a resource to create a role in an [Cert auth backend within Vault](https://www.vaultproject.io/docs/auth/cert.html).
 
+
 {{% examples %}}
 ## Example Usage
 

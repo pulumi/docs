@@ -2885,6 +2885,16 @@ using this role, provided as a number of seconds.
 
 
 
+## Import
+
+
+GCP authentication roles can be imported using the `path`, e.g.
+
+```sh
+ $ pulumi import vault:gcp/authBackendRole:AuthBackendRole my_role auth/gcp/role/my_role
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

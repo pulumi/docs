@@ -12,6 +12,7 @@ meta_desc: "Explore the EntityPolicies resource of the identity module, includin
 
 Manages policies for an Identity Entity for Vault. The [Identity secrets engine](https://www.vaultproject.io/docs/secrets/identity/index.html) is the identity management solution for Vault.
 
+
 {{% examples %}}
 ## Example Usage
 

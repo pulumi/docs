@@ -12,6 +12,7 @@ meta_desc: "Explore the GroupMemberEntityIds resource of the identity module, in
 
 Manages member entities for an Identity Group for Vault. The [Identity secrets engine](https://www.vaultproject.io/docs/secrets/identity/index.html) is the identity management solution for Vault.
 
+
 {{% examples %}}
 ## Example Usage
 

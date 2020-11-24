@@ -2489,6 +2489,16 @@ requests a different type at generation time.
 
 
 
+## Import
+
+
+AppRole authentication backend roles can be imported using the `path`, e.g.
+
+```sh
+ $ pulumi import vault:appRole/authBackendRole:AuthBackendRole example auth/approle/role/test-role
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -3,7 +3,7 @@ title: "Module pkisecret"
 title_tag: "Module pkisecret | Package @pulumi/vault | Node.js SDK"
 linktitle: "pkisecret"
 meta_desc: "Explore members of the pkisecret module in the @pulumi/vault package."
-git_sha: "7f3a154bc46dac6b757990292d938f6d391d33ae"
+git_sha: "2dce476d2b85de30e6b63dd882e5f90000adc81f"
 block_external_search_index: true
 ---
 
@@ -60,7 +60,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="SecretBackend" data-link-title="SecretBackend">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackend.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackend.ts#L32">
         Resource <strong>SecretBackend</strong>
     </a>
 </h3>
@@ -83,8 +83,16 @@ const pki = new vault.pkiSecret.SecretBackend("pki", {
 });
 ```
 
+#### Import
+
+PKI secret backends can be imported using the `path`, e.g.
+
+```sh
+ $ pulumi import vault:pkiSecret/secretBackend:SecretBackend pki pki
+```
+
 <h4 class="pdoc-member-header" id="SecretBackend-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackend.ts#L67"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackend.ts#L75"> <b>constructor</b></a>
 </h4>
 
 
@@ -98,7 +106,7 @@ Create a SecretBackend resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretBackend-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackend.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackend.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -109,14 +117,14 @@ Get an existing SecretBackend resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretBackend-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackend.ts#L24">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackend.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretBackend-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackend.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackend.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -127,7 +135,7 @@ Returns true if the given object is an instance of SecretBackend.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretBackend-defaultLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackend.ts#L55">property <b>defaultLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackend.ts#L63">property <b>defaultLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultLeaseTtlSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -135,7 +143,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The default TTL for credentials issued by this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackend-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackend.ts#L59">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackend.ts#L67">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -143,7 +151,7 @@ The default TTL for credentials issued by this backend.
 A human-friendly description for this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackend-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackend.ts#L24">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackend.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -152,7 +160,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretBackend-maxLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackend.ts#L63">property <b>maxLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackend.ts#L71">property <b>maxLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxLeaseTtlSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -160,7 +168,7 @@ deployments and may be missing (undefined) during planning phases.
 The maximum TTL that can be requested for credentials issued by this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackend-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackend.ts#L67">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackend.ts#L75">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -168,7 +176,7 @@ The maximum TTL that can be requested for credentials issued by this backend.
 The unique path this backend should be mounted at. Must not begin or end with a `/`.
 
 <h4 class="pdoc-member-header" id="SecretBackend-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackend.ts#L24">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackend.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -177,14 +185,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecretBackendCert" data-link-title="SecretBackendCert">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L7">
         Resource <strong>SecretBackendCert</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>SecretBackendCert</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendCert-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L114"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L114"> <b>constructor</b></a>
 </h4>
 
 
@@ -198,7 +206,7 @@ Create a SecretBackendCert resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -209,14 +217,14 @@ Get an existing SecretBackendCert resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -227,7 +235,7 @@ Returns true if the given object is an instance of SecretBackendCert.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-altNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L38">property <b>altNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L38">property <b>altNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>altNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -235,7 +243,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 List of alternative names
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-autoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L42">property <b>autoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L42">property <b>autoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoRenew: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -243,7 +251,7 @@ List of alternative names
 If set to `true`, certs will be renewed if the expiration is within `minSecondsRemaining`. Default `false`
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L46">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L46">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -251,7 +259,7 @@ If set to `true`, certs will be renewed if the expiration is within `minSecondsR
 The PKI secret backend the resource belongs to.
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-caChain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L50">property <b>caChain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L50">property <b>caChain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>caChain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -259,7 +267,7 @@ The PKI secret backend the resource belongs to.
 The CA chain
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L54">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L54">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -267,7 +275,7 @@ The CA chain
 The certificate
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-commonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L58">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L58">property <b>commonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>commonName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -275,7 +283,7 @@ The certificate
 CN of certificate to create
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-excludeCnFromSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L62">property <b>excludeCnFromSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L62">property <b>excludeCnFromSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>excludeCnFromSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -283,7 +291,7 @@ CN of certificate to create
 Flag to exclude CN from SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-expiration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L66">property <b>expiration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L66">property <b>expiration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expiration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -291,7 +299,7 @@ Flag to exclude CN from SANs
 The expiration date of the certificate in unix epoch format
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L70">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L70">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -299,7 +307,7 @@ The expiration date of the certificate in unix epoch format
 The format of data
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -308,7 +316,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-ipSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L74">property <b>ipSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L74">property <b>ipSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -316,7 +324,7 @@ deployments and may be missing (undefined) during planning phases.
 List of alternative IPs
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-issuingCa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L78">property <b>issuingCa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L78">property <b>issuingCa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>issuingCa: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -324,7 +332,7 @@ List of alternative IPs
 The issuing CA
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-minSecondsRemaining">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L82">property <b>minSecondsRemaining</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L82">property <b>minSecondsRemaining</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minSecondsRemaining: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -332,7 +340,7 @@ The issuing CA
 Generate a new certificate when the expiration is within this number of seconds, default is 604800 (7 days)
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L86">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L86">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -340,7 +348,7 @@ Generate a new certificate when the expiration is within this number of seconds,
 Name of the role to create the certificate against
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-otherSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L90">property <b>otherSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L90">property <b>otherSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>otherSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -348,7 +356,7 @@ Name of the role to create the certificate against
 List of other SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L94">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L94">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -356,7 +364,7 @@ List of other SANs
 The private key
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-privateKeyFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L98">property <b>privateKeyFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L98">property <b>privateKeyFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKeyFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -364,7 +372,7 @@ The private key
 The private key format
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-privateKeyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L102">property <b>privateKeyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L102">property <b>privateKeyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKeyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -372,7 +380,7 @@ The private key format
 The private key type
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-serialNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L106">property <b>serialNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L106">property <b>serialNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serialNumber: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -380,7 +388,7 @@ The private key type
 The serial number
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L110">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L110">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -388,7 +396,7 @@ The serial number
 Time to live
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-uriSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L114">property <b>uriSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L114">property <b>uriSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uriSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -396,7 +404,7 @@ Time to live
 List of alternative URIs
 
 <h4 class="pdoc-member-header" id="SecretBackendCert-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -405,14 +413,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecretBackendConfigCa" data-link-title="SecretBackendConfigCa">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L7">
         Resource <strong>SecretBackendConfigCa</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>SecretBackendConfigCa</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendConfigCa-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L42"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L42"> <b>constructor</b></a>
 </h4>
 
 
@@ -426,7 +434,7 @@ Create a SecretBackendConfigCa resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigCa-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -437,14 +445,14 @@ Get an existing SecretBackendConfigCa resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigCa-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigCa-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -455,7 +463,7 @@ Returns true if the given object is an instance of SecretBackendConfigCa.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigCa-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L38">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L38">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -463,7 +471,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The PKI secret backend the resource belongs to.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigCa-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -472,7 +480,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigCa-pemBundle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L42">property <b>pemBundle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L42">property <b>pemBundle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pemBundle: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -480,7 +488,7 @@ deployments and may be missing (undefined) during planning phases.
 The key and certificate PEM bundle
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigCa-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -489,7 +497,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecretBackendConfigUrls" data-link-title="SecretBackendConfigUrls">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L27">
         Resource <strong>SecretBackendConfigUrls</strong>
     </a>
 </h3>
@@ -516,7 +524,7 @@ const configUrls = new vault.pkiSecret.SecretBackendConfigUrls("config_urls", {
 ```
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigUrls-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L70"> <b>constructor</b></a>
 </h4>
 
 
@@ -530,7 +538,7 @@ Create a SecretBackendConfigUrls resource with the given unique name, arguments,
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigUrls-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L37">method <b>get</b></a>
 </h4>
 
 
@@ -541,14 +549,14 @@ Get an existing SecretBackendConfigUrls resource's state with the given name, ID
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigUrls-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L27">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L27">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigUrls-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L48">method <b>isInstance</b></a>
 </h4>
 
 
@@ -559,7 +567,7 @@ Returns true if the given object is an instance of SecretBackendConfigUrls.  Thi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigUrls-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L58">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L58">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -567,7 +575,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigUrls-crlDistributionPoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L62">property <b>crlDistributionPoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L62">property <b>crlDistributionPoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>crlDistributionPoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -575,7 +583,7 @@ The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 Specifies the URL values for the CRL Distribution Points field.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigUrls-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -584,7 +592,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigUrls-issuingCertificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L66">property <b>issuingCertificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L66">property <b>issuingCertificates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>issuingCertificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -592,7 +600,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the URL values for the Issuing Certificate field.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigUrls-ocspServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L70">property <b>ocspServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L70">property <b>ocspServers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ocspServers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -600,7 +608,7 @@ Specifies the URL values for the Issuing Certificate field.
 Specifies the URL values for the OCSP Servers field.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigUrls-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L27">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L27">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -609,7 +617,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecretBackendCrlConfig" data-link-title="SecretBackendCrlConfig">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L29">
         Resource <strong>SecretBackendCrlConfig</strong>
     </a>
 </h3>
@@ -638,7 +646,7 @@ const crlConfig = new vault.pkiSecret.SecretBackendCrlConfig("crl_config", {
 ```
 
 <h4 class="pdoc-member-header" id="SecretBackendCrlConfig-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L68"> <b>constructor</b></a>
 </h4>
 
 
@@ -652,7 +660,7 @@ Create a SecretBackendCrlConfig resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretBackendCrlConfig-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L39">method <b>get</b></a>
 </h4>
 
 
@@ -663,14 +671,14 @@ Get an existing SecretBackendCrlConfig resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretBackendCrlConfig-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L29">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L29">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretBackendCrlConfig-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L50">method <b>isInstance</b></a>
 </h4>
 
 
@@ -681,7 +689,7 @@ Returns true if the given object is an instance of SecretBackendCrlConfig.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretBackendCrlConfig-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L60">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L60">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -689,7 +697,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 
 <h4 class="pdoc-member-header" id="SecretBackendCrlConfig-disable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L64">property <b>disable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L64">property <b>disable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -697,7 +705,7 @@ The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 Disables or enables CRL building.
 
 <h4 class="pdoc-member-header" id="SecretBackendCrlConfig-expiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L68">property <b>expiry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L68">property <b>expiry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expiry: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -705,7 +713,7 @@ Disables or enables CRL building.
 Specifies the time until expiration.
 
 <h4 class="pdoc-member-header" id="SecretBackendCrlConfig-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L29">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L29">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -714,7 +722,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretBackendCrlConfig-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L29">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L29">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -723,14 +731,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecretBackendIntermediateCertRequest" data-link-title="SecretBackendIntermediateCertRequest">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L7">
         Resource <strong>SecretBackendIntermediateCertRequest</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>SecretBackendIntermediateCertRequest</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L122"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L122"> <b>constructor</b></a>
 </h4>
 
 
@@ -744,7 +752,7 @@ Create a SecretBackendIntermediateCertRequest resource with the given unique nam
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -755,14 +763,14 @@ Get an existing SecretBackendIntermediateCertRequest resource's state with the g
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -773,7 +781,7 @@ Returns true if the given object is an instance of SecretBackendIntermediateCert
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-altNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L38">property <b>altNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L38">property <b>altNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>altNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -781,7 +789,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 List of alternative names
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L42">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L42">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -789,7 +797,7 @@ List of alternative names
 The PKI secret backend the resource belongs to.
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-commonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L46">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L46">property <b>commonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>commonName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -797,7 +805,7 @@ The PKI secret backend the resource belongs to.
 CN of intermediate to create
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-country">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L50">property <b>country</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L50">property <b>country</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>country: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -805,7 +813,7 @@ CN of intermediate to create
 The country
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-csr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L54">property <b>csr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L54">property <b>csr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>csr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -813,7 +821,7 @@ The country
 The CSR
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-excludeCnFromSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L58">property <b>excludeCnFromSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L58">property <b>excludeCnFromSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>excludeCnFromSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -821,7 +829,7 @@ The CSR
 Flag to exclude CN from SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L62">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L62">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -829,7 +837,7 @@ Flag to exclude CN from SANs
 The format of data
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -838,7 +846,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-ipSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L66">property <b>ipSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L66">property <b>ipSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -846,7 +854,7 @@ deployments and may be missing (undefined) during planning phases.
 List of alternative IPs
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-keyBits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L70">property <b>keyBits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L70">property <b>keyBits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyBits: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -854,7 +862,7 @@ List of alternative IPs
 The number of bits to use
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-keyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L74">property <b>keyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L74">property <b>keyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -862,7 +870,7 @@ The number of bits to use
 The desired key type
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-locality">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L78">property <b>locality</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L78">property <b>locality</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>locality: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -870,7 +878,7 @@ The desired key type
 The locality
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-organization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L82">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L82">property <b>organization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>organization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -878,7 +886,7 @@ The locality
 The organization
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-otherSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L86">property <b>otherSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L86">property <b>otherSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>otherSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -886,7 +894,7 @@ The organization
 List of other SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-ou">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L90">property <b>ou</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L90">property <b>ou</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ou: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -894,7 +902,7 @@ List of other SANs
 The organization unit
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-postalCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L94">property <b>postalCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L94">property <b>postalCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>postalCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -902,7 +910,7 @@ The organization unit
 The postal code
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L98">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L98">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -910,7 +918,7 @@ The postal code
 The private key
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-privateKeyFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L102">property <b>privateKeyFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L102">property <b>privateKeyFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKeyFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -918,7 +926,7 @@ The private key
 The private key format
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-privateKeyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L106">property <b>privateKeyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L106">property <b>privateKeyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKeyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -926,7 +934,7 @@ The private key format
 The private key type
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-province">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L110">property <b>province</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L110">property <b>province</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>province: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -934,7 +942,7 @@ The private key type
 The province
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-streetAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L114">property <b>streetAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L114">property <b>streetAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>streetAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -942,7 +950,7 @@ The province
 The street address
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L118">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L118">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -950,7 +958,7 @@ The street address
 Type of intermediate to create. Must be either \"exported\" or \"internal\"
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-uriSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L122">property <b>uriSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L122">property <b>uriSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uriSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -958,7 +966,7 @@ Type of intermediate to create. Must be either \"exported\" or \"internal\"
 List of alternative URIs
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequest-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -967,14 +975,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecretBackendIntermediateSetSigned" data-link-title="SecretBackendIntermediateSetSigned">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L7">
         Resource <strong>SecretBackendIntermediateSetSigned</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>SecretBackendIntermediateSetSigned</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateSetSigned-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L42"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L42"> <b>constructor</b></a>
 </h4>
 
 
@@ -988,7 +996,7 @@ Create a SecretBackendIntermediateSetSigned resource with the given unique name,
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateSetSigned-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -999,14 +1007,14 @@ Get an existing SecretBackendIntermediateSetSigned resource's state with the giv
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateSetSigned-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateSetSigned-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1017,7 +1025,7 @@ Returns true if the given object is an instance of SecretBackendIntermediateSetS
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateSetSigned-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L38">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L38">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1025,7 +1033,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The PKI secret backend the resource belongs to.
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateSetSigned-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L42">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L42">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1033,7 +1041,7 @@ The PKI secret backend the resource belongs to.
 The certificate
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateSetSigned-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1042,7 +1050,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateSetSigned-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1051,7 +1059,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecretBackendRole" data-link-title="SecretBackendRole">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L34">
         Resource <strong>SecretBackendRole</strong>
     </a>
 </h3>
@@ -1076,8 +1084,16 @@ const role = new vault.pkiSecret.SecretBackendRole("role", {
 });
 ```
 
+#### Import
+
+PKI secret backend roles can be imported using the `path`, e.g.
+
+```sh
+ $ pulumi import vault:pkiSecret/secretBackendRole:SecretBackendRole role pki/roles/my_role
+```
+
 <h4 class="pdoc-member-header" id="SecretBackendRole-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L201"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L209"> <b>constructor</b></a>
 </h4>
 
 
@@ -1091,7 +1107,7 @@ Create a SecretBackendRole resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -1102,14 +1118,14 @@ Get an existing SecretBackendRole resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1120,7 +1136,7 @@ Returns true if the given object is an instance of SecretBackendRole.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-allowAnyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L57">property <b>allowAnyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L65">property <b>allowAnyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowAnyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1128,7 +1144,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Flag to allow any name
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-allowBareDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L61">property <b>allowBareDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L69">property <b>allowBareDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowBareDomains: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1136,7 +1152,7 @@ Flag to allow any name
 Flag to allow certificates matching the actual domain
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-allowGlobDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L65">property <b>allowGlobDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L73">property <b>allowGlobDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowGlobDomains: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1144,7 +1160,7 @@ Flag to allow certificates matching the actual domain
 Flag to allow names containing glob patterns.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-allowIpSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L69">property <b>allowIpSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L77">property <b>allowIpSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowIpSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1152,7 +1168,7 @@ Flag to allow names containing glob patterns.
 Flag to allow IP SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-allowLocalhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L73">property <b>allowLocalhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L81">property <b>allowLocalhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowLocalhost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1160,7 +1176,7 @@ Flag to allow IP SANs
 Flag to allow certificates for localhost
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-allowSubdomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L77">property <b>allowSubdomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L85">property <b>allowSubdomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowSubdomains: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1168,7 +1184,7 @@ Flag to allow certificates for localhost
 Flag to allow certificates matching subdomains
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-allowedDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L81">property <b>allowedDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L89">property <b>allowedDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowedDomains: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1176,7 +1192,7 @@ Flag to allow certificates matching subdomains
 List of allowed domains for certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-allowedOtherSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L85">property <b>allowedOtherSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L93">property <b>allowedOtherSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowedOtherSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1184,7 +1200,7 @@ List of allowed domains for certificates
 Defines allowed custom SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-allowedUriSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L89">property <b>allowedUriSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L97">property <b>allowedUriSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowedUriSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1192,7 +1208,7 @@ Defines allowed custom SANs
 Defines allowed URI SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L93">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L101">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1200,7 +1216,7 @@ Defines allowed URI SANs
 The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-basicConstraintsValidForNonCa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L97">property <b>basicConstraintsValidForNonCa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L105">property <b>basicConstraintsValidForNonCa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>basicConstraintsValidForNonCa: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1208,7 +1224,7 @@ The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 Flag to mark basic constraints valid when issuing non-CA certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-clientFlag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L101">property <b>clientFlag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L109">property <b>clientFlag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientFlag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1216,7 +1232,7 @@ Flag to mark basic constraints valid when issuing non-CA certificates
 Flag to specify certificates for client use
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-codeSigningFlag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L105">property <b>codeSigningFlag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L113">property <b>codeSigningFlag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>codeSigningFlag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1224,7 +1240,7 @@ Flag to specify certificates for client use
 Flag to specify certificates for code signing use
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-countries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L109">property <b>countries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L117">property <b>countries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>countries: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1232,7 +1248,7 @@ Flag to specify certificates for code signing use
 The country of generated certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-emailProtectionFlag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L113">property <b>emailProtectionFlag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L121">property <b>emailProtectionFlag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>emailProtectionFlag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1240,7 +1256,7 @@ The country of generated certificates
 Flag to specify certificates for email protection use
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-enforceHostnames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L117">property <b>enforceHostnames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L125">property <b>enforceHostnames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enforceHostnames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1248,7 +1264,7 @@ Flag to specify certificates for email protection use
 Flag to allow only valid host names
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-extKeyUsages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L121">property <b>extKeyUsages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L129">property <b>extKeyUsages</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>extKeyUsages: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1256,7 +1272,7 @@ Flag to allow only valid host names
 Specify the allowed extended key usage constraint on issued certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-generateLease">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L125">property <b>generateLease</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L133">property <b>generateLease</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>generateLease: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1264,7 +1280,7 @@ Specify the allowed extended key usage constraint on issued certificates
 Flag to generate leases with certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1273,7 +1289,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-keyBits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L129">property <b>keyBits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L137">property <b>keyBits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyBits: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1281,7 +1297,7 @@ deployments and may be missing (undefined) during planning phases.
 The number of bits of generated keys
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-keyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L133">property <b>keyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L141">property <b>keyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1289,7 +1305,7 @@ The number of bits of generated keys
 The type of generated keys
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-keyUsages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L137">property <b>keyUsages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L145">property <b>keyUsages</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyUsages: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1297,7 +1313,7 @@ The type of generated keys
 Specify the allowed key usage constraint on issued certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-localities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L141">property <b>localities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L149">property <b>localities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>localities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1305,7 +1321,7 @@ Specify the allowed key usage constraint on issued certificates
 The locality of generated certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L145">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L153">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1313,7 +1329,7 @@ The locality of generated certificates
 The maximum TTL
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L149">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L157">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1321,7 +1337,7 @@ The maximum TTL
 The name to identify this role within the backend. Must be unique within the backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-noStore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L153">property <b>noStore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L161">property <b>noStore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>noStore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1329,7 +1345,7 @@ The name to identify this role within the backend. Must be unique within the bac
 Flag to not store certificates in the storage backend
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-notBeforeDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L157">property <b>notBeforeDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L165">property <b>notBeforeDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notBeforeDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1337,7 +1353,7 @@ Flag to not store certificates in the storage backend
 Specifies the duration by which to backdate the NotBefore property.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-organizationUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L161">property <b>organizationUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L169">property <b>organizationUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>organizationUnit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1345,7 +1361,7 @@ Specifies the duration by which to backdate the NotBefore property.
 The organization unit of generated certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-organizations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L165">property <b>organizations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L173">property <b>organizations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>organizations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1353,7 +1369,7 @@ The organization unit of generated certificates
 The organization of generated certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-policyIdentifiers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L169">property <b>policyIdentifiers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L177">property <b>policyIdentifiers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyIdentifiers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1361,7 +1377,7 @@ The organization of generated certificates
 Specify the list of allowed policies IODs
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-postalCodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L173">property <b>postalCodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L181">property <b>postalCodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>postalCodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1369,7 +1385,7 @@ Specify the list of allowed policies IODs
 The postal code of generated certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-provinces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L177">property <b>provinces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L185">property <b>provinces</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>provinces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1377,7 +1393,7 @@ The postal code of generated certificates
 The province of generated certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-requireCn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L181">property <b>requireCn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L189">property <b>requireCn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requireCn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1385,7 +1401,7 @@ The province of generated certificates
 Flag to force CN usage
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-serverFlag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L185">property <b>serverFlag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L193">property <b>serverFlag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverFlag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1393,7 +1409,7 @@ Flag to force CN usage
 Flag to specify certificates for server use
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-streetAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L189">property <b>streetAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L197">property <b>streetAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>streetAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1401,7 +1417,7 @@ Flag to specify certificates for server use
 The street address of generated certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L193">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L201">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1409,7 +1425,7 @@ The street address of generated certificates
 The TTL
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1418,7 +1434,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-useCsrCommonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L197">property <b>useCsrCommonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L205">property <b>useCsrCommonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>useCsrCommonName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1426,7 +1442,7 @@ deployments.
 Flag to use the CN in the CSR
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-useCsrSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L201">property <b>useCsrSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L209">property <b>useCsrSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>useCsrSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1434,14 +1450,14 @@ Flag to use the CN in the CSR
 Flag to use the SANs in the CSR
 
 <h3 class="pdoc-module-header" id="SecretBackendRootCert" data-link-title="SecretBackendRootCert">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L7">
         Resource <strong>SecretBackendRootCert</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>SecretBackendRootCert</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L134"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L134"> <b>constructor</b></a>
 </h4>
 
 
@@ -1455,7 +1471,7 @@ Create a SecretBackendRootCert resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -1466,14 +1482,14 @@ Get an existing SecretBackendRootCert resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1484,7 +1500,7 @@ Returns true if the given object is an instance of SecretBackendRootCert.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-altNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L38">property <b>altNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L38">property <b>altNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>altNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1492,7 +1508,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 List of alternative names
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L42">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L42">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1500,7 +1516,7 @@ List of alternative names
 The PKI secret backend the resource belongs to.
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L46">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L46">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1508,7 +1524,7 @@ The PKI secret backend the resource belongs to.
 The certificate
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-commonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L50">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L50">property <b>commonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>commonName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1516,7 +1532,7 @@ The certificate
 CN of intermediate to create
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-country">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L54">property <b>country</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L54">property <b>country</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>country: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1524,7 +1540,7 @@ CN of intermediate to create
 The country
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-excludeCnFromSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L58">property <b>excludeCnFromSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L58">property <b>excludeCnFromSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>excludeCnFromSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1532,7 +1548,7 @@ The country
 Flag to exclude CN from SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L62">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L62">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1540,7 +1556,7 @@ Flag to exclude CN from SANs
 The format of data
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1549,7 +1565,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-ipSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L66">property <b>ipSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L66">property <b>ipSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1557,7 +1573,7 @@ deployments and may be missing (undefined) during planning phases.
 List of alternative IPs
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-issuingCa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L70">property <b>issuingCa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L70">property <b>issuingCa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>issuingCa: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1565,7 +1581,7 @@ List of alternative IPs
 The issuing CA
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-keyBits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L74">property <b>keyBits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L74">property <b>keyBits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyBits: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1573,7 +1589,7 @@ The issuing CA
 The number of bits to use
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-keyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L78">property <b>keyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L78">property <b>keyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1581,7 +1597,7 @@ The number of bits to use
 The desired key type
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-locality">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L82">property <b>locality</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L82">property <b>locality</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>locality: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1589,7 +1605,7 @@ The desired key type
 The locality
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-maxPathLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L86">property <b>maxPathLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L86">property <b>maxPathLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxPathLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1597,7 +1613,7 @@ The locality
 The maximum path length to encode in the generated certificate
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-organization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L90">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L90">property <b>organization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>organization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1605,7 +1621,7 @@ The maximum path length to encode in the generated certificate
 The organization
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-otherSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L94">property <b>otherSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L94">property <b>otherSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>otherSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1613,7 +1629,7 @@ The organization
 List of other SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-ou">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L98">property <b>ou</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L98">property <b>ou</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ou: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1621,7 +1637,7 @@ List of other SANs
 The organization unit
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-permittedDnsDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L102">property <b>permittedDnsDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L102">property <b>permittedDnsDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permittedDnsDomains: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1629,7 +1645,7 @@ The organization unit
 List of domains for which certificates are allowed to be issued
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-postalCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L106">property <b>postalCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L106">property <b>postalCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>postalCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1637,7 +1653,7 @@ List of domains for which certificates are allowed to be issued
 The postal code
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-privateKeyFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L110">property <b>privateKeyFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L110">property <b>privateKeyFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKeyFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1645,7 +1661,7 @@ The postal code
 The private key format
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-province">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L114">property <b>province</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L114">property <b>province</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>province: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1653,7 +1669,7 @@ The private key format
 The province
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-serial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L118">property <b>serial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L118">property <b>serial</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serial: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1661,7 +1677,7 @@ The province
 The serial
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-streetAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L122">property <b>streetAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L122">property <b>streetAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>streetAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1669,7 +1685,7 @@ The serial
 The street address
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L126">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L126">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1677,7 +1693,7 @@ The street address
 Time to live
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L130">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L130">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1685,7 +1701,7 @@ Time to live
 Type of intermediate to create. Must be either \"exported\" or \"internal\"
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-uriSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L134">property <b>uriSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L134">property <b>uriSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uriSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1693,7 +1709,7 @@ Type of intermediate to create. Must be either \"exported\" or \"internal\"
 List of alternative URIs
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCert-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1702,7 +1718,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecretBackendRootSignIntermediate" data-link-title="SecretBackendRootSignIntermediate">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L28">
         Resource <strong>SecretBackendRootSignIntermediate</strong>
     </a>
 </h3>
@@ -1730,7 +1746,7 @@ const root = new vault.pkiSecret.SecretBackendRootSignIntermediate("root", {
 ```
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L151"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L151"> <b>constructor</b></a>
 </h4>
 
 
@@ -1744,7 +1760,7 @@ Create a SecretBackendRootSignIntermediate resource with the given unique name, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L38">method <b>get</b></a>
 </h4>
 
 
@@ -1755,14 +1771,14 @@ Get an existing SecretBackendRootSignIntermediate resource's state with the give
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L28">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L28">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L49">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L49">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1773,7 +1789,7 @@ Returns true if the given object is an instance of SecretBackendRootSignIntermed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-altNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L59">property <b>altNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L59">property <b>altNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>altNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1781,7 +1797,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 List of alternative names
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L63">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L63">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1789,7 +1805,7 @@ List of alternative names
 The PKI secret backend the resource belongs to.
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-caChain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L67">property <b>caChain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L67">property <b>caChain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>caChain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1797,7 +1813,7 @@ The PKI secret backend the resource belongs to.
 The CA chain
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L71">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L71">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1805,7 +1821,7 @@ The CA chain
 The certificate
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-commonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L75">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L75">property <b>commonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>commonName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1813,7 +1829,7 @@ The certificate
 CN of intermediate to create
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-country">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L79">property <b>country</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L79">property <b>country</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>country: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1821,7 +1837,7 @@ CN of intermediate to create
 The country
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-csr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L83">property <b>csr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L83">property <b>csr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>csr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1829,7 +1845,7 @@ The country
 The CSR
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-excludeCnFromSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L87">property <b>excludeCnFromSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L87">property <b>excludeCnFromSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>excludeCnFromSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1837,7 +1853,7 @@ The CSR
 Flag to exclude CN from SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L91">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L91">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1845,7 +1861,7 @@ Flag to exclude CN from SANs
 The format of data
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L28">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L28">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1854,7 +1870,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-ipSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L95">property <b>ipSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L95">property <b>ipSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1862,7 +1878,7 @@ deployments and may be missing (undefined) during planning phases.
 List of alternative IPs
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-issuingCa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L99">property <b>issuingCa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L99">property <b>issuingCa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>issuingCa: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1870,7 +1886,7 @@ List of alternative IPs
 The issuing CA
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-locality">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L103">property <b>locality</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L103">property <b>locality</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>locality: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1878,7 +1894,7 @@ The issuing CA
 The locality
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-maxPathLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L107">property <b>maxPathLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L107">property <b>maxPathLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxPathLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1886,7 +1902,7 @@ The locality
 The maximum path length to encode in the generated certificate
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-organization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L111">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L111">property <b>organization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>organization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1894,7 +1910,7 @@ The maximum path length to encode in the generated certificate
 The organization
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-otherSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L115">property <b>otherSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L115">property <b>otherSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>otherSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1902,7 +1918,7 @@ The organization
 List of other SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-ou">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L119">property <b>ou</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L119">property <b>ou</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ou: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1910,7 +1926,7 @@ List of other SANs
 The organization unit
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-permittedDnsDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L123">property <b>permittedDnsDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L123">property <b>permittedDnsDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permittedDnsDomains: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1918,7 +1934,7 @@ The organization unit
 List of domains for which certificates are allowed to be issued
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-postalCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L127">property <b>postalCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L127">property <b>postalCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>postalCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1926,7 +1942,7 @@ List of domains for which certificates are allowed to be issued
 The postal code
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-province">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L131">property <b>province</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L131">property <b>province</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>province: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1934,7 +1950,7 @@ The postal code
 The province
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-serial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L135">property <b>serial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L135">property <b>serial</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serial: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1942,7 +1958,7 @@ The province
 The serial
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-streetAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L139">property <b>streetAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L139">property <b>streetAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>streetAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1950,7 +1966,7 @@ The serial
 The street address
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L143">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L143">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1958,7 +1974,7 @@ The street address
 Time to live
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-uriSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L147">property <b>uriSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L147">property <b>uriSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uriSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1966,7 +1982,7 @@ Time to live
 List of alternative URIs
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L28">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L28">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1975,7 +1991,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediate-useCsrValues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L151">property <b>useCsrValues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L151">property <b>useCsrValues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>useCsrValues: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1983,14 +1999,14 @@ deployments.
 Preserve CSR values
 
 <h3 class="pdoc-module-header" id="SecretBackendSign" data-link-title="SecretBackendSign">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L7">
         Resource <strong>SecretBackendSign</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>SecretBackendSign</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="SecretBackendSign-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L106"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L106"> <b>constructor</b></a>
 </h4>
 
 
@@ -2004,7 +2020,7 @@ Create a SecretBackendSign resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretBackendSign-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -2015,14 +2031,14 @@ Get an existing SecretBackendSign resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretBackendSign-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretBackendSign-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2033,7 +2049,7 @@ Returns true if the given object is an instance of SecretBackendSign.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretBackendSign-altNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L38">property <b>altNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L38">property <b>altNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>altNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2041,7 +2057,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 List of alternative names
 
 <h4 class="pdoc-member-header" id="SecretBackendSign-autoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L42">property <b>autoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L42">property <b>autoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoRenew: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2049,7 +2065,7 @@ List of alternative names
 If set to `true`, certs will be renewed if the expiration is within `minSecondsRemaining`. Default `false`
 
 <h4 class="pdoc-member-header" id="SecretBackendSign-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L46">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L46">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2057,7 +2073,7 @@ If set to `true`, certs will be renewed if the expiration is within `minSecondsR
 The PKI secret backend the resource belongs to.
 
 <h4 class="pdoc-member-header" id="SecretBackendSign-caChains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L50">property <b>caChains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L50">property <b>caChains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>caChains: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -2065,7 +2081,7 @@ The PKI secret backend the resource belongs to.
 The CA chain
 
 <h4 class="pdoc-member-header" id="SecretBackendSign-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L54">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L54">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2073,7 +2089,7 @@ The CA chain
 The certificate
 
 <h4 class="pdoc-member-header" id="SecretBackendSign-commonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L58">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L58">property <b>commonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>commonName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2081,7 +2097,7 @@ The certificate
 CN of certificate to create
 
 <h4 class="pdoc-member-header" id="SecretBackendSign-csr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L62">property <b>csr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L62">property <b>csr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>csr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2089,7 +2105,7 @@ CN of certificate to create
 The CSR
 
 <h4 class="pdoc-member-header" id="SecretBackendSign-excludeCnFromSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L66">property <b>excludeCnFromSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L66">property <b>excludeCnFromSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>excludeCnFromSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2097,7 +2113,7 @@ The CSR
 Flag to exclude CN from SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendSign-expiration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L70">property <b>expiration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L70">property <b>expiration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expiration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2105,7 +2121,7 @@ Flag to exclude CN from SANs
 The expiration date of the certificate in unix epoch format
 
 <h4 class="pdoc-member-header" id="SecretBackendSign-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L74">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L74">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2113,7 +2129,7 @@ The expiration date of the certificate in unix epoch format
 The format of data
 
 <h4 class="pdoc-member-header" id="SecretBackendSign-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2122,7 +2138,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretBackendSign-ipSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L78">property <b>ipSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L78">property <b>ipSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2130,7 +2146,7 @@ deployments and may be missing (undefined) during planning phases.
 List of alternative IPs
 
 <h4 class="pdoc-member-header" id="SecretBackendSign-issuingCa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L82">property <b>issuingCa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L82">property <b>issuingCa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>issuingCa: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2138,7 +2154,7 @@ List of alternative IPs
 The issuing CA
 
 <h4 class="pdoc-member-header" id="SecretBackendSign-minSecondsRemaining">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L86">property <b>minSecondsRemaining</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L86">property <b>minSecondsRemaining</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minSecondsRemaining: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2146,7 +2162,7 @@ The issuing CA
 Generate a new certificate when the expiration is within this number of seconds, default is 604800 (7 days)
 
 <h4 class="pdoc-member-header" id="SecretBackendSign-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L90">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L90">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2154,7 +2170,7 @@ Generate a new certificate when the expiration is within this number of seconds,
 Name of the role to create the certificate against
 
 <h4 class="pdoc-member-header" id="SecretBackendSign-otherSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L94">property <b>otherSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L94">property <b>otherSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>otherSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2162,7 +2178,7 @@ Name of the role to create the certificate against
 List of other SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendSign-serial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L98">property <b>serial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L98">property <b>serial</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serial: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2170,7 +2186,7 @@ List of other SANs
 The serial
 
 <h4 class="pdoc-member-header" id="SecretBackendSign-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L102">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L102">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2178,7 +2194,7 @@ The serial
 Time to live
 
 <h4 class="pdoc-member-header" id="SecretBackendSign-uriSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L106">property <b>uriSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L106">property <b>uriSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uriSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2186,7 +2202,7 @@ Time to live
 List of alterative URIs
 
 <h4 class="pdoc-member-header" id="SecretBackendSign-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2198,7 +2214,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="SecretBackendArgs" data-link-title="SecretBackendArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackend.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackend.ts#L139">
         interface <strong>SecretBackendArgs</strong>
     </a>
 </h3>
@@ -2208,7 +2224,7 @@ deployments.
 The set of arguments for constructing a SecretBackend resource.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-defaultLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackend.ts#L135">property <b>defaultLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackend.ts#L143">property <b>defaultLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultLeaseTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2216,7 +2232,7 @@ The set of arguments for constructing a SecretBackend resource.
 The default TTL for credentials issued by this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackend.ts#L139">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackend.ts#L147">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2224,7 +2240,7 @@ The default TTL for credentials issued by this backend.
 A human-friendly description for this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-maxLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackend.ts#L143">property <b>maxLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackend.ts#L151">property <b>maxLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLeaseTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2232,7 +2248,7 @@ A human-friendly description for this backend.
 The maximum TTL that can be requested for credentials issued by this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackend.ts#L147">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackend.ts#L155">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2240,7 +2256,7 @@ The maximum TTL that can be requested for credentials issued by this backend.
 The unique path this backend should be mounted at. Must not begin or end with a `/`.
 
 <h3 class="pdoc-module-header" id="SecretBackendCertArgs" data-link-title="SecretBackendCertArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L277">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L277">
         interface <strong>SecretBackendCertArgs</strong>
     </a>
 </h3>
@@ -2250,7 +2266,7 @@ The unique path this backend should be mounted at. Must not begin or end with a 
 The set of arguments for constructing a SecretBackendCert resource.
 
 <h4 class="pdoc-member-header" id="SecretBackendCertArgs-altNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L281">property <b>altNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L281">property <b>altNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>altNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2258,7 +2274,7 @@ The set of arguments for constructing a SecretBackendCert resource.
 List of alternative names
 
 <h4 class="pdoc-member-header" id="SecretBackendCertArgs-autoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L285">property <b>autoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L285">property <b>autoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoRenew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2266,7 +2282,7 @@ List of alternative names
 If set to `true`, certs will be renewed if the expiration is within `minSecondsRemaining`. Default `false`
 
 <h4 class="pdoc-member-header" id="SecretBackendCertArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L289">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L289">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2274,7 +2290,7 @@ If set to `true`, certs will be renewed if the expiration is within `minSecondsR
 The PKI secret backend the resource belongs to.
 
 <h4 class="pdoc-member-header" id="SecretBackendCertArgs-commonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L293">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L293">property <b>commonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commonName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2282,7 +2298,7 @@ The PKI secret backend the resource belongs to.
 CN of certificate to create
 
 <h4 class="pdoc-member-header" id="SecretBackendCertArgs-excludeCnFromSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L297">property <b>excludeCnFromSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L297">property <b>excludeCnFromSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludeCnFromSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2290,7 +2306,7 @@ CN of certificate to create
 Flag to exclude CN from SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendCertArgs-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L301">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L301">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2298,7 +2314,7 @@ Flag to exclude CN from SANs
 The format of data
 
 <h4 class="pdoc-member-header" id="SecretBackendCertArgs-ipSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L305">property <b>ipSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L305">property <b>ipSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2306,7 +2322,7 @@ The format of data
 List of alternative IPs
 
 <h4 class="pdoc-member-header" id="SecretBackendCertArgs-minSecondsRemaining">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L309">property <b>minSecondsRemaining</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L309">property <b>minSecondsRemaining</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minSecondsRemaining?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2314,7 +2330,7 @@ List of alternative IPs
 Generate a new certificate when the expiration is within this number of seconds, default is 604800 (7 days)
 
 <h4 class="pdoc-member-header" id="SecretBackendCertArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L313">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L313">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2322,7 +2338,7 @@ Generate a new certificate when the expiration is within this number of seconds,
 Name of the role to create the certificate against
 
 <h4 class="pdoc-member-header" id="SecretBackendCertArgs-otherSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L317">property <b>otherSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L317">property <b>otherSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>otherSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2330,7 +2346,7 @@ Name of the role to create the certificate against
 List of other SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendCertArgs-privateKeyFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L321">property <b>privateKeyFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L321">property <b>privateKeyFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKeyFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2338,7 +2354,7 @@ List of other SANs
 The private key format
 
 <h4 class="pdoc-member-header" id="SecretBackendCertArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L325">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L325">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2346,7 +2362,7 @@ The private key format
 Time to live
 
 <h4 class="pdoc-member-header" id="SecretBackendCertArgs-uriSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L329">property <b>uriSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L329">property <b>uriSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uriSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2354,7 +2370,7 @@ Time to live
 List of alternative URIs
 
 <h3 class="pdoc-module-header" id="SecretBackendCertState" data-link-title="SecretBackendCertState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L191">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L191">
         interface <strong>SecretBackendCertState</strong>
     </a>
 </h3>
@@ -2364,7 +2380,7 @@ List of alternative URIs
 Input properties used for looking up and filtering SecretBackendCert resources.
 
 <h4 class="pdoc-member-header" id="SecretBackendCertState-altNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L195">property <b>altNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L195">property <b>altNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>altNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2372,7 +2388,7 @@ Input properties used for looking up and filtering SecretBackendCert resources.
 List of alternative names
 
 <h4 class="pdoc-member-header" id="SecretBackendCertState-autoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L199">property <b>autoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L199">property <b>autoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoRenew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2380,7 +2396,7 @@ List of alternative names
 If set to `true`, certs will be renewed if the expiration is within `minSecondsRemaining`. Default `false`
 
 <h4 class="pdoc-member-header" id="SecretBackendCertState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L203">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L203">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2388,7 +2404,7 @@ If set to `true`, certs will be renewed if the expiration is within `minSecondsR
 The PKI secret backend the resource belongs to.
 
 <h4 class="pdoc-member-header" id="SecretBackendCertState-caChain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L207">property <b>caChain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L207">property <b>caChain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>caChain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2396,7 +2412,7 @@ The PKI secret backend the resource belongs to.
 The CA chain
 
 <h4 class="pdoc-member-header" id="SecretBackendCertState-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L211">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L211">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2404,7 +2420,7 @@ The CA chain
 The certificate
 
 <h4 class="pdoc-member-header" id="SecretBackendCertState-commonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L215">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L215">property <b>commonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commonName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2412,7 +2428,7 @@ The certificate
 CN of certificate to create
 
 <h4 class="pdoc-member-header" id="SecretBackendCertState-excludeCnFromSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L219">property <b>excludeCnFromSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L219">property <b>excludeCnFromSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludeCnFromSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2420,7 +2436,7 @@ CN of certificate to create
 Flag to exclude CN from SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendCertState-expiration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L223">property <b>expiration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L223">property <b>expiration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2428,7 +2444,7 @@ Flag to exclude CN from SANs
 The expiration date of the certificate in unix epoch format
 
 <h4 class="pdoc-member-header" id="SecretBackendCertState-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L227">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L227">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2436,7 +2452,7 @@ The expiration date of the certificate in unix epoch format
 The format of data
 
 <h4 class="pdoc-member-header" id="SecretBackendCertState-ipSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L231">property <b>ipSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L231">property <b>ipSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2444,7 +2460,7 @@ The format of data
 List of alternative IPs
 
 <h4 class="pdoc-member-header" id="SecretBackendCertState-issuingCa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L235">property <b>issuingCa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L235">property <b>issuingCa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuingCa?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2452,7 +2468,7 @@ List of alternative IPs
 The issuing CA
 
 <h4 class="pdoc-member-header" id="SecretBackendCertState-minSecondsRemaining">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L239">property <b>minSecondsRemaining</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L239">property <b>minSecondsRemaining</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minSecondsRemaining?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2460,7 +2476,7 @@ The issuing CA
 Generate a new certificate when the expiration is within this number of seconds, default is 604800 (7 days)
 
 <h4 class="pdoc-member-header" id="SecretBackendCertState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L243">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L243">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2468,7 +2484,7 @@ Generate a new certificate when the expiration is within this number of seconds,
 Name of the role to create the certificate against
 
 <h4 class="pdoc-member-header" id="SecretBackendCertState-otherSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L247">property <b>otherSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L247">property <b>otherSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>otherSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2476,7 +2492,7 @@ Name of the role to create the certificate against
 List of other SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendCertState-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L251">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L251">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2484,7 +2500,7 @@ List of other SANs
 The private key
 
 <h4 class="pdoc-member-header" id="SecretBackendCertState-privateKeyFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L255">property <b>privateKeyFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L255">property <b>privateKeyFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKeyFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2492,7 +2508,7 @@ The private key
 The private key format
 
 <h4 class="pdoc-member-header" id="SecretBackendCertState-privateKeyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L259">property <b>privateKeyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L259">property <b>privateKeyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKeyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2500,7 +2516,7 @@ The private key format
 The private key type
 
 <h4 class="pdoc-member-header" id="SecretBackendCertState-serialNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L263">property <b>serialNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L263">property <b>serialNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serialNumber?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2508,7 +2524,7 @@ The private key type
 The serial number
 
 <h4 class="pdoc-member-header" id="SecretBackendCertState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L267">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L267">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2516,7 +2532,7 @@ The serial number
 Time to live
 
 <h4 class="pdoc-member-header" id="SecretBackendCertState-uriSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCert.ts#L271">property <b>uriSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCert.ts#L271">property <b>uriSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uriSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2524,7 +2540,7 @@ Time to live
 List of alternative URIs
 
 <h3 class="pdoc-module-header" id="SecretBackendConfigCaArgs" data-link-title="SecretBackendConfigCaArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L97">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L97">
         interface <strong>SecretBackendConfigCaArgs</strong>
     </a>
 </h3>
@@ -2534,7 +2550,7 @@ List of alternative URIs
 The set of arguments for constructing a SecretBackendConfigCa resource.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigCaArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L101">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L101">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2542,7 +2558,7 @@ The set of arguments for constructing a SecretBackendConfigCa resource.
 The PKI secret backend the resource belongs to.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigCaArgs-pemBundle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L105">property <b>pemBundle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L105">property <b>pemBundle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pemBundle: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2550,7 +2566,7 @@ The PKI secret backend the resource belongs to.
 The key and certificate PEM bundle
 
 <h3 class="pdoc-module-header" id="SecretBackendConfigCaState" data-link-title="SecretBackendConfigCaState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L83">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L83">
         interface <strong>SecretBackendConfigCaState</strong>
     </a>
 </h3>
@@ -2560,7 +2576,7 @@ The key and certificate PEM bundle
 Input properties used for looking up and filtering SecretBackendConfigCa resources.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigCaState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L87">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L87">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2568,7 +2584,7 @@ Input properties used for looking up and filtering SecretBackendConfigCa resourc
 The PKI secret backend the resource belongs to.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigCaState-pemBundle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L91">property <b>pemBundle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigCa.ts#L91">property <b>pemBundle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pemBundle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2576,7 +2592,7 @@ The PKI secret backend the resource belongs to.
 The key and certificate PEM bundle
 
 <h3 class="pdoc-module-header" id="SecretBackendConfigUrlsArgs" data-link-title="SecretBackendConfigUrlsArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L134">
         interface <strong>SecretBackendConfigUrlsArgs</strong>
     </a>
 </h3>
@@ -2586,7 +2602,7 @@ The key and certificate PEM bundle
 The set of arguments for constructing a SecretBackendConfigUrls resource.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigUrlsArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L138">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L138">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2594,7 +2610,7 @@ The set of arguments for constructing a SecretBackendConfigUrls resource.
 The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigUrlsArgs-crlDistributionPoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L142">property <b>crlDistributionPoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L142">property <b>crlDistributionPoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>crlDistributionPoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2602,7 +2618,7 @@ The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 Specifies the URL values for the CRL Distribution Points field.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigUrlsArgs-issuingCertificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L146">property <b>issuingCertificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L146">property <b>issuingCertificates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuingCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2610,7 +2626,7 @@ Specifies the URL values for the CRL Distribution Points field.
 Specifies the URL values for the Issuing Certificate field.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigUrlsArgs-ocspServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L150">property <b>ocspServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L150">property <b>ocspServers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ocspServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2618,7 +2634,7 @@ Specifies the URL values for the Issuing Certificate field.
 Specifies the URL values for the OCSP Servers field.
 
 <h3 class="pdoc-module-header" id="SecretBackendConfigUrlsState" data-link-title="SecretBackendConfigUrlsState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L112">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L112">
         interface <strong>SecretBackendConfigUrlsState</strong>
     </a>
 </h3>
@@ -2628,7 +2644,7 @@ Specifies the URL values for the OCSP Servers field.
 Input properties used for looking up and filtering SecretBackendConfigUrls resources.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigUrlsState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L116">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L116">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2636,7 +2652,7 @@ Input properties used for looking up and filtering SecretBackendConfigUrls resou
 The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigUrlsState-crlDistributionPoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L120">property <b>crlDistributionPoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L120">property <b>crlDistributionPoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>crlDistributionPoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2644,7 +2660,7 @@ The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 Specifies the URL values for the CRL Distribution Points field.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigUrlsState-issuingCertificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L124">property <b>issuingCertificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L124">property <b>issuingCertificates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuingCertificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2652,7 +2668,7 @@ Specifies the URL values for the CRL Distribution Points field.
 Specifies the URL values for the Issuing Certificate field.
 
 <h4 class="pdoc-member-header" id="SecretBackendConfigUrlsState-ocspServers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L128">property <b>ocspServers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendConfigUrls.ts#L128">property <b>ocspServers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ocspServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2660,7 +2676,7 @@ Specifies the URL values for the Issuing Certificate field.
 Specifies the URL values for the OCSP Servers field.
 
 <h3 class="pdoc-module-header" id="SecretBackendCrlConfigArgs" data-link-title="SecretBackendCrlConfigArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L126">
         interface <strong>SecretBackendCrlConfigArgs</strong>
     </a>
 </h3>
@@ -2670,7 +2686,7 @@ Specifies the URL values for the OCSP Servers field.
 The set of arguments for constructing a SecretBackendCrlConfig resource.
 
 <h4 class="pdoc-member-header" id="SecretBackendCrlConfigArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L130">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L130">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2678,7 +2694,7 @@ The set of arguments for constructing a SecretBackendCrlConfig resource.
 The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 
 <h4 class="pdoc-member-header" id="SecretBackendCrlConfigArgs-disable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L134">property <b>disable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L134">property <b>disable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2686,7 +2702,7 @@ The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 Disables or enables CRL building.
 
 <h4 class="pdoc-member-header" id="SecretBackendCrlConfigArgs-expiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L138">property <b>expiry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L138">property <b>expiry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2694,7 +2710,7 @@ Disables or enables CRL building.
 Specifies the time until expiration.
 
 <h3 class="pdoc-module-header" id="SecretBackendCrlConfigState" data-link-title="SecretBackendCrlConfigState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L108">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L108">
         interface <strong>SecretBackendCrlConfigState</strong>
     </a>
 </h3>
@@ -2704,7 +2720,7 @@ Specifies the time until expiration.
 Input properties used for looking up and filtering SecretBackendCrlConfig resources.
 
 <h4 class="pdoc-member-header" id="SecretBackendCrlConfigState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L112">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L112">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2712,7 +2728,7 @@ Input properties used for looking up and filtering SecretBackendCrlConfig resour
 The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 
 <h4 class="pdoc-member-header" id="SecretBackendCrlConfigState-disable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L116">property <b>disable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L116">property <b>disable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2720,7 +2736,7 @@ The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 Disables or enables CRL building.
 
 <h4 class="pdoc-member-header" id="SecretBackendCrlConfigState-expiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L120">property <b>expiry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendCrlConfig.ts#L120">property <b>expiry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2728,7 +2744,7 @@ Disables or enables CRL building.
 Specifies the time until expiration.
 
 <h3 class="pdoc-module-header" id="SecretBackendIntermediateCertRequestArgs" data-link-title="SecretBackendIntermediateCertRequestArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L300">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L300">
         interface <strong>SecretBackendIntermediateCertRequestArgs</strong>
     </a>
 </h3>
@@ -2738,7 +2754,7 @@ Specifies the time until expiration.
 The set of arguments for constructing a SecretBackendIntermediateCertRequest resource.
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestArgs-altNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L304">property <b>altNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L304">property <b>altNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>altNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2746,7 +2762,7 @@ The set of arguments for constructing a SecretBackendIntermediateCertRequest res
 List of alternative names
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L308">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L308">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2754,7 +2770,7 @@ List of alternative names
 The PKI secret backend the resource belongs to.
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestArgs-commonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L312">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L312">property <b>commonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commonName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2762,7 +2778,7 @@ The PKI secret backend the resource belongs to.
 CN of intermediate to create
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestArgs-country">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L316">property <b>country</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L316">property <b>country</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>country?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2770,7 +2786,7 @@ CN of intermediate to create
 The country
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestArgs-excludeCnFromSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L320">property <b>excludeCnFromSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L320">property <b>excludeCnFromSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludeCnFromSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2778,7 +2794,7 @@ The country
 Flag to exclude CN from SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestArgs-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L324">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L324">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2786,7 +2802,7 @@ Flag to exclude CN from SANs
 The format of data
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestArgs-ipSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L328">property <b>ipSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L328">property <b>ipSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2794,7 +2810,7 @@ The format of data
 List of alternative IPs
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestArgs-keyBits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L332">property <b>keyBits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L332">property <b>keyBits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyBits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2802,7 +2818,7 @@ List of alternative IPs
 The number of bits to use
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestArgs-keyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L336">property <b>keyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L336">property <b>keyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2810,7 +2826,7 @@ The number of bits to use
 The desired key type
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestArgs-locality">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L340">property <b>locality</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L340">property <b>locality</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locality?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2818,7 +2834,7 @@ The desired key type
 The locality
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestArgs-organization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L344">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L344">property <b>organization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2826,7 +2842,7 @@ The locality
 The organization
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestArgs-otherSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L348">property <b>otherSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L348">property <b>otherSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>otherSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2834,7 +2850,7 @@ The organization
 List of other SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestArgs-ou">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L352">property <b>ou</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L352">property <b>ou</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ou?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2842,7 +2858,7 @@ List of other SANs
 The organization unit
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestArgs-postalCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L356">property <b>postalCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L356">property <b>postalCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postalCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2850,7 +2866,7 @@ The organization unit
 The postal code
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestArgs-privateKeyFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L360">property <b>privateKeyFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L360">property <b>privateKeyFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKeyFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2858,7 +2874,7 @@ The postal code
 The private key format
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestArgs-province">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L364">property <b>province</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L364">property <b>province</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>province?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2866,7 +2882,7 @@ The private key format
 The province
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestArgs-streetAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L368">property <b>streetAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L368">property <b>streetAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streetAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2874,7 +2890,7 @@ The province
 The street address
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L372">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L372">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2882,7 +2898,7 @@ The street address
 Type of intermediate to create. Must be either \"exported\" or \"internal\"
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestArgs-uriSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L376">property <b>uriSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L376">property <b>uriSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uriSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2890,7 +2906,7 @@ Type of intermediate to create. Must be either \"exported\" or \"internal\"
 List of alternative URIs
 
 <h3 class="pdoc-module-header" id="SecretBackendIntermediateCertRequestState" data-link-title="SecretBackendIntermediateCertRequestState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L206">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L206">
         interface <strong>SecretBackendIntermediateCertRequestState</strong>
     </a>
 </h3>
@@ -2900,7 +2916,7 @@ List of alternative URIs
 Input properties used for looking up and filtering SecretBackendIntermediateCertRequest resources.
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestState-altNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L210">property <b>altNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L210">property <b>altNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>altNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2908,7 +2924,7 @@ Input properties used for looking up and filtering SecretBackendIntermediateCert
 List of alternative names
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L214">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L214">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2916,7 +2932,7 @@ List of alternative names
 The PKI secret backend the resource belongs to.
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestState-commonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L218">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L218">property <b>commonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commonName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2924,7 +2940,7 @@ The PKI secret backend the resource belongs to.
 CN of intermediate to create
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestState-country">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L222">property <b>country</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L222">property <b>country</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>country?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2932,7 +2948,7 @@ CN of intermediate to create
 The country
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestState-csr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L226">property <b>csr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L226">property <b>csr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>csr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2940,7 +2956,7 @@ The country
 The CSR
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestState-excludeCnFromSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L230">property <b>excludeCnFromSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L230">property <b>excludeCnFromSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludeCnFromSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2948,7 +2964,7 @@ The CSR
 Flag to exclude CN from SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestState-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L234">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L234">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2956,7 +2972,7 @@ Flag to exclude CN from SANs
 The format of data
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestState-ipSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L238">property <b>ipSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L238">property <b>ipSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2964,7 +2980,7 @@ The format of data
 List of alternative IPs
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestState-keyBits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L242">property <b>keyBits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L242">property <b>keyBits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyBits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2972,7 +2988,7 @@ List of alternative IPs
 The number of bits to use
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestState-keyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L246">property <b>keyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L246">property <b>keyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2980,7 +2996,7 @@ The number of bits to use
 The desired key type
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestState-locality">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L250">property <b>locality</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L250">property <b>locality</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locality?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2988,7 +3004,7 @@ The desired key type
 The locality
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestState-organization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L254">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L254">property <b>organization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2996,7 +3012,7 @@ The locality
 The organization
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestState-otherSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L258">property <b>otherSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L258">property <b>otherSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>otherSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3004,7 +3020,7 @@ The organization
 List of other SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestState-ou">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L262">property <b>ou</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L262">property <b>ou</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ou?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3012,7 +3028,7 @@ List of other SANs
 The organization unit
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestState-postalCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L266">property <b>postalCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L266">property <b>postalCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postalCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3020,7 +3036,7 @@ The organization unit
 The postal code
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestState-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L270">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L270">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3028,7 +3044,7 @@ The postal code
 The private key
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestState-privateKeyFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L274">property <b>privateKeyFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L274">property <b>privateKeyFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKeyFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3036,7 +3052,7 @@ The private key
 The private key format
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestState-privateKeyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L278">property <b>privateKeyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L278">property <b>privateKeyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKeyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3044,7 +3060,7 @@ The private key format
 The private key type
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestState-province">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L282">property <b>province</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L282">property <b>province</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>province?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3052,7 +3068,7 @@ The private key type
 The province
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestState-streetAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L286">property <b>streetAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L286">property <b>streetAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streetAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3060,7 +3076,7 @@ The province
 The street address
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L290">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L290">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3068,7 +3084,7 @@ The street address
 Type of intermediate to create. Must be either \"exported\" or \"internal\"
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateCertRequestState-uriSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L294">property <b>uriSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateCertRequest.ts#L294">property <b>uriSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uriSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3076,7 +3092,7 @@ Type of intermediate to create. Must be either \"exported\" or \"internal\"
 List of alternative URIs
 
 <h3 class="pdoc-module-header" id="SecretBackendIntermediateSetSignedArgs" data-link-title="SecretBackendIntermediateSetSignedArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L97">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L97">
         interface <strong>SecretBackendIntermediateSetSignedArgs</strong>
     </a>
 </h3>
@@ -3086,7 +3102,7 @@ List of alternative URIs
 The set of arguments for constructing a SecretBackendIntermediateSetSigned resource.
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateSetSignedArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L101">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L101">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3094,7 +3110,7 @@ The set of arguments for constructing a SecretBackendIntermediateSetSigned resou
 The PKI secret backend the resource belongs to.
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateSetSignedArgs-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L105">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L105">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3102,7 +3118,7 @@ The PKI secret backend the resource belongs to.
 The certificate
 
 <h3 class="pdoc-module-header" id="SecretBackendIntermediateSetSignedState" data-link-title="SecretBackendIntermediateSetSignedState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L83">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L83">
         interface <strong>SecretBackendIntermediateSetSignedState</strong>
     </a>
 </h3>
@@ -3112,7 +3128,7 @@ The certificate
 Input properties used for looking up and filtering SecretBackendIntermediateSetSigned resources.
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateSetSignedState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L87">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L87">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3120,7 +3136,7 @@ Input properties used for looking up and filtering SecretBackendIntermediateSetS
 The PKI secret backend the resource belongs to.
 
 <h4 class="pdoc-member-header" id="SecretBackendIntermediateSetSignedState-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L91">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendIntermediateSetSigned.ts#L91">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3128,7 +3144,7 @@ The PKI secret backend the resource belongs to.
 The certificate
 
 <h3 class="pdoc-module-header" id="SecretBackendRoleArgs" data-link-title="SecretBackendRoleArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L463">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L471">
         interface <strong>SecretBackendRoleArgs</strong>
     </a>
 </h3>
@@ -3138,7 +3154,7 @@ The certificate
 The set of arguments for constructing a SecretBackendRole resource.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-allowAnyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L467">property <b>allowAnyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L475">property <b>allowAnyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowAnyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3146,7 +3162,7 @@ The set of arguments for constructing a SecretBackendRole resource.
 Flag to allow any name
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-allowBareDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L471">property <b>allowBareDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L479">property <b>allowBareDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowBareDomains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3154,7 +3170,7 @@ Flag to allow any name
 Flag to allow certificates matching the actual domain
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-allowGlobDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L475">property <b>allowGlobDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L483">property <b>allowGlobDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowGlobDomains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3162,7 +3178,7 @@ Flag to allow certificates matching the actual domain
 Flag to allow names containing glob patterns.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-allowIpSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L479">property <b>allowIpSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L487">property <b>allowIpSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowIpSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3170,7 +3186,7 @@ Flag to allow names containing glob patterns.
 Flag to allow IP SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-allowLocalhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L483">property <b>allowLocalhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L491">property <b>allowLocalhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowLocalhost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3178,7 +3194,7 @@ Flag to allow IP SANs
 Flag to allow certificates for localhost
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-allowSubdomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L487">property <b>allowSubdomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L495">property <b>allowSubdomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowSubdomains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3186,7 +3202,7 @@ Flag to allow certificates for localhost
 Flag to allow certificates matching subdomains
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-allowedDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L491">property <b>allowedDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L499">property <b>allowedDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedDomains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3194,7 +3210,7 @@ Flag to allow certificates matching subdomains
 List of allowed domains for certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-allowedOtherSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L495">property <b>allowedOtherSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L503">property <b>allowedOtherSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedOtherSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3202,7 +3218,7 @@ List of allowed domains for certificates
 Defines allowed custom SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-allowedUriSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L499">property <b>allowedUriSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L507">property <b>allowedUriSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedUriSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3210,7 +3226,7 @@ Defines allowed custom SANs
 Defines allowed URI SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L503">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L511">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3218,7 +3234,7 @@ Defines allowed URI SANs
 The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-basicConstraintsValidForNonCa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L507">property <b>basicConstraintsValidForNonCa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L515">property <b>basicConstraintsValidForNonCa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>basicConstraintsValidForNonCa?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3226,7 +3242,7 @@ The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 Flag to mark basic constraints valid when issuing non-CA certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-clientFlag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L511">property <b>clientFlag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L519">property <b>clientFlag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientFlag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3234,7 +3250,7 @@ Flag to mark basic constraints valid when issuing non-CA certificates
 Flag to specify certificates for client use
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-codeSigningFlag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L515">property <b>codeSigningFlag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L523">property <b>codeSigningFlag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>codeSigningFlag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3242,7 +3258,7 @@ Flag to specify certificates for client use
 Flag to specify certificates for code signing use
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-countries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L519">property <b>countries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L527">property <b>countries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>countries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3250,7 +3266,7 @@ Flag to specify certificates for code signing use
 The country of generated certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-emailProtectionFlag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L523">property <b>emailProtectionFlag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L531">property <b>emailProtectionFlag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailProtectionFlag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3258,7 +3274,7 @@ The country of generated certificates
 Flag to specify certificates for email protection use
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-enforceHostnames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L527">property <b>enforceHostnames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L535">property <b>enforceHostnames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enforceHostnames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3266,7 +3282,7 @@ Flag to specify certificates for email protection use
 Flag to allow only valid host names
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-extKeyUsages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L531">property <b>extKeyUsages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L539">property <b>extKeyUsages</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extKeyUsages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3274,7 +3290,7 @@ Flag to allow only valid host names
 Specify the allowed extended key usage constraint on issued certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-generateLease">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L535">property <b>generateLease</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L543">property <b>generateLease</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>generateLease?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3282,7 +3298,7 @@ Specify the allowed extended key usage constraint on issued certificates
 Flag to generate leases with certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-keyBits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L539">property <b>keyBits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L547">property <b>keyBits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyBits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3290,7 +3306,7 @@ Flag to generate leases with certificates
 The number of bits of generated keys
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-keyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L543">property <b>keyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L551">property <b>keyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3298,7 +3314,7 @@ The number of bits of generated keys
 The type of generated keys
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-keyUsages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L547">property <b>keyUsages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L555">property <b>keyUsages</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyUsages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3306,7 +3322,7 @@ The type of generated keys
 Specify the allowed key usage constraint on issued certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-localities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L551">property <b>localities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L559">property <b>localities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>localities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3314,7 +3330,7 @@ Specify the allowed key usage constraint on issued certificates
 The locality of generated certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L555">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L563">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3322,7 +3338,7 @@ The locality of generated certificates
 The maximum TTL
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L559">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L567">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3330,7 +3346,7 @@ The maximum TTL
 The name to identify this role within the backend. Must be unique within the backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-noStore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L563">property <b>noStore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L571">property <b>noStore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noStore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3338,7 +3354,7 @@ The name to identify this role within the backend. Must be unique within the bac
 Flag to not store certificates in the storage backend
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-notBeforeDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L567">property <b>notBeforeDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L575">property <b>notBeforeDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notBeforeDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3346,7 +3362,7 @@ Flag to not store certificates in the storage backend
 Specifies the duration by which to backdate the NotBefore property.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-organizationUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L571">property <b>organizationUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L579">property <b>organizationUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organizationUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3354,7 +3370,7 @@ Specifies the duration by which to backdate the NotBefore property.
 The organization unit of generated certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-organizations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L575">property <b>organizations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L583">property <b>organizations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organizations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3362,7 +3378,7 @@ The organization unit of generated certificates
 The organization of generated certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-policyIdentifiers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L579">property <b>policyIdentifiers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L587">property <b>policyIdentifiers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyIdentifiers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3370,7 +3386,7 @@ The organization of generated certificates
 Specify the list of allowed policies IODs
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-postalCodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L583">property <b>postalCodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L591">property <b>postalCodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postalCodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3378,7 +3394,7 @@ Specify the list of allowed policies IODs
 The postal code of generated certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-provinces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L587">property <b>provinces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L595">property <b>provinces</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>provinces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3386,7 +3402,7 @@ The postal code of generated certificates
 The province of generated certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-requireCn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L591">property <b>requireCn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L599">property <b>requireCn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireCn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3394,7 +3410,7 @@ The province of generated certificates
 Flag to force CN usage
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-serverFlag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L595">property <b>serverFlag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L603">property <b>serverFlag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverFlag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3402,7 +3418,7 @@ Flag to force CN usage
 Flag to specify certificates for server use
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-streetAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L599">property <b>streetAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L607">property <b>streetAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streetAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3410,7 +3426,7 @@ Flag to specify certificates for server use
 The street address of generated certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L603">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L611">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3418,7 +3434,7 @@ The street address of generated certificates
 The TTL
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-useCsrCommonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L607">property <b>useCsrCommonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L615">property <b>useCsrCommonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useCsrCommonName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3426,7 +3442,7 @@ The TTL
 Flag to use the CN in the CSR
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-useCsrSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L611">property <b>useCsrSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L619">property <b>useCsrSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useCsrSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3434,7 +3450,7 @@ Flag to use the CN in the CSR
 Flag to use the SANs in the CSR
 
 <h3 class="pdoc-module-header" id="SecretBackendRoleState" data-link-title="SecretBackendRoleState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L309">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L317">
         interface <strong>SecretBackendRoleState</strong>
     </a>
 </h3>
@@ -3444,7 +3460,7 @@ Flag to use the SANs in the CSR
 Input properties used for looking up and filtering SecretBackendRole resources.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-allowAnyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L313">property <b>allowAnyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L321">property <b>allowAnyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowAnyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3452,7 +3468,7 @@ Input properties used for looking up and filtering SecretBackendRole resources.
 Flag to allow any name
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-allowBareDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L317">property <b>allowBareDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L325">property <b>allowBareDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowBareDomains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3460,7 +3476,7 @@ Flag to allow any name
 Flag to allow certificates matching the actual domain
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-allowGlobDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L321">property <b>allowGlobDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L329">property <b>allowGlobDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowGlobDomains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3468,7 +3484,7 @@ Flag to allow certificates matching the actual domain
 Flag to allow names containing glob patterns.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-allowIpSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L325">property <b>allowIpSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L333">property <b>allowIpSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowIpSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3476,7 +3492,7 @@ Flag to allow names containing glob patterns.
 Flag to allow IP SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-allowLocalhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L329">property <b>allowLocalhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L337">property <b>allowLocalhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowLocalhost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3484,7 +3500,7 @@ Flag to allow IP SANs
 Flag to allow certificates for localhost
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-allowSubdomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L333">property <b>allowSubdomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L341">property <b>allowSubdomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowSubdomains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3492,7 +3508,7 @@ Flag to allow certificates for localhost
 Flag to allow certificates matching subdomains
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-allowedDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L337">property <b>allowedDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L345">property <b>allowedDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedDomains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3500,7 +3516,7 @@ Flag to allow certificates matching subdomains
 List of allowed domains for certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-allowedOtherSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L341">property <b>allowedOtherSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L349">property <b>allowedOtherSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedOtherSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3508,7 +3524,7 @@ List of allowed domains for certificates
 Defines allowed custom SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-allowedUriSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L345">property <b>allowedUriSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L353">property <b>allowedUriSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedUriSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3516,7 +3532,7 @@ Defines allowed custom SANs
 Defines allowed URI SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L349">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L357">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3524,7 +3540,7 @@ Defines allowed URI SANs
 The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-basicConstraintsValidForNonCa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L353">property <b>basicConstraintsValidForNonCa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L361">property <b>basicConstraintsValidForNonCa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>basicConstraintsValidForNonCa?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3532,7 +3548,7 @@ The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 Flag to mark basic constraints valid when issuing non-CA certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-clientFlag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L357">property <b>clientFlag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L365">property <b>clientFlag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientFlag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3540,7 +3556,7 @@ Flag to mark basic constraints valid when issuing non-CA certificates
 Flag to specify certificates for client use
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-codeSigningFlag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L361">property <b>codeSigningFlag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L369">property <b>codeSigningFlag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>codeSigningFlag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3548,7 +3564,7 @@ Flag to specify certificates for client use
 Flag to specify certificates for code signing use
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-countries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L365">property <b>countries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L373">property <b>countries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>countries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3556,7 +3572,7 @@ Flag to specify certificates for code signing use
 The country of generated certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-emailProtectionFlag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L369">property <b>emailProtectionFlag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L377">property <b>emailProtectionFlag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailProtectionFlag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3564,7 +3580,7 @@ The country of generated certificates
 Flag to specify certificates for email protection use
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-enforceHostnames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L373">property <b>enforceHostnames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L381">property <b>enforceHostnames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enforceHostnames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3572,7 +3588,7 @@ Flag to specify certificates for email protection use
 Flag to allow only valid host names
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-extKeyUsages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L377">property <b>extKeyUsages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L385">property <b>extKeyUsages</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extKeyUsages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3580,7 +3596,7 @@ Flag to allow only valid host names
 Specify the allowed extended key usage constraint on issued certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-generateLease">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L381">property <b>generateLease</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L389">property <b>generateLease</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>generateLease?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3588,7 +3604,7 @@ Specify the allowed extended key usage constraint on issued certificates
 Flag to generate leases with certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-keyBits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L385">property <b>keyBits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L393">property <b>keyBits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyBits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3596,7 +3612,7 @@ Flag to generate leases with certificates
 The number of bits of generated keys
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-keyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L389">property <b>keyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L397">property <b>keyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3604,7 +3620,7 @@ The number of bits of generated keys
 The type of generated keys
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-keyUsages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L393">property <b>keyUsages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L401">property <b>keyUsages</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyUsages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3612,7 +3628,7 @@ The type of generated keys
 Specify the allowed key usage constraint on issued certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-localities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L397">property <b>localities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L405">property <b>localities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>localities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3620,7 +3636,7 @@ Specify the allowed key usage constraint on issued certificates
 The locality of generated certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L401">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L409">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3628,7 +3644,7 @@ The locality of generated certificates
 The maximum TTL
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L405">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L413">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3636,7 +3652,7 @@ The maximum TTL
 The name to identify this role within the backend. Must be unique within the backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-noStore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L409">property <b>noStore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L417">property <b>noStore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noStore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3644,7 +3660,7 @@ The name to identify this role within the backend. Must be unique within the bac
 Flag to not store certificates in the storage backend
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-notBeforeDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L413">property <b>notBeforeDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L421">property <b>notBeforeDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notBeforeDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3652,7 +3668,7 @@ Flag to not store certificates in the storage backend
 Specifies the duration by which to backdate the NotBefore property.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-organizationUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L417">property <b>organizationUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L425">property <b>organizationUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organizationUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3660,7 +3676,7 @@ Specifies the duration by which to backdate the NotBefore property.
 The organization unit of generated certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-organizations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L421">property <b>organizations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L429">property <b>organizations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organizations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3668,7 +3684,7 @@ The organization unit of generated certificates
 The organization of generated certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-policyIdentifiers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L425">property <b>policyIdentifiers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L433">property <b>policyIdentifiers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyIdentifiers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3676,7 +3692,7 @@ The organization of generated certificates
 Specify the list of allowed policies IODs
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-postalCodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L429">property <b>postalCodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L437">property <b>postalCodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postalCodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3684,7 +3700,7 @@ Specify the list of allowed policies IODs
 The postal code of generated certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-provinces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L433">property <b>provinces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L441">property <b>provinces</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>provinces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3692,7 +3708,7 @@ The postal code of generated certificates
 The province of generated certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-requireCn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L437">property <b>requireCn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L445">property <b>requireCn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requireCn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3700,7 +3716,7 @@ The province of generated certificates
 Flag to force CN usage
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-serverFlag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L441">property <b>serverFlag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L449">property <b>serverFlag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverFlag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3708,7 +3724,7 @@ Flag to force CN usage
 Flag to specify certificates for server use
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-streetAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L445">property <b>streetAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L453">property <b>streetAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streetAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3716,7 +3732,7 @@ Flag to specify certificates for server use
 The street address of generated certificates
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L449">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L457">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3724,7 +3740,7 @@ The street address of generated certificates
 The TTL
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-useCsrCommonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L453">property <b>useCsrCommonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L461">property <b>useCsrCommonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useCsrCommonName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3732,7 +3748,7 @@ The TTL
 Flag to use the CN in the CSR
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-useCsrSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRole.ts#L457">property <b>useCsrSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRole.ts#L465">property <b>useCsrSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useCsrSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3740,7 +3756,7 @@ Flag to use the CN in the CSR
 Flag to use the SANs in the CSR
 
 <h3 class="pdoc-module-header" id="SecretBackendRootCertArgs" data-link-title="SecretBackendRootCertArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L330">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L330">
         interface <strong>SecretBackendRootCertArgs</strong>
     </a>
 </h3>
@@ -3750,7 +3766,7 @@ Flag to use the SANs in the CSR
 The set of arguments for constructing a SecretBackendRootCert resource.
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertArgs-altNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L334">property <b>altNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L334">property <b>altNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>altNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3758,7 +3774,7 @@ The set of arguments for constructing a SecretBackendRootCert resource.
 List of alternative names
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L338">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L338">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3766,7 +3782,7 @@ List of alternative names
 The PKI secret backend the resource belongs to.
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertArgs-commonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L342">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L342">property <b>commonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commonName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3774,7 +3790,7 @@ The PKI secret backend the resource belongs to.
 CN of intermediate to create
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertArgs-country">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L346">property <b>country</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L346">property <b>country</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>country?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3782,7 +3798,7 @@ CN of intermediate to create
 The country
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertArgs-excludeCnFromSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L350">property <b>excludeCnFromSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L350">property <b>excludeCnFromSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludeCnFromSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3790,7 +3806,7 @@ The country
 Flag to exclude CN from SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertArgs-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L354">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L354">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3798,7 +3814,7 @@ Flag to exclude CN from SANs
 The format of data
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertArgs-ipSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L358">property <b>ipSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L358">property <b>ipSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3806,7 +3822,7 @@ The format of data
 List of alternative IPs
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertArgs-keyBits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L362">property <b>keyBits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L362">property <b>keyBits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyBits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3814,7 +3830,7 @@ List of alternative IPs
 The number of bits to use
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertArgs-keyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L366">property <b>keyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L366">property <b>keyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3822,7 +3838,7 @@ The number of bits to use
 The desired key type
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertArgs-locality">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L370">property <b>locality</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L370">property <b>locality</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locality?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3830,7 +3846,7 @@ The desired key type
 The locality
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertArgs-maxPathLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L374">property <b>maxPathLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L374">property <b>maxPathLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxPathLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3838,7 +3854,7 @@ The locality
 The maximum path length to encode in the generated certificate
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertArgs-organization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L378">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L378">property <b>organization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3846,7 +3862,7 @@ The maximum path length to encode in the generated certificate
 The organization
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertArgs-otherSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L382">property <b>otherSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L382">property <b>otherSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>otherSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3854,7 +3870,7 @@ The organization
 List of other SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertArgs-ou">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L386">property <b>ou</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L386">property <b>ou</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ou?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3862,7 +3878,7 @@ List of other SANs
 The organization unit
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertArgs-permittedDnsDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L390">property <b>permittedDnsDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L390">property <b>permittedDnsDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permittedDnsDomains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3870,7 +3886,7 @@ The organization unit
 List of domains for which certificates are allowed to be issued
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertArgs-postalCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L394">property <b>postalCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L394">property <b>postalCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postalCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3878,7 +3894,7 @@ List of domains for which certificates are allowed to be issued
 The postal code
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertArgs-privateKeyFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L398">property <b>privateKeyFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L398">property <b>privateKeyFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKeyFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3886,7 +3902,7 @@ The postal code
 The private key format
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertArgs-province">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L402">property <b>province</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L402">property <b>province</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>province?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3894,7 +3910,7 @@ The private key format
 The province
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertArgs-streetAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L406">property <b>streetAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L406">property <b>streetAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streetAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3902,7 +3918,7 @@ The province
 The street address
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L410">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L410">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3910,7 +3926,7 @@ The street address
 Time to live
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L414">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L414">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3918,7 +3934,7 @@ Time to live
 Type of intermediate to create. Must be either \"exported\" or \"internal\"
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertArgs-uriSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L418">property <b>uriSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L418">property <b>uriSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uriSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3926,7 +3942,7 @@ Type of intermediate to create. Must be either \"exported\" or \"internal\"
 List of alternative URIs
 
 <h3 class="pdoc-module-header" id="SecretBackendRootCertState" data-link-title="SecretBackendRootCertState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L224">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L224">
         interface <strong>SecretBackendRootCertState</strong>
     </a>
 </h3>
@@ -3936,7 +3952,7 @@ List of alternative URIs
 Input properties used for looking up and filtering SecretBackendRootCert resources.
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-altNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L228">property <b>altNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L228">property <b>altNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>altNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3944,7 +3960,7 @@ Input properties used for looking up and filtering SecretBackendRootCert resourc
 List of alternative names
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L232">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L232">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3952,7 +3968,7 @@ List of alternative names
 The PKI secret backend the resource belongs to.
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L236">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L236">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3960,7 +3976,7 @@ The PKI secret backend the resource belongs to.
 The certificate
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-commonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L240">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L240">property <b>commonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commonName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3968,7 +3984,7 @@ The certificate
 CN of intermediate to create
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-country">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L244">property <b>country</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L244">property <b>country</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>country?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3976,7 +3992,7 @@ CN of intermediate to create
 The country
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-excludeCnFromSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L248">property <b>excludeCnFromSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L248">property <b>excludeCnFromSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludeCnFromSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3984,7 +4000,7 @@ The country
 Flag to exclude CN from SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L252">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L252">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3992,7 +4008,7 @@ Flag to exclude CN from SANs
 The format of data
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-ipSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L256">property <b>ipSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L256">property <b>ipSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4000,7 +4016,7 @@ The format of data
 List of alternative IPs
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-issuingCa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L260">property <b>issuingCa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L260">property <b>issuingCa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuingCa?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4008,7 +4024,7 @@ List of alternative IPs
 The issuing CA
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-keyBits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L264">property <b>keyBits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L264">property <b>keyBits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyBits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4016,7 +4032,7 @@ The issuing CA
 The number of bits to use
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-keyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L268">property <b>keyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L268">property <b>keyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4024,7 +4040,7 @@ The number of bits to use
 The desired key type
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-locality">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L272">property <b>locality</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L272">property <b>locality</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locality?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4032,7 +4048,7 @@ The desired key type
 The locality
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-maxPathLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L276">property <b>maxPathLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L276">property <b>maxPathLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxPathLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4040,7 +4056,7 @@ The locality
 The maximum path length to encode in the generated certificate
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-organization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L280">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L280">property <b>organization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4048,7 +4064,7 @@ The maximum path length to encode in the generated certificate
 The organization
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-otherSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L284">property <b>otherSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L284">property <b>otherSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>otherSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4056,7 +4072,7 @@ The organization
 List of other SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-ou">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L288">property <b>ou</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L288">property <b>ou</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ou?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4064,7 +4080,7 @@ List of other SANs
 The organization unit
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-permittedDnsDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L292">property <b>permittedDnsDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L292">property <b>permittedDnsDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permittedDnsDomains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4072,7 +4088,7 @@ The organization unit
 List of domains for which certificates are allowed to be issued
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-postalCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L296">property <b>postalCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L296">property <b>postalCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postalCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4080,7 +4096,7 @@ List of domains for which certificates are allowed to be issued
 The postal code
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-privateKeyFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L300">property <b>privateKeyFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L300">property <b>privateKeyFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKeyFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4088,7 +4104,7 @@ The postal code
 The private key format
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-province">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L304">property <b>province</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L304">property <b>province</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>province?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4096,7 +4112,7 @@ The private key format
 The province
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-serial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L308">property <b>serial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L308">property <b>serial</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serial?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4104,7 +4120,7 @@ The province
 The serial
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-streetAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L312">property <b>streetAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L312">property <b>streetAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streetAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4112,7 +4128,7 @@ The serial
 The street address
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L316">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L316">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4120,7 +4136,7 @@ The street address
 Time to live
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L320">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L320">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4128,7 +4144,7 @@ Time to live
 Type of intermediate to create. Must be either \"exported\" or \"internal\"
 
 <h4 class="pdoc-member-header" id="SecretBackendRootCertState-uriSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L324">property <b>uriSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootCert.ts#L324">property <b>uriSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uriSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4136,7 +4152,7 @@ Type of intermediate to create. Must be either \"exported\" or \"internal\"
 List of alternative URIs
 
 <h3 class="pdoc-module-header" id="SecretBackendRootSignIntermediateArgs" data-link-title="SecretBackendRootSignIntermediateArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L341">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L341">
         interface <strong>SecretBackendRootSignIntermediateArgs</strong>
     </a>
 </h3>
@@ -4146,7 +4162,7 @@ List of alternative URIs
 The set of arguments for constructing a SecretBackendRootSignIntermediate resource.
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateArgs-altNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L345">property <b>altNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L345">property <b>altNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>altNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4154,7 +4170,7 @@ The set of arguments for constructing a SecretBackendRootSignIntermediate resour
 List of alternative names
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L349">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L349">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4162,7 +4178,7 @@ List of alternative names
 The PKI secret backend the resource belongs to.
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateArgs-commonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L353">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L353">property <b>commonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commonName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4170,7 +4186,7 @@ The PKI secret backend the resource belongs to.
 CN of intermediate to create
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateArgs-country">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L357">property <b>country</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L357">property <b>country</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>country?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4178,7 +4194,7 @@ CN of intermediate to create
 The country
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateArgs-csr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L361">property <b>csr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L361">property <b>csr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>csr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4186,7 +4202,7 @@ The country
 The CSR
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateArgs-excludeCnFromSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L365">property <b>excludeCnFromSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L365">property <b>excludeCnFromSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludeCnFromSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4194,7 +4210,7 @@ The CSR
 Flag to exclude CN from SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateArgs-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L369">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L369">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4202,7 +4218,7 @@ Flag to exclude CN from SANs
 The format of data
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateArgs-ipSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L373">property <b>ipSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L373">property <b>ipSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4210,7 +4226,7 @@ The format of data
 List of alternative IPs
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateArgs-locality">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L377">property <b>locality</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L377">property <b>locality</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locality?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4218,7 +4234,7 @@ List of alternative IPs
 The locality
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateArgs-maxPathLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L381">property <b>maxPathLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L381">property <b>maxPathLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxPathLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4226,7 +4242,7 @@ The locality
 The maximum path length to encode in the generated certificate
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateArgs-organization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L385">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L385">property <b>organization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4234,7 +4250,7 @@ The maximum path length to encode in the generated certificate
 The organization
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateArgs-otherSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L389">property <b>otherSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L389">property <b>otherSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>otherSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4242,7 +4258,7 @@ The organization
 List of other SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateArgs-ou">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L393">property <b>ou</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L393">property <b>ou</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ou?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4250,7 +4266,7 @@ List of other SANs
 The organization unit
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateArgs-permittedDnsDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L397">property <b>permittedDnsDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L397">property <b>permittedDnsDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permittedDnsDomains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4258,7 +4274,7 @@ The organization unit
 List of domains for which certificates are allowed to be issued
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateArgs-postalCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L401">property <b>postalCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L401">property <b>postalCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postalCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4266,7 +4282,7 @@ List of domains for which certificates are allowed to be issued
 The postal code
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateArgs-province">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L405">property <b>province</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L405">property <b>province</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>province?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4274,7 +4290,7 @@ The postal code
 The province
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateArgs-streetAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L409">property <b>streetAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L409">property <b>streetAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streetAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4282,7 +4298,7 @@ The province
 The street address
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L413">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L413">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4290,7 +4306,7 @@ The street address
 Time to live
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateArgs-uriSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L417">property <b>uriSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L417">property <b>uriSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uriSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4298,7 +4314,7 @@ Time to live
 List of alternative URIs
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateArgs-useCsrValues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L421">property <b>useCsrValues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L421">property <b>useCsrValues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useCsrValues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4306,7 +4322,7 @@ List of alternative URIs
 Preserve CSR values
 
 <h3 class="pdoc-module-header" id="SecretBackendRootSignIntermediateState" data-link-title="SecretBackendRootSignIntermediateState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L239">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L239">
         interface <strong>SecretBackendRootSignIntermediateState</strong>
     </a>
 </h3>
@@ -4316,7 +4332,7 @@ Preserve CSR values
 Input properties used for looking up and filtering SecretBackendRootSignIntermediate resources.
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-altNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L243">property <b>altNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L243">property <b>altNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>altNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4324,7 +4340,7 @@ Input properties used for looking up and filtering SecretBackendRootSignIntermed
 List of alternative names
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L247">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L247">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4332,7 +4348,7 @@ List of alternative names
 The PKI secret backend the resource belongs to.
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-caChain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L251">property <b>caChain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L251">property <b>caChain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>caChain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4340,7 +4356,7 @@ The PKI secret backend the resource belongs to.
 The CA chain
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L255">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L255">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4348,7 +4364,7 @@ The CA chain
 The certificate
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-commonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L259">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L259">property <b>commonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commonName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4356,7 +4372,7 @@ The certificate
 CN of intermediate to create
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-country">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L263">property <b>country</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L263">property <b>country</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>country?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4364,7 +4380,7 @@ CN of intermediate to create
 The country
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-csr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L267">property <b>csr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L267">property <b>csr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>csr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4372,7 +4388,7 @@ The country
 The CSR
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-excludeCnFromSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L271">property <b>excludeCnFromSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L271">property <b>excludeCnFromSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludeCnFromSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4380,7 +4396,7 @@ The CSR
 Flag to exclude CN from SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L275">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L275">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4388,7 +4404,7 @@ Flag to exclude CN from SANs
 The format of data
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-ipSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L279">property <b>ipSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L279">property <b>ipSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4396,7 +4412,7 @@ The format of data
 List of alternative IPs
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-issuingCa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L283">property <b>issuingCa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L283">property <b>issuingCa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuingCa?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4404,7 +4420,7 @@ List of alternative IPs
 The issuing CA
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-locality">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L287">property <b>locality</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L287">property <b>locality</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locality?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4412,7 +4428,7 @@ The issuing CA
 The locality
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-maxPathLength">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L291">property <b>maxPathLength</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L291">property <b>maxPathLength</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxPathLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4420,7 +4436,7 @@ The locality
 The maximum path length to encode in the generated certificate
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-organization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L295">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L295">property <b>organization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>organization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4428,7 +4444,7 @@ The maximum path length to encode in the generated certificate
 The organization
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-otherSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L299">property <b>otherSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L299">property <b>otherSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>otherSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4436,7 +4452,7 @@ The organization
 List of other SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-ou">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L303">property <b>ou</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L303">property <b>ou</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ou?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4444,7 +4460,7 @@ List of other SANs
 The organization unit
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-permittedDnsDomains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L307">property <b>permittedDnsDomains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L307">property <b>permittedDnsDomains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>permittedDnsDomains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4452,7 +4468,7 @@ The organization unit
 List of domains for which certificates are allowed to be issued
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-postalCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L311">property <b>postalCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L311">property <b>postalCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postalCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4460,7 +4476,7 @@ List of domains for which certificates are allowed to be issued
 The postal code
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-province">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L315">property <b>province</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L315">property <b>province</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>province?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4468,7 +4484,7 @@ The postal code
 The province
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-serial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L319">property <b>serial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L319">property <b>serial</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serial?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4476,7 +4492,7 @@ The province
 The serial
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-streetAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L323">property <b>streetAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L323">property <b>streetAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>streetAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4484,7 +4500,7 @@ The serial
 The street address
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L327">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L327">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4492,7 +4508,7 @@ The street address
 Time to live
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-uriSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L331">property <b>uriSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L331">property <b>uriSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uriSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4500,7 +4516,7 @@ Time to live
 List of alternative URIs
 
 <h4 class="pdoc-member-header" id="SecretBackendRootSignIntermediateState-useCsrValues">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L335">property <b>useCsrValues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendRootSignIntermediate.ts#L335">property <b>useCsrValues</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useCsrValues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4508,7 +4524,7 @@ List of alternative URIs
 Preserve CSR values
 
 <h3 class="pdoc-module-header" id="SecretBackendSignArgs" data-link-title="SecretBackendSignArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L260">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L260">
         interface <strong>SecretBackendSignArgs</strong>
     </a>
 </h3>
@@ -4518,7 +4534,7 @@ Preserve CSR values
 The set of arguments for constructing a SecretBackendSign resource.
 
 <h4 class="pdoc-member-header" id="SecretBackendSignArgs-altNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L264">property <b>altNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L264">property <b>altNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>altNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4526,7 +4542,7 @@ The set of arguments for constructing a SecretBackendSign resource.
 List of alternative names
 
 <h4 class="pdoc-member-header" id="SecretBackendSignArgs-autoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L268">property <b>autoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L268">property <b>autoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoRenew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4534,7 +4550,7 @@ List of alternative names
 If set to `true`, certs will be renewed if the expiration is within `minSecondsRemaining`. Default `false`
 
 <h4 class="pdoc-member-header" id="SecretBackendSignArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L272">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L272">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4542,7 +4558,7 @@ If set to `true`, certs will be renewed if the expiration is within `minSecondsR
 The PKI secret backend the resource belongs to.
 
 <h4 class="pdoc-member-header" id="SecretBackendSignArgs-commonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L276">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L276">property <b>commonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commonName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4550,7 +4566,7 @@ The PKI secret backend the resource belongs to.
 CN of certificate to create
 
 <h4 class="pdoc-member-header" id="SecretBackendSignArgs-csr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L280">property <b>csr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L280">property <b>csr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>csr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4558,7 +4574,7 @@ CN of certificate to create
 The CSR
 
 <h4 class="pdoc-member-header" id="SecretBackendSignArgs-excludeCnFromSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L284">property <b>excludeCnFromSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L284">property <b>excludeCnFromSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludeCnFromSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4566,7 +4582,7 @@ The CSR
 Flag to exclude CN from SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendSignArgs-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L288">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L288">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4574,7 +4590,7 @@ Flag to exclude CN from SANs
 The format of data
 
 <h4 class="pdoc-member-header" id="SecretBackendSignArgs-ipSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L292">property <b>ipSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L292">property <b>ipSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4582,7 +4598,7 @@ The format of data
 List of alternative IPs
 
 <h4 class="pdoc-member-header" id="SecretBackendSignArgs-minSecondsRemaining">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L296">property <b>minSecondsRemaining</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L296">property <b>minSecondsRemaining</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minSecondsRemaining?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4590,7 +4606,7 @@ List of alternative IPs
 Generate a new certificate when the expiration is within this number of seconds, default is 604800 (7 days)
 
 <h4 class="pdoc-member-header" id="SecretBackendSignArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L300">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L300">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4598,7 +4614,7 @@ Generate a new certificate when the expiration is within this number of seconds,
 Name of the role to create the certificate against
 
 <h4 class="pdoc-member-header" id="SecretBackendSignArgs-otherSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L304">property <b>otherSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L304">property <b>otherSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>otherSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4606,7 +4622,7 @@ Name of the role to create the certificate against
 List of other SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendSignArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L308">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L308">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4614,7 +4630,7 @@ List of other SANs
 Time to live
 
 <h4 class="pdoc-member-header" id="SecretBackendSignArgs-uriSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L312">property <b>uriSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L312">property <b>uriSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uriSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4622,7 +4638,7 @@ Time to live
 List of alterative URIs
 
 <h3 class="pdoc-module-header" id="SecretBackendSignState" data-link-title="SecretBackendSignState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L182">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L182">
         interface <strong>SecretBackendSignState</strong>
     </a>
 </h3>
@@ -4632,7 +4648,7 @@ List of alterative URIs
 Input properties used for looking up and filtering SecretBackendSign resources.
 
 <h4 class="pdoc-member-header" id="SecretBackendSignState-altNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L186">property <b>altNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L186">property <b>altNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>altNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4640,7 +4656,7 @@ Input properties used for looking up and filtering SecretBackendSign resources.
 List of alternative names
 
 <h4 class="pdoc-member-header" id="SecretBackendSignState-autoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L190">property <b>autoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L190">property <b>autoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoRenew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4648,7 +4664,7 @@ List of alternative names
 If set to `true`, certs will be renewed if the expiration is within `minSecondsRemaining`. Default `false`
 
 <h4 class="pdoc-member-header" id="SecretBackendSignState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L194">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L194">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4656,7 +4672,7 @@ If set to `true`, certs will be renewed if the expiration is within `minSecondsR
 The PKI secret backend the resource belongs to.
 
 <h4 class="pdoc-member-header" id="SecretBackendSignState-caChains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L198">property <b>caChains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L198">property <b>caChains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>caChains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4664,7 +4680,7 @@ The PKI secret backend the resource belongs to.
 The CA chain
 
 <h4 class="pdoc-member-header" id="SecretBackendSignState-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L202">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L202">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4672,7 +4688,7 @@ The CA chain
 The certificate
 
 <h4 class="pdoc-member-header" id="SecretBackendSignState-commonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L206">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L206">property <b>commonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commonName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4680,7 +4696,7 @@ The certificate
 CN of certificate to create
 
 <h4 class="pdoc-member-header" id="SecretBackendSignState-csr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L210">property <b>csr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L210">property <b>csr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>csr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4688,7 +4704,7 @@ CN of certificate to create
 The CSR
 
 <h4 class="pdoc-member-header" id="SecretBackendSignState-excludeCnFromSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L214">property <b>excludeCnFromSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L214">property <b>excludeCnFromSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludeCnFromSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4696,7 +4712,7 @@ The CSR
 Flag to exclude CN from SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendSignState-expiration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L218">property <b>expiration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L218">property <b>expiration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4704,7 +4720,7 @@ Flag to exclude CN from SANs
 The expiration date of the certificate in unix epoch format
 
 <h4 class="pdoc-member-header" id="SecretBackendSignState-format">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L222">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L222">property <b>format</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4712,7 +4728,7 @@ The expiration date of the certificate in unix epoch format
 The format of data
 
 <h4 class="pdoc-member-header" id="SecretBackendSignState-ipSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L226">property <b>ipSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L226">property <b>ipSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4720,7 +4736,7 @@ The format of data
 List of alternative IPs
 
 <h4 class="pdoc-member-header" id="SecretBackendSignState-issuingCa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L230">property <b>issuingCa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L230">property <b>issuingCa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>issuingCa?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4728,7 +4744,7 @@ List of alternative IPs
 The issuing CA
 
 <h4 class="pdoc-member-header" id="SecretBackendSignState-minSecondsRemaining">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L234">property <b>minSecondsRemaining</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L234">property <b>minSecondsRemaining</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minSecondsRemaining?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4736,7 +4752,7 @@ The issuing CA
 Generate a new certificate when the expiration is within this number of seconds, default is 604800 (7 days)
 
 <h4 class="pdoc-member-header" id="SecretBackendSignState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L238">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L238">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4744,7 +4760,7 @@ Generate a new certificate when the expiration is within this number of seconds,
 Name of the role to create the certificate against
 
 <h4 class="pdoc-member-header" id="SecretBackendSignState-otherSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L242">property <b>otherSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L242">property <b>otherSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>otherSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4752,7 +4768,7 @@ Name of the role to create the certificate against
 List of other SANs
 
 <h4 class="pdoc-member-header" id="SecretBackendSignState-serial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L246">property <b>serial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L246">property <b>serial</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serial?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4760,7 +4776,7 @@ List of other SANs
 The serial
 
 <h4 class="pdoc-member-header" id="SecretBackendSignState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L250">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L250">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4768,7 +4784,7 @@ The serial
 Time to live
 
 <h4 class="pdoc-member-header" id="SecretBackendSignState-uriSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackendSign.ts#L254">property <b>uriSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackendSign.ts#L254">property <b>uriSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uriSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4776,7 +4792,7 @@ Time to live
 List of alterative URIs
 
 <h3 class="pdoc-module-header" id="SecretBackendState" data-link-title="SecretBackendState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackend.ts#L109">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackend.ts#L117">
         interface <strong>SecretBackendState</strong>
     </a>
 </h3>
@@ -4786,7 +4802,7 @@ List of alterative URIs
 Input properties used for looking up and filtering SecretBackend resources.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-defaultLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackend.ts#L113">property <b>defaultLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackend.ts#L121">property <b>defaultLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultLeaseTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4794,7 +4810,7 @@ Input properties used for looking up and filtering SecretBackend resources.
 The default TTL for credentials issued by this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackend.ts#L117">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackend.ts#L125">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4802,7 +4818,7 @@ The default TTL for credentials issued by this backend.
 A human-friendly description for this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-maxLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackend.ts#L121">property <b>maxLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackend.ts#L129">property <b>maxLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLeaseTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4810,7 +4826,7 @@ A human-friendly description for this backend.
 The maximum TTL that can be requested for credentials issued by this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/7f3a154bc46dac6b757990292d938f6d391d33ae/sdk/nodejs/pkisecret/secretBackend.ts#L125">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/pkisecret/secretBackend.ts#L133">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetPolicyDocument function of the Vault package, includi
 
 This is a data source which can be used to construct a HCL representation of an Vault policy document, for use with resources which expect policy documents, such as the `vault.Policy` resource.
 
+
 {{% examples %}}
 ## Example Usage
 

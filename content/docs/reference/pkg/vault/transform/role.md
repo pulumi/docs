@@ -15,6 +15,7 @@ This resource supports the "/transform/role/{name}" Vault endpoint.
 It creates or updates the role with the given name. If a role with the name does not exist, it will be created.
 If the role exists, it will be updated with the new attributes.
 
+
 {{% examples %}}
 ## Example Usage
 

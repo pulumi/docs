@@ -13,6 +13,7 @@ meta_desc: "Explore the AuthBackend resource of the okta module, including examp
 Provides a resource for managing an
 [Okta auth backend within Vault](https://www.vaultproject.io/docs/auth/okta.html).
 
+
 {{% examples %}}
 ## Example Usage
 

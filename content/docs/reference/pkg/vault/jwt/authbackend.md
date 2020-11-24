@@ -13,6 +13,7 @@ meta_desc: "Explore the AuthBackend resource of the jwt module, including exampl
 Provides a resource for managing an
 [JWT auth backend within Vault](https://www.vaultproject.io/docs/auth/jwt.html).
 
+
 {{% examples %}}
 ## Example Usage
 

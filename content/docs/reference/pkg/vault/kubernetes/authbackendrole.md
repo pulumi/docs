@@ -2571,6 +2571,16 @@ using this role, provided as a number of seconds.
 
 
 
+## Import
+
+
+Kubernetes auth backend role can be imported using the `path`, e.g.
+
+```sh
+ $ pulumi import vault:kubernetes/authBackendRole:AuthBackendRole foo auth/kubernetes/role/foo
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

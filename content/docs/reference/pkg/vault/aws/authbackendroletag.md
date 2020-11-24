@@ -12,6 +12,7 @@ meta_desc: "Explore the AuthBackendRoleTag resource of the aws module, including
 
 Reads role tag information from an AWS auth backend in Vault.
 
+
 {{% examples %}}
 ## Example Usage
 

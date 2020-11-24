@@ -3817,6 +3817,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+PKI secret backend roles can be imported using the `path`, e.g.
+
+```sh
+ $ pulumi import vault:pkiSecret/secretBackendRole:SecretBackendRole role pki/roles/my_role
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -2345,6 +2345,16 @@ requests a different type at generation time.
 
 
 
+## Import
+
+
+Token auth backend roles can be imported with `auth/token/roles/` followed by the `role_name`, e.g.
+
+```sh
+ $ pulumi import vault:tokenauth/authBackendRole:AuthBackendRole example auth/token/roles/my-role
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

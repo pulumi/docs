@@ -1644,6 +1644,16 @@ using this role.
 
 
 
+## Import
+
+
+Github user mappings can be imported using the `path`, e.g.
+
+```sh
+ $ pulumi import vault:github/user:User tf_user auth/github/map/users/john.doe
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>
