@@ -13,6 +13,7 @@ meta_desc: "Explore the GetCertificate function of the TLS package, including ex
 Use this data source to get information, such as SHA1 fingerprint or serial number, about the TLS certificates that
 protect an HTTPS website. Note that the certificate chain isn't verified.
 
+
 {{% examples %}}
 ## Example Usage
 
