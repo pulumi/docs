@@ -6,6 +6,7 @@
                 <p class="mr-4">{{ .Params.hero.description }}</p>
                 <div class="mt-5">
                     <a class="btn btn-lg" href="{{ relref . "/docs/get-started/aws" }}">Get Started</a>
+                    <a class="btn btn-lg btn-orange-translucent" href="{{ relref . "/resources#upcoming" }}">Join a Workshop</a>
                 </div>
             </div>
             <div class="w-full mt-16 lg:w-1/2 lg:mt-0">
@@ -55,7 +56,7 @@
     </section>
 
     <!-- Start AWS re:Invent takeover content -->
-    <section class="container mx-auto text-center mb-12">
+    <section id="workshops" class="container mx-auto text-center mb-12">
         <p class="text-3xl font-bold">JOIN A WORKSHOP</p>
         <ul class="flex flex-col lg:flex-row list-none text-left items-center">
             {{ $webinars := (where $.Site.Pages "Type" "webinars") }}
@@ -74,7 +75,13 @@
 
             {{ range $reInventWorkshops }}
                 {{ $link := printf "/resources/%s" .Params.url_slug }}
-                {{ $displayDate := dateFormat "January 2, 2006" .Params.main.sortable_date }}
+
+                {{ $displayDate := "" }}
+                {{ if .Params.multiple }}
+                    {{ $displayDate = dateFormat "January 2, 2006" (index (.Params.multiple) 0).datetime }}
+                {{ else }}
+                    {{ $displayDate = dateFormat "January 2, 2006" .Params.main.sortable_date }}
+                {{ end }}
 
                 {{ $tileOptions := (dict "pageContext" $pageContext "external" false "filters" "" "link" $link "icon" "users" "description" .Params.meta_desc "displayDate" $displayDate "data" . ) }}
                 {{ partial "content-tile.html" $tileOptions }}
@@ -148,7 +155,7 @@
 
                     <p class="text-lg font-bold">Native Testing Frameworks</p>
                     <p>
-                        With Pulumi you can take advantage our your preferred programming languages
+                        With Pulumi you can take advantage of your preferred programming languages
                         native testing frameworks to be able to test your infrastructure and applications
                         through their entire lifecycle.
                     </p>
@@ -195,8 +202,8 @@
 
                     <p class="text-lg font-bold">Collaboration made easy</p>
                     <p>
-                        To be able to decrease the time our organization goes from ideation
-                        to value delivery, we need to give our engineers the tools they need to collaborate
+                        To be able to decrease the time your organization goes from ideation
+                        to value delivery, we need to give engineers the tools they need to collaborate
                         effectively. Pulumi provides you and your team with a platform to collaborate on
                         cloud infrastructure and improve the velocity of delivery.
                     </p>
@@ -313,7 +320,7 @@
                         <div class="w-full lg:w-1/2 p-3">
                             <p class="mt-0 font-bold text-2xl">Clone an example</p>
                             <p>
-                                We have created 150+ examples for you to choose from as way for
+                                We have created 150+ examples for you to choose from as a way for
                                 you to quickly get started with Pulumi. You can deploy them as-is or
                                 use an example as a base for your own project.
                             </p>
