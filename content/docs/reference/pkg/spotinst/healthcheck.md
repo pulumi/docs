@@ -12,6 +12,7 @@ meta_desc: "Explore the HealthCheck resource of the Spotinst package, including 
 
 Provides a Spotinst Health Check resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1437,6 +1438,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -171,6 +171,7 @@ Each `*_scaling_*_policy` supports the following:
 
 <a id="termination-policies"></a>
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -12181,6 +12182,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

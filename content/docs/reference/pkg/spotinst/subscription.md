@@ -12,6 +12,7 @@ meta_desc: "Explore the Subscription resource of the Spotinst package, including
 
 Provides a Spotinst subscription resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1132,6 +1133,8 @@ You can use the generic `"web"` protocol instead.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
