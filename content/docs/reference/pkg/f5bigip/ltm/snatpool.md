@@ -14,6 +14,7 @@ meta_desc: "Explore the SnatPool resource of the ltm module, including examples,
 
 Resource should be named with their "full path". The full path is the combination of the partition + name of the resource, for example /Common/my-snatpool.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -721,6 +722,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

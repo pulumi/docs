@@ -14,6 +14,7 @@ meta_desc: "Explore the Ntp resource of the sys module, including examples, inpu
 
 This resource is helpful when configuring NTP server on the BIG-IP.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -805,6 +806,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -13,6 +13,7 @@ meta_desc: "Explore the Certificate resource of the ssl module, including exampl
 `f5bigip.ssl.Certificate` This resource will import SSL certificates on BIG-IP LTM.
 Certificates can be imported from certificate files on the local disk, in PEM format
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -779,6 +780,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

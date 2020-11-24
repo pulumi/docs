@@ -12,6 +12,7 @@ meta_desc: "Explore the SnmpTraps resource of the sys module, including examples
 
 `f5bigip.sys.SnmpTraps` provides details bout how to enable snmp_traps resource on BIG-IP
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1774,6 +1775,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

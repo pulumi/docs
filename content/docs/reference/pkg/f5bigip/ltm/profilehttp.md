@@ -2876,6 +2876,18 @@ string is specified, then no Server header will be added to such responses
 
 
 
+## Import
+
+
+BIG-IP LTM http profiles can be imported using the `name`, e.g.
+
+```sh
+ $ pulumi import f5bigip:ltm/profileHttp:ProfileHttp test-http /Common/test-http
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
