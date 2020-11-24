@@ -12,7 +12,6 @@ meta_desc: "Explore the GlobalRoleBinding resource of the Rancher 2 package, inc
 
 Provides a Rancher v2 Global Role Binding resource. This can be used to create Global Role Bindings for Rancher v2 environments and retrieve their information.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1093,6 +1092,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Global Role Bindings can be imported using the Rancher Global Role Binding ID
+
+```sh
+ $ pulumi import rancher2:index/globalRoleBinding:GlobalRoleBinding foo &lt;GLOBAL_ROLE_BINDING_ID&gt;
+```
 
 
 

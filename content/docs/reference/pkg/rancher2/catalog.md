@@ -12,7 +12,6 @@ meta_desc: "Explore the Catalog resource of the Rancher 2 package, including exa
 
 Provides a Rancher v2 Catalog resource. This can be used to create cluster, global and/or project catalogs for Rancher v2 environments and retrieve their information.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1814,6 +1813,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Catalogs can be imported using the Rancher Catalog ID and its scope.
+
+```sh
+ $ pulumi import rancher2:index/catalog:Catalog foo &lt;SCOPE&gt;.&lt;CATALOG_ID_ID&gt;
+```
 
 
 

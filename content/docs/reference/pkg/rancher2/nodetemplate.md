@@ -16,7 +16,6 @@ amazonec2, azure, digitalocean, linode, opennebula, openstack, and vsphere drive
 
 **Note** If you are upgrading to Rancher v2.3.3, please take a look to final section
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -10597,6 +10596,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Node Template can be imported using the Rancher Node Template ID
+
+```sh
+ $ pulumi import rancher2:index/nodeTemplate:NodeTemplate foo &lt;node_template_id&gt;
+```
 
 
 

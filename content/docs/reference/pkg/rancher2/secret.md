@@ -18,7 +18,6 @@ Depending of the availability, there are 2 types of Rancher v2 secrets:
 
 
 
-
 ## Create a Secret Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1082,6 +1081,18 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Secrets can be imported using the secret ID in the format `<namespace_id>.<project_id>.<secret_id>`
+
+```sh
+ $ pulumi import rancher2:index/secret:Secret foo &lt;namespace_id&gt;.&lt;project_id&gt;.&lt;secret_id&gt;
+```
+
+ `<namespace_id>` is optional, just needed for namespaced secret.
 
 
 

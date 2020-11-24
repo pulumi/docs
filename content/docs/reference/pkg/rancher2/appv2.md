@@ -12,7 +12,6 @@ meta_desc: "Explore the AppV2 resource of the Rancher 2 package, including examp
 
 Provides a Rancher App v2 resource. This can be used to manage helm charts for Rancher v2 environments and retrieve their information. App v2 resource is available at Rancher v2.5.x and above.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1944,6 +1943,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+V2 apps can be imported using the Rancher cluster ID and App V2 name.
+
+```sh
+ $ pulumi import rancher2:index/appV2:AppV2 foo &lt;CLUSTER_ID&gt;.&lt;APP_V2_NAME&gt;
+```
 
 
 

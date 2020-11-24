@@ -12,7 +12,6 @@ meta_desc: "Explore the Cluster resource of the Rancher 2 package, including exa
 
 Provides a Rancher v2 Cluster resource. This can be used to create Clusters for Rancher v2 environments and retrieve their information.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -29188,6 +29187,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Clusters can be imported using the Rancher Cluster ID
+
+```sh
+ $ pulumi import rancher2:index/cluster:Cluster foo &lt;CLUSTER_ID&gt;
+```
 
 
 

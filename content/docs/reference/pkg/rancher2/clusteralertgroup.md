@@ -12,7 +12,6 @@ meta_desc: "Explore the ClusterAlertGroup resource of the Rancher 2 package, inc
 
 Provides a Rancher v2 Cluster Alert Group resource. This can be used to create Cluster Alert Group for Rancher v2 environments and retrieve their information.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1571,6 +1570,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Cluster Alert Group can be imported using the Rancher cluster alert group ID
+
+```sh
+ $ pulumi import rancher2:index/clusterAlertGroup:ClusterAlertGroup foo &lt;CLUSTER_ALERT_GROUP_ID&gt;
+```
 
 
 

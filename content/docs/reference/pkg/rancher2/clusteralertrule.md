@@ -12,7 +12,6 @@ meta_desc: "Explore the ClusterAlertRule resource of the Rancher 2 package, incl
 
 Provides a Rancher v2 Cluster Alert Rule resource. This can be used to create Cluster Alert Rule for Rancher v2 environments and retrieve their information.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2575,6 +2574,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Cluster Alert Rule can be imported using the Rancher cluster alert rule ID
+
+```sh
+ $ pulumi import rancher2:index/clusterAlertRule:ClusterAlertRule foo &lt;CLUSTER_ALERT_RULE_ID&gt;
+```
 
 
 

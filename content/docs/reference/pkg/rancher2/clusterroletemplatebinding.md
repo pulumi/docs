@@ -12,7 +12,6 @@ meta_desc: "Explore the ClusterRoleTemplateBinding resource of the Rancher 2 pac
 
 Provides a Rancher v2 Cluster Role Template Binding resource. This can be used to create Cluster Role Template Bindings for Rancher v2 environments and retrieve their information.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1339,6 +1338,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Cluster Role Template Bindings can be imported using the Rancher cluster Role Template Binding ID
+
+```sh
+ $ pulumi import rancher2:index/clusterRoleTemplateBinding:ClusterRoleTemplateBinding foo &lt;CLUSTER_ROLE_TEMPLATE_BINDING_ID&gt;
+```
 
 
 

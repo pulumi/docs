@@ -12,7 +12,6 @@ meta_desc: "Explore the PodSecurityPolicyTemplate resource of the Rancher 2 pack
 
 Provides a Rancher v2 PodSecurityPolicyTemplate resource. This can be used to create PodSecurityPolicyTemplates for Rancher v2 environments and retrieve their information.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -5442,6 +5441,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+PodSecurityPolicyTemplate can be imported using the Rancher PodSecurityPolicyTemplate Name
+
+```sh
+ $ pulumi import rancher2:index/podSecurityPolicyTemplate:PodSecurityPolicyTemplate foo &lt;pod_security_policy_name&gt;
+```
 
 
 

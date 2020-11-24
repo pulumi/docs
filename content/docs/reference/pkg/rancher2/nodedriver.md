@@ -12,7 +12,6 @@ meta_desc: "Explore the NodeDriver resource of the Rancher 2 package, including 
 
 Provides a Rancher v2 Node Driver resource. This can be used to create Node Driver for Rancher v2 RKE clusters and retrieve their information.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1540,6 +1539,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Node Driver can be imported using the Rancher Node Driver ID
+
+```sh
+ $ pulumi import rancher2:index/nodeDriver:NodeDriver foo &lt;node_driver_id&gt;
+```
 
 
 

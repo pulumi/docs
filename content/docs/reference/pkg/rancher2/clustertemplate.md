@@ -14,7 +14,6 @@ Provides a Rancher v2 Cluster Template resource. This can be used to create Clus
 
 Cluster Templates are available from Rancher v2.3.x and above.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -16840,6 +16839,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Cluster Template can be imported using the rancher Cluster Template ID
+
+```sh
+ $ pulumi import rancher2:index/clusterTemplate:ClusterTemplate foo &lt;CLUSTER_TEMPLATE_ID&gt;
+```
 
 
 
