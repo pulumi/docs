@@ -106,6 +106,12 @@ For more information, see <a class="reference external" href="https://www.linode
 </pre></div>
 </div>
 <p>This resource exports no additional attributes, however <code class="docutils literal notranslate"><span class="pre">status</span></code> may reflect degraded states.</p>
+<p>Linodes Domains can be imported using the Linode Domain <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import linode:index/domain:Domain foobar <span class="m">1234567</span>
+
+The Linode Guide, <span class="sb">`</span>Import Existing Infrastructure to Terraform &lt;https://www.linode.com/docs/applications/configuration-management/import-existing-infrastructure-to-terraform/&gt;<span class="sb">`</span>_<span class="se">\ </span>, offers resource importing examples <span class="k">for</span> Domains and other Linode resource types.
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -293,6 +299,12 @@ For more information, see <a class="reference external" href="https://www.linode
 </pre></div>
 </div>
 <p>This resource exports no additional attributes.</p>
+<p>Linodes Domain Records can be imported using the Linode Domain <code class="docutils literal notranslate"><span class="pre">id</span></code> followed by the Domain Record <code class="docutils literal notranslate"><span class="pre">id</span></code> separated by a comma, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import linode:index/domainRecord:DomainRecord www-foobar <span class="m">1234567</span>,7654321
+
+The Linode Guide, <span class="sb">`</span>Import Existing Infrastructure to Terraform &lt;https://www.linode.com/docs/applications/configuration-management/import-existing-infrastructure-to-terraform/&gt;<span class="sb">`</span>_<span class="se">\ </span>, offers resource importing examples <span class="k">for</span> Domain Records and other Linode resource types.
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -474,6 +486,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
         <span class="n">addresses</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">],</span>
     <span class="p">)],</span>
     <span class="n">linodes</span><span class="o">=</span><span class="p">[</span><span class="n">my_instance</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Firewalls can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import linode:index/firewall:Firewall my_firewall <span class="m">12345</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -761,6 +777,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">expiry</span></code> - Only Images created automatically (from a deleted Linode; type=automatic) will expire.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vendor</span></code> - The upstream distribution vendor. Nil for private Images.</p></li>
 </ul>
+<p>Linodes Images can be imported using the Linode Image <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import linode:index/image:Image myimage <span class="m">1234567</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -998,6 +1018,14 @@ For more information, see <a class="reference external" href="https://linode.com
 </ul>
 </li>
 </ul>
+<p>Linodes Instances can be imported using the Linode <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import linode:index/instance:Instance mylinode <span class="m">1234567</span>
+
+When importing an instance, all <span class="sb">``</span>disk<span class="sb">``</span> and <span class="sb">``</span>config<span class="sb">``</span> values must be represented. Imported disks must include their <span class="sb">``</span>label<span class="sb">``</span> value.
+</pre></div>
+</div>
+<p><strong>Any disk that is not precisely represented may be removed resulting in data loss.</strong> Imported configs should include all <code class="docutils literal notranslate"><span class="pre">devices</span></code>, and must include <code class="docutils literal notranslate"><span class="pre">label</span></code>, <code class="docutils literal notranslate"><span class="pre">kernel</span></code>, and the <code class="docutils literal notranslate"><span class="pre">root_device</span></code>.</p>
+<p>The instance must include a <code class="docutils literal notranslate"><span class="pre">boot_config_label</span></code> referring to the correct configuration profile. The Linode Guide, <a class="reference external" href="https://www.linode.com/docs/applications/configuration-management/import-existing-infrastructure-to-terraform/">Import Existing Infrastructure to Terraform</a>, offers resource importing examples for Instances and other Linode resource types.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1275,6 +1303,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">tags</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;prod&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
+<p>LKE Clusters can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import linode:index/lkeCluster:LkeCluster my_cluster <span class="m">12345</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1420,6 +1452,12 @@ For more information, see <a class="reference external" href="https://www.linode
 <li><p><code class="docutils literal notranslate"><span class="pre">ipv4</span></code> - The Public IPv4 Address of this NodeBalancer</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ipv6</span></code> - The Public IPv6 Address of this NodeBalancer</p></li>
 </ul>
+<p>Linodes NodeBalancers can be imported using the Linode NodeBalancer <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import linode:index/nodeBalancer:NodeBalancer mynodebalancer <span class="m">1234567</span>
+
+The Linode Guide, <span class="sb">`</span>Import Existing Infrastructure to Terraform &lt;https://www.linode.com/docs/applications/configuration-management/import-existing-infrastructure-to-terraform/&gt;<span class="sb">`</span>_<span class="se">\ </span>, offers resource importing examples <span class="k">for</span> NodeBalancers and other Linode resource types.
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1567,6 +1605,12 @@ For more information, see <a class="reference external" href="https://www.linode
 <li><p><code class="docutils literal notranslate"><span class="pre">node_status_up</span></code> - The number of backends considered to be ‘UP’ and healthy, and that are serving requests.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">node_status_down</span></code> - The number of backends considered to be ‘DOWN’ and unhealthy. These are not in rotation, and not serving requests.</p></li>
 </ul>
+<p>NodeBalancer Configs can be imported using the NodeBalancer <code class="docutils literal notranslate"><span class="pre">nodebalancer_id</span></code> followed by the NodeBalancer Config <code class="docutils literal notranslate"><span class="pre">id</span></code> separated by a comma, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import linode:index/nodeBalancerConfig:NodeBalancerConfig http-foobar <span class="m">1234567</span>,7654321
+
+The Linode Guide, <span class="sb">`</span>Import Existing Infrastructure to Terraform &lt;https://www.linode.com/docs/applications/configuration-management/import-existing-infrastructure-to-terraform/&gt;<span class="sb">`</span>_<span class="se">\ </span>, offers resource importing examples <span class="k">for</span> NodeBalancer Configs and other Linode resource types.
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1823,6 +1867,12 @@ For more information, see <a class="reference external" href="https://www.linode
 <li><p><code class="docutils literal notranslate"><span class="pre">config_id</span></code> - The ID of the NodeBalancerConfig this NodeBalancerNode is attached to.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodebalancer_id</span></code> - The ID of the NodeBalancer this NodeBalancerNode is attached to.</p></li>
 </ul>
+<p>NodeBalancer Nodes can be imported using the NodeBalancer <code class="docutils literal notranslate"><span class="pre">nodebalancer_id</span></code> followed by the NodeBalancer Config <code class="docutils literal notranslate"><span class="pre">config_id</span></code> followed by the NodeBalancer Node <code class="docutils literal notranslate"><span class="pre">id</span></code>, separated by a comma, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import linode:index/nodeBalancerNode:NodeBalancerNode https-foobar-1 <span class="m">1234567</span>,7654321,9999999
+
+The Linode Guide, <span class="sb">`</span>Import Existing Infrastructure to Terraform &lt;https://www.linode.com/docs/applications/configuration-management/import-existing-infrastructure-to-terraform/&gt;<span class="sb">`</span>_<span class="se">\ </span>, offers resource importing examples <span class="k">for</span> NodeBalancer Nodes and other Linode resource types.
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2437,6 +2487,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Linode RDNS resource.  This can be used to create and modify RDNS records.</p>
 <p>Linode RDNS names must have a matching address value in an A or AAAA record.  This A or AAAA name must be resolvable at the time the RDNS resource is being associated.</p>
 <p>For more information, see the <a class="reference external" href="https://developers.linode.com/api/v4/networking-ips-address/#put">Linode APIv4 docs</a> and the <a class="reference external" href="https://www.linode.com/docs/networking/dns/configure-your-linode-for-reverse-dns-classic-manager/">Configure your Linode for Reverse DNS</a> guide.</p>
+<p>Linodes RDNS resources can be imported using the address as the <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import linode:index/rdns:Rdns foo <span class="m">123</span>.123.123.123
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2524,6 +2578,10 @@ For more information, see the <a class="reference external" href="https://develo
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">created</span></code> - The date this SSH Key was created.</p></li>
 </ul>
+<p>Linodes SSH Keys can be imported using the Linode SSH Key <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import linode:index/sshKey:SshKey mysshkey <span class="m">1234567</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2663,6 +2721,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
+<p>Linodes StackScripts can be imported using the Linode StackScript <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import linode:index/stackScript:StackScript mystackscript <span class="m">1234567</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2848,6 +2910,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> - The token used to access the API.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">created</span></code> - The date this Token was created.</p></li>
 </ul>
+<p>Linodes Tokens can be imported using the Linode Token <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<p>The secret token will not be imported.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import linode:index/token:Token mytoken <span class="m">1234567</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2949,6 +3016,105 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_linode.Vlan">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">Vlan</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">linodes</span><span class="p">:</span> <span class="n">Union[Sequence[Union[int, Awaitable[int], Output[T]]], Awaitable[Sequence[Union[int, Awaitable[int], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Vlan" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Vlan resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] cidr_block: The CIDR block for this VLAN.
+:param pulumi.Input[str] description: Description of the vlan for display purposes only.
+:param pulumi.Input[Sequence[pulumi.Input[int]]] linodes: A list of IDs of Linodes to attach to this VLAN.
+:param pulumi.Input[str] region: The region of where the VLAN is deployed.</p>
+<dl class="py method">
+<dt id="pulumi_linode.Vlan.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">attached_linodes</span><span class="p">:</span> <span class="n">Union[Sequence[Union[VlanAttachedLinodeArgs, Mapping[str, Any], Awaitable[Union[VlanAttachedLinodeArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[VlanAttachedLinodeArgs, Mapping[str, Any], Awaitable[Union[VlanAttachedLinodeArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cidr_block</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">linodes</span><span class="p">:</span> <span class="n">Union[Sequence[Union[int, Awaitable[int], Output[T]]], Awaitable[Sequence[Union[int, Awaitable[int], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_linode.vlan.Vlan<a class="headerlink" href="#pulumi_linode.Vlan.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Vlan resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>attached_linodes</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'VlanAttachedLinodeArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – The Linodes attached to this vlan.</p></li>
+<li><p><strong>cidr_block</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The CIDR block for this VLAN.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the vlan for display purposes only.</p></li>
+<li><p><strong>linodes</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>int</em><em>]</em><em>]</em><em>]</em>) – A list of IDs of Linodes to attach to this VLAN.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region of where the VLAN is deployed.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.Vlan.attached_linodes">
+<em class="property">property </em><code class="sig-name descname">attached_linodes</code><a class="headerlink" href="#pulumi_linode.Vlan.attached_linodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Linodes attached to this vlan.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.Vlan.cidr_block">
+<em class="property">property </em><code class="sig-name descname">cidr_block</code><a class="headerlink" href="#pulumi_linode.Vlan.cidr_block" title="Permalink to this definition">¶</a></dt>
+<dd><p>The CIDR block for this VLAN.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.Vlan.description">
+<em class="property">property </em><code class="sig-name descname">description</code><a class="headerlink" href="#pulumi_linode.Vlan.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description of the vlan for display purposes only.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.Vlan.linodes">
+<em class="property">property </em><code class="sig-name descname">linodes</code><a class="headerlink" href="#pulumi_linode.Vlan.linodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of IDs of Linodes to attach to this VLAN.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.Vlan.region">
+<em class="property">property </em><code class="sig-name descname">region</code><a class="headerlink" href="#pulumi_linode.Vlan.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The region of where the VLAN is deployed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.Vlan.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Vlan.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_linode.Vlan.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Vlan.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_linode.Volume">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_linode.</code><code class="sig-name descname">Volume</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">label</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">linode_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">size</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_linode.Volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Linode Volume resource.  This can be used to create, modify, and delete Linodes Block Storage Volumes.  Block Storage Volumes are removable storage disks that persist outside the life-cycle of Linode Instances. These volumes can be attached to and detached from Linode instances throughout a region.</p>
@@ -2991,6 +3157,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> - The label of the Linode Volume.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">filesystem_path</span></code> - The full filesystem path for the Volume based on the Volume’s label. The path is “/dev/disk/by-id/scsi-0Linode<em>Volume</em>” + the Volume label</p></li>
 </ul>
+<p>Linodes Volumes can be imported using the Linode Volume <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   $ pulumi import linode:index/volume:Volume myvolume <span class="m">1234567</span>
+
+The Linode Guide, <span class="sb">`</span>Import Existing Infrastructure to Terraform &lt;https://www.linode.com/docs/applications/configuration-management/import-existing-infrastructure-to-terraform/&gt;<span class="sb">`</span>_<span class="se">\ </span>, offers resource importing examples <span class="k">for</span> Block Storage Volumes and other Linode resource types.
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

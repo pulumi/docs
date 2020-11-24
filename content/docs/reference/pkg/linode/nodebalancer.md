@@ -1592,6 +1592,20 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Linodes NodeBalancers can be imported using the Linode NodeBalancer `id`, e.g.
+
+```sh
+ $ pulumi import linode:index/nodeBalancer:NodeBalancer mynodebalancer 1234567
+```
+
+ The Linode Guide, [Import Existing Infrastructure to Terraform](https://www.linode.com/docs/applications/configuration-management/import-existing-infrastructure-to-terraform/), offers resource importing examples for NodeBalancers and other Linode resource types.
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

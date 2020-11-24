@@ -12,6 +12,7 @@ meta_desc: "Explore the ObjectStorageObject resource of the Linode package, incl
 
 Provides a Linode Object Storage Object resource. This can be used to create, modify, and delete Linodes Object Storage Objects for Buckets.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2218,6 +2219,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

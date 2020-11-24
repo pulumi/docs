@@ -41,6 +41,7 @@ The Linode Account resource exports the following attributes:
 
 * `balance` - This Account's balance, in US dollars.
 
+
 {{% examples %}}
 ## Example Usage
 

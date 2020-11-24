@@ -47,6 +47,7 @@ The Linode Profile resource exports the following attributes:
 
 * `referrals.0.url` - The referral URL.
 
+
 {{% examples %}}
 ## Example Usage
 

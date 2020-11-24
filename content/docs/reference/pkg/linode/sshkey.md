@@ -774,6 +774,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Linodes SSH Keys can be imported using the Linode SSH Key `id`, e.g.
+
+```sh
+ $ pulumi import linode:index/sshKey:SshKey mysshkey 1234567
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

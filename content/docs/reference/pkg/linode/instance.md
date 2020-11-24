@@ -6964,6 +6964,24 @@ Instances in a region.
 
 
 
+## Import
+
+
+Linodes Instances can be imported using the Linode `id`, e.g.
+
+```sh
+ $ pulumi import linode:index/instance:Instance mylinode 1234567
+```
+
+ When importing an instance, all `disk` and `config` values must be represented. Imported disks must include their `label` value.
+
+**Any disk that is not precisely represented may be removed resulting in data loss.** Imported configs should include all `devices`, and must include `label`, `kernel`, and the `root_device`.
+
+The instance must include a `boot_config_label` referring to the correct configuration profile. The Linode Guide, [Import Existing Infrastructure to Terraform](https://www.linode.com/docs/applications/configuration-management/import-existing-infrastructure-to-terraform/), offers resource importing examples for Instances and other Linode resource types.
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

@@ -1544,6 +1544,20 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Linodes Domain Records can be imported using the Linode Domain `id` followed by the Domain Record `id` separated by a comma, e.g.
+
+```sh
+ $ pulumi import linode:index/domainRecord:DomainRecord www-foobar 1234567,7654321
+```
+
+ The Linode Guide, [Import Existing Infrastructure to Terraform](https://www.linode.com/docs/applications/configuration-management/import-existing-infrastructure-to-terraform/), offers resource importing examples for Domain Records and other Linode resource types.
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

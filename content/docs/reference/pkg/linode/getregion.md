@@ -12,6 +12,7 @@ meta_desc: "Explore the GetRegion function of the Linode package, including exam
 
 `linode.getRegion` provides details about a specific Linode region. See all regions [here](https://api.linode.com/v4/regions).
 
+
 {{% examples %}}
 ## Example Usage
 

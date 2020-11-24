@@ -21,6 +21,7 @@ The Linode User resource exports the following attributes:
 
 * `restricted` - If true, this User must be granted access to perform actions or access entities on this Account.
 
+
 {{% examples %}}
 ## Example Usage
 

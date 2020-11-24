@@ -43,6 +43,7 @@ The Linode Domain resource exports the following attributes:
 
 * `tags` - An array of tags applied to this object.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -1005,6 +1005,20 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Linodes Tokens can be imported using the Linode Token `id`, e.g.
+
+The secret token will not be imported.
+
+```sh
+ $ pulumi import linode:index/token:Token mytoken 1234567
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

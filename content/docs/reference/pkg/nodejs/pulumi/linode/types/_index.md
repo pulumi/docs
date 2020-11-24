@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/linode | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/linode package."
-git_sha: "0a4eb117a3b277c38e99d56109ce2d84e98896a5"
+git_sha: "1f0f0b31562fc9815b7bc4b2ed1734d7f39274ef"
 block_external_search_index: true
 ---
 
