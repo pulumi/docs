@@ -47,6 +47,10 @@ block_external_search_index: true
     <span class="p">})</span>
 </pre></div>
 </div>
+<p>Identity provider mappers can be imported using the format <code class="docutils literal notranslate"><span class="pre">{{realm_id}}/{{idp_alias}}/{{idp_mapper_id}}</span></code>, where <code class="docutils literal notranslate"><span class="pre">idp_alias</span></code> is the identity provider alias, and <code class="docutils literal notranslate"><span class="pre">idp_mapper_id</span></code> is the unique ID that Keycloak assigns to the mapper upon creation. This value can be found in the URI when editing this mapper in the GUI, and is typically a GUID. Examplebash</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import keycloak:index/attributeImporterIdentityProviderMapper:AttributeImporterIdentityProviderMapper test_mapper my-realm/my-mapper/f446db98-7133-4e30-b18a-3d28fde7ca1b
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -328,17 +332,26 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_keycloak.CustomUserFederation">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">CustomUserFederation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_policy</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.CustomUserFederation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a CustomUserFederation resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] cache_policy: Can be one of <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code>, <code class="docutils literal notranslate"><span class="pre">EVICT_DAILY</span></code>, <code class="docutils literal notranslate"><span class="pre">EVICT_WEEKLY</span></code>, <code class="docutils literal notranslate"><span class="pre">MAX_LIFESPAN</span></code>, or <code class="docutils literal notranslate"><span class="pre">NO_CACHE</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code>.
-:param pulumi.Input[Mapping[str, Any]] config: The provider configuration handed over to your custom user federation provider.
-:param pulumi.Input[bool] enabled: When <code class="docutils literal notranslate"><span class="pre">false</span></code>, this provider will not be used when performing queries for users. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.
-:param pulumi.Input[str] name: Display name of the provider when displayed in the console.
-:param pulumi.Input[str] parent_id: Must be set to the realms’ <code class="docutils literal notranslate"><span class="pre">internal_id</span></code>  when it differs from the realm. This can happen when existing resources are imported into the state.
-:param pulumi.Input[int] priority: Priority of this provider when looking up users. Lower values are first. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.
-:param pulumi.Input[str] provider_id: The unique ID of the custom provider, specified in the <code class="docutils literal notranslate"><span class="pre">getId</span></code> implementation for the <code class="docutils literal notranslate"><span class="pre">UserStorageProviderFactory</span></code> interface.
-:param pulumi.Input[str] realm_id: The realm that this provider will provide user federation for.</p>
+<dd><p>Custom user federation providers can be imported using the format <code class="docutils literal notranslate"><span class="pre">{{realm_id}}/{{custom_user_federation_id}}</span></code>. The ID of the custom user federation provider can be found within the Keycloak GUI and is typically a GUIDbash</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import keycloak:index/customUserFederation:CustomUserFederation custom_user_federation my-realm/af2a6ca3-e4d7-49c3-b08b-1b3c70b4b860
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cache_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Can be one of <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code>, <code class="docutils literal notranslate"><span class="pre">EVICT_DAILY</span></code>, <code class="docutils literal notranslate"><span class="pre">EVICT_WEEKLY</span></code>, <code class="docutils literal notranslate"><span class="pre">MAX_LIFESPAN</span></code>, or <code class="docutils literal notranslate"><span class="pre">NO_CACHE</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code>.</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>config</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – The provider configuration handed over to your custom user federation provider.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When <code class="docutils literal notranslate"><span class="pre">false</span></code>, this provider will not be used when performing queries for users. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Display name of the provider when displayed in the console.</p></li>
+<li><p><strong>parent_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Must be set to the realms’ <code class="docutils literal notranslate"><span class="pre">internal_id</span></code>  when it differs from the realm. This can happen when existing resources are imported into the state.</p></li>
+<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Priority of this provider when looking up users. Lower values are first. Defaults to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p></li>
+<li><p><strong>provider_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique ID of the custom provider, specified in the <code class="docutils literal notranslate"><span class="pre">getId</span></code> implementation for the <code class="docutils literal notranslate"><span class="pre">UserStorageProviderFactory</span></code> interface.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm that this provider will provide user federation for.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="pulumi_keycloak.CustomUserFederation.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cache_policy</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parent_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.custom_user_federation.CustomUserFederation<a class="headerlink" href="#pulumi_keycloak.CustomUserFederation.get" title="Permalink to this definition">¶</a></dt>
@@ -468,6 +481,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">group_ids</span><span class="o">=</span><span class="p">[</span><span class="n">group</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
 </pre></div>
 </div>
+<p>Default groups can be imported using the format <code class="docutils literal notranslate"><span class="pre">{{realm_id}}</span></code> where <code class="docutils literal notranslate"><span class="pre">realm_id</span></code> is the realm the group exists in. Examplebash</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import keycloak:index/defaultGroups:DefaultGroups default my-realm
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -577,6 +594,10 @@ Therefore, if possible, a specific mapper should be used.</p>
         <span class="s2">&quot;attribute.value&quot;</span><span class="p">:</span> <span class="s2">&quot;value&quot;</span><span class="p">,</span>
         <span class="s2">&quot;friendly.name&quot;</span><span class="p">:</span> <span class="s2">&quot;display name&quot;</span><span class="p">,</span>
     <span class="p">})</span>
+</pre></div>
+</div>
+<p>Protocol mappers can be imported using the following format<code class="docutils literal notranslate"><span class="pre">{{realm_id}}/client/{{client_keycloak_id}}/{{protocol_mapper_id}}</span></code> Examplebash</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import keycloak:index/genericClientProtocolMapper:GenericClientProtocolMapper saml_hardcode_attribute_mapper my-realm/client/a7202154-8793-4656-b655-1dd18c181e14/71602afa-f7d1-4788-8c49-ef8fd00af0f4
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -793,6 +814,10 @@ inside an access token for a client.</p>
     <span class="n">role_id</span><span class="o">=</span><span class="n">client_role</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Generic client role mappers can be imported using one of the following two formats- When mapping a role to a client, use the format <code class="docutils literal notranslate"><span class="pre">{{realmId}}/client/{{clientId}}/scope-mappings/{{roleClientId}}/{{roleId}}</span></code> - When mapping a role to a client scope, use the format <code class="docutils literal notranslate"><span class="pre">{{realmId}}/client-scope/{{clientScopeId}}/scope-mappings/{{roleClientId}}/{{roleId}}</span></code> Examplebash</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import keycloak:index/genericClientRoleMapper:GenericClientRoleMapper client_role_mapper my-realm/client/23888550-5dcd-41f6-85ba-554233021e9c/scope-mappings/ce51f004-bdfb-4dd5-a963-c4487d2dec5b/ff3aa49f-bc07-4030-8783-41918c3614a3
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -981,6 +1006,10 @@ be used to manage groups that were created this way.</p>
     <span class="p">})</span>
 </pre></div>
 </div>
+<p>Groups can be imported using the format <code class="docutils literal notranslate"><span class="pre">{{realm_id}}/{{group_id}}</span></code>, where <code class="docutils literal notranslate"><span class="pre">group_id</span></code> is the unique ID that Keycloak assigns to the group upon creation. This value can be found in the URI when editing this group in the GUI, and is typically a GUID. Examplebash</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import keycloak:index/group:Group child_group my-realm/934a4a4e-28bd-4703-a0fa-332df153aabd
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1085,12 +1114,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_keycloak.GroupMemberships">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">GroupMemberships</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">members</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.GroupMemberships" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a GroupMemberships resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] group_id: The ID of the group this resource should manage memberships for.
-:param pulumi.Input[Sequence[pulumi.Input[str]]] members: A list of usernames that belong to this group.
-:param pulumi.Input[str] realm_id: The realm this group exists in.</p>
+<dd><p>This resource does not support import. Instead of importing, feel free to create this resource as if it did not already exist on the server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the group this resource should manage memberships for.</p></li>
+<li><p><strong>members</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of usernames that belong to this group.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm this group exists in.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="pulumi_keycloak.GroupMemberships.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">members</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.group_memberships.GroupMemberships<a class="headerlink" href="#pulumi_keycloak.GroupMemberships.get" title="Permalink to this definition">¶</a></dt>
@@ -1169,12 +1204,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_keycloak.GroupRoles">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">GroupRoles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_ids</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.GroupRoles" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a GroupRoles resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] group_id: The ID of the group this resource should manage roles for.
-:param pulumi.Input[str] realm_id: The realm this group exists in.
-:param pulumi.Input[Sequence[pulumi.Input[str]]] role_ids: A list of role IDs to map to the group</p>
+<dd><p>This resource can be imported using the format <code class="docutils literal notranslate"><span class="pre">{{realm_id}}/{{group_id}}</span></code>, where <code class="docutils literal notranslate"><span class="pre">group_id</span></code> is the unique ID that Keycloak assigns to the group upon creation. This value can be found in the URI when editing this group in the GUI, and is typically a GUID. Examplebash</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import keycloak:index/groupRoles:GroupRoles group_roles my-realm/18cc6b87-2ce7-4e59-bdc8-b9d49ec98a94
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the group this resource should manage roles for.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm this group exists in.</p></li>
+<li><p><strong>role_ids</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of role IDs to map to the group</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="pulumi_keycloak.GroupRoles.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_ids</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.group_roles.GroupRoles<a class="headerlink" href="#pulumi_keycloak.GroupRoles.get" title="Permalink to this definition">¶</a></dt>
@@ -1453,13 +1497,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_keycloak.IdentityProviderTokenExchangeScopePermission">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">IdentityProviderTokenExchangeScopePermission</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">clients</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_alias</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.IdentityProviderTokenExchangeScopePermission" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a IdentityProviderTokenExchangeScopePermission resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[Sequence[pulumi.Input[str]]] clients: A list of IDs of the clients for which a policy will be created and set on scope based token exchange permission.
-:param pulumi.Input[str] policy_type: Defaults to “client” This is also the only value policy type supported by this provider.
-:param pulumi.Input[str] provider_alias: Alias of the identity provider.
-:param pulumi.Input[str] realm_id: The realm that the identity provider exists in.</p>
+<dd><p>This resource can be imported using the format <code class="docutils literal notranslate"><span class="pre">{{realm_id}}/{{provider_alias}}</span></code>, where <code class="docutils literal notranslate"><span class="pre">provider_alias</span></code> is the alias that you assign to the identity provider upon creation. Examplebash</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import keycloak:index/identityProviderTokenExchangeScopePermission:IdentityProviderTokenExchangeScopePermission oidc_idp_permission my-realm/myIdp
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>clients</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of IDs of the clients for which a policy will be created and set on scope based token exchange permission.</p></li>
+<li><p><strong>policy_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Defaults to “client” This is also the only value policy type supported by this provider.</p></li>
+<li><p><strong>provider_alias</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Alias of the identity provider.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm that the identity provider exists in.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization_idp_resource_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization_resource_server_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">authorization_token_exchange_scope_permission_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">clients</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policy_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">provider_alias</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.identity_provider_token_exchange_scope_permission.IdentityProviderTokenExchangeScopePermission<a class="headerlink" href="#pulumi_keycloak.IdentityProviderTokenExchangeScopePermission.get" title="Permalink to this definition">¶</a></dt>
@@ -1694,6 +1747,10 @@ from multiple sources.</p>
             <span class="s2">&quot;RS256&quot;</span><span class="p">,</span>
         <span class="p">],</span>
     <span class="p">))</span>
+</pre></div>
+</div>
+<p>Realms can be imported using their name. Examplebash</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import keycloak:index/realm:Realm realm my-realm
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2125,6 +2182,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">events_listeners</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;jboss-logging&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
+<p>This resource currently does not support importing.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2370,6 +2428,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">])</span>
 </pre></div>
 </div>
+<p>Roles can be imported using the format <code class="docutils literal notranslate"><span class="pre">{{realm_id}}/{{role_id}}</span></code>, where <code class="docutils literal notranslate"><span class="pre">role_id</span></code> is the unique ID that Keycloak assigns to the role. The ID is not easy to find in the GUI, but it appears in the URL when editing the role. Examplebash</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import keycloak:index/role:Role role my-realm/7e8cf32a-8acb-4d34-89c4-04fb1d10ccad
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2506,6 +2568,10 @@ or identity providers.</p>
         <span class="n">value</span><span class="o">=</span><span class="s2">&quot;some password&quot;</span><span class="p">,</span>
         <span class="n">temporary</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="p">))</span>
+</pre></div>
+</div>
+<p>Users can be imported using the format <code class="docutils literal notranslate"><span class="pre">{{realm_id}}/{{user_id}}</span></code>, where <code class="docutils literal notranslate"><span class="pre">user_id</span></code> is the unique ID that Keycloak assigns to the user upon creation. This value can be found in the GUI when editing the user. Examplebash</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import keycloak:index/user:User user my-realm/60c3f971-b1d3-4b3a-9035-d16d7540a5e4
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -2645,12 +2711,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_keycloak.UserRoles">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.</code><code class="sig-name descname">UserRoles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_ids</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.UserRoles" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a UserRoles resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] realm_id: The realm this user exists in.
-:param pulumi.Input[Sequence[pulumi.Input[str]]] role_ids: A list of role IDs to map to the user
-:param pulumi.Input[str] user_id: The ID of the user this resource should manage roles for.</p>
+<dd><p>This resource can be imported using the format <code class="docutils literal notranslate"><span class="pre">{{realm_id}}/{{user_id}}</span></code>, where <code class="docutils literal notranslate"><span class="pre">user_id</span></code> is the unique ID that Keycloak assigns to the user upon creation. This value can be found in the GUI when editing the user, and is typically a GUID. Examplebash</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import keycloak:index/userRoles:UserRoles user_roles my-realm/b0ae6924-1bd5-4655-9e38-dae7c5e42924
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm this user exists in.</p></li>
+<li><p><strong>role_ids</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of role IDs to map to the user</p></li>
+<li><p><strong>user_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the user this resource should manage roles for.</p></li>
+</ul>
+</dd>
+</dl>
 <dl class="py method">
 <dt id="pulumi_keycloak.UserRoles.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">realm_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role_ids</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_keycloak.user_roles.UserRoles<a class="headerlink" href="#pulumi_keycloak.UserRoles.get" title="Permalink to this definition">¶</a></dt>

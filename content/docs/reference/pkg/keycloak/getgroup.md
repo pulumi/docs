@@ -13,6 +13,7 @@ meta_desc: "Explore the GetGroup function of the Keycloak package, including exa
 This data source can be used to fetch properties of a Keycloak group for
 usage with other resources, such as `keycloak.GroupRoles`.
 
+
 {{% examples %}}
 ## Example Usage
 

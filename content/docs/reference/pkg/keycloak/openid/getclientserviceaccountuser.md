@@ -13,6 +13,7 @@ meta_desc: "Explore the GetClientServiceAccountUser function of the openid modul
 This data source can be used to fetch information about the service account user that is associated with an OpenID client
 that has service accounts enabled.
 
+
 {{% examples %}}
 ## Example Usage
 

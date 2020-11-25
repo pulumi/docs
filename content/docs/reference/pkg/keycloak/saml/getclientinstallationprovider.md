@@ -12,6 +12,7 @@ meta_desc: "Explore the GetClientInstallationProvider function of the saml modul
 
 This data source can be used to retrieve Installation Provider of a SAML Client.
 
+
 {{% examples %}}
 ## Example Usage
 

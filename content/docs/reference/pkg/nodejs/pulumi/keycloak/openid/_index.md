@@ -3,7 +3,7 @@ title: "Module openid"
 title_tag: "Module openid | Package @pulumi/keycloak | Node.js SDK"
 linktitle: "openid"
 meta_desc: "Explore members of the openid module in the @pulumi/keycloak package."
-git_sha: "ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec"
+git_sha: "2fb38fb228936f63925eba4ba61d995ae0c597ea"
 block_external_search_index: true
 ---
 
@@ -117,7 +117,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="AudienceProtocolMapper" data-link-title="AudienceProtocolMapper">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L67">
         Resource <strong>AudienceProtocolMapper</strong>
     </a>
 </h3>
@@ -171,8 +171,20 @@ const audienceMapper = new keycloak.openid.AudienceProtocolMapper("audienceMappe
 });
 ```
 
+#### Import
+
+Protocol mappers can be imported using one of the following formats- Client`{{realm_id}}/client/{{client_keycloak_id}}/{{protocol_mapper_id}}` - Client Scope`{{realm_id}}/client-scope/{{client_scope_keycloak_id}}/{{protocol_mapper_id}}` Examplebash
+
+```sh
+ $ pulumi import keycloak:openid/audienceProtocolMapper:AudienceProtocolMapper audience_mapper my-realm/client/a7202154-8793-4656-b655-1dd18c181e14/71602afa-f7d1-4788-8c49-ef8fd00af0f4
+```
+
+```sh
+ $ pulumi import keycloak:openid/audienceProtocolMapper:AudienceProtocolMapper audience_mapper my-realm/client-scope/b799ea7e-73ee-4a73-990a-1eafebe8e20a/71602afa-f7d1-4788-8c49-ef8fd00af0f4
+```
+
 <h4 class="pdoc-member-header" id="AudienceProtocolMapper-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L114"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L126"> <b>constructor</b></a>
 </h4>
 
 
@@ -186,7 +198,7 @@ Create a AudienceProtocolMapper resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapper-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L65">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L77">method <b>get</b></a>
 </h4>
 
 
@@ -197,14 +209,14 @@ Get an existing AudienceProtocolMapper resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapper-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L55">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L67">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapper-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L76">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L88">method <b>isInstance</b></a>
 </h4>
 
 
@@ -215,7 +227,7 @@ Returns true if the given object is an instance of AudienceProtocolMapper.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapper-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L86">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L98">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToAccessToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -223,7 +235,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Indicates if the audience should be included in the `aud` claim for the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapper-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L90">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L102">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToIdToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -231,7 +243,7 @@ Indicates if the audience should be included in the `aud` claim for the id token
 Indicates if the audience should be included in the `aud` claim for the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapper-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L94">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L106">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -239,7 +251,7 @@ Indicates if the audience should be included in the `aud` claim for the id token
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapper-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L98">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L110">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientScopeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -247,7 +259,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapper-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L55">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L67">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -256,7 +268,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapper-includedClientAudience">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L102">property <b>includedClientAudience</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L114">property <b>includedClientAudience</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>includedClientAudience: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -264,7 +276,7 @@ deployments and may be missing (undefined) during planning phases.
 A client ID to include within the token's `aud` claim. Conflicts with `includedCustomAudience`. One of `includedClientAudience` or `includedCustomAudience` must be specified.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapper-includedCustomAudience">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L106">property <b>includedCustomAudience</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L118">property <b>includedCustomAudience</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>includedCustomAudience: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -272,7 +284,7 @@ A client ID to include within the token's `aud` claim. Conflicts with `includedC
 A custom audience to include within the token's `aud` claim. Conflicts with `includedClientAudience`. One of `includedClientAudience` or `includedCustomAudience` must be specified.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapper-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L110">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L122">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -280,7 +292,7 @@ A custom audience to include within the token's `aud` claim. Conflicts with `inc
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapper-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L114">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L126">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -288,7 +300,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapper-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L55">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L67">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -297,7 +309,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Client" data-link-title="Client">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L43">
         Resource <strong>Client</strong>
     </a>
 </h3>
@@ -330,8 +342,16 @@ const openidClient = new keycloak.openid.Client("openidClient", {
 });
 ```
 
+#### Import
+
+Clients can be imported using the format `{{realm_id}}/{{client_keycloak_id}}`, where `client_keycloak_id` is the unique ID that Keycloak assigns to the client upon creation. This value can be found in the URI when editing this client in the GUI, and is typically a GUID. Examplebash
+
+```sh
+ $ pulumi import keycloak:openid/client:Client openid_client my-realm/dcbc4c73-e478-4928-ae2e-d5e420223352
+```
+
 <h4 class="pdoc-member-header" id="Client-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L169"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L176"> <b>constructor</b></a>
 </h4>
 
 
@@ -345,7 +365,7 @@ Create a Client resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Client-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -356,14 +376,14 @@ Get an existing Client resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Client-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L43">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Client-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -374,7 +394,7 @@ Returns true if the given object is an instance of Client.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Client-accessTokenLifespan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L67">property <b>accessTokenLifespan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L74">property <b>accessTokenLifespan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessTokenLifespan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -382,7 +402,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The amount of time in seconds before an access token expires. This will override the default for the realm.
 
 <h4 class="pdoc-member-header" id="Client-accessType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L71">property <b>accessType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L78">property <b>accessType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -390,7 +410,7 @@ The amount of time in seconds before an access token expires. This will override
 Specifies the type of client, which can be one of the following:
 
 <h4 class="pdoc-member-header" id="Client-adminUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L75">property <b>adminUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L82">property <b>adminUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>adminUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -398,7 +418,7 @@ Specifies the type of client, which can be one of the following:
 URL to the admin interface of the client.
 
 <h4 class="pdoc-member-header" id="Client-authenticationFlowBindingOverrides">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L79">property <b>authenticationFlowBindingOverrides</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L86">property <b>authenticationFlowBindingOverrides</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authenticationFlowBindingOverrides: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#ClientAuthenticationFlowBindingOverrides'>ClientAuthenticationFlowBindingOverrides</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -406,7 +426,7 @@ URL to the admin interface of the client.
 Override realm authentication flow bindings
 
 <h4 class="pdoc-member-header" id="Client-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L83">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L90">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#ClientAuthorization'>ClientAuthorization</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -414,7 +434,7 @@ Override realm authentication flow bindings
 When this block is present, fine-grained authorization will be enabled for this client. The client's `accessType` must be `CONFIDENTIAL`, and `serviceAccountsEnabled` must be `true`. This block has the following arguments:
 
 <h4 class="pdoc-member-header" id="Client-baseUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L87">property <b>baseUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L94">property <b>baseUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>baseUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -422,7 +442,7 @@ When this block is present, fine-grained authorization will be enabled for this 
 Default URL to use when the auth server needs to redirect or link back to the client.
 
 <h4 class="pdoc-member-header" id="Client-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L91">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L98">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -430,7 +450,7 @@ Default URL to use when the auth server needs to redirect or link back to the cl
 The Client ID for this client, referenced in the URI during authentication and in issued tokens.
 
 <h4 class="pdoc-member-header" id="Client-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L95">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L102">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -438,7 +458,7 @@ The Client ID for this client, referenced in the URI during authentication and i
 The secret for clients with an `accessType` of `CONFIDENTIAL` or `BEARER-ONLY`. This value is sensitive and should be treated with the same care as a password. If omitted, this will be generated by Keycloak.
 
 <h4 class="pdoc-member-header" id="Client-consentRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L99">property <b>consentRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L106">property <b>consentRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>consentRequired: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -446,7 +466,7 @@ The secret for clients with an `accessType` of `CONFIDENTIAL` or `BEARER-ONLY`. 
 When `true`, users have to consent to client access.
 
 <h4 class="pdoc-member-header" id="Client-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L103">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L110">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -454,7 +474,7 @@ When `true`, users have to consent to client access.
 The description of this client in the GUI.
 
 <h4 class="pdoc-member-header" id="Client-directAccessGrantsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L107">property <b>directAccessGrantsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L114">property <b>directAccessGrantsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>directAccessGrantsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -462,7 +482,7 @@ The description of this client in the GUI.
 When `true`, the OAuth2 Resource Owner Password Grant will be enabled for this client. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Client-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L111">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L118">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -470,7 +490,7 @@ When `true`, the OAuth2 Resource Owner Password Grant will be enabled for this c
 When `false`, this client will not be able to initiate a login or obtain access tokens. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="Client-excludeSessionStateFromAuthResponse">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L115">property <b>excludeSessionStateFromAuthResponse</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L122">property <b>excludeSessionStateFromAuthResponse</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>excludeSessionStateFromAuthResponse: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -478,7 +498,7 @@ When `false`, this client will not be able to initiate a login or obtain access 
 When `true`, the parameter `sessionState` will not be included in OpenID Connect Authentication Response.
 
 <h4 class="pdoc-member-header" id="Client-fullScopeAllowed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L119">property <b>fullScopeAllowed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L126">property <b>fullScopeAllowed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fullScopeAllowed: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -486,7 +506,7 @@ When `true`, the parameter `sessionState` will not be included in OpenID Connect
 Allow to include all roles mappings in the access token.
 
 <h4 class="pdoc-member-header" id="Client-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L43">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -495,7 +515,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Client-implicitFlowEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L123">property <b>implicitFlowEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L130">property <b>implicitFlowEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>implicitFlowEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -503,7 +523,7 @@ deployments and may be missing (undefined) during planning phases.
 When `true`, the OAuth2 Implicit Grant will be enabled for this client. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Client-loginTheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L127">property <b>loginTheme</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L134">property <b>loginTheme</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loginTheme: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -511,7 +531,7 @@ When `true`, the OAuth2 Implicit Grant will be enabled for this client. Defaults
 The client login theme. This will override the default theme for the realm.
 
 <h4 class="pdoc-member-header" id="Client-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L131">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L138">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -519,7 +539,7 @@ The client login theme. This will override the default theme for the realm.
 The display name of this client in the GUI.
 
 <h4 class="pdoc-member-header" id="Client-pkceCodeChallengeMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L135">property <b>pkceCodeChallengeMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L142">property <b>pkceCodeChallengeMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pkceCodeChallengeMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -527,7 +547,7 @@ The display name of this client in the GUI.
 The challenge method to use for Proof Key for Code Exchange. Can be either `plain` or `S256` or set to empty value ``.
 
 <h4 class="pdoc-member-header" id="Client-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L139">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L146">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -535,7 +555,7 @@ The challenge method to use for Proof Key for Code Exchange. Can be either `plai
 The realm this client is attached to.
 
 <h4 class="pdoc-member-header" id="Client-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L143">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L150">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -543,7 +563,7 @@ The realm this client is attached to.
 (Computed) When authorization is enabled for this client, this attribute is the unique ID for the client (the same value as the `.id` attribute).
 
 <h4 class="pdoc-member-header" id="Client-rootUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L147">property <b>rootUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L154">property <b>rootUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rootUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -551,7 +571,7 @@ The realm this client is attached to.
 When specified, this URL is prepended to any relative URLs found within `validRedirectUris`, `webOrigins`, and `adminUrl`. NOTE: Due to limitations in the Keycloak API, when the `rootUrl` attribute is used, the `validRedirectUris`, `webOrigins`, and `adminUrl` attributes will be required.
 
 <h4 class="pdoc-member-header" id="Client-serviceAccountUserId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L151">property <b>serviceAccountUserId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L158">property <b>serviceAccountUserId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceAccountUserId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -559,7 +579,7 @@ When specified, this URL is prepended to any relative URLs found within `validRe
 (Computed) When service accounts are enabled for this client, this attribute is the unique ID for the Keycloak user that represents this service account.
 
 <h4 class="pdoc-member-header" id="Client-serviceAccountsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L155">property <b>serviceAccountsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L162">property <b>serviceAccountsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceAccountsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -567,7 +587,7 @@ When specified, this URL is prepended to any relative URLs found within `validRe
 When `true`, the OAuth2 Client Credentials grant will be enabled for this client. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Client-standardFlowEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L159">property <b>standardFlowEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L166">property <b>standardFlowEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>standardFlowEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -575,7 +595,7 @@ When `true`, the OAuth2 Client Credentials grant will be enabled for this client
 When `true`, the OAuth2 Authorization Code Grant will be enabled for this client. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Client-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L43">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -584,7 +604,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Client-validRedirectUris">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L165">property <b>validRedirectUris</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L172">property <b>validRedirectUris</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>validRedirectUris: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -594,7 +614,7 @@ wildcards in the form of an asterisk can be used here. This attribute must be se
 is set to `true`.
 
 <h4 class="pdoc-member-header" id="Client-webOrigins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L169">property <b>webOrigins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L176">property <b>webOrigins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>webOrigins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -602,14 +622,14 @@ is set to `true`.
 A list of allowed CORS origins. `+` can be used to permit all valid redirect URIs, and `*` can be used to permit all origins.
 
 <h3 class="pdoc-module-header" id="ClientAggregatePolicy" data-link-title="ClientAggregatePolicy">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L7">
         Resource <strong>ClientAggregatePolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ClientAggregatePolicy</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="ClientAggregatePolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L41"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L41"> <b>constructor</b></a>
 </h4>
 
 
@@ -623,7 +643,7 @@ Create a ClientAggregatePolicy resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClientAggregatePolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -634,14 +654,14 @@ Get an existing ClientAggregatePolicy resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClientAggregatePolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClientAggregatePolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -652,17 +672,17 @@ Returns true if the given object is an instance of ClientAggregatePolicy.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClientAggregatePolicy-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L35">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L35">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>decisionStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAggregatePolicy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L36">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L36">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAggregatePolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -671,32 +691,32 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClientAggregatePolicy-logic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L37">property <b>logic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L37">property <b>logic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAggregatePolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L38">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L38">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAggregatePolicy-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L39">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L39">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAggregatePolicy-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L40">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L40">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAggregatePolicy-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L41">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L41">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAggregatePolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -705,14 +725,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ClientAuthorizationPermission" data-link-title="ClientAuthorizationPermission">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L7">
         Resource <strong>ClientAuthorizationPermission</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ClientAuthorizationPermission</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermission-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L43"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L43"> <b>constructor</b></a>
 </h4>
 
 
@@ -726,7 +746,7 @@ Create a ClientAuthorizationPermission resource with the given unique name, argu
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermission-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -737,14 +757,14 @@ Get an existing ClientAuthorizationPermission resource's state with the given na
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermission-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermission-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -755,17 +775,17 @@ Returns true if the given object is an instance of ClientAuthorizationPermission
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermission-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L35">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L35">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>decisionStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermission-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L36">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L36">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermission-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -774,42 +794,42 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermission-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L37">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L37">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermission-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L38">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L38">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermission-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L39">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L39">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermission-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L40">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L40">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermission-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L41">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L41">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermission-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L42">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L42">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermission-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L43">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L43">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermission-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -818,14 +838,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ClientAuthorizationResource" data-link-title="ClientAuthorizationResource">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L7">
         Resource <strong>ClientAuthorizationResource</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ClientAuthorizationResource</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResource-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L44"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L44"> <b>constructor</b></a>
 </h4>
 
 
@@ -839,7 +859,7 @@ Create a ClientAuthorizationResource resource with the given unique name, argume
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClientAuthorizationResource-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -850,14 +870,14 @@ Get an existing ClientAuthorizationResource resource's state with the given name
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClientAuthorizationResource-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClientAuthorizationResource-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -868,22 +888,22 @@ Returns true if the given object is an instance of ClientAuthorizationResource. 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClientAuthorizationResource-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L35">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L35">property <b>attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>attributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResource-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L36">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L36">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResource-iconUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L37">property <b>iconUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L37">property <b>iconUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iconUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResource-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -892,42 +912,42 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClientAuthorizationResource-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L38">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L38">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResource-ownerManagedAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L39">property <b>ownerManagedAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L39">property <b>ownerManagedAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ownerManagedAccess: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResource-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L40">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L40">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResource-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L41">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L41">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResource-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L42">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L42">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResource-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L43">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L43">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResource-uris">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L44">property <b>uris</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L44">property <b>uris</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uris: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResource-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -936,14 +956,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ClientAuthorizationScope" data-link-title="ClientAuthorizationScope">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L7">
         Resource <strong>ClientAuthorizationScope</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ClientAuthorizationScope</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationScope-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L39"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L39"> <b>constructor</b></a>
 </h4>
 
 
@@ -957,7 +977,7 @@ Create a ClientAuthorizationScope resource with the given unique name, arguments
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClientAuthorizationScope-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -968,14 +988,14 @@ Get an existing ClientAuthorizationScope resource's state with the given name, I
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClientAuthorizationScope-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClientAuthorizationScope-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -986,17 +1006,17 @@ Returns true if the given object is an instance of ClientAuthorizationScope.  Th
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClientAuthorizationScope-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L35">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L35">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationScope-iconUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L36">property <b>iconUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L36">property <b>iconUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iconUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationScope-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1005,22 +1025,22 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClientAuthorizationScope-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L37">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L37">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationScope-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L38">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L38">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationScope-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L39">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L39">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationScope-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1029,14 +1049,19 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ClientDefaultScopes" data-link-title="ClientDefaultScopes">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientDefaultScopes.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientDefaultScopes.ts#L12">
         Resource <strong>ClientDefaultScopes</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ClientDefaultScopes</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+#### Import
+
+This resource does not support import. Instead of importing, feel free to create this resource as if it did not already exist on the server.
+
 <h4 class="pdoc-member-header" id="ClientDefaultScopes-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientDefaultScopes.ts#L46"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientDefaultScopes.ts#L51"> <b>constructor</b></a>
 </h4>
 
 
@@ -1050,7 +1075,7 @@ Create a ClientDefaultScopes resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClientDefaultScopes-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientDefaultScopes.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientDefaultScopes.ts#L22">method <b>get</b></a>
 </h4>
 
 
@@ -1061,14 +1086,14 @@ Get an existing ClientDefaultScopes resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClientDefaultScopes-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientDefaultScopes.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientDefaultScopes.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClientDefaultScopes-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientDefaultScopes.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientDefaultScopes.ts#L33">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1079,7 +1104,7 @@ Returns true if the given object is an instance of ClientDefaultScopes.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClientDefaultScopes-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientDefaultScopes.ts#L38">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientDefaultScopes.ts#L43">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1087,7 +1112,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the client to attach default scopes to. Note that this is the unique ID of the client generated by Keycloak.
 
 <h4 class="pdoc-member-header" id="ClientDefaultScopes-defaultScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientDefaultScopes.ts#L42">property <b>defaultScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientDefaultScopes.ts#L47">property <b>defaultScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultScopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1095,7 +1120,7 @@ The ID of the client to attach default scopes to. Note that this is the unique I
 An array of client scope names to attach to this client.
 
 <h4 class="pdoc-member-header" id="ClientDefaultScopes-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientDefaultScopes.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientDefaultScopes.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1104,7 +1129,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClientDefaultScopes-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientDefaultScopes.ts#L46">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientDefaultScopes.ts#L51">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1112,7 +1137,7 @@ deployments and may be missing (undefined) during planning phases.
 The realm this client and scopes exists in.
 
 <h4 class="pdoc-member-header" id="ClientDefaultScopes-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientDefaultScopes.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientDefaultScopes.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1121,14 +1146,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ClientGroupPolicy" data-link-title="ClientGroupPolicy">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L8">
         Resource <strong>ClientGroupPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ClientGroupPolicy</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L44"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L43"> <b>constructor</b></a>
 </h4>
 
 
@@ -1142,7 +1167,7 @@ Create a ClientGroupPolicy resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClientGroupPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L18">method <b>get</b></a>
 </h4>
 
 
@@ -1153,14 +1178,14 @@ Get an existing ClientGroupPolicy resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClientGroupPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L8">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClientGroupPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L29">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1171,27 +1196,27 @@ Returns true if the given object is an instance of ClientGroupPolicy.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClientGroupPolicy-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L37">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L36">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>decisionStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L38">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L37">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicy-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L39">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L38">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#ClientGroupPolicyGroup'>ClientGroupPolicyGroup</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicy-groupsClaim">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L40">property <b>groupsClaim</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L39">property <b>groupsClaim</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupsClaim: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L8">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1200,27 +1225,27 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClientGroupPolicy-logic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L41">property <b>logic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L40">property <b>logic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L42">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L41">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicy-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L43">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L42">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicy-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L44">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L43">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L8">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1229,14 +1254,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ClientJsPolicy" data-link-title="ClientJsPolicy">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L7">
         Resource <strong>ClientJsPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ClientJsPolicy</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="ClientJsPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L42"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L42"> <b>constructor</b></a>
 </h4>
 
 
@@ -1250,7 +1275,7 @@ Create a ClientJsPolicy resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClientJsPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -1261,14 +1286,14 @@ Get an existing ClientJsPolicy resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClientJsPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClientJsPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1279,22 +1304,22 @@ Returns true if the given object is an instance of ClientJsPolicy.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClientJsPolicy-code">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L35">property <b>code</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L35">property <b>code</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>code: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientJsPolicy-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L36">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L36">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>decisionStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientJsPolicy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L37">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L37">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientJsPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1303,32 +1328,32 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClientJsPolicy-logic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L38">property <b>logic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L38">property <b>logic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientJsPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L39">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L39">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientJsPolicy-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L40">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L40">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientJsPolicy-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L41">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L41">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientJsPolicy-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L42">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L42">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientJsPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1337,14 +1362,19 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ClientOptionalScopes" data-link-title="ClientOptionalScopes">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientOptionalScopes.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientOptionalScopes.ts#L12">
         Resource <strong>ClientOptionalScopes</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ClientOptionalScopes</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+#### Import
+
+This resource does not support import. Instead of importing, feel free to create this resource as if it did not already exist on the server.
+
 <h4 class="pdoc-member-header" id="ClientOptionalScopes-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientOptionalScopes.ts#L46"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientOptionalScopes.ts#L51"> <b>constructor</b></a>
 </h4>
 
 
@@ -1358,7 +1388,7 @@ Create a ClientOptionalScopes resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClientOptionalScopes-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientOptionalScopes.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientOptionalScopes.ts#L22">method <b>get</b></a>
 </h4>
 
 
@@ -1369,14 +1399,14 @@ Get an existing ClientOptionalScopes resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClientOptionalScopes-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientOptionalScopes.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientOptionalScopes.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClientOptionalScopes-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientOptionalScopes.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientOptionalScopes.ts#L33">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1387,7 +1417,7 @@ Returns true if the given object is an instance of ClientOptionalScopes.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClientOptionalScopes-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientOptionalScopes.ts#L38">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientOptionalScopes.ts#L43">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1395,7 +1425,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the client to attach optional scopes to. Note that this is the unique ID of the client generated by Keycloak.
 
 <h4 class="pdoc-member-header" id="ClientOptionalScopes-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientOptionalScopes.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientOptionalScopes.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1404,7 +1434,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClientOptionalScopes-optionalScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientOptionalScopes.ts#L42">property <b>optionalScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientOptionalScopes.ts#L47">property <b>optionalScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>optionalScopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1412,7 +1442,7 @@ deployments and may be missing (undefined) during planning phases.
 An array of client scope names to attach to this client as optional scopes.
 
 <h4 class="pdoc-member-header" id="ClientOptionalScopes-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientOptionalScopes.ts#L46">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientOptionalScopes.ts#L51">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1420,7 +1450,7 @@ An array of client scope names to attach to this client as optional scopes.
 The realm this client and scopes exists in.
 
 <h4 class="pdoc-member-header" id="ClientOptionalScopes-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientOptionalScopes.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientOptionalScopes.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1429,14 +1459,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ClientPolicy" data-link-title="ClientPolicy">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L7">
         Resource <strong>ClientPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ClientPolicy</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="ClientPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L41"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L41"> <b>constructor</b></a>
 </h4>
 
 
@@ -1450,7 +1480,7 @@ Create a ClientPolicy resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClientPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -1461,14 +1491,14 @@ Get an existing ClientPolicy resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClientPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClientPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1479,22 +1509,22 @@ Returns true if the given object is an instance of ClientPolicy.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClientPolicy-clients">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L35">property <b>clients</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L35">property <b>clients</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clients: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientPolicy-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L36">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L36">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>decisionStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientPolicy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L37">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L37">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1503,27 +1533,27 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClientPolicy-logic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L38">property <b>logic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L38">property <b>logic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L39">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L39">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientPolicy-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L40">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L40">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientPolicy-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L41">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L41">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1532,14 +1562,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ClientRolePolicy" data-link-title="ClientRolePolicy">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L8">
         Resource <strong>ClientRolePolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ClientRolePolicy</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L44"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L43"> <b>constructor</b></a>
 </h4>
 
 
@@ -1553,7 +1583,7 @@ Create a ClientRolePolicy resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClientRolePolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L18">method <b>get</b></a>
 </h4>
 
 
@@ -1564,14 +1594,14 @@ Get an existing ClientRolePolicy resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClientRolePolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L8">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClientRolePolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L29">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1582,17 +1612,17 @@ Returns true if the given object is an instance of ClientRolePolicy.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClientRolePolicy-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L37">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L36">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>decisionStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L38">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L37">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L8">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1601,37 +1631,37 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClientRolePolicy-logic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L39">property <b>logic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L38">property <b>logic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L40">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L39">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicy-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L41">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L40">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicy-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L42">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L41">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicy-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L43">property <b>roles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L42">property <b>roles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#ClientRolePolicyRole'>ClientRolePolicyRole</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicy-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L44">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L43">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L8">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1640,7 +1670,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ClientScope" data-link-title="ClientScope">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L39">
         Resource <strong>ClientScope</strong>
     </a>
 </h3>
@@ -1670,8 +1700,16 @@ const openidClientScope = new keycloak.openid.ClientScope("openidClientScope", {
 });
 ```
 
+#### Import
+
+Client scopes can be imported using the format `{{realm_id}}/{{client_scope_id}}`, where `client_scope_id` is the unique ID that Keycloak assigns to the client scope upon creation. This value can be found in the URI when editing this client scope in the GUI, and is typically a GUID. Examplebash
+
+```sh
+ $ pulumi import keycloak:openid/clientScope:ClientScope openid_client_scope my-realm/8e8f7fe1-df9b-40ed-bed3-4597aa0dac52
+```
+
 <h4 class="pdoc-member-header" id="ClientScope-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L82"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L90"> <b>constructor</b></a>
 </h4>
 
 
@@ -1685,7 +1723,7 @@ Create a ClientScope resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClientScope-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -1696,14 +1734,14 @@ Get an existing ClientScope resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClientScope-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClientScope-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1714,7 +1752,7 @@ Returns true if the given object is an instance of ClientScope.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClientScope-consentScreenText">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L62">property <b>consentScreenText</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L70">property <b>consentScreenText</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>consentScreenText: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1722,7 +1760,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 When set, a consent screen will be displayed to users authenticating to clients with this scope attached. The consent screen will display the string value of this attribute.
 
 <h4 class="pdoc-member-header" id="ClientScope-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L66">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L74">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1730,7 +1768,7 @@ When set, a consent screen will be displayed to users authenticating to clients 
 The description of this client scope in the GUI.
 
 <h4 class="pdoc-member-header" id="ClientScope-guiOrder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L70">property <b>guiOrder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L78">property <b>guiOrder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>guiOrder: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1738,7 +1776,7 @@ The description of this client scope in the GUI.
 Specify order of the client scope in GUI (such as in Consent page) as integer.
 
 <h4 class="pdoc-member-header" id="ClientScope-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1747,7 +1785,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClientScope-includeInTokenScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L74">property <b>includeInTokenScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L82">property <b>includeInTokenScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>includeInTokenScope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1755,7 +1793,7 @@ deployments and may be missing (undefined) during planning phases.
 When `true`, the name of this client scope will be added to the access token property 'scope' as well as to the Token Introspection Endpoint response.
 
 <h4 class="pdoc-member-header" id="ClientScope-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L78">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L86">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1763,7 +1801,7 @@ When `true`, the name of this client scope will be added to the access token pro
 The display name of this client scope in the GUI.
 
 <h4 class="pdoc-member-header" id="ClientScope-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L82">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L90">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1771,7 +1809,7 @@ The display name of this client scope in the GUI.
 The realm this client scope belongs to.
 
 <h4 class="pdoc-member-header" id="ClientScope-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1780,7 +1818,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ClientServiceAccountRealmRole" data-link-title="ClientServiceAccountRealmRole">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L44">
         Resource <strong>ClientServiceAccountRealmRole</strong>
     </a>
 </h3>
@@ -1815,8 +1853,16 @@ const clientServiceAccountRole = new keycloak.openid.ClientServiceAccountRealmRo
 });
 ```
 
+#### Import
+
+This resource can be imported using the format `{{realmId}}/{{serviceAccountUserId}}/{{roleId}}`. Examplebash
+
+```sh
+ $ pulumi import keycloak:openid/clientServiceAccountRealmRole:ClientServiceAccountRealmRole client_service_account_role my-realm/489ba513-1ceb-49ba-ae0b-1ab1f5099ebf/c7230ab7-8e4e-4135-995d-e81b50696ad8
+```
+
 <h4 class="pdoc-member-header" id="ClientServiceAccountRealmRole-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L83"> <b>constructor</b></a>
 </h4>
 
 
@@ -1830,7 +1876,7 @@ Create a ClientServiceAccountRealmRole resource with the given unique name, argu
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRealmRole-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -1841,14 +1887,14 @@ Get an existing ClientServiceAccountRealmRole resource's state with the given na
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRealmRole-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRealmRole-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1859,7 +1905,7 @@ Returns true if the given object is an instance of ClientServiceAccountRealmRole
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRealmRole-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1868,7 +1914,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRealmRole-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L67">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L75">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1876,7 +1922,7 @@ deployments and may be missing (undefined) during planning phases.
 The realm that the client and role belong to.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRealmRole-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L71">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L79">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1884,7 +1930,7 @@ The realm that the client and role belong to.
 The name of the role that is assigned.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRealmRole-serviceAccountUserId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L75">property <b>serviceAccountUserId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L83">property <b>serviceAccountUserId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceAccountUserId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1892,7 +1938,7 @@ The name of the role that is assigned.
 The id of the service account that is assigned the role (the service account of the client that "consumes" the role).
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRealmRole-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1901,7 +1947,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ClientServiceAccountRole" data-link-title="ClientServiceAccountRole">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRole.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRole.ts#L52">
         Resource <strong>ClientServiceAccountRole</strong>
     </a>
 </h3>
@@ -1944,8 +1990,16 @@ const client2ServiceAccountRole = new keycloak.openid.ClientServiceAccountRole("
 });
 ```
 
+#### Import
+
+This resource can be imported using the format `{{realmId}}/{{serviceAccountUserId}}/{{clientId}}/{{roleId}}`. Examplebash
+
+```sh
+ $ pulumi import keycloak:openid/clientServiceAccountRole:ClientServiceAccountRole client2_service_account_role my-realm/489ba513-1ceb-49ba-ae0b-1ab1f5099ebf/baf01820-0f8b-4494-9be2-fb3bc8a397a4/c7230ab7-8e4e-4135-995d-e81b50696ad8
+```
+
 <h4 class="pdoc-member-header" id="ClientServiceAccountRole-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRole.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRole.ts#L95"> <b>constructor</b></a>
 </h4>
 
 
@@ -1959,7 +2013,7 @@ Create a ClientServiceAccountRole resource with the given unique name, arguments
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRole-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRole.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRole.ts#L62">method <b>get</b></a>
 </h4>
 
 
@@ -1970,14 +2024,14 @@ Get an existing ClientServiceAccountRole resource's state with the given name, I
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRole-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRole.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRole.ts#L52">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRole-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRole.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRole.ts#L73">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1988,7 +2042,7 @@ Returns true if the given object is an instance of ClientServiceAccountRole.  Th
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRole-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRole.ts#L75">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRole.ts#L83">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1996,7 +2050,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The id of the client that provides the role.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRole-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRole.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRole.ts#L52">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2005,7 +2059,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRole-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRole.ts#L79">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRole.ts#L87">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2013,7 +2067,7 @@ deployments and may be missing (undefined) during planning phases.
 The realm the clients and roles belong to.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRole-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRole.ts#L83">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRole.ts#L91">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2021,7 +2075,7 @@ The realm the clients and roles belong to.
 The name of the role that is assigned.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRole-serviceAccountUserId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRole.ts#L87">property <b>serviceAccountUserId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRole.ts#L95">property <b>serviceAccountUserId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceAccountUserId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2029,7 +2083,7 @@ The name of the role that is assigned.
 The id of the service account that is assigned the role (the service account of the client that "consumes" the role).
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRole-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRole.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRole.ts#L52">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2038,14 +2092,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ClientTimePolicy" data-link-title="ClientTimePolicy">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L7">
         Resource <strong>ClientTimePolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ClientTimePolicy</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L52"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L52"> <b>constructor</b></a>
 </h4>
 
 
@@ -2059,7 +2113,7 @@ Create a ClientTimePolicy resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClientTimePolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -2070,14 +2124,14 @@ Get an existing ClientTimePolicy resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClientTimePolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClientTimePolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2088,37 +2142,37 @@ Returns true if the given object is an instance of ClientTimePolicy.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClientTimePolicy-dayMonth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L35">property <b>dayMonth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L35">property <b>dayMonth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dayMonth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicy-dayMonthEnd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L36">property <b>dayMonthEnd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L36">property <b>dayMonthEnd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dayMonthEnd: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicy-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L37">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L37">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>decisionStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L38">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L38">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicy-hour">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L39">property <b>hour</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L39">property <b>hour</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hour: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicy-hourEnd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L40">property <b>hourEnd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L40">property <b>hourEnd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hourEnd: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2127,57 +2181,57 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClientTimePolicy-logic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L41">property <b>logic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L41">property <b>logic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicy-minute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L42">property <b>minute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L42">property <b>minute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicy-minuteEnd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L43">property <b>minuteEnd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L43">property <b>minuteEnd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minuteEnd: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicy-month">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L44">property <b>month</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L44">property <b>month</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>month: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicy-monthEnd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L45">property <b>monthEnd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L45">property <b>monthEnd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monthEnd: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L46">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L46">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicy-notBefore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L47">property <b>notBefore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L47">property <b>notBefore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notBefore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicy-notOnOrAfter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L48">property <b>notOnOrAfter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L48">property <b>notOnOrAfter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notOnOrAfter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicy-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L49">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L49">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicy-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L50">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L50">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2186,24 +2240,24 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ClientTimePolicy-year">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L51">property <b>year</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L51">property <b>year</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>year: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicy-yearEnd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L52">property <b>yearEnd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L52">property <b>yearEnd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>yearEnd: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClientUserPolicy" data-link-title="ClientUserPolicy">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L7">
         Resource <strong>ClientUserPolicy</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ClientUserPolicy</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="ClientUserPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L41"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L41"> <b>constructor</b></a>
 </h4>
 
 
@@ -2217,7 +2271,7 @@ Create a ClientUserPolicy resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ClientUserPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -2228,14 +2282,14 @@ Get an existing ClientUserPolicy resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ClientUserPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ClientUserPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2246,17 +2300,17 @@ Returns true if the given object is an instance of ClientUserPolicy.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ClientUserPolicy-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L35">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L35">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>decisionStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUserPolicy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L36">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L36">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUserPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2265,27 +2319,27 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ClientUserPolicy-logic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L37">property <b>logic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L37">property <b>logic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUserPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L38">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L38">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUserPolicy-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L39">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L39">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUserPolicy-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L40">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L40">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUserPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2294,12 +2348,12 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ClientUserPolicy-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L41">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L41">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>users: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="FullNameProtocolMapper" data-link-title="FullNameProtocolMapper">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L67">
         Resource <strong>FullNameProtocolMapper</strong>
     </a>
 </h3>
@@ -2353,8 +2407,20 @@ const fullNameMapper = new keycloak.openid.FullNameProtocolMapper("fullNameMappe
 });
 ```
 
+#### Import
+
+Protocol mappers can be imported using one of the following formats- Client`{{realm_id}}/client/{{client_keycloak_id}}/{{protocol_mapper_id}}` - Client Scope`{{realm_id}}/client-scope/{{client_scope_keycloak_id}}/{{protocol_mapper_id}}` Examplebash
+
+```sh
+ $ pulumi import keycloak:openid/fullNameProtocolMapper:FullNameProtocolMapper full_name_mapper my-realm/client/a7202154-8793-4656-b655-1dd18c181e14/71602afa-f7d1-4788-8c49-ef8fd00af0f4
+```
+
+```sh
+ $ pulumi import keycloak:openid/fullNameProtocolMapper:FullNameProtocolMapper full_name_mapper my-realm/client-scope/b799ea7e-73ee-4a73-990a-1eafebe8e20a/71602afa-f7d1-4788-8c49-ef8fd00af0f4
+```
+
 <h4 class="pdoc-member-header" id="FullNameProtocolMapper-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L110"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L122"> <b>constructor</b></a>
 </h4>
 
 
@@ -2368,7 +2434,7 @@ Create a FullNameProtocolMapper resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapper-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L65">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L77">method <b>get</b></a>
 </h4>
 
 
@@ -2379,14 +2445,14 @@ Get an existing FullNameProtocolMapper resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapper-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L55">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L67">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapper-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L76">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L88">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2397,7 +2463,7 @@ Returns true if the given object is an instance of FullNameProtocolMapper.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapper-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L86">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L98">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToAccessToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2405,7 +2471,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Indicates if the user's full name should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapper-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L90">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L102">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToIdToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2413,7 +2479,7 @@ Indicates if the user's full name should be added as a claim to the access token
 Indicates if the user's full name should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapper-addToUserinfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L94">property <b>addToUserinfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L106">property <b>addToUserinfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToUserinfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2421,7 +2487,7 @@ Indicates if the user's full name should be added as a claim to the id token. De
 Indicates if the user's full name should be added as a claim to the UserInfo response body. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapper-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L98">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L110">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2429,7 +2495,7 @@ Indicates if the user's full name should be added as a claim to the UserInfo res
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapper-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L102">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L114">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientScopeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2437,7 +2503,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapper-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L55">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L67">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2446,7 +2512,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapper-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L106">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L118">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2454,7 +2520,7 @@ deployments and may be missing (undefined) during planning phases.
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapper-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L110">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L122">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2462,7 +2528,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapper-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L55">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L67">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2471,7 +2537,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="GroupMembershipProtocolMapper" data-link-title="GroupMembershipProtocolMapper">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L69">
         Resource <strong>GroupMembershipProtocolMapper</strong>
     </a>
 </h3>
@@ -2527,8 +2593,20 @@ const groupMembershipMapper = new keycloak.openid.GroupMembershipProtocolMapper(
 });
 ```
 
+#### Import
+
+Protocol mappers can be imported using one of the following formats- Client`{{realm_id}}/client/{{client_keycloak_id}}/{{protocol_mapper_id}}` - Client Scope`{{realm_id}}/client-scope/{{client_scope_keycloak_id}}/{{protocol_mapper_id}}` Examplebash
+
+```sh
+ $ pulumi import keycloak:openid/groupMembershipProtocolMapper:GroupMembershipProtocolMapper group_membership_mapper my-realm/client/a7202154-8793-4656-b655-1dd18c181e14/71602afa-f7d1-4788-8c49-ef8fd00af0f4
+```
+
+```sh
+ $ pulumi import keycloak:openid/groupMembershipProtocolMapper:GroupMembershipProtocolMapper group_membership_mapper my-realm/client-scope/b799ea7e-73ee-4a73-990a-1eafebe8e20a/71602afa-f7d1-4788-8c49-ef8fd00af0f4
+```
+
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapper-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L120"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L132"> <b>constructor</b></a>
 </h4>
 
 
@@ -2542,7 +2620,7 @@ Create a GroupMembershipProtocolMapper resource with the given unique name, argu
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapper-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L67">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L79">method <b>get</b></a>
 </h4>
 
 
@@ -2553,14 +2631,14 @@ Get an existing GroupMembershipProtocolMapper resource's state with the given na
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapper-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L57">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L69">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapper-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L78">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L90">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2571,7 +2649,7 @@ Returns true if the given object is an instance of GroupMembershipProtocolMapper
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapper-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L88">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L100">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToAccessToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2579,7 +2657,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Indicates if the property should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapper-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L92">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L104">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToIdToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2587,7 +2665,7 @@ Indicates if the property should be added as a claim to the access token. Defaul
 Indicates if the property should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapper-addToUserinfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L96">property <b>addToUserinfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L108">property <b>addToUserinfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToUserinfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2595,7 +2673,7 @@ Indicates if the property should be added as a claim to the id token. Defaults t
 Indicates if the property should be added as a claim to the UserInfo response body. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapper-claimName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L100">property <b>claimName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L112">property <b>claimName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>claimName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2603,7 +2681,7 @@ Indicates if the property should be added as a claim to the UserInfo response bo
 The name of the claim to insert into a token.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapper-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L104">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L116">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2611,7 +2689,7 @@ The name of the claim to insert into a token.
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapper-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L108">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L120">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientScopeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2619,7 +2697,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapper-fullPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L112">property <b>fullPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L124">property <b>fullPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fullPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2627,7 +2705,7 @@ The client scope this protocol mapper should be attached to. Conflicts with `cli
 Indicates whether the full path of the group including its parents will be used. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapper-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L69">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2636,7 +2714,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapper-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L116">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L128">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2644,7 +2722,7 @@ deployments and may be missing (undefined) during planning phases.
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapper-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L120">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L132">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2652,7 +2730,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapper-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L57">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L69">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2661,7 +2739,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="HardcodedClaimProtocolMapper" data-link-title="HardcodedClaimProtocolMapper">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L71">
         Resource <strong>HardcodedClaimProtocolMapper</strong>
     </a>
 </h3>
@@ -2719,8 +2797,20 @@ const hardcodedClaimMapper = new keycloak.openid.HardcodedClaimProtocolMapper("h
 });
 ```
 
+#### Import
+
+Protocol mappers can be imported using one of the following formats- Client`{{realm_id}}/client/{{client_keycloak_id}}/{{protocol_mapper_id}}` - Client Scope`{{realm_id}}/client-scope/{{client_scope_keycloak_id}}/{{protocol_mapper_id}}` Examplebash
+
+```sh
+ $ pulumi import keycloak:openid/hardcodedClaimProtocolMapper:HardcodedClaimProtocolMapper hardcoded_claim_mapper my-realm/client/a7202154-8793-4656-b655-1dd18c181e14/71602afa-f7d1-4788-8c49-ef8fd00af0f4
+```
+
+```sh
+ $ pulumi import keycloak:openid/hardcodedClaimProtocolMapper:HardcodedClaimProtocolMapper hardcoded_claim_mapper my-realm/client-scope/b799ea7e-73ee-4a73-990a-1eafebe8e20a/71602afa-f7d1-4788-8c49-ef8fd00af0f4
+```
+
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapper-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L126"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L138"> <b>constructor</b></a>
 </h4>
 
 
@@ -2734,7 +2824,7 @@ Create a HardcodedClaimProtocolMapper resource with the given unique name, argum
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapper-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L69">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L81">method <b>get</b></a>
 </h4>
 
 
@@ -2745,14 +2835,14 @@ Get an existing HardcodedClaimProtocolMapper resource's state with the given nam
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapper-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L59">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L71">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapper-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L80">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L92">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2763,7 +2853,7 @@ Returns true if the given object is an instance of HardcodedClaimProtocolMapper.
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapper-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L90">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L102">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToAccessToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2771,7 +2861,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Indicates if the property should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapper-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L94">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L106">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToIdToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2779,7 +2869,7 @@ Indicates if the property should be added as a claim to the access token. Defaul
 Indicates if the property should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapper-addToUserinfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L98">property <b>addToUserinfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L110">property <b>addToUserinfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToUserinfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2787,7 +2877,7 @@ Indicates if the property should be added as a claim to the id token. Defaults t
 Indicates if the property should be added as a claim to the UserInfo response body. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapper-claimName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L102">property <b>claimName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L114">property <b>claimName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>claimName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2795,7 +2885,7 @@ Indicates if the property should be added as a claim to the UserInfo response bo
 The name of the claim to insert into a token.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapper-claimValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L106">property <b>claimValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L118">property <b>claimValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>claimValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2803,7 +2893,7 @@ The name of the claim to insert into a token.
 The hardcoded value of the claim.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapper-claimValueType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L110">property <b>claimValueType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L122">property <b>claimValueType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>claimValueType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2811,7 +2901,7 @@ The hardcoded value of the claim.
 The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapper-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L114">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L126">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2819,7 +2909,7 @@ The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapper-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L118">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L130">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientScopeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2827,7 +2917,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapper-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L59">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2836,7 +2926,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapper-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L122">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L134">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2844,7 +2934,7 @@ deployments and may be missing (undefined) during planning phases.
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapper-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L126">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L138">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2852,7 +2942,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapper-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L59">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L71">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2861,7 +2951,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="HardcodedRoleProtocolMapper" data-link-title="HardcodedRoleProtocolMapper">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L71">
         Resource <strong>HardcodedRoleProtocolMapper</strong>
     </a>
 </h3>
@@ -2919,8 +3009,20 @@ const hardcodedRoleMapper = new keycloak.openid.HardcodedRoleProtocolMapper("har
 });
 ```
 
+#### Import
+
+Protocol mappers can be imported using one of the following formats- Client`{{realm_id}}/client/{{client_keycloak_id}}/{{protocol_mapper_id}}` - Client Scope`{{realm_id}}/client-scope/{{client_scope_keycloak_id}}/{{protocol_mapper_id}}` Examplebash
+
+```sh
+ $ pulumi import keycloak:openid/hardcodedRoleProtocolMapper:HardcodedRoleProtocolMapper hardcoded_role_mapper my-realm/client/a7202154-8793-4656-b655-1dd18c181e14/71602afa-f7d1-4788-8c49-ef8fd00af0f4
+```
+
+```sh
+ $ pulumi import keycloak:openid/hardcodedRoleProtocolMapper:HardcodedRoleProtocolMapper hardcoded_role_mapper my-realm/client-scope/b799ea7e-73ee-4a73-990a-1eafebe8e20a/71602afa-f7d1-4788-8c49-ef8fd00af0f4
+```
+
 <h4 class="pdoc-member-header" id="HardcodedRoleProtocolMapper-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L106"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L118"> <b>constructor</b></a>
 </h4>
 
 
@@ -2934,7 +3036,7 @@ Create a HardcodedRoleProtocolMapper resource with the given unique name, argume
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleProtocolMapper-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L69">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L81">method <b>get</b></a>
 </h4>
 
 
@@ -2945,14 +3047,14 @@ Get an existing HardcodedRoleProtocolMapper resource's state with the given name
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleProtocolMapper-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L59">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L71">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="HardcodedRoleProtocolMapper-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L80">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L92">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2963,7 +3065,7 @@ Returns true if the given object is an instance of HardcodedRoleProtocolMapper. 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleProtocolMapper-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L90">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L102">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2971,7 +3073,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleProtocolMapper-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L94">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L106">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientScopeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2979,7 +3081,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleProtocolMapper-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L59">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2988,7 +3090,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleProtocolMapper-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L98">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L110">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2996,7 +3098,7 @@ deployments and may be missing (undefined) during planning phases.
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleProtocolMapper-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L102">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L114">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3004,7 +3106,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleProtocolMapper-roleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L106">property <b>roleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L118">property <b>roleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3012,7 +3114,7 @@ The realm this protocol mapper exists within.
 The ID of the role to map to an access token.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleProtocolMapper-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L59">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L71">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3021,7 +3123,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="UserAttributeProtocolMapper" data-link-title="UserAttributeProtocolMapper">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L71">
         Resource <strong>UserAttributeProtocolMapper</strong>
     </a>
 </h3>
@@ -3079,8 +3181,20 @@ const userAttributeMapper = new keycloak.openid.UserAttributeProtocolMapper("use
 });
 ```
 
+#### Import
+
+Protocol mappers can be imported using one of the following formats- Client`{{realm_id}}/client/{{client_keycloak_id}}/{{protocol_mapper_id}}` - Client Scope`{{realm_id}}/client-scope/{{client_scope_keycloak_id}}/{{protocol_mapper_id}}` Examplebash
+
+```sh
+ $ pulumi import keycloak:openid/userAttributeProtocolMapper:UserAttributeProtocolMapper user_attribute_mapper my-realm/client/a7202154-8793-4656-b655-1dd18c181e14/71602afa-f7d1-4788-8c49-ef8fd00af0f4
+```
+
+```sh
+ $ pulumi import keycloak:openid/userAttributeProtocolMapper:UserAttributeProtocolMapper user_attribute_mapper my-realm/client-scope/b799ea7e-73ee-4a73-990a-1eafebe8e20a/71602afa-f7d1-4788-8c49-ef8fd00af0f4
+```
+
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L134"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L146"> <b>constructor</b></a>
 </h4>
 
 
@@ -3094,7 +3208,7 @@ Create a UserAttributeProtocolMapper resource with the given unique name, argume
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L69">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L81">method <b>get</b></a>
 </h4>
 
 
@@ -3105,14 +3219,14 @@ Get an existing UserAttributeProtocolMapper resource's state with the given name
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L59">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L71">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L80">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L92">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3123,7 +3237,7 @@ Returns true if the given object is an instance of UserAttributeProtocolMapper. 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L90">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L102">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToAccessToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3131,7 +3245,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Indicates if the attribute should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L94">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L106">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToIdToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3139,7 +3253,7 @@ Indicates if the attribute should be added as a claim to the access token. Defau
 Indicates if the attribute should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-addToUserinfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L98">property <b>addToUserinfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L110">property <b>addToUserinfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToUserinfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3147,7 +3261,7 @@ Indicates if the attribute should be added as a claim to the id token. Defaults 
 Indicates if the attribute should be added as a claim to the UserInfo response body. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-aggregateAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L102">property <b>aggregateAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L114">property <b>aggregateAttributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>aggregateAttributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3155,7 +3269,7 @@ Indicates if the attribute should be added as a claim to the UserInfo response b
 Indicates whether this attribute is a single value or an array of values. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-claimName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L106">property <b>claimName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L118">property <b>claimName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>claimName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3163,7 +3277,7 @@ Indicates whether this attribute is a single value or an array of values. Defaul
 The name of the claim to insert into a token.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-claimValueType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L110">property <b>claimValueType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L122">property <b>claimValueType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>claimValueType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3171,7 +3285,7 @@ The name of the claim to insert into a token.
 The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L114">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L126">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3179,7 +3293,7 @@ The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L118">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L130">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientScopeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3187,7 +3301,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L59">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3196,7 +3310,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-multivalued">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L122">property <b>multivalued</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L134">property <b>multivalued</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>multivalued: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3204,7 +3318,7 @@ deployments and may be missing (undefined) during planning phases.
 Indicates whether this attribute is a single value or an array of values. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L126">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L138">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3212,7 +3326,7 @@ Indicates whether this attribute is a single value or an array of values. Defaul
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L130">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L142">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3220,7 +3334,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L59">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L71">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3229,7 +3343,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapper-userAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L134">property <b>userAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L146">property <b>userAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3237,7 +3351,7 @@ deployments.
 The custom user attribute to map a claim for.
 
 <h3 class="pdoc-module-header" id="UserClientRoleProtocolMapper" data-link-title="UserClientRoleProtocolMapper">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L69">
         Resource <strong>UserClientRoleProtocolMapper</strong>
     </a>
 </h3>
@@ -3293,8 +3407,20 @@ const userClientRoleMapper = new keycloak.openid.UserClientRoleProtocolMapper("u
 });
 ```
 
+#### Import
+
+Protocol mappers can be imported using one of the following formats- Client`{{realm_id}}/client/{{client_keycloak_id}}/{{protocol_mapper_id}}` - Client Scope`{{realm_id}}/client-scope/{{client_scope_keycloak_id}}/{{protocol_mapper_id}}` Examplebash
+
+```sh
+ $ pulumi import keycloak:openid/userClientRoleProtocolMapper:UserClientRoleProtocolMapper user_client_role_mapper my-realm/client/a7202154-8793-4656-b655-1dd18c181e14/71602afa-f7d1-4788-8c49-ef8fd00af0f4
+```
+
+```sh
+ $ pulumi import keycloak:openid/userClientRoleProtocolMapper:UserClientRoleProtocolMapper user_client_role_mapper my-realm/client-scope/b799ea7e-73ee-4a73-990a-1eafebe8e20a/71602afa-f7d1-4788-8c49-ef8fd00af0f4
+```
+
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapper-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L132"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L144"> <b>constructor</b></a>
 </h4>
 
 
@@ -3308,7 +3434,7 @@ Create a UserClientRoleProtocolMapper resource with the given unique name, argum
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapper-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L67">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L79">method <b>get</b></a>
 </h4>
 
 
@@ -3319,14 +3445,14 @@ Get an existing UserClientRoleProtocolMapper resource's state with the given nam
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapper-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L57">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L69">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapper-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L78">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L90">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3337,7 +3463,7 @@ Returns true if the given object is an instance of UserClientRoleProtocolMapper.
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapper-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L88">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L100">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToAccessToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3345,7 +3471,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Indicates if the property should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapper-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L92">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L104">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToIdToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3353,7 +3479,7 @@ Indicates if the property should be added as a claim to the access token. Defaul
 Indicates if the property should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapper-addToUserinfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L96">property <b>addToUserinfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L108">property <b>addToUserinfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToUserinfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3361,7 +3487,7 @@ Indicates if the property should be added as a claim to the id token. Defaults t
 Indicates if the property should be added as a claim to the UserInfo response body. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapper-claimName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L100">property <b>claimName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L112">property <b>claimName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>claimName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3369,7 +3495,7 @@ Indicates if the property should be added as a claim to the UserInfo response bo
 The name of the claim to insert into a token.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapper-claimValueType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L104">property <b>claimValueType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L116">property <b>claimValueType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>claimValueType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3377,7 +3503,7 @@ The name of the claim to insert into a token.
 The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapper-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L108">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L120">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3385,7 +3511,7 @@ The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapper-clientIdForRoleMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L112">property <b>clientIdForRoleMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L124">property <b>clientIdForRoleMappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientIdForRoleMappings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3393,7 +3519,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The Client ID for role mappings. Just client roles of this client will be added to the token. If this is unset, client roles of all clients will be added to the token.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapper-clientRolePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L116">property <b>clientRolePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L128">property <b>clientRolePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientRolePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3401,7 +3527,7 @@ The Client ID for role mappings. Just client roles of this client will be added 
 A prefix for each Client Role.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapper-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L120">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L132">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientScopeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3409,7 +3535,7 @@ A prefix for each Client Role.
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapper-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L69">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3418,7 +3544,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapper-multivalued">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L124">property <b>multivalued</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L136">property <b>multivalued</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>multivalued: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3426,7 +3552,7 @@ deployments and may be missing (undefined) during planning phases.
 Indicates if attribute supports multiple values. If true, then the list of all values of this attribute will be set as claim. If false, then just first value will be set as claim. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapper-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L128">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L140">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3434,7 +3560,7 @@ Indicates if attribute supports multiple values. If true, then the list of all v
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapper-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L132">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L144">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3442,7 +3568,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapper-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L57">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L69">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3451,7 +3577,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="UserPropertyProtocolMapper" data-link-title="UserPropertyProtocolMapper">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L72">
         Resource <strong>UserPropertyProtocolMapper</strong>
     </a>
 </h3>
@@ -3510,8 +3636,20 @@ const userPropertyMapper = new keycloak.openid.UserPropertyProtocolMapper("userP
 });
 ```
 
+#### Import
+
+Protocol mappers can be imported using one of the following formats- Client`{{realm_id}}/client/{{client_keycloak_id}}/{{protocol_mapper_id}}` - Client Scope`{{realm_id}}/client-scope/{{client_scope_keycloak_id}}/{{protocol_mapper_id}}` Examplebash
+
+```sh
+ $ pulumi import keycloak:openid/userPropertyProtocolMapper:UserPropertyProtocolMapper user_property_mapper my-realm/client/a7202154-8793-4656-b655-1dd18c181e14/71602afa-f7d1-4788-8c49-ef8fd00af0f4
+```
+
+```sh
+ $ pulumi import keycloak:openid/userPropertyProtocolMapper:UserPropertyProtocolMapper user_property_mapper my-realm/client-scope/b799ea7e-73ee-4a73-990a-1eafebe8e20a/71602afa-f7d1-4788-8c49-ef8fd00af0f4
+```
+
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L127"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L139"> <b>constructor</b></a>
 </h4>
 
 
@@ -3525,7 +3663,7 @@ Create a UserPropertyProtocolMapper resource with the given unique name, argumen
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L70">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L82">method <b>get</b></a>
 </h4>
 
 
@@ -3536,14 +3674,14 @@ Get an existing UserPropertyProtocolMapper resource's state with the given name,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L60">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L72">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L81">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L93">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3554,7 +3692,7 @@ Returns true if the given object is an instance of UserPropertyProtocolMapper.  
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L91">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L103">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToAccessToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3562,7 +3700,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Indicates if the property should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L95">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L107">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToIdToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3570,7 +3708,7 @@ Indicates if the property should be added as a claim to the access token. Defaul
 Indicates if the property should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-addToUserinfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L99">property <b>addToUserinfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L111">property <b>addToUserinfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToUserinfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3578,7 +3716,7 @@ Indicates if the property should be added as a claim to the id token. Defaults t
 Indicates if the property should be added as a claim to the UserInfo response body. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-claimName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L103">property <b>claimName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L115">property <b>claimName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>claimName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3586,7 +3724,7 @@ Indicates if the property should be added as a claim to the UserInfo response bo
 The name of the claim to insert into a token.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-claimValueType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L107">property <b>claimValueType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L119">property <b>claimValueType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>claimValueType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3594,7 +3732,7 @@ The name of the claim to insert into a token.
 The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L111">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L123">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3602,7 +3740,7 @@ The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L115">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L127">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientScopeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3610,7 +3748,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified. `clientScopeId` - (Required if `clientId` is not specified) The client scope this protocol mapper is attached to.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L60">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3619,7 +3757,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L119">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L131">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3627,7 +3765,7 @@ deployments and may be missing (undefined) during planning phases.
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L123">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L135">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3635,7 +3773,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L60">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L72">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3644,7 +3782,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapper-userProperty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L127">property <b>userProperty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L139">property <b>userProperty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userProperty: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3652,7 +3790,7 @@ deployments.
 The built in user property (such as email) to map a claim for.
 
 <h3 class="pdoc-module-header" id="UserRealmRoleProtocolMapper" data-link-title="UserRealmRoleProtocolMapper">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L69">
         Resource <strong>UserRealmRoleProtocolMapper</strong>
     </a>
 </h3>
@@ -3708,8 +3846,20 @@ const userRealmRoleMapper = new keycloak.openid.UserRealmRoleProtocolMapper("use
 });
 ```
 
+#### Import
+
+Protocol mappers can be imported using one of the following formats- Client`{{realm_id}}/client/{{client_keycloak_id}}/{{protocol_mapper_id}}` - Client Scope`{{realm_id}}/client-scope/{{client_scope_keycloak_id}}/{{protocol_mapper_id}}` Examplebash
+
+```sh
+ $ pulumi import keycloak:openid/userRealmRoleProtocolMapper:UserRealmRoleProtocolMapper user_realm_role_mapper my-realm/client/a7202154-8793-4656-b655-1dd18c181e14/71602afa-f7d1-4788-8c49-ef8fd00af0f4
+```
+
+```sh
+ $ pulumi import keycloak:openid/userRealmRoleProtocolMapper:UserRealmRoleProtocolMapper user_realm_role_mapper my-realm/client-scope/b799ea7e-73ee-4a73-990a-1eafebe8e20a/71602afa-f7d1-4788-8c49-ef8fd00af0f4
+```
+
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapper-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L128"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L140"> <b>constructor</b></a>
 </h4>
 
 
@@ -3723,7 +3873,7 @@ Create a UserRealmRoleProtocolMapper resource with the given unique name, argume
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapper-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L67">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L79">method <b>get</b></a>
 </h4>
 
 
@@ -3734,14 +3884,14 @@ Get an existing UserRealmRoleProtocolMapper resource's state with the given name
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapper-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L57">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L69">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapper-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L78">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L90">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3752,7 +3902,7 @@ Returns true if the given object is an instance of UserRealmRoleProtocolMapper. 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapper-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L88">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L100">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToAccessToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3760,7 +3910,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Indicates if the property should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapper-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L92">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L104">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToIdToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3768,7 +3918,7 @@ Indicates if the property should be added as a claim to the access token. Defaul
 Indicates if the property should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapper-addToUserinfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L96">property <b>addToUserinfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L108">property <b>addToUserinfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToUserinfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3776,7 +3926,7 @@ Indicates if the property should be added as a claim to the id token. Defaults t
 Indicates if the property should be added as a claim to the UserInfo response body. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapper-claimName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L100">property <b>claimName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L112">property <b>claimName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>claimName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3784,7 +3934,7 @@ Indicates if the property should be added as a claim to the UserInfo response bo
 The name of the claim to insert into a token.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapper-claimValueType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L104">property <b>claimValueType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L116">property <b>claimValueType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>claimValueType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3792,7 +3942,7 @@ The name of the claim to insert into a token.
 The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapper-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L108">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L120">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3800,7 +3950,7 @@ The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapper-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L112">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L124">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientScopeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3808,7 +3958,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapper-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L69">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3817,7 +3967,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapper-multivalued">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L116">property <b>multivalued</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L128">property <b>multivalued</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>multivalued: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3825,7 +3975,7 @@ deployments and may be missing (undefined) during planning phases.
 Indicates if attribute supports multiple values. If true, then the list of all values of this attribute will be set as claim. If false, then just first value will be set as claim. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapper-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L120">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L132">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3833,7 +3983,7 @@ Indicates if attribute supports multiple values. If true, then the list of all v
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapper-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L124">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L136">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3841,7 +3991,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapper-realmRolePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L128">property <b>realmRolePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L140">property <b>realmRolePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmRolePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3849,7 +3999,7 @@ The realm this protocol mapper exists within.
 A prefix for each Realm Role.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapper-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L57">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L69">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3858,7 +4008,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="UserSessionNoteProtocolMapper" data-link-title="UserSessionNoteProtocolMapper">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L73">
         Resource <strong>UserSessionNoteProtocolMapper</strong>
     </a>
 </h3>
@@ -3918,8 +4068,20 @@ const userSessionNoteMapper = new keycloak.openid.UserSessionNoteProtocolMapper(
 });
 ```
 
+#### Import
+
+Protocol mappers can be imported using one of the following formats- Client`{{realm_id}}/client/{{client_keycloak_id}}/{{protocol_mapper_id}}` - Client Scope`{{realm_id}}/client-scope/{{client_scope_keycloak_id}}/{{protocol_mapper_id}}` Examplebash
+
+```sh
+ $ pulumi import keycloak:openid/userSessionNoteProtocolMapper:UserSessionNoteProtocolMapper user_session_note_mapper my-realm/client/a7202154-8793-4656-b655-1dd18c181e14/71602afa-f7d1-4788-8c49-ef8fd00af0f4
+```
+
+```sh
+ $ pulumi import keycloak:openid/userSessionNoteProtocolMapper:UserSessionNoteProtocolMapper user_session_note_mapper my-realm/client-scope/b799ea7e-73ee-4a73-990a-1eafebe8e20a/71602afa-f7d1-4788-8c49-ef8fd00af0f4
+```
+
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapper-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L130"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L142"> <b>constructor</b></a>
 </h4>
 
 
@@ -3933,7 +4095,7 @@ Create a UserSessionNoteProtocolMapper resource with the given unique name, argu
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapper-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L71">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L83">method <b>get</b></a>
 </h4>
 
 
@@ -3944,14 +4106,14 @@ Get an existing UserSessionNoteProtocolMapper resource's state with the given na
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapper-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L61">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L73">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapper-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L82">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L94">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3962,7 +4124,7 @@ Returns true if the given object is an instance of UserSessionNoteProtocolMapper
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapper-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L92">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L104">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToAccessToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3970,7 +4132,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Indicates if the property should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapper-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L96">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L108">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addToIdToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3978,7 +4140,7 @@ Indicates if the property should be added as a claim to the access token. Defaul
 Indicates if the property should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapper-claimName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L100">property <b>claimName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L112">property <b>claimName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>claimName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3986,7 +4148,7 @@ Indicates if the property should be added as a claim to the id token. Defaults t
 The name of the claim to insert into a token.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapper-claimValueType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L104">property <b>claimValueType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L116">property <b>claimValueType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>claimValueType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3994,7 +4156,7 @@ The name of the claim to insert into a token.
 The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapper-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L108">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L120">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4002,7 +4164,7 @@ The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapper-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L112">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L124">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientScopeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4010,7 +4172,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapper-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L61">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L73">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -4019,7 +4181,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapper-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L116">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L128">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4027,7 +4189,7 @@ deployments and may be missing (undefined) during planning phases.
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapper-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L120">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L132">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4035,7 +4197,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapper-sessionNote">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L124">property <b>sessionNote</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L136">property <b>sessionNote</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sessionNote: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -4043,7 +4205,7 @@ The realm this protocol mapper exists within.
 String value being the name of stored user session note within the UserSessionModel.note map.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapper-sessionNoteLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L130">property <b>sessionNoteLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L142">property <b>sessionNoteLabel</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -4055,7 +4217,7 @@ use session_note instead
 **Deprecated** Use `sessionNote` instead.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapper-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L61">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L73">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -4066,7 +4228,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getClient" data-link-title="getClient">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L28">
         Function <strong>getClient</strong>
     </a>
 </h3>
@@ -4095,7 +4257,7 @@ const admin = realmManagement.then(realmManagement => keycloak.getRole({
 ```
 
 <h3 class="pdoc-module-header" id="getClientAuthorizationPolicy" data-link-title="getClientAuthorizationPolicy">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L55">
         Function <strong>getClientAuthorizationPolicy</strong>
     </a>
 </h3>
@@ -4151,7 +4313,7 @@ const permission = new keycloak.openid.ClientAuthorizationPermission("permission
 ```
 
 <h3 class="pdoc-module-header" id="getClientServiceAccountUser" data-link-title="getClientServiceAccountUser">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientServiceAccountUser.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientServiceAccountUser.ts#L47">
         Function <strong>getClientServiceAccountUser</strong>
     </a>
 </h3>
@@ -4201,7 +4363,7 @@ const serviceAccountUserRoles = new keycloak.UserRoles("serviceAccountUserRoles"
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AudienceProtocolMapperArgs" data-link-title="AudienceProtocolMapperArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L202">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L214">
         interface <strong>AudienceProtocolMapperArgs</strong>
     </a>
 </h3>
@@ -4211,7 +4373,7 @@ const serviceAccountUserRoles = new keycloak.UserRoles("serviceAccountUserRoles"
 The set of arguments for constructing a AudienceProtocolMapper resource.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapperArgs-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L206">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L218">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToAccessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4219,7 +4381,7 @@ The set of arguments for constructing a AudienceProtocolMapper resource.
 Indicates if the audience should be included in the `aud` claim for the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapperArgs-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L210">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L222">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToIdToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4227,7 +4389,7 @@ Indicates if the audience should be included in the `aud` claim for the id token
 Indicates if the audience should be included in the `aud` claim for the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapperArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L214">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L226">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4235,7 +4397,7 @@ Indicates if the audience should be included in the `aud` claim for the id token
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapperArgs-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L218">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L230">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4243,7 +4405,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapperArgs-includedClientAudience">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L222">property <b>includedClientAudience</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L234">property <b>includedClientAudience</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includedClientAudience?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4251,7 +4413,7 @@ The client scope this protocol mapper should be attached to. Conflicts with `cli
 A client ID to include within the token's `aud` claim. Conflicts with `includedCustomAudience`. One of `includedClientAudience` or `includedCustomAudience` must be specified.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapperArgs-includedCustomAudience">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L226">property <b>includedCustomAudience</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L238">property <b>includedCustomAudience</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includedCustomAudience?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4259,7 +4421,7 @@ A client ID to include within the token's `aud` claim. Conflicts with `includedC
 A custom audience to include within the token's `aud` claim. Conflicts with `includedClientAudience`. One of `includedClientAudience` or `includedCustomAudience` must be specified.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapperArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L230">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L242">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4267,7 +4429,7 @@ A custom audience to include within the token's `aud` claim. Conflicts with `inc
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapperArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L234">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L246">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4275,7 +4437,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h3 class="pdoc-module-header" id="AudienceProtocolMapperState" data-link-title="AudienceProtocolMapperState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L176">
         interface <strong>AudienceProtocolMapperState</strong>
     </a>
 </h3>
@@ -4285,7 +4447,7 @@ The realm this protocol mapper exists within.
 Input properties used for looking up and filtering AudienceProtocolMapper resources.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapperState-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L168">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L180">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToAccessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4293,7 +4455,7 @@ Input properties used for looking up and filtering AudienceProtocolMapper resour
 Indicates if the audience should be included in the `aud` claim for the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapperState-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L172">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L184">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToIdToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4301,7 +4463,7 @@ Indicates if the audience should be included in the `aud` claim for the id token
 Indicates if the audience should be included in the `aud` claim for the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapperState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L176">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L188">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4309,7 +4471,7 @@ Indicates if the audience should be included in the `aud` claim for the id token
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapperState-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L180">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L192">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4317,7 +4479,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapperState-includedClientAudience">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L184">property <b>includedClientAudience</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L196">property <b>includedClientAudience</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includedClientAudience?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4325,7 +4487,7 @@ The client scope this protocol mapper should be attached to. Conflicts with `cli
 A client ID to include within the token's `aud` claim. Conflicts with `includedCustomAudience`. One of `includedClientAudience` or `includedCustomAudience` must be specified.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapperState-includedCustomAudience">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L188">property <b>includedCustomAudience</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L200">property <b>includedCustomAudience</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includedCustomAudience?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4333,7 +4495,7 @@ A client ID to include within the token's `aud` claim. Conflicts with `includedC
 A custom audience to include within the token's `aud` claim. Conflicts with `includedClientAudience`. One of `includedClientAudience` or `includedCustomAudience` must be specified.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapperState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L192">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L204">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4341,7 +4503,7 @@ A custom audience to include within the token's `aud` claim. Conflicts with `inc
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="AudienceProtocolMapperState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/audienceProtocolMapper.ts#L196">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/audienceProtocolMapper.ts#L208">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4349,7 +4511,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h3 class="pdoc-module-header" id="ClientAggregatePolicyArgs" data-link-title="ClientAggregatePolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L111">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L111">
         interface <strong>ClientAggregatePolicyArgs</strong>
     </a>
 </h3>
@@ -4359,42 +4521,42 @@ The realm this protocol mapper exists within.
 The set of arguments for constructing a ClientAggregatePolicy resource.
 
 <h4 class="pdoc-member-header" id="ClientAggregatePolicyArgs-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L112">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L112">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>decisionStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAggregatePolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L113">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L113">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAggregatePolicyArgs-logic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L114">property <b>logic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L114">property <b>logic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAggregatePolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L115">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L115">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAggregatePolicyArgs-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L116">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L116">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAggregatePolicyArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L117">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L117">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAggregatePolicyArgs-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L118">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L118">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClientAggregatePolicyState" data-link-title="ClientAggregatePolicyState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L98">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L98">
         interface <strong>ClientAggregatePolicyState</strong>
     </a>
 </h3>
@@ -4404,42 +4566,42 @@ The set of arguments for constructing a ClientAggregatePolicy resource.
 Input properties used for looking up and filtering ClientAggregatePolicy resources.
 
 <h4 class="pdoc-member-header" id="ClientAggregatePolicyState-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L99">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L99">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>decisionStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAggregatePolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L100">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L100">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAggregatePolicyState-logic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L101">property <b>logic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L101">property <b>logic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAggregatePolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L102">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L102">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAggregatePolicyState-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L103">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L103">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAggregatePolicyState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L104">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L104">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAggregatePolicyState-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAggregatePolicy.ts#L105">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAggregatePolicy.ts#L105">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClientArgs" data-link-title="ClientArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L373">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L380">
         interface <strong>ClientArgs</strong>
     </a>
 </h3>
@@ -4449,7 +4611,7 @@ Input properties used for looking up and filtering ClientAggregatePolicy resourc
 The set of arguments for constructing a Client resource.
 
 <h4 class="pdoc-member-header" id="ClientArgs-accessTokenLifespan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L377">property <b>accessTokenLifespan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L384">property <b>accessTokenLifespan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessTokenLifespan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4457,7 +4619,7 @@ The set of arguments for constructing a Client resource.
 The amount of time in seconds before an access token expires. This will override the default for the realm.
 
 <h4 class="pdoc-member-header" id="ClientArgs-accessType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L381">property <b>accessType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L388">property <b>accessType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4465,7 +4627,7 @@ The amount of time in seconds before an access token expires. This will override
 Specifies the type of client, which can be one of the following:
 
 <h4 class="pdoc-member-header" id="ClientArgs-adminUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L385">property <b>adminUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L392">property <b>adminUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4473,7 +4635,7 @@ Specifies the type of client, which can be one of the following:
 URL to the admin interface of the client.
 
 <h4 class="pdoc-member-header" id="ClientArgs-authenticationFlowBindingOverrides">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L389">property <b>authenticationFlowBindingOverrides</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L396">property <b>authenticationFlowBindingOverrides</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticationFlowBindingOverrides?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#ClientAuthenticationFlowBindingOverrides'>ClientAuthenticationFlowBindingOverrides</a>&gt;;</code></pre>
@@ -4481,7 +4643,7 @@ URL to the admin interface of the client.
 Override realm authentication flow bindings
 
 <h4 class="pdoc-member-header" id="ClientArgs-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L393">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L400">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#ClientAuthorization'>ClientAuthorization</a>&gt;;</code></pre>
@@ -4489,7 +4651,7 @@ Override realm authentication flow bindings
 When this block is present, fine-grained authorization will be enabled for this client. The client's `accessType` must be `CONFIDENTIAL`, and `serviceAccountsEnabled` must be `true`. This block has the following arguments:
 
 <h4 class="pdoc-member-header" id="ClientArgs-baseUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L397">property <b>baseUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L404">property <b>baseUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baseUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4497,7 +4659,7 @@ When this block is present, fine-grained authorization will be enabled for this 
 Default URL to use when the auth server needs to redirect or link back to the client.
 
 <h4 class="pdoc-member-header" id="ClientArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L401">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L408">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4505,7 +4667,7 @@ Default URL to use when the auth server needs to redirect or link back to the cl
 The Client ID for this client, referenced in the URI during authentication and in issued tokens.
 
 <h4 class="pdoc-member-header" id="ClientArgs-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L405">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L412">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4513,7 +4675,7 @@ The Client ID for this client, referenced in the URI during authentication and i
 The secret for clients with an `accessType` of `CONFIDENTIAL` or `BEARER-ONLY`. This value is sensitive and should be treated with the same care as a password. If omitted, this will be generated by Keycloak.
 
 <h4 class="pdoc-member-header" id="ClientArgs-consentRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L409">property <b>consentRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L416">property <b>consentRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consentRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4521,7 +4683,7 @@ The secret for clients with an `accessType` of `CONFIDENTIAL` or `BEARER-ONLY`. 
 When `true`, users have to consent to client access.
 
 <h4 class="pdoc-member-header" id="ClientArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L413">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L420">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4529,7 +4691,7 @@ When `true`, users have to consent to client access.
 The description of this client in the GUI.
 
 <h4 class="pdoc-member-header" id="ClientArgs-directAccessGrantsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L417">property <b>directAccessGrantsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L424">property <b>directAccessGrantsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directAccessGrantsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4537,7 +4699,7 @@ The description of this client in the GUI.
 When `true`, the OAuth2 Resource Owner Password Grant will be enabled for this client. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ClientArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L421">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L428">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4545,7 +4707,7 @@ When `true`, the OAuth2 Resource Owner Password Grant will be enabled for this c
 When `false`, this client will not be able to initiate a login or obtain access tokens. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ClientArgs-excludeSessionStateFromAuthResponse">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L425">property <b>excludeSessionStateFromAuthResponse</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L432">property <b>excludeSessionStateFromAuthResponse</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludeSessionStateFromAuthResponse?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4553,7 +4715,7 @@ When `false`, this client will not be able to initiate a login or obtain access 
 When `true`, the parameter `sessionState` will not be included in OpenID Connect Authentication Response.
 
 <h4 class="pdoc-member-header" id="ClientArgs-fullScopeAllowed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L429">property <b>fullScopeAllowed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L436">property <b>fullScopeAllowed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fullScopeAllowed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4561,7 +4723,7 @@ When `true`, the parameter `sessionState` will not be included in OpenID Connect
 Allow to include all roles mappings in the access token.
 
 <h4 class="pdoc-member-header" id="ClientArgs-implicitFlowEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L433">property <b>implicitFlowEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L440">property <b>implicitFlowEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>implicitFlowEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4569,7 +4731,7 @@ Allow to include all roles mappings in the access token.
 When `true`, the OAuth2 Implicit Grant will be enabled for this client. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ClientArgs-loginTheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L437">property <b>loginTheme</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L444">property <b>loginTheme</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loginTheme?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4577,7 +4739,7 @@ When `true`, the OAuth2 Implicit Grant will be enabled for this client. Defaults
 The client login theme. This will override the default theme for the realm.
 
 <h4 class="pdoc-member-header" id="ClientArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L441">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L448">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4585,7 +4747,7 @@ The client login theme. This will override the default theme for the realm.
 The display name of this client in the GUI.
 
 <h4 class="pdoc-member-header" id="ClientArgs-pkceCodeChallengeMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L445">property <b>pkceCodeChallengeMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L452">property <b>pkceCodeChallengeMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pkceCodeChallengeMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4593,7 +4755,7 @@ The display name of this client in the GUI.
 The challenge method to use for Proof Key for Code Exchange. Can be either `plain` or `S256` or set to empty value ``.
 
 <h4 class="pdoc-member-header" id="ClientArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L449">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L456">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4601,7 +4763,7 @@ The challenge method to use for Proof Key for Code Exchange. Can be either `plai
 The realm this client is attached to.
 
 <h4 class="pdoc-member-header" id="ClientArgs-rootUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L453">property <b>rootUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L460">property <b>rootUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4609,7 +4771,7 @@ The realm this client is attached to.
 When specified, this URL is prepended to any relative URLs found within `validRedirectUris`, `webOrigins`, and `adminUrl`. NOTE: Due to limitations in the Keycloak API, when the `rootUrl` attribute is used, the `validRedirectUris`, `webOrigins`, and `adminUrl` attributes will be required.
 
 <h4 class="pdoc-member-header" id="ClientArgs-serviceAccountsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L457">property <b>serviceAccountsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L464">property <b>serviceAccountsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4617,7 +4779,7 @@ When specified, this URL is prepended to any relative URLs found within `validRe
 When `true`, the OAuth2 Client Credentials grant will be enabled for this client. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ClientArgs-standardFlowEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L461">property <b>standardFlowEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L468">property <b>standardFlowEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>standardFlowEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4625,7 +4787,7 @@ When `true`, the OAuth2 Client Credentials grant will be enabled for this client
 When `true`, the OAuth2 Authorization Code Grant will be enabled for this client. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ClientArgs-validRedirectUris">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L467">property <b>validRedirectUris</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L474">property <b>validRedirectUris</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validRedirectUris?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4635,7 +4797,7 @@ wildcards in the form of an asterisk can be used here. This attribute must be se
 is set to `true`.
 
 <h4 class="pdoc-member-header" id="ClientArgs-webOrigins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L471">property <b>webOrigins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L478">property <b>webOrigins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>webOrigins?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4643,7 +4805,7 @@ is set to `true`.
 A list of allowed CORS origins. `+` can be used to permit all valid redirect URIs, and `*` can be used to permit all origins.
 
 <h3 class="pdoc-module-header" id="ClientAuthorizationPermissionArgs" data-link-title="ClientAuthorizationPermissionArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L113">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L113">
         interface <strong>ClientAuthorizationPermissionArgs</strong>
     </a>
 </h3>
@@ -4653,52 +4815,52 @@ A list of allowed CORS origins. `+` can be used to permit all valid redirect URI
 The set of arguments for constructing a ClientAuthorizationPermission resource.
 
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermissionArgs-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L114">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L114">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>decisionStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermissionArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L115">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L115">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermissionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L116">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L116">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermissionArgs-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L117">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L117">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermissionArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L118">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L118">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermissionArgs-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L119">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L119">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermissionArgs-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L120">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L120">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermissionArgs-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L121">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L121">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermissionArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L122">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L122">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClientAuthorizationPermissionState" data-link-title="ClientAuthorizationPermissionState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L98">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L98">
         interface <strong>ClientAuthorizationPermissionState</strong>
     </a>
 </h3>
@@ -4708,52 +4870,52 @@ The set of arguments for constructing a ClientAuthorizationPermission resource.
 Input properties used for looking up and filtering ClientAuthorizationPermission resources.
 
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermissionState-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L99">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L99">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>decisionStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermissionState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L100">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L100">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermissionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L101">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L101">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermissionState-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L102">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L102">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermissionState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L103">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L103">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermissionState-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L104">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L104">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermissionState-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L105">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L105">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermissionState-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L106">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L106">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationPermissionState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationPermission.ts#L107">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationPermission.ts#L107">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClientAuthorizationResourceArgs" data-link-title="ClientAuthorizationResourceArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L117">
         interface <strong>ClientAuthorizationResourceArgs</strong>
     </a>
 </h3>
@@ -4763,57 +4925,57 @@ Input properties used for looking up and filtering ClientAuthorizationPermission
 The set of arguments for constructing a ClientAuthorizationResource resource.
 
 <h4 class="pdoc-member-header" id="ClientAuthorizationResourceArgs-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L118">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L118">property <b>attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResourceArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L119">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L119">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResourceArgs-iconUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L120">property <b>iconUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L120">property <b>iconUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iconUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResourceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L121">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L121">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResourceArgs-ownerManagedAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L122">property <b>ownerManagedAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L122">property <b>ownerManagedAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ownerManagedAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResourceArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L123">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L123">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResourceArgs-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L124">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L124">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResourceArgs-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L125">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L125">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResourceArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L126">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L126">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResourceArgs-uris">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L127">property <b>uris</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L127">property <b>uris</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uris?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClientAuthorizationResourceState" data-link-title="ClientAuthorizationResourceState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L101">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L101">
         interface <strong>ClientAuthorizationResourceState</strong>
     </a>
 </h3>
@@ -4823,57 +4985,57 @@ The set of arguments for constructing a ClientAuthorizationResource resource.
 Input properties used for looking up and filtering ClientAuthorizationResource resources.
 
 <h4 class="pdoc-member-header" id="ClientAuthorizationResourceState-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L102">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L102">property <b>attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResourceState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L103">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L103">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResourceState-iconUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L104">property <b>iconUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L104">property <b>iconUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iconUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResourceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L105">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L105">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResourceState-ownerManagedAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L106">property <b>ownerManagedAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L106">property <b>ownerManagedAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ownerManagedAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResourceState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L107">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L107">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResourceState-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L108">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L108">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResourceState-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L109">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L109">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResourceState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L110">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L110">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationResourceState-uris">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationResource.ts#L111">property <b>uris</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationResource.ts#L111">property <b>uris</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uris?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClientAuthorizationScopeArgs" data-link-title="ClientAuthorizationScopeArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L97">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L97">
         interface <strong>ClientAuthorizationScopeArgs</strong>
     </a>
 </h3>
@@ -4883,32 +5045,32 @@ Input properties used for looking up and filtering ClientAuthorizationResource r
 The set of arguments for constructing a ClientAuthorizationScope resource.
 
 <h4 class="pdoc-member-header" id="ClientAuthorizationScopeArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L98">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L98">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationScopeArgs-iconUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L99">property <b>iconUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L99">property <b>iconUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iconUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationScopeArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L100">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L100">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationScopeArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L101">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L101">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationScopeArgs-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L102">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L102">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClientAuthorizationScopeState" data-link-title="ClientAuthorizationScopeState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L86">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L86">
         interface <strong>ClientAuthorizationScopeState</strong>
     </a>
 </h3>
@@ -4918,32 +5080,32 @@ The set of arguments for constructing a ClientAuthorizationScope resource.
 Input properties used for looking up and filtering ClientAuthorizationScope resources.
 
 <h4 class="pdoc-member-header" id="ClientAuthorizationScopeState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L87">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L87">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationScopeState-iconUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L88">property <b>iconUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L88">property <b>iconUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iconUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationScopeState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L89">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L89">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationScopeState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L90">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L90">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientAuthorizationScopeState-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientAuthorizationScope.ts#L91">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientAuthorizationScope.ts#L91">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClientDefaultScopesArgs" data-link-title="ClientDefaultScopesArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientDefaultScopes.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientDefaultScopes.ts#L115">
         interface <strong>ClientDefaultScopesArgs</strong>
     </a>
 </h3>
@@ -4953,7 +5115,7 @@ Input properties used for looking up and filtering ClientAuthorizationScope reso
 The set of arguments for constructing a ClientDefaultScopes resource.
 
 <h4 class="pdoc-member-header" id="ClientDefaultScopesArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientDefaultScopes.ts#L114">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientDefaultScopes.ts#L119">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4961,7 +5123,7 @@ The set of arguments for constructing a ClientDefaultScopes resource.
 The ID of the client to attach default scopes to. Note that this is the unique ID of the client generated by Keycloak.
 
 <h4 class="pdoc-member-header" id="ClientDefaultScopesArgs-defaultScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientDefaultScopes.ts#L118">property <b>defaultScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientDefaultScopes.ts#L123">property <b>defaultScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultScopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4969,7 +5131,7 @@ The ID of the client to attach default scopes to. Note that this is the unique I
 An array of client scope names to attach to this client.
 
 <h4 class="pdoc-member-header" id="ClientDefaultScopesArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientDefaultScopes.ts#L122">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientDefaultScopes.ts#L127">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4977,7 +5139,7 @@ An array of client scope names to attach to this client.
 The realm this client and scopes exists in.
 
 <h3 class="pdoc-module-header" id="ClientDefaultScopesState" data-link-title="ClientDefaultScopesState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientDefaultScopes.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientDefaultScopes.ts#L97">
         interface <strong>ClientDefaultScopesState</strong>
     </a>
 </h3>
@@ -4987,7 +5149,7 @@ The realm this client and scopes exists in.
 Input properties used for looking up and filtering ClientDefaultScopes resources.
 
 <h4 class="pdoc-member-header" id="ClientDefaultScopesState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientDefaultScopes.ts#L96">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientDefaultScopes.ts#L101">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4995,7 +5157,7 @@ Input properties used for looking up and filtering ClientDefaultScopes resources
 The ID of the client to attach default scopes to. Note that this is the unique ID of the client generated by Keycloak.
 
 <h4 class="pdoc-member-header" id="ClientDefaultScopesState-defaultScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientDefaultScopes.ts#L100">property <b>defaultScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientDefaultScopes.ts#L105">property <b>defaultScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultScopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5003,7 +5165,7 @@ The ID of the client to attach default scopes to. Note that this is the unique I
 An array of client scope names to attach to this client.
 
 <h4 class="pdoc-member-header" id="ClientDefaultScopesState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientDefaultScopes.ts#L104">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientDefaultScopes.ts#L109">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5011,7 +5173,7 @@ An array of client scope names to attach to this client.
 The realm this client and scopes exists in.
 
 <h3 class="pdoc-module-header" id="ClientGroupPolicyArgs" data-link-title="ClientGroupPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L116">
         interface <strong>ClientGroupPolicyArgs</strong>
     </a>
 </h3>
@@ -5021,47 +5183,47 @@ The realm this client and scopes exists in.
 The set of arguments for constructing a ClientGroupPolicy resource.
 
 <h4 class="pdoc-member-header" id="ClientGroupPolicyArgs-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L118">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L117">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>decisionStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L119">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L118">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicyArgs-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L120">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L119">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#ClientGroupPolicyGroup'>ClientGroupPolicyGroup</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicyArgs-groupsClaim">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L121">property <b>groupsClaim</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L120">property <b>groupsClaim</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsClaim?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicyArgs-logic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L122">property <b>logic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L121">property <b>logic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L123">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L122">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicyArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L124">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L123">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicyArgs-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L125">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L124">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClientGroupPolicyState" data-link-title="ClientGroupPolicyState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L103">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L102">
         interface <strong>ClientGroupPolicyState</strong>
     </a>
 </h3>
@@ -5071,47 +5233,47 @@ The set of arguments for constructing a ClientGroupPolicy resource.
 Input properties used for looking up and filtering ClientGroupPolicy resources.
 
 <h4 class="pdoc-member-header" id="ClientGroupPolicyState-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L104">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L103">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>decisionStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L105">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L104">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicyState-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L106">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L105">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#ClientGroupPolicyGroup'>ClientGroupPolicyGroup</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicyState-groupsClaim">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L107">property <b>groupsClaim</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L106">property <b>groupsClaim</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupsClaim?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicyState-logic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L108">property <b>logic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L107">property <b>logic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L109">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L108">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicyState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L110">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L109">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientGroupPolicyState-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientGroupPolicy.ts#L111">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientGroupPolicy.ts#L110">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClientJsPolicyArgs" data-link-title="ClientJsPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L115">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L115">
         interface <strong>ClientJsPolicyArgs</strong>
     </a>
 </h3>
@@ -5121,47 +5283,47 @@ Input properties used for looking up and filtering ClientGroupPolicy resources.
 The set of arguments for constructing a ClientJsPolicy resource.
 
 <h4 class="pdoc-member-header" id="ClientJsPolicyArgs-code">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L116">property <b>code</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L116">property <b>code</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>code: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientJsPolicyArgs-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L117">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L117">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>decisionStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientJsPolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L118">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L118">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientJsPolicyArgs-logic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L119">property <b>logic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L119">property <b>logic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientJsPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L120">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L120">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientJsPolicyArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L121">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L121">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientJsPolicyArgs-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L122">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L122">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientJsPolicyArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L123">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L123">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClientJsPolicyState" data-link-title="ClientJsPolicyState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L101">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L101">
         interface <strong>ClientJsPolicyState</strong>
     </a>
 </h3>
@@ -5171,47 +5333,47 @@ The set of arguments for constructing a ClientJsPolicy resource.
 Input properties used for looking up and filtering ClientJsPolicy resources.
 
 <h4 class="pdoc-member-header" id="ClientJsPolicyState-code">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L102">property <b>code</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L102">property <b>code</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>code?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientJsPolicyState-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L103">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L103">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>decisionStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientJsPolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L104">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L104">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientJsPolicyState-logic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L105">property <b>logic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L105">property <b>logic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientJsPolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L106">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L106">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientJsPolicyState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L107">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L107">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientJsPolicyState-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L108">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L108">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientJsPolicyState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientJsPolicy.ts#L109">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientJsPolicy.ts#L109">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClientOptionalScopesArgs" data-link-title="ClientOptionalScopesArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientOptionalScopes.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientOptionalScopes.ts#L115">
         interface <strong>ClientOptionalScopesArgs</strong>
     </a>
 </h3>
@@ -5221,7 +5383,7 @@ Input properties used for looking up and filtering ClientJsPolicy resources.
 The set of arguments for constructing a ClientOptionalScopes resource.
 
 <h4 class="pdoc-member-header" id="ClientOptionalScopesArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientOptionalScopes.ts#L114">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientOptionalScopes.ts#L119">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5229,7 +5391,7 @@ The set of arguments for constructing a ClientOptionalScopes resource.
 The ID of the client to attach optional scopes to. Note that this is the unique ID of the client generated by Keycloak.
 
 <h4 class="pdoc-member-header" id="ClientOptionalScopesArgs-optionalScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientOptionalScopes.ts#L118">property <b>optionalScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientOptionalScopes.ts#L123">property <b>optionalScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionalScopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5237,7 +5399,7 @@ The ID of the client to attach optional scopes to. Note that this is the unique 
 An array of client scope names to attach to this client as optional scopes.
 
 <h4 class="pdoc-member-header" id="ClientOptionalScopesArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientOptionalScopes.ts#L122">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientOptionalScopes.ts#L127">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5245,7 +5407,7 @@ An array of client scope names to attach to this client as optional scopes.
 The realm this client and scopes exists in.
 
 <h3 class="pdoc-module-header" id="ClientOptionalScopesState" data-link-title="ClientOptionalScopesState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientOptionalScopes.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientOptionalScopes.ts#L97">
         interface <strong>ClientOptionalScopesState</strong>
     </a>
 </h3>
@@ -5255,7 +5417,7 @@ The realm this client and scopes exists in.
 Input properties used for looking up and filtering ClientOptionalScopes resources.
 
 <h4 class="pdoc-member-header" id="ClientOptionalScopesState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientOptionalScopes.ts#L96">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientOptionalScopes.ts#L101">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5263,7 +5425,7 @@ Input properties used for looking up and filtering ClientOptionalScopes resource
 The ID of the client to attach optional scopes to. Note that this is the unique ID of the client generated by Keycloak.
 
 <h4 class="pdoc-member-header" id="ClientOptionalScopesState-optionalScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientOptionalScopes.ts#L100">property <b>optionalScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientOptionalScopes.ts#L105">property <b>optionalScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optionalScopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5271,7 +5433,7 @@ The ID of the client to attach optional scopes to. Note that this is the unique 
 An array of client scope names to attach to this client as optional scopes.
 
 <h4 class="pdoc-member-header" id="ClientOptionalScopesState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientOptionalScopes.ts#L104">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientOptionalScopes.ts#L109">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5279,7 +5441,7 @@ An array of client scope names to attach to this client as optional scopes.
 The realm this client and scopes exists in.
 
 <h3 class="pdoc-module-header" id="ClientPolicyArgs" data-link-title="ClientPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L108">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L108">
         interface <strong>ClientPolicyArgs</strong>
     </a>
 </h3>
@@ -5289,42 +5451,42 @@ The realm this client and scopes exists in.
 The set of arguments for constructing a ClientPolicy resource.
 
 <h4 class="pdoc-member-header" id="ClientPolicyArgs-clients">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L109">property <b>clients</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L109">property <b>clients</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clients: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientPolicyArgs-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L110">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L110">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>decisionStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientPolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L111">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L111">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientPolicyArgs-logic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L112">property <b>logic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L112">property <b>logic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L113">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L113">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientPolicyArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L114">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L114">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientPolicyArgs-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L115">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L115">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClientPolicyState" data-link-title="ClientPolicyState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L95">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L95">
         interface <strong>ClientPolicyState</strong>
     </a>
 </h3>
@@ -5334,42 +5496,42 @@ The set of arguments for constructing a ClientPolicy resource.
 Input properties used for looking up and filtering ClientPolicy resources.
 
 <h4 class="pdoc-member-header" id="ClientPolicyState-clients">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L96">property <b>clients</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L96">property <b>clients</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clients?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientPolicyState-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L97">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L97">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>decisionStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientPolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L98">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L98">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientPolicyState-logic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L99">property <b>logic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L99">property <b>logic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientPolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L100">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L100">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientPolicyState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L101">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L101">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientPolicyState-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientPolicy.ts#L102">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientPolicy.ts#L102">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClientRolePolicyArgs" data-link-title="ClientRolePolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L116">
         interface <strong>ClientRolePolicyArgs</strong>
     </a>
 </h3>
@@ -5379,47 +5541,47 @@ Input properties used for looking up and filtering ClientPolicy resources.
 The set of arguments for constructing a ClientRolePolicy resource.
 
 <h4 class="pdoc-member-header" id="ClientRolePolicyArgs-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L118">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L117">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>decisionStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L119">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L118">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicyArgs-logic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L120">property <b>logic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L119">property <b>logic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L121">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L120">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicyArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L122">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L121">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicyArgs-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L123">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L122">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicyArgs-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L124">property <b>roles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L123">property <b>roles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#ClientRolePolicyRole'>ClientRolePolicyRole</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicyArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L125">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L124">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClientRolePolicyState" data-link-title="ClientRolePolicyState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L103">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L102">
         interface <strong>ClientRolePolicyState</strong>
     </a>
 </h3>
@@ -5429,47 +5591,47 @@ The set of arguments for constructing a ClientRolePolicy resource.
 Input properties used for looking up and filtering ClientRolePolicy resources.
 
 <h4 class="pdoc-member-header" id="ClientRolePolicyState-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L104">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L103">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>decisionStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L105">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L104">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicyState-logic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L106">property <b>logic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L105">property <b>logic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L107">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L106">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicyState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L108">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L107">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicyState-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L109">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L108">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicyState-roles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L110">property <b>roles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L109">property <b>roles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#ClientRolePolicyRole'>ClientRolePolicyRole</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientRolePolicyState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientRolePolicy.ts#L111">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientRolePolicy.ts#L110">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClientScopeArgs" data-link-title="ClientScopeArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L166">
         interface <strong>ClientScopeArgs</strong>
     </a>
 </h3>
@@ -5479,7 +5641,7 @@ Input properties used for looking up and filtering ClientRolePolicy resources.
 The set of arguments for constructing a ClientScope resource.
 
 <h4 class="pdoc-member-header" id="ClientScopeArgs-consentScreenText">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L162">property <b>consentScreenText</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L170">property <b>consentScreenText</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consentScreenText?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5487,7 +5649,7 @@ The set of arguments for constructing a ClientScope resource.
 When set, a consent screen will be displayed to users authenticating to clients with this scope attached. The consent screen will display the string value of this attribute.
 
 <h4 class="pdoc-member-header" id="ClientScopeArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L166">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L174">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5495,7 +5657,7 @@ When set, a consent screen will be displayed to users authenticating to clients 
 The description of this client scope in the GUI.
 
 <h4 class="pdoc-member-header" id="ClientScopeArgs-guiOrder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L170">property <b>guiOrder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L178">property <b>guiOrder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>guiOrder?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5503,7 +5665,7 @@ The description of this client scope in the GUI.
 Specify order of the client scope in GUI (such as in Consent page) as integer.
 
 <h4 class="pdoc-member-header" id="ClientScopeArgs-includeInTokenScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L174">property <b>includeInTokenScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L182">property <b>includeInTokenScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includeInTokenScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5511,7 +5673,7 @@ Specify order of the client scope in GUI (such as in Consent page) as integer.
 When `true`, the name of this client scope will be added to the access token property 'scope' as well as to the Token Introspection Endpoint response.
 
 <h4 class="pdoc-member-header" id="ClientScopeArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L178">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L186">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5519,7 +5681,7 @@ When `true`, the name of this client scope will be added to the access token pro
 The display name of this client scope in the GUI.
 
 <h4 class="pdoc-member-header" id="ClientScopeArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L182">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L190">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5527,7 +5689,7 @@ The display name of this client scope in the GUI.
 The realm this client scope belongs to.
 
 <h3 class="pdoc-module-header" id="ClientScopeState" data-link-title="ClientScopeState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L136">
         interface <strong>ClientScopeState</strong>
     </a>
 </h3>
@@ -5537,7 +5699,7 @@ The realm this client scope belongs to.
 Input properties used for looking up and filtering ClientScope resources.
 
 <h4 class="pdoc-member-header" id="ClientScopeState-consentScreenText">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L132">property <b>consentScreenText</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L140">property <b>consentScreenText</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consentScreenText?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5545,7 +5707,7 @@ Input properties used for looking up and filtering ClientScope resources.
 When set, a consent screen will be displayed to users authenticating to clients with this scope attached. The consent screen will display the string value of this attribute.
 
 <h4 class="pdoc-member-header" id="ClientScopeState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L136">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L144">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5553,7 +5715,7 @@ When set, a consent screen will be displayed to users authenticating to clients 
 The description of this client scope in the GUI.
 
 <h4 class="pdoc-member-header" id="ClientScopeState-guiOrder">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L140">property <b>guiOrder</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L148">property <b>guiOrder</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>guiOrder?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5561,7 +5723,7 @@ The description of this client scope in the GUI.
 Specify order of the client scope in GUI (such as in Consent page) as integer.
 
 <h4 class="pdoc-member-header" id="ClientScopeState-includeInTokenScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L144">property <b>includeInTokenScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L152">property <b>includeInTokenScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>includeInTokenScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5569,7 +5731,7 @@ Specify order of the client scope in GUI (such as in Consent page) as integer.
 When `true`, the name of this client scope will be added to the access token property 'scope' as well as to the Token Introspection Endpoint response.
 
 <h4 class="pdoc-member-header" id="ClientScopeState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L148">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L156">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5577,7 +5739,7 @@ When `true`, the name of this client scope will be added to the access token pro
 The display name of this client scope in the GUI.
 
 <h4 class="pdoc-member-header" id="ClientScopeState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientScope.ts#L152">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientScope.ts#L160">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5585,7 +5747,7 @@ The display name of this client scope in the GUI.
 The realm this client scope belongs to.
 
 <h3 class="pdoc-module-header" id="ClientServiceAccountRealmRoleArgs" data-link-title="ClientServiceAccountRealmRoleArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L147">
         interface <strong>ClientServiceAccountRealmRoleArgs</strong>
     </a>
 </h3>
@@ -5595,7 +5757,7 @@ The realm this client scope belongs to.
 The set of arguments for constructing a ClientServiceAccountRealmRole resource.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRealmRoleArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L143">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L151">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5603,7 +5765,7 @@ The set of arguments for constructing a ClientServiceAccountRealmRole resource.
 The realm that the client and role belong to.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRealmRoleArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L147">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L155">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5611,7 +5773,7 @@ The realm that the client and role belong to.
 The name of the role that is assigned.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRealmRoleArgs-serviceAccountUserId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L151">property <b>serviceAccountUserId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L159">property <b>serviceAccountUserId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountUserId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5619,7 +5781,7 @@ The name of the role that is assigned.
 The id of the service account that is assigned the role (the service account of the client that "consumes" the role).
 
 <h3 class="pdoc-module-header" id="ClientServiceAccountRealmRoleState" data-link-title="ClientServiceAccountRealmRoleState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L129">
         interface <strong>ClientServiceAccountRealmRoleState</strong>
     </a>
 </h3>
@@ -5629,7 +5791,7 @@ The id of the service account that is assigned the role (the service account of 
 Input properties used for looking up and filtering ClientServiceAccountRealmRole resources.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRealmRoleState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L125">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L133">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5637,7 +5799,7 @@ Input properties used for looking up and filtering ClientServiceAccountRealmRole
 The realm that the client and role belong to.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRealmRoleState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L129">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L137">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5645,7 +5807,7 @@ The realm that the client and role belong to.
 The name of the role that is assigned.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRealmRoleState-serviceAccountUserId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L133">property <b>serviceAccountUserId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRealmRole.ts#L141">property <b>serviceAccountUserId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountUserId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5653,7 +5815,7 @@ The name of the role that is assigned.
 The id of the service account that is assigned the role (the service account of the client that "consumes" the role).
 
 <h3 class="pdoc-module-header" id="ClientServiceAccountRoleArgs" data-link-title="ClientServiceAccountRoleArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRole.ts#L160">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRole.ts#L168">
         interface <strong>ClientServiceAccountRoleArgs</strong>
     </a>
 </h3>
@@ -5663,7 +5825,7 @@ The id of the service account that is assigned the role (the service account of 
 The set of arguments for constructing a ClientServiceAccountRole resource.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRoleArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRole.ts#L164">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRole.ts#L172">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5671,7 +5833,7 @@ The set of arguments for constructing a ClientServiceAccountRole resource.
 The id of the client that provides the role.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRoleArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRole.ts#L168">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRole.ts#L176">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5679,7 +5841,7 @@ The id of the client that provides the role.
 The realm the clients and roles belong to.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRoleArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRole.ts#L172">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRole.ts#L180">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5687,7 +5849,7 @@ The realm the clients and roles belong to.
 The name of the role that is assigned.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRoleArgs-serviceAccountUserId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRole.ts#L176">property <b>serviceAccountUserId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRole.ts#L184">property <b>serviceAccountUserId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountUserId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5695,7 +5857,7 @@ The name of the role that is assigned.
 The id of the service account that is assigned the role (the service account of the client that "consumes" the role).
 
 <h3 class="pdoc-module-header" id="ClientServiceAccountRoleState" data-link-title="ClientServiceAccountRoleState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRole.ts#L138">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRole.ts#L146">
         interface <strong>ClientServiceAccountRoleState</strong>
     </a>
 </h3>
@@ -5705,7 +5867,7 @@ The id of the service account that is assigned the role (the service account of 
 Input properties used for looking up and filtering ClientServiceAccountRole resources.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRoleState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRole.ts#L142">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRole.ts#L150">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5713,7 +5875,7 @@ Input properties used for looking up and filtering ClientServiceAccountRole reso
 The id of the client that provides the role.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRoleState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRole.ts#L146">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRole.ts#L154">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5721,7 +5883,7 @@ The id of the client that provides the role.
 The realm the clients and roles belong to.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRoleState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRole.ts#L150">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRole.ts#L158">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5729,7 +5891,7 @@ The realm the clients and roles belong to.
 The name of the role that is assigned.
 
 <h4 class="pdoc-member-header" id="ClientServiceAccountRoleState-serviceAccountUserId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientServiceAccountRole.ts#L154">property <b>serviceAccountUserId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientServiceAccountRole.ts#L162">property <b>serviceAccountUserId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountUserId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5737,7 +5899,7 @@ The name of the role that is assigned.
 The id of the service account that is assigned the role (the service account of the client that "consumes" the role).
 
 <h3 class="pdoc-module-header" id="ClientState" data-link-title="ClientState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L261">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L268">
         interface <strong>ClientState</strong>
     </a>
 </h3>
@@ -5747,7 +5909,7 @@ The id of the service account that is assigned the role (the service account of 
 Input properties used for looking up and filtering Client resources.
 
 <h4 class="pdoc-member-header" id="ClientState-accessTokenLifespan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L265">property <b>accessTokenLifespan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L272">property <b>accessTokenLifespan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessTokenLifespan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5755,7 +5917,7 @@ Input properties used for looking up and filtering Client resources.
 The amount of time in seconds before an access token expires. This will override the default for the realm.
 
 <h4 class="pdoc-member-header" id="ClientState-accessType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L269">property <b>accessType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L276">property <b>accessType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5763,7 +5925,7 @@ The amount of time in seconds before an access token expires. This will override
 Specifies the type of client, which can be one of the following:
 
 <h4 class="pdoc-member-header" id="ClientState-adminUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L273">property <b>adminUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L280">property <b>adminUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5771,7 +5933,7 @@ Specifies the type of client, which can be one of the following:
 URL to the admin interface of the client.
 
 <h4 class="pdoc-member-header" id="ClientState-authenticationFlowBindingOverrides">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L277">property <b>authenticationFlowBindingOverrides</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L284">property <b>authenticationFlowBindingOverrides</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticationFlowBindingOverrides?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#ClientAuthenticationFlowBindingOverrides'>ClientAuthenticationFlowBindingOverrides</a>&gt;;</code></pre>
@@ -5779,7 +5941,7 @@ URL to the admin interface of the client.
 Override realm authentication flow bindings
 
 <h4 class="pdoc-member-header" id="ClientState-authorization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L281">property <b>authorization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L288">property <b>authorization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#ClientAuthorization'>ClientAuthorization</a>&gt;;</code></pre>
@@ -5787,7 +5949,7 @@ Override realm authentication flow bindings
 When this block is present, fine-grained authorization will be enabled for this client. The client's `accessType` must be `CONFIDENTIAL`, and `serviceAccountsEnabled` must be `true`. This block has the following arguments:
 
 <h4 class="pdoc-member-header" id="ClientState-baseUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L285">property <b>baseUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L292">property <b>baseUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baseUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5795,7 +5957,7 @@ When this block is present, fine-grained authorization will be enabled for this 
 Default URL to use when the auth server needs to redirect or link back to the client.
 
 <h4 class="pdoc-member-header" id="ClientState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L289">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L296">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5803,7 +5965,7 @@ Default URL to use when the auth server needs to redirect or link back to the cl
 The Client ID for this client, referenced in the URI during authentication and in issued tokens.
 
 <h4 class="pdoc-member-header" id="ClientState-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L293">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L300">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5811,7 +5973,7 @@ The Client ID for this client, referenced in the URI during authentication and i
 The secret for clients with an `accessType` of `CONFIDENTIAL` or `BEARER-ONLY`. This value is sensitive and should be treated with the same care as a password. If omitted, this will be generated by Keycloak.
 
 <h4 class="pdoc-member-header" id="ClientState-consentRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L297">property <b>consentRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L304">property <b>consentRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consentRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5819,7 +5981,7 @@ The secret for clients with an `accessType` of `CONFIDENTIAL` or `BEARER-ONLY`. 
 When `true`, users have to consent to client access.
 
 <h4 class="pdoc-member-header" id="ClientState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L301">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L308">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5827,7 +5989,7 @@ When `true`, users have to consent to client access.
 The description of this client in the GUI.
 
 <h4 class="pdoc-member-header" id="ClientState-directAccessGrantsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L305">property <b>directAccessGrantsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L312">property <b>directAccessGrantsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directAccessGrantsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5835,7 +5997,7 @@ The description of this client in the GUI.
 When `true`, the OAuth2 Resource Owner Password Grant will be enabled for this client. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ClientState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L309">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L316">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5843,7 +6005,7 @@ When `true`, the OAuth2 Resource Owner Password Grant will be enabled for this c
 When `false`, this client will not be able to initiate a login or obtain access tokens. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="ClientState-excludeSessionStateFromAuthResponse">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L313">property <b>excludeSessionStateFromAuthResponse</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L320">property <b>excludeSessionStateFromAuthResponse</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludeSessionStateFromAuthResponse?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5851,7 +6013,7 @@ When `false`, this client will not be able to initiate a login or obtain access 
 When `true`, the parameter `sessionState` will not be included in OpenID Connect Authentication Response.
 
 <h4 class="pdoc-member-header" id="ClientState-fullScopeAllowed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L317">property <b>fullScopeAllowed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L324">property <b>fullScopeAllowed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fullScopeAllowed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5859,7 +6021,7 @@ When `true`, the parameter `sessionState` will not be included in OpenID Connect
 Allow to include all roles mappings in the access token.
 
 <h4 class="pdoc-member-header" id="ClientState-implicitFlowEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L321">property <b>implicitFlowEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L328">property <b>implicitFlowEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>implicitFlowEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5867,7 +6029,7 @@ Allow to include all roles mappings in the access token.
 When `true`, the OAuth2 Implicit Grant will be enabled for this client. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ClientState-loginTheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L325">property <b>loginTheme</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L332">property <b>loginTheme</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loginTheme?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5875,7 +6037,7 @@ When `true`, the OAuth2 Implicit Grant will be enabled for this client. Defaults
 The client login theme. This will override the default theme for the realm.
 
 <h4 class="pdoc-member-header" id="ClientState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L329">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L336">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5883,7 +6045,7 @@ The client login theme. This will override the default theme for the realm.
 The display name of this client in the GUI.
 
 <h4 class="pdoc-member-header" id="ClientState-pkceCodeChallengeMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L333">property <b>pkceCodeChallengeMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L340">property <b>pkceCodeChallengeMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pkceCodeChallengeMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5891,7 +6053,7 @@ The display name of this client in the GUI.
 The challenge method to use for Proof Key for Code Exchange. Can be either `plain` or `S256` or set to empty value ``.
 
 <h4 class="pdoc-member-header" id="ClientState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L337">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L344">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5899,7 +6061,7 @@ The challenge method to use for Proof Key for Code Exchange. Can be either `plai
 The realm this client is attached to.
 
 <h4 class="pdoc-member-header" id="ClientState-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L341">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L348">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5907,7 +6069,7 @@ The realm this client is attached to.
 (Computed) When authorization is enabled for this client, this attribute is the unique ID for the client (the same value as the `.id` attribute).
 
 <h4 class="pdoc-member-header" id="ClientState-rootUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L345">property <b>rootUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L352">property <b>rootUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5915,7 +6077,7 @@ The realm this client is attached to.
 When specified, this URL is prepended to any relative URLs found within `validRedirectUris`, `webOrigins`, and `adminUrl`. NOTE: Due to limitations in the Keycloak API, when the `rootUrl` attribute is used, the `validRedirectUris`, `webOrigins`, and `adminUrl` attributes will be required.
 
 <h4 class="pdoc-member-header" id="ClientState-serviceAccountUserId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L349">property <b>serviceAccountUserId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L356">property <b>serviceAccountUserId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountUserId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5923,7 +6085,7 @@ When specified, this URL is prepended to any relative URLs found within `validRe
 (Computed) When service accounts are enabled for this client, this attribute is the unique ID for the Keycloak user that represents this service account.
 
 <h4 class="pdoc-member-header" id="ClientState-serviceAccountsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L353">property <b>serviceAccountsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L360">property <b>serviceAccountsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5931,7 +6093,7 @@ When specified, this URL is prepended to any relative URLs found within `validRe
 When `true`, the OAuth2 Client Credentials grant will be enabled for this client. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ClientState-standardFlowEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L357">property <b>standardFlowEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L364">property <b>standardFlowEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>standardFlowEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5939,7 +6101,7 @@ When `true`, the OAuth2 Client Credentials grant will be enabled for this client
 When `true`, the OAuth2 Authorization Code Grant will be enabled for this client. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="ClientState-validRedirectUris">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L363">property <b>validRedirectUris</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L370">property <b>validRedirectUris</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validRedirectUris?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5949,7 +6111,7 @@ wildcards in the form of an asterisk can be used here. This attribute must be se
 is set to `true`.
 
 <h4 class="pdoc-member-header" id="ClientState-webOrigins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/client.ts#L367">property <b>webOrigins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/client.ts#L374">property <b>webOrigins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>webOrigins?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5957,7 +6119,7 @@ is set to `true`.
 A list of allowed CORS origins. `+` can be used to permit all valid redirect URIs, and `*` can be used to permit all origins.
 
 <h3 class="pdoc-module-header" id="ClientTimePolicyArgs" data-link-title="ClientTimePolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L152">
         interface <strong>ClientTimePolicyArgs</strong>
     </a>
 </h3>
@@ -5967,97 +6129,97 @@ A list of allowed CORS origins. `+` can be used to permit all valid redirect URI
 The set of arguments for constructing a ClientTimePolicy resource.
 
 <h4 class="pdoc-member-header" id="ClientTimePolicyArgs-dayMonth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L153">property <b>dayMonth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L153">property <b>dayMonth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dayMonth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyArgs-dayMonthEnd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L154">property <b>dayMonthEnd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L154">property <b>dayMonthEnd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dayMonthEnd?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyArgs-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L155">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L155">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>decisionStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L156">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L156">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyArgs-hour">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L157">property <b>hour</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L157">property <b>hour</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hour?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyArgs-hourEnd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L158">property <b>hourEnd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L158">property <b>hourEnd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hourEnd?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyArgs-logic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L159">property <b>logic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L159">property <b>logic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyArgs-minute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L160">property <b>minute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L160">property <b>minute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyArgs-minuteEnd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L161">property <b>minuteEnd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L161">property <b>minuteEnd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minuteEnd?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyArgs-month">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L162">property <b>month</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L162">property <b>month</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>month?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyArgs-monthEnd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L163">property <b>monthEnd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L163">property <b>monthEnd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monthEnd?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L164">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L164">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyArgs-notBefore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L165">property <b>notBefore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L165">property <b>notBefore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notBefore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyArgs-notOnOrAfter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L166">property <b>notOnOrAfter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L166">property <b>notOnOrAfter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notOnOrAfter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L167">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L167">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyArgs-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L168">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L168">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyArgs-year">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L169">property <b>year</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L169">property <b>year</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>year?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyArgs-yearEnd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L170">property <b>yearEnd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L170">property <b>yearEnd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>yearEnd?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClientTimePolicyState" data-link-title="ClientTimePolicyState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L128">
         interface <strong>ClientTimePolicyState</strong>
     </a>
 </h3>
@@ -6067,97 +6229,97 @@ The set of arguments for constructing a ClientTimePolicy resource.
 Input properties used for looking up and filtering ClientTimePolicy resources.
 
 <h4 class="pdoc-member-header" id="ClientTimePolicyState-dayMonth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L129">property <b>dayMonth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L129">property <b>dayMonth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dayMonth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyState-dayMonthEnd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L130">property <b>dayMonthEnd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L130">property <b>dayMonthEnd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dayMonthEnd?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyState-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L131">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L131">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>decisionStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L132">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L132">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyState-hour">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L133">property <b>hour</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L133">property <b>hour</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hour?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyState-hourEnd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L134">property <b>hourEnd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L134">property <b>hourEnd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hourEnd?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyState-logic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L135">property <b>logic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L135">property <b>logic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyState-minute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L136">property <b>minute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L136">property <b>minute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyState-minuteEnd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L137">property <b>minuteEnd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L137">property <b>minuteEnd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minuteEnd?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyState-month">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L138">property <b>month</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L138">property <b>month</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>month?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyState-monthEnd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L139">property <b>monthEnd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L139">property <b>monthEnd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monthEnd?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L140">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L140">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyState-notBefore">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L141">property <b>notBefore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L141">property <b>notBefore</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notBefore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyState-notOnOrAfter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L142">property <b>notOnOrAfter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L142">property <b>notOnOrAfter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notOnOrAfter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L143">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L143">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyState-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L144">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L144">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyState-year">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L145">property <b>year</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L145">property <b>year</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>year?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientTimePolicyState-yearEnd">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientTimePolicy.ts#L146">property <b>yearEnd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientTimePolicy.ts#L146">property <b>yearEnd</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>yearEnd?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClientUserPolicyArgs" data-link-title="ClientUserPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L111">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L111">
         interface <strong>ClientUserPolicyArgs</strong>
     </a>
 </h3>
@@ -6167,42 +6329,42 @@ Input properties used for looking up and filtering ClientTimePolicy resources.
 The set of arguments for constructing a ClientUserPolicy resource.
 
 <h4 class="pdoc-member-header" id="ClientUserPolicyArgs-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L112">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L112">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>decisionStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUserPolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L113">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L113">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUserPolicyArgs-logic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L114">property <b>logic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L114">property <b>logic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUserPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L115">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L115">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUserPolicyArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L116">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L116">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUserPolicyArgs-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L117">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L117">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUserPolicyArgs-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L118">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L118">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClientUserPolicyState" data-link-title="ClientUserPolicyState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L98">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L98">
         interface <strong>ClientUserPolicyState</strong>
     </a>
 </h3>
@@ -6212,42 +6374,42 @@ The set of arguments for constructing a ClientUserPolicy resource.
 Input properties used for looking up and filtering ClientUserPolicy resources.
 
 <h4 class="pdoc-member-header" id="ClientUserPolicyState-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L99">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L99">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>decisionStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUserPolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L100">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L100">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUserPolicyState-logic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L101">property <b>logic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L101">property <b>logic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUserPolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L102">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L102">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUserPolicyState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L103">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L103">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUserPolicyState-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L104">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L104">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClientUserPolicyState-users">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/clientUserPolicy.ts#L105">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/clientUserPolicy.ts#L105">property <b>users</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="FullNameProtocolMapperArgs" data-link-title="FullNameProtocolMapperArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L192">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L204">
         interface <strong>FullNameProtocolMapperArgs</strong>
     </a>
 </h3>
@@ -6257,7 +6419,7 @@ Input properties used for looking up and filtering ClientUserPolicy resources.
 The set of arguments for constructing a FullNameProtocolMapper resource.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapperArgs-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L196">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L208">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToAccessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6265,7 +6427,7 @@ The set of arguments for constructing a FullNameProtocolMapper resource.
 Indicates if the user's full name should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapperArgs-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L200">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L212">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToIdToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6273,7 +6435,7 @@ Indicates if the user's full name should be added as a claim to the access token
 Indicates if the user's full name should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapperArgs-addToUserinfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L204">property <b>addToUserinfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L216">property <b>addToUserinfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToUserinfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6281,7 +6443,7 @@ Indicates if the user's full name should be added as a claim to the id token. De
 Indicates if the user's full name should be added as a claim to the UserInfo response body. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapperArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L208">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L220">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6289,7 +6451,7 @@ Indicates if the user's full name should be added as a claim to the UserInfo res
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapperArgs-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L212">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L224">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6297,7 +6459,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapperArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L216">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L228">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6305,7 +6467,7 @@ The client scope this protocol mapper should be attached to. Conflicts with `cli
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapperArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L220">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L232">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6313,7 +6475,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h3 class="pdoc-module-header" id="FullNameProtocolMapperState" data-link-title="FullNameProtocolMapperState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L158">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L170">
         interface <strong>FullNameProtocolMapperState</strong>
     </a>
 </h3>
@@ -6323,7 +6485,7 @@ The realm this protocol mapper exists within.
 Input properties used for looking up and filtering FullNameProtocolMapper resources.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapperState-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L162">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L174">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToAccessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6331,7 +6493,7 @@ Input properties used for looking up and filtering FullNameProtocolMapper resour
 Indicates if the user's full name should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapperState-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L166">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L178">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToIdToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6339,7 +6501,7 @@ Indicates if the user's full name should be added as a claim to the access token
 Indicates if the user's full name should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapperState-addToUserinfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L170">property <b>addToUserinfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L182">property <b>addToUserinfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToUserinfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6347,7 +6509,7 @@ Indicates if the user's full name should be added as a claim to the id token. De
 Indicates if the user's full name should be added as a claim to the UserInfo response body. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapperState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L174">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L186">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6355,7 +6517,7 @@ Indicates if the user's full name should be added as a claim to the UserInfo res
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapperState-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L178">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L190">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6363,7 +6525,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapperState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L182">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L194">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6371,7 +6533,7 @@ The client scope this protocol mapper should be attached to. Conflicts with `cli
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="FullNameProtocolMapperState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/fullNameProtocolMapper.ts#L186">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/fullNameProtocolMapper.ts#L198">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6379,7 +6541,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h3 class="pdoc-module-header" id="GetClientArgs" data-link-title="GetClientArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L45">
         interface <strong>GetClientArgs</strong>
     </a>
 </h3>
@@ -6389,7 +6551,7 @@ The realm this protocol mapper exists within.
 A collection of arguments for invoking getClient.
 
 <h4 class="pdoc-member-header" id="GetClientArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L50">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L49">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6397,7 +6559,7 @@ A collection of arguments for invoking getClient.
 The client id (not its unique ID).
 
 <h4 class="pdoc-member-header" id="GetClientArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L54">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L53">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6405,7 +6567,7 @@ The client id (not its unique ID).
 The realm id.
 
 <h3 class="pdoc-module-header" id="GetClientAuthorizationPolicyArgs" data-link-title="GetClientAuthorizationPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L74">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L73">
         interface <strong>GetClientAuthorizationPolicyArgs</strong>
     </a>
 </h3>
@@ -6415,7 +6577,7 @@ The realm id.
 A collection of arguments for invoking getClientAuthorizationPolicy.
 
 <h4 class="pdoc-member-header" id="GetClientAuthorizationPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L78">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L77">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6423,7 +6585,7 @@ A collection of arguments for invoking getClientAuthorizationPolicy.
 The name of the authorization policy.
 
 <h4 class="pdoc-member-header" id="GetClientAuthorizationPolicyArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L82">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L81">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6431,7 +6593,7 @@ The name of the authorization policy.
 The realm this authorization policy exists within.
 
 <h4 class="pdoc-member-header" id="GetClientAuthorizationPolicyArgs-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L86">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L85">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6439,7 +6601,7 @@ The realm this authorization policy exists within.
 The ID of the resource server this authorization policy is attached to.
 
 <h3 class="pdoc-module-header" id="GetClientAuthorizationPolicyResult" data-link-title="GetClientAuthorizationPolicyResult">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L91">
         interface <strong>GetClientAuthorizationPolicyResult</strong>
     </a>
 </h3>
@@ -6449,7 +6611,7 @@ The ID of the resource server this authorization policy is attached to.
 A collection of values returned by getClientAuthorizationPolicy.
 
 <h4 class="pdoc-member-header" id="GetClientAuthorizationPolicyResult-decisionStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L96">property <b>decisionStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L95">property <b>decisionStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>decisionStrategy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6457,7 +6619,7 @@ A collection of values returned by getClientAuthorizationPolicy.
 (Computed) Dictates how the policies associated with a given permission are evaluated and how a final decision is obtained. Could be one of `AFFIRMATIVE`, `CONSENSUS`, or `UNANIMOUS`. Applies to permissions.
 
 <h4 class="pdoc-member-header" id="GetClientAuthorizationPolicyResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L100">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L99">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6465,7 +6627,7 @@ A collection of values returned by getClientAuthorizationPolicy.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetClientAuthorizationPolicyResult-logic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L104">property <b>logic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L103">property <b>logic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logic: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6473,12 +6635,12 @@ The provider-assigned unique ID for this managed resource.
 (Computed) Dictates how the policy decision should be made. Can be either `POSITIVE` or `NEGATIVE`. Applies to policies.
 
 <h4 class="pdoc-member-header" id="GetClientAuthorizationPolicyResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L105">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L104">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientAuthorizationPolicyResult-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L109">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L108">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6486,7 +6648,7 @@ The provider-assigned unique ID for this managed resource.
 (Computed) The ID of the owning resource. Applies to resources.
 
 <h4 class="pdoc-member-header" id="GetClientAuthorizationPolicyResult-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L113">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L112">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -6494,17 +6656,17 @@ The provider-assigned unique ID for this managed resource.
 (Computed) The IDs of the policies that must be applied to scopes/resources for this policy/permission. Applies to policies and permissions.
 
 <h4 class="pdoc-member-header" id="GetClientAuthorizationPolicyResult-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L114">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L113">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientAuthorizationPolicyResult-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L115">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L114">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientAuthorizationPolicyResult-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L119">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L118">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resources: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -6512,7 +6674,7 @@ The provider-assigned unique ID for this managed resource.
 (Computed) The IDs of the resources that this permission applies to. Applies to resource-based permissions.
 
 <h4 class="pdoc-member-header" id="GetClientAuthorizationPolicyResult-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L123">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L122">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -6520,7 +6682,7 @@ The provider-assigned unique ID for this managed resource.
 (Computed) The IDs of the scopes that this permission applies to. Applies to scope-based permissions.
 
 <h4 class="pdoc-member-header" id="GetClientAuthorizationPolicyResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L127">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientAuthorizationPolicy.ts#L126">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6528,7 +6690,7 @@ The provider-assigned unique ID for this managed resource.
 (Computed) The type of this policy / permission. For permissions, this could be `resource` or `scope`. For policies, this could be any type of authorization policy, such as `js`.
 
 <h3 class="pdoc-module-header" id="GetClientResult" data-link-title="GetClientResult">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L59">
         interface <strong>GetClientResult</strong>
     </a>
 </h3>
@@ -6538,77 +6700,77 @@ The provider-assigned unique ID for this managed resource.
 A collection of values returned by getClient.
 
 <h4 class="pdoc-member-header" id="GetClientResult-accessTokenLifespan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L61">property <b>accessTokenLifespan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L60">property <b>accessTokenLifespan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessTokenLifespan: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-accessType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L62">property <b>accessType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L61">property <b>accessType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-adminUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L63">property <b>adminUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L62">property <b>adminUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adminUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-authenticationFlowBindingOverrides">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L64">property <b>authenticationFlowBindingOverrides</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L63">property <b>authenticationFlowBindingOverrides</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authenticationFlowBindingOverrides: <a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#GetClientAuthenticationFlowBindingOverride'>GetClientAuthenticationFlowBindingOverride</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-authorizations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L65">property <b>authorizations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L64">property <b>authorizations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizations: <a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#GetClientAuthorization'>GetClientAuthorization</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-baseUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L66">property <b>baseUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L65">property <b>baseUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baseUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L67">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L66">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L68">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L67">property <b>clientSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientSecret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-consentRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L69">property <b>consentRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L68">property <b>consentRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>consentRequired: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L70">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L69">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-directAccessGrantsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L71">property <b>directAccessGrantsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L70">property <b>directAccessGrantsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directAccessGrantsEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L72">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L71">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-excludeSessionStateFromAuthResponse">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L73">property <b>excludeSessionStateFromAuthResponse</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L72">property <b>excludeSessionStateFromAuthResponse</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludeSessionStateFromAuthResponse: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-fullScopeAllowed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L74">property <b>fullScopeAllowed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L73">property <b>fullScopeAllowed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fullScopeAllowed: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L77">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6616,67 +6778,67 @@ A collection of values returned by getClient.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetClientResult-implicitFlowEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L79">property <b>implicitFlowEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L78">property <b>implicitFlowEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>implicitFlowEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-loginTheme">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L80">property <b>loginTheme</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L79">property <b>loginTheme</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loginTheme: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L81">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L80">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-pkceCodeChallengeMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L82">property <b>pkceCodeChallengeMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L81">property <b>pkceCodeChallengeMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pkceCodeChallengeMethod: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L83">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L82">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-resourceServerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L84">property <b>resourceServerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L83">property <b>resourceServerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceServerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-rootUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L85">property <b>rootUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L84">property <b>rootUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-serviceAccountUserId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L86">property <b>serviceAccountUserId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L85">property <b>serviceAccountUserId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountUserId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-serviceAccountsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L87">property <b>serviceAccountsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L86">property <b>serviceAccountsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountsEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-standardFlowEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L88">property <b>standardFlowEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L87">property <b>standardFlowEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>standardFlowEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-validRedirectUris">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L89">property <b>validRedirectUris</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L88">property <b>validRedirectUris</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validRedirectUris: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClientResult-webOrigins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClient.ts#L90">property <b>webOrigins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClient.ts#L89">property <b>webOrigins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>webOrigins: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetClientServiceAccountUserArgs" data-link-title="GetClientServiceAccountUserArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientServiceAccountUser.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientServiceAccountUser.ts#L64">
         interface <strong>GetClientServiceAccountUserArgs</strong>
     </a>
 </h3>
@@ -6686,7 +6848,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getClientServiceAccountUser.
 
 <h4 class="pdoc-member-header" id="GetClientServiceAccountUserArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientServiceAccountUser.ts#L69">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientServiceAccountUser.ts#L68">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6694,7 +6856,7 @@ A collection of arguments for invoking getClientServiceAccountUser.
 The ID of the OpenID client with service accounts enabled.
 
 <h4 class="pdoc-member-header" id="GetClientServiceAccountUserArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientServiceAccountUser.ts#L73">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientServiceAccountUser.ts#L72">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6702,7 +6864,7 @@ The ID of the OpenID client with service accounts enabled.
 The realm that the OpenID client exists within.
 
 <h3 class="pdoc-module-header" id="GetClientServiceAccountUserResult" data-link-title="GetClientServiceAccountUserResult">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientServiceAccountUser.ts#L79">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientServiceAccountUser.ts#L78">
         interface <strong>GetClientServiceAccountUserResult</strong>
     </a>
 </h3>
@@ -6712,42 +6874,42 @@ The realm that the OpenID client exists within.
 A collection of values returned by getClientServiceAccountUser.
 
 <h4 class="pdoc-member-header" id="GetClientServiceAccountUserResult-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientServiceAccountUser.ts#L80">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientServiceAccountUser.ts#L79">property <b>attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attributes: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetClientServiceAccountUserResult-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientServiceAccountUser.ts#L81">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientServiceAccountUser.ts#L80">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientServiceAccountUserResult-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientServiceAccountUser.ts#L82">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientServiceAccountUser.ts#L81">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientServiceAccountUserResult-emailVerified">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientServiceAccountUser.ts#L83">property <b>emailVerified</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientServiceAccountUser.ts#L82">property <b>emailVerified</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailVerified: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientServiceAccountUserResult-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientServiceAccountUser.ts#L84">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientServiceAccountUser.ts#L83">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientServiceAccountUserResult-federatedIdentities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientServiceAccountUser.ts#L85">property <b>federatedIdentities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientServiceAccountUser.ts#L84">property <b>federatedIdentities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>federatedIdentities: <a href='/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#GetClientServiceAccountUserFederatedIdentity'>GetClientServiceAccountUserFederatedIdentity</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetClientServiceAccountUserResult-firstName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientServiceAccountUser.ts#L86">property <b>firstName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientServiceAccountUser.ts#L85">property <b>firstName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firstName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientServiceAccountUserResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientServiceAccountUser.ts#L90">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientServiceAccountUser.ts#L89">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -6755,22 +6917,22 @@ A collection of values returned by getClientServiceAccountUser.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetClientServiceAccountUserResult-lastName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientServiceAccountUser.ts#L91">property <b>lastName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientServiceAccountUser.ts#L90">property <b>lastName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientServiceAccountUserResult-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientServiceAccountUser.ts#L92">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientServiceAccountUser.ts#L91">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientServiceAccountUserResult-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/getClientServiceAccountUser.ts#L93">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/getClientServiceAccountUser.ts#L92">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GroupMembershipProtocolMapperArgs" data-link-title="GroupMembershipProtocolMapperArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L217">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L229">
         interface <strong>GroupMembershipProtocolMapperArgs</strong>
     </a>
 </h3>
@@ -6780,7 +6942,7 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a GroupMembershipProtocolMapper resource.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapperArgs-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L221">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L233">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToAccessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6788,7 +6950,7 @@ The set of arguments for constructing a GroupMembershipProtocolMapper resource.
 Indicates if the property should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapperArgs-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L225">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L237">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToIdToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6796,7 +6958,7 @@ Indicates if the property should be added as a claim to the access token. Defaul
 Indicates if the property should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapperArgs-addToUserinfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L229">property <b>addToUserinfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L241">property <b>addToUserinfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToUserinfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6804,7 +6966,7 @@ Indicates if the property should be added as a claim to the id token. Defaults t
 Indicates if the property should be added as a claim to the UserInfo response body. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapperArgs-claimName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L233">property <b>claimName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L245">property <b>claimName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6812,7 +6974,7 @@ Indicates if the property should be added as a claim to the UserInfo response bo
 The name of the claim to insert into a token.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapperArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L237">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L249">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6820,7 +6982,7 @@ The name of the claim to insert into a token.
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapperArgs-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L241">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L253">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6828,7 +6990,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapperArgs-fullPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L245">property <b>fullPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L257">property <b>fullPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fullPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6836,7 +6998,7 @@ The client scope this protocol mapper should be attached to. Conflicts with `cli
 Indicates whether the full path of the group including its parents will be used. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapperArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L249">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L261">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6844,7 +7006,7 @@ Indicates whether the full path of the group including its parents will be used.
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapperArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L253">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L265">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6852,7 +7014,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h3 class="pdoc-module-header" id="GroupMembershipProtocolMapperState" data-link-title="GroupMembershipProtocolMapperState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L175">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L187">
         interface <strong>GroupMembershipProtocolMapperState</strong>
     </a>
 </h3>
@@ -6862,7 +7024,7 @@ The realm this protocol mapper exists within.
 Input properties used for looking up and filtering GroupMembershipProtocolMapper resources.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapperState-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L179">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L191">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToAccessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6870,7 +7032,7 @@ Input properties used for looking up and filtering GroupMembershipProtocolMapper
 Indicates if the property should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapperState-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L183">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L195">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToIdToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6878,7 +7040,7 @@ Indicates if the property should be added as a claim to the access token. Defaul
 Indicates if the property should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapperState-addToUserinfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L187">property <b>addToUserinfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L199">property <b>addToUserinfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToUserinfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6886,7 +7048,7 @@ Indicates if the property should be added as a claim to the id token. Defaults t
 Indicates if the property should be added as a claim to the UserInfo response body. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapperState-claimName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L191">property <b>claimName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L203">property <b>claimName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6894,7 +7056,7 @@ Indicates if the property should be added as a claim to the UserInfo response bo
 The name of the claim to insert into a token.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapperState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L195">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L207">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6902,7 +7064,7 @@ The name of the claim to insert into a token.
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapperState-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L199">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L211">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6910,7 +7072,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapperState-fullPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L203">property <b>fullPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L215">property <b>fullPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fullPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6918,7 +7080,7 @@ The client scope this protocol mapper should be attached to. Conflicts with `cli
 Indicates whether the full path of the group including its parents will be used. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapperState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L207">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L219">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6926,7 +7088,7 @@ Indicates whether the full path of the group including its parents will be used.
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="GroupMembershipProtocolMapperState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L211">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/groupMembershipProtocolMapper.ts#L223">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6934,7 +7096,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h3 class="pdoc-module-header" id="HardcodedClaimProtocolMapperArgs" data-link-title="HardcodedClaimProtocolMapperArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L232">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L244">
         interface <strong>HardcodedClaimProtocolMapperArgs</strong>
     </a>
 </h3>
@@ -6944,7 +7106,7 @@ The realm this protocol mapper exists within.
 The set of arguments for constructing a HardcodedClaimProtocolMapper resource.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapperArgs-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L236">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L248">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToAccessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6952,7 +7114,7 @@ The set of arguments for constructing a HardcodedClaimProtocolMapper resource.
 Indicates if the property should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapperArgs-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L240">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L252">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToIdToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6960,7 +7122,7 @@ Indicates if the property should be added as a claim to the access token. Defaul
 Indicates if the property should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapperArgs-addToUserinfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L244">property <b>addToUserinfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L256">property <b>addToUserinfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToUserinfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6968,7 +7130,7 @@ Indicates if the property should be added as a claim to the id token. Defaults t
 Indicates if the property should be added as a claim to the UserInfo response body. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapperArgs-claimName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L248">property <b>claimName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L260">property <b>claimName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6976,7 +7138,7 @@ Indicates if the property should be added as a claim to the UserInfo response bo
 The name of the claim to insert into a token.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapperArgs-claimValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L252">property <b>claimValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L264">property <b>claimValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6984,7 +7146,7 @@ The name of the claim to insert into a token.
 The hardcoded value of the claim.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapperArgs-claimValueType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L256">property <b>claimValueType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L268">property <b>claimValueType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimValueType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6992,7 +7154,7 @@ The hardcoded value of the claim.
 The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapperArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L260">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L272">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7000,7 +7162,7 @@ The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapperArgs-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L264">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L276">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7008,7 +7170,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapperArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L268">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L280">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7016,7 +7178,7 @@ The client scope this protocol mapper should be attached to. Conflicts with `cli
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapperArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L272">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L284">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7024,7 +7186,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h3 class="pdoc-module-header" id="HardcodedClaimProtocolMapperState" data-link-title="HardcodedClaimProtocolMapperState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L198">
         interface <strong>HardcodedClaimProtocolMapperState</strong>
     </a>
 </h3>
@@ -7034,7 +7196,7 @@ The realm this protocol mapper exists within.
 Input properties used for looking up and filtering HardcodedClaimProtocolMapper resources.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapperState-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L190">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L202">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToAccessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7042,7 +7204,7 @@ Input properties used for looking up and filtering HardcodedClaimProtocolMapper 
 Indicates if the property should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapperState-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L194">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L206">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToIdToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7050,7 +7212,7 @@ Indicates if the property should be added as a claim to the access token. Defaul
 Indicates if the property should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapperState-addToUserinfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L198">property <b>addToUserinfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L210">property <b>addToUserinfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToUserinfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7058,7 +7220,7 @@ Indicates if the property should be added as a claim to the id token. Defaults t
 Indicates if the property should be added as a claim to the UserInfo response body. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapperState-claimName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L202">property <b>claimName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L214">property <b>claimName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7066,7 +7228,7 @@ Indicates if the property should be added as a claim to the UserInfo response bo
 The name of the claim to insert into a token.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapperState-claimValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L206">property <b>claimValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L218">property <b>claimValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7074,7 +7236,7 @@ The name of the claim to insert into a token.
 The hardcoded value of the claim.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapperState-claimValueType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L210">property <b>claimValueType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L222">property <b>claimValueType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimValueType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7082,7 +7244,7 @@ The hardcoded value of the claim.
 The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapperState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L214">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L226">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7090,7 +7252,7 @@ The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapperState-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L218">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L230">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7098,7 +7260,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapperState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L222">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L234">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7106,7 +7268,7 @@ The client scope this protocol mapper should be attached to. Conflicts with `cli
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="HardcodedClaimProtocolMapperState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L226">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedClaimProtocolMapper.ts#L238">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7114,7 +7276,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h3 class="pdoc-module-header" id="HardcodedRoleProtocolMapperArgs" data-link-title="HardcodedRoleProtocolMapperArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L179">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L191">
         interface <strong>HardcodedRoleProtocolMapperArgs</strong>
     </a>
 </h3>
@@ -7124,7 +7286,7 @@ The realm this protocol mapper exists within.
 The set of arguments for constructing a HardcodedRoleProtocolMapper resource.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleProtocolMapperArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L183">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L195">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7132,7 +7294,7 @@ The set of arguments for constructing a HardcodedRoleProtocolMapper resource.
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleProtocolMapperArgs-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L187">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L199">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7140,7 +7302,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleProtocolMapperArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L191">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L203">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7148,7 +7310,7 @@ The client scope this protocol mapper should be attached to. Conflicts with `cli
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleProtocolMapperArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L195">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L207">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7156,7 +7318,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleProtocolMapperArgs-roleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L199">property <b>roleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L211">property <b>roleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7164,7 +7326,7 @@ The realm this protocol mapper exists within.
 The ID of the role to map to an access token.
 
 <h3 class="pdoc-module-header" id="HardcodedRoleProtocolMapperState" data-link-title="HardcodedRoleProtocolMapperState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L165">
         interface <strong>HardcodedRoleProtocolMapperState</strong>
     </a>
 </h3>
@@ -7174,7 +7336,7 @@ The ID of the role to map to an access token.
 Input properties used for looking up and filtering HardcodedRoleProtocolMapper resources.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleProtocolMapperState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L157">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L169">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7182,7 +7344,7 @@ Input properties used for looking up and filtering HardcodedRoleProtocolMapper r
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleProtocolMapperState-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L161">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L173">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7190,7 +7352,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleProtocolMapperState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L165">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L177">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7198,7 +7360,7 @@ The client scope this protocol mapper should be attached to. Conflicts with `cli
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleProtocolMapperState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L169">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L181">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7206,7 +7368,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h4 class="pdoc-member-header" id="HardcodedRoleProtocolMapperState-roleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L173">property <b>roleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/hardcodedRoleProtocolMapper.ts#L185">property <b>roleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7214,7 +7376,7 @@ The realm this protocol mapper exists within.
 The ID of the role to map to an access token.
 
 <h3 class="pdoc-module-header" id="UserAttributeProtocolMapperArgs" data-link-title="UserAttributeProtocolMapperArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L252">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L264">
         interface <strong>UserAttributeProtocolMapperArgs</strong>
     </a>
 </h3>
@@ -7224,7 +7386,7 @@ The ID of the role to map to an access token.
 The set of arguments for constructing a UserAttributeProtocolMapper resource.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperArgs-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L256">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L268">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToAccessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7232,7 +7394,7 @@ The set of arguments for constructing a UserAttributeProtocolMapper resource.
 Indicates if the attribute should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperArgs-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L260">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L272">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToIdToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7240,7 +7402,7 @@ Indicates if the attribute should be added as a claim to the access token. Defau
 Indicates if the attribute should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperArgs-addToUserinfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L264">property <b>addToUserinfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L276">property <b>addToUserinfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToUserinfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7248,7 +7410,7 @@ Indicates if the attribute should be added as a claim to the id token. Defaults 
 Indicates if the attribute should be added as a claim to the UserInfo response body. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperArgs-aggregateAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L268">property <b>aggregateAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L280">property <b>aggregateAttributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aggregateAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7256,7 +7418,7 @@ Indicates if the attribute should be added as a claim to the UserInfo response b
 Indicates whether this attribute is a single value or an array of values. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperArgs-claimName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L272">property <b>claimName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L284">property <b>claimName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7264,7 +7426,7 @@ Indicates whether this attribute is a single value or an array of values. Defaul
 The name of the claim to insert into a token.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperArgs-claimValueType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L276">property <b>claimValueType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L288">property <b>claimValueType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimValueType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7272,7 +7434,7 @@ The name of the claim to insert into a token.
 The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L280">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L292">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7280,7 +7442,7 @@ The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperArgs-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L284">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L296">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7288,7 +7450,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperArgs-multivalued">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L288">property <b>multivalued</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L300">property <b>multivalued</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multivalued?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7296,7 +7458,7 @@ The client scope this protocol mapper should be attached to. Conflicts with `cli
 Indicates whether this attribute is a single value or an array of values. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L292">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L304">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7304,7 +7466,7 @@ Indicates whether this attribute is a single value or an array of values. Defaul
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L296">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L308">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7312,7 +7474,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperArgs-userAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L300">property <b>userAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L312">property <b>userAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userAttribute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7320,7 +7482,7 @@ The realm this protocol mapper exists within.
 The custom user attribute to map a claim for.
 
 <h3 class="pdoc-module-header" id="UserAttributeProtocolMapperState" data-link-title="UserAttributeProtocolMapperState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L198">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L210">
         interface <strong>UserAttributeProtocolMapperState</strong>
     </a>
 </h3>
@@ -7330,7 +7492,7 @@ The custom user attribute to map a claim for.
 Input properties used for looking up and filtering UserAttributeProtocolMapper resources.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperState-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L202">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L214">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToAccessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7338,7 +7500,7 @@ Input properties used for looking up and filtering UserAttributeProtocolMapper r
 Indicates if the attribute should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperState-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L206">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L218">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToIdToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7346,7 +7508,7 @@ Indicates if the attribute should be added as a claim to the access token. Defau
 Indicates if the attribute should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperState-addToUserinfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L210">property <b>addToUserinfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L222">property <b>addToUserinfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToUserinfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7354,7 +7516,7 @@ Indicates if the attribute should be added as a claim to the id token. Defaults 
 Indicates if the attribute should be added as a claim to the UserInfo response body. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperState-aggregateAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L214">property <b>aggregateAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L226">property <b>aggregateAttributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aggregateAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7362,7 +7524,7 @@ Indicates if the attribute should be added as a claim to the UserInfo response b
 Indicates whether this attribute is a single value or an array of values. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperState-claimName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L218">property <b>claimName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L230">property <b>claimName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7370,7 +7532,7 @@ Indicates whether this attribute is a single value or an array of values. Defaul
 The name of the claim to insert into a token.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperState-claimValueType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L222">property <b>claimValueType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L234">property <b>claimValueType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimValueType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7378,7 +7540,7 @@ The name of the claim to insert into a token.
 The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L226">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L238">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7386,7 +7548,7 @@ The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperState-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L230">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L242">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7394,7 +7556,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperState-multivalued">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L234">property <b>multivalued</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L246">property <b>multivalued</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multivalued?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7402,7 +7564,7 @@ The client scope this protocol mapper should be attached to. Conflicts with `cli
 Indicates whether this attribute is a single value or an array of values. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L238">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L250">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7410,7 +7572,7 @@ Indicates whether this attribute is a single value or an array of values. Defaul
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L242">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L254">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7418,7 +7580,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h4 class="pdoc-member-header" id="UserAttributeProtocolMapperState-userAttribute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L246">property <b>userAttribute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userAttributeProtocolMapper.ts#L258">property <b>userAttribute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userAttribute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7426,7 +7588,7 @@ The realm this protocol mapper exists within.
 The custom user attribute to map a claim for.
 
 <h3 class="pdoc-module-header" id="UserClientRoleProtocolMapperArgs" data-link-title="UserClientRoleProtocolMapperArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L247">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L259">
         interface <strong>UserClientRoleProtocolMapperArgs</strong>
     </a>
 </h3>
@@ -7436,7 +7598,7 @@ The custom user attribute to map a claim for.
 The set of arguments for constructing a UserClientRoleProtocolMapper resource.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperArgs-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L251">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L263">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToAccessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7444,7 +7606,7 @@ The set of arguments for constructing a UserClientRoleProtocolMapper resource.
 Indicates if the property should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperArgs-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L255">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L267">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToIdToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7452,7 +7614,7 @@ Indicates if the property should be added as a claim to the access token. Defaul
 Indicates if the property should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperArgs-addToUserinfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L259">property <b>addToUserinfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L271">property <b>addToUserinfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToUserinfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7460,7 +7622,7 @@ Indicates if the property should be added as a claim to the id token. Defaults t
 Indicates if the property should be added as a claim to the UserInfo response body. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperArgs-claimName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L263">property <b>claimName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L275">property <b>claimName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7468,7 +7630,7 @@ Indicates if the property should be added as a claim to the UserInfo response bo
 The name of the claim to insert into a token.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperArgs-claimValueType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L267">property <b>claimValueType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L279">property <b>claimValueType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimValueType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7476,7 +7638,7 @@ The name of the claim to insert into a token.
 The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L271">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L283">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7484,7 +7646,7 @@ The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperArgs-clientIdForRoleMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L275">property <b>clientIdForRoleMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L287">property <b>clientIdForRoleMappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientIdForRoleMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7492,7 +7654,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The Client ID for role mappings. Just client roles of this client will be added to the token. If this is unset, client roles of all clients will be added to the token.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperArgs-clientRolePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L279">property <b>clientRolePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L291">property <b>clientRolePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientRolePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7500,7 +7662,7 @@ The Client ID for role mappings. Just client roles of this client will be added 
 A prefix for each Client Role.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperArgs-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L283">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L295">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7508,7 +7670,7 @@ A prefix for each Client Role.
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperArgs-multivalued">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L287">property <b>multivalued</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L299">property <b>multivalued</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multivalued?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7516,7 +7678,7 @@ The client scope this protocol mapper should be attached to. Conflicts with `cli
 Indicates if attribute supports multiple values. If true, then the list of all values of this attribute will be set as claim. If false, then just first value will be set as claim. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L291">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L303">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7524,7 +7686,7 @@ Indicates if attribute supports multiple values. If true, then the list of all v
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L295">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L307">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7532,7 +7694,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h3 class="pdoc-module-header" id="UserClientRoleProtocolMapperState" data-link-title="UserClientRoleProtocolMapperState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L193">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L205">
         interface <strong>UserClientRoleProtocolMapperState</strong>
     </a>
 </h3>
@@ -7542,7 +7704,7 @@ The realm this protocol mapper exists within.
 Input properties used for looking up and filtering UserClientRoleProtocolMapper resources.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperState-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L197">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L209">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToAccessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7550,7 +7712,7 @@ Input properties used for looking up and filtering UserClientRoleProtocolMapper 
 Indicates if the property should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperState-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L201">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L213">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToIdToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7558,7 +7720,7 @@ Indicates if the property should be added as a claim to the access token. Defaul
 Indicates if the property should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperState-addToUserinfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L205">property <b>addToUserinfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L217">property <b>addToUserinfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToUserinfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7566,7 +7728,7 @@ Indicates if the property should be added as a claim to the id token. Defaults t
 Indicates if the property should be added as a claim to the UserInfo response body. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperState-claimName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L209">property <b>claimName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L221">property <b>claimName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7574,7 +7736,7 @@ Indicates if the property should be added as a claim to the UserInfo response bo
 The name of the claim to insert into a token.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperState-claimValueType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L213">property <b>claimValueType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L225">property <b>claimValueType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimValueType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7582,7 +7744,7 @@ The name of the claim to insert into a token.
 The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L217">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L229">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7590,7 +7752,7 @@ The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperState-clientIdForRoleMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L221">property <b>clientIdForRoleMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L233">property <b>clientIdForRoleMappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientIdForRoleMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7598,7 +7760,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The Client ID for role mappings. Just client roles of this client will be added to the token. If this is unset, client roles of all clients will be added to the token.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperState-clientRolePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L225">property <b>clientRolePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L237">property <b>clientRolePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientRolePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7606,7 +7768,7 @@ The Client ID for role mappings. Just client roles of this client will be added 
 A prefix for each Client Role.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperState-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L229">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L241">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7614,7 +7776,7 @@ A prefix for each Client Role.
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperState-multivalued">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L233">property <b>multivalued</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L245">property <b>multivalued</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multivalued?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7622,7 +7784,7 @@ The client scope this protocol mapper should be attached to. Conflicts with `cli
 Indicates if attribute supports multiple values. If true, then the list of all values of this attribute will be set as claim. If false, then just first value will be set as claim. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L237">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L249">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7630,7 +7792,7 @@ Indicates if attribute supports multiple values. If true, then the list of all v
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="UserClientRoleProtocolMapperState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L241">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userClientRoleProtocolMapper.ts#L253">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7638,7 +7800,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h3 class="pdoc-module-header" id="UserPropertyProtocolMapperArgs" data-link-title="UserPropertyProtocolMapperArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L233">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L245">
         interface <strong>UserPropertyProtocolMapperArgs</strong>
     </a>
 </h3>
@@ -7648,7 +7810,7 @@ The realm this protocol mapper exists within.
 The set of arguments for constructing a UserPropertyProtocolMapper resource.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperArgs-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L237">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L249">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToAccessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7656,7 +7818,7 @@ The set of arguments for constructing a UserPropertyProtocolMapper resource.
 Indicates if the property should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperArgs-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L241">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L253">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToIdToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7664,7 +7826,7 @@ Indicates if the property should be added as a claim to the access token. Defaul
 Indicates if the property should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperArgs-addToUserinfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L245">property <b>addToUserinfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L257">property <b>addToUserinfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToUserinfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7672,7 +7834,7 @@ Indicates if the property should be added as a claim to the id token. Defaults t
 Indicates if the property should be added as a claim to the UserInfo response body. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperArgs-claimName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L249">property <b>claimName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L261">property <b>claimName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7680,7 +7842,7 @@ Indicates if the property should be added as a claim to the UserInfo response bo
 The name of the claim to insert into a token.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperArgs-claimValueType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L253">property <b>claimValueType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L265">property <b>claimValueType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimValueType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7688,7 +7850,7 @@ The name of the claim to insert into a token.
 The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L257">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L269">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7696,7 +7858,7 @@ The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperArgs-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L261">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L273">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7704,7 +7866,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified. `clientScopeId` - (Required if `clientId` is not specified) The client scope this protocol mapper is attached to.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L265">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L277">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7712,7 +7874,7 @@ The client scope this protocol mapper should be attached to. Conflicts with `cli
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L269">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L281">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7720,7 +7882,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperArgs-userProperty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L273">property <b>userProperty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L285">property <b>userProperty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userProperty: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7728,7 +7890,7 @@ The realm this protocol mapper exists within.
 The built in user property (such as email) to map a claim for.
 
 <h3 class="pdoc-module-header" id="UserPropertyProtocolMapperState" data-link-title="UserPropertyProtocolMapperState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L187">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L199">
         interface <strong>UserPropertyProtocolMapperState</strong>
     </a>
 </h3>
@@ -7738,7 +7900,7 @@ The built in user property (such as email) to map a claim for.
 Input properties used for looking up and filtering UserPropertyProtocolMapper resources.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperState-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L191">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L203">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToAccessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7746,7 +7908,7 @@ Input properties used for looking up and filtering UserPropertyProtocolMapper re
 Indicates if the property should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperState-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L195">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L207">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToIdToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7754,7 +7916,7 @@ Indicates if the property should be added as a claim to the access token. Defaul
 Indicates if the property should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperState-addToUserinfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L199">property <b>addToUserinfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L211">property <b>addToUserinfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToUserinfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7762,7 +7924,7 @@ Indicates if the property should be added as a claim to the id token. Defaults t
 Indicates if the property should be added as a claim to the UserInfo response body. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperState-claimName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L203">property <b>claimName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L215">property <b>claimName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7770,7 +7932,7 @@ Indicates if the property should be added as a claim to the UserInfo response bo
 The name of the claim to insert into a token.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperState-claimValueType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L207">property <b>claimValueType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L219">property <b>claimValueType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimValueType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7778,7 +7940,7 @@ The name of the claim to insert into a token.
 The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L211">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L223">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7786,7 +7948,7 @@ The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperState-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L215">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L227">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7794,7 +7956,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified. `clientScopeId` - (Required if `clientId` is not specified) The client scope this protocol mapper is attached to.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L219">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L231">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7802,7 +7964,7 @@ The client scope this protocol mapper should be attached to. Conflicts with `cli
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L223">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L235">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7810,7 +7972,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h4 class="pdoc-member-header" id="UserPropertyProtocolMapperState-userProperty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L227">property <b>userProperty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userPropertyProtocolMapper.ts#L239">property <b>userProperty</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userProperty?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7818,7 +7980,7 @@ The realm this protocol mapper exists within.
 The built in user property (such as email) to map a claim for.
 
 <h3 class="pdoc-module-header" id="UserRealmRoleProtocolMapperArgs" data-link-title="UserRealmRoleProtocolMapperArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L237">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L249">
         interface <strong>UserRealmRoleProtocolMapperArgs</strong>
     </a>
 </h3>
@@ -7828,7 +7990,7 @@ The built in user property (such as email) to map a claim for.
 The set of arguments for constructing a UserRealmRoleProtocolMapper resource.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapperArgs-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L241">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L253">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToAccessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7836,7 +7998,7 @@ The set of arguments for constructing a UserRealmRoleProtocolMapper resource.
 Indicates if the property should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapperArgs-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L245">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L257">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToIdToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7844,7 +8006,7 @@ Indicates if the property should be added as a claim to the access token. Defaul
 Indicates if the property should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapperArgs-addToUserinfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L249">property <b>addToUserinfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L261">property <b>addToUserinfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToUserinfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7852,7 +8014,7 @@ Indicates if the property should be added as a claim to the id token. Defaults t
 Indicates if the property should be added as a claim to the UserInfo response body. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapperArgs-claimName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L253">property <b>claimName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L265">property <b>claimName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7860,7 +8022,7 @@ Indicates if the property should be added as a claim to the UserInfo response bo
 The name of the claim to insert into a token.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapperArgs-claimValueType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L257">property <b>claimValueType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L269">property <b>claimValueType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimValueType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7868,7 +8030,7 @@ The name of the claim to insert into a token.
 The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapperArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L261">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L273">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7876,7 +8038,7 @@ The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapperArgs-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L265">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L277">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7884,7 +8046,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapperArgs-multivalued">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L269">property <b>multivalued</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L281">property <b>multivalued</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multivalued?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7892,7 +8054,7 @@ The client scope this protocol mapper should be attached to. Conflicts with `cli
 Indicates if attribute supports multiple values. If true, then the list of all values of this attribute will be set as claim. If false, then just first value will be set as claim. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapperArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L273">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L285">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7900,7 +8062,7 @@ Indicates if attribute supports multiple values. If true, then the list of all v
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapperArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L277">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L289">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7908,7 +8070,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapperArgs-realmRolePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L281">property <b>realmRolePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L293">property <b>realmRolePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmRolePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7916,7 +8078,7 @@ The realm this protocol mapper exists within.
 A prefix for each Realm Role.
 
 <h3 class="pdoc-module-header" id="UserRealmRoleProtocolMapperState" data-link-title="UserRealmRoleProtocolMapperState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L187">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L199">
         interface <strong>UserRealmRoleProtocolMapperState</strong>
     </a>
 </h3>
@@ -7926,7 +8088,7 @@ A prefix for each Realm Role.
 Input properties used for looking up and filtering UserRealmRoleProtocolMapper resources.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapperState-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L191">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L203">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToAccessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7934,7 +8096,7 @@ Input properties used for looking up and filtering UserRealmRoleProtocolMapper r
 Indicates if the property should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapperState-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L195">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L207">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToIdToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7942,7 +8104,7 @@ Indicates if the property should be added as a claim to the access token. Defaul
 Indicates if the property should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapperState-addToUserinfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L199">property <b>addToUserinfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L211">property <b>addToUserinfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToUserinfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7950,7 +8112,7 @@ Indicates if the property should be added as a claim to the id token. Defaults t
 Indicates if the property should be added as a claim to the UserInfo response body. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapperState-claimName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L203">property <b>claimName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L215">property <b>claimName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7958,7 +8120,7 @@ Indicates if the property should be added as a claim to the UserInfo response bo
 The name of the claim to insert into a token.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapperState-claimValueType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L207">property <b>claimValueType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L219">property <b>claimValueType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimValueType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7966,7 +8128,7 @@ The name of the claim to insert into a token.
 The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapperState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L211">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L223">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7974,7 +8136,7 @@ The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapperState-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L215">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L227">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7982,7 +8144,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapperState-multivalued">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L219">property <b>multivalued</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L231">property <b>multivalued</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multivalued?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7990,7 +8152,7 @@ The client scope this protocol mapper should be attached to. Conflicts with `cli
 Indicates if attribute supports multiple values. If true, then the list of all values of this attribute will be set as claim. If false, then just first value will be set as claim. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapperState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L223">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L235">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7998,7 +8160,7 @@ Indicates if attribute supports multiple values. If true, then the list of all v
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapperState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L227">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L239">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8006,7 +8168,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h4 class="pdoc-member-header" id="UserRealmRoleProtocolMapperState-realmRolePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L231">property <b>realmRolePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userRealmRoleProtocolMapper.ts#L243">property <b>realmRolePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmRolePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8014,7 +8176,7 @@ The realm this protocol mapper exists within.
 A prefix for each Realm Role.
 
 <h3 class="pdoc-module-header" id="UserSessionNoteProtocolMapperArgs" data-link-title="UserSessionNoteProtocolMapperArgs">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L235">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L247">
         interface <strong>UserSessionNoteProtocolMapperArgs</strong>
     </a>
 </h3>
@@ -8024,7 +8186,7 @@ A prefix for each Realm Role.
 The set of arguments for constructing a UserSessionNoteProtocolMapper resource.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapperArgs-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L239">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L251">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToAccessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8032,7 +8194,7 @@ The set of arguments for constructing a UserSessionNoteProtocolMapper resource.
 Indicates if the property should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapperArgs-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L243">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L255">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToIdToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8040,7 +8202,7 @@ Indicates if the property should be added as a claim to the access token. Defaul
 Indicates if the property should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapperArgs-claimName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L247">property <b>claimName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L259">property <b>claimName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8048,7 +8210,7 @@ Indicates if the property should be added as a claim to the id token. Defaults t
 The name of the claim to insert into a token.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapperArgs-claimValueType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L251">property <b>claimValueType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L263">property <b>claimValueType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimValueType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8056,7 +8218,7 @@ The name of the claim to insert into a token.
 The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapperArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L255">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L267">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8064,7 +8226,7 @@ The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapperArgs-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L259">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L271">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8072,7 +8234,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapperArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L263">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L275">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8080,7 +8242,7 @@ The client scope this protocol mapper should be attached to. Conflicts with `cli
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapperArgs-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L267">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L279">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8088,7 +8250,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapperArgs-sessionNote">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L271">property <b>sessionNote</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L283">property <b>sessionNote</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sessionNote?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8096,7 +8258,7 @@ The realm this protocol mapper exists within.
 String value being the name of stored user session note within the UserSessionModel.note map.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapperArgs-sessionNoteLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L277">property <b>sessionNoteLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L289">property <b>sessionNoteLabel</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -8108,7 +8270,7 @@ use session_note instead
 **Deprecated** Use `sessionNote` instead.
 
 <h3 class="pdoc-module-header" id="UserSessionNoteProtocolMapperState" data-link-title="UserSessionNoteProtocolMapperState">
-    <a href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L187">
+    <a href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L199">
         interface <strong>UserSessionNoteProtocolMapperState</strong>
     </a>
 </h3>
@@ -8118,7 +8280,7 @@ use session_note instead
 Input properties used for looking up and filtering UserSessionNoteProtocolMapper resources.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapperState-addToAccessToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L191">property <b>addToAccessToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L203">property <b>addToAccessToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToAccessToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8126,7 +8288,7 @@ Input properties used for looking up and filtering UserSessionNoteProtocolMapper
 Indicates if the property should be added as a claim to the access token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapperState-addToIdToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L195">property <b>addToIdToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L207">property <b>addToIdToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addToIdToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8134,7 +8296,7 @@ Indicates if the property should be added as a claim to the access token. Defaul
 Indicates if the property should be added as a claim to the id token. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapperState-claimName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L199">property <b>claimName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L211">property <b>claimName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8142,7 +8304,7 @@ Indicates if the property should be added as a claim to the id token. Defaults t
 The name of the claim to insert into a token.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapperState-claimValueType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L203">property <b>claimValueType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L215">property <b>claimValueType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>claimValueType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8150,7 +8312,7 @@ The name of the claim to insert into a token.
 The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`, `long`, `int`, or `boolean`. Defaults to `String`.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapperState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L207">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L219">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8158,7 +8320,7 @@ The claim type used when serializing JSON tokens. Can be one of `String`, `JSON`
 The client this protocol mapper should be attached to. Conflicts with `clientScopeId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapperState-clientScopeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L211">property <b>clientScopeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L223">property <b>clientScopeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8166,7 +8328,7 @@ The client this protocol mapper should be attached to. Conflicts with `clientSco
 The client scope this protocol mapper should be attached to. Conflicts with `clientId`. One of `clientId` or `clientScopeId` must be specified.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapperState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L215">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L227">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8174,7 +8336,7 @@ The client scope this protocol mapper should be attached to. Conflicts with `cli
 The display name of this protocol mapper in the GUI.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapperState-realmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L219">property <b>realmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L231">property <b>realmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>realmId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8182,7 +8344,7 @@ The display name of this protocol mapper in the GUI.
 The realm this protocol mapper exists within.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapperState-sessionNote">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L223">property <b>sessionNote</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L235">property <b>sessionNote</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sessionNote?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8190,7 +8352,7 @@ The realm this protocol mapper exists within.
 String value being the name of stored user session note within the UserSessionModel.note map.
 
 <h4 class="pdoc-member-header" id="UserSessionNoteProtocolMapperState-sessionNoteLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/ea11ef8efdc6d227c1c630d06368bd0e1b75a6ec/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L229">property <b>sessionNoteLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-keycloak/blob/2fb38fb228936f63925eba4ba61d995ae0c597ea/sdk/nodejs/openid/userSessionNoteProtocolMapper.ts#L241">property <b>sessionNoteLabel</b></a>
 </h4>
 
 <div class="note note-deprecated">

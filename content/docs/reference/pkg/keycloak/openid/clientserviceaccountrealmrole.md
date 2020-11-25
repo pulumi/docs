@@ -864,6 +864,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+This resource can be imported using the format `{{realmId}}/{{serviceAccountUserId}}/{{roleId}}`. Examplebash
+
+```sh
+ $ pulumi import keycloak:openid/clientServiceAccountRealmRole:ClientServiceAccountRealmRole client_service_account_role my-realm/489ba513-1ceb-49ba-ae0b-1ab1f5099ebf/c7230ab7-8e4e-4135-995d-e81b50696ad8
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
