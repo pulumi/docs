@@ -1,7 +1,7 @@
 ---
-title: "Create a Slackbot for Posting Mention Notifications | TypeScript"
-h1: "Create a Slackbot for Posting Mention Notifications"
-linktitle: "Create a Slackbot for Posting Mention Notifications"
+title: "Create a Slackbot for Posting Mention Notifications | TypeScript"
+h1: "Create a Slackbot for Posting Mention Notifications"
+linktitle: "Create a Slackbot for Posting Mention Notifications"
 no_edit_this_page: true
 ---
 
