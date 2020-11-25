@@ -1057,6 +1057,20 @@ described below.
 
 
 
+## Import
+
+
+Permissions can be imported using the `id` which is composed of
+
+`user@vhost`. E.g.
+
+```sh
+ $ pulumi import rabbitmq:index/topicPermissions:TopicPermissions test user@vhost
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

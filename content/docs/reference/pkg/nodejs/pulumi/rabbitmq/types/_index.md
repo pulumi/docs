@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/rabbitmq | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/rabbitmq package."
-git_sha: "13f236672d6d633f9af92b6a1971f7cc49de07cf"
+git_sha: "dbb3ec30655f767ca0721cbca77ff09981cb2a74"
 block_external_search_index: true
 ---
 

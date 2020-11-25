@@ -1367,6 +1367,20 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Bindings can be imported using the `id` which is composed of
+
+ `vhost/source/destination/destination_type/properties_key`. E.g.
+
+```sh
+ $ pulumi import rabbitmq:index/binding:Binding test test/test/test/queue/%23
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

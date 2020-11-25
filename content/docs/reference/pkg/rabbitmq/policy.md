@@ -1125,6 +1125,18 @@ RabbitMQ documentation for definition references and examples.
 
 
 
+## Import
+
+
+Policies can be imported using the `id` which is composed of `name@vhost`. E.g.
+
+```sh
+ $ pulumi import rabbitmq:index/policy:Policy test name@vhost
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
