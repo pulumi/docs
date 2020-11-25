@@ -34,6 +34,7 @@ The `nodes` block consist of
 
 This data source depends on CloudAMQP instance identifier, `cloudamqp_instance.instance.id`.
 
+
 {{% examples %}}
 ## Example Usage
 

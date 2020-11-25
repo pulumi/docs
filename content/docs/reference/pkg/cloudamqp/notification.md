@@ -917,6 +917,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+`cloudamqp_notification` can be imported using CloudAMQP internal identifier of a recipient together (CSV separated) with the instance identifier. To retrieve the identifier of a recipient, use [CloudAMQP API](https://docs.cloudamqp.com/cloudamqp_api.html#list-notification-recipients)
+
+```sh
+ $ pulumi import cloudamqp:index/notification:Notification recipient <recpient_id>,<indstance_id>`
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

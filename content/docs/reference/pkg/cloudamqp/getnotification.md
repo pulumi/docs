@@ -26,6 +26,7 @@ Use this data source to retrieve information about default or created recipients
 
 This data source depends on CloudAMQP instance identifier, `cloudamqp_instance.instance.id`.
 
+
 {{% examples %}}
 ## Example Usage
 

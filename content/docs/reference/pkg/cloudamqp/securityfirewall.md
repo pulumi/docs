@@ -995,6 +995,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+`cloudamqp_security_firewall` can be imported using CloudAMQP instance identifier.
+
+```sh
+ $ pulumi import cloudamqp:index/securityFirewall:SecurityFirewall firewall <instance_id>`
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
