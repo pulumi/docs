@@ -11,7 +11,7 @@ aliases: ["/docs/reference/vs/terraform/"]
 ---
 
 Terraform and Pulumi hold a lot of similarities, but they differ in a few key ways. This page helps provide a rundown of the differences. First, Pulumi is like Terraform, in that you create, deploy, and manage infrastructure as code on any cloud. But where
-Terraform requires the use of a custom programming language, however, Pulumi allows you to use familiar general purpose languages and tools to accomplish the same goals. Like Terraform, Pulumi is
+Terraform requires the use of a custom programming language, Pulumi allows you to use familiar general purpose languages and tools to accomplish the same goals. Like Terraform, Pulumi is
 [open source on GitHub](https://github.com/pulumi/pulumi) and is [free to use]({{< relref "/docs/get-started" >}}).
 
 ## Summary
