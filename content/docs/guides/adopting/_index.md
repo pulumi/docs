@@ -67,4 +67,4 @@ The final approach is to convert an existing infrastructure as code program to P
 
 Conversion takes care of the static program structure and will automatically generate a new, fully-functional Pulumi program that matches the source infrastructure as code program. This is usually still combined with importing so that you not only get a new program that provisions the right infrastructure, but also adopt existing infrastructure under the management of Pulumi too.
 
-The primary conversion tool available right now is `tf2pulumi` which converts any Terraform HCL to Pulumi code. [Learn more about how to use it here.]({{< relref "from_terraform#converting-terraform-hcl-to-pulumi" >}}).
+There are conversion tools available for [Terraform HCL]({{< relref "from_terraform#converting-terraform-hcl-to-pulumi" >}}), [Kubernetes YAML]({{< relref "from_kubernetes#converting-kubernetes-yaml">}}), and [Azure Resource Manager (ARM) templates]({{< relref "from_azure#using-the-next-generation-pulumi-azure-provider" >}}).
