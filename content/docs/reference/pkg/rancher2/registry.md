@@ -16,7 +16,6 @@ Depending of the availability, there are 2 types of Rancher v2 docker registries
 - Project registry: Available to all namespaces in the `project_id`
 - Namespaced registry: Available to just `namespace_id` in the `project_id`
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1373,6 +1372,18 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Registries can be imported using the registry ID in the format `<namespace_id>.<project_id>.<registry_id>`
+
+```sh
+ $ pulumi import rancher2:index/registry:Registry foo &lt;namespace_id&gt;.&lt;project_id&gt;.&lt;registry_id&gt;
+```
+
+ `<namespace_id>` is optional, just needed for namespaced registry.
 
 
 

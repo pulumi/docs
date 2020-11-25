@@ -12,7 +12,6 @@ meta_desc: "Explore the Notifier resource of the Rancher 2 package, including ex
 
 Provides a Rancher v2 Notifier resource. This can be used to create notifiers for Rancher v2 environments and retrieve their information.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -3136,6 +3135,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Notifiers can be imported using the Rancher nNtifier ID
+
+```sh
+ $ pulumi import rancher2:index/notifier:Notifier foo &lt;notifier_id&gt;
+```
 
 
 

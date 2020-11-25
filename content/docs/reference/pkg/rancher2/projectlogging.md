@@ -12,7 +12,6 @@ meta_desc: "Explore the ProjectLogging resource of the Rancher 2 package, includ
 
 Provides a Rancher v2 Project Logging resource. This can be used to create Project Logging for Rancher v2 environments and retrieve their information.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4460,6 +4459,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Project Logging can be imported using the Rancher Project Logging ID
+
+```sh
+ $ pulumi import rancher2:index/projectLogging:ProjectLogging foo &lt;project_logging_id&gt;
+```
 
 
 

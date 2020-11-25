@@ -14,7 +14,6 @@ Provides a Rancher Catalog v2 resource. This can be used to create cluster helm 
 
 
 
-
 ## Create a CatalogV2 Resource {#create}
 {{< chooser language "typescript,python,go,csharp" / >}}
 
@@ -1782,6 +1781,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+V2 catalogs can be imported using the Rancher cluster ID and Catalog V2 name.
+
+```sh
+ $ pulumi import rancher2:index/catalogV2:CatalogV2 foo &lt;CLUSTER_ID&gt;.&lt;CATALOG_V2_NAME&gt;
+```
 
 
 

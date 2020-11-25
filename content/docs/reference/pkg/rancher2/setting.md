@@ -16,7 +16,6 @@ On create, if setting already exists, provider will import it and update its val
 
 On destroy, if setting is a system setting like `server-url`, provider'll not delete it from Rancher, it'll just update setting value to default and remove it from tfstate.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -894,6 +893,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Setting can be imported using the Rancher setting ID.
+
+```sh
+ $ pulumi import rancher2:index/setting:Setting foo &lt;setting_id&gt;
+```
 
 
 

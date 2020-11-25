@@ -14,7 +14,6 @@ Provides a Rancher v2 Role Template resource. This can be used to create Role Te
 
 `cluster` and `project` scopes are supported for role templates.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -2006,6 +2005,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Role Template can be imported using the Rancher Role Template ID
+
+```sh
+ $ pulumi import rancher2:index/roleTempalte:RoleTempalte foo &lt;role_template_id&gt;
+```
 
 
 

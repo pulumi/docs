@@ -12,7 +12,6 @@ meta_desc: "Explore the ClusterLogging resource of the Rancher 2 package, includ
 
 Provides a Rancher v2 Cluster Logging resource. This can be used to configure Cluster Logging for Rancher v2 environments and retrieve their information.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -4460,6 +4459,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Cluster Logging can be imported using the Rancher Cluster Logging ID
+
+```sh
+ $ pulumi import rancher2:index/clusterLogging:ClusterLogging foo &lt;CLUSTER_LOGGING_ID&gt;
+```
 
 
 

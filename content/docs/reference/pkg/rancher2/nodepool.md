@@ -12,7 +12,6 @@ meta_desc: "Explore the NodePool resource of the Rancher 2 package, including ex
 
 Provides a Rancher v2 Node Pool resource. This can be used to create Node Pool, using Node template for Rancher v2 RKE clusters and retrieve their information.
 
-
 {{% examples %}}
 ## Example Usage
 
@@ -1815,6 +1814,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Node Pool can be imported using the Rancher Node Pool ID
+
+```sh
+ $ pulumi import rancher2:index/nodePool:NodePool foo &lt;node_pool_id&gt;
+```
 
 
 
