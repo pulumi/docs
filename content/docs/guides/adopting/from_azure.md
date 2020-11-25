@@ -598,7 +598,7 @@ From here, you can change the template body and/or surrounding code, rerun `pulu
 
 Now let's see how to actually migrate your ARM-managed resources fully to Pulumi. This requires rewriting the ARM template JSON as real code, either entirely, or one resource at a time. Because you can query deployment outputs and provide parameters in code, you can more easily intermingle ARM-managed resources alongside Pulumi ones. Cyclic dependencies, of course, cannot be expressed, since the entire ARM deployment is seen as one opaque resource to Pulumi.
 
-> Because Pulumi's Azure resource model doesn't match ARM's resource projections exactly, there is no tool currently available to automate this translation. A good apraoch is to copy the ARM template definition into your code and then rewrite it to your language of choice, translating resource and property names as appropriate.
+> Because Pulumi's Azure resource model doesn't match ARM's resource projections exactly, there is no tool currently available to automate this translation. A good approach is to copy the ARM template definition into your code and then rewrite it to your language of choice, translating resource and property names as appropriate.
 
 Note that you can always skip the intermediate step of deploying your ARM template using Pulumi and go straight to migrating your resources. For deployments with many resources, however, doing this in multiple incremental steps can help minimize disruption and allow you to do this migration more slowly over time.
 
@@ -753,3 +753,8 @@ class Program
 > Notice here that we've used the fully qualified resource ID for the import, `"/subscriptions/0292631f-7a9b-4142-90b2-96badd5eafa8/resourceGroups/myrg8fd69ec2/providers/Microsoft.Storage/storageAccounts/e9ejbnipspvecstorage"`. If you're having trouble locating this, consult the Azure CLI or console.
 
 After running `pulumi up`, your storage account will become under the control of Pulumi without any disruption, and you can then delete the import directives from your code. All subsequent infrastructure changes you'd like to be made can happen within Pulumi instead of ARM template deployments.
+
+### Using the Next Generation Pulumi Azure Provider
+
+With the Next Generation Pulumi Azure Provider, it's possible to convert ARM templates into Pulumi program code using [arm2pulumi`](<{{ relref "/arm2pulumi" }}>). Simply provide your ARM template and get back
+your Pulumi code in C#, TypeScript, Python, or Go.

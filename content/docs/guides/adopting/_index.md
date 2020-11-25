@@ -29,8 +29,8 @@ Support for these techniques differs based on how your existing infrastructure w
 |--------------------|:-------:|:------:|:-------:|
 | [Terraform]({{< relref "from_terraform" >}}) | ✅      | ✅     | ✅      |
 | [AWS CloudFormation]({{< relref "from_aws" >}}) | ✅      | ✅     |         |
-| [Azure ARM]({{< relref "from_azure" >}})          | ✅      | ✅     |         |
-| [Kubernetes YAML]({{< relref "from_kubernetes" >}})    | ✅      | ✅     |         |
+| [Azure ARM]({{< relref "from_azure" >}})          | ✅      | ✅     | ✅      |
+| [Kubernetes YAML]({{< relref "from_kubernetes" >}})    | ✅      | ✅     | ✅      |
 | Other              | ✅      | ✅     |         |
 
 ### Coexistence
