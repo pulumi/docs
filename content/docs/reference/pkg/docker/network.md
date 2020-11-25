@@ -2002,6 +2002,18 @@ the drivers.
 
 
 
+## Import
+
+
+Docker networks can be imported using the long id, e.g. for a network with the short id `p73jelnrme5f`
+
+```sh
+ $ pulumi import docker:index/network:Network foo $(docker network inspect -f {{.ID}} p73)
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
