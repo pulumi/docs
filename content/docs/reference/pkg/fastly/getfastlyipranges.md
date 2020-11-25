@@ -12,6 +12,7 @@ meta_desc: "Explore the GetFastlyIpRanges function of the Fastly package, includ
 
 Use this data source to get the [IP ranges](https://docs.fastly.com/guides/securing-communications/accessing-fastlys-ip-ranges) of Fastly edge nodes.
 
+
 {{% examples %}}
 ## Example Usage
 

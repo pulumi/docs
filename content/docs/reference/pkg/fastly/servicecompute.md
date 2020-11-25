@@ -14939,6 +14939,18 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 
 
+## Import
+
+
+Fastly Service can be imported using their service ID, e.g.
+
+```sh
+ $ pulumi import fastly:index/serviceCompute:ServiceCompute demo xxxxxxxxxxxxxxxxxxxx
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
