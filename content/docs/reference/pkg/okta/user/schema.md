@@ -2417,6 +2417,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+User schema property can be imported via the property index.
+
+```sh
+ $ pulumi import okta:user/schema:Schema example <index>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

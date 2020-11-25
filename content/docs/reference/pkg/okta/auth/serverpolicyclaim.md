@@ -1946,6 +1946,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Authorization Server Policy Rule can be imported via the Auth Server ID, Policy ID, and Policy Rule ID.
+
+```sh
+ $ pulumi import okta:auth/serverPolicyClaim:ServerPolicyClaim example <auth server id>/<policy id>/<policy rule id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

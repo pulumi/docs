@@ -3055,6 +3055,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Secure Password Store Application can be imported via the Okta ID.
+
+```sh
+ $ pulumi import okta:app/securePasswordStore:SecurePasswordStore example <app id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

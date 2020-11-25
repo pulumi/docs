@@ -2527,6 +2527,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Okta Auto Login App can be imported via the Okta ID.
+
+```sh
+ $ pulumi import okta:app/autoLogin:AutoLogin example <app id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

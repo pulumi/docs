@@ -12,6 +12,7 @@ meta_desc: "Explore the GetServer function of the auth module, including example
 
 Use this data source to retrieve an auth server from Okta.
 
+
 {{% examples %}}
 ## Example Usage
 

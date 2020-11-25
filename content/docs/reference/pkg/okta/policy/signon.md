@@ -968,6 +968,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+A Sign On Policy can be imported via the Okta ID.
+
+```sh
+ $ pulumi import okta:policy/signon:Signon example <policy id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

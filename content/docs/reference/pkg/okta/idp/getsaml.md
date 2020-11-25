@@ -12,6 +12,7 @@ meta_desc: "Explore the GetSaml function of the idp module, including examples, 
 
 Use this data source to retrieve a SAML IdP from Okta.
 
+
 {{% examples %}}
 ## Example Usage
 

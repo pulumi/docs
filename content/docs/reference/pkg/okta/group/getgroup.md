@@ -12,6 +12,7 @@ meta_desc: "Explore the GetGroup function of the group module, including example
 
 Use this data source to retrieve a group from Okta.
 
+
 {{% examples %}}
 ## Example Usage
 

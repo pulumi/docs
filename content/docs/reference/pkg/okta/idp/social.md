@@ -3380,6 +3380,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+A Social IdP can be imported via the Okta ID.
+
+```sh
+ $ pulumi import okta:idp/social:Social example <idp id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -1257,6 +1257,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+A Policy Rule can be imported via the Policy and Rule ID.
+
+```sh
+ $ pulumi import okta:policy/ruleMfa:RuleMfa example <policy id>/<rule id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

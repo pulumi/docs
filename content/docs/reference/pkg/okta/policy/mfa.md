@@ -3870,6 +3870,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+An MFA Policy can be imported via the Okta ID.
+
+```sh
+ $ pulumi import okta:policy/mfa:Mfa example <policy id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

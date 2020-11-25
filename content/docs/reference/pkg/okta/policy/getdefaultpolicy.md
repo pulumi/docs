@@ -12,6 +12,7 @@ meta_desc: "Explore the GetDefaultPolicy function of the policy module, includin
 
 Use this data source to retrieve a "Default" policy from Okta. This same thing can be achieved using the `okta.policy.getPolicy` with `name = "Default"`, this is simply a shortcut.
 
+
 {{% examples %}}
 ## Example Usage
 

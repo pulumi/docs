@@ -12,6 +12,7 @@ meta_desc: "Explore the GetUserProfileMappingSource function of the user module,
 
 Use this data source to retrieve the base user Profile Mapping source or target from Okta.
 
+
 {{% examples %}}
 ## Example Usage
 

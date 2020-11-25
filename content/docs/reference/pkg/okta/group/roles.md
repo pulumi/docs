@@ -724,6 +724,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Group Role Assignment can be imported via the Okta Group ID.
+
+```sh
+ $ pulumi import okta:group/roles:Roles example <group id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

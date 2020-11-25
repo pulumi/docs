@@ -12,6 +12,7 @@ meta_desc: "Explore the GetApp function of the app module, including examples, i
 
 Use this data source to retrieve the collaborators for a given repository.
 
+
 {{% examples %}}
 ## Example Usage
 

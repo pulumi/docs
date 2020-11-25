@@ -3848,6 +3848,16 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+An OIDC IdP can be imported via the Okta ID.
+
+```sh
+ $ pulumi import okta:idp/oidc:Oidc example <idp id>
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetEveryoneGroup function of the group module, including
 
 Use this data source to retrieve the Everyone group from Okta. The same can be achieved with the `okta.group.Group` data source with `name = "Everyone"`. This is simply a shortcut.
 
+
 {{% examples %}}
 ## Example Usage
 

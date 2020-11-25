@@ -12,6 +12,7 @@ meta_desc: "Explore the GetUsers function of the user module, including examples
 
 Use this data source to retrieve a list of users from Okta.
 
+
 {{% examples %}}
 ## Example Usage
 

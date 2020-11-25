@@ -12,6 +12,7 @@ meta_desc: "Explore the GetMetadataSaml function of the app module, including ex
 
 Use this data source to retrieve the collaborators for a given repository.
 
+
 {{% examples %}}
 ## Example Usage
 
