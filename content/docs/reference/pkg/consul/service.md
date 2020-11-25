@@ -19,6 +19,7 @@ with a [local agent](https://www.consul.io/docs/agent/basics.html).
 registered, it is not recommended to use this resource as the service will be
 removed during the next [anti-entropy synchronisation](https://www.consul.io/docs/architecture/anti-entropy).
 
+
 {{% examples %}}
 ## Example Usage
 

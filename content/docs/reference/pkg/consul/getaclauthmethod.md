@@ -13,6 +13,7 @@ meta_desc: "Explore the GetAclAuthMethod function of the Consul package, includi
 The `consul.AclAuthMethod` data source returns the information related to a
 [Consul Auth Method](https://www.consul.io/docs/acl/acl-auth-methods.html).
 
+
 {{% examples %}}
 ## Example Usage
 

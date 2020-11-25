@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/consul | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/consul package."
-git_sha: "29a69ac2a91d99c7d6cff9968ea82119b310db23"
+git_sha: "3d659ff7e72fe5bb4f7bd641a1373ddcac1c7441"
 block_external_search_index: true
 ---
 
@@ -40,98 +40,98 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="address" data-link-title="address">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/29a69ac2a91d99c7d6cff9968ea82119b310db23/sdk/nodejs/config/vars.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/3d659ff7e72fe5bb4f7bd641a1373ddcac1c7441/sdk/nodejs/config/vars.ts#L9">
         let <strong>address</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> address: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;address&#34;) || (utilities.getEnv(&#34;CONSUL_ADDRESS&#34;, &#34;CONSUL_HTTP_ADDR&#34;) || &#34;localhost:8500&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="caFile" data-link-title="caFile">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/29a69ac2a91d99c7d6cff9968ea82119b310db23/sdk/nodejs/config/vars.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/3d659ff7e72fe5bb4f7bd641a1373ddcac1c7441/sdk/nodejs/config/vars.ts#L10">
         let <strong>caFile</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> caFile: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;caFile&#34;) || utilities.getEnv(&#34;CONSUL_CA_FILE&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="caPath" data-link-title="caPath">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/29a69ac2a91d99c7d6cff9968ea82119b310db23/sdk/nodejs/config/vars.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/3d659ff7e72fe5bb4f7bd641a1373ddcac1c7441/sdk/nodejs/config/vars.ts#L11">
         let <strong>caPath</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> caPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;caPath&#34;) || utilities.getEnv(&#34;CONSUL_CAPATH&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="caPem" data-link-title="caPem">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/29a69ac2a91d99c7d6cff9968ea82119b310db23/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/3d659ff7e72fe5bb4f7bd641a1373ddcac1c7441/sdk/nodejs/config/vars.ts#L12">
         let <strong>caPem</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> caPem: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;caPem&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="certFile" data-link-title="certFile">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/29a69ac2a91d99c7d6cff9968ea82119b310db23/sdk/nodejs/config/vars.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/3d659ff7e72fe5bb4f7bd641a1373ddcac1c7441/sdk/nodejs/config/vars.ts#L13">
         let <strong>certFile</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> certFile: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;certFile&#34;) || utilities.getEnv(&#34;CONSUL_CERT_FILE&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="certPem" data-link-title="certPem">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/29a69ac2a91d99c7d6cff9968ea82119b310db23/sdk/nodejs/config/vars.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/3d659ff7e72fe5bb4f7bd641a1373ddcac1c7441/sdk/nodejs/config/vars.ts#L14">
         let <strong>certPem</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> certPem: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;certPem&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="datacenter" data-link-title="datacenter">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/29a69ac2a91d99c7d6cff9968ea82119b310db23/sdk/nodejs/config/vars.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/3d659ff7e72fe5bb4f7bd641a1373ddcac1c7441/sdk/nodejs/config/vars.ts#L15">
         let <strong>datacenter</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> datacenter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;datacenter&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="httpAuth" data-link-title="httpAuth">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/29a69ac2a91d99c7d6cff9968ea82119b310db23/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/3d659ff7e72fe5bb4f7bd641a1373ddcac1c7441/sdk/nodejs/config/vars.ts#L16">
         let <strong>httpAuth</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> httpAuth: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;httpAuth&#34;) || utilities.getEnv(&#34;CONSUL_HTTP_AUTH&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="insecureHttps" data-link-title="insecureHttps">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/29a69ac2a91d99c7d6cff9968ea82119b310db23/sdk/nodejs/config/vars.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/3d659ff7e72fe5bb4f7bd641a1373ddcac1c7441/sdk/nodejs/config/vars.ts#L17">
         let <strong>insecureHttps</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> insecureHttps: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;insecureHttps&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="keyFile" data-link-title="keyFile">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/29a69ac2a91d99c7d6cff9968ea82119b310db23/sdk/nodejs/config/vars.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/3d659ff7e72fe5bb4f7bd641a1373ddcac1c7441/sdk/nodejs/config/vars.ts#L18">
         let <strong>keyFile</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> keyFile: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;keyFile&#34;) || utilities.getEnv(&#34;CONSUL_KEY_FILE&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="keyPem" data-link-title="keyPem">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/29a69ac2a91d99c7d6cff9968ea82119b310db23/sdk/nodejs/config/vars.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/3d659ff7e72fe5bb4f7bd641a1373ddcac1c7441/sdk/nodejs/config/vars.ts#L19">
         let <strong>keyPem</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> keyPem: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;keyPem&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="namespace" data-link-title="namespace">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/29a69ac2a91d99c7d6cff9968ea82119b310db23/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/3d659ff7e72fe5bb4f7bd641a1373ddcac1c7441/sdk/nodejs/config/vars.ts#L20">
         let <strong>namespace</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;namespace&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="scheme" data-link-title="scheme">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/29a69ac2a91d99c7d6cff9968ea82119b310db23/sdk/nodejs/config/vars.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/3d659ff7e72fe5bb4f7bd641a1373ddcac1c7441/sdk/nodejs/config/vars.ts#L21">
         let <strong>scheme</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> scheme: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;scheme&#34;) || (utilities.getEnv(&#34;CONSUL_SCHEME&#34;, &#34;CONSUL_HTTP_SCHEME&#34;) || &#34;http&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-consul/blob/29a69ac2a91d99c7d6cff9968ea82119b310db23/sdk/nodejs/config/vars.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-consul/blob/3d659ff7e72fe5bb4f7bd641a1373ddcac1c7441/sdk/nodejs/config/vars.ts#L22">
         let <strong>token</strong>
     </a>
 </h3>

@@ -14,6 +14,7 @@ meta_desc: "Explore the Namespace resource of the Consul package, including exam
 
 The `consul.Namespace` resource provides isolated [Consul Enterprise Namespaces](https://www.consul.io/docs/enterprise/namespaces/index.html).
 
+
 {{% examples %}}
 ## Example Usage
 

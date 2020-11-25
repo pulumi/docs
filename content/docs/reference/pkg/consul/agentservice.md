@@ -18,6 +18,7 @@ Provides access to the agent service data in Consul. This can be used to
 define a service associated with a particular agent. Currently, defining
 health checks for an agent service is not supported.
 
+
 {{% examples %}}
 ## Example Usage
 

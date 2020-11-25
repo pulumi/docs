@@ -13,6 +13,7 @@ meta_desc: "Explore the AclAuthMethod resource of the Consul package, including 
 Starting with Consul 1.5.0, the consul.AclAuthMethod resource can be used to
 managed [Consul ACL auth methods](https://www.consul.io/docs/acl/auth-methods).
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -15,6 +15,7 @@ meta_desc: "Explore the GetNetworkSegments function of the Consul package, inclu
 The `consul_network_segment` data source can be used to retrieve the network
 segments defined in the configuration.
 
+
 {{% examples %}}
 ## Example Usage
 
