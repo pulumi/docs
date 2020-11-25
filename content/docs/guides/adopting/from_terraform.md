@@ -422,7 +422,7 @@ The [`tf2pulumi`](https://github.com/pulumi/tf2pulumi) tool can convert existing
 
 ### How to Use the Tool
 
-To use this tool, [first install it](https://github.com/pulumi/tf2pulumi#building-and-installation) or [try it out online]({{<relref "/tf2pulumi">}})).
+To use this tool, [first install it](https://github.com/pulumi/tf2pulumi#building-and-installation) or [try it out online]({{< relref "/tf2pulumi" >}}).
 
 Next, `cd` into a Terraform project you'd like to convert. Create a new Pulumi project:
 

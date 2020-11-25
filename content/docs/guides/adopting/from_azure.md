@@ -756,5 +756,5 @@ After running `pulumi up`, your storage account will become under the control of
 
 ### Using the Next Generation Pulumi Azure Provider
 
-With the Next Generation Pulumi Azure Provider, it's possible to convert ARM templates into Pulumi program code using [arm2pulumi`](<{{ relref "/arm2pulumi" }}>). Simply provide your ARM template
+With the Next Generation Pulumi Azure Provider, it's possible to convert ARM templates into Pulumi program code using [arm2pulumi]({{< relref "/arm2pulumi" >}}). Simply provide your ARM template
 and get back a Pulumi program in C#, TypeScript, Python, or Go.
