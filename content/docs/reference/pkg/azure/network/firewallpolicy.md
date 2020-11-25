@@ -1529,16 +1529,15 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="networkrulefqdnenabled_csharp">
 <a href="#networkrulefqdnenabled_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Fqdn<wbr>Enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether FQDNS in Network Rules belongs to this Firewall Policy are supported? Defaults to `false`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated as the service team has removed it from all API versions and is no longer supported by Azure. It will be removed in v3.0 of the provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1569,16 +1568,15 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="networkrulefqdnenabled_go">
 <a href="#networkrulefqdnenabled_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Fqdn<wbr>Enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether FQDNS in Network Rules belongs to this Firewall Policy are supported? Defaults to `false`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated as the service team has removed it from all API versions and is no longer supported by Azure. It will be removed in v3.0 of the provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1609,16 +1607,15 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="networkrulefqdnenabled_nodejs">
 <a href="#networkrulefqdnenabled_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rule<wbr>Fqdn<wbr>Enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether FQDNS in Network Rules belongs to this Firewall Policy are supported? Defaults to `false`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated as the service team has removed it from all API versions and is no longer supported by Azure. It will be removed in v3.0 of the provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1649,16 +1646,15 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="network_rule_fqdn_enabled_python">
 <a href="#network_rule_fqdn_enabled_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rule_<wbr>fqdn_<wbr>enabled</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether FQDNS in Network Rules belongs to this Firewall Policy are supported? Defaults to `false`.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This property has been deprecated as the service team has removed it from all API versions and is no longer supported by Azure. It will be removed in v3.0 of the provider.{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">

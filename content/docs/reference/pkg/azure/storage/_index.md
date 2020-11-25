@@ -17,6 +17,8 @@ Explore the resources and functions of the storage module in the Azure package.
     <li><a href="container" title="Container"><span class="symbol resource"></span>Container</a></li>
     <li><a href="customermanagedkey" title="CustomerManagedKey"><span class="symbol resource"></span>CustomerManagedKey</a></li>
     <li><a href="datalakegen2filesystem" title="DataLakeGen2Filesystem"><span class="symbol resource"></span>DataLakeGen2Filesystem</a></li>
+    <li><a href="datalakegen2path" title="DataLakeGen2Path"><span class="symbol resource"></span>DataLakeGen2Path</a></li>
+    <li><a href="encryptionscope" title="EncryptionScope"><span class="symbol resource"></span>EncryptionScope</a></li>
     <li><a href="managementpolicy" title="ManagementPolicy"><span class="symbol resource"></span>ManagementPolicy</a></li>
     <li><a href="queue" title="Queue"><span class="symbol resource"></span>Queue</a></li>
     <li><a href="share" title="Share"><span class="symbol resource"></span>Share</a></li>
@@ -33,6 +35,7 @@ Explore the resources and functions of the storage module in the Azure package.
     <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
     <li><a href="getaccountblobcontainersas" title="GetAccountBlobContainerSAS"><span class="symbol function"></span>GetAccountBlobContainerSAS</a></li>
     <li><a href="getaccountsas" title="GetAccountSAS"><span class="symbol function"></span>GetAccountSAS</a></li>
+    <li><a href="getencryptionscope" title="GetEncryptionScope"><span class="symbol function"></span>GetEncryptionScope</a></li>
     <li><a href="getpolicy" title="GetPolicy"><span class="symbol function"></span>GetPolicy</a></li>
     <li><a href="getstoragecontainer" title="GetStorageContainer"><span class="symbol function"></span>GetStorageContainer</a></li>
     <li><a href="getsync" title="GetSync"><span class="symbol function"></span>GetSync</a></li>
@@ -48,7 +51,7 @@ Explore the resources and functions of the storage module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.31.1</dd>
+	<dd>3.32.0</dd>
 </dl>
 
 

@@ -1725,10 +1725,20 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="deleteosdiskondeletion_csharp">
 <a href="#deleteosdiskondeletion_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Os<wbr>Disk<wbr>On<wbr>Deletion</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gracefulshutdown_csharp">
+<a href="#gracefulshutdown_csharp" style="color: inherit; text-decoration: inherit;">Graceful<wbr>Shutdown</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
@@ -1742,10 +1752,20 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="deleteosdiskondeletion_go">
 <a href="#deleteosdiskondeletion_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Os<wbr>Disk<wbr>On<wbr>Deletion</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gracefulshutdown_go">
+<a href="#gracefulshutdown_go" style="color: inherit; text-decoration: inherit;">Graceful<wbr>Shutdown</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
@@ -1759,10 +1779,20 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="deleteosdiskondeletion_nodejs">
 <a href="#deleteosdiskondeletion_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Os<wbr>Disk<wbr>On<wbr>Deletion</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gracefulshutdown_nodejs">
+<a href="#gracefulshutdown_nodejs" style="color: inherit; text-decoration: inherit;">graceful<wbr>Shutdown</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
@@ -1776,10 +1806,20 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="delete_os_disk_on_deletion_python">
 <a href="#delete_os_disk_on_deletion_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>os_<wbr>disk_<wbr>on_<wbr>deletion</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="graceful_shutdown_python">
+<a href="#graceful_shutdown_python" style="color: inherit; text-decoration: inherit;">graceful_<wbr>shutdown</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>

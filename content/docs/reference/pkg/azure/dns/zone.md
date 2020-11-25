@@ -120,7 +120,7 @@ const example_private = new azure.privatedns.Zone("example-private", {resourceGr
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/dns/#pulumi_azure.dns.Zone">Zone</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/dns/#pulumi_azure.dns.Zone">Zone</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soa_record</span><span class="p">:</span> <span class="nx">Optional[ZoneSoaRecordArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -316,13 +316,24 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
+        <span id="soarecord_csharp">
+<a href="#soarecord_csharp" style="color: inherit; text-decoration: inherit;">Soa<wbr>Record</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#zonesoarecord">Zone<wbr>Soa<wbr>Record<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `soa_record` block as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the Record Set.
 {{% /md %}}</dd>
 
 </dl>
@@ -356,13 +367,24 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
+        <span id="soarecord_go">
+<a href="#soarecord_go" style="color: inherit; text-decoration: inherit;">Soa<wbr>Record</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#zonesoarecord">Zone<wbr>Soa<wbr>Record</a></span>
+    </dt>
+    <dd>{{% md %}}An `soa_record` block as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the Record Set.
 {{% /md %}}</dd>
 
 </dl>
@@ -396,13 +418,24 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
+        <span id="soarecord_nodejs">
+<a href="#soarecord_nodejs" style="color: inherit; text-decoration: inherit;">soa<wbr>Record</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#zonesoarecord">Zone<wbr>Soa<wbr>Record</a></span>
+    </dt>
+    <dd>{{% md %}}An `soa_record` block as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the Record Set.
 {{% /md %}}</dd>
 
 </dl>
@@ -436,13 +469,24 @@ The Zone resource accepts the following [input]({{< relref "/docs/intro/concepts
 
     <dt class="property-optional"
             title="Optional">
+        <span id="soa_record_python">
+<a href="#soa_record_python" style="color: inherit; text-decoration: inherit;">soa_<wbr>record</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#zonesoarecord">Zone<wbr>Soa<wbr>Record<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `soa_record` block as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the Record Set.
 {{% /md %}}</dd>
 
 </dl>
@@ -676,7 +720,7 @@ Get an existing Zone resource's state with the given name, ID, and optional extr
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">max_number_of_record_sets</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">number_of_record_sets</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Zone</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">max_number_of_record_sets</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">number_of_record_sets</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">soa_record</span><span class="p">:</span> <span class="nx">Optional[ZoneSoaRecordArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> Zone</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -847,13 +891,24 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_soarecord_csharp">
+<a href="#state_soarecord_csharp" style="color: inherit; text-decoration: inherit;">Soa<wbr>Record</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#zonesoarecord">Zone<wbr>Soa<wbr>Record<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `soa_record` block as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the Record Set.
 {{% /md %}}</dd>
 
 </dl>
@@ -920,13 +975,24 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_soarecord_go">
+<a href="#state_soarecord_go" style="color: inherit; text-decoration: inherit;">Soa<wbr>Record</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#zonesoarecord">Zone<wbr>Soa<wbr>Record</a></span>
+    </dt>
+    <dd>{{% md %}}An `soa_record` block as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the Record Set.
 {{% /md %}}</dd>
 
 </dl>
@@ -993,13 +1059,24 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_soarecord_nodejs">
+<a href="#state_soarecord_nodejs" style="color: inherit; text-decoration: inherit;">soa<wbr>Record</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#zonesoarecord">Zone<wbr>Soa<wbr>Record</a></span>
+    </dt>
+    <dd>{{% md %}}An `soa_record` block as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the Record Set.
 {{% /md %}}</dd>
 
 </dl>
@@ -1066,19 +1143,522 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_soa_record_python">
+<a href="#state_soa_record_python" style="color: inherit; text-decoration: inherit;">soa_<wbr>record</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#zonesoarecord">Zone<wbr>Soa<wbr>Record<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `soa_record` block as defined below. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
+    <dd>{{% md %}}A mapping of tags to assign to the Record Set.
 {{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
 
 
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="zonesoarecord">Zone<wbr>Soa<wbr>Record</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ZoneSoaRecord">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ZoneSoaRecord">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/dns?tab=doc#ZoneSoaRecordArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/dns?tab=doc#ZoneSoaRecordOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Dns.Inputs.ZoneSoaRecordArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Dns.Outputs.ZoneSoaRecord.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="email_csharp">
+<a href="#email_csharp" style="color: inherit; text-decoration: inherit;">Email</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The email contact for the SOA record.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hostname_csharp">
+<a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The domain name of the authoritative name server for the SOA record. Defaults to `ns1-03.azure-dns.com.`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expiretime_csharp">
+<a href="#expiretime_csharp" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The expire time for the SOA record. Defaults to `2419200`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fqdn_csharp">
+<a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The fully qualified domain name of the Record Set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minimumttl_csharp">
+<a href="#minimumttl_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Ttl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum Time To Live for the SOA record. By convention, it is used to determine the negative caching duration. Defaults to `300`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="refreshtime_csharp">
+<a href="#refreshtime_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The refresh time for the SOA record. Defaults to `3600`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrytime_csharp">
+<a href="#retrytime_csharp" style="color: inherit; text-decoration: inherit;">Retry<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The retry time for the SOA record. Defaults to `300`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serialnumber_csharp">
+<a href="#serialnumber_csharp" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The serial number for the SOA record. Defaults to `1`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the Record Set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ttl_csharp">
+<a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The Time To Live of the SOA Record in seconds. Defaults to `3600`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="email_go">
+<a href="#email_go" style="color: inherit; text-decoration: inherit;">Email</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The email contact for the SOA record.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hostname_go">
+<a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The domain name of the authoritative name server for the SOA record. Defaults to `ns1-03.azure-dns.com.`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expiretime_go">
+<a href="#expiretime_go" style="color: inherit; text-decoration: inherit;">Expire<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The expire time for the SOA record. Defaults to `2419200`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fqdn_go">
+<a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The fully qualified domain name of the Record Set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minimumttl_go">
+<a href="#minimumttl_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Ttl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum Time To Live for the SOA record. By convention, it is used to determine the negative caching duration. Defaults to `300`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="refreshtime_go">
+<a href="#refreshtime_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The refresh time for the SOA record. Defaults to `3600`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrytime_go">
+<a href="#retrytime_go" style="color: inherit; text-decoration: inherit;">Retry<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The retry time for the SOA record. Defaults to `300`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serialnumber_go">
+<a href="#serialnumber_go" style="color: inherit; text-decoration: inherit;">Serial<wbr>Number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The serial number for the SOA record. Defaults to `1`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the Record Set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ttl_go">
+<a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The Time To Live of the SOA Record in seconds. Defaults to `3600`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="email_nodejs">
+<a href="#email_nodejs" style="color: inherit; text-decoration: inherit;">email</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The email contact for the SOA record.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="hostname_nodejs">
+<a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The domain name of the authoritative name server for the SOA record. Defaults to `ns1-03.azure-dns.com.`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expiretime_nodejs">
+<a href="#expiretime_nodejs" style="color: inherit; text-decoration: inherit;">expire<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The expire time for the SOA record. Defaults to `2419200`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fqdn_nodejs">
+<a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The fully qualified domain name of the Record Set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minimumttl_nodejs">
+<a href="#minimumttl_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Ttl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum Time To Live for the SOA record. By convention, it is used to determine the negative caching duration. Defaults to `300`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="refreshtime_nodejs">
+<a href="#refreshtime_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The refresh time for the SOA record. Defaults to `3600`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retrytime_nodejs">
+<a href="#retrytime_nodejs" style="color: inherit; text-decoration: inherit;">retry<wbr>Time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The retry time for the SOA record. Defaults to `300`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serialnumber_nodejs">
+<a href="#serialnumber_nodejs" style="color: inherit; text-decoration: inherit;">serial<wbr>Number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The serial number for the SOA record. Defaults to `1`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the Record Set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ttl_nodejs">
+<a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The Time To Live of the SOA Record in seconds. Defaults to `3600`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="email_python">
+<a href="#email_python" style="color: inherit; text-decoration: inherit;">email</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The email contact for the SOA record.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="host_name_python">
+<a href="#host_name_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The domain name of the authoritative name server for the SOA record. Defaults to `ns1-03.azure-dns.com.`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expire_time_python">
+<a href="#expire_time_python" style="color: inherit; text-decoration: inherit;">expire_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The expire time for the SOA record. Defaults to `2419200`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fqdn_python">
+<a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The fully qualified domain name of the Record Set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minimum_ttl_python">
+<a href="#minimum_ttl_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>ttl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The minimum Time To Live for the SOA record. By convention, it is used to determine the negative caching duration. Defaults to `300`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="refresh_time_python">
+<a href="#refresh_time_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The refresh time for the SOA record. Defaults to `3600`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="retry_time_python">
+<a href="#retry_time_python" style="color: inherit; text-decoration: inherit;">retry_<wbr>time</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The retry time for the SOA record. Defaults to `300`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serial_number_python">
+<a href="#serial_number_python" style="color: inherit; text-decoration: inherit;">serial_<wbr>number</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The serial number for the SOA record. Defaults to `1`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the Record Set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ttl_python">
+<a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The Time To Live of the SOA Record in seconds. Defaults to `3600`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 

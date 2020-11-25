@@ -223,7 +223,7 @@ const exampleFirewall = new azure.network.Firewall("exampleFirewall", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.Firewall">Firewall</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dns_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ip_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallIpConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_ip_configuration</span><span class="p">:</span> <span class="nx">Optional[FirewallManagementIpConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threat_intel_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.Firewall">Firewall</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dns_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">firewall_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallIpConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_ip_configuration</span><span class="p">:</span> <span class="nx">Optional[FirewallManagementIpConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threat_intel_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_hub</span><span class="p">:</span> <span class="nx">Optional[FirewallVirtualHubArgs]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -397,17 +397,6 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span id="ipconfigurations_csharp">
-<a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallipconfiguration">List&lt;Firewall<wbr>Ip<wbr>Configuration<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}An `ip_configuration` block as documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span> 
@@ -426,6 +415,28 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS servers that the Azure Firewall will direct DNS traffic to the for name resolution.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="firewallpolicyid_csharp">
+<a href="#firewallpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Firewall Policy applied to this Firewall.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurations_csharp">
+<a href="#ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallipconfiguration">List&lt;Firewall<wbr>Ip<wbr>Configuration<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An `ip_configuration` block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -463,6 +474,28 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="skuname_csharp">
+<a href="#skuname_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sku name of the Firewall. Possible values are `AZFW_Hub` and `AZFW_VNet`.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skutier_csharp">
+<a href="#skutier_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sku tier of the Firewall. Possible values are `Premium` and `Standard`.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -480,7 +513,18 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The operation mode for threat intelligence-based filtering. Possible values are: `Off`, `Alert` and `Deny`. Defaults to `Alert`
+    <dd>{{% md %}}The operation mode for threat intelligence-based filtering. Possible values are: `Off`, `Alert`,`Deny` and `""`(empty string). Defaults to `Alert`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualhub_csharp">
+<a href="#virtualhub_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallvirtualhub">Firewall<wbr>Virtual<wbr>Hub<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_hub` block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -503,17 +547,6 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span id="ipconfigurations_go">
-<a href="#ipconfigurations_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallipconfiguration">[]Firewall<wbr>Ip<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}An `ip_configuration` block as documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span> 
@@ -532,6 +565,28 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS servers that the Azure Firewall will direct DNS traffic to the for name resolution.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="firewallpolicyid_go">
+<a href="#firewallpolicyid_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Firewall Policy applied to this Firewall.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurations_go">
+<a href="#ipconfigurations_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallipconfiguration">[]Firewall<wbr>Ip<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}An `ip_configuration` block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -569,6 +624,28 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="skuname_go">
+<a href="#skuname_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sku name of the Firewall. Possible values are `AZFW_Hub` and `AZFW_VNet`.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skutier_go">
+<a href="#skutier_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sku tier of the Firewall. Possible values are `Premium` and `Standard`.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -586,7 +663,18 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The operation mode for threat intelligence-based filtering. Possible values are: `Off`, `Alert` and `Deny`. Defaults to `Alert`
+    <dd>{{% md %}}The operation mode for threat intelligence-based filtering. Possible values are: `Off`, `Alert`,`Deny` and `""`(empty string). Defaults to `Alert`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualhub_go">
+<a href="#virtualhub_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallvirtualhub">Firewall<wbr>Virtual<wbr>Hub</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_hub` block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -609,17 +697,6 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span id="ipconfigurations_nodejs">
-<a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallipconfiguration">Firewall<wbr>Ip<wbr>Configuration[]</a></span>
-    </dt>
-    <dd>{{% md %}}An `ip_configuration` block as documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span> 
@@ -638,6 +715,28 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS servers that the Azure Firewall will direct DNS traffic to the for name resolution.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="firewallpolicyid_nodejs">
+<a href="#firewallpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Firewall Policy applied to this Firewall.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurations_nodejs">
+<a href="#ipconfigurations_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallipconfiguration">Firewall<wbr>Ip<wbr>Configuration[]</a></span>
+    </dt>
+    <dd>{{% md %}}An `ip_configuration` block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -675,6 +774,28 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="skuname_nodejs">
+<a href="#skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sku name of the Firewall. Possible values are `AZFW_Hub` and `AZFW_VNet`.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="skutier_nodejs">
+<a href="#skutier_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sku tier of the Firewall. Possible values are `Premium` and `Standard`.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -692,7 +813,18 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The operation mode for threat intelligence-based filtering. Possible values are: `Off`, `Alert` and `Deny`. Defaults to `Alert`
+    <dd>{{% md %}}The operation mode for threat intelligence-based filtering. Possible values are: `Off`, `Alert`,`Deny` and `""`(empty string). Defaults to `Alert`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualhub_nodejs">
+<a href="#virtualhub_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Hub</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallvirtualhub">Firewall<wbr>Virtual<wbr>Hub</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_hub` block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -715,17 +847,6 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-required"
             title="Required">
-        <span id="ip_configurations_python">
-<a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firewallipconfiguration">Sequence[Firewall<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
-    </dt>
-    <dd>{{% md %}}An `ip_configuration` block as documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span> 
@@ -744,6 +865,28 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS servers that the Azure Firewall will direct DNS traffic to the for name resolution.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="firewall_policy_id_python">
+<a href="#firewall_policy_id_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Firewall Policy applied to this Firewall.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_configurations_python">
+<a href="#ip_configurations_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configurations</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallipconfiguration">Sequence[Firewall<wbr>Ip<wbr>Configuration<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}An `ip_configuration` block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -781,6 +924,28 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="sku_name_python">
+<a href="#sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Sku name of the Firewall. Possible values are `AZFW_Hub` and `AZFW_VNet`.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sku_tier_python">
+<a href="#sku_tier_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Sku tier of the Firewall. Possible values are `Premium` and `Standard`.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -798,7 +963,18 @@ The Firewall resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The operation mode for threat intelligence-based filtering. Possible values are: `Off`, `Alert` and `Deny`. Defaults to `Alert`
+    <dd>{{% md %}}The operation mode for threat intelligence-based filtering. Possible values are: `Off`, `Alert`,`Deny` and `""`(empty string). Defaults to `Alert`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtual_hub_python">
+<a href="#virtual_hub_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>hub</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallvirtualhub">Firewall<wbr>Virtual<wbr>Hub<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_hub` block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -911,7 +1087,7 @@ Get an existing Firewall resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dns_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">ip_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallIpConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_ip_configuration</span><span class="p">:</span> <span class="nx">Optional[FirewallManagementIpConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threat_intel_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Firewall</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dns_servers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">firewall_policy_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_configurations</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallIpConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_ip_configuration</span><span class="p">:</span> <span class="nx">Optional[FirewallManagementIpConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku_tier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threat_intel_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">virtual_hub</span><span class="p">:</span> <span class="nx">Optional[FirewallVirtualHubArgs]</span> = None<span class="p">, </span><span class="nx">zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Firewall</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1038,6 +1214,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_firewallpolicyid_csharp">
+<a href="#state_firewallpolicyid_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Firewall Policy applied to this Firewall.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_ipconfigurations_csharp">
 <a href="#state_ipconfigurations_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configurations</a>
 </span> 
@@ -1093,6 +1280,28 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_skuname_csharp">
+<a href="#state_skuname_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sku name of the Firewall. Possible values are `AZFW_Hub` and `AZFW_VNet`.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_skutier_csharp">
+<a href="#state_skutier_csharp" style="color: inherit; text-decoration: inherit;">Sku<wbr>Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sku tier of the Firewall. Possible values are `Premium` and `Standard`.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -1110,7 +1319,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The operation mode for threat intelligence-based filtering. Possible values are: `Off`, `Alert` and `Deny`. Defaults to `Alert`
+    <dd>{{% md %}}The operation mode for threat intelligence-based filtering. Possible values are: `Off`, `Alert`,`Deny` and `""`(empty string). Defaults to `Alert`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_virtualhub_csharp">
+<a href="#state_virtualhub_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallvirtualhub">Firewall<wbr>Virtual<wbr>Hub<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_hub` block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1140,6 +1360,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS servers that the Azure Firewall will direct DNS traffic to the for name resolution.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_firewallpolicyid_go">
+<a href="#state_firewallpolicyid_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Firewall Policy applied to this Firewall.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1199,6 +1430,28 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_skuname_go">
+<a href="#state_skuname_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sku name of the Firewall. Possible values are `AZFW_Hub` and `AZFW_VNet`.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_skutier_go">
+<a href="#state_skutier_go" style="color: inherit; text-decoration: inherit;">Sku<wbr>Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sku tier of the Firewall. Possible values are `Premium` and `Standard`.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span> 
@@ -1216,7 +1469,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The operation mode for threat intelligence-based filtering. Possible values are: `Off`, `Alert` and `Deny`. Defaults to `Alert`
+    <dd>{{% md %}}The operation mode for threat intelligence-based filtering. Possible values are: `Off`, `Alert`,`Deny` and `""`(empty string). Defaults to `Alert`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_virtualhub_go">
+<a href="#state_virtualhub_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallvirtualhub">Firewall<wbr>Virtual<wbr>Hub</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_hub` block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1246,6 +1510,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS servers that the Azure Firewall will direct DNS traffic to the for name resolution.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_firewallpolicyid_nodejs">
+<a href="#state_firewallpolicyid_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Policy<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Firewall Policy applied to this Firewall.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1305,6 +1580,28 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_skuname_nodejs">
+<a href="#state_skuname_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sku name of the Firewall. Possible values are `AZFW_Hub` and `AZFW_VNet`.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_skutier_nodejs">
+<a href="#state_skutier_nodejs" style="color: inherit; text-decoration: inherit;">sku<wbr>Tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Sku tier of the Firewall. Possible values are `Premium` and `Standard`.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -1322,7 +1619,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The operation mode for threat intelligence-based filtering. Possible values are: `Off`, `Alert` and `Deny`. Defaults to `Alert`
+    <dd>{{% md %}}The operation mode for threat intelligence-based filtering. Possible values are: `Off`, `Alert`,`Deny` and `""`(empty string). Defaults to `Alert`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_virtualhub_nodejs">
+<a href="#state_virtualhub_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Hub</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallvirtualhub">Firewall<wbr>Virtual<wbr>Hub</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_hub` block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1352,6 +1660,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of DNS servers that the Azure Firewall will direct DNS traffic to the for name resolution.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_firewall_policy_id_python">
+<a href="#state_firewall_policy_id_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>policy_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Firewall Policy applied to this Firewall.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1411,6 +1730,28 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_sku_name_python">
+<a href="#state_sku_name_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Sku name of the Firewall. Possible values are `AZFW_Hub` and `AZFW_VNet`.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sku_tier_python">
+<a href="#state_sku_tier_python" style="color: inherit; text-decoration: inherit;">sku_<wbr>tier</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Sku tier of the Firewall. Possible values are `Premium` and `Standard`.  Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span> 
@@ -1428,7 +1769,18 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The operation mode for threat intelligence-based filtering. Possible values are: `Off`, `Alert` and `Deny`. Defaults to `Alert`
+    <dd>{{% md %}}The operation mode for threat intelligence-based filtering. Possible values are: `Off`, `Alert`,`Deny` and `""`(empty string). Defaults to `Alert`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_virtual_hub_python">
+<a href="#state_virtual_hub_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>hub</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallvirtualhub">Firewall<wbr>Virtual<wbr>Hub<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `virtual_hub` block as documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1505,7 +1857,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Private IP address of the Azure Firewall.
+    <dd>{{% md %}}The private IP address associated with the Firewall.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1556,7 +1908,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Private IP address of the Azure Firewall.
+    <dd>{{% md %}}The private IP address associated with the Firewall.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1607,7 +1959,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Private IP address of the Azure Firewall.
+    <dd>{{% md %}}The private IP address associated with the Firewall.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1658,7 +2010,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Private IP address of the Azure Firewall.
+    <dd>{{% md %}}The private IP address associated with the Firewall.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1738,7 +2090,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Private IP address of the Azure Firewall.
+    <dd>{{% md %}}The private IP address associated with the Firewall.
 {{% /md %}}</dd>
 
 </dl>
@@ -1789,7 +2141,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Private IP address of the Azure Firewall.
+    <dd>{{% md %}}The private IP address associated with the Firewall.
 {{% /md %}}</dd>
 
 </dl>
@@ -1840,7 +2192,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Private IP address of the Azure Firewall.
+    <dd>{{% md %}}The private IP address associated with the Firewall.
 {{% /md %}}</dd>
 
 </dl>
@@ -1891,7 +2243,229 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Private IP address of the Azure Firewall.
+    <dd>{{% md %}}The private IP address associated with the Firewall.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="firewallvirtualhub">Firewall<wbr>Virtual<wbr>Hub</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallVirtualHub">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallVirtualHub">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#FirewallVirtualHubArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network?tab=doc#FirewallVirtualHubOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Inputs.FirewallVirtualHubArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Network.Outputs.FirewallVirtualHub.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualhubid_csharp">
+<a href="#virtualhubid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the Virtual Hub where the Firewall resides in.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddress_csharp">
+<a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address associated with the Firewall.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddresses_csharp">
+<a href="#publicipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of public IP addresses associated with the Firewall.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicipcount_csharp">
+<a href="#publicipcount_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of public IPs to assign to the Firewall. Defaults to `1`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualhubid_go">
+<a href="#virtualhubid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Hub<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the Virtual Hub where the Firewall resides in.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddress_go">
+<a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address associated with the Firewall.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddresses_go">
+<a href="#publicipaddresses_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The list of public IP addresses associated with the Firewall.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicipcount_go">
+<a href="#publicipcount_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of public IPs to assign to the Firewall. Defaults to `1`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualhubid_nodejs">
+<a href="#virtualhubid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Hub<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the Virtual Hub where the Firewall resides in.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddress_nodejs">
+<a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address associated with the Firewall.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicipaddresses_nodejs">
+<a href="#publicipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of public IP addresses associated with the Firewall.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="publicipcount_nodejs">
+<a href="#publicipcount_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip<wbr>Count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of public IPs to assign to the Firewall. Defaults to `1`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="virtual_hub_id_python">
+<a href="#virtual_hub_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>hub_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of the Virtual Hub where the Firewall resides in.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_ip_address_python">
+<a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address associated with the Firewall.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="public_ip_addresses_python">
+<a href="#public_ip_addresses_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>addresses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of public IP addresses associated with the Firewall.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="public_ip_count_python">
+<a href="#public_ip_count_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip_<wbr>count</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of public IPs to assign to the Firewall. Defaults to `1`.
 {{% /md %}}</dd>
 
 </dl>

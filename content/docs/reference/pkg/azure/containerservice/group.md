@@ -4040,6 +4040,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="secret_csharp">
+<a href="#secret_csharp" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of secrets that will be mounted as files in the volume. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sharename_csharp">
 <a href="#sharename_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Name</a>
 </span> 
@@ -4120,6 +4131,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specify if the volume is to be mounted as read only or not. The default value is `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secret_go">
+<a href="#secret_go" style="color: inherit; text-decoration: inherit;">Secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of secrets that will be mounted as files in the volume. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4208,6 +4230,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="secret_nodejs">
+<a href="#secret_nodejs" style="color: inherit; text-decoration: inherit;">secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of secrets that will be mounted as files in the volume. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sharename_nodejs">
 <a href="#sharename_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Name</a>
 </span> 
@@ -4288,6 +4321,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specify if the volume is to be mounted as read only or not. The default value is `false`. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="secret_python">
+<a href="#secret_python" style="color: inherit; text-decoration: inherit;">secret</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of secrets that will be mounted as files in the volume. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

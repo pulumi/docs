@@ -12,6 +12,240 @@ meta_desc: "Explore the BgpConnection resource of the network module, including 
 
 Manages a Bgp Connection for a Virtual Hub.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleVirtualHub = new Azure.Network.VirtualHub("exampleVirtualHub", new Azure.Network.VirtualHubArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            Location = exampleResourceGroup.Location,
+            Sku = "Standard",
+        });
+        var examplePublicIp = new Azure.Network.PublicIp("examplePublicIp", new Azure.Network.PublicIpArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            AllocationMethod = "Dynamic",
+        });
+        var exampleVirtualNetwork = new Azure.Network.VirtualNetwork("exampleVirtualNetwork", new Azure.Network.VirtualNetworkArgs
+        {
+            AddressSpaces = 
+            {
+                "10.5.0.0/16",
+            },
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+        });
+        var exampleSubnet = new Azure.Network.Subnet("exampleSubnet", new Azure.Network.SubnetArgs
+        {
+            ResourceGroupName = exampleResourceGroup.Name,
+            VirtualNetworkName = exampleVirtualNetwork.Name,
+            AddressPrefix = "10.5.1.0/24",
+        });
+        var exampleVirtualHubIp = new Azure.Network.VirtualHubIp("exampleVirtualHubIp", new Azure.Network.VirtualHubIpArgs
+        {
+            VirtualHubId = exampleVirtualHub.Id,
+            PrivateIpAddress = "10.5.1.18",
+            PrivateIpAllocationMethod = "Static",
+            PublicIpAddressId = examplePublicIp.Id,
+            SubnetId = exampleSubnet.Id,
+        });
+        var exampleBgpConnection = new Azure.Network.BgpConnection("exampleBgpConnection", new Azure.Network.BgpConnectionArgs
+        {
+            VirtualHubId = exampleVirtualHub.Id,
+            PeerAsn = 65514,
+            PeerIp = "169.254.21.5",
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                exampleVirtualHubIp,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/network"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualHub, err := network.NewVirtualHub(ctx, "exampleVirtualHub", &network.VirtualHubArgs{
+			ResourceGroupName: exampleResourceGroup.Name,
+			Location:          exampleResourceGroup.Location,
+			Sku:               pulumi.String("Standard"),
+		})
+		if err != nil {
+			return err
+		}
+		examplePublicIp, err := network.NewPublicIp(ctx, "examplePublicIp", &network.PublicIpArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			AllocationMethod:  pulumi.String("Dynamic"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualNetwork, err := network.NewVirtualNetwork(ctx, "exampleVirtualNetwork", &network.VirtualNetworkArgs{
+			AddressSpaces: pulumi.StringArray{
+				pulumi.String("10.5.0.0/16"),
+			},
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+		})
+		if err != nil {
+			return err
+		}
+		exampleSubnet, err := network.NewSubnet(ctx, "exampleSubnet", &network.SubnetArgs{
+			ResourceGroupName:  exampleResourceGroup.Name,
+			VirtualNetworkName: exampleVirtualNetwork.Name,
+			AddressPrefix:      pulumi.String("10.5.1.0/24"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleVirtualHubIp, err := network.NewVirtualHubIp(ctx, "exampleVirtualHubIp", &network.VirtualHubIpArgs{
+			VirtualHubId:              exampleVirtualHub.ID(),
+			PrivateIpAddress:          pulumi.String("10.5.1.18"),
+			PrivateIpAllocationMethod: pulumi.String("Static"),
+			PublicIpAddressId:         examplePublicIp.ID(),
+			SubnetId:                  exampleSubnet.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = network.NewBgpConnection(ctx, "exampleBgpConnection", &network.BgpConnectionArgs{
+			VirtualHubId: exampleVirtualHub.ID(),
+			PeerAsn:      pulumi.Int(65514),
+			PeerIp:       pulumi.String("169.254.21.5"),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			exampleVirtualHubIp,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_virtual_hub = azure.network.VirtualHub("exampleVirtualHub",
+    resource_group_name=example_resource_group.name,
+    location=example_resource_group.location,
+    sku="Standard")
+example_public_ip = azure.network.PublicIp("examplePublicIp",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    allocation_method="Dynamic")
+example_virtual_network = azure.network.VirtualNetwork("exampleVirtualNetwork",
+    address_spaces=["10.5.0.0/16"],
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name)
+example_subnet = azure.network.Subnet("exampleSubnet",
+    resource_group_name=example_resource_group.name,
+    virtual_network_name=example_virtual_network.name,
+    address_prefix="10.5.1.0/24")
+example_virtual_hub_ip = azure.network.VirtualHubIp("exampleVirtualHubIp",
+    virtual_hub_id=example_virtual_hub.id,
+    private_ip_address="10.5.1.18",
+    private_ip_allocation_method="Static",
+    public_ip_address_id=example_public_ip.id,
+    subnet_id=example_subnet.id)
+example_bgp_connection = azure.network.BgpConnection("exampleBgpConnection",
+    virtual_hub_id=example_virtual_hub.id,
+    peer_asn=65514,
+    peer_ip="169.254.21.5",
+    opts=ResourceOptions(depends_on=[example_virtual_hub_ip]))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleVirtualHub = new azure.network.VirtualHub("exampleVirtualHub", {
+    resourceGroupName: exampleResourceGroup.name,
+    location: exampleResourceGroup.location,
+    sku: "Standard",
+});
+const examplePublicIp = new azure.network.PublicIp("examplePublicIp", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    allocationMethod: "Dynamic",
+});
+const exampleVirtualNetwork = new azure.network.VirtualNetwork("exampleVirtualNetwork", {
+    addressSpaces: ["10.5.0.0/16"],
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+});
+const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
+    resourceGroupName: exampleResourceGroup.name,
+    virtualNetworkName: exampleVirtualNetwork.name,
+    addressPrefix: "10.5.1.0/24",
+});
+const exampleVirtualHubIp = new azure.network.VirtualHubIp("exampleVirtualHubIp", {
+    virtualHubId: exampleVirtualHub.id,
+    privateIpAddress: "10.5.1.18",
+    privateIpAllocationMethod: "Static",
+    publicIpAddressId: examplePublicIp.id,
+    subnetId: exampleSubnet.id,
+});
+const exampleBgpConnection = new azure.network.BgpConnection("exampleBgpConnection", {
+    virtualHubId: exampleVirtualHub.id,
+    peerAsn: 65514,
+    peerIp: "169.254.21.5",
+}, {
+    dependsOn: [exampleVirtualHubIp],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BgpConnection Resource {#create}
