@@ -1,21 +1,24 @@
 {{ define "hero" }}
-    <header class="header-hero-home mb-8 relative px-4">
+    <header class="header-hero-home mb-8 relative px-4 pb-56 lg:pb-40">
+        <div class="container mx-auto">
+            <h1>{{ .Params.hero.title }}</h1>
+        </div>
         <div class="flex flex-wrap container mx-auto">
-            <div class="w-full lg:w-1/2 px-5">
-                <h1>{{ .Params.hero.title }}</h1>
+            <div class="w-full order-last mt-8 lg:mt-0 lg:order-first lg:w-1/2 px-5">
                 <p class="mr-4">{{ .Params.hero.description }}</p>
-                <div class="mt-5">
-                    <a class="btn btn-lg" href="{{ relref . "/docs/get-started/aws" }}">Get Started</a>
-                    <a class="btn btn-lg btn-orange-translucent" href="{{ relref . "/resources#upcoming" }}">Join a Workshop</a>
+                <div class="flex flex-col lg:flex-row mt-5">
+                    <a class="btn btn-lg text-center mb-4 lg:mb-0 lg:mr-4" href="{{ relref . "/docs/get-started/aws" }}">Get Started</a>
+                    <a class="btn btn-lg btn-orange-translucent text-center" href="{{ relref . "/resources#upcoming" }}">Join a Workshop</a>
                 </div>
             </div>
-            <div class="w-full mt-16 lg:w-1/2 lg:mt-0">
+            <div class="w-full order-first lg:order-last mt-8 lg:mt-0 lg:w-1/2 lg:mt-0">
                 <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
                     <iframe
                         src="//www.youtube.com/embed/cCzoCUxqiVo?rel=0"
                         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
                         allowfullscreen=""
-                        title="Introduction to Pulumi: Modern Infrastructure as Code"
+                        title="Pulumi + AWS: Modern Infrastructure as Code"
+                        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/cCzoCUxqiVo?autoplay=1><img src='/images/partners/aws-apn-video-thumbnail.jpg' alt='Pulumi + AWS: Modern Infrastructure as Code'></a>"
                     ></iframe>
                 </div>
             </div>
@@ -101,12 +104,16 @@
                      this exclusion.
                 -->
                 {{ range first 3 ( where $blog ".Params.title" "ne" "Deploying Minecraft on Azure" ) }}
-                    <div class="flex flex-col lg:flex-row mb-5">
-                        <div class="w-full lg:w-1/2 mr-8 aws-reinvent-blog-image">
-                            {{ partial "blog/poster" . }}
+                    <div class="flex flex-col lg:flex-row mb-12">
+                        <div class="w-full lg:w-1/2 mr-8">
+                            <a href="{{ .RelPermalink }}">
+                                <img class="rounded-lg lg:my-8 border-2 border-gray-100"
+                                     src="{{ (.Resources.GetMatch .Params.meta_image).RelPermalink }}"
+                                     alt="{{ .Title }}">
+                            </a>
                         </div>
 
-                        <div class="w-full lg:w-1/2 text-left">
+                        <div class="w-full lg:w-1/2 text-left flex flex-col justify-center">
                             <p class="no-anchor text-2xl font-bold"><a data-track="post-{{ .Title | urlize }}" href="{{ .Permalink }}">{{ .Title }}</a></p>
                             <div class="flex items-center">
                                 <span>
@@ -196,20 +203,12 @@
                     </div>
                 </div>
 
-                <div class="w-full xl:w-1/2 text-left px-10">
+                <div class="w-full xl:w-1/2 text-left px-10 flex flex-col justify-center">
                     <p class="text-lg font-bold">Architect for self-service</p>
                     <p>
                         Pulumi's unique approach to Infrastructure as Code allows you to build
                         self-service infrastructure platforms. You can abstract away complexity
                         for your teammates, allowing folks to focus on what's important.
-                    </p>
-
-                    <p class="text-lg font-bold">Collaboration made easy</p>
-                    <p>
-                        To be able to decrease the time your organization goes from ideation
-                        to value delivery, we need to give engineers the tools they need to collaborate
-                        effectively. Pulumi provides you and your team with a platform to collaborate on
-                        cloud infrastructure and improve the velocity of delivery.
                     </p>
 
                     <p class="text-lg font-bold">Continuously Delivery Value</p>
