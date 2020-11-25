@@ -12,6 +12,7 @@ meta_desc: "Explore the OceanLaunchSpec resource of the gke module, including ex
 
 Provides a custom Spotinst Ocean GKE Launch Spec resource.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1806,6 +1807,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
