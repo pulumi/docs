@@ -76,6 +76,50 @@ class MyStack : Stack
             ApiManagementName = exampleService.Name,
             ApiName = exampleApi.Name,
             ApiManagementLoggerId = exampleLogger.Id,
+            AlwaysLogErrors = true,
+            LogClientIp = true,
+            Verbosity = "Verbose",
+            HttpCorrelationProtocol = "W3C",
+            FrontendRequest = new Azure.ApiManagement.Inputs.ApiDiagnosticFrontendRequestArgs
+            {
+                BodyBytes = 32,
+                HeadersToLogs = 
+                {
+                    "content-type",
+                    "accept",
+                    "origin",
+                },
+            },
+            FrontendResponse = new Azure.ApiManagement.Inputs.ApiDiagnosticFrontendResponseArgs
+            {
+                BodyBytes = 32,
+                HeadersToLogs = 
+                {
+                    "content-type",
+                    "content-length",
+                    "origin",
+                },
+            },
+            BackendRequest = new Azure.ApiManagement.Inputs.ApiDiagnosticBackendRequestArgs
+            {
+                BodyBytes = 32,
+                HeadersToLogs = 
+                {
+                    "content-type",
+                    "accept",
+                    "origin",
+                },
+            },
+            BackendResponse = new Azure.ApiManagement.Inputs.ApiDiagnosticBackendResponseArgs
+            {
+                BodyBytes = 32,
+                HeadersToLogs = 
+                {
+                    "content-type",
+                    "content-length",
+                    "origin",
+                },
+            },
         });
     }
 
@@ -149,10 +193,46 @@ func main() {
 			return err
 		}
 		_, err = apimanagement.NewApiDiagnostic(ctx, "exampleApiDiagnostic", &apimanagement.ApiDiagnosticArgs{
-			ResourceGroupName:     exampleResourceGroup.Name,
-			ApiManagementName:     exampleService.Name,
-			ApiName:               exampleApi.Name,
-			ApiManagementLoggerId: exampleLogger.ID(),
+			ResourceGroupName:       exampleResourceGroup.Name,
+			ApiManagementName:       exampleService.Name,
+			ApiName:                 exampleApi.Name,
+			ApiManagementLoggerId:   exampleLogger.ID(),
+			AlwaysLogErrors:         pulumi.Bool(true),
+			LogClientIp:             pulumi.Bool(true),
+			Verbosity:               pulumi.String("Verbose"),
+			HttpCorrelationProtocol: pulumi.String("W3C"),
+			FrontendRequest: &apimanagement.ApiDiagnosticFrontendRequestArgs{
+				BodyBytes: pulumi.Int(32),
+				HeadersToLogs: pulumi.StringArray{
+					pulumi.String("content-type"),
+					pulumi.String("accept"),
+					pulumi.String("origin"),
+				},
+			},
+			FrontendResponse: &apimanagement.ApiDiagnosticFrontendResponseArgs{
+				BodyBytes: pulumi.Int(32),
+				HeadersToLogs: pulumi.StringArray{
+					pulumi.String("content-type"),
+					pulumi.String("content-length"),
+					pulumi.String("origin"),
+				},
+			},
+			BackendRequest: &apimanagement.ApiDiagnosticBackendRequestArgs{
+				BodyBytes: pulumi.Int(32),
+				HeadersToLogs: pulumi.StringArray{
+					pulumi.String("content-type"),
+					pulumi.String("accept"),
+					pulumi.String("origin"),
+				},
+			},
+			BackendResponse: &apimanagement.ApiDiagnosticBackendResponseArgs{
+				BodyBytes: pulumi.Int(32),
+				HeadersToLogs: pulumi.StringArray{
+					pulumi.String("content-type"),
+					pulumi.String("content-length"),
+					pulumi.String("origin"),
+				},
+			},
 		})
 		if err != nil {
 			return err
@@ -201,7 +281,43 @@ example_api_diagnostic = azure.apimanagement.ApiDiagnostic("exampleApiDiagnostic
     resource_group_name=example_resource_group.name,
     api_management_name=example_service.name,
     api_name=example_api.name,
-    api_management_logger_id=example_logger.id)
+    api_management_logger_id=example_logger.id,
+    always_log_errors=True,
+    log_client_ip=True,
+    verbosity="Verbose",
+    http_correlation_protocol="W3C",
+    frontend_request=azure.apimanagement.ApiDiagnosticFrontendRequestArgs(
+        body_bytes=32,
+        headers_to_logs=[
+            "content-type",
+            "accept",
+            "origin",
+        ],
+    ),
+    frontend_response=azure.apimanagement.ApiDiagnosticFrontendResponseArgs(
+        body_bytes=32,
+        headers_to_logs=[
+            "content-type",
+            "content-length",
+            "origin",
+        ],
+    ),
+    backend_request=azure.apimanagement.ApiDiagnosticBackendRequestArgs(
+        body_bytes=32,
+        headers_to_logs=[
+            "content-type",
+            "accept",
+            "origin",
+        ],
+    ),
+    backend_response=azure.apimanagement.ApiDiagnosticBackendResponseArgs(
+        body_bytes=32,
+        headers_to_logs=[
+            "content-type",
+            "content-length",
+            "origin",
+        ],
+    ))
 ```
 
 {{% /example %}}
@@ -249,6 +365,42 @@ const exampleApiDiagnostic = new azure.apimanagement.ApiDiagnostic("exampleApiDi
     apiManagementName: exampleService.name,
     apiName: exampleApi.name,
     apiManagementLoggerId: exampleLogger.id,
+    alwaysLogErrors: true,
+    logClientIp: true,
+    verbosity: "Verbose",
+    httpCorrelationProtocol: "W3C",
+    frontendRequest: {
+        bodyBytes: 32,
+        headersToLogs: [
+            "content-type",
+            "accept",
+            "origin",
+        ],
+    },
+    frontendResponse: {
+        bodyBytes: 32,
+        headersToLogs: [
+            "content-type",
+            "content-length",
+            "origin",
+        ],
+    },
+    backendRequest: {
+        bodyBytes: 32,
+        headersToLogs: [
+            "content-type",
+            "accept",
+            "origin",
+        ],
+    },
+    backendResponse: {
+        bodyBytes: 32,
+        headersToLogs: [
+            "content-type",
+            "content-length",
+            "origin",
+        ],
+    },
 });
 ```
 
@@ -266,7 +418,7 @@ const exampleApiDiagnostic = new azure.apimanagement.ApiDiagnostic("exampleApiDi
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#pulumi_azure.apimanagement.ApiDiagnostic">ApiDiagnostic</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_logger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#pulumi_azure.apimanagement.ApiDiagnostic">ApiDiagnostic</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">always_log_errors</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">api_management_logger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backend_request</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticBackendRequestArgs]</span> = None<span class="p">, </span><span class="nx">backend_response</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticBackendResponseArgs]</span> = None<span class="p">, </span><span class="nx">frontend_request</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticFrontendRequestArgs]</span> = None<span class="p">, </span><span class="nx">frontend_response</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticFrontendResponseArgs]</span> = None<span class="p">, </span><span class="nx">http_correlation_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_client_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">verbosity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -493,6 +645,94 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}The name of the Resource Group where the API Management Service API Diagnostics Logs should exist. Changing this forces a new API Management Service API Diagnostics Logs to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="alwayslogerrors_csharp">
+<a href="#alwayslogerrors_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>Log<wbr>Errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Always log errors. Send telemetry if there is an erroneous condition, regardless of sampling settings.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backendrequest_csharp">
+<a href="#backendrequest_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendrequest">Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `backend_request` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backendresponse_csharp">
+<a href="#backendresponse_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Response</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendresponse">Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `backend_response` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frontendrequest_csharp">
+<a href="#frontendrequest_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendrequest">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `frontend_request` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frontendresponse_csharp">
+<a href="#frontendresponse_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Response</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendresponse">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `frontend_response` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpcorrelationprotocol_csharp">
+<a href="#httpcorrelationprotocol_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Correlation<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP Correlation Protocol to use. Possible values are `None`, `Legacy` or `W3C`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logclientip_csharp">
+<a href="#logclientip_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Client<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Log client IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="verbosity_csharp">
+<a href="#verbosity_csharp" style="color: inherit; text-decoration: inherit;">Verbosity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Logging verbosity. Possible values are `verbose`, `information` or `error`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -553,6 +793,94 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the API Management Service API Diagnostics Logs should exist. Changing this forces a new API Management Service API Diagnostics Logs to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="alwayslogerrors_go">
+<a href="#alwayslogerrors_go" style="color: inherit; text-decoration: inherit;">Always<wbr>Log<wbr>Errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Always log errors. Send telemetry if there is an erroneous condition, regardless of sampling settings.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backendrequest_go">
+<a href="#backendrequest_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendrequest">Api<wbr>Diagnostic<wbr>Backend<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}A `backend_request` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backendresponse_go">
+<a href="#backendresponse_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Response</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendresponse">Api<wbr>Diagnostic<wbr>Backend<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A `backend_response` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frontendrequest_go">
+<a href="#frontendrequest_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendrequest">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}A `frontend_request` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frontendresponse_go">
+<a href="#frontendresponse_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Response</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendresponse">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A `frontend_response` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpcorrelationprotocol_go">
+<a href="#httpcorrelationprotocol_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Correlation<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP Correlation Protocol to use. Possible values are `None`, `Legacy` or `W3C`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logclientip_go">
+<a href="#logclientip_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Client<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Log client IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="verbosity_go">
+<a href="#verbosity_go" style="color: inherit; text-decoration: inherit;">Verbosity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Logging verbosity. Possible values are `verbose`, `information` or `error`.
 {{% /md %}}</dd>
 
 </dl>
@@ -617,6 +945,94 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
     <dd>{{% md %}}The name of the Resource Group where the API Management Service API Diagnostics Logs should exist. Changing this forces a new API Management Service API Diagnostics Logs to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="alwayslogerrors_nodejs">
+<a href="#alwayslogerrors_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Log<wbr>Errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Always log errors. Send telemetry if there is an erroneous condition, regardless of sampling settings.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backendrequest_nodejs">
+<a href="#backendrequest_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendrequest">Api<wbr>Diagnostic<wbr>Backend<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}A `backend_request` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backendresponse_nodejs">
+<a href="#backendresponse_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Response</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendresponse">Api<wbr>Diagnostic<wbr>Backend<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A `backend_response` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frontendrequest_nodejs">
+<a href="#frontendrequest_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendrequest">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}A `frontend_request` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frontendresponse_nodejs">
+<a href="#frontendresponse_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Response</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendresponse">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A `frontend_response` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpcorrelationprotocol_nodejs">
+<a href="#httpcorrelationprotocol_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Correlation<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP Correlation Protocol to use. Possible values are `None`, `Legacy` or `W3C`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="logclientip_nodejs">
+<a href="#logclientip_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Client<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Log client IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="verbosity_nodejs">
+<a href="#verbosity_nodejs" style="color: inherit; text-decoration: inherit;">verbosity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Logging verbosity. Possible values are `verbose`, `information` or `error`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -677,6 +1093,94 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the API Management Service API Diagnostics Logs should exist. Changing this forces a new API Management Service API Diagnostics Logs to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="always_log_errors_python">
+<a href="#always_log_errors_python" style="color: inherit; text-decoration: inherit;">always_<wbr>log_<wbr>errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Always log errors. Send telemetry if there is an erroneous condition, regardless of sampling settings.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backend_request_python">
+<a href="#backend_request_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendrequest">Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `backend_request` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backend_response_python">
+<a href="#backend_response_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>response</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendresponse">Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `backend_response` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frontend_request_python">
+<a href="#frontend_request_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendrequest">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `frontend_request` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frontend_response_python">
+<a href="#frontend_response_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>response</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendresponse">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `frontend_response` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http_correlation_protocol_python">
+<a href="#http_correlation_protocol_python" style="color: inherit; text-decoration: inherit;">http_<wbr>correlation_<wbr>protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP Correlation Protocol to use. Possible values are `None`, `Legacy` or `W3C`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="log_client_ip_python">
+<a href="#log_client_ip_python" style="color: inherit; text-decoration: inherit;">log_<wbr>client_<wbr>ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Log client IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="verbosity_python">
+<a href="#verbosity_python" style="color: inherit; text-decoration: inherit;">verbosity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Logging verbosity. Possible values are `verbose`, `information` or `error`.
 {{% /md %}}</dd>
 
 </dl>
@@ -778,7 +1282,7 @@ Get an existing ApiDiagnostic resource's state with the given name, ID, and opti
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">api_management_logger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ApiDiagnostic</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">always_log_errors</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">api_management_logger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backend_request</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticBackendRequestArgs]</span> = None<span class="p">, </span><span class="nx">backend_response</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticBackendResponseArgs]</span> = None<span class="p">, </span><span class="nx">frontend_request</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticFrontendRequestArgs]</span> = None<span class="p">, </span><span class="nx">frontend_response</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticFrontendResponseArgs]</span> = None<span class="p">, </span><span class="nx">http_correlation_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_client_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">verbosity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ApiDiagnostic</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -894,6 +1398,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_alwayslogerrors_csharp">
+<a href="#state_alwayslogerrors_csharp" style="color: inherit; text-decoration: inherit;">Always<wbr>Log<wbr>Errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Always log errors. Send telemetry if there is an erroneous condition, regardless of sampling settings.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_apimanagementloggerid_csharp">
 <a href="#state_apimanagementloggerid_csharp" style="color: inherit; text-decoration: inherit;">Api<wbr>Management<wbr>Logger<wbr>Id</a>
 </span> 
@@ -927,6 +1442,61 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_backendrequest_csharp">
+<a href="#state_backendrequest_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendrequest">Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `backend_request` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_backendresponse_csharp">
+<a href="#state_backendresponse_csharp" style="color: inherit; text-decoration: inherit;">Backend<wbr>Response</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendresponse">Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `backend_response` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_frontendrequest_csharp">
+<a href="#state_frontendrequest_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendrequest">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `frontend_request` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_frontendresponse_csharp">
+<a href="#state_frontendresponse_csharp" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Response</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendresponse">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `frontend_response` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_httpcorrelationprotocol_csharp">
+<a href="#state_httpcorrelationprotocol_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Correlation<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP Correlation Protocol to use. Possible values are `None`, `Legacy` or `W3C`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_identifier_csharp">
 <a href="#state_identifier_csharp" style="color: inherit; text-decoration: inherit;">Identifier</a>
 </span> 
@@ -934,6 +1504,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the Diagnostics Logs. Possible values are `applicationinsights` and `azuremonitor`. Changing this forces a new API Management Service API Diagnostics Logs to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_logclientip_csharp">
+<a href="#state_logclientip_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Client<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Log client IP address.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -947,12 +1528,34 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the Resource Group where the API Management Service API Diagnostics Logs should exist. Changing this forces a new API Management Service API Diagnostics Logs to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_verbosity_csharp">
+<a href="#state_verbosity_csharp" style="color: inherit; text-decoration: inherit;">Verbosity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Logging verbosity. Possible values are `verbose`, `information` or `error`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_alwayslogerrors_go">
+<a href="#state_alwayslogerrors_go" style="color: inherit; text-decoration: inherit;">Always<wbr>Log<wbr>Errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Always log errors. Send telemetry if there is an erroneous condition, regardless of sampling settings.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -989,6 +1592,61 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_backendrequest_go">
+<a href="#state_backendrequest_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendrequest">Api<wbr>Diagnostic<wbr>Backend<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}A `backend_request` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_backendresponse_go">
+<a href="#state_backendresponse_go" style="color: inherit; text-decoration: inherit;">Backend<wbr>Response</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendresponse">Api<wbr>Diagnostic<wbr>Backend<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A `backend_response` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_frontendrequest_go">
+<a href="#state_frontendrequest_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendrequest">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}A `frontend_request` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_frontendresponse_go">
+<a href="#state_frontendresponse_go" style="color: inherit; text-decoration: inherit;">Frontend<wbr>Response</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendresponse">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A `frontend_response` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_httpcorrelationprotocol_go">
+<a href="#state_httpcorrelationprotocol_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Correlation<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP Correlation Protocol to use. Possible values are `None`, `Legacy` or `W3C`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_identifier_go">
 <a href="#state_identifier_go" style="color: inherit; text-decoration: inherit;">Identifier</a>
 </span> 
@@ -996,6 +1654,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the Diagnostics Logs. Possible values are `applicationinsights` and `azuremonitor`. Changing this forces a new API Management Service API Diagnostics Logs to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_logclientip_go">
+<a href="#state_logclientip_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Client<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Log client IP address.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1009,12 +1678,34 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the Resource Group where the API Management Service API Diagnostics Logs should exist. Changing this forces a new API Management Service API Diagnostics Logs to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_verbosity_go">
+<a href="#state_verbosity_go" style="color: inherit; text-decoration: inherit;">Verbosity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Logging verbosity. Possible values are `verbose`, `information` or `error`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_alwayslogerrors_nodejs">
+<a href="#state_alwayslogerrors_nodejs" style="color: inherit; text-decoration: inherit;">always<wbr>Log<wbr>Errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Always log errors. Send telemetry if there is an erroneous condition, regardless of sampling settings.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1051,6 +1742,61 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_backendrequest_nodejs">
+<a href="#state_backendrequest_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendrequest">Api<wbr>Diagnostic<wbr>Backend<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}A `backend_request` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_backendresponse_nodejs">
+<a href="#state_backendresponse_nodejs" style="color: inherit; text-decoration: inherit;">backend<wbr>Response</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendresponse">Api<wbr>Diagnostic<wbr>Backend<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A `backend_response` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_frontendrequest_nodejs">
+<a href="#state_frontendrequest_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendrequest">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}A `frontend_request` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_frontendresponse_nodejs">
+<a href="#state_frontendresponse_nodejs" style="color: inherit; text-decoration: inherit;">frontend<wbr>Response</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendresponse">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A `frontend_response` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_httpcorrelationprotocol_nodejs">
+<a href="#state_httpcorrelationprotocol_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Correlation<wbr>Protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP Correlation Protocol to use. Possible values are `None`, `Legacy` or `W3C`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_identifier_nodejs">
 <a href="#state_identifier_nodejs" style="color: inherit; text-decoration: inherit;">identifier</a>
 </span> 
@@ -1058,6 +1804,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the Diagnostics Logs. Possible values are `applicationinsights` and `azuremonitor`. Changing this forces a new API Management Service API Diagnostics Logs to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_logclientip_nodejs">
+<a href="#state_logclientip_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Client<wbr>Ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Log client IP address.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1071,12 +1828,34 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the Resource Group where the API Management Service API Diagnostics Logs should exist. Changing this forces a new API Management Service API Diagnostics Logs to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_verbosity_nodejs">
+<a href="#state_verbosity_nodejs" style="color: inherit; text-decoration: inherit;">verbosity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Logging verbosity. Possible values are `verbose`, `information` or `error`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_always_log_errors_python">
+<a href="#state_always_log_errors_python" style="color: inherit; text-decoration: inherit;">always_<wbr>log_<wbr>errors</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Always log errors. Send telemetry if there is an erroneous condition, regardless of sampling settings.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1113,6 +1892,61 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_backend_request_python">
+<a href="#state_backend_request_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendrequest">Api<wbr>Diagnostic<wbr>Backend<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `backend_request` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_backend_response_python">
+<a href="#state_backend_response_python" style="color: inherit; text-decoration: inherit;">backend_<wbr>response</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticbackendresponse">Api<wbr>Diagnostic<wbr>Backend<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `backend_response` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_frontend_request_python">
+<a href="#state_frontend_request_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>request</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendrequest">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `frontend_request` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_frontend_response_python">
+<a href="#state_frontend_response_python" style="color: inherit; text-decoration: inherit;">frontend_<wbr>response</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#apidiagnosticfrontendresponse">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `frontend_response` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_http_correlation_protocol_python">
+<a href="#state_http_correlation_protocol_python" style="color: inherit; text-decoration: inherit;">http_<wbr>correlation_<wbr>protocol</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP Correlation Protocol to use. Possible values are `None`, `Legacy` or `W3C`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_identifier_python">
 <a href="#state_identifier_python" style="color: inherit; text-decoration: inherit;">identifier</a>
 </span> 
@@ -1120,6 +1954,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the Diagnostics Logs. Possible values are `applicationinsights` and `azuremonitor`. Changing this forces a new API Management Service API Diagnostics Logs to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_log_client_ip_python">
+<a href="#state_log_client_ip_python" style="color: inherit; text-decoration: inherit;">log_<wbr>client_<wbr>ip</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Log client IP address.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1133,10 +1978,563 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the Resource Group where the API Management Service API Diagnostics Logs should exist. Changing this forces a new API Management Service API Diagnostics Logs to be created.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_verbosity_python">
+<a href="#state_verbosity_python" style="color: inherit; text-decoration: inherit;">verbosity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Logging verbosity. Possible values are `verbose`, `information` or `error`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
+
+
+
+
+
+
+
+
+## Supporting Types
+
+
+<h4 id="apidiagnosticbackendrequest">Api<wbr>Diagnostic<wbr>Backend<wbr>Request</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiDiagnosticBackendRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiDiagnosticBackendRequest">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiDiagnosticBackendRequestArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiDiagnosticBackendRequestOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.Inputs.ApiDiagnosticBackendRequestArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.Outputs.ApiDiagnosticBackendRequest.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bodybytes_csharp">
+<a href="#bodybytes_csharp" style="color: inherit; text-decoration: inherit;">Body<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of payload bytes to log (up to 8192).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headerstologs_csharp">
+<a href="#headerstologs_csharp" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of headers to log.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bodybytes_go">
+<a href="#bodybytes_go" style="color: inherit; text-decoration: inherit;">Body<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of payload bytes to log (up to 8192).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headerstologs_go">
+<a href="#headerstologs_go" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of headers to log.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bodybytes_nodejs">
+<a href="#bodybytes_nodejs" style="color: inherit; text-decoration: inherit;">body<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of payload bytes to log (up to 8192).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headerstologs_nodejs">
+<a href="#headerstologs_nodejs" style="color: inherit; text-decoration: inherit;">headers<wbr>To<wbr>Logs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of headers to log.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="body_bytes_python">
+<a href="#body_bytes_python" style="color: inherit; text-decoration: inherit;">body_<wbr>bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of payload bytes to log (up to 8192).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_to_logs_python">
+<a href="#headers_to_logs_python" style="color: inherit; text-decoration: inherit;">headers_<wbr>to_<wbr>logs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of headers to log.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="apidiagnosticbackendresponse">Api<wbr>Diagnostic<wbr>Backend<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiDiagnosticBackendResponse">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiDiagnosticBackendResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiDiagnosticBackendResponseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiDiagnosticBackendResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.Inputs.ApiDiagnosticBackendResponseArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.Outputs.ApiDiagnosticBackendResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bodybytes_csharp">
+<a href="#bodybytes_csharp" style="color: inherit; text-decoration: inherit;">Body<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of payload bytes to log (up to 8192).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headerstologs_csharp">
+<a href="#headerstologs_csharp" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of headers to log.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bodybytes_go">
+<a href="#bodybytes_go" style="color: inherit; text-decoration: inherit;">Body<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of payload bytes to log (up to 8192).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headerstologs_go">
+<a href="#headerstologs_go" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of headers to log.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bodybytes_nodejs">
+<a href="#bodybytes_nodejs" style="color: inherit; text-decoration: inherit;">body<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of payload bytes to log (up to 8192).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headerstologs_nodejs">
+<a href="#headerstologs_nodejs" style="color: inherit; text-decoration: inherit;">headers<wbr>To<wbr>Logs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of headers to log.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="body_bytes_python">
+<a href="#body_bytes_python" style="color: inherit; text-decoration: inherit;">body_<wbr>bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of payload bytes to log (up to 8192).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_to_logs_python">
+<a href="#headers_to_logs_python" style="color: inherit; text-decoration: inherit;">headers_<wbr>to_<wbr>logs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of headers to log.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="apidiagnosticfrontendrequest">Api<wbr>Diagnostic<wbr>Frontend<wbr>Request</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiDiagnosticFrontendRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiDiagnosticFrontendRequest">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiDiagnosticFrontendRequestArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiDiagnosticFrontendRequestOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.Inputs.ApiDiagnosticFrontendRequestArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.Outputs.ApiDiagnosticFrontendRequest.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bodybytes_csharp">
+<a href="#bodybytes_csharp" style="color: inherit; text-decoration: inherit;">Body<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of payload bytes to log (up to 8192).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headerstologs_csharp">
+<a href="#headerstologs_csharp" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of headers to log.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bodybytes_go">
+<a href="#bodybytes_go" style="color: inherit; text-decoration: inherit;">Body<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of payload bytes to log (up to 8192).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headerstologs_go">
+<a href="#headerstologs_go" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of headers to log.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bodybytes_nodejs">
+<a href="#bodybytes_nodejs" style="color: inherit; text-decoration: inherit;">body<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of payload bytes to log (up to 8192).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headerstologs_nodejs">
+<a href="#headerstologs_nodejs" style="color: inherit; text-decoration: inherit;">headers<wbr>To<wbr>Logs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of headers to log.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="body_bytes_python">
+<a href="#body_bytes_python" style="color: inherit; text-decoration: inherit;">body_<wbr>bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of payload bytes to log (up to 8192).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_to_logs_python">
+<a href="#headers_to_logs_python" style="color: inherit; text-decoration: inherit;">headers_<wbr>to_<wbr>logs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of headers to log.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="apidiagnosticfrontendresponse">Api<wbr>Diagnostic<wbr>Frontend<wbr>Response</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiDiagnosticFrontendResponse">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiDiagnosticFrontendResponse">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiDiagnosticFrontendResponseArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ApiDiagnosticFrontendResponseOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.Inputs.ApiDiagnosticFrontendResponseArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.Outputs.ApiDiagnosticFrontendResponse.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bodybytes_csharp">
+<a href="#bodybytes_csharp" style="color: inherit; text-decoration: inherit;">Body<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of payload bytes to log (up to 8192).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headerstologs_csharp">
+<a href="#headerstologs_csharp" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of headers to log.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bodybytes_go">
+<a href="#bodybytes_go" style="color: inherit; text-decoration: inherit;">Body<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of payload bytes to log (up to 8192).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headerstologs_go">
+<a href="#headerstologs_go" style="color: inherit; text-decoration: inherit;">Headers<wbr>To<wbr>Logs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of headers to log.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bodybytes_nodejs">
+<a href="#bodybytes_nodejs" style="color: inherit; text-decoration: inherit;">body<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of payload bytes to log (up to 8192).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headerstologs_nodejs">
+<a href="#headerstologs_nodejs" style="color: inherit; text-decoration: inherit;">headers<wbr>To<wbr>Logs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of headers to log.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="body_bytes_python">
+<a href="#body_bytes_python" style="color: inherit; text-decoration: inherit;">body_<wbr>bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of payload bytes to log (up to 8192).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="headers_to_logs_python">
+<a href="#headers_to_logs_python" style="color: inherit; text-decoration: inherit;">headers_<wbr>to_<wbr>logs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a list of headers to log.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
 
 
 

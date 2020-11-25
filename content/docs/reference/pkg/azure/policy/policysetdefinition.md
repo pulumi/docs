@@ -174,7 +174,7 @@ const example = new azure.policy.PolicySetDefinition("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/policy/#pulumi_azure.policy.PolicySetDefinition">PolicySetDefinition</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_definition_references</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicySetDefinitionPolicyDefinitionReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">policy_definitions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/policy/#pulumi_azure.policy.PolicySetDefinition">PolicySetDefinition</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_definition_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicySetDefinitionPolicyDefinitionGroupArgs]]</span> = None<span class="p">, </span><span class="nx">policy_definition_references</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicySetDefinitionPolicyDefinitionReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">policy_definitions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -436,6 +436,17 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
+        <span id="policydefinitiongroups_csharp">
+<a href="#policydefinitiongroups_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policysetdefinitionpolicydefinitiongroup">List&lt;Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `policy_definition_group` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="policydefinitionreferences_csharp">
 <a href="#policydefinitionreferences_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>References</a>
 </span> 
@@ -549,6 +560,17 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policydefinitiongroups_go">
+<a href="#policydefinitiongroups_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policysetdefinitionpolicydefinitiongroup">[]Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `policy_definition_group` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -670,6 +692,17 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-optional"
             title="Optional">
+        <span id="policydefinitiongroups_nodejs">
+<a href="#policydefinitiongroups_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policysetdefinitionpolicydefinitiongroup">Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `policy_definition_group` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="policydefinitionreferences_nodejs">
 <a href="#policydefinitionreferences_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>References</a>
 </span> 
@@ -783,6 +816,17 @@ The PolicySetDefinition resource accepts the following [input]({{< relref "/docs
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_definition_groups_python">
+<a href="#policy_definition_groups_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policysetdefinitionpolicydefinitiongroup">Sequence[Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `policy_definition_group` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -906,7 +950,7 @@ Get an existing PolicySetDefinition resource's state with the given name, ID, an
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_definition_references</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicySetDefinitionPolicyDefinitionReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">policy_definitions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PolicySetDefinition</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">management_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_definition_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicySetDefinitionPolicyDefinitionGroupArgs]]</span> = None<span class="p">, </span><span class="nx">policy_definition_references</span><span class="p">:</span> <span class="nx">Optional[Sequence[PolicySetDefinitionPolicyDefinitionReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">policy_definitions</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> PolicySetDefinition</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1099,6 +1143,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_policydefinitiongroups_csharp">
+<a href="#state_policydefinitiongroups_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policysetdefinitionpolicydefinitiongroup">List&lt;Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `policy_definition_group` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_policydefinitionreferences_csharp">
 <a href="#state_policydefinitionreferences_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>References</a>
 </span> 
@@ -1212,6 +1267,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_policydefinitiongroups_go">
+<a href="#state_policydefinitiongroups_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policysetdefinitionpolicydefinitiongroup">[]Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `policy_definition_group` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1333,6 +1399,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_policydefinitiongroups_nodejs">
+<a href="#state_policydefinitiongroups_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policysetdefinitionpolicydefinitiongroup">Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `policy_definition_group` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_policydefinitionreferences_nodejs">
 <a href="#state_policydefinitionreferences_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>References</a>
 </span> 
@@ -1450,6 +1527,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_policy_definition_groups_python">
+<a href="#state_policy_definition_groups_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#policysetdefinitionpolicydefinitiongroup">Sequence[Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `policy_definition_group` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_policy_definition_references_python">
 <a href="#state_policy_definition_references_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>references</a>
 </span> 
@@ -1494,6 +1582,268 @@ The following state arguments are supported:
 
 
 ## Supporting Types
+
+
+<h4 id="policysetdefinitionpolicydefinitiongroup">Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PolicySetDefinitionPolicyDefinitionGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PolicySetDefinitionPolicyDefinitionGroup">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/policy?tab=doc#PolicySetDefinitionPolicyDefinitionGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/policy?tab=doc#PolicySetDefinitionPolicyDefinitionGroupOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Policy.Inputs.PolicySetDefinitionPolicyDefinitionGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Policy.Outputs.PolicySetDefinitionPolicyDefinitionGroup.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of this policy definition group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additionalmetadataresourceid_csharp">
+<a href="#additionalmetadataresourceid_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Metadata<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="category_csharp">
+<a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The category of this policy definition group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of this policy definition group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The display name of this policy definition group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of this policy definition group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additionalmetadataresourceid_go">
+<a href="#additionalmetadataresourceid_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Metadata<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="category_go">
+<a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The category of this policy definition group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of this policy definition group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The display name of this policy definition group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of this policy definition group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additionalmetadataresourceid_nodejs">
+<a href="#additionalmetadataresourceid_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Metadata<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="category_nodejs">
+<a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The category of this policy definition group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of this policy definition group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The display name of this policy definition group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of this policy definition group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="additional_metadata_resource_id_python">
+<a href="#additional_metadata_resource_id_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>metadata_<wbr>resource_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="category_python">
+<a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The category of this policy definition group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The description of this policy definition group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The display name of this policy definition group.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="policysetdefinitionpolicydefinitionreference">Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference</h4>
@@ -1549,6 +1899,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="policygroupnames_csharp">
+<a href="#policygroupnames_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Group<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="referenceid_csharp">
 <a href="#referenceid_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Id</a>
 </span> 
@@ -1597,6 +1957,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `parameter_values`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policygroupnames_go">
+<a href="#policygroupnames_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Group<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1651,6 +2021,16 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="policygroupnames_nodejs">
+<a href="#policygroupnames_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Group<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="referenceid_nodejs">
 <a href="#referenceid_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Id</a>
 </span> 
@@ -1699,6 +2079,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Parameters for the policy set definition. This field is a json object that allows you to parameterize your policy definition.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `parameter_values`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_group_names_python">
+<a href="#policy_group_names_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>group_<wbr>names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

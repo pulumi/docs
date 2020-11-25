@@ -314,7 +314,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Description of the Policy Set Definition.
+    <dd>{{% md %}}The description of this policy definition group.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -325,7 +325,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The display name of this policy definition group.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -357,7 +358,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of this policy definition group.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -368,6 +370,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The mapping of the parameter values for the referenced policy rule. The keys are the parameter names.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="policydefinitiongroups_csharp">
+<a href="#policydefinitiongroups_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpolicysetdefinitionpolicydefinitiongroup">List&lt;Get<wbr>Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `policy_definition_group` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -428,7 +441,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Description of the Policy Set Definition.
+    <dd>{{% md %}}The description of this policy definition group.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -439,7 +452,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The display name of this policy definition group.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -471,7 +485,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of this policy definition group.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -482,6 +497,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The mapping of the parameter values for the referenced policy rule. The keys are the parameter names.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="policydefinitiongroups_go">
+<a href="#policydefinitiongroups_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Definition<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpolicysetdefinitionpolicydefinitiongroup">[]Get<wbr>Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `policy_definition_group` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -542,7 +568,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Description of the Policy Set Definition.
+    <dd>{{% md %}}The description of this policy definition group.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -553,7 +579,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The display name of this policy definition group.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -585,7 +612,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of this policy definition group.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -596,6 +624,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The mapping of the parameter values for the referenced policy rule. The keys are the parameter names.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="policydefinitiongroups_nodejs">
+<a href="#policydefinitiongroups_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Definition<wbr>Groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpolicysetdefinitionpolicydefinitiongroup">Get<wbr>Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `policy_definition_group` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -656,7 +695,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Description of the Policy Set Definition.
+    <dd>{{% md %}}The description of this policy definition group.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -667,7 +706,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The display name of this policy definition group.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -699,7 +739,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of this policy definition group.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -710,6 +751,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The mapping of the parameter values for the referenced policy rule. The keys are the parameter names.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="policy_definition_groups_python">
+<a href="#policy_definition_groups_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>definition_<wbr>groups</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getpolicysetdefinitionpolicydefinitiongroup">Sequence[Get<wbr>Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `policy_definition_group` blocks as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -768,6 +820,268 @@ The following output properties are available:
 ## Supporting Types
 
 
+<h4 id="getpolicysetdefinitionpolicydefinitiongroup">Get<wbr>Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Group</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPolicySetDefinitionPolicyDefinitionGroup">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/policy?tab=doc#GetPolicySetDefinitionPolicyDefinitionGroup">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Policy.Outputs.GetPolicySetDefinitionPolicyDefinitionGroup.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="additionalmetadataresourceid_csharp">
+<a href="#additionalmetadataresourceid_csharp" style="color: inherit; text-decoration: inherit;">Additional<wbr>Metadata<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="category_csharp">
+<a href="#category_csharp" style="color: inherit; text-decoration: inherit;">Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The category of this policy definition group.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of this policy definition group.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="displayname_csharp">
+<a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the display name of the Policy Set Definition. Conflicts with `name`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the Policy Set Definition. Conflicts with `display_name`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="additionalmetadataresourceid_go">
+<a href="#additionalmetadataresourceid_go" style="color: inherit; text-decoration: inherit;">Additional<wbr>Metadata<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="category_go">
+<a href="#category_go" style="color: inherit; text-decoration: inherit;">Category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The category of this policy definition group.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of this policy definition group.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="displayname_go">
+<a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the display name of the Policy Set Definition. Conflicts with `name`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the Policy Set Definition. Conflicts with `display_name`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="additionalmetadataresourceid_nodejs">
+<a href="#additionalmetadataresourceid_nodejs" style="color: inherit; text-decoration: inherit;">additional<wbr>Metadata<wbr>Resource<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="category_nodejs">
+<a href="#category_nodejs" style="color: inherit; text-decoration: inherit;">category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The category of this policy definition group.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The description of this policy definition group.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="displayname_nodejs">
+<a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the display name of the Policy Set Definition. Conflicts with `name`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the Policy Set Definition. Conflicts with `display_name`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="additional_metadata_resource_id_python">
+<a href="#additional_metadata_resource_id_python" style="color: inherit; text-decoration: inherit;">additional_<wbr>metadata_<wbr>resource_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="category_python">
+<a href="#category_python" style="color: inherit; text-decoration: inherit;">category</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The category of this policy definition group.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The description of this policy definition group.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="display_name_python">
+<a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the display name of the Policy Set Definition. Conflicts with `name`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the Policy Set Definition. Conflicts with `display_name`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="getpolicysetdefinitionpolicydefinitionreference">Get<wbr>Policy<wbr>Set<wbr>Definition<wbr>Policy<wbr>Definition<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPolicySetDefinitionPolicyDefinitionReference">output</a> API doc for this type.
@@ -818,6 +1132,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ID of the policy definition or policy set definition that is included in this policy set definition.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="policygroupnames_csharp">
+<a href="#policygroupnames_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Group<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -872,6 +1196,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="policygroupnames_go">
+<a href="#policygroupnames_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Group<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="referenceid_go">
 <a href="#referenceid_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Id</a>
 </span> 
@@ -923,6 +1257,16 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="policygroupnames_nodejs">
+<a href="#policygroupnames_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Group<wbr>Names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="referenceid_nodejs">
 <a href="#referenceid_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Id</a>
 </span> 
@@ -971,6 +1315,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ID of the policy definition or policy set definition that is included in this policy set definition.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="policy_group_names_python">
+<a href="#policy_group_names_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>group_<wbr>names</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">

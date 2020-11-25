@@ -487,6 +487,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="osdisktype_csharp">
+<a href="#osdisktype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the OS Disk on each Node in this Node Pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="ostype_csharp">
 <a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
 </span> 
@@ -751,6 +762,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the OS Disk on each Node in this Node Pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="osdisktype_go">
+<a href="#osdisktype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the OS Disk on each Node in this Node Pool.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1023,6 +1045,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="osdisktype_nodejs">
+<a href="#osdisktype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the OS Disk on each Node in this Node Pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="ostype_nodejs">
 <a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
 </span> 
@@ -1287,6 +1320,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the OS Disk on each Node in this Node Pool.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="os_disk_type_python">
+<a href="#os_disk_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the OS Disk on each Node in this Node Pool.
 {{% /md %}}</dd>
 
     <dt class="property-"

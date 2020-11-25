@@ -3,7 +3,7 @@ title: "Module core"
 title_tag: "Module core | Package @pulumi/azure | Node.js SDK"
 linktitle: "core"
 meta_desc: "Explore members of the core module in the @pulumi/azure package."
-git_sha: "1e6e272729ef317dfcecf40b50c7ce26be8e27d6"
+git_sha: "296b76e1815ddb3226b7dfa36220f7faca9a0b4d"
 block_external_search_index: true
 ---
 
@@ -63,7 +63,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="CustomProvider" data-link-title="CustomProvider">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L36">
         Resource <strong>CustomProvider</strong>
     </a>
 </h3>
@@ -98,7 +98,7 @@ Custom Provider can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="CustomProvider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L91"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L91"> <b>constructor</b></a>
 </h4>
 
 
@@ -112,7 +112,7 @@ Create a CustomProvider resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CustomProvider-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -123,14 +123,14 @@ Get an existing CustomProvider resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CustomProvider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CustomProvider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -141,7 +141,7 @@ Returns true if the given object is an instance of CustomProvider.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CustomProvider-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L67">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L67">property <b>actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CustomProviderAction'>CustomProviderAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -149,7 +149,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Any number of `action` block as defined below. One of `resourceType` or `action` must be specified.
 
 <h4 class="pdoc-member-header" id="CustomProvider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -158,7 +158,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CustomProvider-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L71">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L71">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -166,7 +166,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CustomProvider-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L75">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L75">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -174,7 +174,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Custom Provider. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CustomProvider-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L79">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L79">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -182,7 +182,7 @@ Specifies the name of the Custom Provider. Changing this forces a new resource t
 The name of the resource group in which to create the Custom Provider.
 
 <h4 class="pdoc-member-header" id="CustomProvider-resourceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L83">property <b>resourceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L83">property <b>resourceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CustomProviderResourceType'>CustomProviderResourceType</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -190,7 +190,7 @@ The name of the resource group in which to create the Custom Provider.
 Any number of `resourceType` block as defined below. One of `resourceType` or `action` must be specified.
 
 <h4 class="pdoc-member-header" id="CustomProvider-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L87">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L87">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -198,7 +198,7 @@ Any number of `resourceType` block as defined below. One of `resourceType` or `a
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="CustomProvider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -207,7 +207,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="CustomProvider-validations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L91">property <b>validations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L91">property <b>validations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>validations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CustomProviderValidation'>CustomProviderValidation</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -215,7 +215,7 @@ deployments.
 Any number of `validation` block as defined below.
 
 <h3 class="pdoc-module-header" id="ResourceGroup" data-link-title="ResourceGroup">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroup.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroup.ts#L29">
         Resource <strong>ResourceGroup</strong>
     </a>
 </h3>
@@ -244,7 +244,7 @@ Resource Groups can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ResourceGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroup.ts#L68"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroup.ts#L68"> <b>constructor</b></a>
 </h4>
 
 
@@ -258,7 +258,7 @@ Create a ResourceGroup resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ResourceGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroup.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroup.ts#L39">method <b>get</b></a>
 </h4>
 
 
@@ -269,14 +269,14 @@ Get an existing ResourceGroup resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ResourceGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroup.ts#L29">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroup.ts#L29">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ResourceGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroup.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroup.ts#L50">method <b>isInstance</b></a>
 </h4>
 
 
@@ -287,7 +287,7 @@ Returns true if the given object is an instance of ResourceGroup.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ResourceGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroup.ts#L29">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroup.ts#L29">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -296,7 +296,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ResourceGroup-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroup.ts#L60">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroup.ts#L60">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -304,7 +304,7 @@ deployments and may be missing (undefined) during planning phases.
 The Azure Region where the Resource Group should exist. Changing this forces a new Resource Group to be created.
 
 <h4 class="pdoc-member-header" id="ResourceGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroup.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroup.ts#L64">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -312,7 +312,7 @@ The Azure Region where the Resource Group should exist. Changing this forces a n
 The Name which should be used for this Resource Group. Changing this forces a new Resource Group to be created.
 
 <h4 class="pdoc-member-header" id="ResourceGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroup.ts#L68">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroup.ts#L68">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -320,7 +320,7 @@ The Name which should be used for this Resource Group. Changing this forces a ne
 A mapping of tags which should be assigned to the Resource Group.
 
 <h4 class="pdoc-member-header" id="ResourceGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroup.ts#L29">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroup.ts#L29">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -329,7 +329,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ResourceGroupTemplateDeployment" data-link-title="ResourceGroupTemplateDeployment">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L54">
         Resource <strong>ResourceGroupTemplateDeployment</strong>
     </a>
 </h3>
@@ -383,7 +383,7 @@ Resource Group Template Deployments can be imported using the `resource id`, e.g
 ```
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeployment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L113"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L113"> <b>constructor</b></a>
 </h4>
 
 
@@ -397,7 +397,7 @@ Create a ResourceGroupTemplateDeployment resource with the given unique name, ar
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeployment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L64">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L64">method <b>get</b></a>
 </h4>
 
 
@@ -408,14 +408,14 @@ Get an existing ResourceGroupTemplateDeployment resource's state with the given 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeployment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L54">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L54">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeployment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L75">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L75">method <b>isInstance</b></a>
 </h4>
 
 
@@ -426,7 +426,7 @@ Returns true if the given object is an instance of ResourceGroupTemplateDeployme
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeployment-debugLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L85">property <b>debugLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L85">property <b>debugLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>debugLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -434,7 +434,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Debug Level which should be used for this Resource Group Template Deployment. Possible values are `none`, `requestContent`, `responseContent` and `requestContent, responseContent`.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeployment-deploymentMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L89">property <b>deploymentMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L89">property <b>deploymentMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deploymentMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -442,7 +442,7 @@ The Debug Level which should be used for this Resource Group Template Deployment
 The Deployment Mode for this Resource Group Template Deployment. Possible values are `Complete` (where resources in the Resource Group not specified in the ARM Template will be destroyed) and `Incremental` (where resources are additive only).
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeployment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L54">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L54">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -451,7 +451,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeployment-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L93">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L93">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -459,7 +459,7 @@ deployments and may be missing (undefined) during planning phases.
 The name which should be used for this Resource Group Template Deployment. Changing this forces a new Resource Group Template Deployment to be created.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeployment-outputContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L97">property <b>outputContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L97">property <b>outputContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>outputContent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -467,7 +467,7 @@ The name which should be used for this Resource Group Template Deployment. Chang
 The JSON Content of the Outputs of the ARM Template Deployment.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeployment-parametersContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L101">property <b>parametersContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L101">property <b>parametersContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parametersContent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -475,7 +475,7 @@ The JSON Content of the Outputs of the ARM Template Deployment.
 The contents of the ARM Template parameters file - containing a JSON list of parameters.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeployment-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L105">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L105">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -483,7 +483,7 @@ The contents of the ARM Template parameters file - containing a JSON list of par
 The name of the Resource Group where the Resource Group Template Deployment should exist. Changing this forces a new Resource Group Template Deployment to be created.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeployment-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L109">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L109">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -491,7 +491,7 @@ The name of the Resource Group where the Resource Group Template Deployment shou
 A mapping of tags which should be assigned to the Resource Group Template Deployment.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeployment-templateContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L113">property <b>templateContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L113">property <b>templateContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateContent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -499,7 +499,7 @@ A mapping of tags which should be assigned to the Resource Group Template Deploy
 The contents of the ARM Template which should be deployed into this Resource Group.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeployment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L54">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L54">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -508,7 +508,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SubscriptionTemplateDeployment" data-link-title="SubscriptionTemplateDeployment">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L45">
         Resource <strong>SubscriptionTemplateDeployment</strong>
     </a>
 </h3>
@@ -553,7 +553,7 @@ Subscription Template Deployments can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeployment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L100"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L100"> <b>constructor</b></a>
 </h4>
 
 
@@ -567,7 +567,7 @@ Create a SubscriptionTemplateDeployment resource with the given unique name, arg
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeployment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L55">method <b>get</b></a>
 </h4>
 
 
@@ -578,14 +578,14 @@ Get an existing SubscriptionTemplateDeployment resource's state with the given n
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeployment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L45">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L45">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeployment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L66">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L66">method <b>isInstance</b></a>
 </h4>
 
 
@@ -596,7 +596,7 @@ Returns true if the given object is an instance of SubscriptionTemplateDeploymen
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeployment-debugLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L76">property <b>debugLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L76">property <b>debugLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>debugLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -604,7 +604,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Debug Level which should be used for this Subscription Template Deployment. Possible values are `none`, `requestContent`, `responseContent` and `requestContent, responseContent`.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeployment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -613,7 +613,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeployment-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L80">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L80">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -621,7 +621,7 @@ deployments and may be missing (undefined) during planning phases.
 The Azure Region where the Subscription Template Deployment should exist. Changing this forces a new Subscription Template Deployment to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeployment-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L84">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L84">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -629,7 +629,7 @@ The Azure Region where the Subscription Template Deployment should exist. Changi
 The name which should be used for this Subscription Template Deployment. Changing this forces a new Subscription Template Deployment to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeployment-outputContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L88">property <b>outputContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L88">property <b>outputContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>outputContent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -637,7 +637,7 @@ The name which should be used for this Subscription Template Deployment. Changin
 The JSON Content of the Outputs of the ARM Template Deployment.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeployment-parametersContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L92">property <b>parametersContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L92">property <b>parametersContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parametersContent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -645,7 +645,7 @@ The JSON Content of the Outputs of the ARM Template Deployment.
 The contents of the ARM Template parameters file - containing a JSON list of parameters.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeployment-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L96">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L96">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -653,7 +653,7 @@ The contents of the ARM Template parameters file - containing a JSON list of par
 A mapping of tags which should be assigned to the Subscription Template Deployment.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeployment-templateContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L100">property <b>templateContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L100">property <b>templateContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateContent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -661,7 +661,7 @@ A mapping of tags which should be assigned to the Subscription Template Deployme
 The contents of the ARM Template which should be deployed into this Subscription.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeployment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L45">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L45">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -670,7 +670,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="TemplateDeployment" data-link-title="TemplateDeployment">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L92">
         Resource <strong>TemplateDeployment</strong>
     </a>
 </h3>
@@ -762,7 +762,7 @@ export const storageAccountName = exampleTemplateDeployment.outputs.storageAccou
 This provider does not know about the individual resources created by Azure using a deployment template and therefore cannot delete these resources during a destroy. Destroying a template deployment removes the associated deployment operations, but will not delete the Azure resources created by the deployment. In order to delete these resources, the containing resource group must also be destroyed. [More information](https://docs.microsoft.com/en-us/rest/api/resources/deployments#Deployments_Delete).
 
 <h4 class="pdoc-member-header" id="TemplateDeployment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L151"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L151"> <b>constructor</b></a>
 </h4>
 
 
@@ -776,7 +776,7 @@ Create a TemplateDeployment resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TemplateDeployment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L102">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L102">method <b>get</b></a>
 </h4>
 
 
@@ -787,14 +787,14 @@ Get an existing TemplateDeployment resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TemplateDeployment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L92">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L92">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TemplateDeployment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L113">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L113">method <b>isInstance</b></a>
 </h4>
 
 
@@ -805,7 +805,7 @@ Returns true if the given object is an instance of TemplateDeployment.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TemplateDeployment-deploymentMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L125">property <b>deploymentMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L125">property <b>deploymentMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deploymentMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -815,7 +815,7 @@ Note that you will almost *always* want this to be set to `Incremental` otherwis
 specified within the template, and this provider will not be aware of this.
 
 <h4 class="pdoc-member-header" id="TemplateDeployment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L92">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L92">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -824,7 +824,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TemplateDeployment-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L130">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L130">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -833,7 +833,7 @@ Specifies the name of the template deployment. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="TemplateDeployment-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L134">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L134">property <b>outputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>outputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -841,7 +841,7 @@ new resource to be created.
 A map of supported scalar output types returned from the deployment (currently, Azure Template Deployment outputs of type String, Int and Bool are supported, and are converted to strings - others will be ignored) and can be accessed using `.outputs["name"]`.
 
 <h4 class="pdoc-member-header" id="TemplateDeployment-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L138">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L138">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -849,7 +849,7 @@ A map of supported scalar output types returned from the deployment (currently, 
 Specifies the name and value pairs that define the deployment parameters for the template.
 
 <h4 class="pdoc-member-header" id="TemplateDeployment-parametersBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L142">property <b>parametersBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L142">property <b>parametersBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parametersBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -857,7 +857,7 @@ Specifies the name and value pairs that define the deployment parameters for the
 Specifies a valid Azure JSON parameters file that define the deployment parameters. It can contain KeyVault references
 
 <h4 class="pdoc-member-header" id="TemplateDeployment-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L147">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L147">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -866,7 +866,7 @@ The name of the resource group in which to
 create the template deployment.
 
 <h4 class="pdoc-member-header" id="TemplateDeployment-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L151">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L151">property <b>templateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -874,7 +874,7 @@ create the template deployment.
 Specifies the JSON definition for the template.
 
 <h4 class="pdoc-member-header" id="TemplateDeployment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L92">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L92">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -885,7 +885,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getClientConfig" data-link-title="getClientConfig">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getClientConfig.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getClientConfig.ts#L21">
         Function <strong>getClientConfig</strong>
     </a>
 </h3>
@@ -907,7 +907,7 @@ export const accountId = current.then(current => current.clientId);
 ```
 
 <h3 class="pdoc-module-header" id="getResourceGroup" data-link-title="getResourceGroup">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getResourceGroup.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getResourceGroup.ts#L23">
         Function <strong>getResourceGroup</strong>
     </a>
 </h3>
@@ -931,7 +931,7 @@ export const id = example.then(example => example.id);
 ```
 
 <h3 class="pdoc-module-header" id="getResources" data-link-title="getResources">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getResources.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getResources.ts#L11">
         Function <strong>getResources</strong>
     </a>
 </h3>
@@ -943,7 +943,7 @@ export const id = example.then(example => example.id);
 Use this data source to access information about existing resources.
 
 <h3 class="pdoc-module-header" id="getSubscription" data-link-title="getSubscription">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getSubscription.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getSubscription.ts#L21">
         Function <strong>getSubscription</strong>
     </a>
 </h3>
@@ -965,7 +965,7 @@ export const currentSubscriptionDisplayName = current.then(current => current.di
 ```
 
 <h3 class="pdoc-module-header" id="getSubscriptions" data-link-title="getSubscriptions">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getSubscriptions.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getSubscriptions.ts#L22">
         Function <strong>getSubscriptions</strong>
     </a>
 </h3>
@@ -988,7 +988,7 @@ export const firstAvailableSubscriptionDisplayName = available.then(available =>
 ```
 
 <h3 class="pdoc-module-header" id="getUserAssignedIdentity" data-link-title="getUserAssignedIdentity">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getUserAssignedIdentity.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getUserAssignedIdentity.ts#L27">
         Function <strong>getUserAssignedIdentity</strong>
     </a>
 </h3>
@@ -1003,7 +1003,7 @@ azure.core.getUserAssignedIdentity has been deprecated in favor of azure.authori
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="CustomProviderArgs" data-link-title="CustomProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L173">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L173">
         interface <strong>CustomProviderArgs</strong>
     </a>
 </h3>
@@ -1013,7 +1013,7 @@ azure.core.getUserAssignedIdentity has been deprecated in favor of azure.authori
 The set of arguments for constructing a CustomProvider resource.
 
 <h4 class="pdoc-member-header" id="CustomProviderArgs-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L177">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L177">property <b>actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CustomProviderAction'>CustomProviderAction</a>&gt;[]&gt;;</code></pre>
@@ -1021,7 +1021,7 @@ The set of arguments for constructing a CustomProvider resource.
 Any number of `action` block as defined below. One of `resourceType` or `action` must be specified.
 
 <h4 class="pdoc-member-header" id="CustomProviderArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L181">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L181">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1029,7 +1029,7 @@ Any number of `action` block as defined below. One of `resourceType` or `action`
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CustomProviderArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L185">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L185">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1037,7 +1037,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Custom Provider. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CustomProviderArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L189">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L189">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1045,7 +1045,7 @@ Specifies the name of the Custom Provider. Changing this forces a new resource t
 The name of the resource group in which to create the Custom Provider.
 
 <h4 class="pdoc-member-header" id="CustomProviderArgs-resourceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L193">property <b>resourceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L193">property <b>resourceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CustomProviderResourceType'>CustomProviderResourceType</a>&gt;[]&gt;;</code></pre>
@@ -1053,7 +1053,7 @@ The name of the resource group in which to create the Custom Provider.
 Any number of `resourceType` block as defined below. One of `resourceType` or `action` must be specified.
 
 <h4 class="pdoc-member-header" id="CustomProviderArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L197">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L197">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1061,7 +1061,7 @@ Any number of `resourceType` block as defined below. One of `resourceType` or `a
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="CustomProviderArgs-validations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L201">property <b>validations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L201">property <b>validations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CustomProviderValidation'>CustomProviderValidation</a>&gt;[]&gt;;</code></pre>
@@ -1069,7 +1069,7 @@ A mapping of tags to assign to the resource.
 Any number of `validation` block as defined below.
 
 <h3 class="pdoc-module-header" id="CustomProviderState" data-link-title="CustomProviderState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L139">
         interface <strong>CustomProviderState</strong>
     </a>
 </h3>
@@ -1079,7 +1079,7 @@ Any number of `validation` block as defined below.
 Input properties used for looking up and filtering CustomProvider resources.
 
 <h4 class="pdoc-member-header" id="CustomProviderState-actions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L143">property <b>actions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L143">property <b>actions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CustomProviderAction'>CustomProviderAction</a>&gt;[]&gt;;</code></pre>
@@ -1087,7 +1087,7 @@ Input properties used for looking up and filtering CustomProvider resources.
 Any number of `action` block as defined below. One of `resourceType` or `action` must be specified.
 
 <h4 class="pdoc-member-header" id="CustomProviderState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L147">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L147">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1095,7 +1095,7 @@ Any number of `action` block as defined below. One of `resourceType` or `action`
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CustomProviderState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L151">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L151">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1103,7 +1103,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Custom Provider. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="CustomProviderState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L155">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L155">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1111,7 +1111,7 @@ Specifies the name of the Custom Provider. Changing this forces a new resource t
 The name of the resource group in which to create the Custom Provider.
 
 <h4 class="pdoc-member-header" id="CustomProviderState-resourceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L159">property <b>resourceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L159">property <b>resourceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CustomProviderResourceType'>CustomProviderResourceType</a>&gt;[]&gt;;</code></pre>
@@ -1119,7 +1119,7 @@ The name of the resource group in which to create the Custom Provider.
 Any number of `resourceType` block as defined below. One of `resourceType` or `action` must be specified.
 
 <h4 class="pdoc-member-header" id="CustomProviderState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L163">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L163">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1127,7 +1127,7 @@ Any number of `resourceType` block as defined below. One of `resourceType` or `a
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="CustomProviderState-validations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/customProvider.ts#L167">property <b>validations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/customProvider.ts#L167">property <b>validations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>validations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CustomProviderValidation'>CustomProviderValidation</a>&gt;[]&gt;;</code></pre>
@@ -1135,7 +1135,7 @@ A mapping of tags to assign to the resource.
 Any number of `validation` block as defined below.
 
 <h3 class="pdoc-module-header" id="GetClientConfigResult" data-link-title="GetClientConfigResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getClientConfig.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getClientConfig.ts#L36">
         interface <strong>GetClientConfigResult</strong>
     </a>
 </h3>
@@ -1145,12 +1145,12 @@ Any number of `validation` block as defined below.
 A collection of values returned by getClientConfig.
 
 <h4 class="pdoc-member-header" id="GetClientConfigResult-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getClientConfig.ts#L37">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getClientConfig.ts#L37">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientConfigResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getClientConfig.ts#L41">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getClientConfig.ts#L41">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1158,22 +1158,22 @@ A collection of values returned by getClientConfig.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetClientConfigResult-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getClientConfig.ts#L42">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getClientConfig.ts#L42">property <b>objectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>objectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientConfigResult-subscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getClientConfig.ts#L43">property <b>subscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getClientConfig.ts#L43">property <b>subscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClientConfigResult-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getClientConfig.ts#L44">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getClientConfig.ts#L44">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetResourceGroupArgs" data-link-title="GetResourceGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getResourceGroup.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getResourceGroup.ts#L39">
         interface <strong>GetResourceGroupArgs</strong>
     </a>
 </h3>
@@ -1183,7 +1183,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getResourceGroup.
 
 <h4 class="pdoc-member-header" id="GetResourceGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getResourceGroup.ts#L43">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getResourceGroup.ts#L43">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1191,7 +1191,7 @@ A collection of arguments for invoking getResourceGroup.
 The Name of this Resource Group.
 
 <h3 class="pdoc-module-header" id="GetResourceGroupResult" data-link-title="GetResourceGroupResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getResourceGroup.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getResourceGroup.ts#L49">
         interface <strong>GetResourceGroupResult</strong>
     </a>
 </h3>
@@ -1201,7 +1201,7 @@ The Name of this Resource Group.
 A collection of values returned by getResourceGroup.
 
 <h4 class="pdoc-member-header" id="GetResourceGroupResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getResourceGroup.ts#L53">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getResourceGroup.ts#L53">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1209,7 +1209,7 @@ A collection of values returned by getResourceGroup.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetResourceGroupResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getResourceGroup.ts#L57">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getResourceGroup.ts#L57">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1217,12 +1217,12 @@ The provider-assigned unique ID for this managed resource.
 The Azure Region where the Resource Group exists.
 
 <h4 class="pdoc-member-header" id="GetResourceGroupResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getResourceGroup.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getResourceGroup.ts#L58">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetResourceGroupResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getResourceGroup.ts#L62">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getResourceGroup.ts#L62">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1230,7 +1230,7 @@ The Azure Region where the Resource Group exists.
 A mapping of tags assigned to the Resource Group.
 
 <h3 class="pdoc-module-header" id="GetResourcesArgs" data-link-title="GetResourcesArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getResources.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getResources.ts#L31">
         interface <strong>GetResourcesArgs</strong>
     </a>
 </h3>
@@ -1240,7 +1240,7 @@ A mapping of tags assigned to the Resource Group.
 A collection of arguments for invoking getResources.
 
 <h4 class="pdoc-member-header" id="GetResourcesArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getResources.ts#L35">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getResources.ts#L35">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1248,7 +1248,7 @@ A collection of arguments for invoking getResources.
 The name of the Resource.
 
 <h4 class="pdoc-member-header" id="GetResourcesArgs-requiredTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getResources.ts#L39">property <b>requiredTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getResources.ts#L39">property <b>requiredTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requiredTags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1256,7 +1256,7 @@ The name of the Resource.
 A mapping of tags which the resource has to have in order to be included in the result.
 
 <h4 class="pdoc-member-header" id="GetResourcesArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getResources.ts#L43">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getResources.ts#L43">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1264,7 +1264,7 @@ A mapping of tags which the resource has to have in order to be included in the 
 The name of the Resource group where the Resources are located.
 
 <h4 class="pdoc-member-header" id="GetResourcesArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getResources.ts#L47">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getResources.ts#L47">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1272,7 +1272,7 @@ The name of the Resource group where the Resources are located.
 The Resource Type of the Resources you want to list (e.g. `Microsoft.Network/virtualNetworks`). A full list of available Resource Types can be found [here](https://docs.microsoft.com/en-us/azure/azure-resource-manager/azure-services-resource-providers).
 
 <h3 class="pdoc-module-header" id="GetResourcesResult" data-link-title="GetResourcesResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getResources.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getResources.ts#L53">
         interface <strong>GetResourcesResult</strong>
     </a>
 </h3>
@@ -1282,7 +1282,7 @@ The Resource Type of the Resources you want to list (e.g. `Microsoft.Network/vir
 A collection of values returned by getResources.
 
 <h4 class="pdoc-member-header" id="GetResourcesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getResources.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getResources.ts#L57">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1290,7 +1290,7 @@ A collection of values returned by getResources.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetResourcesResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getResources.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getResources.ts#L61">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1298,17 +1298,17 @@ The provider-assigned unique ID for this managed resource.
 The name of this Resource.
 
 <h4 class="pdoc-member-header" id="GetResourcesResult-requiredTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getResources.ts#L62">property <b>requiredTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getResources.ts#L62">property <b>requiredTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requiredTags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetResourcesResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getResources.ts#L63">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getResources.ts#L63">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetResourcesResult-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getResources.ts#L67">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getResources.ts#L67">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetResourcesResource'>GetResourcesResource</a>[];</code></pre>
@@ -1316,7 +1316,7 @@ The name of this Resource.
 One or more `resource` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="GetResourcesResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getResources.ts#L71">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getResources.ts#L71">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1324,7 +1324,7 @@ One or more `resource` blocks as defined below.
 The type of this Resource. (e.g. `Microsoft.Network/virtualNetworks`).
 
 <h3 class="pdoc-module-header" id="getServiceClientCredentials" data-link-title="getServiceClientCredentials">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/zMixins.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/zMixins.ts#L24">
         function <strong>getServiceClientCredentials</strong>
     </a>
 </h3>
@@ -1337,7 +1337,7 @@ Obtain credentials to query Azure Management API. Depending on the environment c
 are either based on MSI, a service principal, or Azure CLI user credentials.
 
 <h3 class="pdoc-module-header" id="GetSubscriptionArgs" data-link-title="GetSubscriptionArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getSubscription.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getSubscription.ts#L38">
         interface <strong>GetSubscriptionArgs</strong>
     </a>
 </h3>
@@ -1347,7 +1347,7 @@ are either based on MSI, a service principal, or Azure CLI user credentials.
 A collection of arguments for invoking getSubscription.
 
 <h4 class="pdoc-member-header" id="GetSubscriptionArgs-subscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getSubscription.ts#L42">property <b>subscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getSubscription.ts#L42">property <b>subscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1355,7 +1355,7 @@ A collection of arguments for invoking getSubscription.
 Specifies the ID of the subscription. If this argument is omitted, the subscription ID of the current Azure Resource Manager provider is used.
 
 <h3 class="pdoc-module-header" id="GetSubscriptionResult" data-link-title="GetSubscriptionResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getSubscription.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getSubscription.ts#L48">
         interface <strong>GetSubscriptionResult</strong>
     </a>
 </h3>
@@ -1365,7 +1365,7 @@ Specifies the ID of the subscription. If this argument is omitted, the subscript
 A collection of values returned by getSubscription.
 
 <h4 class="pdoc-member-header" id="GetSubscriptionResult-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getSubscription.ts#L52">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getSubscription.ts#L52">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1373,7 +1373,7 @@ A collection of values returned by getSubscription.
 The subscription display name.
 
 <h4 class="pdoc-member-header" id="GetSubscriptionResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getSubscription.ts#L56">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getSubscription.ts#L56">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1381,7 +1381,7 @@ The subscription display name.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSubscriptionResult-locationPlacementId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getSubscription.ts#L60">property <b>locationPlacementId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getSubscription.ts#L60">property <b>locationPlacementId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>locationPlacementId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1389,7 +1389,7 @@ The provider-assigned unique ID for this managed resource.
 The subscription location placement ID.
 
 <h4 class="pdoc-member-header" id="GetSubscriptionResult-quotaId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getSubscription.ts#L64">property <b>quotaId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getSubscription.ts#L64">property <b>quotaId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>quotaId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1397,7 +1397,7 @@ The subscription location placement ID.
 The subscription quota ID.
 
 <h4 class="pdoc-member-header" id="GetSubscriptionResult-spendingLimit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getSubscription.ts#L68">property <b>spendingLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getSubscription.ts#L68">property <b>spendingLimit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spendingLimit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1405,7 +1405,7 @@ The subscription quota ID.
 The subscription spending limit.
 
 <h4 class="pdoc-member-header" id="GetSubscriptionResult-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getSubscription.ts#L72">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getSubscription.ts#L72">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1413,7 +1413,7 @@ The subscription spending limit.
 The subscription state. Possible values are Enabled, Warned, PastDue, Disabled, and Deleted.
 
 <h4 class="pdoc-member-header" id="GetSubscriptionResult-subscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getSubscription.ts#L76">property <b>subscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getSubscription.ts#L76">property <b>subscriptionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1421,7 +1421,7 @@ The subscription state. Possible values are Enabled, Warned, PastDue, Disabled, 
 The subscription GUID.
 
 <h4 class="pdoc-member-header" id="GetSubscriptionResult-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getSubscription.ts#L80">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getSubscription.ts#L80">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1429,7 +1429,7 @@ The subscription GUID.
 The subscription tenant ID.
 
 <h3 class="pdoc-module-header" id="GetSubscriptionsArgs" data-link-title="GetSubscriptionsArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getSubscriptions.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getSubscriptions.ts#L40">
         interface <strong>GetSubscriptionsArgs</strong>
     </a>
 </h3>
@@ -1439,7 +1439,7 @@ The subscription tenant ID.
 A collection of arguments for invoking getSubscriptions.
 
 <h4 class="pdoc-member-header" id="GetSubscriptionsArgs-displayNameContains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getSubscriptions.ts#L44">property <b>displayNameContains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getSubscriptions.ts#L44">property <b>displayNameContains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayNameContains?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1447,7 +1447,7 @@ A collection of arguments for invoking getSubscriptions.
 A case-insensitive value which must be contained within the `displayName` field, used to filter the results
 
 <h4 class="pdoc-member-header" id="GetSubscriptionsArgs-displayNamePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getSubscriptions.ts#L48">property <b>displayNamePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getSubscriptions.ts#L48">property <b>displayNamePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayNamePrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1455,7 +1455,7 @@ A case-insensitive value which must be contained within the `displayName` field,
 A case-insensitive prefix which can be used to filter on the `displayName` field
 
 <h3 class="pdoc-module-header" id="GetSubscriptionsResult" data-link-title="GetSubscriptionsResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getSubscriptions.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getSubscriptions.ts#L54">
         interface <strong>GetSubscriptionsResult</strong>
     </a>
 </h3>
@@ -1465,17 +1465,17 @@ A case-insensitive prefix which can be used to filter on the `displayName` field
 A collection of values returned by getSubscriptions.
 
 <h4 class="pdoc-member-header" id="GetSubscriptionsResult-displayNameContains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getSubscriptions.ts#L55">property <b>displayNameContains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getSubscriptions.ts#L55">property <b>displayNameContains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayNameContains?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSubscriptionsResult-displayNamePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getSubscriptions.ts#L56">property <b>displayNamePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getSubscriptions.ts#L56">property <b>displayNamePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayNamePrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSubscriptionsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getSubscriptions.ts#L60">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getSubscriptions.ts#L60">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1483,7 +1483,7 @@ A collection of values returned by getSubscriptions.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSubscriptionsResult-subscriptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getSubscriptions.ts#L64">property <b>subscriptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getSubscriptions.ts#L64">property <b>subscriptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetSubscriptionsSubscription'>GetSubscriptionsSubscription</a>[];</code></pre>
@@ -1491,7 +1491,7 @@ The provider-assigned unique ID for this managed resource.
 One or more `subscription` blocks as defined below.
 
 <h3 class="pdoc-module-header" id="GetUserAssignedIdentityArgs" data-link-title="GetUserAssignedIdentityArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getUserAssignedIdentity.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getUserAssignedIdentity.ts#L45">
         interface <strong>GetUserAssignedIdentityArgs</strong>
     </a>
 </h3>
@@ -1501,7 +1501,7 @@ One or more `subscription` blocks as defined below.
 A collection of arguments for invoking getUserAssignedIdentity.
 
 <h4 class="pdoc-member-header" id="GetUserAssignedIdentityArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getUserAssignedIdentity.ts#L49">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getUserAssignedIdentity.ts#L49">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1509,7 +1509,7 @@ A collection of arguments for invoking getUserAssignedIdentity.
 The name of the User Assigned Identity.
 
 <h4 class="pdoc-member-header" id="GetUserAssignedIdentityArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getUserAssignedIdentity.ts#L53">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getUserAssignedIdentity.ts#L53">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1517,7 +1517,7 @@ The name of the User Assigned Identity.
 The name of the Resource Group in which the User Assigned Identity exists.
 
 <h3 class="pdoc-module-header" id="GetUserAssignedIdentityResult" data-link-title="GetUserAssignedIdentityResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getUserAssignedIdentity.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getUserAssignedIdentity.ts#L59">
         interface <strong>GetUserAssignedIdentityResult</strong>
     </a>
 </h3>
@@ -1527,7 +1527,7 @@ The name of the Resource Group in which the User Assigned Identity exists.
 A collection of values returned by getUserAssignedIdentity.
 
 <h4 class="pdoc-member-header" id="GetUserAssignedIdentityResult-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getUserAssignedIdentity.ts#L63">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getUserAssignedIdentity.ts#L63">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1535,7 +1535,7 @@ A collection of values returned by getUserAssignedIdentity.
 The Client ID of the User Assigned Identity.
 
 <h4 class="pdoc-member-header" id="GetUserAssignedIdentityResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getUserAssignedIdentity.ts#L67">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getUserAssignedIdentity.ts#L67">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1543,7 +1543,7 @@ The Client ID of the User Assigned Identity.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetUserAssignedIdentityResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getUserAssignedIdentity.ts#L71">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getUserAssignedIdentity.ts#L71">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1551,12 +1551,12 @@ The provider-assigned unique ID for this managed resource.
 The Azure location where the User Assigned Identity exists.
 
 <h4 class="pdoc-member-header" id="GetUserAssignedIdentityResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getUserAssignedIdentity.ts#L72">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getUserAssignedIdentity.ts#L72">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetUserAssignedIdentityResult-principalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getUserAssignedIdentity.ts#L76">property <b>principalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getUserAssignedIdentity.ts#L76">property <b>principalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principalId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1564,12 +1564,12 @@ The Azure location where the User Assigned Identity exists.
 The Service Principal ID of the User Assigned Identity.
 
 <h4 class="pdoc-member-header" id="GetUserAssignedIdentityResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getUserAssignedIdentity.ts#L77">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getUserAssignedIdentity.ts#L77">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetUserAssignedIdentityResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/getUserAssignedIdentity.ts#L81">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/getUserAssignedIdentity.ts#L81">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1577,7 +1577,7 @@ The Service Principal ID of the User Assigned Identity.
 A mapping of tags assigned to the User Assigned Identity.
 
 <h3 class="pdoc-module-header" id="ResourceGroupArgs" data-link-title="ResourceGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroup.ts#L123">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroup.ts#L123">
         interface <strong>ResourceGroupArgs</strong>
     </a>
 </h3>
@@ -1587,7 +1587,7 @@ A mapping of tags assigned to the User Assigned Identity.
 The set of arguments for constructing a ResourceGroup resource.
 
 <h4 class="pdoc-member-header" id="ResourceGroupArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroup.ts#L127">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroup.ts#L127">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1595,7 +1595,7 @@ The set of arguments for constructing a ResourceGroup resource.
 The Azure Region where the Resource Group should exist. Changing this forces a new Resource Group to be created.
 
 <h4 class="pdoc-member-header" id="ResourceGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroup.ts#L131">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroup.ts#L131">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1603,7 +1603,7 @@ The Azure Region where the Resource Group should exist. Changing this forces a n
 The Name which should be used for this Resource Group. Changing this forces a new Resource Group to be created.
 
 <h4 class="pdoc-member-header" id="ResourceGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroup.ts#L135">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroup.ts#L135">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1611,7 +1611,7 @@ The Name which should be used for this Resource Group. Changing this forces a ne
 A mapping of tags which should be assigned to the Resource Group.
 
 <h3 class="pdoc-module-header" id="ResourceGroupState" data-link-title="ResourceGroupState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroup.ts#L105">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroup.ts#L105">
         interface <strong>ResourceGroupState</strong>
     </a>
 </h3>
@@ -1621,7 +1621,7 @@ A mapping of tags which should be assigned to the Resource Group.
 Input properties used for looking up and filtering ResourceGroup resources.
 
 <h4 class="pdoc-member-header" id="ResourceGroupState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroup.ts#L109">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroup.ts#L109">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1629,7 +1629,7 @@ Input properties used for looking up and filtering ResourceGroup resources.
 The Azure Region where the Resource Group should exist. Changing this forces a new Resource Group to be created.
 
 <h4 class="pdoc-member-header" id="ResourceGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroup.ts#L113">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroup.ts#L113">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1637,7 +1637,7 @@ The Azure Region where the Resource Group should exist. Changing this forces a n
 The Name which should be used for this Resource Group. Changing this forces a new Resource Group to be created.
 
 <h4 class="pdoc-member-header" id="ResourceGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroup.ts#L117">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroup.ts#L117">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1645,7 +1645,7 @@ The Name which should be used for this Resource Group. Changing this forces a ne
 A mapping of tags which should be assigned to the Resource Group.
 
 <h3 class="pdoc-module-header" id="ResourceGroupTemplateDeploymentArgs" data-link-title="ResourceGroupTemplateDeploymentArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L207">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L207">
         interface <strong>ResourceGroupTemplateDeploymentArgs</strong>
     </a>
 </h3>
@@ -1655,7 +1655,7 @@ A mapping of tags which should be assigned to the Resource Group.
 The set of arguments for constructing a ResourceGroupTemplateDeployment resource.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeploymentArgs-debugLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L211">property <b>debugLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L211">property <b>debugLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>debugLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1663,7 +1663,7 @@ The set of arguments for constructing a ResourceGroupTemplateDeployment resource
 The Debug Level which should be used for this Resource Group Template Deployment. Possible values are `none`, `requestContent`, `responseContent` and `requestContent, responseContent`.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeploymentArgs-deploymentMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L215">property <b>deploymentMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L215">property <b>deploymentMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1671,7 +1671,7 @@ The Debug Level which should be used for this Resource Group Template Deployment
 The Deployment Mode for this Resource Group Template Deployment. Possible values are `Complete` (where resources in the Resource Group not specified in the ARM Template will be destroyed) and `Incremental` (where resources are additive only).
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeploymentArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L219">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L219">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1679,7 +1679,7 @@ The Deployment Mode for this Resource Group Template Deployment. Possible values
 The name which should be used for this Resource Group Template Deployment. Changing this forces a new Resource Group Template Deployment to be created.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeploymentArgs-parametersContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L223">property <b>parametersContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L223">property <b>parametersContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parametersContent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1687,7 +1687,7 @@ The name which should be used for this Resource Group Template Deployment. Chang
 The contents of the ARM Template parameters file - containing a JSON list of parameters.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeploymentArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L227">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L227">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1695,7 +1695,7 @@ The contents of the ARM Template parameters file - containing a JSON list of par
 The name of the Resource Group where the Resource Group Template Deployment should exist. Changing this forces a new Resource Group Template Deployment to be created.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeploymentArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L231">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L231">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1703,7 +1703,7 @@ The name of the Resource Group where the Resource Group Template Deployment shou
 A mapping of tags which should be assigned to the Resource Group Template Deployment.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeploymentArgs-templateContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L235">property <b>templateContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L235">property <b>templateContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateContent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1711,7 +1711,7 @@ A mapping of tags which should be assigned to the Resource Group Template Deploy
 The contents of the ARM Template which should be deployed into this Resource Group.
 
 <h3 class="pdoc-module-header" id="ResourceGroupTemplateDeploymentState" data-link-title="ResourceGroupTemplateDeploymentState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L169">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L169">
         interface <strong>ResourceGroupTemplateDeploymentState</strong>
     </a>
 </h3>
@@ -1721,7 +1721,7 @@ The contents of the ARM Template which should be deployed into this Resource Gro
 Input properties used for looking up and filtering ResourceGroupTemplateDeployment resources.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeploymentState-debugLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L173">property <b>debugLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L173">property <b>debugLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>debugLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1729,7 +1729,7 @@ Input properties used for looking up and filtering ResourceGroupTemplateDeployme
 The Debug Level which should be used for this Resource Group Template Deployment. Possible values are `none`, `requestContent`, `responseContent` and `requestContent, responseContent`.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeploymentState-deploymentMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L177">property <b>deploymentMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L177">property <b>deploymentMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1737,7 +1737,7 @@ The Debug Level which should be used for this Resource Group Template Deployment
 The Deployment Mode for this Resource Group Template Deployment. Possible values are `Complete` (where resources in the Resource Group not specified in the ARM Template will be destroyed) and `Incremental` (where resources are additive only).
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeploymentState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L181">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L181">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1745,7 +1745,7 @@ The Deployment Mode for this Resource Group Template Deployment. Possible values
 The name which should be used for this Resource Group Template Deployment. Changing this forces a new Resource Group Template Deployment to be created.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeploymentState-outputContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L185">property <b>outputContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L185">property <b>outputContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputContent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1753,7 +1753,7 @@ The name which should be used for this Resource Group Template Deployment. Chang
 The JSON Content of the Outputs of the ARM Template Deployment.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeploymentState-parametersContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L189">property <b>parametersContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L189">property <b>parametersContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parametersContent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1761,7 +1761,7 @@ The JSON Content of the Outputs of the ARM Template Deployment.
 The contents of the ARM Template parameters file - containing a JSON list of parameters.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeploymentState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L193">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L193">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1769,7 +1769,7 @@ The contents of the ARM Template parameters file - containing a JSON list of par
 The name of the Resource Group where the Resource Group Template Deployment should exist. Changing this forces a new Resource Group Template Deployment to be created.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeploymentState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L197">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L197">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1777,7 +1777,7 @@ The name of the Resource Group where the Resource Group Template Deployment shou
 A mapping of tags which should be assigned to the Resource Group Template Deployment.
 
 <h4 class="pdoc-member-header" id="ResourceGroupTemplateDeploymentState-templateContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L201">property <b>templateContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/resourceGroupTemplateDeployment.ts#L201">property <b>templateContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateContent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1785,7 +1785,7 @@ A mapping of tags which should be assigned to the Resource Group Template Deploy
 The contents of the ARM Template which should be deployed into this Resource Group.
 
 <h3 class="pdoc-module-header" id="SubscriptionTemplateDeploymentArgs" data-link-title="SubscriptionTemplateDeploymentArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L182">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L182">
         interface <strong>SubscriptionTemplateDeploymentArgs</strong>
     </a>
 </h3>
@@ -1795,7 +1795,7 @@ The contents of the ARM Template which should be deployed into this Resource Gro
 The set of arguments for constructing a SubscriptionTemplateDeployment resource.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeploymentArgs-debugLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L186">property <b>debugLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L186">property <b>debugLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>debugLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1803,7 +1803,7 @@ The set of arguments for constructing a SubscriptionTemplateDeployment resource.
 The Debug Level which should be used for this Subscription Template Deployment. Possible values are `none`, `requestContent`, `responseContent` and `requestContent, responseContent`.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeploymentArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L190">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L190">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1811,7 +1811,7 @@ The Debug Level which should be used for this Subscription Template Deployment. 
 The Azure Region where the Subscription Template Deployment should exist. Changing this forces a new Subscription Template Deployment to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeploymentArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L194">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L194">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1819,7 +1819,7 @@ The Azure Region where the Subscription Template Deployment should exist. Changi
 The name which should be used for this Subscription Template Deployment. Changing this forces a new Subscription Template Deployment to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeploymentArgs-parametersContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L198">property <b>parametersContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L198">property <b>parametersContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parametersContent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1827,7 +1827,7 @@ The name which should be used for this Subscription Template Deployment. Changin
 The contents of the ARM Template parameters file - containing a JSON list of parameters.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeploymentArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L202">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L202">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1835,7 +1835,7 @@ The contents of the ARM Template parameters file - containing a JSON list of par
 A mapping of tags which should be assigned to the Subscription Template Deployment.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeploymentArgs-templateContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L206">property <b>templateContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L206">property <b>templateContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateContent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1843,7 +1843,7 @@ A mapping of tags which should be assigned to the Subscription Template Deployme
 The contents of the ARM Template which should be deployed into this Subscription.
 
 <h3 class="pdoc-module-header" id="SubscriptionTemplateDeploymentState" data-link-title="SubscriptionTemplateDeploymentState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L148">
         interface <strong>SubscriptionTemplateDeploymentState</strong>
     </a>
 </h3>
@@ -1853,7 +1853,7 @@ The contents of the ARM Template which should be deployed into this Subscription
 Input properties used for looking up and filtering SubscriptionTemplateDeployment resources.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeploymentState-debugLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L152">property <b>debugLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L152">property <b>debugLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>debugLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1861,7 +1861,7 @@ Input properties used for looking up and filtering SubscriptionTemplateDeploymen
 The Debug Level which should be used for this Subscription Template Deployment. Possible values are `none`, `requestContent`, `responseContent` and `requestContent, responseContent`.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeploymentState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L156">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L156">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1869,7 +1869,7 @@ The Debug Level which should be used for this Subscription Template Deployment. 
 The Azure Region where the Subscription Template Deployment should exist. Changing this forces a new Subscription Template Deployment to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeploymentState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L160">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L160">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1877,7 +1877,7 @@ The Azure Region where the Subscription Template Deployment should exist. Changi
 The name which should be used for this Subscription Template Deployment. Changing this forces a new Subscription Template Deployment to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeploymentState-outputContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L164">property <b>outputContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L164">property <b>outputContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputContent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1885,7 +1885,7 @@ The name which should be used for this Subscription Template Deployment. Changin
 The JSON Content of the Outputs of the ARM Template Deployment.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeploymentState-parametersContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L168">property <b>parametersContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L168">property <b>parametersContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parametersContent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1893,7 +1893,7 @@ The JSON Content of the Outputs of the ARM Template Deployment.
 The contents of the ARM Template parameters file - containing a JSON list of parameters.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeploymentState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L172">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L172">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1901,7 +1901,7 @@ The contents of the ARM Template parameters file - containing a JSON list of par
 A mapping of tags which should be assigned to the Subscription Template Deployment.
 
 <h4 class="pdoc-member-header" id="SubscriptionTemplateDeploymentState-templateContent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L176">property <b>templateContent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/subscriptionTemplateDeployment.ts#L176">property <b>templateContent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateContent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1909,7 +1909,7 @@ A mapping of tags which should be assigned to the Subscription Template Deployme
 The contents of the ARM Template which should be deployed into this Subscription.
 
 <h3 class="pdoc-module-header" id="TemplateDeploymentArgs" data-link-title="TemplateDeploymentArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L240">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L240">
         interface <strong>TemplateDeploymentArgs</strong>
     </a>
 </h3>
@@ -1919,7 +1919,7 @@ The contents of the ARM Template which should be deployed into this Subscription
 The set of arguments for constructing a TemplateDeployment resource.
 
 <h4 class="pdoc-member-header" id="TemplateDeploymentArgs-deploymentMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L246">property <b>deploymentMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L246">property <b>deploymentMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1929,7 +1929,7 @@ Note that you will almost *always* want this to be set to `Incremental` otherwis
 specified within the template, and this provider will not be aware of this.
 
 <h4 class="pdoc-member-header" id="TemplateDeploymentArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L251">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L251">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1938,7 +1938,7 @@ Specifies the name of the template deployment. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="TemplateDeploymentArgs-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L255">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L255">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1946,7 +1946,7 @@ new resource to be created.
 Specifies the name and value pairs that define the deployment parameters for the template.
 
 <h4 class="pdoc-member-header" id="TemplateDeploymentArgs-parametersBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L259">property <b>parametersBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L259">property <b>parametersBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parametersBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1954,7 +1954,7 @@ Specifies the name and value pairs that define the deployment parameters for the
 Specifies a valid Azure JSON parameters file that define the deployment parameters. It can contain KeyVault references
 
 <h4 class="pdoc-member-header" id="TemplateDeploymentArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L264">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L264">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1963,7 +1963,7 @@ The name of the resource group in which to
 create the template deployment.
 
 <h4 class="pdoc-member-header" id="TemplateDeploymentArgs-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L268">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L268">property <b>templateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1971,7 +1971,7 @@ create the template deployment.
 Specifies the JSON definition for the template.
 
 <h3 class="pdoc-module-header" id="TemplateDeploymentState" data-link-title="TemplateDeploymentState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L202">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L202">
         interface <strong>TemplateDeploymentState</strong>
     </a>
 </h3>
@@ -1981,7 +1981,7 @@ Specifies the JSON definition for the template.
 Input properties used for looking up and filtering TemplateDeployment resources.
 
 <h4 class="pdoc-member-header" id="TemplateDeploymentState-deploymentMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L208">property <b>deploymentMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L208">property <b>deploymentMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1991,7 +1991,7 @@ Note that you will almost *always* want this to be set to `Incremental` otherwis
 specified within the template, and this provider will not be aware of this.
 
 <h4 class="pdoc-member-header" id="TemplateDeploymentState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L213">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L213">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2000,7 +2000,7 @@ Specifies the name of the template deployment. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="TemplateDeploymentState-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L217">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L217">property <b>outputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2008,7 +2008,7 @@ new resource to be created.
 A map of supported scalar output types returned from the deployment (currently, Azure Template Deployment outputs of type String, Int and Bool are supported, and are converted to strings - others will be ignored) and can be accessed using `.outputs["name"]`.
 
 <h4 class="pdoc-member-header" id="TemplateDeploymentState-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L221">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L221">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2016,7 +2016,7 @@ A map of supported scalar output types returned from the deployment (currently, 
 Specifies the name and value pairs that define the deployment parameters for the template.
 
 <h4 class="pdoc-member-header" id="TemplateDeploymentState-parametersBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L225">property <b>parametersBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L225">property <b>parametersBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parametersBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2024,7 +2024,7 @@ Specifies the name and value pairs that define the deployment parameters for the
 Specifies a valid Azure JSON parameters file that define the deployment parameters. It can contain KeyVault references
 
 <h4 class="pdoc-member-header" id="TemplateDeploymentState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L230">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L230">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2033,7 +2033,7 @@ The name of the resource group in which to
 create the template deployment.
 
 <h4 class="pdoc-member-header" id="TemplateDeploymentState-templateBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/core/templateDeployment.ts#L234">property <b>templateBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/core/templateDeployment.ts#L234">property <b>templateBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

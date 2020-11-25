@@ -3673,7 +3673,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Is HTTP Application Routing Enabled? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Is HTTP Application Routing Enabled?
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3702,7 +3702,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Is HTTP Application Routing Enabled? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Is HTTP Application Routing Enabled?
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3731,7 +3731,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Is HTTP Application Routing Enabled? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Is HTTP Application Routing Enabled?
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3760,7 +3760,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Is HTTP Application Routing Enabled? Changing this forces a new resource to be created.
+    <dd>{{% md %}}Is HTTP Application Routing Enabled?
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4750,7 +4750,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of nodes which should exist in this Node Pool. If specified this must be between `1` and `100`.
+    <dd>{{% md %}}The maximum number of nodes which should exist in this Node Pool. If specified this must be between `1` and `1000`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4772,7 +4772,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The minimum number of nodes which should exist in this Node Pool. If specified this must be between `1` and `100`.
+    <dd>{{% md %}}The minimum number of nodes which should exist in this Node Pool. If specified this must be between `1` and `1000`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4783,7 +4783,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The initial number of nodes which should exist in this Node Pool. If specified this must be between `1` and `100` and between `min_count` and `max_count`.
+    <dd>{{% md %}}The initial number of nodes which should exist in this Node Pool. If specified this must be between `1` and `1000` and between `min_count` and `max_count`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4828,6 +4828,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The size of the OS Disk which should be used for each agent in the Node Pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="osdisktype_csharp">
+<a href="#osdisktype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4942,7 +4952,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of nodes which should exist in this Node Pool. If specified this must be between `1` and `100`.
+    <dd>{{% md %}}The maximum number of nodes which should exist in this Node Pool. If specified this must be between `1` and `1000`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4964,7 +4974,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The minimum number of nodes which should exist in this Node Pool. If specified this must be between `1` and `100`.
+    <dd>{{% md %}}The minimum number of nodes which should exist in this Node Pool. If specified this must be between `1` and `1000`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4975,7 +4985,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The initial number of nodes which should exist in this Node Pool. If specified this must be between `1` and `100` and between `min_count` and `max_count`.
+    <dd>{{% md %}}The initial number of nodes which should exist in this Node Pool. If specified this must be between `1` and `1000` and between `min_count` and `max_count`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5020,6 +5030,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The size of the OS Disk which should be used for each agent in the Node Pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="osdisktype_go">
+<a href="#osdisktype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disk<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5134,7 +5154,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of nodes which should exist in this Node Pool. If specified this must be between `1` and `100`.
+    <dd>{{% md %}}The maximum number of nodes which should exist in this Node Pool. If specified this must be between `1` and `1000`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5156,7 +5176,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The minimum number of nodes which should exist in this Node Pool. If specified this must be between `1` and `100`.
+    <dd>{{% md %}}The minimum number of nodes which should exist in this Node Pool. If specified this must be between `1` and `1000`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5167,7 +5187,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The initial number of nodes which should exist in this Node Pool. If specified this must be between `1` and `100` and between `min_count` and `max_count`.
+    <dd>{{% md %}}The initial number of nodes which should exist in this Node Pool. If specified this must be between `1` and `1000` and between `min_count` and `max_count`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5212,6 +5232,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The size of the OS Disk which should be used for each agent in the Node Pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="osdisktype_nodejs">
+<a href="#osdisktype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Disk<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5326,7 +5356,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum number of nodes which should exist in this Node Pool. If specified this must be between `1` and `100`.
+    <dd>{{% md %}}The maximum number of nodes which should exist in this Node Pool. If specified this must be between `1` and `1000`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5348,7 +5378,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The minimum number of nodes which should exist in this Node Pool. If specified this must be between `1` and `100`.
+    <dd>{{% md %}}The minimum number of nodes which should exist in this Node Pool. If specified this must be between `1` and `1000`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5359,7 +5389,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The initial number of nodes which should exist in this Node Pool. If specified this must be between `1` and `100` and between `min_count` and `max_count`.
+    <dd>{{% md %}}The initial number of nodes which should exist in this Node Pool. If specified this must be between `1` and `1000` and between `min_count` and `max_count`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5404,6 +5434,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The size of the OS Disk which should be used for each agent in the Node Pool. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="os_disk_type_python">
+<a href="#os_disk_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disk_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">

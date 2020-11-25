@@ -31,7 +31,7 @@ Explore the resources and functions of the notificationhub module in the Azure p
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.31.1</dd>
+	<dd>3.32.0</dd>
 </dl>
 
 

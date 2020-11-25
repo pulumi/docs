@@ -58,6 +58,7 @@ Explore the resources and functions of the network module in the Azure package.
     <li><a href="trafficmanagerprofile" title="TrafficManagerProfile"><span class="symbol resource"></span>TrafficManagerProfile</a></li>
     <li><a href="virtualhub" title="VirtualHub"><span class="symbol resource"></span>VirtualHub</a></li>
     <li><a href="virtualhubconnection" title="VirtualHubConnection"><span class="symbol resource"></span>VirtualHubConnection</a></li>
+    <li><a href="virtualhubip" title="VirtualHubIp"><span class="symbol resource"></span>VirtualHubIp</a></li>
     <li><a href="virtualhubroutetable" title="VirtualHubRouteTable"><span class="symbol resource"></span>VirtualHubRouteTable</a></li>
     <li><a href="virtualnetwork" title="VirtualNetwork"><span class="symbol resource"></span>VirtualNetwork</a></li>
     <li><a href="virtualnetworkgateway" title="VirtualNetworkGateway"><span class="symbol resource"></span>VirtualNetworkGateway</a></li>
@@ -65,6 +66,7 @@ Explore the resources and functions of the network module in the Azure package.
     <li><a href="virtualnetworkpeering" title="VirtualNetworkPeering"><span class="symbol resource"></span>VirtualNetworkPeering</a></li>
     <li><a href="virtualwan" title="VirtualWan"><span class="symbol resource"></span>VirtualWan</a></li>
     <li><a href="vpngateway" title="VpnGateway"><span class="symbol resource"></span>VpnGateway</a></li>
+    <li><a href="vpngatewayconnection" title="VpnGatewayConnection"><span class="symbol resource"></span>VpnGatewayConnection</a></li>
     <li><a href="vpnserverconfiguration" title="VpnServerConfiguration"><span class="symbol resource"></span>VpnServerConfiguration</a></li>
     <li><a href="vpnsite" title="VpnSite"><span class="symbol resource"></span>VpnSite</a></li>
 </ul>
@@ -105,7 +107,7 @@ Explore the resources and functions of the network module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.31.1</dd>
+	<dd>3.32.0</dd>
 </dl>
 
 

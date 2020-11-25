@@ -3,7 +3,7 @@ title: "Module servicebus"
 title_tag: "Module servicebus | Package @pulumi/azure | Node.js SDK"
 linktitle: "servicebus"
 meta_desc: "Explore members of the servicebus module in the @pulumi/azure package."
-git_sha: "1e6e272729ef317dfcecf40b50c7ce26be8e27d6"
+git_sha: "296b76e1815ddb3226b7dfa36220f7faca9a0b4d"
 block_external_search_index: true
 ---
 
@@ -33,6 +33,7 @@ block_external_search_index: true
     <li><a href="#getNamespace"><span class="symbol function"></span>getNamespace</a></li>
     <li><a href="#getNamespaceAuthorizationRule"><span class="symbol function"></span>getNamespaceAuthorizationRule</a></li>
     <li><a href="#getQueueAuthorizationRule"><span class="symbol function"></span>getQueueAuthorizationRule</a></li>
+    <li><a href="#getSubscription"><span class="symbol function"></span>getSubscription</a></li>
     <li><a href="#getTopicAuthorizationRule"><span class="symbol function"></span>getTopicAuthorizationRule</a></li>
 </ul>
 
@@ -44,6 +45,8 @@ block_external_search_index: true
     <li><a href="#GetNamespaceResult"><span class="symbol api"></span>GetNamespaceResult</a></li>
     <li><a href="#GetQueueAuthorizationRuleArgs"><span class="symbol api"></span>GetQueueAuthorizationRuleArgs</a></li>
     <li><a href="#GetQueueAuthorizationRuleResult"><span class="symbol api"></span>GetQueueAuthorizationRuleResult</a></li>
+    <li><a href="#GetSubscriptionArgs"><span class="symbol api"></span>GetSubscriptionArgs</a></li>
+    <li><a href="#GetSubscriptionResult"><span class="symbol api"></span>GetSubscriptionResult</a></li>
     <li><a href="#GetTopicAuthorizationRuleArgs"><span class="symbol api"></span>GetTopicAuthorizationRuleArgs</a></li>
     <li><a href="#GetTopicAuthorizationRuleResult"><span class="symbol api"></span>GetTopicAuthorizationRuleResult</a></li>
     <li><a href="#GetTopicFunctionArgs"><span class="symbol api"></span>GetTopicFunctionArgs</a></li>
@@ -80,7 +83,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Namespace" data-link-title="Namespace">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L35">
         Resource <strong>Namespace</strong>
     </a>
 </h3>
@@ -115,7 +118,7 @@ Service Bus Namespace can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Namespace-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L110"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L110"> <b>constructor</b></a>
 </h4>
 
 
@@ -129,7 +132,7 @@ Create a Namespace resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Namespace-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -140,14 +143,14 @@ Get an existing Namespace resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Namespace-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Namespace-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -158,7 +161,7 @@ Returns true if the given object is an instance of Namespace.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Namespace-capacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L66">property <b>capacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L66">property <b>capacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>capacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -166,7 +169,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the capacity. When `sku` is `Premium`, capacity can be `1`, `2`, `4` or `8`. When `sku` is `Basic` or `Standard`, capacity can be `0` only.
 
 <h4 class="pdoc-member-header" id="Namespace-defaultPrimaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L71">property <b>defaultPrimaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L71">property <b>defaultPrimaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultPrimaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -175,7 +178,7 @@ The primary connection string for the authorization
 rule `RootManageSharedAccessKey`.
 
 <h4 class="pdoc-member-header" id="Namespace-defaultPrimaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L75">property <b>defaultPrimaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L75">property <b>defaultPrimaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultPrimaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -183,7 +186,7 @@ rule `RootManageSharedAccessKey`.
 The primary access key for the authorization rule `RootManageSharedAccessKey`.
 
 <h4 class="pdoc-member-header" id="Namespace-defaultSecondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L80">property <b>defaultSecondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L80">property <b>defaultSecondaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultSecondaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -192,7 +195,7 @@ The secondary connection string for the
 authorization rule `RootManageSharedAccessKey`.
 
 <h4 class="pdoc-member-header" id="Namespace-defaultSecondaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L84">property <b>defaultSecondaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L84">property <b>defaultSecondaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultSecondaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -200,7 +203,7 @@ authorization rule `RootManageSharedAccessKey`.
 The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 
 <h4 class="pdoc-member-header" id="Namespace-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -209,7 +212,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Namespace-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L88">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L88">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -217,7 +220,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Namespace-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L93">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L93">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -226,7 +229,7 @@ Specifies the name of the ServiceBus Namespace resource . Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="Namespace-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L98">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L98">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -235,7 +238,7 @@ The name of the resource group in which to
 create the namespace.
 
 <h4 class="pdoc-member-header" id="Namespace-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L102">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L102">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -243,7 +246,7 @@ create the namespace.
 Defines which tier to use. Options are basic, standard or premium. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Namespace-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L106">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L106">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -251,7 +254,7 @@ Defines which tier to use. Options are basic, standard or premium. Changing this
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Namespace-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -260,7 +263,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Namespace-zoneRedundant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L110">property <b>zoneRedundant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L110">property <b>zoneRedundant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zoneRedundant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -268,7 +271,7 @@ deployments.
 Whether or not this resource is zone redundant. `sku` needs to be `Premium`. Defaults to `false`.
 
 <h3 class="pdoc-module-header" id="NamespaceAuthorizationRule" data-link-title="NamespaceAuthorizationRule">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L42">
         Resource <strong>NamespaceAuthorizationRule</strong>
     </a>
 </h3>
@@ -310,7 +313,7 @@ ServiceBus Namespace authorization rules can be imported using the `resource id`
 ```
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L109"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L109"> <b>constructor</b></a>
 </h4>
 
 
@@ -324,7 +327,7 @@ Create a NamespaceAuthorizationRule resource with the given unique name, argumen
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -335,14 +338,14 @@ Get an existing NamespaceAuthorizationRule resource's state with the given name,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -353,7 +356,7 @@ Returns true if the given object is an instance of NamespaceAuthorizationRule.  
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -362,7 +365,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRule-listen">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L73">property <b>listen</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L73">property <b>listen</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>listen: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -370,7 +373,7 @@ deployments and may be missing (undefined) during planning phases.
 Grants listen access to this this Authorization Rule. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRule-manage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L77">property <b>manage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L77">property <b>manage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>manage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -378,7 +381,7 @@ Grants listen access to this this Authorization Rule. Defaults to `false`.
 Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L81">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L81">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -386,7 +389,7 @@ Grants manage access to this this Authorization Rule. When this property is `tru
 Specifies the name of the ServiceBus Namespace Authorization Rule resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRule-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L85">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L85">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -394,7 +397,7 @@ Specifies the name of the ServiceBus Namespace Authorization Rule resource. Chan
 Specifies the name of the ServiceBus Namespace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRule-primaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L89">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L89">property <b>primaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>primaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -402,7 +405,7 @@ Specifies the name of the ServiceBus Namespace. Changing this forces a new resou
 The Primary Connection String for the ServiceBus Namespace authorization Rule.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRule-primaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L93">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L93">property <b>primaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>primaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -410,7 +413,7 @@ The Primary Connection String for the ServiceBus Namespace authorization Rule.
 The Primary Key for the ServiceBus Namespace authorization Rule.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRule-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L97">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L97">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -418,7 +421,7 @@ The Primary Key for the ServiceBus Namespace authorization Rule.
 The name of the resource group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRule-secondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L101">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L101">property <b>secondaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secondaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -426,7 +429,7 @@ The name of the resource group in which the ServiceBus Namespace exists. Changin
 The Secondary Connection String for the ServiceBus Namespace authorization Rule.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRule-secondaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L105">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L105">property <b>secondaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secondaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -434,7 +437,7 @@ The Secondary Connection String for the ServiceBus Namespace authorization Rule.
 The Secondary Key for the ServiceBus Namespace authorization Rule.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRule-send">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L109">property <b>send</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L109">property <b>send</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>send: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -442,7 +445,7 @@ The Secondary Key for the ServiceBus Namespace authorization Rule.
 Grants send access to this this Authorization Rule. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -451,7 +454,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="NamespaceNetworkRuleSet" data-link-title="NamespaceNetworkRuleSet">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L59">
         Resource <strong>NamespaceNetworkRuleSet</strong>
     </a>
 </h3>
@@ -509,7 +512,7 @@ Service Bus Namespace can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="NamespaceNetworkRuleSet-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L106"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L106"> <b>constructor</b></a>
 </h4>
 
 
@@ -523,7 +526,7 @@ Create a NamespaceNetworkRuleSet resource with the given unique name, arguments,
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="NamespaceNetworkRuleSet-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L69">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L69">method <b>get</b></a>
 </h4>
 
 
@@ -534,14 +537,14 @@ Get an existing NamespaceNetworkRuleSet resource's state with the given name, ID
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="NamespaceNetworkRuleSet-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L59">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L59">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="NamespaceNetworkRuleSet-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L80">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L80">method <b>isInstance</b></a>
 </h4>
 
 
@@ -552,7 +555,7 @@ Returns true if the given object is an instance of NamespaceNetworkRuleSet.  Thi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="NamespaceNetworkRuleSet-defaultAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L90">property <b>defaultAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L90">property <b>defaultAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -560,7 +563,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the default action for the ServiceBus Namespace Network Rule Set. Possible values are `Allow` and `Deny`. Defaults to `Deny`.
 
 <h4 class="pdoc-member-header" id="NamespaceNetworkRuleSet-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L59">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L59">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -569,7 +572,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="NamespaceNetworkRuleSet-ipRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L94">property <b>ipRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L94">property <b>ipRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -577,7 +580,7 @@ deployments and may be missing (undefined) during planning phases.
 One or more IP Addresses, or CIDR Blocks which should be able to access the ServiceBus Namespace.
 
 <h4 class="pdoc-member-header" id="NamespaceNetworkRuleSet-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L98">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L98">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -585,7 +588,7 @@ One or more IP Addresses, or CIDR Blocks which should be able to access the Serv
 Specifies the ServiceBus Namespace name to which to attach the ServiceBus Namespace Network Rule Set. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NamespaceNetworkRuleSet-networkRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L102">property <b>networkRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L102">property <b>networkRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#NamespaceNetworkRuleSetNetworkRule'>NamespaceNetworkRuleSetNetworkRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -593,7 +596,7 @@ Specifies the ServiceBus Namespace name to which to attach the ServiceBus Namesp
 One or more `networkRules` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="NamespaceNetworkRuleSet-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L106">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L106">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -601,7 +604,7 @@ One or more `networkRules` blocks as defined below.
 Specifies the name of the Resource Group where the ServiceBus Namespace Network Rule Set should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NamespaceNetworkRuleSet-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L59">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L59">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -610,7 +613,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Queue" data-link-title="Queue">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L40">
         Resource <strong>Queue</strong>
     </a>
 </h3>
@@ -650,7 +653,7 @@ Service Bus Queue can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Queue-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L139"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L139"> <b>constructor</b></a>
 </h4>
 
 
@@ -664,7 +667,7 @@ Create a Queue resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Queue-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -675,7 +678,7 @@ Get an existing Queue resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Queue-getEventFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L167">method <b>getEventFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L167">method <b>getEventFunction</b></a>
 </h4>
 
 
@@ -687,14 +690,14 @@ Creates a new Function triggered by messages in the given Queue using the callba
 a [MultiCallbackFunctionApp]. Use [onEvent] if you want to create a Function App with a single Function.
 
 <h4 class="pdoc-member-header" id="Queue-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Queue-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -705,7 +708,7 @@ Returns true if the given object is an instance of Queue.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Queue-onEvent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L159">method <b>onEvent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L159">method <b>onEvent</b></a>
 </h4>
 
 
@@ -718,7 +721,7 @@ A dedicated Function App is created behind the scenes with a single Azure Functi
 Use [getEventFunction] if you want to compose multiple Functions into the same App manually.
 
 <h4 class="pdoc-member-header" id="Queue-autoDeleteOnIdle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L71">property <b>autoDeleteOnIdle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L71">property <b>autoDeleteOnIdle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoDeleteOnIdle: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -726,7 +729,7 @@ Use [getEventFunction] if you want to compose multiple Functions into the same A
 The ISO 8601 timespan duration of the idle interval after which the Queue is automatically deleted, minimum of 5 minutes.
 
 <h4 class="pdoc-member-header" id="Queue-deadLetteringOnMessageExpiration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L75">property <b>deadLetteringOnMessageExpiration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L75">property <b>deadLetteringOnMessageExpiration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deadLetteringOnMessageExpiration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -734,7 +737,7 @@ The ISO 8601 timespan duration of the idle interval after which the Queue is aut
 Boolean flag which controls whether the Queue has dead letter support when a message expires. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Queue-defaultMessageTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L79">property <b>defaultMessageTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L79">property <b>defaultMessageTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultMessageTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -742,7 +745,7 @@ Boolean flag which controls whether the Queue has dead letter support when a mes
 The ISO 8601 timespan duration of the TTL of messages sent to this queue. This is the default value used when TTL is not set on message itself.
 
 <h4 class="pdoc-member-header" id="Queue-duplicateDetectionHistoryTimeWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L83">property <b>duplicateDetectionHistoryTimeWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L83">property <b>duplicateDetectionHistoryTimeWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>duplicateDetectionHistoryTimeWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -750,7 +753,7 @@ The ISO 8601 timespan duration of the TTL of messages sent to this queue. This i
 The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minutes (`PT10M`).
 
 <h4 class="pdoc-member-header" id="Queue-enableBatchedOperations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L87">property <b>enableBatchedOperations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L87">property <b>enableBatchedOperations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableBatchedOperations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -758,7 +761,7 @@ The ISO 8601 timespan duration during which duplicates can be detected. Defaults
 Boolean flag which controls whether server-side batched operations are enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="Queue-enableExpress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L91">property <b>enableExpress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L91">property <b>enableExpress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableExpress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -766,7 +769,7 @@ Boolean flag which controls whether server-side batched operations are enabled. 
 Boolean flag which controls whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage. Defaults to `false` for Basic and Standard. For Premium, it MUST be set to `false`.
 
 <h4 class="pdoc-member-header" id="Queue-enablePartitioning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L95">property <b>enablePartitioning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L95">property <b>enablePartitioning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enablePartitioning: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -774,7 +777,7 @@ Boolean flag which controls whether Express Entities are enabled. An express que
 Boolean flag which controls whether to enable the queue to be partitioned across multiple message brokers. Changing this forces a new resource to be created. Defaults to `false` for Basic and Standard. For Premium, it MUST be set to `true`.
 
 <h4 class="pdoc-member-header" id="Queue-forwardDeadLetteredMessagesTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L99">property <b>forwardDeadLetteredMessagesTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L99">property <b>forwardDeadLetteredMessagesTo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forwardDeadLetteredMessagesTo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -782,7 +785,7 @@ Boolean flag which controls whether to enable the queue to be partitioned across
 The name of a Queue or Topic to automatically forward dead lettered messages to.
 
 <h4 class="pdoc-member-header" id="Queue-forwardTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L103">property <b>forwardTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L103">property <b>forwardTo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forwardTo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -790,7 +793,7 @@ The name of a Queue or Topic to automatically forward dead lettered messages to.
 The name of a Queue or Topic to automatically forward messages to. Please [see the documentation](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-auto-forwarding) for more information.
 
 <h4 class="pdoc-member-header" id="Queue-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -799,7 +802,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Queue-lockDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L107">property <b>lockDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L107">property <b>lockDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lockDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -807,7 +810,7 @@ deployments and may be missing (undefined) during planning phases.
 The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute (`PT1M`).
 
 <h4 class="pdoc-member-header" id="Queue-maxDeliveryCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L111">property <b>maxDeliveryCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L111">property <b>maxDeliveryCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxDeliveryCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -815,7 +818,7 @@ The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that 
 Integer value which controls when a message is automatically dead lettered. Defaults to `10`.
 
 <h4 class="pdoc-member-header" id="Queue-maxSizeInMegabytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L115">property <b>maxSizeInMegabytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L115">property <b>maxSizeInMegabytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxSizeInMegabytes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -823,7 +826,7 @@ Integer value which controls when a message is automatically dead lettered. Defa
 Integer value which controls the size of memory allocated for the queue. For supported values see the "Queue or topic size" section of [Service Bus Quotas](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas). Defaults to `1024`.
 
 <h4 class="pdoc-member-header" id="Queue-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L119">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L119">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -831,7 +834,7 @@ Integer value which controls the size of memory allocated for the queue. For sup
 Specifies the name of the ServiceBus Queue resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Queue-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L123">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L123">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -839,7 +842,7 @@ Specifies the name of the ServiceBus Queue resource. Changing this forces a new 
 The name of the ServiceBus Namespace to create this queue in. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Queue-requiresDuplicateDetection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L127">property <b>requiresDuplicateDetection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L127">property <b>requiresDuplicateDetection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requiresDuplicateDetection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -847,7 +850,7 @@ The name of the ServiceBus Namespace to create this queue in. Changing this forc
 Boolean flag which controls whether the Queue requires duplicate detection. Changing this forces a new resource to be created. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Queue-requiresSession">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L131">property <b>requiresSession</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L131">property <b>requiresSession</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requiresSession: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -855,7 +858,7 @@ Boolean flag which controls whether the Queue requires duplicate detection. Chan
 Boolean flag which controls whether the Queue requires sessions. This will allow ordered handling of unbounded sequences of related messages. With sessions enabled a queue can guarantee first-in-first-out delivery of messages. Changing this forces a new resource to be created. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Queue-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L135">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L135">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -863,7 +866,7 @@ Boolean flag which controls whether the Queue requires sessions. This will allow
 The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Queue-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L139">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L139">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -871,7 +874,7 @@ The name of the resource group in which to create the namespace. Changing this f
 The status of the Queue. Possible values are `Active`, `Creating`, `Deleting`, `Disabled`, `ReceiveDisabled`, `Renaming`, `SendDisabled`, `Unknown`. Note that `Restoring` is not accepted. Defaults to `Active`.
 
 <h4 class="pdoc-member-header" id="Queue-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -880,7 +883,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="QueueAuthorizationRule" data-link-title="QueueAuthorizationRule">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L48">
         Resource <strong>QueueAuthorizationRule</strong>
     </a>
 </h3>
@@ -928,7 +931,7 @@ ServiceBus Queue Authorization Rules can be imported using the `resource id`, e.
 ```
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L119"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L119"> <b>constructor</b></a>
 </h4>
 
 
@@ -942,7 +945,7 @@ Create a QueueAuthorizationRule resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -953,14 +956,14 @@ Get an existing QueueAuthorizationRule resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L48">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L48">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -971,7 +974,7 @@ Returns true if the given object is an instance of QueueAuthorizationRule.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L48">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -980,7 +983,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRule-listen">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L79">property <b>listen</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L79">property <b>listen</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>listen: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -988,7 +991,7 @@ deployments and may be missing (undefined) during planning phases.
 Does this Authorization Rule have Listen permissions to the ServiceBus Queue? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRule-manage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L83">property <b>manage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L83">property <b>manage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>manage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -996,7 +999,7 @@ Does this Authorization Rule have Listen permissions to the ServiceBus Queue? De
 Does this Authorization Rule have Manage permissions to the ServiceBus Queue? When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L87">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L87">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1004,7 +1007,7 @@ Does this Authorization Rule have Manage permissions to the ServiceBus Queue? Wh
 Specifies the name of the Authorization Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRule-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L91">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L91">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1012,7 +1015,7 @@ Specifies the name of the Authorization Rule. Changing this forces a new resourc
 Specifies the name of the ServiceBus Namespace in which the Queue exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRule-primaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L95">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L95">property <b>primaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>primaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1020,7 +1023,7 @@ Specifies the name of the ServiceBus Namespace in which the Queue exists. Changi
 The Primary Connection String for the Authorization Rule.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRule-primaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L99">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L99">property <b>primaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>primaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1028,7 +1031,7 @@ The Primary Connection String for the Authorization Rule.
 The Primary Key for the Authorization Rule.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRule-queueName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L103">property <b>queueName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L103">property <b>queueName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>queueName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1036,7 +1039,7 @@ The Primary Key for the Authorization Rule.
 Specifies the name of the ServiceBus Queue. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRule-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L107">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L107">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1044,7 +1047,7 @@ Specifies the name of the ServiceBus Queue. Changing this forces a new resource 
 The name of the Resource Group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRule-secondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L111">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L111">property <b>secondaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secondaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1052,7 +1055,7 @@ The name of the Resource Group in which the ServiceBus Namespace exists. Changin
 The Secondary Connection String for the Authorization Rule.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRule-secondaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L115">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L115">property <b>secondaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secondaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1060,7 +1063,7 @@ The Secondary Connection String for the Authorization Rule.
 The Secondary Key for the Authorization Rule.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRule-send">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L119">property <b>send</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L119">property <b>send</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>send: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1068,7 +1071,7 @@ The Secondary Key for the Authorization Rule.
 Does this Authorization Rule have Send permissions to the ServiceBus Queue? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L48">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L48">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1077,7 +1080,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Subscription" data-link-title="Subscription">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L46">
         Resource <strong>Subscription</strong>
     </a>
 </h3>
@@ -1123,7 +1126,7 @@ Service Bus Subscriptions can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Subscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L133"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L133"> <b>constructor</b></a>
 </h4>
 
 
@@ -1137,7 +1140,7 @@ Create a Subscription resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Subscription-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L56">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L56">method <b>get</b></a>
 </h4>
 
 
@@ -1148,14 +1151,14 @@ Get an existing Subscription resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Subscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L46">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L46">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Subscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L67">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L67">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1166,7 +1169,7 @@ Returns true if the given object is an instance of Subscription.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Subscription-autoDeleteOnIdle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L77">property <b>autoDeleteOnIdle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L77">property <b>autoDeleteOnIdle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoDeleteOnIdle: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1174,7 +1177,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The idle interval after which the topic is automatically deleted as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The minimum duration is `5` minutes or `P5M`.
 
 <h4 class="pdoc-member-header" id="Subscription-deadLetteringOnFilterEvaluationError">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L81">property <b>deadLetteringOnFilterEvaluationError</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L81">property <b>deadLetteringOnFilterEvaluationError</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deadLetteringOnFilterEvaluationError: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1182,7 +1185,7 @@ The idle interval after which the topic is automatically deleted as an [ISO 8601
 Boolean flag which controls whether the Subscription has dead letter support on filter evaluation exceptions. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="Subscription-deadLetteringOnMessageExpiration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L85">property <b>deadLetteringOnMessageExpiration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L85">property <b>deadLetteringOnMessageExpiration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deadLetteringOnMessageExpiration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1190,7 +1193,7 @@ Boolean flag which controls whether the Subscription has dead letter support on 
 Boolean flag which controls whether the Subscription has dead letter support when a message expires. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Subscription-defaultMessageTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L89">property <b>defaultMessageTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L89">property <b>defaultMessageTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultMessageTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1198,7 +1201,7 @@ Boolean flag which controls whether the Subscription has dead letter support whe
 The Default message timespan to live as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
 
 <h4 class="pdoc-member-header" id="Subscription-enableBatchedOperations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L93">property <b>enableBatchedOperations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L93">property <b>enableBatchedOperations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableBatchedOperations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1206,7 +1209,7 @@ The Default message timespan to live as an [ISO 8601 duration](https://en.wikipe
 Boolean flag which controls whether the Subscription supports batched operations. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Subscription-forwardDeadLetteredMessagesTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L97">property <b>forwardDeadLetteredMessagesTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L97">property <b>forwardDeadLetteredMessagesTo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forwardDeadLetteredMessagesTo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1214,7 +1217,7 @@ Boolean flag which controls whether the Subscription supports batched operations
 The name of a Queue or Topic to automatically forward Dead Letter messages to.
 
 <h4 class="pdoc-member-header" id="Subscription-forwardTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L101">property <b>forwardTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L101">property <b>forwardTo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forwardTo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1222,7 +1225,7 @@ The name of a Queue or Topic to automatically forward Dead Letter messages to.
 The name of a Queue or Topic to automatically forward messages to.
 
 <h4 class="pdoc-member-header" id="Subscription-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L46">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1231,7 +1234,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Subscription-lockDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L105">property <b>lockDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L105">property <b>lockDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lockDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1239,7 +1242,7 @@ deployments and may be missing (undefined) during planning phases.
 The lock duration for the subscription as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The default value is `1` minute or `P1M`.
 
 <h4 class="pdoc-member-header" id="Subscription-maxDeliveryCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L109">property <b>maxDeliveryCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L109">property <b>maxDeliveryCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxDeliveryCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1247,7 +1250,7 @@ The lock duration for the subscription as an [ISO 8601 duration](https://en.wiki
 The maximum number of deliveries.
 
 <h4 class="pdoc-member-header" id="Subscription-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L113">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L113">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1255,7 +1258,7 @@ The maximum number of deliveries.
 Specifies the name of the ServiceBus Subscription resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Subscription-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L117">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L117">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1263,7 +1266,7 @@ Specifies the name of the ServiceBus Subscription resource. Changing this forces
 The name of the ServiceBus Namespace to create this Subscription in. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Subscription-requiresSession">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L121">property <b>requiresSession</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L121">property <b>requiresSession</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requiresSession: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1271,7 +1274,7 @@ The name of the ServiceBus Namespace to create this Subscription in. Changing th
 Boolean flag which controls whether this Subscription supports the concept of a session. Defaults to `false`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Subscription-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L125">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L125">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1279,7 +1282,7 @@ Boolean flag which controls whether this Subscription supports the concept of a 
 The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Subscription-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L129">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L129">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1287,7 +1290,7 @@ The name of the resource group in which to create the namespace. Changing this f
 The status of the Subscription. Possible values are `Active`,`ReceiveDisabled`, or `Disabled`. Defaults to `Active`.
 
 <h4 class="pdoc-member-header" id="Subscription-topicName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L133">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L133">property <b>topicName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>topicName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1295,7 +1298,7 @@ The status of the Subscription. Possible values are `Active`,`ReceiveDisabled`, 
 The name of the ServiceBus Topic to create this Subscription in. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Subscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L46">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L46">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1304,7 +1307,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SubscriptionRule" data-link-title="SubscriptionRule">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L97">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L97">
         Resource <strong>SubscriptionRule</strong>
     </a>
 </h3>
@@ -1400,7 +1403,7 @@ Service Bus Subscription Rule can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="SubscriptionRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L160"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L160"> <b>constructor</b></a>
 </h4>
 
 
@@ -1414,7 +1417,7 @@ Create a SubscriptionRule resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SubscriptionRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L107">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L107">method <b>get</b></a>
 </h4>
 
 
@@ -1425,14 +1428,14 @@ Get an existing SubscriptionRule resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SubscriptionRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L97">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L97">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SubscriptionRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L118">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L118">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1443,7 +1446,7 @@ Returns true if the given object is an instance of SubscriptionRule.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SubscriptionRule-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L128">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L128">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1451,7 +1454,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Represents set of actions written in SQL language-based syntax that is performed against a BrokeredMessage.
 
 <h4 class="pdoc-member-header" id="SubscriptionRule-correlationFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L132">property <b>correlationFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L132">property <b>correlationFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>correlationFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SubscriptionRuleCorrelationFilter'>SubscriptionRuleCorrelationFilter</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1459,7 +1462,7 @@ Represents set of actions written in SQL language-based syntax that is performed
 A `correlationFilter` block as documented below to be evaluated against a BrokeredMessage. Required when `filterType` is set to `CorrelationFilter`.
 
 <h4 class="pdoc-member-header" id="SubscriptionRule-filterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L136">property <b>filterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L136">property <b>filterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>filterType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1467,7 +1470,7 @@ A `correlationFilter` block as documented below to be evaluated against a Broker
 Type of filter to be applied to a BrokeredMessage. Possible values are `SqlFilter` and `CorrelationFilter`.
 
 <h4 class="pdoc-member-header" id="SubscriptionRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L97">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L97">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1476,7 +1479,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SubscriptionRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L140">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L140">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1484,7 +1487,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the name of the ServiceBus Subscription Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionRule-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L144">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L144">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1492,7 +1495,7 @@ Specifies the name of the ServiceBus Subscription Rule. Changing this forces a n
 The name of the ServiceBus Namespace in which the ServiceBus Topic exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionRule-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L148">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L148">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1500,7 +1503,7 @@ The name of the ServiceBus Namespace in which the ServiceBus Topic exists. Chang
 The name of the resource group in the ServiceBus Namespace exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionRule-sqlFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L152">property <b>sqlFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L152">property <b>sqlFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sqlFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1508,7 +1511,7 @@ The name of the resource group in the ServiceBus Namespace exists. Changing this
 Represents a filter written in SQL language-based syntax that to be evaluated against a BrokeredMessage. Required when `filterType` is set to `SqlFilter`.
 
 <h4 class="pdoc-member-header" id="SubscriptionRule-subscriptionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L156">property <b>subscriptionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L156">property <b>subscriptionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subscriptionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1516,7 +1519,7 @@ Represents a filter written in SQL language-based syntax that to be evaluated ag
 The name of the ServiceBus Subscription in which this Rule should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionRule-topicName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L160">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L160">property <b>topicName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>topicName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1524,7 +1527,7 @@ The name of the ServiceBus Subscription in which this Rule should be created. Ch
 The name of the ServiceBus Topic in which the ServiceBus Subscription exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L97">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L97">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1533,7 +1536,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Topic" data-link-title="Topic">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L42">
         Resource <strong>Topic</strong>
     </a>
 </h3>
@@ -1575,7 +1578,7 @@ Service Bus Topics can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Topic-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L137"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L137"> <b>constructor</b></a>
 </h4>
 
 
@@ -1589,7 +1592,7 @@ Create a Topic resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Topic-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -1600,7 +1603,7 @@ Get an existing Topic resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Topic-getEventFunction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L238">method <b>getEventFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L238">method <b>getEventFunction</b></a>
 </h4>
 
 
@@ -1612,14 +1615,14 @@ Creates a new Function triggered by messages in the given Topic using the callba
 a [MultiCallbackFunctionApp]. Use [onEvent] if you want to create a Function App with a single Function.
 
 <h4 class="pdoc-member-header" id="Topic-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Topic-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1630,7 +1633,7 @@ Returns true if the given object is an instance of Topic.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Topic-onEvent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L230">method <b>onEvent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L230">method <b>onEvent</b></a>
 </h4>
 
 
@@ -1643,7 +1646,7 @@ A dedicated Function App is created behind the scenes with a single Azure Functi
 Use [getEventFunction] if you want to compose multiple Functions into the same App manually.
 
 <h4 class="pdoc-member-header" id="Topic-autoDeleteOnIdle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L74">property <b>autoDeleteOnIdle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L74">property <b>autoDeleteOnIdle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoDeleteOnIdle: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1652,7 +1655,7 @@ The ISO 8601 timespan duration of the idle interval after which the
 Topic is automatically deleted, minimum of 5 minutes.
 
 <h4 class="pdoc-member-header" id="Topic-defaultMessageTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L79">property <b>defaultMessageTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L79">property <b>defaultMessageTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultMessageTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1661,7 +1664,7 @@ The ISO 8601 timespan duration of TTL of messages sent to this topic if no
 TTL value is set on the message itself.
 
 <h4 class="pdoc-member-header" id="Topic-duplicateDetectionHistoryTimeWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L84">property <b>duplicateDetectionHistoryTimeWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L84">property <b>duplicateDetectionHistoryTimeWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>duplicateDetectionHistoryTimeWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1670,7 +1673,7 @@ The ISO 8601 timespan duration during which
 duplicates can be detected. Defaults to 10 minutes. (`PT10M`)
 
 <h4 class="pdoc-member-header" id="Topic-enableBatchedOperations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L89">property <b>enableBatchedOperations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L89">property <b>enableBatchedOperations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableBatchedOperations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1679,7 +1682,7 @@ Boolean flag which controls if server-side
 batched operations are enabled. Defaults to false.
 
 <h4 class="pdoc-member-header" id="Topic-enableExpress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L95">property <b>enableExpress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L95">property <b>enableExpress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableExpress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1689,7 +1692,7 @@ are enabled. An express topic holds a message in memory temporarily before writi
 it to persistent storage. Defaults to false.
 
 <h4 class="pdoc-member-header" id="Topic-enablePartitioning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L101">property <b>enablePartitioning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L101">property <b>enablePartitioning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enablePartitioning: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1699,7 +1702,7 @@ the topic to be partitioned across multiple message brokers. Defaults to false.
 Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Topic-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1708,7 +1711,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Topic-maxSizeInMegabytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L107">property <b>maxSizeInMegabytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L107">property <b>maxSizeInMegabytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxSizeInMegabytes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1718,7 +1721,7 @@ memory allocated for the topic. For supported values see the "Queue/topic size"
 section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas).
 
 <h4 class="pdoc-member-header" id="Topic-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L112">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L112">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1727,7 +1730,7 @@ Specifies the name of the ServiceBus Topic resource. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="Topic-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L117">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L117">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1736,7 +1739,7 @@ The name of the ServiceBus Namespace to create
 this topic in. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Topic-requiresDuplicateDetection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L123">property <b>requiresDuplicateDetection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L123">property <b>requiresDuplicateDetection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requiresDuplicateDetection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1746,7 +1749,7 @@ the Topic requires duplicate detection. Defaults to false. Changing this forces
 a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Topic-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L128">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L128">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1755,7 +1758,7 @@ The name of the resource group in which to
 create the namespace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Topic-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L132">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L132">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1763,7 +1766,7 @@ create the namespace. Changing this forces a new resource to be created.
 The Status of the Service Bus Topic. Acceptable values are `Active` or `Disabled`. Defaults to `Active`.
 
 <h4 class="pdoc-member-header" id="Topic-supportOrdering">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L137">property <b>supportOrdering</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L137">property <b>supportOrdering</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>supportOrdering: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1772,7 +1775,7 @@ Boolean flag which controls whether the Topic
 supports ordering. Defaults to false.
 
 <h4 class="pdoc-member-header" id="Topic-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1781,7 +1784,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="TopicAuthorizationRule" data-link-title="TopicAuthorizationRule">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L47">
         Resource <strong>TopicAuthorizationRule</strong>
     </a>
 </h3>
@@ -1828,7 +1831,7 @@ ServiceBus Topic authorization rules can be imported using the `resource id`, e.
 ```
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L118"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L118"> <b>constructor</b></a>
 </h4>
 
 
@@ -1842,7 +1845,7 @@ Create a TopicAuthorizationRule resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L57">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L57">method <b>get</b></a>
 </h4>
 
 
@@ -1853,14 +1856,14 @@ Get an existing TopicAuthorizationRule resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L47">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L47">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L68">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L68">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1871,7 +1874,7 @@ Returns true if the given object is an instance of TopicAuthorizationRule.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L47">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L47">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1880,7 +1883,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRule-listen">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L78">property <b>listen</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L78">property <b>listen</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>listen: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1888,7 +1891,7 @@ deployments and may be missing (undefined) during planning phases.
 Grants listen access to this this Authorization Rule. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRule-manage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L82">property <b>manage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L82">property <b>manage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>manage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1896,7 +1899,7 @@ Grants listen access to this this Authorization Rule. Defaults to `false`.
 Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L86">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L86">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1904,7 +1907,7 @@ Grants manage access to this this Authorization Rule. When this property is `tru
 Specifies the name of the ServiceBus Topic Authorization Rule resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRule-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L90">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L90">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1912,7 +1915,7 @@ Specifies the name of the ServiceBus Topic Authorization Rule resource. Changing
 Specifies the name of the ServiceBus Namespace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRule-primaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L94">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L94">property <b>primaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>primaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1920,7 +1923,7 @@ Specifies the name of the ServiceBus Namespace. Changing this forces a new resou
 The Primary Connection String for the ServiceBus Topic authorization Rule.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRule-primaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L98">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L98">property <b>primaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>primaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1928,7 +1931,7 @@ The Primary Connection String for the ServiceBus Topic authorization Rule.
 The Primary Key for the ServiceBus Topic authorization Rule.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRule-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L102">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L102">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1936,7 +1939,7 @@ The Primary Key for the ServiceBus Topic authorization Rule.
 The name of the resource group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRule-secondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L106">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L106">property <b>secondaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secondaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1944,7 +1947,7 @@ The name of the resource group in which the ServiceBus Namespace exists. Changin
 The Secondary Connection String for the ServiceBus Topic authorization Rule.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRule-secondaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L110">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L110">property <b>secondaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secondaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1952,7 +1955,7 @@ The Secondary Connection String for the ServiceBus Topic authorization Rule.
 The Secondary Key for the ServiceBus Topic authorization Rule.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRule-send">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L114">property <b>send</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L114">property <b>send</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>send: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1960,7 +1963,7 @@ The Secondary Key for the ServiceBus Topic authorization Rule.
 Grants send access to this this Authorization Rule. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRule-topicName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L118">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L118">property <b>topicName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>topicName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1968,7 +1971,7 @@ Grants send access to this this Authorization Rule. Defaults to `false`.
 Specifies the name of the ServiceBus Topic. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L47">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L47">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1979,7 +1982,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getNamespace" data-link-title="getNamespace">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespace.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespace.ts#L24">
         Function <strong>getNamespace</strong>
     </a>
 </h3>
@@ -2004,7 +2007,7 @@ export const location = example.then(example => example.location);
 ```
 
 <h3 class="pdoc-module-header" id="getNamespaceAuthorizationRule" data-link-title="getNamespaceAuthorizationRule">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L25">
         Function <strong>getNamespaceAuthorizationRule</strong>
     </a>
 </h3>
@@ -2030,7 +2033,7 @@ export const ruleId = example.then(example => example.id);
 ```
 
 <h3 class="pdoc-module-header" id="getQueueAuthorizationRule" data-link-title="getQueueAuthorizationRule">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L26">
         Function <strong>getQueueAuthorizationRule</strong>
     </a>
 </h3>
@@ -2056,8 +2059,35 @@ const example = azure.servicebus.getQueueAuthorizationRule({
 export const id = example.then(example => example.id);
 ```
 
+<h3 class="pdoc-module-header" id="getSubscription" data-link-title="getSubscription">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getSubscription.ts#L26">
+        Function <strong>getSubscription</strong>
+    </a>
+</h3>
+
+
+<pre class="highlight"><code><span class='kd'></span>getSubscription(args: <a href='#GetSubscriptionArgs'>GetSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetSubscriptionResult'>GetSubscriptionResult</a>&gt;</code></pre>
+
+
+Use this data source to access information about an existing ServiceBus Subscription.
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.servicebus.getSubscription({
+    name: "examplesubscription",
+    resourceGroupName: "exampleresources",
+    namespaceName: "examplenamespace",
+    topicName: "exampletopic",
+});
+export const servicebusSubscription = data.azurerm_servicebus_namespace.example;
+```
+
 <h3 class="pdoc-module-header" id="getTopicAuthorizationRule" data-link-title="getTopicAuthorizationRule">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L27">
         Function <strong>getTopicAuthorizationRule</strong>
     </a>
 </h3>
@@ -2087,7 +2117,7 @@ export const servicebusAuthorizationRuleId = azurem_servicebus_topic_authorizati
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetNamespaceArgs" data-link-title="GetNamespaceArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespace.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespace.ts#L41">
         interface <strong>GetNamespaceArgs</strong>
     </a>
 </h3>
@@ -2097,7 +2127,7 @@ export const servicebusAuthorizationRuleId = azurem_servicebus_topic_authorizati
 A collection of arguments for invoking getNamespace.
 
 <h4 class="pdoc-member-header" id="GetNamespaceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespace.ts#L45">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespace.ts#L45">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2105,7 +2135,7 @@ A collection of arguments for invoking getNamespace.
 Specifies the name of the ServiceBus Namespace.
 
 <h4 class="pdoc-member-header" id="GetNamespaceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespace.ts#L49">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespace.ts#L49">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2113,7 +2143,7 @@ Specifies the name of the ServiceBus Namespace.
 Specifies the name of the Resource Group where the ServiceBus Namespace exists.
 
 <h3 class="pdoc-module-header" id="GetNamespaceAuthorizationRuleArgs" data-link-title="GetNamespaceAuthorizationRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L43">
         interface <strong>GetNamespaceAuthorizationRuleArgs</strong>
     </a>
 </h3>
@@ -2123,7 +2153,7 @@ Specifies the name of the Resource Group where the ServiceBus Namespace exists.
 A collection of arguments for invoking getNamespaceAuthorizationRule.
 
 <h4 class="pdoc-member-header" id="GetNamespaceAuthorizationRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L47">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L47">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2131,7 +2161,7 @@ A collection of arguments for invoking getNamespaceAuthorizationRule.
 Specifies the name of the ServiceBus Namespace Authorization Rule.
 
 <h4 class="pdoc-member-header" id="GetNamespaceAuthorizationRuleArgs-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L51">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L51">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2139,7 +2169,7 @@ Specifies the name of the ServiceBus Namespace Authorization Rule.
 Specifies the name of the ServiceBus Namespace.
 
 <h4 class="pdoc-member-header" id="GetNamespaceAuthorizationRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L55">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L55">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2147,7 +2177,7 @@ Specifies the name of the ServiceBus Namespace.
 Specifies the name of the Resource Group where the ServiceBus Namespace exists.
 
 <h3 class="pdoc-module-header" id="GetNamespaceAuthorizationRuleResult" data-link-title="GetNamespaceAuthorizationRuleResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L61">
         interface <strong>GetNamespaceAuthorizationRuleResult</strong>
     </a>
 </h3>
@@ -2157,7 +2187,7 @@ Specifies the name of the Resource Group where the ServiceBus Namespace exists.
 A collection of values returned by getNamespaceAuthorizationRule.
 
 <h4 class="pdoc-member-header" id="GetNamespaceAuthorizationRuleResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L65">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L65">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2165,17 +2195,17 @@ A collection of values returned by getNamespaceAuthorizationRule.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetNamespaceAuthorizationRuleResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L66">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNamespaceAuthorizationRuleResult-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L67">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L67">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNamespaceAuthorizationRuleResult-primaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L71">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L71">property <b>primaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryConnectionString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2183,7 +2213,7 @@ The provider-assigned unique ID for this managed resource.
 The primary connection string for the authorization rule.
 
 <h4 class="pdoc-member-header" id="GetNamespaceAuthorizationRuleResult-primaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L75">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L75">property <b>primaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2191,12 +2221,12 @@ The primary connection string for the authorization rule.
 The primary access key for the authorization rule.
 
 <h4 class="pdoc-member-header" id="GetNamespaceAuthorizationRuleResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L76">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L76">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNamespaceAuthorizationRuleResult-secondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L80">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L80">property <b>secondaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryConnectionString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2204,7 +2234,7 @@ The primary access key for the authorization rule.
 The secondary connection string for the authorization rule.
 
 <h4 class="pdoc-member-header" id="GetNamespaceAuthorizationRuleResult-secondaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L84">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespaceAuthorizationRule.ts#L84">property <b>secondaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2212,7 +2242,7 @@ The secondary connection string for the authorization rule.
 The secondary access key for the authorization rule.
 
 <h3 class="pdoc-module-header" id="GetNamespaceResult" data-link-title="GetNamespaceResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespace.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespace.ts#L55">
         interface <strong>GetNamespaceResult</strong>
     </a>
 </h3>
@@ -2222,7 +2252,7 @@ The secondary access key for the authorization rule.
 A collection of values returned by getNamespace.
 
 <h4 class="pdoc-member-header" id="GetNamespaceResult-capacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespace.ts#L59">property <b>capacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespace.ts#L59">property <b>capacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>capacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2230,7 +2260,7 @@ A collection of values returned by getNamespace.
 The capacity of the ServiceBus Namespace.
 
 <h4 class="pdoc-member-header" id="GetNamespaceResult-defaultPrimaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespace.ts#L64">property <b>defaultPrimaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespace.ts#L64">property <b>defaultPrimaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultPrimaryConnectionString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2239,7 +2269,7 @@ The primary connection string for the authorization
 rule `RootManageSharedAccessKey`.
 
 <h4 class="pdoc-member-header" id="GetNamespaceResult-defaultPrimaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespace.ts#L68">property <b>defaultPrimaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespace.ts#L68">property <b>defaultPrimaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultPrimaryKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2247,7 +2277,7 @@ rule `RootManageSharedAccessKey`.
 The primary access key for the authorization rule `RootManageSharedAccessKey`.
 
 <h4 class="pdoc-member-header" id="GetNamespaceResult-defaultSecondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespace.ts#L73">property <b>defaultSecondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespace.ts#L73">property <b>defaultSecondaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultSecondaryConnectionString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2256,7 +2286,7 @@ The secondary connection string for the
 authorization rule `RootManageSharedAccessKey`.
 
 <h4 class="pdoc-member-header" id="GetNamespaceResult-defaultSecondaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespace.ts#L77">property <b>defaultSecondaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespace.ts#L77">property <b>defaultSecondaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultSecondaryKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2264,7 +2294,7 @@ authorization rule `RootManageSharedAccessKey`.
 The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 
 <h4 class="pdoc-member-header" id="GetNamespaceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespace.ts#L81">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespace.ts#L81">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2272,7 +2302,7 @@ The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetNamespaceResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespace.ts#L85">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespace.ts#L85">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2280,17 +2310,17 @@ The provider-assigned unique ID for this managed resource.
 The location of the Resource Group in which the ServiceBus Namespace exists.
 
 <h4 class="pdoc-member-header" id="GetNamespaceResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespace.ts#L86">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespace.ts#L86">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNamespaceResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespace.ts#L87">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespace.ts#L87">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNamespaceResult-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespace.ts#L91">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespace.ts#L91">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2298,7 +2328,7 @@ The location of the Resource Group in which the ServiceBus Namespace exists.
 The Tier used for the ServiceBus Namespace.
 
 <h4 class="pdoc-member-header" id="GetNamespaceResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespace.ts#L95">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespace.ts#L95">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2306,7 +2336,7 @@ The Tier used for the ServiceBus Namespace.
 A mapping of tags assigned to the resource.
 
 <h4 class="pdoc-member-header" id="GetNamespaceResult-zoneRedundant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getNamespace.ts#L99">property <b>zoneRedundant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getNamespace.ts#L99">property <b>zoneRedundant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneRedundant: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2314,7 +2344,7 @@ A mapping of tags assigned to the resource.
 Whether or not this ServiceBus Namespace is zone redundant.
 
 <h3 class="pdoc-module-header" id="GetQueueAuthorizationRuleArgs" data-link-title="GetQueueAuthorizationRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L45">
         interface <strong>GetQueueAuthorizationRuleArgs</strong>
     </a>
 </h3>
@@ -2324,7 +2354,7 @@ Whether or not this ServiceBus Namespace is zone redundant.
 A collection of arguments for invoking getQueueAuthorizationRule.
 
 <h4 class="pdoc-member-header" id="GetQueueAuthorizationRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L49">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L49">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2332,7 +2362,7 @@ A collection of arguments for invoking getQueueAuthorizationRule.
 The name of this ServiceBus Queue Authorisation Rule.
 
 <h4 class="pdoc-member-header" id="GetQueueAuthorizationRuleArgs-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L53">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L53">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2340,7 +2370,7 @@ The name of this ServiceBus Queue Authorisation Rule.
 The name of the ServiceBus Namespace.
 
 <h4 class="pdoc-member-header" id="GetQueueAuthorizationRuleArgs-queueName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L57">property <b>queueName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L57">property <b>queueName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queueName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2348,7 +2378,7 @@ The name of the ServiceBus Namespace.
 The name of the ServiceBus Queue.
 
 <h4 class="pdoc-member-header" id="GetQueueAuthorizationRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L61">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L61">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2356,7 +2386,7 @@ The name of the ServiceBus Queue.
 The name of the Resource Group where the ServiceBus Queue Authorisation Rule exists.
 
 <h3 class="pdoc-module-header" id="GetQueueAuthorizationRuleResult" data-link-title="GetQueueAuthorizationRuleResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L67">
         interface <strong>GetQueueAuthorizationRuleResult</strong>
     </a>
 </h3>
@@ -2366,7 +2396,7 @@ The name of the Resource Group where the ServiceBus Queue Authorisation Rule exi
 A collection of values returned by getQueueAuthorizationRule.
 
 <h4 class="pdoc-member-header" id="GetQueueAuthorizationRuleResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2374,27 +2404,27 @@ A collection of values returned by getQueueAuthorizationRule.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetQueueAuthorizationRuleResult-listen">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L72">property <b>listen</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L72">property <b>listen</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listen: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetQueueAuthorizationRuleResult-manage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L73">property <b>manage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L73">property <b>manage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>manage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetQueueAuthorizationRuleResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L74">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetQueueAuthorizationRuleResult-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L75">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L75">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetQueueAuthorizationRuleResult-primaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L79">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L79">property <b>primaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryConnectionString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2402,7 +2432,7 @@ The provider-assigned unique ID for this managed resource.
 The Primary Connection String for the ServiceBus Queue authorization Rule.
 
 <h4 class="pdoc-member-header" id="GetQueueAuthorizationRuleResult-primaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L83">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L83">property <b>primaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2410,17 +2440,17 @@ The Primary Connection String for the ServiceBus Queue authorization Rule.
 The Primary Key for the ServiceBus Queue authorization Rule.
 
 <h4 class="pdoc-member-header" id="GetQueueAuthorizationRuleResult-queueName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L84">property <b>queueName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L84">property <b>queueName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queueName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetQueueAuthorizationRuleResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L85">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L85">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetQueueAuthorizationRuleResult-secondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L89">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L89">property <b>secondaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryConnectionString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2428,7 +2458,7 @@ The Primary Key for the ServiceBus Queue authorization Rule.
 The Secondary Connection String for the ServiceBus Queue authorization Rule.
 
 <h4 class="pdoc-member-header" id="GetQueueAuthorizationRuleResult-secondaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L93">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L93">property <b>secondaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2436,12 +2466,172 @@ The Secondary Connection String for the ServiceBus Queue authorization Rule.
 The Secondary Key for the ServiceBus Queue authorization Rule.
 
 <h4 class="pdoc-member-header" id="GetQueueAuthorizationRuleResult-send">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L94">property <b>send</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getQueueAuthorizationRule.ts#L94">property <b>send</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>send: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
+<h3 class="pdoc-module-header" id="GetSubscriptionArgs" data-link-title="GetSubscriptionArgs">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getSubscription.ts#L45">
+        interface <strong>GetSubscriptionArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetSubscriptionArgs</span></code></pre>
+
+A collection of arguments for invoking getSubscription.
+
+<h4 class="pdoc-member-header" id="GetSubscriptionArgs-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getSubscription.ts#L49">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Specifies the name of the ServiceBus Subscription.
+
+<h4 class="pdoc-member-header" id="GetSubscriptionArgs-namespaceName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getSubscription.ts#L53">property <b>namespaceName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>namespaceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The name of the ServiceBus Namespace.
+
+<h4 class="pdoc-member-header" id="GetSubscriptionArgs-resourceGroupName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getSubscription.ts#L57">property <b>resourceGroupName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Specifies the name of the Resource Group where the ServiceBus Namespace exists.
+
+<h4 class="pdoc-member-header" id="GetSubscriptionArgs-topicName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getSubscription.ts#L61">property <b>topicName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>topicName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The name of the ServiceBus Topic.
+
+<h3 class="pdoc-module-header" id="GetSubscriptionResult" data-link-title="GetSubscriptionResult">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getSubscription.ts#L67">
+        interface <strong>GetSubscriptionResult</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetSubscriptionResult</span></code></pre>
+
+A collection of values returned by getSubscription.
+
+<h4 class="pdoc-member-header" id="GetSubscriptionResult-autoDeleteOnIdle">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getSubscription.ts#L71">property <b>autoDeleteOnIdle</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>autoDeleteOnIdle: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The idle interval after which the topic is automatically deleted.
+
+<h4 class="pdoc-member-header" id="GetSubscriptionResult-deadLetteringOnFilterEvaluationError">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getSubscription.ts#L75">property <b>deadLetteringOnFilterEvaluationError</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>deadLetteringOnFilterEvaluationError: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
+
+Does the ServiceBus Subscription have dead letter support on filter evaluation exceptions?
+
+<h4 class="pdoc-member-header" id="GetSubscriptionResult-deadLetteringOnMessageExpiration">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getSubscription.ts#L79">property <b>deadLetteringOnMessageExpiration</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>deadLetteringOnMessageExpiration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
+
+Does the Service Bus Subscription have dead letter support when a message expires?
+
+<h4 class="pdoc-member-header" id="GetSubscriptionResult-defaultMessageTtl">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getSubscription.ts#L83">property <b>defaultMessageTtl</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>defaultMessageTtl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The Default message timespan to live. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
+
+<h4 class="pdoc-member-header" id="GetSubscriptionResult-enableBatchedOperations">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getSubscription.ts#L87">property <b>enableBatchedOperations</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enableBatchedOperations: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
+
+Are batched operations enabled on this ServiceBus Subscription?
+
+<h4 class="pdoc-member-header" id="GetSubscriptionResult-forwardDeadLetteredMessagesTo">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getSubscription.ts#L91">property <b>forwardDeadLetteredMessagesTo</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>forwardDeadLetteredMessagesTo: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The name of a Queue or Topic to automatically forward Dead Letter messages to.
+
+<h4 class="pdoc-member-header" id="GetSubscriptionResult-forwardTo">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getSubscription.ts#L95">property <b>forwardTo</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>forwardTo: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The name of a ServiceBus Queue or ServiceBus Topic where messages are automatically forwarded.
+
+<h4 class="pdoc-member-header" id="GetSubscriptionResult-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getSubscription.ts#L99">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The provider-assigned unique ID for this managed resource.
+
+<h4 class="pdoc-member-header" id="GetSubscriptionResult-lockDuration">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getSubscription.ts#L103">property <b>lockDuration</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>lockDuration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The lock duration for the subscription.
+
+<h4 class="pdoc-member-header" id="GetSubscriptionResult-maxDeliveryCount">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getSubscription.ts#L107">property <b>maxDeliveryCount</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>maxDeliveryCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
+
+The maximum number of deliveries.
+
+<h4 class="pdoc-member-header" id="GetSubscriptionResult-name">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getSubscription.ts#L108">property <b>name</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetSubscriptionResult-namespaceName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getSubscription.ts#L109">property <b>namespaceName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>namespaceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetSubscriptionResult-requiresSession">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getSubscription.ts#L113">property <b>requiresSession</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>requiresSession: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
+
+Whether or not this ServiceBus Subscription supports session.
+
+<h4 class="pdoc-member-header" id="GetSubscriptionResult-resourceGroupName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getSubscription.ts#L114">property <b>resourceGroupName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetSubscriptionResult-topicName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getSubscription.ts#L115">property <b>topicName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>topicName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetTopicAuthorizationRuleArgs" data-link-title="GetTopicAuthorizationRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L46">
         interface <strong>GetTopicAuthorizationRuleArgs</strong>
     </a>
 </h3>
@@ -2451,7 +2641,7 @@ The Secondary Key for the ServiceBus Queue authorization Rule.
 A collection of arguments for invoking getTopicAuthorizationRule.
 
 <h4 class="pdoc-member-header" id="GetTopicAuthorizationRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L50">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L50">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2459,7 +2649,7 @@ A collection of arguments for invoking getTopicAuthorizationRule.
 The name of the ServiceBus Topic Authorization Rule resource.
 
 <h4 class="pdoc-member-header" id="GetTopicAuthorizationRuleArgs-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L54">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L54">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2467,7 +2657,7 @@ The name of the ServiceBus Topic Authorization Rule resource.
 The name of the ServiceBus Namespace.
 
 <h4 class="pdoc-member-header" id="GetTopicAuthorizationRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L58">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L58">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2475,7 +2665,7 @@ The name of the ServiceBus Namespace.
 The name of the resource group in which the ServiceBus Namespace exists.
 
 <h4 class="pdoc-member-header" id="GetTopicAuthorizationRuleArgs-topicName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L62">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L62">property <b>topicName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topicName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2483,7 +2673,7 @@ The name of the resource group in which the ServiceBus Namespace exists.
 The name of the ServiceBus Topic.
 
 <h3 class="pdoc-module-header" id="GetTopicAuthorizationRuleResult" data-link-title="GetTopicAuthorizationRuleResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L68">
         interface <strong>GetTopicAuthorizationRuleResult</strong>
     </a>
 </h3>
@@ -2493,7 +2683,7 @@ The name of the ServiceBus Topic.
 A collection of values returned by getTopicAuthorizationRule.
 
 <h4 class="pdoc-member-header" id="GetTopicAuthorizationRuleResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2501,27 +2691,27 @@ A collection of values returned by getTopicAuthorizationRule.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetTopicAuthorizationRuleResult-listen">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L73">property <b>listen</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L73">property <b>listen</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listen: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTopicAuthorizationRuleResult-manage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L74">property <b>manage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L74">property <b>manage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>manage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTopicAuthorizationRuleResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L75">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L75">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTopicAuthorizationRuleResult-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L76">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L76">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTopicAuthorizationRuleResult-primaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L80">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L80">property <b>primaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryConnectionString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2529,7 +2719,7 @@ The provider-assigned unique ID for this managed resource.
 The Primary Connection String for the ServiceBus Topic authorization Rule.
 
 <h4 class="pdoc-member-header" id="GetTopicAuthorizationRuleResult-primaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L84">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L84">property <b>primaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2537,12 +2727,12 @@ The Primary Connection String for the ServiceBus Topic authorization Rule.
 The Primary Key for the ServiceBus Topic authorization Rule.
 
 <h4 class="pdoc-member-header" id="GetTopicAuthorizationRuleResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L85">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L85">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTopicAuthorizationRuleResult-secondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L89">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L89">property <b>secondaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryConnectionString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2550,7 +2740,7 @@ The Primary Key for the ServiceBus Topic authorization Rule.
 The Secondary Connection String for the ServiceBus Topic authorization Rule.
 
 <h4 class="pdoc-member-header" id="GetTopicAuthorizationRuleResult-secondaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L93">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L93">property <b>secondaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2558,24 +2748,24 @@ The Secondary Connection String for the ServiceBus Topic authorization Rule.
 The Secondary Key for the ServiceBus Topic authorization Rule.
 
 <h4 class="pdoc-member-header" id="GetTopicAuthorizationRuleResult-send">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L94">property <b>send</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L94">property <b>send</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>send: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetTopicAuthorizationRuleResult-topicName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L95">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/getTopicAuthorizationRule.ts#L95">property <b>topicName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topicName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetTopicFunctionArgs" data-link-title="GetTopicFunctionArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L208">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L208">
         interface <strong>GetTopicFunctionArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetTopicFunctionArgs</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="GetTopicFunctionArgs-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L83">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L83">property <b>callback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callback?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Callback'>Callback</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
@@ -2584,7 +2774,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 [callback] or [callbackFactory] must be provided.
 
 <h4 class="pdoc-member-header" id="GetTopicFunctionArgs-callbackFactory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L95">property <b>callbackFactory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L95">property <b>callbackFactory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFactory'>CallbackFactory</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
@@ -2599,7 +2789,7 @@ loaded. It can run whatever code it needs, and will end by returning the actual 
 the Azure will call into each time the FunctionApp it is is invoked.
 
 <h4 class="pdoc-member-header" id="GetTopicFunctionArgs-inputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L453">property <b>inputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L453">property <b>inputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
@@ -2607,7 +2797,7 @@ the Azure will call into each time the FunctionApp it is is invoked.
 Input bindings.
 
 <h4 class="pdoc-member-header" id="GetTopicFunctionArgs-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L458">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L458">property <b>outputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
@@ -2615,7 +2805,7 @@ Input bindings.
 Output bindings.
 
 <h4 class="pdoc-member-header" id="GetTopicFunctionArgs-subscription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L212">property <b>subscription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L212">property <b>subscription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscription?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#Subscription'>Subscription</a>;</code></pre>
@@ -2623,7 +2813,7 @@ Output bindings.
 The ServiceBus Subscription to subscribe the Function to.
 
 <h3 class="pdoc-module-header" id="NamespaceArgs" data-link-title="NamespaceArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L225">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L225">
         interface <strong>NamespaceArgs</strong>
     </a>
 </h3>
@@ -2633,7 +2823,7 @@ The ServiceBus Subscription to subscribe the Function to.
 The set of arguments for constructing a Namespace resource.
 
 <h4 class="pdoc-member-header" id="NamespaceArgs-capacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L229">property <b>capacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L229">property <b>capacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>capacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2641,7 +2831,7 @@ The set of arguments for constructing a Namespace resource.
 Specifies the capacity. When `sku` is `Premium`, capacity can be `1`, `2`, `4` or `8`. When `sku` is `Basic` or `Standard`, capacity can be `0` only.
 
 <h4 class="pdoc-member-header" id="NamespaceArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L233">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L233">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2649,7 +2839,7 @@ Specifies the capacity. When `sku` is `Premium`, capacity can be `1`, `2`, `4` o
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NamespaceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L238">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L238">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2658,7 +2848,7 @@ Specifies the name of the ServiceBus Namespace resource . Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="NamespaceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L243">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L243">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2667,7 +2857,7 @@ The name of the resource group in which to
 create the namespace.
 
 <h4 class="pdoc-member-header" id="NamespaceArgs-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L247">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L247">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2675,7 +2865,7 @@ create the namespace.
 Defines which tier to use. Options are basic, standard or premium. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NamespaceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L251">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L251">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2683,7 +2873,7 @@ Defines which tier to use. Options are basic, standard or premium. Changing this
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="NamespaceArgs-zoneRedundant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L255">property <b>zoneRedundant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L255">property <b>zoneRedundant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneRedundant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2691,7 +2881,7 @@ A mapping of tags to assign to the resource.
 Whether or not this resource is zone redundant. `sku` needs to be `Premium`. Defaults to `false`.
 
 <h3 class="pdoc-module-header" id="NamespaceAuthorizationRuleArgs" data-link-title="NamespaceAuthorizationRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L214">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L214">
         interface <strong>NamespaceAuthorizationRuleArgs</strong>
     </a>
 </h3>
@@ -2701,7 +2891,7 @@ Whether or not this resource is zone redundant. `sku` needs to be `Premium`. Def
 The set of arguments for constructing a NamespaceAuthorizationRule resource.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRuleArgs-listen">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L218">property <b>listen</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L218">property <b>listen</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2709,7 +2899,7 @@ The set of arguments for constructing a NamespaceAuthorizationRule resource.
 Grants listen access to this this Authorization Rule. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRuleArgs-manage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L222">property <b>manage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L222">property <b>manage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>manage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2717,7 +2907,7 @@ Grants listen access to this this Authorization Rule. Defaults to `false`.
 Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L226">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L226">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2725,7 +2915,7 @@ Grants manage access to this this Authorization Rule. When this property is `tru
 Specifies the name of the ServiceBus Namespace Authorization Rule resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRuleArgs-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L230">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L230">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2733,7 +2923,7 @@ Specifies the name of the ServiceBus Namespace Authorization Rule resource. Chan
 Specifies the name of the ServiceBus Namespace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L234">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L234">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2741,7 +2931,7 @@ Specifies the name of the ServiceBus Namespace. Changing this forces a new resou
 The name of the resource group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRuleArgs-send">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L238">property <b>send</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L238">property <b>send</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>send?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2749,7 +2939,7 @@ The name of the resource group in which the ServiceBus Namespace exists. Changin
 Grants send access to this this Authorization Rule. Defaults to `false`.
 
 <h3 class="pdoc-module-header" id="NamespaceAuthorizationRuleState" data-link-title="NamespaceAuthorizationRuleState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L168">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L168">
         interface <strong>NamespaceAuthorizationRuleState</strong>
     </a>
 </h3>
@@ -2759,7 +2949,7 @@ Grants send access to this this Authorization Rule. Defaults to `false`.
 Input properties used for looking up and filtering NamespaceAuthorizationRule resources.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRuleState-listen">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L172">property <b>listen</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L172">property <b>listen</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2767,7 +2957,7 @@ Input properties used for looking up and filtering NamespaceAuthorizationRule re
 Grants listen access to this this Authorization Rule. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRuleState-manage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L176">property <b>manage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L176">property <b>manage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>manage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2775,7 +2965,7 @@ Grants listen access to this this Authorization Rule. Defaults to `false`.
 Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L180">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L180">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2783,7 +2973,7 @@ Grants manage access to this this Authorization Rule. When this property is `tru
 Specifies the name of the ServiceBus Namespace Authorization Rule resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRuleState-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L184">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L184">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2791,7 +2981,7 @@ Specifies the name of the ServiceBus Namespace Authorization Rule resource. Chan
 Specifies the name of the ServiceBus Namespace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRuleState-primaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L188">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L188">property <b>primaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2799,7 +2989,7 @@ Specifies the name of the ServiceBus Namespace. Changing this forces a new resou
 The Primary Connection String for the ServiceBus Namespace authorization Rule.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRuleState-primaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L192">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L192">property <b>primaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2807,7 +2997,7 @@ The Primary Connection String for the ServiceBus Namespace authorization Rule.
 The Primary Key for the ServiceBus Namespace authorization Rule.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L196">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L196">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2815,7 +3005,7 @@ The Primary Key for the ServiceBus Namespace authorization Rule.
 The name of the resource group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRuleState-secondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L200">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L200">property <b>secondaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2823,7 +3013,7 @@ The name of the resource group in which the ServiceBus Namespace exists. Changin
 The Secondary Connection String for the ServiceBus Namespace authorization Rule.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRuleState-secondaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L204">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L204">property <b>secondaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2831,7 +3021,7 @@ The Secondary Connection String for the ServiceBus Namespace authorization Rule.
 The Secondary Key for the ServiceBus Namespace authorization Rule.
 
 <h4 class="pdoc-member-header" id="NamespaceAuthorizationRuleState-send">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L208">property <b>send</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceAuthorizationRule.ts#L208">property <b>send</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>send?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2839,7 +3029,7 @@ The Secondary Key for the ServiceBus Namespace authorization Rule.
 Grants send access to this this Authorization Rule. Defaults to `false`.
 
 <h3 class="pdoc-module-header" id="NamespaceNetworkRuleSetArgs" data-link-title="NamespaceNetworkRuleSetArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L179">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L179">
         interface <strong>NamespaceNetworkRuleSetArgs</strong>
     </a>
 </h3>
@@ -2849,7 +3039,7 @@ Grants send access to this this Authorization Rule. Defaults to `false`.
 The set of arguments for constructing a NamespaceNetworkRuleSet resource.
 
 <h4 class="pdoc-member-header" id="NamespaceNetworkRuleSetArgs-defaultAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L183">property <b>defaultAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L183">property <b>defaultAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2857,7 +3047,7 @@ The set of arguments for constructing a NamespaceNetworkRuleSet resource.
 Specifies the default action for the ServiceBus Namespace Network Rule Set. Possible values are `Allow` and `Deny`. Defaults to `Deny`.
 
 <h4 class="pdoc-member-header" id="NamespaceNetworkRuleSetArgs-ipRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L187">property <b>ipRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L187">property <b>ipRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2865,7 +3055,7 @@ Specifies the default action for the ServiceBus Namespace Network Rule Set. Poss
 One or more IP Addresses, or CIDR Blocks which should be able to access the ServiceBus Namespace.
 
 <h4 class="pdoc-member-header" id="NamespaceNetworkRuleSetArgs-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L191">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L191">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2873,7 +3063,7 @@ One or more IP Addresses, or CIDR Blocks which should be able to access the Serv
 Specifies the ServiceBus Namespace name to which to attach the ServiceBus Namespace Network Rule Set. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NamespaceNetworkRuleSetArgs-networkRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L195">property <b>networkRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L195">property <b>networkRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NamespaceNetworkRuleSetNetworkRule'>NamespaceNetworkRuleSetNetworkRule</a>&gt;[]&gt;;</code></pre>
@@ -2881,7 +3071,7 @@ Specifies the ServiceBus Namespace name to which to attach the ServiceBus Namesp
 One or more `networkRules` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="NamespaceNetworkRuleSetArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L199">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L199">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2889,7 +3079,7 @@ One or more `networkRules` blocks as defined below.
 Specifies the name of the Resource Group where the ServiceBus Namespace Network Rule Set should exist. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="NamespaceNetworkRuleSetState" data-link-title="NamespaceNetworkRuleSetState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L153">
         interface <strong>NamespaceNetworkRuleSetState</strong>
     </a>
 </h3>
@@ -2899,7 +3089,7 @@ Specifies the name of the Resource Group where the ServiceBus Namespace Network 
 Input properties used for looking up and filtering NamespaceNetworkRuleSet resources.
 
 <h4 class="pdoc-member-header" id="NamespaceNetworkRuleSetState-defaultAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L157">property <b>defaultAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L157">property <b>defaultAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2907,7 +3097,7 @@ Input properties used for looking up and filtering NamespaceNetworkRuleSet resou
 Specifies the default action for the ServiceBus Namespace Network Rule Set. Possible values are `Allow` and `Deny`. Defaults to `Deny`.
 
 <h4 class="pdoc-member-header" id="NamespaceNetworkRuleSetState-ipRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L161">property <b>ipRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L161">property <b>ipRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2915,7 +3105,7 @@ Specifies the default action for the ServiceBus Namespace Network Rule Set. Poss
 One or more IP Addresses, or CIDR Blocks which should be able to access the ServiceBus Namespace.
 
 <h4 class="pdoc-member-header" id="NamespaceNetworkRuleSetState-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L165">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L165">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2923,7 +3113,7 @@ One or more IP Addresses, or CIDR Blocks which should be able to access the Serv
 Specifies the ServiceBus Namespace name to which to attach the ServiceBus Namespace Network Rule Set. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NamespaceNetworkRuleSetState-networkRules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L169">property <b>networkRules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L169">property <b>networkRules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NamespaceNetworkRuleSetNetworkRule'>NamespaceNetworkRuleSetNetworkRule</a>&gt;[]&gt;;</code></pre>
@@ -2931,7 +3121,7 @@ Specifies the ServiceBus Namespace name to which to attach the ServiceBus Namesp
 One or more `networkRules` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="NamespaceNetworkRuleSetState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L173">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespaceNetworkRuleSet.ts#L173">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2939,7 +3129,7 @@ One or more `networkRules` blocks as defined below.
 Specifies the name of the Resource Group where the ServiceBus Namespace Network Rule Set should exist. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="NamespaceState" data-link-title="NamespaceState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L171">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L171">
         interface <strong>NamespaceState</strong>
     </a>
 </h3>
@@ -2949,7 +3139,7 @@ Specifies the name of the Resource Group where the ServiceBus Namespace Network 
 Input properties used for looking up and filtering Namespace resources.
 
 <h4 class="pdoc-member-header" id="NamespaceState-capacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L175">property <b>capacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L175">property <b>capacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>capacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2957,7 +3147,7 @@ Input properties used for looking up and filtering Namespace resources.
 Specifies the capacity. When `sku` is `Premium`, capacity can be `1`, `2`, `4` or `8`. When `sku` is `Basic` or `Standard`, capacity can be `0` only.
 
 <h4 class="pdoc-member-header" id="NamespaceState-defaultPrimaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L180">property <b>defaultPrimaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L180">property <b>defaultPrimaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultPrimaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2966,7 +3156,7 @@ The primary connection string for the authorization
 rule `RootManageSharedAccessKey`.
 
 <h4 class="pdoc-member-header" id="NamespaceState-defaultPrimaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L184">property <b>defaultPrimaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L184">property <b>defaultPrimaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultPrimaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2974,7 +3164,7 @@ rule `RootManageSharedAccessKey`.
 The primary access key for the authorization rule `RootManageSharedAccessKey`.
 
 <h4 class="pdoc-member-header" id="NamespaceState-defaultSecondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L189">property <b>defaultSecondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L189">property <b>defaultSecondaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultSecondaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2983,7 +3173,7 @@ The secondary connection string for the
 authorization rule `RootManageSharedAccessKey`.
 
 <h4 class="pdoc-member-header" id="NamespaceState-defaultSecondaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L193">property <b>defaultSecondaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L193">property <b>defaultSecondaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultSecondaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2991,7 +3181,7 @@ authorization rule `RootManageSharedAccessKey`.
 The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 
 <h4 class="pdoc-member-header" id="NamespaceState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L197">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L197">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2999,7 +3189,7 @@ The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NamespaceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L202">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L202">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3008,7 +3198,7 @@ Specifies the name of the ServiceBus Namespace resource . Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="NamespaceState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L207">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L207">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3017,7 +3207,7 @@ The name of the resource group in which to
 create the namespace.
 
 <h4 class="pdoc-member-header" id="NamespaceState-sku">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L211">property <b>sku</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L211">property <b>sku</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3025,7 +3215,7 @@ create the namespace.
 Defines which tier to use. Options are basic, standard or premium. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="NamespaceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L215">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L215">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3033,7 +3223,7 @@ Defines which tier to use. Options are basic, standard or premium. Changing this
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="NamespaceState-zoneRedundant">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/namespace.ts#L219">property <b>zoneRedundant</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/namespace.ts#L219">property <b>zoneRedundant</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneRedundant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3041,7 +3231,7 @@ A mapping of tags to assign to the resource.
 Whether or not this resource is zone redundant. `sku` needs to be `Premium`. Defaults to `false`.
 
 <h3 class="pdoc-module-header" id="QueueArgs" data-link-title="QueueArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L292">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L292">
         interface <strong>QueueArgs</strong>
     </a>
 </h3>
@@ -3051,7 +3241,7 @@ Whether or not this resource is zone redundant. `sku` needs to be `Premium`. Def
 The set of arguments for constructing a Queue resource.
 
 <h4 class="pdoc-member-header" id="QueueArgs-autoDeleteOnIdle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L296">property <b>autoDeleteOnIdle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L296">property <b>autoDeleteOnIdle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoDeleteOnIdle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3059,7 +3249,7 @@ The set of arguments for constructing a Queue resource.
 The ISO 8601 timespan duration of the idle interval after which the Queue is automatically deleted, minimum of 5 minutes.
 
 <h4 class="pdoc-member-header" id="QueueArgs-deadLetteringOnMessageExpiration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L300">property <b>deadLetteringOnMessageExpiration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L300">property <b>deadLetteringOnMessageExpiration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deadLetteringOnMessageExpiration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3067,7 +3257,7 @@ The ISO 8601 timespan duration of the idle interval after which the Queue is aut
 Boolean flag which controls whether the Queue has dead letter support when a message expires. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="QueueArgs-defaultMessageTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L304">property <b>defaultMessageTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L304">property <b>defaultMessageTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultMessageTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3075,7 +3265,7 @@ Boolean flag which controls whether the Queue has dead letter support when a mes
 The ISO 8601 timespan duration of the TTL of messages sent to this queue. This is the default value used when TTL is not set on message itself.
 
 <h4 class="pdoc-member-header" id="QueueArgs-duplicateDetectionHistoryTimeWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L308">property <b>duplicateDetectionHistoryTimeWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L308">property <b>duplicateDetectionHistoryTimeWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>duplicateDetectionHistoryTimeWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3083,7 +3273,7 @@ The ISO 8601 timespan duration of the TTL of messages sent to this queue. This i
 The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minutes (`PT10M`).
 
 <h4 class="pdoc-member-header" id="QueueArgs-enableBatchedOperations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L312">property <b>enableBatchedOperations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L312">property <b>enableBatchedOperations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableBatchedOperations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3091,7 +3281,7 @@ The ISO 8601 timespan duration during which duplicates can be detected. Defaults
 Boolean flag which controls whether server-side batched operations are enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="QueueArgs-enableExpress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L316">property <b>enableExpress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L316">property <b>enableExpress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableExpress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3099,7 +3289,7 @@ Boolean flag which controls whether server-side batched operations are enabled. 
 Boolean flag which controls whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage. Defaults to `false` for Basic and Standard. For Premium, it MUST be set to `false`.
 
 <h4 class="pdoc-member-header" id="QueueArgs-enablePartitioning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L320">property <b>enablePartitioning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L320">property <b>enablePartitioning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enablePartitioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3107,7 +3297,7 @@ Boolean flag which controls whether Express Entities are enabled. An express que
 Boolean flag which controls whether to enable the queue to be partitioned across multiple message brokers. Changing this forces a new resource to be created. Defaults to `false` for Basic and Standard. For Premium, it MUST be set to `true`.
 
 <h4 class="pdoc-member-header" id="QueueArgs-forwardDeadLetteredMessagesTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L324">property <b>forwardDeadLetteredMessagesTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L324">property <b>forwardDeadLetteredMessagesTo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forwardDeadLetteredMessagesTo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3115,7 +3305,7 @@ Boolean flag which controls whether to enable the queue to be partitioned across
 The name of a Queue or Topic to automatically forward dead lettered messages to.
 
 <h4 class="pdoc-member-header" id="QueueArgs-forwardTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L328">property <b>forwardTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L328">property <b>forwardTo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forwardTo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3123,7 +3313,7 @@ The name of a Queue or Topic to automatically forward dead lettered messages to.
 The name of a Queue or Topic to automatically forward messages to. Please [see the documentation](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-auto-forwarding) for more information.
 
 <h4 class="pdoc-member-header" id="QueueArgs-lockDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L332">property <b>lockDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L332">property <b>lockDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lockDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3131,7 +3321,7 @@ The name of a Queue or Topic to automatically forward messages to. Please [see t
 The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute (`PT1M`).
 
 <h4 class="pdoc-member-header" id="QueueArgs-maxDeliveryCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L336">property <b>maxDeliveryCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L336">property <b>maxDeliveryCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxDeliveryCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3139,7 +3329,7 @@ The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that 
 Integer value which controls when a message is automatically dead lettered. Defaults to `10`.
 
 <h4 class="pdoc-member-header" id="QueueArgs-maxSizeInMegabytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L340">property <b>maxSizeInMegabytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L340">property <b>maxSizeInMegabytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxSizeInMegabytes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3147,7 +3337,7 @@ Integer value which controls when a message is automatically dead lettered. Defa
 Integer value which controls the size of memory allocated for the queue. For supported values see the "Queue or topic size" section of [Service Bus Quotas](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas). Defaults to `1024`.
 
 <h4 class="pdoc-member-header" id="QueueArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L344">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L344">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3155,7 +3345,7 @@ Integer value which controls the size of memory allocated for the queue. For sup
 Specifies the name of the ServiceBus Queue resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="QueueArgs-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L348">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L348">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3163,7 +3353,7 @@ Specifies the name of the ServiceBus Queue resource. Changing this forces a new 
 The name of the ServiceBus Namespace to create this queue in. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="QueueArgs-requiresDuplicateDetection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L352">property <b>requiresDuplicateDetection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L352">property <b>requiresDuplicateDetection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requiresDuplicateDetection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3171,7 +3361,7 @@ The name of the ServiceBus Namespace to create this queue in. Changing this forc
 Boolean flag which controls whether the Queue requires duplicate detection. Changing this forces a new resource to be created. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="QueueArgs-requiresSession">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L356">property <b>requiresSession</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L356">property <b>requiresSession</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requiresSession?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3179,7 +3369,7 @@ Boolean flag which controls whether the Queue requires duplicate detection. Chan
 Boolean flag which controls whether the Queue requires sessions. This will allow ordered handling of unbounded sequences of related messages. With sessions enabled a queue can guarantee first-in-first-out delivery of messages. Changing this forces a new resource to be created. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="QueueArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L360">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L360">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3187,7 +3377,7 @@ Boolean flag which controls whether the Queue requires sessions. This will allow
 The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="QueueArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L364">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L364">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3195,7 +3385,7 @@ The name of the resource group in which to create the namespace. Changing this f
 The status of the Queue. Possible values are `Active`, `Creating`, `Deleting`, `Disabled`, `ReceiveDisabled`, `Renaming`, `SendDisabled`, `Unknown`. Note that `Restoring` is not accepted. Defaults to `Active`.
 
 <h3 class="pdoc-module-header" id="QueueAuthorizationRuleArgs" data-link-title="QueueAuthorizationRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L233">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L233">
         interface <strong>QueueAuthorizationRuleArgs</strong>
     </a>
 </h3>
@@ -3205,7 +3395,7 @@ The status of the Queue. Possible values are `Active`, `Creating`, `Deleting`, `
 The set of arguments for constructing a QueueAuthorizationRule resource.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRuleArgs-listen">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L237">property <b>listen</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L237">property <b>listen</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3213,7 +3403,7 @@ The set of arguments for constructing a QueueAuthorizationRule resource.
 Does this Authorization Rule have Listen permissions to the ServiceBus Queue? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRuleArgs-manage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L241">property <b>manage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L241">property <b>manage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>manage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3221,7 +3411,7 @@ Does this Authorization Rule have Listen permissions to the ServiceBus Queue? De
 Does this Authorization Rule have Manage permissions to the ServiceBus Queue? When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L245">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L245">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3229,7 +3419,7 @@ Does this Authorization Rule have Manage permissions to the ServiceBus Queue? Wh
 Specifies the name of the Authorization Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRuleArgs-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L249">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L249">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3237,7 +3427,7 @@ Specifies the name of the Authorization Rule. Changing this forces a new resourc
 Specifies the name of the ServiceBus Namespace in which the Queue exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRuleArgs-queueName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L253">property <b>queueName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L253">property <b>queueName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queueName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3245,7 +3435,7 @@ Specifies the name of the ServiceBus Namespace in which the Queue exists. Changi
 Specifies the name of the ServiceBus Queue. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L257">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L257">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3253,7 +3443,7 @@ Specifies the name of the ServiceBus Queue. Changing this forces a new resource 
 The name of the Resource Group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRuleArgs-send">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L261">property <b>send</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L261">property <b>send</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>send?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3261,7 +3451,7 @@ The name of the Resource Group in which the ServiceBus Namespace exists. Changin
 Does this Authorization Rule have Send permissions to the ServiceBus Queue? Defaults to `false`.
 
 <h3 class="pdoc-module-header" id="QueueAuthorizationRuleState" data-link-title="QueueAuthorizationRuleState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L183">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L183">
         interface <strong>QueueAuthorizationRuleState</strong>
     </a>
 </h3>
@@ -3271,7 +3461,7 @@ Does this Authorization Rule have Send permissions to the ServiceBus Queue? Defa
 Input properties used for looking up and filtering QueueAuthorizationRule resources.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRuleState-listen">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L187">property <b>listen</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L187">property <b>listen</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3279,7 +3469,7 @@ Input properties used for looking up and filtering QueueAuthorizationRule resour
 Does this Authorization Rule have Listen permissions to the ServiceBus Queue? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRuleState-manage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L191">property <b>manage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L191">property <b>manage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>manage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3287,7 +3477,7 @@ Does this Authorization Rule have Listen permissions to the ServiceBus Queue? De
 Does this Authorization Rule have Manage permissions to the ServiceBus Queue? When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L195">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L195">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3295,7 +3485,7 @@ Does this Authorization Rule have Manage permissions to the ServiceBus Queue? Wh
 Specifies the name of the Authorization Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRuleState-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L199">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L199">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3303,7 +3493,7 @@ Specifies the name of the Authorization Rule. Changing this forces a new resourc
 Specifies the name of the ServiceBus Namespace in which the Queue exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRuleState-primaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L203">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L203">property <b>primaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3311,7 +3501,7 @@ Specifies the name of the ServiceBus Namespace in which the Queue exists. Changi
 The Primary Connection String for the Authorization Rule.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRuleState-primaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L207">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L207">property <b>primaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3319,7 +3509,7 @@ The Primary Connection String for the Authorization Rule.
 The Primary Key for the Authorization Rule.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRuleState-queueName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L211">property <b>queueName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L211">property <b>queueName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queueName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3327,7 +3517,7 @@ The Primary Key for the Authorization Rule.
 Specifies the name of the ServiceBus Queue. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L215">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L215">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3335,7 +3525,7 @@ Specifies the name of the ServiceBus Queue. Changing this forces a new resource 
 The name of the Resource Group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRuleState-secondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L219">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L219">property <b>secondaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3343,7 +3533,7 @@ The name of the Resource Group in which the ServiceBus Namespace exists. Changin
 The Secondary Connection String for the Authorization Rule.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRuleState-secondaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L223">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L223">property <b>secondaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3351,7 +3541,7 @@ The Secondary Connection String for the Authorization Rule.
 The Secondary Key for the Authorization Rule.
 
 <h4 class="pdoc-member-header" id="QueueAuthorizationRuleState-send">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L227">property <b>send</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queueAuthorizationRule.ts#L227">property <b>send</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>send?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3359,21 +3549,21 @@ The Secondary Key for the Authorization Rule.
 Does this Authorization Rule have Send permissions to the ServiceBus Queue? Defaults to `false`.
 
 <h3 class="pdoc-module-header" id="QueueEventSubscription" data-link-title="QueueEventSubscription">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L187">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L187">
         class <strong>QueueEventSubscription</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>QueueEventSubscription</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#EventSubscription'>EventSubscription</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="QueueEventSubscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L188"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L188"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> QueueEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, queue: Queue, args: <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="QueueEventSubscription-getData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L187">method <b>getData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L187">method <b>getData</b></a>
 </h4>
 
 
@@ -3384,14 +3574,14 @@ Retrieves the data produces by [initialize].  The data is immediately available 
 derived class's constructor after the `super(...)` call to `ComponentResource`.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L187">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L187">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="QueueEventSubscription-initialize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L187">method <b>initialize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L187">method <b>initialize</b></a>
 </h4>
 
 
@@ -3403,7 +3593,7 @@ automatically when constructed.  The data will be available immediately for subc
 constructors to use.  To access the data use `.getData`.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L187">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L187">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3414,7 +3604,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscription-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L187">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L187">method <b>registerOutputs</b></a>
 </h4>
 
 
@@ -3429,17 +3619,17 @@ done creating child resources.  This is not strictly necessary as this will auto
 called after the `initialize` method completes.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscription-functionApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L755">property <b>functionApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L755">property <b>functionApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>functionApp: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="QueueEventSubscription-queue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L188">property <b>queue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L188">property <b>queue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queue: Queue;</code></pre>
 <h4 class="pdoc-member-header" id="QueueEventSubscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L187">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L187">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3448,14 +3638,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="QueueEventSubscriptionArgs" data-link-title="QueueEventSubscriptionArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L137">
         interface <strong>QueueEventSubscriptionArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>QueueEventSubscriptionArgs</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-account">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L104">property <b>account</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L104">property <b>account</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>account?: storageForTypesOnly.Account;</code></pre>
@@ -3465,7 +3655,7 @@ not provided, a new storage account will create. It will be a 'Standard', 'LRS',
 account.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L109">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L109">property <b>appSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -3473,7 +3663,7 @@ account.
 A key-value pair of App Settings.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-authSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L114">property <b>authSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L114">property <b>authSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppAuthSettings'>FunctionAppAuthSettings</a>&gt;;</code></pre>
@@ -3481,7 +3671,7 @@ A key-value pair of App Settings.
 A `authSettings` block as defined below.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L83">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L83">property <b>callback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callback?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Callback'>Callback</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
@@ -3490,7 +3680,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 [callback] or [callbackFactory] must be provided.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-callbackFactory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L95">property <b>callbackFactory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L95">property <b>callbackFactory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFactory'>CallbackFactory</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
@@ -3505,7 +3695,7 @@ loaded. It can run whatever code it needs, and will end by returning the actual 
 the Azure will call into each time the FunctionApp it is is invoked.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-clientAffinityEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L119">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L119">property <b>clientAffinityEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3513,7 +3703,7 @@ the Azure will call into each time the FunctionApp it is is invoked.
 Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-codePathOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L124">property <b>codePathOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L124">property <b>codePathOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>codePathOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#CodePathOptions'>pulumi.runtime.CodePathOptions</a>;</code></pre>
@@ -3521,7 +3711,7 @@ Should the Function App send session affinity cookies, which route client reques
 Options to control which files and packages are included with the serialized FunctionApp code.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-connectionStrings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L129">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L129">property <b>connectionStrings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -3533,7 +3723,7 @@ Options to control which files and packages are included with the serialized Fun
 An `connection_string` block as defined below.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L135">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L135">property <b>container</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>container?: storageForTypesOnly.Container;</code></pre>
@@ -3542,7 +3732,7 @@ The container to use where the zip-file blob for the FunctionApp will be located
 provided, the root container of the storage account will be used.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-dailyMemoryTimeQuota">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L140">property <b>dailyMemoryTimeQuota</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L140">property <b>dailyMemoryTimeQuota</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dailyMemoryTimeQuota?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3550,7 +3740,7 @@ provided, the root container of the storage account will be used.
 The amount of memory in gigabyte-seconds that your application is allowed to consume per day. Setting this value only affects function apps under the consumption plan. Defaults to `0`.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-enableBuiltinLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L145">property <b>enableBuiltinLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L145">property <b>enableBuiltinLogging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableBuiltinLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3558,7 +3748,7 @@ The amount of memory in gigabyte-seconds that your application is allowed to con
 Should the built-in logging of this Function App be enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L150">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L150">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3566,7 +3756,7 @@ Should the built-in logging of this Function App be enabled? Defaults to `true`.
 Is the Function App enabled?
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-hostSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L148">property <b>hostSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L148">property <b>hostSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostSettings?: <a href='#ServiceBusHostSettings'>ServiceBusHostSettings</a>;</code></pre>
@@ -3575,7 +3765,7 @@ Host settings specific to the Service Bus Topic/Subscription plugin. These value
 be used in their place.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L160">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L160">property <b>httpsOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3583,7 +3773,7 @@ be used in their place.
 Can the Function App only be accessed via HTTPS? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L165">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L165">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppIdentity'>FunctionAppIdentity</a>&gt;;</code></pre>
@@ -3591,7 +3781,7 @@ Can the Function App only be accessed via HTTPS? Defaults to `false`.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-inputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L453">property <b>inputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L453">property <b>inputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
@@ -3599,7 +3789,7 @@ An `identity` block as defined below.
 Input bindings.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L170">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L170">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3607,7 +3797,7 @@ Input bindings.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L175">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L175">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3615,7 +3805,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 The name of the Function App.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-nodeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L181">property <b>nodeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L181">property <b>nodeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3624,7 +3814,7 @@ Controls the value of WEBSITE_NODE_DEFAULT_VERSION in `appSettings`.  If not pro
 defaults to `~12`.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-osType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L186">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L186">property <b>osType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>osType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3632,7 +3822,7 @@ defaults to `~12`.
 A string indicating the Operating System type for this function app.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L458">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L458">property <b>outputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
@@ -3640,7 +3830,7 @@ A string indicating the Operating System type for this function app.
 Output bindings.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L196">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L196">property <b>plan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plan?: appservice.Plan;</code></pre>
@@ -3653,7 +3843,7 @@ https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale#consumpti
 more details.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-resourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L201">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L201">property <b>resourceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroup?: core.ResourceGroup;</code></pre>
@@ -3661,7 +3851,7 @@ more details.
 The resource group in which to create the event subscription. [resourceGroup] takes precedence over [resourceGroupName].
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L142">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L142">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3670,7 +3860,7 @@ The name of the resource group in which to create the event subscription. [resou
 If none of the two is supplied, the Queue's resource group will be used.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-siteConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L212">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L212">property <b>siteConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppSiteConfig'>FunctionAppSiteConfig</a>&gt;;</code></pre>
@@ -3678,7 +3868,7 @@ If none of the two is supplied, the Queue's resource group will be used.
 A `site_config` object as defined below.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L217">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L217">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -3686,7 +3876,7 @@ A `site_config` object as defined below.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="QueueEventSubscriptionArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L222">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L222">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3694,7 +3884,7 @@ A mapping of tags to assign to the resource.
 The runtime version associated with the Function App. Defaults to `~3`.
 
 <h3 class="pdoc-module-header" id="QueueState" data-link-title="QueueState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L214">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L214">
         interface <strong>QueueState</strong>
     </a>
 </h3>
@@ -3704,7 +3894,7 @@ The runtime version associated with the Function App. Defaults to `~3`.
 Input properties used for looking up and filtering Queue resources.
 
 <h4 class="pdoc-member-header" id="QueueState-autoDeleteOnIdle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L218">property <b>autoDeleteOnIdle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L218">property <b>autoDeleteOnIdle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoDeleteOnIdle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3712,7 +3902,7 @@ Input properties used for looking up and filtering Queue resources.
 The ISO 8601 timespan duration of the idle interval after which the Queue is automatically deleted, minimum of 5 minutes.
 
 <h4 class="pdoc-member-header" id="QueueState-deadLetteringOnMessageExpiration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L222">property <b>deadLetteringOnMessageExpiration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L222">property <b>deadLetteringOnMessageExpiration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deadLetteringOnMessageExpiration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3720,7 +3910,7 @@ The ISO 8601 timespan duration of the idle interval after which the Queue is aut
 Boolean flag which controls whether the Queue has dead letter support when a message expires. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="QueueState-defaultMessageTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L226">property <b>defaultMessageTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L226">property <b>defaultMessageTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultMessageTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3728,7 +3918,7 @@ Boolean flag which controls whether the Queue has dead letter support when a mes
 The ISO 8601 timespan duration of the TTL of messages sent to this queue. This is the default value used when TTL is not set on message itself.
 
 <h4 class="pdoc-member-header" id="QueueState-duplicateDetectionHistoryTimeWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L230">property <b>duplicateDetectionHistoryTimeWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L230">property <b>duplicateDetectionHistoryTimeWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>duplicateDetectionHistoryTimeWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3736,7 +3926,7 @@ The ISO 8601 timespan duration of the TTL of messages sent to this queue. This i
 The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minutes (`PT10M`).
 
 <h4 class="pdoc-member-header" id="QueueState-enableBatchedOperations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L234">property <b>enableBatchedOperations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L234">property <b>enableBatchedOperations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableBatchedOperations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3744,7 +3934,7 @@ The ISO 8601 timespan duration during which duplicates can be detected. Defaults
 Boolean flag which controls whether server-side batched operations are enabled. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="QueueState-enableExpress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L238">property <b>enableExpress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L238">property <b>enableExpress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableExpress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3752,7 +3942,7 @@ Boolean flag which controls whether server-side batched operations are enabled. 
 Boolean flag which controls whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage. Defaults to `false` for Basic and Standard. For Premium, it MUST be set to `false`.
 
 <h4 class="pdoc-member-header" id="QueueState-enablePartitioning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L242">property <b>enablePartitioning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L242">property <b>enablePartitioning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enablePartitioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3760,7 +3950,7 @@ Boolean flag which controls whether Express Entities are enabled. An express que
 Boolean flag which controls whether to enable the queue to be partitioned across multiple message brokers. Changing this forces a new resource to be created. Defaults to `false` for Basic and Standard. For Premium, it MUST be set to `true`.
 
 <h4 class="pdoc-member-header" id="QueueState-forwardDeadLetteredMessagesTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L246">property <b>forwardDeadLetteredMessagesTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L246">property <b>forwardDeadLetteredMessagesTo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forwardDeadLetteredMessagesTo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3768,7 +3958,7 @@ Boolean flag which controls whether to enable the queue to be partitioned across
 The name of a Queue or Topic to automatically forward dead lettered messages to.
 
 <h4 class="pdoc-member-header" id="QueueState-forwardTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L250">property <b>forwardTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L250">property <b>forwardTo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forwardTo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3776,7 +3966,7 @@ The name of a Queue or Topic to automatically forward dead lettered messages to.
 The name of a Queue or Topic to automatically forward messages to. Please [see the documentation](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-auto-forwarding) for more information.
 
 <h4 class="pdoc-member-header" id="QueueState-lockDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L254">property <b>lockDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L254">property <b>lockDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lockDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3784,7 +3974,7 @@ The name of a Queue or Topic to automatically forward messages to. Please [see t
 The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute (`PT1M`).
 
 <h4 class="pdoc-member-header" id="QueueState-maxDeliveryCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L258">property <b>maxDeliveryCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L258">property <b>maxDeliveryCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxDeliveryCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3792,7 +3982,7 @@ The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that 
 Integer value which controls when a message is automatically dead lettered. Defaults to `10`.
 
 <h4 class="pdoc-member-header" id="QueueState-maxSizeInMegabytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L262">property <b>maxSizeInMegabytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L262">property <b>maxSizeInMegabytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxSizeInMegabytes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3800,7 +3990,7 @@ Integer value which controls when a message is automatically dead lettered. Defa
 Integer value which controls the size of memory allocated for the queue. For supported values see the "Queue or topic size" section of [Service Bus Quotas](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas). Defaults to `1024`.
 
 <h4 class="pdoc-member-header" id="QueueState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L266">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L266">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3808,7 +3998,7 @@ Integer value which controls the size of memory allocated for the queue. For sup
 Specifies the name of the ServiceBus Queue resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="QueueState-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L270">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L270">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3816,7 +4006,7 @@ Specifies the name of the ServiceBus Queue resource. Changing this forces a new 
 The name of the ServiceBus Namespace to create this queue in. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="QueueState-requiresDuplicateDetection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L274">property <b>requiresDuplicateDetection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L274">property <b>requiresDuplicateDetection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requiresDuplicateDetection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3824,7 +4014,7 @@ The name of the ServiceBus Namespace to create this queue in. Changing this forc
 Boolean flag which controls whether the Queue requires duplicate detection. Changing this forces a new resource to be created. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="QueueState-requiresSession">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L278">property <b>requiresSession</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L278">property <b>requiresSession</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requiresSession?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3832,7 +4022,7 @@ Boolean flag which controls whether the Queue requires duplicate detection. Chan
 Boolean flag which controls whether the Queue requires sessions. This will allow ordered handling of unbounded sequences of related messages. With sessions enabled a queue can guarantee first-in-first-out delivery of messages. Changing this forces a new resource to be created. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="QueueState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L282">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L282">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3840,7 +4030,7 @@ Boolean flag which controls whether the Queue requires sessions. This will allow
 The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="QueueState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/queue.ts#L286">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/queue.ts#L286">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3848,7 +4038,7 @@ The name of the resource group in which to create the namespace. Changing this f
 The status of the Queue. Possible values are `Active`, `Creating`, `Deleting`, `Disabled`, `ReceiveDisabled`, `Renaming`, `SendDisabled`, `Unknown`. Note that `Restoring` is not accepted. Defaults to `Active`.
 
 <h3 class="pdoc-module-header" id="ServiceBusCallback" data-link-title="ServiceBusCallback">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L118">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L118">
         type <strong>ServiceBusCallback</strong>
     </a>
 </h3>
@@ -3858,7 +4048,7 @@ The status of the Queue. Possible values are `Active`, `Creating`, `Deleting`, `
 Signature of the callback that can receive queue and topic notifications.
 
 <h3 class="pdoc-module-header" id="ServiceBusContext" data-link-title="ServiceBusContext">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L60">
         interface <strong>ServiceBusContext</strong>
     </a>
 </h3>
@@ -3868,7 +4058,7 @@ Signature of the callback that can receive queue and topic notifications.
 Data that will be passed along in the context object to the ServiceBusCallback.
 
 <h4 class="pdoc-member-header" id="ServiceBusContext-done">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L49">method <b>done</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L49">method <b>done</b></a>
 </h4>
 
 
@@ -3880,7 +4070,7 @@ function is synchronous, you must call context.done at the end of execution. If 
 is asynchronous, you should not use this callback.
 
 <h4 class="pdoc-member-header" id="ServiceBusContext-bindingData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L68">property <b>bindingData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L68">property <b>bindingData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bindingData: {
@@ -3900,7 +4090,7 @@ is asynchronous, you should not use this callback.
     to: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>;
 };</code></pre>
 <h4 class="pdoc-member-header" id="ServiceBusContext-bindingDefinitions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L60">property <b>bindingDefinitions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L60">property <b>bindingDefinitions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bindingDefinitions: BindingDefinition[];</code></pre>
@@ -3908,14 +4098,14 @@ is asynchronous, you should not use this callback.
 Bindings your function uses, as defined in function.json.
 
 <h4 class="pdoc-member-header" id="ServiceBusContext-bindings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L67">property <b>bindings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L67">property <b>bindings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bindings: {
     message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 };</code></pre>
 <h4 class="pdoc-member-header" id="ServiceBusContext-executionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L62">property <b>executionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L62">property <b>executionContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>executionContext: {
@@ -3924,12 +4114,12 @@ Bindings your function uses, as defined in function.json.
     invocationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 };</code></pre>
 <h4 class="pdoc-member-header" id="ServiceBusContext-invocationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L61">property <b>invocationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L61">property <b>invocationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>invocationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceBusContext-log">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L60">property <b>log</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L60">property <b>log</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>log: Logger;</code></pre>
@@ -3938,7 +4128,7 @@ Allows you to write streaming function logs. Calling directly allows you to writ
 at the default trace level.
 
 <h4 class="pdoc-member-header" id="ServiceBusContext-req">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L60">property <b>req</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L60">property <b>req</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>req?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#HttpRequest'>HttpRequest</a>;</code></pre>
@@ -3946,7 +4136,7 @@ at the default trace level.
 HTTP request object. Provided to your function when using HTTP Bindings.
 
 <h4 class="pdoc-member-header" id="ServiceBusContext-res">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L60">property <b>res</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L60">property <b>res</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>res?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -3954,7 +4144,7 @@ HTTP request object. Provided to your function when using HTTP Bindings.
 HTTP response object. Provided to your function when using HTTP Bindings.
 
 <h4 class="pdoc-member-header" id="ServiceBusContext-traceContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L60">property <b>traceContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L60">property <b>traceContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>traceContext: TraceContext;</code></pre>
@@ -3962,7 +4152,7 @@ HTTP response object. Provided to your function when using HTTP Bindings.
 TraceContext information to enable distributed tracing scenarios.
 
 <h3 class="pdoc-module-header" id="ServiceBusFunction" data-link-title="ServiceBusFunction">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L290">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L290">
         class <strong>ServiceBusFunction</strong>
     </a>
 </h3>
@@ -3972,14 +4162,14 @@ TraceContext information to enable distributed tracing scenarios.
 Azure Function triggered by a ServiceBus Topic.
 
 <h4 class="pdoc-member-header" id="ServiceBusFunction-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L290"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L290"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> ServiceBusFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServiceBusFunctionArgs'>ServiceBusFunctionArgs</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="ServiceBusFunction-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L493">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L493">property <b>appSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -3987,7 +4177,7 @@ Azure Function triggered by a ServiceBus Topic.
 Application settings required by the function.
 
 <h4 class="pdoc-member-header" id="ServiceBusFunction-bindings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L483">property <b>bindings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L483">property <b>bindings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bindings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;BindingDefinition[]&gt;;</code></pre>
@@ -3995,7 +4185,7 @@ Application settings required by the function.
 An array of function binding definitions.
 
 <h4 class="pdoc-member-header" id="ServiceBusFunction-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L488">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L488">property <b>callback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>callback: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackArgs'>CallbackArgs</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
@@ -4003,7 +4193,7 @@ An array of function binding definitions.
 Function callback.
 
 <h4 class="pdoc-member-header" id="ServiceBusFunction-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L478">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L478">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4011,14 +4201,14 @@ Function callback.
 Function name.
 
 <h3 class="pdoc-module-header" id="ServiceBusFunctionArgs" data-link-title="ServiceBusFunctionArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L120">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L120">
         interface <strong>ServiceBusFunctionArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceBusFunctionArgs</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="ServiceBusFunctionArgs-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L83">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L83">property <b>callback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callback?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Callback'>Callback</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
@@ -4027,7 +4217,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 [callback] or [callbackFactory] must be provided.
 
 <h4 class="pdoc-member-header" id="ServiceBusFunctionArgs-callbackFactory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L95">property <b>callbackFactory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L95">property <b>callbackFactory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFactory'>CallbackFactory</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
@@ -4042,7 +4232,7 @@ loaded. It can run whatever code it needs, and will end by returning the actual 
 the Azure will call into each time the FunctionApp it is is invoked.
 
 <h4 class="pdoc-member-header" id="ServiceBusFunctionArgs-inputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L453">property <b>inputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L453">property <b>inputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
@@ -4050,7 +4240,7 @@ the Azure will call into each time the FunctionApp it is is invoked.
 Input bindings.
 
 <h4 class="pdoc-member-header" id="ServiceBusFunctionArgs-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L458">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L458">property <b>outputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
@@ -4058,7 +4248,7 @@ Input bindings.
 Output bindings.
 
 <h4 class="pdoc-member-header" id="ServiceBusFunctionArgs-queue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L124">property <b>queue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L124">property <b>queue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queue?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/eventhub/#Queue'>Queue</a>;</code></pre>
@@ -4066,7 +4256,7 @@ Output bindings.
 The ServiceBus Queue to subscribe to.
 
 <h4 class="pdoc-member-header" id="ServiceBusFunctionArgs-subscription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L134">property <b>subscription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L134">property <b>subscription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscription?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#Subscription'>Subscription</a>;</code></pre>
@@ -4074,7 +4264,7 @@ The ServiceBus Queue to subscribe to.
 The ServiceBus Subscription to subscribe the Function to.
 
 <h4 class="pdoc-member-header" id="ServiceBusFunctionArgs-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L129">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L129">property <b>topic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topic?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/eventhub/#Topic'>Topic</a>;</code></pre>
@@ -4082,7 +4272,7 @@ The ServiceBus Subscription to subscribe the Function to.
 The ServiceBus Topic to subscribe to.
 
 <h3 class="pdoc-module-header" id="ServiceBusHostExtensions" data-link-title="ServiceBusHostExtensions">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L91">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L91">
         interface <strong>ServiceBusHostExtensions</strong>
     </a>
 </h3>
@@ -4094,7 +4284,7 @@ Host settings specific to the Service Bus Queue/Topic/Subscription plugin.
 For more details see https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-service-bus#host-json
 
 <h4 class="pdoc-member-header" id="ServiceBusHostExtensions-aggregator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L251">property <b>aggregator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L251">property <b>aggregator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aggregator?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -4109,7 +4299,7 @@ See https://docs.microsoft.com/en-us/azure/azure-functions/functions-host-json#a
 more details.
 
 <h4 class="pdoc-member-header" id="ServiceBusHostExtensions-extensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L324">property <b>extensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L324">property <b>extensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extensions?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -4121,7 +4311,7 @@ more details.
 Extension-specific configuration options.
 
 <h4 class="pdoc-member-header" id="ServiceBusHostExtensions-functionTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L263">property <b>functionTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L263">property <b>functionTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4132,7 +4322,7 @@ plan, there is no overall limit and the default depends on the runtime version. 
 2.x, the default value for an App Service plan is 30 minutes.
 
 <h4 class="pdoc-member-header" id="ServiceBusHostExtensions-healthMonitor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L269">property <b>healthMonitor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L269">property <b>healthMonitor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthMonitor?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -4147,7 +4337,7 @@ Configuration settings for
 [host-health-monitor](https://github.com/Azure/azure-webjobs-sdk-script/wiki/Host-Health-Monitor).
 
 <h4 class="pdoc-member-header" id="ServiceBusHostExtensions-logging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L289">property <b>logging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L289">property <b>logging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logging?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -4166,7 +4356,7 @@ Configuration settings for
 Controls the logging behaviors of the function app, including Application Insights.
 
 <h4 class="pdoc-member-header" id="ServiceBusHostExtensions-messageHandlerOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L95">property <b>messageHandlerOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L95">property <b>messageHandlerOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageHandlerOptions?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -4175,7 +4365,7 @@ Controls the logging behaviors of the function app, including Application Insigh
     maxConcurrentCalls?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
 };</code></pre>
 <h4 class="pdoc-member-header" id="ServiceBusHostExtensions-prefetchCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L93">property <b>prefetchCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L93">property <b>prefetchCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prefetchCount?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -4183,7 +4373,7 @@ Controls the logging behaviors of the function app, including Application Insigh
 The default PrefetchCount that will be used by the underlying MessageReceiver.
 
 <h4 class="pdoc-member-header" id="ServiceBusHostExtensions-singleton">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L310">property <b>singleton</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L310">property <b>singleton</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>singleton?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -4199,14 +4389,14 @@ Configuration settings for Singleton lock behavior. For more information, see
 support.
 
 <h3 class="pdoc-module-header" id="ServiceBusHostSettings" data-link-title="ServiceBusHostSettings">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L109">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L109">
         interface <strong>ServiceBusHostSettings</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ServiceBusHostSettings</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#HostSettings'>HostSettings</a></code></pre>
 <h4 class="pdoc-member-header" id="ServiceBusHostSettings-aggregator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L251">property <b>aggregator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L251">property <b>aggregator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>aggregator?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -4221,14 +4411,14 @@ See https://docs.microsoft.com/en-us/azure/azure-functions/functions-host-json#a
 more details.
 
 <h4 class="pdoc-member-header" id="ServiceBusHostSettings-extensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L110">property <b>extensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L110">property <b>extensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extensions?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
     serviceBus: <a href='#ServiceBusHostExtensions'>ServiceBusHostExtensions</a>;
 };</code></pre>
 <h4 class="pdoc-member-header" id="ServiceBusHostSettings-functionTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L263">property <b>functionTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L263">property <b>functionTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4239,7 +4429,7 @@ plan, there is no overall limit and the default depends on the runtime version. 
 2.x, the default value for an App Service plan is 30 minutes.
 
 <h4 class="pdoc-member-header" id="ServiceBusHostSettings-healthMonitor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L269">property <b>healthMonitor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L269">property <b>healthMonitor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthMonitor?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -4254,7 +4444,7 @@ Configuration settings for
 [host-health-monitor](https://github.com/Azure/azure-webjobs-sdk-script/wiki/Host-Health-Monitor).
 
 <h4 class="pdoc-member-header" id="ServiceBusHostSettings-logging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L289">property <b>logging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L289">property <b>logging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logging?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -4273,7 +4463,7 @@ Configuration settings for
 Controls the logging behaviors of the function app, including Application Insights.
 
 <h4 class="pdoc-member-header" id="ServiceBusHostSettings-singleton">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L310">property <b>singleton</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L310">property <b>singleton</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>singleton?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
@@ -4289,7 +4479,7 @@ Configuration settings for Singleton lock behavior. For more information, see
 support.
 
 <h3 class="pdoc-module-header" id="SubscriptionArgs" data-link-title="SubscriptionArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L274">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L274">
         interface <strong>SubscriptionArgs</strong>
     </a>
 </h3>
@@ -4299,7 +4489,7 @@ support.
 The set of arguments for constructing a Subscription resource.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-autoDeleteOnIdle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L278">property <b>autoDeleteOnIdle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L278">property <b>autoDeleteOnIdle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoDeleteOnIdle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4307,7 +4497,7 @@ The set of arguments for constructing a Subscription resource.
 The idle interval after which the topic is automatically deleted as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The minimum duration is `5` minutes or `P5M`.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-deadLetteringOnFilterEvaluationError">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L282">property <b>deadLetteringOnFilterEvaluationError</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L282">property <b>deadLetteringOnFilterEvaluationError</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deadLetteringOnFilterEvaluationError?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4315,7 +4505,7 @@ The idle interval after which the topic is automatically deleted as an [ISO 8601
 Boolean flag which controls whether the Subscription has dead letter support on filter evaluation exceptions. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-deadLetteringOnMessageExpiration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L286">property <b>deadLetteringOnMessageExpiration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L286">property <b>deadLetteringOnMessageExpiration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deadLetteringOnMessageExpiration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4323,7 +4513,7 @@ Boolean flag which controls whether the Subscription has dead letter support on 
 Boolean flag which controls whether the Subscription has dead letter support when a message expires. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-defaultMessageTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L290">property <b>defaultMessageTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L290">property <b>defaultMessageTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultMessageTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4331,7 +4521,7 @@ Boolean flag which controls whether the Subscription has dead letter support whe
 The Default message timespan to live as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-enableBatchedOperations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L294">property <b>enableBatchedOperations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L294">property <b>enableBatchedOperations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableBatchedOperations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4339,7 +4529,7 @@ The Default message timespan to live as an [ISO 8601 duration](https://en.wikipe
 Boolean flag which controls whether the Subscription supports batched operations. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-forwardDeadLetteredMessagesTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L298">property <b>forwardDeadLetteredMessagesTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L298">property <b>forwardDeadLetteredMessagesTo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forwardDeadLetteredMessagesTo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4347,7 +4537,7 @@ Boolean flag which controls whether the Subscription supports batched operations
 The name of a Queue or Topic to automatically forward Dead Letter messages to.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-forwardTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L302">property <b>forwardTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L302">property <b>forwardTo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forwardTo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4355,7 +4545,7 @@ The name of a Queue or Topic to automatically forward Dead Letter messages to.
 The name of a Queue or Topic to automatically forward messages to.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-lockDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L306">property <b>lockDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L306">property <b>lockDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lockDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4363,7 +4553,7 @@ The name of a Queue or Topic to automatically forward messages to.
 The lock duration for the subscription as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The default value is `1` minute or `P1M`.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-maxDeliveryCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L310">property <b>maxDeliveryCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L310">property <b>maxDeliveryCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxDeliveryCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4371,7 +4561,7 @@ The lock duration for the subscription as an [ISO 8601 duration](https://en.wiki
 The maximum number of deliveries.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L314">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L314">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4379,7 +4569,7 @@ The maximum number of deliveries.
 Specifies the name of the ServiceBus Subscription resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L318">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L318">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4387,7 +4577,7 @@ Specifies the name of the ServiceBus Subscription resource. Changing this forces
 The name of the ServiceBus Namespace to create this Subscription in. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-requiresSession">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L322">property <b>requiresSession</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L322">property <b>requiresSession</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requiresSession?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4395,7 +4585,7 @@ The name of the ServiceBus Namespace to create this Subscription in. Changing th
 Boolean flag which controls whether this Subscription supports the concept of a session. Defaults to `false`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L326">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L326">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4403,7 +4593,7 @@ Boolean flag which controls whether this Subscription supports the concept of a 
 The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L330">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L330">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4411,7 +4601,7 @@ The name of the resource group in which to create the namespace. Changing this f
 The status of the Subscription. Possible values are `Active`,`ReceiveDisabled`, or `Disabled`. Defaults to `Active`.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-topicName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L334">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L334">property <b>topicName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topicName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4419,7 +4609,7 @@ The status of the Subscription. Possible values are `Active`,`ReceiveDisabled`, 
 The name of the ServiceBus Topic to create this Subscription in. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="SubscriptionRuleArgs" data-link-title="SubscriptionRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L268">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L268">
         interface <strong>SubscriptionRuleArgs</strong>
     </a>
 </h3>
@@ -4429,7 +4619,7 @@ The name of the ServiceBus Topic to create this Subscription in. Changing this f
 The set of arguments for constructing a SubscriptionRule resource.
 
 <h4 class="pdoc-member-header" id="SubscriptionRuleArgs-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L272">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L272">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4437,7 +4627,7 @@ The set of arguments for constructing a SubscriptionRule resource.
 Represents set of actions written in SQL language-based syntax that is performed against a BrokeredMessage.
 
 <h4 class="pdoc-member-header" id="SubscriptionRuleArgs-correlationFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L276">property <b>correlationFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L276">property <b>correlationFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>correlationFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SubscriptionRuleCorrelationFilter'>SubscriptionRuleCorrelationFilter</a>&gt;;</code></pre>
@@ -4445,7 +4635,7 @@ Represents set of actions written in SQL language-based syntax that is performed
 A `correlationFilter` block as documented below to be evaluated against a BrokeredMessage. Required when `filterType` is set to `CorrelationFilter`.
 
 <h4 class="pdoc-member-header" id="SubscriptionRuleArgs-filterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L280">property <b>filterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L280">property <b>filterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filterType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4453,7 +4643,7 @@ A `correlationFilter` block as documented below to be evaluated against a Broker
 Type of filter to be applied to a BrokeredMessage. Possible values are `SqlFilter` and `CorrelationFilter`.
 
 <h4 class="pdoc-member-header" id="SubscriptionRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L284">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L284">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4461,7 +4651,7 @@ Type of filter to be applied to a BrokeredMessage. Possible values are `SqlFilte
 Specifies the name of the ServiceBus Subscription Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionRuleArgs-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L288">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L288">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4469,7 +4659,7 @@ Specifies the name of the ServiceBus Subscription Rule. Changing this forces a n
 The name of the ServiceBus Namespace in which the ServiceBus Topic exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L292">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L292">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4477,7 +4667,7 @@ The name of the ServiceBus Namespace in which the ServiceBus Topic exists. Chang
 The name of the resource group in the ServiceBus Namespace exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionRuleArgs-sqlFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L296">property <b>sqlFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L296">property <b>sqlFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqlFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4485,7 +4675,7 @@ The name of the resource group in the ServiceBus Namespace exists. Changing this
 Represents a filter written in SQL language-based syntax that to be evaluated against a BrokeredMessage. Required when `filterType` is set to `SqlFilter`.
 
 <h4 class="pdoc-member-header" id="SubscriptionRuleArgs-subscriptionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L300">property <b>subscriptionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L300">property <b>subscriptionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4493,7 +4683,7 @@ Represents a filter written in SQL language-based syntax that to be evaluated ag
 The name of the ServiceBus Subscription in which this Rule should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionRuleArgs-topicName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L304">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L304">property <b>topicName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topicName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4501,7 +4691,7 @@ The name of the ServiceBus Subscription in which this Rule should be created. Ch
 The name of the ServiceBus Topic in which the ServiceBus Subscription exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="SubscriptionRuleState" data-link-title="SubscriptionRuleState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L226">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L226">
         interface <strong>SubscriptionRuleState</strong>
     </a>
 </h3>
@@ -4511,7 +4701,7 @@ The name of the ServiceBus Topic in which the ServiceBus Subscription exists. Ch
 Input properties used for looking up and filtering SubscriptionRule resources.
 
 <h4 class="pdoc-member-header" id="SubscriptionRuleState-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L230">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L230">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4519,7 +4709,7 @@ Input properties used for looking up and filtering SubscriptionRule resources.
 Represents set of actions written in SQL language-based syntax that is performed against a BrokeredMessage.
 
 <h4 class="pdoc-member-header" id="SubscriptionRuleState-correlationFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L234">property <b>correlationFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L234">property <b>correlationFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>correlationFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SubscriptionRuleCorrelationFilter'>SubscriptionRuleCorrelationFilter</a>&gt;;</code></pre>
@@ -4527,7 +4717,7 @@ Represents set of actions written in SQL language-based syntax that is performed
 A `correlationFilter` block as documented below to be evaluated against a BrokeredMessage. Required when `filterType` is set to `CorrelationFilter`.
 
 <h4 class="pdoc-member-header" id="SubscriptionRuleState-filterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L238">property <b>filterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L238">property <b>filterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filterType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4535,7 +4725,7 @@ A `correlationFilter` block as documented below to be evaluated against a Broker
 Type of filter to be applied to a BrokeredMessage. Possible values are `SqlFilter` and `CorrelationFilter`.
 
 <h4 class="pdoc-member-header" id="SubscriptionRuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L242">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L242">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4543,7 +4733,7 @@ Type of filter to be applied to a BrokeredMessage. Possible values are `SqlFilte
 Specifies the name of the ServiceBus Subscription Rule. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionRuleState-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L246">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L246">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4551,7 +4741,7 @@ Specifies the name of the ServiceBus Subscription Rule. Changing this forces a n
 The name of the ServiceBus Namespace in which the ServiceBus Topic exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L250">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L250">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4559,7 +4749,7 @@ The name of the ServiceBus Namespace in which the ServiceBus Topic exists. Chang
 The name of the resource group in the ServiceBus Namespace exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionRuleState-sqlFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L254">property <b>sqlFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L254">property <b>sqlFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sqlFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4567,7 +4757,7 @@ The name of the resource group in the ServiceBus Namespace exists. Changing this
 Represents a filter written in SQL language-based syntax that to be evaluated against a BrokeredMessage. Required when `filterType` is set to `SqlFilter`.
 
 <h4 class="pdoc-member-header" id="SubscriptionRuleState-subscriptionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L258">property <b>subscriptionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L258">property <b>subscriptionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4575,7 +4765,7 @@ Represents a filter written in SQL language-based syntax that to be evaluated ag
 The name of the ServiceBus Subscription in which this Rule should be created. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionRuleState-topicName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscriptionRule.ts#L262">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscriptionRule.ts#L262">property <b>topicName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topicName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4583,7 +4773,7 @@ The name of the ServiceBus Subscription in which this Rule should be created. Ch
 The name of the ServiceBus Topic in which the ServiceBus Subscription exists. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="SubscriptionState" data-link-title="SubscriptionState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L208">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L208">
         interface <strong>SubscriptionState</strong>
     </a>
 </h3>
@@ -4593,7 +4783,7 @@ The name of the ServiceBus Topic in which the ServiceBus Subscription exists. Ch
 Input properties used for looking up and filtering Subscription resources.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-autoDeleteOnIdle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L212">property <b>autoDeleteOnIdle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L212">property <b>autoDeleteOnIdle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoDeleteOnIdle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4601,7 +4791,7 @@ Input properties used for looking up and filtering Subscription resources.
 The idle interval after which the topic is automatically deleted as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The minimum duration is `5` minutes or `P5M`.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-deadLetteringOnFilterEvaluationError">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L216">property <b>deadLetteringOnFilterEvaluationError</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L216">property <b>deadLetteringOnFilterEvaluationError</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deadLetteringOnFilterEvaluationError?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4609,7 +4799,7 @@ The idle interval after which the topic is automatically deleted as an [ISO 8601
 Boolean flag which controls whether the Subscription has dead letter support on filter evaluation exceptions. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-deadLetteringOnMessageExpiration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L220">property <b>deadLetteringOnMessageExpiration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L220">property <b>deadLetteringOnMessageExpiration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deadLetteringOnMessageExpiration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4617,7 +4807,7 @@ Boolean flag which controls whether the Subscription has dead letter support on 
 Boolean flag which controls whether the Subscription has dead letter support when a message expires. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-defaultMessageTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L224">property <b>defaultMessageTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L224">property <b>defaultMessageTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultMessageTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4625,7 +4815,7 @@ Boolean flag which controls whether the Subscription has dead letter support whe
 The Default message timespan to live as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-enableBatchedOperations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L228">property <b>enableBatchedOperations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L228">property <b>enableBatchedOperations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableBatchedOperations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4633,7 +4823,7 @@ The Default message timespan to live as an [ISO 8601 duration](https://en.wikipe
 Boolean flag which controls whether the Subscription supports batched operations. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-forwardDeadLetteredMessagesTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L232">property <b>forwardDeadLetteredMessagesTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L232">property <b>forwardDeadLetteredMessagesTo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forwardDeadLetteredMessagesTo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4641,7 +4831,7 @@ Boolean flag which controls whether the Subscription supports batched operations
 The name of a Queue or Topic to automatically forward Dead Letter messages to.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-forwardTo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L236">property <b>forwardTo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L236">property <b>forwardTo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forwardTo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4649,7 +4839,7 @@ The name of a Queue or Topic to automatically forward Dead Letter messages to.
 The name of a Queue or Topic to automatically forward messages to.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-lockDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L240">property <b>lockDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L240">property <b>lockDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lockDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4657,7 +4847,7 @@ The name of a Queue or Topic to automatically forward messages to.
 The lock duration for the subscription as an [ISO 8601 duration](https://en.wikipedia.org/wiki/ISO_8601#Durations). The default value is `1` minute or `P1M`.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-maxDeliveryCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L244">property <b>maxDeliveryCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L244">property <b>maxDeliveryCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxDeliveryCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4665,7 +4855,7 @@ The lock duration for the subscription as an [ISO 8601 duration](https://en.wiki
 The maximum number of deliveries.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L248">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L248">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4673,7 +4863,7 @@ The maximum number of deliveries.
 Specifies the name of the ServiceBus Subscription resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L252">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L252">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4681,7 +4871,7 @@ Specifies the name of the ServiceBus Subscription resource. Changing this forces
 The name of the ServiceBus Namespace to create this Subscription in. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-requiresSession">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L256">property <b>requiresSession</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L256">property <b>requiresSession</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requiresSession?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4689,7 +4879,7 @@ The name of the ServiceBus Namespace to create this Subscription in. Changing th
 Boolean flag which controls whether this Subscription supports the concept of a session. Defaults to `false`. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L260">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L260">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4697,7 +4887,7 @@ Boolean flag which controls whether this Subscription supports the concept of a 
 The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L264">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L264">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4705,7 +4895,7 @@ The name of the resource group in which to create the namespace. Changing this f
 The status of the Subscription. Possible values are `Active`,`ReceiveDisabled`, or `Disabled`. Defaults to `Active`.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-topicName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/subscription.ts#L268">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/subscription.ts#L268">property <b>topicName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topicName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4713,7 +4903,7 @@ The status of the Subscription. Possible values are `Active`,`ReceiveDisabled`, 
 The name of the ServiceBus Topic to create this Subscription in. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="TopicArgs" data-link-title="TopicArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L276">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L276">
         interface <strong>TopicArgs</strong>
     </a>
 </h3>
@@ -4723,7 +4913,7 @@ The name of the ServiceBus Topic to create this Subscription in. Changing this f
 The set of arguments for constructing a Topic resource.
 
 <h4 class="pdoc-member-header" id="TopicArgs-autoDeleteOnIdle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L281">property <b>autoDeleteOnIdle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L281">property <b>autoDeleteOnIdle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoDeleteOnIdle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4732,7 +4922,7 @@ The ISO 8601 timespan duration of the idle interval after which the
 Topic is automatically deleted, minimum of 5 minutes.
 
 <h4 class="pdoc-member-header" id="TopicArgs-defaultMessageTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L286">property <b>defaultMessageTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L286">property <b>defaultMessageTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultMessageTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4741,7 +4931,7 @@ The ISO 8601 timespan duration of TTL of messages sent to this topic if no
 TTL value is set on the message itself.
 
 <h4 class="pdoc-member-header" id="TopicArgs-duplicateDetectionHistoryTimeWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L291">property <b>duplicateDetectionHistoryTimeWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L291">property <b>duplicateDetectionHistoryTimeWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>duplicateDetectionHistoryTimeWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4750,7 +4940,7 @@ The ISO 8601 timespan duration during which
 duplicates can be detected. Defaults to 10 minutes. (`PT10M`)
 
 <h4 class="pdoc-member-header" id="TopicArgs-enableBatchedOperations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L296">property <b>enableBatchedOperations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L296">property <b>enableBatchedOperations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableBatchedOperations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4759,7 +4949,7 @@ Boolean flag which controls if server-side
 batched operations are enabled. Defaults to false.
 
 <h4 class="pdoc-member-header" id="TopicArgs-enableExpress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L302">property <b>enableExpress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L302">property <b>enableExpress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableExpress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4769,7 +4959,7 @@ are enabled. An express topic holds a message in memory temporarily before writi
 it to persistent storage. Defaults to false.
 
 <h4 class="pdoc-member-header" id="TopicArgs-enablePartitioning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L308">property <b>enablePartitioning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L308">property <b>enablePartitioning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enablePartitioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4779,7 +4969,7 @@ the topic to be partitioned across multiple message brokers. Defaults to false.
 Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicArgs-maxSizeInMegabytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L314">property <b>maxSizeInMegabytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L314">property <b>maxSizeInMegabytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxSizeInMegabytes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4789,7 +4979,7 @@ memory allocated for the topic. For supported values see the "Queue/topic size"
 section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas).
 
 <h4 class="pdoc-member-header" id="TopicArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L319">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L319">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4798,7 +4988,7 @@ Specifies the name of the ServiceBus Topic resource. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicArgs-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L324">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L324">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4807,7 +4997,7 @@ The name of the ServiceBus Namespace to create
 this topic in. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicArgs-requiresDuplicateDetection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L330">property <b>requiresDuplicateDetection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L330">property <b>requiresDuplicateDetection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requiresDuplicateDetection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4817,7 +5007,7 @@ the Topic requires duplicate detection. Defaults to false. Changing this forces
 a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L335">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L335">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4826,7 +5016,7 @@ The name of the resource group in which to
 create the namespace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L339">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L339">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4834,7 +5024,7 @@ create the namespace. Changing this forces a new resource to be created.
 The Status of the Service Bus Topic. Acceptable values are `Active` or `Disabled`. Defaults to `Active`.
 
 <h4 class="pdoc-member-header" id="TopicArgs-supportOrdering">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L344">property <b>supportOrdering</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L344">property <b>supportOrdering</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supportOrdering?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4843,7 +5033,7 @@ Boolean flag which controls whether the Topic
 supports ordering. Defaults to false.
 
 <h3 class="pdoc-module-header" id="TopicAuthorizationRuleArgs" data-link-title="TopicAuthorizationRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L232">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L232">
         interface <strong>TopicAuthorizationRuleArgs</strong>
     </a>
 </h3>
@@ -4853,7 +5043,7 @@ supports ordering. Defaults to false.
 The set of arguments for constructing a TopicAuthorizationRule resource.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRuleArgs-listen">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L236">property <b>listen</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L236">property <b>listen</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4861,7 +5051,7 @@ The set of arguments for constructing a TopicAuthorizationRule resource.
 Grants listen access to this this Authorization Rule. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRuleArgs-manage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L240">property <b>manage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L240">property <b>manage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>manage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4869,7 +5059,7 @@ Grants listen access to this this Authorization Rule. Defaults to `false`.
 Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L244">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L244">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4877,7 +5067,7 @@ Grants manage access to this this Authorization Rule. When this property is `tru
 Specifies the name of the ServiceBus Topic Authorization Rule resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRuleArgs-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L248">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L248">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4885,7 +5075,7 @@ Specifies the name of the ServiceBus Topic Authorization Rule resource. Changing
 Specifies the name of the ServiceBus Namespace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L252">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L252">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4893,7 +5083,7 @@ Specifies the name of the ServiceBus Namespace. Changing this forces a new resou
 The name of the resource group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRuleArgs-send">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L256">property <b>send</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L256">property <b>send</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>send?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4901,7 +5091,7 @@ The name of the resource group in which the ServiceBus Namespace exists. Changin
 Grants send access to this this Authorization Rule. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRuleArgs-topicName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L260">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L260">property <b>topicName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topicName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4909,7 +5099,7 @@ Grants send access to this this Authorization Rule. Defaults to `false`.
 Specifies the name of the ServiceBus Topic. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="TopicAuthorizationRuleState" data-link-title="TopicAuthorizationRuleState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L182">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L182">
         interface <strong>TopicAuthorizationRuleState</strong>
     </a>
 </h3>
@@ -4919,7 +5109,7 @@ Specifies the name of the ServiceBus Topic. Changing this forces a new resource 
 Input properties used for looking up and filtering TopicAuthorizationRule resources.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRuleState-listen">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L186">property <b>listen</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L186">property <b>listen</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4927,7 +5117,7 @@ Input properties used for looking up and filtering TopicAuthorizationRule resour
 Grants listen access to this this Authorization Rule. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRuleState-manage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L190">property <b>manage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L190">property <b>manage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>manage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4935,7 +5125,7 @@ Grants listen access to this this Authorization Rule. Defaults to `false`.
 Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L194">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L194">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4943,7 +5133,7 @@ Grants manage access to this this Authorization Rule. When this property is `tru
 Specifies the name of the ServiceBus Topic Authorization Rule resource. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRuleState-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L198">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L198">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4951,7 +5141,7 @@ Specifies the name of the ServiceBus Topic Authorization Rule resource. Changing
 Specifies the name of the ServiceBus Namespace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRuleState-primaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L202">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L202">property <b>primaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4959,7 +5149,7 @@ Specifies the name of the ServiceBus Namespace. Changing this forces a new resou
 The Primary Connection String for the ServiceBus Topic authorization Rule.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRuleState-primaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L206">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L206">property <b>primaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4967,7 +5157,7 @@ The Primary Connection String for the ServiceBus Topic authorization Rule.
 The Primary Key for the ServiceBus Topic authorization Rule.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L210">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L210">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4975,7 +5165,7 @@ The Primary Key for the ServiceBus Topic authorization Rule.
 The name of the resource group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRuleState-secondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L214">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L214">property <b>secondaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4983,7 +5173,7 @@ The name of the resource group in which the ServiceBus Namespace exists. Changin
 The Secondary Connection String for the ServiceBus Topic authorization Rule.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRuleState-secondaryKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L218">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L218">property <b>secondaryKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4991,7 +5181,7 @@ The Secondary Connection String for the ServiceBus Topic authorization Rule.
 The Secondary Key for the ServiceBus Topic authorization Rule.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRuleState-send">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L222">property <b>send</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L222">property <b>send</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>send?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4999,7 +5189,7 @@ The Secondary Key for the ServiceBus Topic authorization Rule.
 Grants send access to this this Authorization Rule. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="TopicAuthorizationRuleState-topicName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L226">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topicAuthorizationRule.ts#L226">property <b>topicName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topicName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5007,21 +5197,21 @@ Grants send access to this this Authorization Rule. Defaults to `false`.
 Specifies the name of the ServiceBus Topic. Changing this forces a new resource to be created.
 
 <h3 class="pdoc-module-header" id="TopicEventSubscription" data-link-title="TopicEventSubscription">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L254">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L254">
         class <strong>TopicEventSubscription</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>TopicEventSubscription</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#EventSubscription'>EventSubscription</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</code></pre>
 <h4 class="pdoc-member-header" id="TopicEventSubscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L256"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L256"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> TopicEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, topic: Topic, args: <a href='#TopicEventSubscriptionArgs'>TopicEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="TopicEventSubscription-getData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L254">method <b>getData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L254">method <b>getData</b></a>
 </h4>
 
 
@@ -5032,14 +5222,14 @@ Retrieves the data produces by [initialize].  The data is immediately available 
 derived class's constructor after the `super(...)` call to `ComponentResource`.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L254">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L254">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="TopicEventSubscription-initialize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L254">method <b>initialize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L254">method <b>initialize</b></a>
 </h4>
 
 
@@ -5051,7 +5241,7 @@ automatically when constructed.  The data will be available immediately for subc
 constructors to use.  To access the data use `.getData`.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L254">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L254">method <b>isInstance</b></a>
 </h4>
 
 
@@ -5062,7 +5252,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscription-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L254">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L254">method <b>registerOutputs</b></a>
 </h4>
 
 
@@ -5077,22 +5267,22 @@ done creating child resources.  This is not strictly necessary as this will auto
 called after the `initialize` method completes.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscription-functionApp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L755">property <b>functionApp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L755">property <b>functionApp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>functionApp: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="TopicEventSubscription-subscription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L256">property <b>subscription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L256">property <b>subscription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscription: <a href='#Subscription'>Subscription</a>;</code></pre>
 <h4 class="pdoc-member-header" id="TopicEventSubscription-topic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L255">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L255">property <b>topic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topic: Topic;</code></pre>
 <h4 class="pdoc-member-header" id="TopicEventSubscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L254">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L254">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -5101,14 +5291,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="TopicEventSubscriptionArgs" data-link-title="TopicEventSubscriptionArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L215">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L215">
         interface <strong>TopicEventSubscriptionArgs</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TopicEventSubscriptionArgs</span> <span class='kr'>extends</span> <a href='#GetTopicFunctionArgs'>GetTopicFunctionArgs</a>, <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a></code></pre>
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-account">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L104">property <b>account</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L104">property <b>account</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>account?: storageForTypesOnly.Account;</code></pre>
@@ -5118,7 +5308,7 @@ not provided, a new storage account will create. It will be a 'Standard', 'LRS',
 account.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-appSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L109">property <b>appSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L109">property <b>appSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -5126,7 +5316,7 @@ account.
 A key-value pair of App Settings.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-authSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L114">property <b>authSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L114">property <b>authSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppAuthSettings'>FunctionAppAuthSettings</a>&gt;;</code></pre>
@@ -5134,7 +5324,7 @@ A key-value pair of App Settings.
 A `authSettings` block as defined below.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L83">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L83">property <b>callback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callback?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#Callback'>Callback</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
@@ -5143,7 +5333,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 [callback] or [callbackFactory] must be provided.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-callbackFactory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L95">property <b>callbackFactory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L95">property <b>callbackFactory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#CallbackFactory'>CallbackFactory</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</code></pre>
@@ -5158,7 +5348,7 @@ loaded. It can run whatever code it needs, and will end by returning the actual 
 the Azure will call into each time the FunctionApp it is is invoked.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-clientAffinityEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L119">property <b>clientAffinityEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L119">property <b>clientAffinityEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5166,7 +5356,7 @@ the Azure will call into each time the FunctionApp it is is invoked.
 Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-codePathOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L124">property <b>codePathOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L124">property <b>codePathOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>codePathOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#CodePathOptions'>pulumi.runtime.CodePathOptions</a>;</code></pre>
@@ -5174,7 +5364,7 @@ Should the Function App send session affinity cookies, which route client reques
 Options to control which files and packages are included with the serialized FunctionApp code.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-connectionStrings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L129">property <b>connectionStrings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L129">property <b>connectionStrings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
@@ -5186,7 +5376,7 @@ Options to control which files and packages are included with the serialized Fun
 An `connection_string` block as defined below.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-container">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L135">property <b>container</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L135">property <b>container</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>container?: storageForTypesOnly.Container;</code></pre>
@@ -5195,7 +5385,7 @@ The container to use where the zip-file blob for the FunctionApp will be located
 provided, the root container of the storage account will be used.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-dailyMemoryTimeQuota">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L140">property <b>dailyMemoryTimeQuota</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L140">property <b>dailyMemoryTimeQuota</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dailyMemoryTimeQuota?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5203,7 +5393,7 @@ provided, the root container of the storage account will be used.
 The amount of memory in gigabyte-seconds that your application is allowed to consume per day. Setting this value only affects function apps under the consumption plan. Defaults to `0`.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-enableBuiltinLogging">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L145">property <b>enableBuiltinLogging</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L145">property <b>enableBuiltinLogging</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableBuiltinLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5211,7 +5401,7 @@ The amount of memory in gigabyte-seconds that your application is allowed to con
 Should the built-in logging of this Function App be enabled? Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L150">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L150">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5219,7 +5409,7 @@ Should the built-in logging of this Function App be enabled? Defaults to `true`.
 Is the Function App enabled?
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-hostSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L148">property <b>hostSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L148">property <b>hostSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostSettings?: <a href='#ServiceBusHostSettings'>ServiceBusHostSettings</a>;</code></pre>
@@ -5228,7 +5418,7 @@ Host settings specific to the Service Bus Topic/Subscription plugin. These value
 be used in their place.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-httpsOnly">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L160">property <b>httpsOnly</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L160">property <b>httpsOnly</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5236,7 +5426,7 @@ be used in their place.
 Can the Function App only be accessed via HTTPS? Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L165">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L165">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppIdentity'>FunctionAppIdentity</a>&gt;;</code></pre>
@@ -5244,7 +5434,7 @@ Can the Function App only be accessed via HTTPS? Defaults to `false`.
 An `identity` block as defined below.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-inputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L453">property <b>inputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L453">property <b>inputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#InputBindingSettings'>InputBindingSettings</a>[];</code></pre>
@@ -5252,7 +5442,7 @@ An `identity` block as defined below.
 Input bindings.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L170">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L170">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5260,7 +5450,7 @@ Input bindings.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-maxDeliveryCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L219">property <b>maxDeliveryCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L219">property <b>maxDeliveryCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxDeliveryCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5268,7 +5458,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 The maximum number of deliveries.  Will default to 10 if not specified.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L175">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L175">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5276,7 +5466,7 @@ The maximum number of deliveries.  Will default to 10 if not specified.
 The name of the Function App.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-nodeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L181">property <b>nodeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L181">property <b>nodeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5285,7 +5475,7 @@ Controls the value of WEBSITE_NODE_DEFAULT_VERSION in `appSettings`.  If not pro
 defaults to `~12`.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-osType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L186">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L186">property <b>osType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>osType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5293,7 +5483,7 @@ defaults to `~12`.
 A string indicating the Operating System type for this function app.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L458">property <b>outputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L458">property <b>outputs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/appservice/#OutputBindingSettings'>OutputBindingSettings</a>[];</code></pre>
@@ -5301,7 +5491,7 @@ A string indicating the Operating System type for this function app.
 Output bindings.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L196">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L196">property <b>plan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plan?: appservice.Plan;</code></pre>
@@ -5314,7 +5504,7 @@ https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale#consumpti
 more details.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-resourceGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L201">property <b>resourceGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L201">property <b>resourceGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroup?: core.ResourceGroup;</code></pre>
@@ -5322,7 +5512,7 @@ more details.
 The resource group in which to create the event subscription. [resourceGroup] takes precedence over [resourceGroupName].
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L142">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L142">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5331,7 +5521,7 @@ The name of the resource group in which to create the event subscription. [resou
 If none of the two is supplied, the Queue's resource group will be used.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-siteConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L212">property <b>siteConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L212">property <b>siteConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppSiteConfig'>FunctionAppSiteConfig</a>&gt;;</code></pre>
@@ -5339,7 +5529,7 @@ If none of the two is supplied, the Queue's resource group will be used.
 A `site_config` object as defined below.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-subscription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/zMixins.ts#L212">property <b>subscription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/zMixins.ts#L212">property <b>subscription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscription?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#Subscription'>Subscription</a>;</code></pre>
@@ -5347,7 +5537,7 @@ A `site_config` object as defined below.
 The ServiceBus Subscription to subscribe the Function to.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L217">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L217">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -5355,7 +5545,7 @@ The ServiceBus Subscription to subscribe the Function to.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="TopicEventSubscriptionArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/appservice/zMixins.ts#L222">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/appservice/zMixins.ts#L222">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5363,7 +5553,7 @@ A mapping of tags to assign to the resource.
 The runtime version associated with the Function App. Defaults to `~3`.
 
 <h3 class="pdoc-module-header" id="TopicState" data-link-title="TopicState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L202">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L202">
         interface <strong>TopicState</strong>
     </a>
 </h3>
@@ -5373,7 +5563,7 @@ The runtime version associated with the Function App. Defaults to `~3`.
 Input properties used for looking up and filtering Topic resources.
 
 <h4 class="pdoc-member-header" id="TopicState-autoDeleteOnIdle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L207">property <b>autoDeleteOnIdle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L207">property <b>autoDeleteOnIdle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoDeleteOnIdle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5382,7 +5572,7 @@ The ISO 8601 timespan duration of the idle interval after which the
 Topic is automatically deleted, minimum of 5 minutes.
 
 <h4 class="pdoc-member-header" id="TopicState-defaultMessageTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L212">property <b>defaultMessageTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L212">property <b>defaultMessageTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultMessageTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5391,7 +5581,7 @@ The ISO 8601 timespan duration of TTL of messages sent to this topic if no
 TTL value is set on the message itself.
 
 <h4 class="pdoc-member-header" id="TopicState-duplicateDetectionHistoryTimeWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L217">property <b>duplicateDetectionHistoryTimeWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L217">property <b>duplicateDetectionHistoryTimeWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>duplicateDetectionHistoryTimeWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5400,7 +5590,7 @@ The ISO 8601 timespan duration during which
 duplicates can be detected. Defaults to 10 minutes. (`PT10M`)
 
 <h4 class="pdoc-member-header" id="TopicState-enableBatchedOperations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L222">property <b>enableBatchedOperations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L222">property <b>enableBatchedOperations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableBatchedOperations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5409,7 +5599,7 @@ Boolean flag which controls if server-side
 batched operations are enabled. Defaults to false.
 
 <h4 class="pdoc-member-header" id="TopicState-enableExpress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L228">property <b>enableExpress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L228">property <b>enableExpress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableExpress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5419,7 +5609,7 @@ are enabled. An express topic holds a message in memory temporarily before writi
 it to persistent storage. Defaults to false.
 
 <h4 class="pdoc-member-header" id="TopicState-enablePartitioning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L234">property <b>enablePartitioning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L234">property <b>enablePartitioning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enablePartitioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5429,7 +5619,7 @@ the topic to be partitioned across multiple message brokers. Defaults to false.
 Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicState-maxSizeInMegabytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L240">property <b>maxSizeInMegabytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L240">property <b>maxSizeInMegabytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxSizeInMegabytes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5439,7 +5629,7 @@ memory allocated for the topic. For supported values see the "Queue/topic size"
 section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quotas).
 
 <h4 class="pdoc-member-header" id="TopicState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L245">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L245">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5448,7 +5638,7 @@ Specifies the name of the ServiceBus Topic resource. Changing this forces a
 new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicState-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L250">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L250">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5457,7 +5647,7 @@ The name of the ServiceBus Namespace to create
 this topic in. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicState-requiresDuplicateDetection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L256">property <b>requiresDuplicateDetection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L256">property <b>requiresDuplicateDetection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requiresDuplicateDetection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5467,7 +5657,7 @@ the Topic requires duplicate detection. Defaults to false. Changing this forces
 a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L261">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L261">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5476,7 +5666,7 @@ The name of the resource group in which to
 create the namespace. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="TopicState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L265">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L265">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5484,7 +5674,7 @@ create the namespace. Changing this forces a new resource to be created.
 The Status of the Service Bus Topic. Acceptable values are `Active` or `Disabled`. Defaults to `Active`.
 
 <h4 class="pdoc-member-header" id="TopicState-supportOrdering">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/1e6e272729ef317dfcecf40b50c7ce26be8e27d6/sdk/nodejs/servicebus/topic.ts#L270">property <b>supportOrdering</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/296b76e1815ddb3226b7dfa36220f7faca9a0b4d/sdk/nodejs/servicebus/topic.ts#L270">property <b>supportOrdering</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supportOrdering?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
