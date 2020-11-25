@@ -32,6 +32,11 @@ create and manage applications on Mailgun.</p>
     <span class="n">spam_action</span><span class="o">=</span><span class="s2">&quot;disabled&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>Domains can be imported using <code class="docutils literal notranslate"><span class="pre">region:domain_name</span></code> via <code class="docutils literal notranslate"><span class="pre">import</span></code> command. Region has to be chosen from <code class="docutils literal notranslate"><span class="pre">eu</span></code> or <code class="docutils literal notranslate"><span class="pre">us</span></code> (when no selection <code class="docutils literal notranslate"><span class="pre">us</span></code> is applied).</p>
+<p>hcl</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import mailgun:index/domain:Domain <span class="nb">test</span> us:example.domain.com
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -233,6 +238,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;inbound&quot;</span><span class="p">,</span>
     <span class="n">expression</span><span class="o">=</span><span class="s2">&quot;match_recipient(&#39;.*@foo.example.com&#39;)&quot;</span><span class="p">,</span>
     <span class="n">priority</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Routes can be imported using <code class="docutils literal notranslate"><span class="pre">ROUTE_ID</span></code> and <code class="docutils literal notranslate"><span class="pre">region</span></code> via <code class="docutils literal notranslate"><span class="pre">import</span></code> command. Route ID can be found on Mailgun portal in section <code class="docutils literal notranslate"><span class="pre">Receiving/Routes</span></code>. Region has to be chosen from <code class="docutils literal notranslate"><span class="pre">eu</span></code> or <code class="docutils literal notranslate"><span class="pre">us</span></code> (when no selection <code class="docutils literal notranslate"><span class="pre">us</span></code> is applied).</p>
+<p>hcl</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import mailgun:index/route:Route <span class="nb">test</span> eu:123456789
 </pre></div>
 </div>
 <dl class="field-list simple">

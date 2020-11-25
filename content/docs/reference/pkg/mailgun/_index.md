@@ -28,7 +28,7 @@ A Pulumi package for creating and managing Mailgun resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`mailgun` Terraform Provider](https://github.com/terraform-providers/terraform-provider-mailgun).</dd>
 	<dt>Version</dt>
-	<dd>2.3.0</dd>
+	<dd>2.3.1</dd>
 </dl>
 
 
