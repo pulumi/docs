@@ -25,6 +25,15 @@
 
     function showCarouselItem(i) {
 
+        // On some pages we might want to show all the carousel animations at
+        // once, so if this element is available we show everything and return.
+        if ($(".carousel-always-visible").length) {
+            showIDE();
+            showCLI();
+            showConsole();
+            return;
+        }
+
         $(".carousel-item")
             .css("opacity", 0)
             .css("pointer-events", "none")
