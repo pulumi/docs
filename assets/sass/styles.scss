@@ -237,4 +237,14 @@ main {
     @apply text-yellow-700 py-2 px-4 rounded border border-yellow-600;
 }
 
+.aws-reinvent-blog-image {
+    img {
+        @apply mb-0;
+
+        @screen lg {
+            @apply mb-8;
+        }
+    }
+}
+
 @tailwind utilities;
