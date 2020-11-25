@@ -36,7 +36,7 @@ Do you want to perform this update?
   details
 ```
 
-Once the preview has finished you are given three options to choose from. Choosing `details` will show you a rich diff of the changes to be made. Choosing `yes` will create your new S3 bucket in AWS.
+Once the preview has finished, you are given three options to choose from. Choosing `details` will show you a rich diff of the changes to be made. Choosing `yes` will create your new S3 bucket in AWS. Choosing `no` will cancel the pending update operation.
 
 ```
 Do you want to perform this update? yes
@@ -55,7 +55,7 @@ Resources:
 Duration: 14s
 ```
 
-Remember the output you defined in the previous step? That [stack output]({{< relref "/docs/intro/concepts/stack#outputs" >}}) can be seen in the `Outputs:` section of your update. You can access your outputs from the CLI by running the `pulumi stack output [property-name]` command. For example you can print the name of your bucket with the following command:
+Remember the output you defined in the previous step? That [stack output]({{< ref "/docs/intro/concepts/stack#outputs" >}}) can be seen in the `Outputs:` section of your update. You can access your outputs from the CLI by running the `pulumi stack output [property-name]` command. For example you can print the name of your bucket with the following command:
 
 {{% choosable language javascript %}}
 

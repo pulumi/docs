@@ -18,14 +18,20 @@ Now that your S3 bucket is provisioned, let's add an object to it. First, create
 $ mkdir site
 ```
 
-Next create an `index.html` file you will upload to your bucket.
+Next, create a new `index.html` file with some content you will upload to your bucket.
 
 {{< chooser os "macos,linux,windows" / >}}
 
 {{% choosable os macos %}}
 
 ```bash
-$ touch site/index.html
+$ cat <<EOT > site/index.html
+<html>
+    <body>
+        <h1>Hello, Pulumi!</h1>
+    </body>
+</html>
+EOT
 ```
 
 {{% /choosable %}}
@@ -33,28 +39,29 @@ $ touch site/index.html
 {{% choosable os linux %}}
 
 ```bash
-$ touch site/index.html
+$ cat <<EOT > site/index.html
+<html>
+    <body>
+        <h1>Hello, Pulumi!</h1>
+    </body>
+</html>
+EOT
 ```
 
 {{% /choosable %}}
 
 {{% choosable os windows %}}
 
-```bash
-$ type nul > site/index.html
+```bat
+> site/index.html (
+    @echo.^<html^>
+    @echo.  ^<body^>
+    @echo.      ^<h1^>Hello, Pulumi!^</h1^>
+    @echo.  ^</body^>
+    @echo.^</html^>)
 ```
 
 {{% /choosable %}}
-
-Once you've created your `index.html` file, add some content to it:
-
-```html
-<html>
-    <body>
-        <h1>Hello, Pulumi!</h1>
-    </body>
-</html>
-```
 
 Now that you have your new `index.html` with some content, modify your program to add the contents of your `index.html` file to your S3 bucket. To accomplish this, we will take advantage of your chosen programming language's native libraries to read the content of the file and assign it as an input to a new  `BucketObject`.
 

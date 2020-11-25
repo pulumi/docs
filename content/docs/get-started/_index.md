@@ -15,8 +15,13 @@ aliases:
 
 <div class="flex max-w-2xl">
     <p class="text-xl leading-relaxed text-gray-600">
-        Step-by-step guides for creating, deploying, and managing infrastructure with
-        Pulumi on the cloud using your favorite language.
+        Pulumi is a modern infrastructure-as-code platform that allows you to use common programming languages, tools, and frameworks, to provision, update, and manage cloud infrastructure resources.
+    </p>
+</div>
+
+<div class="flex max-w-2xl">
+    <p class="text-xl leading-relaxed text-gray-600">
+        Select one of the following options to quickly learn how to use Pulumi to spin up resources in the cloud within minutes.
     </p>
 </div>
 
@@ -24,22 +29,22 @@ aliases:
 
 <div class="tiles flex-wrap mt-4">
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <a class="tile p-8" href="{{< relref "aws" >}}">
+        <a class="tile p-8" href="{{< relref "/docs/get-started/aws/begin" >}}">
             <img class="h-10 mx-auto" src="/logos/tech/aws.svg" alt="AWS">
         </a>
     </div>
     <div class="pb-4 md:w-1/2">
-        <a class="tile p-8" href="{{< relref "azure" >}}">
+        <a class="tile p-8" href="{{< relref "/docs/get-started/azure" >}}">
             <img class="h-10 mx-auto" src="/logos/tech/azure.svg" alt="Azure">
         </a>
     </div>
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <a class="tile p-8" href="{{< relref "gcp" >}}">
+        <a class="tile p-8" href="{{< relref "/docs/get-started/gcp" >}}">
             <img class="h-10 mx-auto" src="/logos/tech/gcp.svg" alt="Google Cloud">
         </a>
     </div>
     <div class="pb-4 md:w-1/2">
-        <a class="tile p-8" href="{{< relref "kubernetes" >}}">
+        <a class="tile p-8" href="{{< relref "/docs/get-started/kubernetes" >}}">
             <img class="h-10 mx-auto" src="/logos/tech/k8s.svg" alt="Kubernetes">
         </a>
     </div>
