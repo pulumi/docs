@@ -14,6 +14,7 @@ This data source provides the Resource Manager Roles of the current Alibaba Clou
 
 > **NOTE:**  Available in 1.86.0+.
 
+
 {{% examples %}}
 ## Example Usage
 

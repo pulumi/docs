@@ -12,6 +12,7 @@ meta_desc: "Explore the GetScalingConfigurations function of the ess module, inc
 
 This data source provides available scaling configuration resources.
 
+
 {{% examples %}}
 ## Example Usage
 

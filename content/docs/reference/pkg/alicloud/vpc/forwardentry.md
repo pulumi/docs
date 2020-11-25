@@ -1374,6 +1374,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Forward Entry can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:vpc/forwardEntry:ForwardEntry foo ftb-1aece3:fwd-232ce2
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

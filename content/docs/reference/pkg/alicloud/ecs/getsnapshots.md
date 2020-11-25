@@ -44,6 +44,7 @@ The following arguments are supported:
 * `tags` - (Optional) A map of tags assigned to snapshots.
 * `output_file` - (Optional) The name of output file that saves the filter results.
 
+
 {{% examples %}}
 ## Example Usage
 

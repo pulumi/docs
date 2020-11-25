@@ -12,6 +12,7 @@ meta_desc: "Explore the GetRules function of the slb module, including examples,
 
 This data source provides the rules associated with a server load balancer listener.
 
+
 {{% examples %}}
 ## Example Usage
 

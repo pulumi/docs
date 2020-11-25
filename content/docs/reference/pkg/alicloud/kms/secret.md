@@ -1611,6 +1611,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+KMS secret can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:kms/secret:Secret default secret-foo
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

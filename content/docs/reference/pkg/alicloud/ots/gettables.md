@@ -14,6 +14,7 @@ This data source provides the ots tables of the current Alibaba Cloud user.
 
 > **NOTE:** Available in v1.40.0+.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetCustomerGateways function of the vpn module, includin
 
 The VPN customers gateways data source lists a number of VPN customer gateways resource information owned by an Alicloud account.
 
+
 {{% examples %}}
 ## Example Usage
 

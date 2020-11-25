@@ -3,7 +3,7 @@ title: "Module cs"
 title_tag: "Module cs | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "cs"
 meta_desc: "Explore members of the cs module in the @pulumi/alicloud package."
-git_sha: "9ec8f284726861e94f025996ae4b75d2cbc8f5cd"
+git_sha: "6cf57c2bc1fac537aa1a1744db4b579895c55321"
 block_external_search_index: true
 ---
 
@@ -90,7 +90,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Application" data-link-title="Application">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L46">
         Resource <strong>Application</strong>
     </a>
 </h3>
@@ -126,8 +126,16 @@ const app = new alicloud.cs.Application("app", {
 });
 ```
 
+#### Import
+
+Swarm application can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:cs/application:Application app my-first-swarm:wordpress
+```
+
 <h4 class="pdoc-member-header" id="Application-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L110"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L117"> <b>constructor</b></a>
 </h4>
 
 
@@ -141,7 +149,7 @@ Create a Application resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Application-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L56">method <b>get</b></a>
 </h4>
 
 
@@ -152,14 +160,14 @@ Get an existing Application resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Application-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L46">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Application-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L67">method <b>isInstance</b></a>
 </h4>
 
 
@@ -170,7 +178,7 @@ Returns true if the given object is an instance of Application.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Application-blueGreen">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L70">property <b>blueGreen</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L77">property <b>blueGreen</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>blueGreen: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -178,7 +186,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Wherther to use "Blue Green" method when release a new version. Default to false.
 
 <h4 class="pdoc-member-header" id="Application-blueGreenConfirm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L74">property <b>blueGreenConfirm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L81">property <b>blueGreenConfirm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>blueGreenConfirm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -186,7 +194,7 @@ Wherther to use "Blue Green" method when release a new version. Default to false
 Whether to confirm a "Blue Green" application. Default to false. It will be ignored when `blueGreen` is false.
 
 <h4 class="pdoc-member-header" id="Application-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L78">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L85">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -194,7 +202,7 @@ Whether to confirm a "Blue Green" application. Default to false. It will be igno
 The swarm cluster's name.
 
 <h4 class="pdoc-member-header" id="Application-defaultDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L82">property <b>defaultDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L89">property <b>defaultDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -202,7 +210,7 @@ The swarm cluster's name.
 The application default domain and it can be used to configure routing service.
 
 <h4 class="pdoc-member-header" id="Application-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L86">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L93">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -210,7 +218,7 @@ The application default domain and it can be used to configure routing service.
 The description of application.
 
 <h4 class="pdoc-member-header" id="Application-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L90">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L97">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>environment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -218,7 +226,7 @@ The description of application.
 A key/value map used to replace the variable parameter in the Compose template.
 
 <h4 class="pdoc-member-header" id="Application-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L46">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -227,7 +235,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Application-latestImage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L94">property <b>latestImage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L101">property <b>latestImage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>latestImage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -235,7 +243,7 @@ deployments and may be missing (undefined) during planning phases.
 Whether to use latest docker image while each updating application. Default to false.
 
 <h4 class="pdoc-member-header" id="Application-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L98">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L105">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -243,7 +251,7 @@ Whether to use latest docker image while each updating application. Default to f
 The application name. It should be 1-64 characters long, and can contain numbers, English letters and hyphens, but cannot start with hyphens.
 
 <h4 class="pdoc-member-header" id="Application-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L102">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L109">property <b>services</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>services: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ApplicationService'>ApplicationService</a>[]&gt;;</code></pre>
@@ -251,7 +259,7 @@ The application name. It should be 1-64 characters long, and can contain numbers
 List of services in the application. It contains several attributes to `Block Nodes`.
 
 <h4 class="pdoc-member-header" id="Application-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L106">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L113">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>template: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -259,7 +267,7 @@ List of services in the application. It contains several attributes to `Block No
 The application deployment template and it must be [Docker Compose format](https://docs.docker.com/compose/).
 
 <h4 class="pdoc-member-header" id="Application-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L46">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -268,7 +276,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Application-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L110">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L117">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -276,14 +284,14 @@ deployments.
 The application deploying version. Each updating, it must be different with current. Default to "1.0"
 
 <h3 class="pdoc-module-header" id="Cluster" data-link-title="Cluster">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L8">
         Resource <strong>Cluster</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Cluster</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Cluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L58"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L57"> <b>constructor</b></a>
 </h4>
 
 
@@ -297,7 +305,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Cluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L18">method <b>get</b></a>
 </h4>
 
 
@@ -308,14 +316,14 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Cluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L8">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L29">method <b>isInstance</b></a>
 </h4>
 
 
@@ -326,27 +334,27 @@ Returns true if the given object is an instance of Cluster.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Cluster-agentVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L37">property <b>agentVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L36">property <b>agentVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>agentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-cidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L38">property <b>cidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L37">property <b>cidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-diskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L39">property <b>diskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L38">property <b>diskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>diskCategory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-diskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L40">property <b>diskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L39">property <b>diskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>diskSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L8">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -355,62 +363,62 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Cluster-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L41">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L40">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L42">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L41">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-isOutdated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L43">property <b>isOutdated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L42">property <b>isOutdated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isOutdated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L44">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L43">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L45">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L44">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-needSlb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L46">property <b>needSlb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L45">property <b>needSlb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>needSlb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-nodeNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L47">property <b>nodeNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L46">property <b>nodeNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeNumber: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-nodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L48">property <b>nodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L47">property <b>nodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ClusterNode'>ClusterNode</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L49">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L48">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-releaseEip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L50">property <b>releaseEip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L49">property <b>releaseEip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>releaseEip: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L51">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L50">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L55">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L54">property <b>size</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -419,12 +427,12 @@ Field &#39;size&#39; has been deprecated from provider version 1.9.1. New field 
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-slbId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L56">property <b>slbId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L55">property <b>slbId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>slbId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L8">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -433,24 +441,33 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Cluster-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L57">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L56">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Cluster-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L58">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L57">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="EdgeKubernetes" data-link-title="EdgeKubernetes">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L17">
         Resource <strong>EdgeKubernetes</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>EdgeKubernetes</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+#### Import
+
+Kubernetes cluster can be imported using the id, e.g. Then complete the main.tf accords to the result of `terraform plan`
+
+```sh
+ $ pulumi import alicloud:cs/edgeKubernetes:EdgeKubernetes alicloud_cs_edge_kubernetes.main cluster-id
+```
+
 <h4 class="pdoc-member-header" id="EdgeKubernetes-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L161"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L178"> <b>constructor</b></a>
 </h4>
 
 
@@ -464,7 +481,7 @@ Create a EdgeKubernetes resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L27">method <b>get</b></a>
 </h4>
 
 
@@ -475,14 +492,14 @@ Get an existing EdgeKubernetes resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L17">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L38">method <b>isInstance</b></a>
 </h4>
 
 
@@ -493,12 +510,12 @@ Returns true if the given object is an instance of EdgeKubernetes.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-addons">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L37">property <b>addons</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L45">property <b>addons</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addons: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#EdgeKubernetesAddon'>EdgeKubernetesAddon</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeKubernetes-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L41">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L49">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>availabilityZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -506,7 +523,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of availability zone.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-clientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L45">property <b>clientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L53">property <b>clientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientCert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -514,7 +531,7 @@ The ID of availability zone.
 The path of client certificate, like `~/.kube/client-cert.pem`.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-clientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L49">property <b>clientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L57">property <b>clientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -522,7 +539,7 @@ The path of client certificate, like `~/.kube/client-cert.pem`.
 The path of client key, like `~/.kube/client-key.pem`.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-clusterCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L53">property <b>clusterCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L61">property <b>clusterCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterCaCert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -530,12 +547,20 @@ The path of client key, like `~/.kube/client-key.pem`.
 The path of cluster ca certificate, like `~/.kube/cluster-ca-cert.pem`
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-connections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L54">property <b>connections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L62">property <b>connections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connections: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#EdgeKubernetesConnections'>EdgeKubernetesConnections</a>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="EdgeKubernetes-deletionProtection">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L66">property <b>deletionProtection</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>deletionProtection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Whether to enable cluster deletion protection.
+
 <h4 class="pdoc-member-header" id="EdgeKubernetes-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L17">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -544,15 +569,15 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-installCloudMonitor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L58">property <b>installCloudMonitor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L70">property <b>installCloudMonitor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>installCloudMonitor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Install cloud monitor agent on ECS. default: `true`
+Install cloud monitor agent on ECS. default: `true`.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-isEnterpriseSecurityGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L62">property <b>isEnterpriseSecurityGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L74">property <b>isEnterpriseSecurityGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isEnterpriseSecurityGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -560,7 +585,7 @@ Install cloud monitor agent on ECS. default: `true`
 Enable to create advanced security group. default: false. See [Advanced security group](https://www.alibabacloud.com/help/doc-detail/120621.htm).
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-keyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L66">property <b>keyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L78">property <b>keyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -568,7 +593,7 @@ Enable to create advanced security group. default: false. See [Advanced security
 The keypair of ssh login cluster node, you have to create it first. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-kubeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L70">property <b>kubeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L82">property <b>kubeConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kubeConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -576,12 +601,12 @@ The keypair of ssh login cluster node, you have to create it first. You have to 
 The path of kube config, like `~/.kube/config`.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-logConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L71">property <b>logConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L83">property <b>logConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#EdgeKubernetesLogConfig'>EdgeKubernetesLogConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeKubernetes-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L75">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L87">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -589,12 +614,12 @@ The path of kube config, like `~/.kube/config`.
 The kubernetes cluster's name. It is unique in one Alicloud account.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L76">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L88">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeKubernetes-natGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L80">property <b>natGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L92">property <b>natGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>natGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -602,7 +627,7 @@ The kubernetes cluster's name. It is unique in one Alicloud account.
 The ID of nat gateway used to launch kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-newNatGateway">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L84">property <b>newNatGateway</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L96">property <b>newNatGateway</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>newNatGateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -610,7 +635,7 @@ The ID of nat gateway used to launch kubernetes cluster.
 Whether to create a new nat gateway while creating kubernetes cluster. Default to true. Then openapi in Alibaba Cloud are not all on intranet, So turn this option on is a good choice.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-nodeCidrMask">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L88">property <b>nodeCidrMask</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L100">property <b>nodeCidrMask</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeCidrMask: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -618,15 +643,15 @@ Whether to create a new nat gateway while creating kubernetes cluster. Default t
 The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L92">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L104">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-The password of ssh login cluster node. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
+The password of ssh login cluster node. You have to specify one of `password`, `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-podCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L96">property <b>podCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L108">property <b>podCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>podCidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -634,15 +659,28 @@ The password of ssh login cluster node. You have to specify one of `password` `k
 [Flannel Specific] The CIDR block for the pod network when using Flannel.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-proxyMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L100">property <b>proxyMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L112">property <b>proxyMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>proxyMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
 
+<h4 class="pdoc-member-header" id="EdgeKubernetes-rdsInstances">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L113">property <b>rdsInstances</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>rdsInstances: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="EdgeKubernetes-resourceGroupId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L117">property <b>resourceGroupId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>resourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
+
 <h4 class="pdoc-member-header" id="EdgeKubernetes-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L104">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L121">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -650,7 +688,7 @@ Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
 The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-serviceCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L108">property <b>serviceCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L125">property <b>serviceCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceCidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -658,12 +696,12 @@ The ID of the security group to which the ECS instances in the cluster belong. I
 The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-slbInternet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L109">property <b>slbInternet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L126">property <b>slbInternet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>slbInternet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeKubernetes-slbInternetEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L113">property <b>slbInternetEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L130">property <b>slbInternetEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>slbInternetEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -671,7 +709,7 @@ The CIDR block for the service network. It cannot be duplicated with the VPC CID
 Whether to create internet load balancer for API Server. Default to true.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-slbIntranet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L117">property <b>slbIntranet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L134">property <b>slbIntranet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>slbIntranet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -679,7 +717,7 @@ Whether to create internet load balancer for API Server. Default to true.
 The ID of private load balancer where the current cluster master node is located.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L17">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -688,7 +726,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L121">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L138">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -696,7 +734,7 @@ deployments.
 Windows instances support batch and PowerShell scripts. If your script file is larger than 1 KB, we recommend that you upload the script to Object Storage Service (OSS) and pull it through the internal endpoint of your OSS bucket.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L125">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L142">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -704,7 +742,7 @@ Windows instances support batch and PowerShell scripts. If your script file is l
 Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L129">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L146">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -712,29 +750,29 @@ Desired Kubernetes version. If you do not specify a value, the latest available 
 The ID of VPC where the current cluster is located.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-workerDataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L139">property <b>workerDataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L156">property <b>workerDataDisks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerDataDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#EdgeKubernetesWorkerDataDisk'>EdgeKubernetesWorkerDataDisk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The data disk configurations of worker nodes, such as the disk type and disk size.
-- category: the type of the data disks. Valid values:
-+ cloud: basic disks.
-+ cloud_efficiency: ultra disks.
-+ cloud_ssd: SSDs.
-- size: the size of a data disk. Unit: GiB.
-- encrypted: specifies whether to encrypt data disks. Valid values: true and false.
+* `category`: the type of the data disks. Valid values:
+* cloud: basic disks.
+* cloud_efficiency: ultra disks.
+* cloud_ssd: SSDs.
+* `size`: the size of a data disk. Unit: GiB.
+* `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-workerDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L143">property <b>workerDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L160">property <b>workerDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerDiskCategory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-The system disk category of worker node. Its valid value are `cloudSsd` and `cloudEfficiency`. Default to `cloudEfficiency`.
+The system disk category of worker node. Its valid value are `cloudEfficiency`, `cloudSsd` and `cloudEssd` and . Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-workerDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L147">property <b>workerDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L164">property <b>workerDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerDiskSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -742,12 +780,12 @@ The system disk category of worker node. Its valid value are `cloudSsd` and `clo
 The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-workerInstanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L148">property <b>workerInstanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L165">property <b>workerInstanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerInstanceChargeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeKubernetes-workerInstanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L152">property <b>workerInstanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L169">property <b>workerInstanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerInstanceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -755,7 +793,7 @@ The system disk size of worker node. Its valid value range [20~32768] in GB. Def
 The instance types of worker node, you can set multiple types to avoid NoStock of a certain type
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-workerNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L156">property <b>workerNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L173">property <b>workerNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerNodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#EdgeKubernetesWorkerNode'>EdgeKubernetesWorkerNode</a>[]&gt;;</code></pre>
@@ -763,7 +801,7 @@ The instance types of worker node, you can set multiple types to avoid NoStock o
 List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-workerNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L160">property <b>workerNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L177">property <b>workerNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerNumber: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -771,19 +809,28 @@ List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 The cloud worker node number of the edge kubernetes cluster. Default to 1. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetes-workerVswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L161">property <b>workerVswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L178">property <b>workerVswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerVswitchIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="Kubernetes" data-link-title="Kubernetes">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L17">
         Resource <strong>Kubernetes</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Kubernetes</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+#### Import
+
+Kubernetes cluster can be imported using the id, e.g. Then complete the main.tf accords to the result of `terraform plan`
+
+```sh
+ $ pulumi import alicloud:cs/kubernetes:Kubernetes alicloud_cs_kubernetes.main cluster-id
+```
+
 <h4 class="pdoc-member-header" id="Kubernetes-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L284"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L330"> <b>constructor</b></a>
 </h4>
 
 
@@ -797,7 +844,7 @@ Create a Kubernetes resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Kubernetes-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L27">method <b>get</b></a>
 </h4>
 
 
@@ -808,14 +855,14 @@ Get an existing Kubernetes resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Kubernetes-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L17">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Kubernetes-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L38">method <b>isInstance</b></a>
 </h4>
 
 
@@ -826,12 +873,12 @@ Returns true if the given object is an instance of Kubernetes.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Kubernetes-addons">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L37">property <b>addons</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L45">property <b>addons</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addons: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#KubernetesAddon'>KubernetesAddon</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Kubernetes-apiAudiences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L41">property <b>apiAudiences</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L49">property <b>apiAudiences</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiAudiences: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -839,7 +886,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature (requires specifying `serviceAccountIssuer` as well.
 
 <h4 class="pdoc-member-header" id="Kubernetes-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L45">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L53">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>availabilityZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -847,7 +894,7 @@ A list of API audiences for [Service Account Token Volume Projection](https://ww
 The Zone where new kubernetes cluster will be located. If it is not be specified, the `vswitchIds` should be set, its value will be vswitch's zone.
 
 <h4 class="pdoc-member-header" id="Kubernetes-clientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L49">property <b>clientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L57">property <b>clientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientCert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -855,7 +902,7 @@ The Zone where new kubernetes cluster will be located. If it is not be specified
 The path of client certificate, like `~/.kube/client-cert.pem`.
 
 <h4 class="pdoc-member-header" id="Kubernetes-clientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L53">property <b>clientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L61">property <b>clientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -863,15 +910,23 @@ The path of client certificate, like `~/.kube/client-cert.pem`.
 The path of client key, like `~/.kube/client-key.pem`.
 
 <h4 class="pdoc-member-header" id="Kubernetes-clusterCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L57">property <b>clusterCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L65">property <b>clusterCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterCaCert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The path of cluster ca certificate, like `~/.kube/cluster-ca-cert.pem`
 
+<h4 class="pdoc-member-header" id="Kubernetes-clusterDomain">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L69">property <b>clusterDomain</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>clusterDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Cluster local domain name, Default to `cluster.local`. A domain name consists of one or more sections separated by a decimal point (.), each of which is up to 63 characters long, and can be lowercase, numerals, and underscores (-), and must be lowercase or numerals at the beginning and end.
+
 <h4 class="pdoc-member-header" id="Kubernetes-connections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L61">property <b>connections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L73">property <b>connections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connections: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#KubernetesConnections'>KubernetesConnections</a>&gt;;</code></pre>
@@ -879,31 +934,47 @@ The path of cluster ca certificate, like `~/.kube/cluster-ca-cert.pem`
 Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
 
 <h4 class="pdoc-member-header" id="Kubernetes-cpuPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L65">property <b>cpuPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L77">property <b>cpuPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cpuPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-kubelet cpu policy. options: static|none. default: none.
+Kubelet cpu policy. For Kubernetes 1.12.6 and later, its valid value is either `static` or `none`. Default to `none`.
+
+<h4 class="pdoc-member-header" id="Kubernetes-customSan">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L81">property <b>customSan</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>customSan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Customize the certificate SAN, multiple IP or domain names are separated by English commas (,).
+
+<h4 class="pdoc-member-header" id="Kubernetes-deletionProtection">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L85">property <b>deletionProtection</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>deletionProtection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Whether to enable cluster deletion protection.
 
 <h4 class="pdoc-member-header" id="Kubernetes-enableSsh">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L69">property <b>enableSsh</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L89">property <b>enableSsh</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableSsh: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Enable login to the node through SSH. default: false
+Enable login to the node through SSH. Default to `false`.
 
 <h4 class="pdoc-member-header" id="Kubernetes-excludeAutoscalerNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L73">property <b>excludeAutoscalerNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L93">property <b>excludeAutoscalerNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>excludeAutoscalerNodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Exclude autoscaler nodes from `workerNodes`. default: false
+Exclude autoscaler nodes from `workerNodes`. Default to `false`.
 
 <h4 class="pdoc-member-header" id="Kubernetes-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L17">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -912,7 +983,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Kubernetes-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L77">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L97">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -920,15 +991,15 @@ deployments and may be missing (undefined) during planning phases.
 Custom Image support. Must based on CentOS7 or AliyunLinux2.
 
 <h4 class="pdoc-member-header" id="Kubernetes-installCloudMonitor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L81">property <b>installCloudMonitor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L101">property <b>installCloudMonitor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>installCloudMonitor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Install cloud monitor agent on ECS. default: true
+Install cloud monitor agent on ECS. Default to `true`.
 
 <h4 class="pdoc-member-header" id="Kubernetes-isEnterpriseSecurityGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L85">property <b>isEnterpriseSecurityGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L105">property <b>isEnterpriseSecurityGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isEnterpriseSecurityGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -936,7 +1007,7 @@ Install cloud monitor agent on ECS. default: true
 Enable to create advanced security group. default: false. See [Advanced security group](https://www.alibabacloud.com/help/doc-detail/120621.htm).
 
 <h4 class="pdoc-member-header" id="Kubernetes-keyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L89">property <b>keyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L109">property <b>keyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -944,7 +1015,7 @@ Enable to create advanced security group. default: false. See [Advanced security
 The keypair of ssh login cluster node, you have to create it first. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="Kubernetes-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L93">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L113">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsEncryptedPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -952,7 +1023,7 @@ The keypair of ssh login cluster node, you have to create it first. You have to 
 An KMS encrypts password used to a cs kubernetes. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="Kubernetes-kmsEncryptionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L97">property <b>kmsEncryptionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L117">property <b>kmsEncryptionContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsEncryptionContext: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -960,7 +1031,7 @@ An KMS encrypts password used to a cs kubernetes. You have to specify one of `pa
 An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating or updating a cs kubernetes with `kmsEncryptedPassword`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kmsEncryptedPassword` is set.
 
 <h4 class="pdoc-member-header" id="Kubernetes-kubeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L101">property <b>kubeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L121">property <b>kubeConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kubeConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -968,7 +1039,7 @@ An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating
 The path of kube config, like `~/.kube/config`.
 
 <h4 class="pdoc-member-header" id="Kubernetes-masterAutoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L105">property <b>masterAutoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L125">property <b>masterAutoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterAutoRenew: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -976,23 +1047,23 @@ The path of kube config, like `~/.kube/config`.
 Enable master payment auto-renew, defaults to false.
 
 <h4 class="pdoc-member-header" id="Kubernetes-masterAutoRenewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L109">property <b>masterAutoRenewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L129">property <b>masterAutoRenewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterAutoRenewPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Master payment auto-renew period. When period unit is `Month`, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”}.
+Master payment auto-renew period, it can be one of {1, 2, 3, 6, 12}.
 
 <h4 class="pdoc-member-header" id="Kubernetes-masterDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L113">property <b>masterDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L133">property <b>masterDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterDiskCategory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-The system disk category of master node. Its valid value are `cloudSsd` and `cloudEfficiency`. Default to `cloudEfficiency`.
+The system disk category of master node. Its valid value are `cloudSsd`, `cloudEssd` and `cloudEfficiency`. Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="Kubernetes-masterDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L117">property <b>masterDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L137">property <b>masterDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterDiskSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1000,15 +1071,15 @@ The system disk category of master node. Its valid value are `cloudSsd` and `clo
 The system disk size of master node. Its valid value range [20~500] in GB. Default to 20.
 
 <h4 class="pdoc-member-header" id="Kubernetes-masterInstanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L121">property <b>masterInstanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L141">property <b>masterInstanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterInstanceChargeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Master payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
+Master payment type. or `PostPaid` or `PrePaid`, defaults to `PostPaid`. If value is `PrePaid`, the files `masterPeriod`, `masterPeriodUnit`, `masterAutoRenew` and `masterAutoRenewPeriod` are required.
 
 <h4 class="pdoc-member-header" id="Kubernetes-masterInstanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L125">property <b>masterInstanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L145">property <b>masterInstanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterInstanceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1016,7 +1087,7 @@ Master payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
 The instance type of master node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.
 
 <h4 class="pdoc-member-header" id="Kubernetes-masterNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L129">property <b>masterNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L149">property <b>masterNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterNodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#KubernetesMasterNode'>KubernetesMasterNode</a>[]&gt;;</code></pre>
@@ -1024,28 +1095,28 @@ The instance type of master node. Specify one type for single AZ Cluster, three 
 List of cluster master nodes. It contains several attributes to `Block Nodes`.
 
 <h4 class="pdoc-member-header" id="Kubernetes-masterPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L133">property <b>masterPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L153">property <b>masterPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Master payment period. When period unit is `Month`, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”, “4”}.
+Master payment period.Its valid value is one of {1, 2, 3, 6, 12, 24, 36, 48, 60}.
 
 <h4 class="pdoc-member-header" id="Kubernetes-masterPeriodUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L137">property <b>masterPeriodUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L157">property <b>masterPeriodUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterPeriodUnit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Master payment period unit. `Month` or `Week`, defaults to `Month`.
+Master payment period unit, the valid value is `Month`.
 
 <h4 class="pdoc-member-header" id="Kubernetes-masterVswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L138">property <b>masterVswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L158">property <b>masterVswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterVswitchIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Kubernetes-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L142">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L162">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1053,7 +1124,7 @@ Master payment period unit. `Month` or `Week`, defaults to `Month`.
 The kubernetes cluster's name. It is unique in one Alicloud account.
 
 <h4 class="pdoc-member-header" id="Kubernetes-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L146">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L166">property <b>namePrefix</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1062,7 +1133,7 @@ Field &#39;name_prefix&#39; has been deprecated from provider version 1.75.0.
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Kubernetes-natGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L150">property <b>natGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L170">property <b>natGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>natGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1070,7 +1141,7 @@ Field &#39;name_prefix&#39; has been deprecated from provider version 1.75.0.
 The ID of nat gateway used to launch kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="Kubernetes-newNatGateway">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L154">property <b>newNatGateway</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L174">property <b>newNatGateway</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>newNatGateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1078,7 +1149,7 @@ The ID of nat gateway used to launch kubernetes cluster.
 Whether to create a new nat gateway while creating kubernetes cluster. Default to true. Then openapi in Alibaba Cloud are not all on intranet, So turn this option on is a good choice.
 
 <h4 class="pdoc-member-header" id="Kubernetes-nodeCidrMask">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L158">property <b>nodeCidrMask</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L178">property <b>nodeCidrMask</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeCidrMask: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1086,55 +1157,92 @@ Whether to create a new nat gateway while creating kubernetes cluster. Default t
 The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24
 
 <h4 class="pdoc-member-header" id="Kubernetes-nodeNameMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L162">property <b>nodeNameMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L182">property <b>nodeNameMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeNameMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.
+Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be `aliyun.com00055test`.
+
+<h4 class="pdoc-member-header" id="Kubernetes-nodePortRange">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L186">property <b>nodePortRange</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>nodePortRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The service port range of nodes, valid values: `30000` to `65535`. Default to `30000-32767`.
+
+<h4 class="pdoc-member-header" id="Kubernetes-osType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L190">property <b>osType</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>osType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The operating system of the nodes that run pods, its valid value is either `Linux` or `Windows`. Default to `Linux`.
 
 <h4 class="pdoc-member-header" id="Kubernetes-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L166">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L194">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The password of ssh login cluster node. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
+<h4 class="pdoc-member-header" id="Kubernetes-platform">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L198">property <b>platform</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>platform: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The architecture of the nodes that run pods, its valid value is either `CentOS` or `AliyunLinux`. Default to `CentOS`.
+
 <h4 class="pdoc-member-header" id="Kubernetes-podCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L170">property <b>podCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L202">property <b>podCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>podCidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-[Flannel Specific] The CIDR block for the pod network when using Flannel.
+- [Flannel Specific] The CIDR block for the pod network when using Flannel.
 
 <h4 class="pdoc-member-header" id="Kubernetes-podVswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L174">property <b>podVswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L206">property <b>podVswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>podVswitchIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `podVswitchIds` can not equal to `workerVswtichIds` or `masterVswtichIds` but must be in same availability zones.
+- [Terway Specific] The vswitches for the pod network when using Terway.Be careful the `podVswitchIds` can not equal to `workerVswtichIds` or `masterVswtichIds` but must be in same availability zones.
 
 <h4 class="pdoc-member-header" id="Kubernetes-proxyMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L178">property <b>proxyMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L210">property <b>proxyMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>proxyMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
+Proxy mode is option of kube-proxy. options: iptables | ipvs. default: ipvs.
 
+<h4 class="pdoc-member-header" id="Kubernetes-rdsInstances">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L211">property <b>rdsInstances</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>rdsInstances: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Kubernetes-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L182">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L215">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
 
+<h4 class="pdoc-member-header" id="Kubernetes-runtime">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L219">property <b>runtime</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>runtime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#KubernetesRuntime'>KubernetesRuntime</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The runtime of containers. Default to `docker`. If you select another container runtime, see [How do I select between Docker and Sandboxed-Container](https://www.alibabacloud.com/help/doc-detail/160313.htm?spm=a2c63.p38356.b99.440.22563866AJkBgI). Detailed below.
+
 <h4 class="pdoc-member-header" id="Kubernetes-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L186">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L223">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1142,7 +1250,7 @@ The ID of the resource group,by default these cloud resources are automatically 
 The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 
 <h4 class="pdoc-member-header" id="Kubernetes-serviceAccountIssuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L190">property <b>serviceAccountIssuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L227">property <b>serviceAccountIssuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceAccountIssuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1150,7 +1258,7 @@ The ID of the security group to which the ECS instances in the cluster belong. I
 The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `"kubernetes.default.svc"` to enable the Token Volume Projection feature (requires specifying `apiAudiences` as well).
 
 <h4 class="pdoc-member-header" id="Kubernetes-serviceCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L194">property <b>serviceCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L231">property <b>serviceCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceCidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1158,7 +1266,7 @@ The issuer of the Service Account token for [Service Account Token Volume Projec
 The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
 
 <h4 class="pdoc-member-header" id="Kubernetes-slbId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L198">property <b>slbId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L235">property <b>slbId</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1167,12 +1275,12 @@ Field &#39;slb_id&#39; has been deprecated from provider version 1.9.2. New fiel
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>slbId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Kubernetes-slbInternet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L199">property <b>slbInternet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L236">property <b>slbInternet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>slbInternet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Kubernetes-slbInternetEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L203">property <b>slbInternetEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L240">property <b>slbInternetEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>slbInternetEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1180,7 +1288,7 @@ Field &#39;slb_id&#39; has been deprecated from provider version 1.9.2. New fiel
 Whether to create internet load balancer for API Server. Default to true.
 
 <h4 class="pdoc-member-header" id="Kubernetes-slbIntranet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L207">property <b>slbIntranet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L244">property <b>slbIntranet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>slbIntranet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1188,15 +1296,31 @@ Whether to create internet load balancer for API Server. Default to true.
 The ID of private load balancer where the current cluster master node is located.
 
 <h4 class="pdoc-member-header" id="Kubernetes-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L211">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L248">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Default nil, A map of tags assigned to the kubernetes cluster .
+Default nil, A map of tags assigned to the kubernetes cluster . Detailed below.
+
+<h4 class="pdoc-member-header" id="Kubernetes-taints">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L252">property <b>taints</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>taints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#KubernetesTaint'>KubernetesTaint</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Taints ensure pods are not scheduled onto inappropriate nodes. One or more taints are applied to a node; this marks that the node should not accept any pods that do not tolerate the taints. For more information, see [Taints and Tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/). Detailed below.
+
+<h4 class="pdoc-member-header" id="Kubernetes-timezone">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L256">property <b>timezone</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>timezone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+When you create a cluster, set the time zones for the Master and Woker nodes. You can only change the managed node time zone if you create a cluster. Once the cluster is created, you can only change the time zone of the Worker node.
 
 <h4 class="pdoc-member-header" id="Kubernetes-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L17">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1205,7 +1329,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Kubernetes-userCa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L215">property <b>userCa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L260">property <b>userCa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userCa: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1213,15 +1337,15 @@ deployments.
 The path of customized CA cert, you can use this CA to sign client certs to connect your cluster.
 
 <h4 class="pdoc-member-header" id="Kubernetes-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L219">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L264">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Windows instances support batch and PowerShell scripts. If your script file is larger than 1 KB, we recommend that you upload the script to Object Storage Service (OSS) and pull it through the internal endpoint of your OSS bucket.
+Custom data that can execute on nodes. For more information, see [Prepare user data](https://www.alibabacloud.com/help/doc-detail/49121.htm).
 
 <h4 class="pdoc-member-header" id="Kubernetes-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L223">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L268">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1229,7 +1353,7 @@ Windows instances support batch and PowerShell scripts. If your script file is l
 Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.
 
 <h4 class="pdoc-member-header" id="Kubernetes-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L227">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L272">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1237,7 +1361,7 @@ Desired Kubernetes version. If you do not specify a value, the latest available 
 The ID of VPC where the current cluster is located.
 
 <h4 class="pdoc-member-header" id="Kubernetes-workerAutoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L231">property <b>workerAutoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L276">property <b>workerAutoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerAutoRenew: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1245,47 +1369,48 @@ The ID of VPC where the current cluster is located.
 Enable worker payment auto-renew, defaults to false.
 
 <h4 class="pdoc-member-header" id="Kubernetes-workerAutoRenewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L235">property <b>workerAutoRenewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L280">property <b>workerAutoRenewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerAutoRenewPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Worker payment auto-renew period. When period unit is `Month`, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”}.
+Worker payment auto-renew period,, it can be one of {1, 2, 3, 6, 12}.
 
 <h4 class="pdoc-member-header" id="Kubernetes-workerDataDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L236">property <b>workerDataDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L281">property <b>workerDataDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerDataDiskCategory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Kubernetes-workerDataDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L237">property <b>workerDataDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L282">property <b>workerDataDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerDataDiskSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Kubernetes-workerDataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L247">property <b>workerDataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L293">property <b>workerDataDisks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerDataDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#KubernetesWorkerDataDisk'>KubernetesWorkerDataDisk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The data disk configurations of worker nodes, such as the disk type and disk size.
-- category: the type of the data disks. Valid values:
-+ cloud: basic disks.
-+ cloud_efficiency: ultra disks.
-+ cloud_ssd: SSDs.
-- size: the size of a data disk. Unit: GiB.
-- encrypted: specifies whether to encrypt data disks. Valid values: true and false.
+* `category`: the type of the data disks. Valid values:
+* cloud: basic disks.
+* cloud_efficiency: ultra disks.
+* cloud_ssd: SSDs.
+* cloud_essd: essd.
+* `size`: the size of a data disk. Unit: GiB.
+* `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 
 <h4 class="pdoc-member-header" id="Kubernetes-workerDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L251">property <b>workerDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L297">property <b>workerDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerDiskCategory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-The system disk category of worker node. Its valid value are `cloudSsd` and `cloudEfficiency`. Default to `cloudEfficiency`.
+The system disk category of worker node. Its valid value are `cloud`, `cloudSsd`, `cloudEssd` and `cloudEfficiency`. Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="Kubernetes-workerDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L255">property <b>workerDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L301">property <b>workerDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerDiskSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1293,15 +1418,15 @@ The system disk category of worker node. Its valid value are `cloudSsd` and `clo
 The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
 
 <h4 class="pdoc-member-header" id="Kubernetes-workerInstanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L259">property <b>workerInstanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L305">property <b>workerInstanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerInstanceChargeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Worker payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
+Worker payment type, its valid value is either or `PostPaid` or `PrePaid`. Defaults to `PostPaid`. If value is `PrePaid`, the files `workerPeriod`, `workerPeriodUnit`, `workerAutoRenew` and `workerAutoRenewPeriod` are required.
 
 <h4 class="pdoc-member-header" id="Kubernetes-workerInstanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L263">property <b>workerInstanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L309">property <b>workerInstanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerInstanceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1309,7 +1434,7 @@ Worker payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
 The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.
 
 <h4 class="pdoc-member-header" id="Kubernetes-workerNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L267">property <b>workerNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L313">property <b>workerNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerNodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#KubernetesWorkerNode'>KubernetesWorkerNode</a>[]&gt;;</code></pre>
@@ -1317,7 +1442,7 @@ The instance type of worker node. Specify one type for single AZ Cluster, three 
 List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 
 <h4 class="pdoc-member-header" id="Kubernetes-workerNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L271">property <b>workerNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L317">property <b>workerNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerNumber: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1325,23 +1450,23 @@ List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
 
 <h4 class="pdoc-member-header" id="Kubernetes-workerPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L275">property <b>workerPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L321">property <b>workerPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Worker payment period. When period unit is `Month`, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”, “4”}.
+Worker payment period. The unit is `Month`. Its valid value is one of {1, 2, 3, 6, 12, 24, 36, 48, 60}.
 
 <h4 class="pdoc-member-header" id="Kubernetes-workerPeriodUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L279">property <b>workerPeriodUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L325">property <b>workerPeriodUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerPeriodUnit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Worker payment period unit. `Month` or `Week`, defaults to `Month`.
+Worker payment period unit, the valid value is `Month`.
 
 <h4 class="pdoc-member-header" id="Kubernetes-workerRamRoleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L283">property <b>workerRamRoleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L329">property <b>workerRamRoleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerRamRoleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1349,12 +1474,12 @@ Worker payment period unit. `Month` or `Week`, defaults to `Month`.
 The RamRole Name attached to worker node.
 
 <h4 class="pdoc-member-header" id="Kubernetes-workerVswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L284">property <b>workerVswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L330">property <b>workerVswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerVswitchIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="KubernetesAutoscaler" data-link-title="KubernetesAutoscaler">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L78">
         Resource <strong>KubernetesAutoscaler</strong>
     </a>
 </h3>
@@ -1373,27 +1498,65 @@ This resource will help you to manager cluster-autoscaler in Kubernetes Cluster.
 
 #### Example Usage
 
-cluster-autoscaler in Kubernetes Cluster
+cluster-autoscaler in Kubernetes Cluster.
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const _default = new alicloud.cs.KubernetesAutoscaler("default", {
-    clusterId: _var.cluster_id,
+const config = new pulumi.Config();
+const name = config.get("name") || "autoscaler";
+const defaultNetworks = alicloud.vpc.getNetworks({});
+const defaultImages = alicloud.ecs.getImages({
+    owners: "system",
+    nameRegex: "^centos_7",
+    mostRecent: true,
+});
+const defaultManagedKubernetesClusters = alicloud.cs.getManagedKubernetesClusters({});
+const defaultInstanceTypes = alicloud.ecs.getInstanceTypes({
+    cpuCoreCount: 2,
+    memorySize: 4,
+});
+const defaultSecurityGroup = new alicloud.ecs.SecurityGroup("defaultSecurityGroup", {vpcId: defaultNetworks.then(defaultNetworks => defaultNetworks.vpcs[0].id)});
+const defaultScalingGroup = new alicloud.ess.ScalingGroup("defaultScalingGroup", {
+    scalingGroupName: name,
+    minSize: _var.min_size,
+    maxSize: _var.max_size,
+    vswitchIds: [defaultNetworks.then(defaultNetworks => defaultNetworks.vpcs[0].vswitchIds[0])],
+    removalPolicies: [
+        "OldestInstance",
+        "NewestInstance",
+    ],
+});
+const defaultScalingConfiguration = new alicloud.ess.ScalingConfiguration("defaultScalingConfiguration", {
+    imageId: defaultImages.then(defaultImages => defaultImages.images[0].id),
+    securityGroupId: defaultSecurityGroup.id,
+    scalingGroupId: defaultScalingGroup.id,
+    instanceType: defaultInstanceTypes.then(defaultInstanceTypes => defaultInstanceTypes.instanceTypes[0].id),
+    internetChargeType: "PayByTraffic",
+    forceDelete: true,
+    enable: true,
+    active: true,
+});
+const defaultKubernetesAutoscaler = new alicloud.cs.KubernetesAutoscaler("defaultKubernetesAutoscaler", {
+    clusterId: defaultManagedKubernetesClusters.then(defaultManagedKubernetesClusters => defaultManagedKubernetesClusters.clusters[0].id),
     nodepools: [{
-        id: "scaling_group_id",
-        taints: "c=d:NoSchedule",
+        id: defaultScalingGroup.id,
         labels: "a=b",
     }],
     utilization: _var.utilization,
     coolDownDuration: _var.cool_down_duration,
     deferScaleInDuration: _var.defer_scale_in_duration,
+}, {
+    dependsOn: [
+        alicloud_ess_scaling_group.defalut,
+        defaultScalingConfiguration,
+    ],
 });
 ```
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscaler-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L94"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L131"> <b>constructor</b></a>
 </h4>
 
 
@@ -1407,7 +1570,7 @@ Create a KubernetesAutoscaler resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscaler-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L88">method <b>get</b></a>
 </h4>
 
 
@@ -1418,14 +1581,14 @@ Get an existing KubernetesAutoscaler resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscaler-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L41">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L78">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscaler-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L99">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1436,7 +1599,7 @@ Returns true if the given object is an instance of KubernetesAutoscaler.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscaler-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L72">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L109">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1444,7 +1607,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The id of kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscaler-coolDownDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L76">property <b>coolDownDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L113">property <b>coolDownDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>coolDownDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1452,7 +1615,7 @@ The id of kubernetes cluster.
 The coolDownDuration option of cluster-autoscaler.
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscaler-deferScaleInDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L80">property <b>deferScaleInDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L117">property <b>deferScaleInDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deferScaleInDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1460,7 +1623,7 @@ The coolDownDuration option of cluster-autoscaler.
 The deferScaleInDuration option of cluster-autoscaler.
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscaler-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L41">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L78">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1469,7 +1632,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscaler-nodepools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L86">property <b>nodepools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L123">property <b>nodepools</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodepools: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#KubernetesAutoscalerNodepool'>KubernetesAutoscalerNodepool</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1479,7 +1642,7 @@ deployments and may be missing (undefined) during planning phases.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscaler-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L41">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L78">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1488,7 +1651,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscaler-useEcsRamRoleToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L90">property <b>useEcsRamRoleToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L127">property <b>useEcsRamRoleToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>useEcsRamRoleToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1496,7 +1659,7 @@ deployments.
 Enable autoscaler access to alibabacloud service by ecs ramrole token. default: false
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscaler-utilization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L94">property <b>utilization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L131">property <b>utilization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>utilization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1504,14 +1667,23 @@ Enable autoscaler access to alibabacloud service by ecs ramrole token. default: 
 The utilization option of cluster-autoscaler.
 
 <h3 class="pdoc-module-header" id="ManagedKubernetes" data-link-title="ManagedKubernetes">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L17">
         Resource <strong>ManagedKubernetes</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ManagedKubernetes</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+#### Import
+
+Kubernetes cluster can be imported using the id, e.g. Then complete the main.tf accords to the result of `terraform plan`.
+
+```sh
+ $ pulumi import alicloud:cs/managedKubernetes:ManagedKubernetes alicloud_cs_managed_kubernetes.main cluster-id
+```
+
 <h4 class="pdoc-member-header" id="ManagedKubernetes-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L250"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L295"> <b>constructor</b></a>
 </h4>
 
 
@@ -1525,7 +1697,7 @@ Create a ManagedKubernetes resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L27">method <b>get</b></a>
 </h4>
 
 
@@ -1536,14 +1708,14 @@ Get an existing ManagedKubernetes resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L17">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L38">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1554,20 +1726,20 @@ Returns true if the given object is an instance of ManagedKubernetes.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-addons">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L37">property <b>addons</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L45">property <b>addons</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addons: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ManagedKubernetesAddon'>ManagedKubernetesAddon</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedKubernetes-apiAudiences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L41">property <b>apiAudiences</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L49">property <b>apiAudiences</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiAudiences: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature.
+A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature (requires specifying `serviceAccountIssuer` as well.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L45">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L53">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>availabilityZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1575,7 +1747,7 @@ A list of API audiences for [Service Account Token Volume Projection](https://ww
 The Zone where new kubernetes cluster will be located. If it is not be specified, the `vswitchIds` should be set, its value will be vswitch's zone.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-clientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L49">property <b>clientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L57">property <b>clientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientCert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1583,7 +1755,7 @@ The Zone where new kubernetes cluster will be located. If it is not be specified
 The path of client certificate, like `~/.kube/client-cert.pem`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-clientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L53">property <b>clientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L61">property <b>clientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1591,25 +1763,28 @@ The path of client certificate, like `~/.kube/client-cert.pem`.
 The path of client key, like `~/.kube/client-key.pem`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-clusterCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L57">property <b>clusterCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L65">property <b>clusterCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterCaCert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The path of cluster ca certificate, like `~/.kube/cluster-ca-cert.pem`
 
+<h4 class="pdoc-member-header" id="ManagedKubernetes-clusterDomain">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L69">property <b>clusterDomain</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>clusterDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Cluster local domain name, Default to `cluster.local`. A domain name consists of one or more sections separated by a decimal point (.), each of which is up to 63 characters long, and can be lowercase, numerals, and underscores (-), and must be lowercase or numerals at the beginning and end.
+
 <h4 class="pdoc-member-header" id="ManagedKubernetes-clusterSpec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L63">property <b>clusterSpec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L70">property <b>clusterSpec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterSpec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-The cluster specifications of kubernetes cluster,which can be empty.Valid values:
-- ack.standard: Standard managed clusters.
-- ack.pro.small:  Professional managed clusters.
-
 <h4 class="pdoc-member-header" id="ManagedKubernetes-connections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L67">property <b>connections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L74">property <b>connections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connections: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ManagedKubernetesConnections'>ManagedKubernetesConnections</a>&gt;;</code></pre>
@@ -1617,31 +1792,55 @@ The cluster specifications of kubernetes cluster,which can be empty.Valid values
 Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-cpuPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L71">property <b>cpuPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L78">property <b>cpuPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cpuPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-kubelet cpu policy. options: static|none. default: none.
+Kubelet cpu policy. For Kubernetes 1.12.6 and later, its valid value is either `static` or `none`. Default to `none`.
+
+<h4 class="pdoc-member-header" id="ManagedKubernetes-customSan">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L82">property <b>customSan</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>customSan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Customize the certificate SAN, multiple IP or domain names are separated by English commas (,).
+
+<h4 class="pdoc-member-header" id="ManagedKubernetes-deletionProtection">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L86">property <b>deletionProtection</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>deletionProtection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Whether to enable cluster deletion protection.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-enableSsh">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L75">property <b>enableSsh</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L90">property <b>enableSsh</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableSsh: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Enable login to the node through SSH. default: false
+Enable login to the node through SSH. Default to `false`.
+
+<h4 class="pdoc-member-header" id="ManagedKubernetes-encryptionProviderKey">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L94">property <b>encryptionProviderKey</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>encryptionProviderKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The disk encryption key.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-excludeAutoscalerNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L79">property <b>excludeAutoscalerNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L98">property <b>excludeAutoscalerNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>excludeAutoscalerNodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Exclude autoscaler nodes from `workerNodes`. default: false
+Exclude autoscaler nodes from `workerNodes`. Default to `false`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L17">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1650,7 +1849,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L83">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L102">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1658,15 +1857,15 @@ deployments and may be missing (undefined) during planning phases.
 Custom Image support. Must based on CentOS7 or AliyunLinux2.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-installCloudMonitor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L87">property <b>installCloudMonitor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L106">property <b>installCloudMonitor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>installCloudMonitor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Install cloud monitor agent on ECS. default: true
+Install cloud monitor agent on ECS. Default to `true`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-isEnterpriseSecurityGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L91">property <b>isEnterpriseSecurityGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L110">property <b>isEnterpriseSecurityGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isEnterpriseSecurityGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1674,7 +1873,7 @@ Install cloud monitor agent on ECS. default: true
 Enable to create advanced security group. default: false. See [Advanced security group](https://www.alibabacloud.com/help/doc-detail/120621.htm).
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-keyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L95">property <b>keyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L114">property <b>keyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1682,7 +1881,7 @@ Enable to create advanced security group. default: false. See [Advanced security
 The keypair of ssh login cluster node, you have to create it first. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L99">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L118">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsEncryptedPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1690,7 +1889,7 @@ The keypair of ssh login cluster node, you have to create it first. You have to 
 An KMS encrypts password used to a cs kubernetes. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-kmsEncryptionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L103">property <b>kmsEncryptionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L122">property <b>kmsEncryptionContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsEncryptionContext: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1698,7 +1897,7 @@ An KMS encrypts password used to a cs kubernetes. You have to specify one of `pa
 An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating or updating a cs kubernetes with `kmsEncryptedPassword`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kmsEncryptedPassword` is set.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-kubeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L107">property <b>kubeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L126">property <b>kubeConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kubeConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1706,7 +1905,7 @@ An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating
 The path of kube config, like `~/.kube/config`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L111">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L130">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1714,12 +1913,12 @@ The path of kube config, like `~/.kube/config`.
 The kubernetes cluster's name. It is unique in one Alicloud account.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L112">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L131">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedKubernetes-natGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L116">property <b>natGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L135">property <b>natGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>natGatewayId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1727,7 +1926,7 @@ The kubernetes cluster's name. It is unique in one Alicloud account.
 The ID of nat gateway used to launch kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-newNatGateway">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L120">property <b>newNatGateway</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L139">property <b>newNatGateway</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>newNatGateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1735,7 +1934,7 @@ The ID of nat gateway used to launch kubernetes cluster.
 Whether to create a new nat gateway while creating kubernetes cluster. Default to true. Then openapi in Alibaba Cloud are not all on intranet, So turn this option on is a good choice.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-nodeCidrMask">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L124">property <b>nodeCidrMask</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L143">property <b>nodeCidrMask</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeCidrMask: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1743,55 +1942,92 @@ Whether to create a new nat gateway while creating kubernetes cluster. Default t
 The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-nodeNameMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L128">property <b>nodeNameMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L147">property <b>nodeNameMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeNameMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.
+Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be `aliyun.com00055test`.
+
+<h4 class="pdoc-member-header" id="ManagedKubernetes-nodePortRange">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L151">property <b>nodePortRange</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>nodePortRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The service port range of nodes, valid values: `30000` to `65535`. Default to `30000-32767`.
+
+<h4 class="pdoc-member-header" id="ManagedKubernetes-osType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L155">property <b>osType</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>osType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The operating system of the nodes that run pods, its valid value is either `Linux` or `Windows`. Default to `Linux`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L132">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L159">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The password of ssh login cluster node. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
+<h4 class="pdoc-member-header" id="ManagedKubernetes-platform">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L163">property <b>platform</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>platform: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The architecture of the nodes that run pods, its valid value is either `CentOS` or `AliyunLinux`. Default to `CentOS`.
+
 <h4 class="pdoc-member-header" id="ManagedKubernetes-podCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L136">property <b>podCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L167">property <b>podCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>podCidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-[Flannel Specific] The CIDR block for the pod network when using Flannel.
+- [Flannel Specific] The CIDR block for the pod network when using Flannel.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-podVswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L140">property <b>podVswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L171">property <b>podVswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>podVswitchIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `podVswitchIds` can not equal to `workerVswtichIds`.but must be in same availability zones.
+- [Terway Specific] The vswitches for the pod network when using Terway.Be careful the `podVswitchIds` can not equal to `workerVswtichIds` or `masterVswtichIds` but must be in same availability zones.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-proxyMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L144">property <b>proxyMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L175">property <b>proxyMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>proxyMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
 
+<h4 class="pdoc-member-header" id="ManagedKubernetes-rdsInstances">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L176">property <b>rdsInstances</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>rdsInstances: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedKubernetes-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L148">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L180">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
 
+<h4 class="pdoc-member-header" id="ManagedKubernetes-runtime">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L184">property <b>runtime</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>runtime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ManagedKubernetesRuntime'>ManagedKubernetesRuntime</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The runtime of containers. Default to `docker`. If you select another container runtime, see [How do I select between Docker and Sandboxed-Container](https://www.alibabacloud.com/help/doc-detail/160313.htm?spm=a2c63.p38356.b99.440.22563866AJkBgI). Detailed below.
+
 <h4 class="pdoc-member-header" id="ManagedKubernetes-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L152">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L188">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1799,15 +2035,15 @@ The ID of the resource group,by default these cloud resources are automatically 
 The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-serviceAccountIssuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L156">property <b>serviceAccountIssuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L192">property <b>serviceAccountIssuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceAccountIssuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `kubernetes.default.svc` to enable the Token Volume Projection feature.
+The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `"kubernetes.default.svc"` to enable the Token Volume Projection feature (requires specifying `apiAudiences` as well).
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-serviceCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L160">property <b>serviceCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L196">property <b>serviceCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceCidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1815,7 +2051,7 @@ The issuer of the Service Account token for [Service Account Token Volume Projec
 The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-slbId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L164">property <b>slbId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L200">property <b>slbId</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1824,12 +2060,12 @@ Field &#39;slb_id&#39; has been deprecated from provider version 1.9.2. New fiel
 </div>
 <pre class="highlight"><code><span class='kd'>public </span>slbId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedKubernetes-slbInternet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L165">property <b>slbInternet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L201">property <b>slbInternet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>slbInternet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedKubernetes-slbInternetEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L169">property <b>slbInternetEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L205">property <b>slbInternetEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>slbInternetEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1837,7 +2073,7 @@ Field &#39;slb_id&#39; has been deprecated from provider version 1.9.2. New fiel
 Whether to create internet load balancer for API Server. Default to true.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-slbIntranet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L173">property <b>slbIntranet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L209">property <b>slbIntranet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>slbIntranet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1845,15 +2081,31 @@ Whether to create internet load balancer for API Server. Default to true.
 The ID of private load balancer where the current cluster master node is located.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L177">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L213">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Default nil, A map of tags assigned to the kubernetes cluster .
+Default nil, A map of tags assigned to the kubernetes cluster . Detailed below.
+
+<h4 class="pdoc-member-header" id="ManagedKubernetes-taints">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L217">property <b>taints</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>taints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ManagedKubernetesTaint'>ManagedKubernetesTaint</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Taints ensure pods are not scheduled onto inappropriate nodes. One or more taints are applied to a node; this marks that the node should not accept any pods that do not tolerate the taints. For more information, see [Taints and Tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/). Detailed below.
+
+<h4 class="pdoc-member-header" id="ManagedKubernetes-timezone">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L221">property <b>timezone</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>timezone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+When you create a cluster, set the time zones for the Master and Woker nodes. You can only change the managed node time zone if you create a cluster. Once the cluster is created, you can only change the time zone of the Worker node.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L17">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1862,7 +2114,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-userCa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L181">property <b>userCa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L225">property <b>userCa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userCa: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1870,15 +2122,15 @@ deployments.
 The path of customized CA cert, you can use this CA to sign client certs to connect your cluster.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L185">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L229">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Windows instances support batch and PowerShell scripts. If your script file is larger than 1 KB, we recommend that you upload the script to Object Storage Service (OSS) and pull it through the internal endpoint of your OSS bucket.
+Custom data that can execute on nodes. For more information, see [Prepare user data](https://www.alibabacloud.com/help/doc-detail/49121.htm).
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L189">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L233">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1886,7 +2138,7 @@ Windows instances support batch and PowerShell scripts. If your script file is l
 Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L193">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L237">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1894,7 +2146,7 @@ Desired Kubernetes version. If you do not specify a value, the latest available 
 The ID of VPC where the current cluster is located.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-workerAutoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L197">property <b>workerAutoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L241">property <b>workerAutoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerAutoRenew: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1902,47 +2154,48 @@ The ID of VPC where the current cluster is located.
 Enable worker payment auto-renew, defaults to false.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-workerAutoRenewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L201">property <b>workerAutoRenewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L245">property <b>workerAutoRenewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerAutoRenewPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Worker payment auto-renew period. When period unit is `Month`, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”}.
+Worker payment auto-renew period,, it can be one of {1, 2, 3, 6, 12}.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-workerDataDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L202">property <b>workerDataDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L246">property <b>workerDataDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerDataDiskCategory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedKubernetes-workerDataDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L203">property <b>workerDataDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L247">property <b>workerDataDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerDataDiskSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedKubernetes-workerDataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L213">property <b>workerDataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L258">property <b>workerDataDisks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerDataDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ManagedKubernetesWorkerDataDisk'>ManagedKubernetesWorkerDataDisk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The data disk configurations of worker nodes, such as the disk type and disk size.
-- category: the type of the data disks. Valid values:
-+ cloud: basic disks.
-+ cloud_efficiency: ultra disks.
-+ cloud_ssd: SSDs.
-- size: the size of a data disk. Unit: GiB.
-- encrypted: specifies whether to encrypt data disks. Valid values: true and false.
+* `category`: the type of the data disks. Valid values:
+* cloud: basic disks.
+* cloud_efficiency: ultra disks.
+* cloud_ssd: SSDs.
+* cloud_essd: essd.
+* `size`: the size of a data disk. Unit: GiB.
+* `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-workerDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L217">property <b>workerDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L262">property <b>workerDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerDiskCategory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-The system disk category of worker node. Its valid value are `cloudSsd` and `cloudEfficiency`. Default to `cloudEfficiency`.
+The system disk category of worker node. Its valid value are `cloud`, `cloudSsd`, `cloudEssd` and `cloudEfficiency`. Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-workerDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L221">property <b>workerDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L266">property <b>workerDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerDiskSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1950,15 +2203,15 @@ The system disk category of worker node. Its valid value are `cloudSsd` and `clo
 The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-workerInstanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L225">property <b>workerInstanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L270">property <b>workerInstanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerInstanceChargeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Worker payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
+Worker payment type, its valid value is either or `PostPaid` or `PrePaid`. Defaults to `PostPaid`. If value is `PrePaid`, the files `workerPeriod`, `workerPeriodUnit`, `workerAutoRenew` and `workerAutoRenewPeriod` are required.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-workerInstanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L229">property <b>workerInstanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L274">property <b>workerInstanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerInstanceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1966,7 +2219,7 @@ Worker payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
 The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-workerNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L233">property <b>workerNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L278">property <b>workerNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerNodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ManagedKubernetesWorkerNode'>ManagedKubernetesWorkerNode</a>[]&gt;;</code></pre>
@@ -1974,7 +2227,7 @@ The instance type of worker node. Specify one type for single AZ Cluster, three 
 List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-workerNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L237">property <b>workerNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L282">property <b>workerNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerNumber: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1982,23 +2235,23 @@ List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-workerPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L241">property <b>workerPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L286">property <b>workerPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Worker payment period. When period unit is `Month`, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”, “4”}.
+Worker payment period. The unit is `Month`. Its valid value is one of {1, 2, 3, 6, 12, 24, 36, 48, 60}.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-workerPeriodUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L245">property <b>workerPeriodUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L290">property <b>workerPeriodUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerPeriodUnit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Worker payment period unit. `Month` or `Week`, defaults to `Month`.
+Worker payment period unit, the valid value is `Month`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-workerRamRoleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L249">property <b>workerRamRoleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L294">property <b>workerRamRoleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerRamRoleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2006,12 +2259,12 @@ Worker payment period unit. `Month` or `Week`, defaults to `Month`.
 The RamRole Name attached to worker node.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetes-workerVswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L250">property <b>workerVswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L295">property <b>workerVswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workerVswitchIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="NodePool" data-link-title="NodePool">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L30">
         Resource <strong>NodePool</strong>
     </a>
 </h3>
@@ -2040,7 +2293,7 @@ const _default = new alicloud.cs.NodePool("default", {
 ```
 
 <h4 class="pdoc-member-header" id="NodePool-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L133"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L132"> <b>constructor</b></a>
 </h4>
 
 
@@ -2054,7 +2307,7 @@ Create a NodePool resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="NodePool-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -2065,14 +2318,14 @@ Get an existing NodePool resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="NodePool-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="NodePool-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2083,7 +2336,7 @@ Returns true if the given object is an instance of NodePool.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="NodePool-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L62">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L61">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2091,12 +2344,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The id of kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="NodePool-dataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L63">property <b>dataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L62">property <b>dataDisks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#NodePoolDataDisk'>NodePoolDataDisk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NodePool-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2105,7 +2358,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="NodePool-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L67">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L66">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2113,7 +2366,7 @@ deployments and may be missing (undefined) during planning phases.
 Custom Image support. Must based on CentOS7 or AliyunLinux2.
 
 <h4 class="pdoc-member-header" id="NodePool-instanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L71">property <b>instanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L70">property <b>instanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -2121,7 +2374,7 @@ Custom Image support. Must based on CentOS7 or AliyunLinux2.
 The instance type of worker node.
 
 <h4 class="pdoc-member-header" id="NodePool-keyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L75">property <b>keyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L74">property <b>keyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2129,7 +2382,7 @@ The instance type of worker node.
 The keypair of ssh login cluster node, you have to create it first. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="NodePool-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L79">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L78">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsEncryptedPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2137,7 +2390,7 @@ The keypair of ssh login cluster node, you have to create it first. You have to 
 An KMS encrypts password used to a cs kubernetes. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="NodePool-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L83">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L82">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#NodePoolLabel'>NodePoolLabel</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2145,7 +2398,7 @@ An KMS encrypts password used to a cs kubernetes. You have to specify one of `pa
 A List of Kubernetes labels to assign to the nodes . Only labels that are applied with the ACK API are managed by this argument.
 
 <h4 class="pdoc-member-header" id="NodePool-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L87">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L86">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2153,7 +2406,7 @@ A List of Kubernetes labels to assign to the nodes . Only labels that are applie
 The name of node pool.
 
 <h4 class="pdoc-member-header" id="NodePool-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L91">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L90">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2161,7 +2414,7 @@ The name of node pool.
 The worker node number of the node pool.
 
 <h4 class="pdoc-member-header" id="NodePool-nodeNameMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L95">property <b>nodeNameMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L94">property <b>nodeNameMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeNameMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2169,7 +2422,7 @@ The worker node number of the node pool.
 Each node name consists of a prefix, an IP substring, and a suffix. For example "customized,aliyun.com,5,test", if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.
 
 <h4 class="pdoc-member-header" id="NodePool-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L99">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L98">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2177,7 +2430,7 @@ Each node name consists of a prefix, an IP substring, and a suffix. For example 
 The password of ssh login cluster node. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="NodePool-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L103">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L102">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2185,7 +2438,7 @@ The password of ssh login cluster node. You have to specify one of `password` `k
 The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
 
 <h4 class="pdoc-member-header" id="NodePool-systemDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L107">property <b>systemDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L106">property <b>systemDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>systemDiskCategory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2193,7 +2446,7 @@ The system disk size of worker node. Its valid value range [20~32768] in GB. Def
 The system disk category of worker node. Its valid value are `cloudSsd` and `cloudEfficiency`. Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="NodePool-systemDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L111">property <b>systemDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L110">property <b>systemDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>systemDiskSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2201,7 +2454,7 @@ The system disk category of worker node. Its valid value are `cloudSsd` and `clo
 The system disk category of worker node. Its valid value are `cloudSsd` and `cloudEfficiency`. Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="NodePool-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L117">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L116">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2211,7 +2464,7 @@ A List of tags to assign to the resource. It will be applied for ECS instances f
 - value: It can be up to 128 characters in length. It cannot begin with "aliyun", "http://", or "https://" It can be a null string.
 
 <h4 class="pdoc-member-header" id="NodePool-taints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L121">property <b>taints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L120">property <b>taints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>taints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#NodePoolTaint'>NodePoolTaint</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2219,7 +2472,7 @@ A List of tags to assign to the resource. It will be applied for ECS instances f
 A List of Kubernetes taints to assign to the nodes.
 
 <h4 class="pdoc-member-header" id="NodePool-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2228,7 +2481,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="NodePool-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L125">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L124">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2236,7 +2489,7 @@ deployments.
 Windows instances support batch and PowerShell scripts. If your script file is larger than 1 KB, we recommend that you upload the script to Object Storage Service (OSS) and pull it through the internal endpoint of your OSS bucket.
 
 <h4 class="pdoc-member-header" id="NodePool-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L129">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L128">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2244,7 +2497,7 @@ Windows instances support batch and PowerShell scripts. If your script file is l
 The ID of VPC where the current cluster is located.
 
 <h4 class="pdoc-member-header" id="NodePool-vswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L133">property <b>vswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L132">property <b>vswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vswitchIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -2252,7 +2505,7 @@ The ID of VPC where the current cluster is located.
 The vswitches used by node pool workers.
 
 <h3 class="pdoc-module-header" id="RegistryEnterpriseNamespace" data-link-title="RegistryEnterpriseNamespace">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L39">
         Resource <strong>RegistryEnterpriseNamespace</strong>
     </a>
 </h3>
@@ -2282,8 +2535,16 @@ const my_namespace = new alicloud.cs.RegistryEnterpriseNamespace("my-namespace",
 });
 ```
 
+#### Import
+
+Container Registry Enterprise Edition namespace can be imported using the `{instance_id}:{namespace}`, e.g.
+
+```sh
+ $ pulumi import alicloud:cs/registryEnterpriseNamespace:RegistryEnterpriseNamespace default cri-xxx:my-namespace
+```
+
 <h4 class="pdoc-member-header" id="RegistryEnterpriseNamespace-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L74"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L82"> <b>constructor</b></a>
 </h4>
 
 
@@ -2297,7 +2558,7 @@ Create a RegistryEnterpriseNamespace resource with the given unique name, argume
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseNamespace-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -2308,14 +2569,14 @@ Get an existing RegistryEnterpriseNamespace resource's state with the given name
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseNamespace-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L31">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseNamespace-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2326,7 +2587,7 @@ Returns true if the given object is an instance of RegistryEnterpriseNamespace. 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseNamespace-autoCreate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L62">property <b>autoCreate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L70">property <b>autoCreate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoCreate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2334,7 +2595,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Boolean, when it set to true, repositories are automatically created when pushing new images. If it set to false, you create repository for images before pushing.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseNamespace-defaultVisibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L66">property <b>defaultVisibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L74">property <b>defaultVisibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultVisibility: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2342,7 +2603,7 @@ Boolean, when it set to true, repositories are automatically created when pushin
 `PUBLIC` or `PRIVATE`, default repository visibility in this namespace.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseNamespace-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L31">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2351,7 +2612,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseNamespace-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L70">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L78">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2359,7 +2620,7 @@ deployments and may be missing (undefined) during planning phases.
 ID of Container Registry Enterprise Edition instance.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseNamespace-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L82">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2367,7 +2628,7 @@ ID of Container Registry Enterprise Edition instance.
 Name of Container Registry Enterprise Edition namespace. It can contain 2 to 30 characters.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseNamespace-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L31">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2376,7 +2637,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RegistryEnterpriseRepo" data-link-title="RegistryEnterpriseRepo">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L46">
         Resource <strong>RegistryEnterpriseRepo</strong>
     </a>
 </h3>
@@ -2413,8 +2674,16 @@ const my_repo = new alicloud.cs.RegistryEnterpriseRepo("my-repo", {
 });
 ```
 
+#### Import
+
+Container Registry Enterprise Edition repository can be imported using the `{instance_id}:{namespace}:{repository}`, e.g.
+
+```sh
+ $ pulumi import alicloud:cs/registryEnterpriseRepo:RegistryEnterpriseRepo default `cri-xxx:my-namespace:my-repo`
+```
+
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepo-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L93"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L101"> <b>constructor</b></a>
 </h4>
 
 
@@ -2428,7 +2697,7 @@ Create a RegistryEnterpriseRepo resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepo-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L56">method <b>get</b></a>
 </h4>
 
 
@@ -2439,14 +2708,14 @@ Get an existing RegistryEnterpriseRepo resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepo-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L46">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepo-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L67">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2457,7 +2726,7 @@ Returns true if the given object is an instance of RegistryEnterpriseRepo.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepo-detail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L69">property <b>detail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L77">property <b>detail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>detail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2465,7 +2734,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The repository specific information. MarkDown format is supported, and the length limit is 2000.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepo-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L46">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2474,7 +2743,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepo-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L73">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L81">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2482,7 +2751,7 @@ deployments and may be missing (undefined) during planning phases.
 ID of Container Registry Enterprise Edition instance.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepo-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L77">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L85">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2490,7 +2759,7 @@ ID of Container Registry Enterprise Edition instance.
 Name of Container Registry Enterprise Edition repository. It can contain 2 to 64 characters.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepo-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L81">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L89">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2498,7 +2767,7 @@ Name of Container Registry Enterprise Edition repository. It can contain 2 to 64
 Name of Container Registry Enterprise Edition namespace where repository is located. It can contain 2 to 30 characters.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepo-repoId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L85">property <b>repoId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L93">property <b>repoId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>repoId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2506,7 +2775,7 @@ Name of Container Registry Enterprise Edition namespace where repository is loca
 The uuid of Container Registry Enterprise Edition repository.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepo-repoType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L89">property <b>repoType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L97">property <b>repoType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>repoType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2514,7 +2783,7 @@ The uuid of Container Registry Enterprise Edition repository.
 `PUBLIC` or `PRIVATE`, repo's visibility.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepo-summary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L93">property <b>summary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L101">property <b>summary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>summary: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2522,7 +2791,7 @@ The uuid of Container Registry Enterprise Edition repository.
 The repository general information. It can contain 1 to 100 characters.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepo-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L46">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2531,7 +2800,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RegistryEnterpriseSyncRule" data-link-title="RegistryEnterpriseSyncRule">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L44">
         Resource <strong>RegistryEnterpriseSyncRule</strong>
     </a>
 </h3>
@@ -2566,8 +2835,16 @@ const defaultRegistryEnterpriseSyncRule = new alicloud.cs.RegistryEnterpriseSync
 });
 ```
 
+#### Import
+
+Container Registry Enterprise Edition sync rule can be imported using the id. Format to `{instance_id}:{namespace_name}:{rule_id}`, e.g.
+
+```sh
+ $ pulumi import alicloud:cs/registryEnterpriseSyncRule:RegistryEnterpriseSyncRule default `cri-xxx:my-namespace:crsr-yyy`
+```
+
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L111"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L119"> <b>constructor</b></a>
 </h4>
 
 
@@ -2581,7 +2858,7 @@ Create a RegistryEnterpriseSyncRule resource with the given unique name, argumen
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -2592,14 +2869,14 @@ Get an existing RegistryEnterpriseSyncRule resource's state with the given name,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2610,7 +2887,7 @@ Returns true if the given object is an instance of RegistryEnterpriseSyncRule.  
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2619,7 +2896,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRule-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L67">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L75">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2627,7 +2904,7 @@ deployments and may be missing (undefined) during planning phases.
 ID of Container Registry Enterprise Edition source instance.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRule-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L79">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2635,7 +2912,7 @@ ID of Container Registry Enterprise Edition source instance.
 Name of Container Registry Enterprise Edition sync rule.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRule-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L75">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L83">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2643,7 +2920,7 @@ Name of Container Registry Enterprise Edition sync rule.
 Name of Container Registry Enterprise Edition source namespace. It can contain 2 to 30 characters.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRule-repoName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L79">property <b>repoName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L87">property <b>repoName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>repoName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2651,7 +2928,7 @@ Name of Container Registry Enterprise Edition source namespace. It can contain 2
 Name of the source repository which should be set together with `targetRepoName`, if empty means that the synchronization scope is the entire namespace level.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRule-ruleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L83">property <b>ruleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L91">property <b>ruleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ruleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2659,7 +2936,7 @@ Name of the source repository which should be set together with `targetRepoName`
 The uuid of Container Registry Enterprise Edition sync rule.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRule-syncDirection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L87">property <b>syncDirection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L95">property <b>syncDirection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>syncDirection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2667,7 +2944,7 @@ The uuid of Container Registry Enterprise Edition sync rule.
 `FROM` or `TO`, the direction of synchronization. `FROM` means source instance, `TO` means target instance.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRule-syncScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L91">property <b>syncScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L99">property <b>syncScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>syncScope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2675,7 +2952,7 @@ The uuid of Container Registry Enterprise Edition sync rule.
 `REPO` or `NAMESPACE`,the scope that the synchronization rule applies.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRule-tagFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L95">property <b>tagFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L103">property <b>tagFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tagFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2683,7 +2960,7 @@ The uuid of Container Registry Enterprise Edition sync rule.
 The regular expression used to filter image tags for synchronization in the source repository.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRule-targetInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L99">property <b>targetInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L107">property <b>targetInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetInstanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2691,7 +2968,7 @@ The regular expression used to filter image tags for synchronization in the sour
 ID of Container Registry Enterprise Edition target instance to be synchronized.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRule-targetNamespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L103">property <b>targetNamespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L111">property <b>targetNamespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetNamespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2699,7 +2976,7 @@ ID of Container Registry Enterprise Edition target instance to be synchronized.
 Name of Container Registry Enterprise Edition target namespace to be synchronized. It can contain 2 to 30 characters.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRule-targetRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L107">property <b>targetRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L115">property <b>targetRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetRegionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2707,7 +2984,7 @@ Name of Container Registry Enterprise Edition target namespace to be synchronize
 The target region to be synchronized.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRule-targetRepoName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L111">property <b>targetRepoName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L119">property <b>targetRepoName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetRepoName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2715,7 +2992,7 @@ The target region to be synchronized.
 Name of the target repository.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2724,14 +3001,23 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ServerlessKubernetes" data-link-title="ServerlessKubernetes">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L17">
         Resource <strong>ServerlessKubernetes</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>ServerlessKubernetes</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+#### Import
+
+Serverless Kubernetes cluster can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:cs/serverlessKubernetes:ServerlessKubernetes main ce4273f9156874b46bb
+```
+
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L110"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L118"> <b>constructor</b></a>
 </h4>
 
 
@@ -2745,7 +3031,7 @@ Create a ServerlessKubernetes resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L27">method <b>get</b></a>
 </h4>
 
 
@@ -2756,14 +3042,14 @@ Get an existing ServerlessKubernetes resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L17">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L38">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2774,12 +3060,12 @@ Returns true if the given object is an instance of ServerlessKubernetes.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-addons">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L37">property <b>addons</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L45">property <b>addons</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>addons: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ServerlessKubernetesAddon'>ServerlessKubernetesAddon</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-clientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L41">property <b>clientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L49">property <b>clientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientCert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2787,7 +3073,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The path of client certificate, like `~/.kube/client-cert.pem`.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-clientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L45">property <b>clientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L53">property <b>clientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2795,7 +3081,7 @@ The path of client certificate, like `~/.kube/client-cert.pem`.
 The path of client key, like `~/.kube/client-key.pem`.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-clusterCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L49">property <b>clusterCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L57">property <b>clusterCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterCaCert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2803,7 +3089,7 @@ The path of client key, like `~/.kube/client-key.pem`.
 The path of cluster ca certificate, like `~/.kube/cluster-ca-cert.pem`
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L55">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L63">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deletionProtection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2813,7 +3099,7 @@ Whether enable the deletion protection or not.
 - false: Disable deletion protection.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-endpointPublicAccessEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L59">property <b>endpointPublicAccessEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L67">property <b>endpointPublicAccessEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpointPublicAccessEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2821,7 +3107,7 @@ Whether enable the deletion protection or not.
 Whether to create internet  eip for API Server. Default to false.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-forceUpdate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L63">property <b>forceUpdate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L71">property <b>forceUpdate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceUpdate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2829,7 +3115,7 @@ Whether to create internet  eip for API Server. Default to false.
 Default false, when you want to change `vpcId` and `vswitchId`, you have to set this field to true, then the cluster will be recreated.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L17">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2838,7 +3124,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-kubeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L67">property <b>kubeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L75">property <b>kubeConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kubeConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2846,7 +3132,7 @@ deployments and may be missing (undefined) during planning phases.
 The path of kube config, like `~/.kube/config`.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L79">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2854,12 +3140,12 @@ The path of kube config, like `~/.kube/config`.
 The kubernetes cluster's name. It is the only in one Alicloud account.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L72">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L80">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-newNatGateway">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L76">property <b>newNatGateway</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L84">property <b>newNatGateway</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>newNatGateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2867,7 +3153,7 @@ The kubernetes cluster's name. It is the only in one Alicloud account.
 Whether to create a new nat gateway while creating kubernetes cluster. Default to true.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-privateZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L80">property <b>privateZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L88">property <b>privateZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2875,7 +3161,7 @@ Whether to create a new nat gateway while creating kubernetes cluster. Default t
 Enable Privatezone if you need to use the service discovery feature within the serverless cluster. Default to false.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L84">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L92">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2883,7 +3169,7 @@ Enable Privatezone if you need to use the service discovery feature within the s
 The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L88">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L96">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2891,7 +3177,7 @@ The ID of the resource group,by default these cloud resources are automatically 
 The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L92">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L100">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2899,7 +3185,7 @@ The ID of the security group to which the ECS instances in the cluster belong. I
 Default nil, A map of tags assigned to the kubernetes cluster .
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L17">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2908,7 +3194,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L96">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L104">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2916,7 +3202,7 @@ deployments.
 Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L100">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L108">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2924,7 +3210,7 @@ Desired Kubernetes version. If you do not specify a value, the latest available 
 The vpc where new kubernetes cluster will be located. Specify one vpc's id, if it is not specified, a new VPC  will be built.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L106">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L114">property <b>vswitchId</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2936,7 +3222,7 @@ Field &#39;vswitch_id&#39; has been deprecated from provider version 1.91.0. New
 (Required, ForceNew) The vswitch where new kubernetes cluster will be located. Specify one vswitch's id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which `availabilityZone` specified.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetes-vswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L110">property <b>vswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L118">property <b>vswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vswitchIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -2944,7 +3230,7 @@ Field &#39;vswitch_id&#39; has been deprecated from provider version 1.91.0. New
 The vswitches where new kubernetes cluster will be located.
 
 <h3 class="pdoc-module-header" id="Swarm" data-link-title="Swarm">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L43">
         Resource <strong>Swarm</strong>
     </a>
 </h3>
@@ -2977,8 +3263,16 @@ const myCluster = new alicloud.cs.Swarm("myCluster", {
 });
 ```
 
+#### Import
+
+Swarm cluster can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:cs/swarm:Swarm foo cf123456789
+```
+
 <h4 class="pdoc-member-header" id="Swarm-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L142"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L149"> <b>constructor</b></a>
 </h4>
 
 
@@ -2992,7 +3286,7 @@ Create a Swarm resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Swarm-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -3003,14 +3297,14 @@ Get an existing Swarm resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Swarm-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L43">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Swarm-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -3021,7 +3315,7 @@ Returns true if the given object is an instance of Swarm.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Swarm-agentVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L67">property <b>agentVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L74">property <b>agentVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>agentVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3029,7 +3323,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The nodes agent version.
 
 <h4 class="pdoc-member-header" id="Swarm-cidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L75">property <b>cidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L82">property <b>cidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3041,7 +3335,7 @@ Valid value:
 - 10.0.0.0/16
 
 <h4 class="pdoc-member-header" id="Swarm-diskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L79">property <b>diskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L86">property <b>diskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>diskCategory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3049,7 +3343,7 @@ Valid value:
 The data disk category of ECS instance node. Its valid value are `cloud`, `cloudSsd`, `cloudEssd`, `ephemeralEssd` and `cloudEfficiency`. Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="Swarm-diskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L83">property <b>diskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L90">property <b>diskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>diskSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3057,7 +3351,7 @@ The data disk category of ECS instance node. Its valid value are `cloud`, `cloud
 The data disk size of ECS instance node. Its valid value is 20~32768 GB. Default to 20.
 
 <h4 class="pdoc-member-header" id="Swarm-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L43">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -3066,7 +3360,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Swarm-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L87">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L94">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3074,7 +3368,7 @@ deployments and may be missing (undefined) during planning phases.
 The image ID of ECS instance node used. Default to System automate allocated.
 
 <h4 class="pdoc-member-header" id="Swarm-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L91">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L98">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3082,7 +3376,7 @@ The image ID of ECS instance node used. Default to System automate allocated.
 The type of ECS instance node.
 
 <h4 class="pdoc-member-header" id="Swarm-isOutdated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L95">property <b>isOutdated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L102">property <b>isOutdated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isOutdated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3090,7 +3384,7 @@ The type of ECS instance node.
 Whether to use outdated instance type. Default to false.
 
 <h4 class="pdoc-member-header" id="Swarm-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L99">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L106">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3098,12 +3392,12 @@ Whether to use outdated instance type. Default to false.
 The container cluster's name. It is the only in one Alicloud account.
 
 <h4 class="pdoc-member-header" id="Swarm-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L100">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L107">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Swarm-needSlb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L104">property <b>needSlb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L111">property <b>needSlb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>needSlb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3111,7 +3405,7 @@ The container cluster's name. It is the only in one Alicloud account.
 Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
 
 <h4 class="pdoc-member-header" id="Swarm-nodeNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L108">property <b>nodeNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L115">property <b>nodeNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeNumber: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3119,7 +3413,7 @@ Whether to create the default simple routing Server Load Balancer instance for t
 The ECS node number of the container cluster. Its value choices are 1~50, and default to 1.
 
 <h4 class="pdoc-member-header" id="Swarm-nodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L112">property <b>nodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L119">property <b>nodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#SwarmNode'>SwarmNode</a>[]&gt;;</code></pre>
@@ -3127,7 +3421,7 @@ The ECS node number of the container cluster. Its value choices are 1~50, and de
 List of cluster nodes. It contains several attributes to `Block Nodes`.
 
 <h4 class="pdoc-member-header" id="Swarm-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L116">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L123">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3135,7 +3429,7 @@ List of cluster nodes. It contains several attributes to `Block Nodes`.
 The password of ECS instance node.
 
 <h4 class="pdoc-member-header" id="Swarm-releaseEip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L120">property <b>releaseEip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L127">property <b>releaseEip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>releaseEip: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -3143,7 +3437,7 @@ The password of ECS instance node.
 Whether to release EIP after creating swarm cluster successfully. Default to false.
 
 <h4 class="pdoc-member-header" id="Swarm-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L124">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L131">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3151,7 +3445,7 @@ Whether to release EIP after creating swarm cluster successfully. Default to fal
 The ID of security group where the current cluster worker node is located.
 
 <h4 class="pdoc-member-header" id="Swarm-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L130">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L137">property <b>size</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3163,7 +3457,7 @@ Field &#39;size&#39; has been deprecated from provider version 1.9.1. New field 
 Field 'size' has been deprecated from provider version 1.9.1. New field 'node_number' replaces it.
 
 <h4 class="pdoc-member-header" id="Swarm-slbId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L134">property <b>slbId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L141">property <b>slbId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>slbId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3171,7 +3465,7 @@ Field 'size' has been deprecated from provider version 1.9.1. New field 'node_nu
 The ID of load balancer where the current cluster worker node is located.
 
 <h4 class="pdoc-member-header" id="Swarm-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L43">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -3180,7 +3474,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Swarm-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L138">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L145">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3188,7 +3482,7 @@ deployments.
 The ID of VPC where the current cluster is located.
 
 <h4 class="pdoc-member-header" id="Swarm-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L142">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L149">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3198,7 +3492,7 @@ The password of ECS instance node. If it is not specified, the container cluster
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getEdgeKubernetesClusters" data-link-title="getEdgeKubernetesClusters">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L26">
         Function <strong>getEdgeKubernetesClusters</strong>
     </a>
 </h3>
@@ -3225,7 +3519,7 @@ export const output = k8sClusters.then(k8sClusters => k8sClusters.clusters);
 ```
 
 <h3 class="pdoc-module-header" id="getKubernetesClusters" data-link-title="getKubernetesClusters">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getKubernetesClusters.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getKubernetesClusters.ts#L28">
         Function <strong>getKubernetesClusters</strong>
     </a>
 </h3>
@@ -3254,7 +3548,7 @@ export const output = k8sClusters.clusters;
 ```
 
 <h3 class="pdoc-module-header" id="getManagedKubernetesClusters" data-link-title="getManagedKubernetesClusters">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L28">
         Function <strong>getManagedKubernetesClusters</strong>
     </a>
 </h3>
@@ -3283,7 +3577,7 @@ export const output = k8sClusters.clusters;
 ```
 
 <h3 class="pdoc-module-header" id="getRegistryEnterpriseInstances" data-link-title="getRegistryEnterpriseInstances">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L28">
         Function <strong>getRegistryEnterpriseInstances</strong>
     </a>
 </h3>
@@ -3312,7 +3606,7 @@ export const output = myInstances.instances;
 ```
 
 <h3 class="pdoc-module-header" id="getRegistryEnterpriseNamespaces" data-link-title="getRegistryEnterpriseNamespaces">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L29">
         Function <strong>getRegistryEnterpriseNamespaces</strong>
     </a>
 </h3>
@@ -3342,7 +3636,7 @@ export const output = myNamespaces.namespaces;
 ```
 
 <h3 class="pdoc-module-header" id="getRegistryEnterpriseRepos" data-link-title="getRegistryEnterpriseRepos">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L29">
         Function <strong>getRegistryEnterpriseRepos</strong>
     </a>
 </h3>
@@ -3372,7 +3666,7 @@ export const output = myRepos.repos;
 ```
 
 <h3 class="pdoc-module-header" id="getRegistryEnterpriseSyncRules" data-link-title="getRegistryEnterpriseSyncRules">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L29">
         Function <strong>getRegistryEnterpriseSyncRules</strong>
     </a>
 </h3>
@@ -3402,7 +3696,7 @@ export const output = mySyncRules.then(mySyncRules => mySyncRules.rules.map(__it
 ```
 
 <h3 class="pdoc-module-header" id="getServerlessKubernetesClusters" data-link-title="getServerlessKubernetesClusters">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L28">
         Function <strong>getServerlessKubernetesClusters</strong>
     </a>
 </h3>
@@ -3433,7 +3727,7 @@ export const output = k8sClusters.clusters;
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ApplicationArgs" data-link-title="ApplicationArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L219">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L226">
         interface <strong>ApplicationArgs</strong>
     </a>
 </h3>
@@ -3443,7 +3737,7 @@ export const output = k8sClusters.clusters;
 The set of arguments for constructing a Application resource.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-blueGreen">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L223">property <b>blueGreen</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L230">property <b>blueGreen</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blueGreen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3451,7 +3745,7 @@ The set of arguments for constructing a Application resource.
 Wherther to use "Blue Green" method when release a new version. Default to false.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-blueGreenConfirm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L227">property <b>blueGreenConfirm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L234">property <b>blueGreenConfirm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blueGreenConfirm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3459,7 +3753,7 @@ Wherther to use "Blue Green" method when release a new version. Default to false
 Whether to confirm a "Blue Green" application. Default to false. It will be ignored when `blueGreen` is false.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L231">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L238">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3467,7 +3761,7 @@ Whether to confirm a "Blue Green" application. Default to false. It will be igno
 The swarm cluster's name.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L235">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L242">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3475,7 +3769,7 @@ The swarm cluster's name.
 The description of application.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L239">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L246">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -3483,7 +3777,7 @@ The description of application.
 A key/value map used to replace the variable parameter in the Compose template.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-latestImage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L243">property <b>latestImage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L250">property <b>latestImage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>latestImage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3491,7 +3785,7 @@ A key/value map used to replace the variable parameter in the Compose template.
 Whether to use latest docker image while each updating application. Default to false.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L247">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L254">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3499,7 +3793,7 @@ Whether to use latest docker image while each updating application. Default to f
 The application name. It should be 1-64 characters long, and can contain numbers, English letters and hyphens, but cannot start with hyphens.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L251">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L258">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>template: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3507,7 +3801,7 @@ The application name. It should be 1-64 characters long, and can contain numbers
 The application deployment template and it must be [Docker Compose format](https://docs.docker.com/compose/).
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L255">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L262">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3515,7 +3809,7 @@ The application deployment template and it must be [Docker Compose format](https
 The application deploying version. Each updating, it must be different with current. Default to "1.0"
 
 <h3 class="pdoc-module-header" id="ApplicationState" data-link-title="ApplicationState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L169">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L176">
         interface <strong>ApplicationState</strong>
     </a>
 </h3>
@@ -3525,7 +3819,7 @@ The application deploying version. Each updating, it must be different with curr
 Input properties used for looking up and filtering Application resources.
 
 <h4 class="pdoc-member-header" id="ApplicationState-blueGreen">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L173">property <b>blueGreen</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L180">property <b>blueGreen</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blueGreen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3533,7 +3827,7 @@ Input properties used for looking up and filtering Application resources.
 Wherther to use "Blue Green" method when release a new version. Default to false.
 
 <h4 class="pdoc-member-header" id="ApplicationState-blueGreenConfirm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L177">property <b>blueGreenConfirm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L184">property <b>blueGreenConfirm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blueGreenConfirm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3541,7 +3835,7 @@ Wherther to use "Blue Green" method when release a new version. Default to false
 Whether to confirm a "Blue Green" application. Default to false. It will be ignored when `blueGreen` is false.
 
 <h4 class="pdoc-member-header" id="ApplicationState-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L181">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L188">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3549,7 +3843,7 @@ Whether to confirm a "Blue Green" application. Default to false. It will be igno
 The swarm cluster's name.
 
 <h4 class="pdoc-member-header" id="ApplicationState-defaultDomain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L185">property <b>defaultDomain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L192">property <b>defaultDomain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3557,7 +3851,7 @@ The swarm cluster's name.
 The application default domain and it can be used to configure routing service.
 
 <h4 class="pdoc-member-header" id="ApplicationState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L189">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L196">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3565,7 +3859,7 @@ The application default domain and it can be used to configure routing service.
 The description of application.
 
 <h4 class="pdoc-member-header" id="ApplicationState-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L193">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L200">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -3573,7 +3867,7 @@ The description of application.
 A key/value map used to replace the variable parameter in the Compose template.
 
 <h4 class="pdoc-member-header" id="ApplicationState-latestImage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L197">property <b>latestImage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L204">property <b>latestImage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>latestImage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3581,7 +3875,7 @@ A key/value map used to replace the variable parameter in the Compose template.
 Whether to use latest docker image while each updating application. Default to false.
 
 <h4 class="pdoc-member-header" id="ApplicationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L201">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L208">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3589,7 +3883,7 @@ Whether to use latest docker image while each updating application. Default to f
 The application name. It should be 1-64 characters long, and can contain numbers, English letters and hyphens, but cannot start with hyphens.
 
 <h4 class="pdoc-member-header" id="ApplicationState-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L205">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L212">property <b>services</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>services?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ApplicationService'>ApplicationService</a>&gt;[]&gt;;</code></pre>
@@ -3597,7 +3891,7 @@ The application name. It should be 1-64 characters long, and can contain numbers
 List of services in the application. It contains several attributes to `Block Nodes`.
 
 <h4 class="pdoc-member-header" id="ApplicationState-template">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L209">property <b>template</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L216">property <b>template</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>template?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3605,7 +3899,7 @@ List of services in the application. It contains several attributes to `Block No
 The application deployment template and it must be [Docker Compose format](https://docs.docker.com/compose/).
 
 <h4 class="pdoc-member-header" id="ApplicationState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/application.ts#L213">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/application.ts#L220">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3613,7 +3907,7 @@ The application deployment template and it must be [Docker Compose format](https
 The application deploying version. Each updating, it must be different with current. Default to "1.0"
 
 <h3 class="pdoc-module-header" id="ClusterArgs" data-link-title="ClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L167">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L166">
         interface <strong>ClusterArgs</strong>
     </a>
 </h3>
@@ -3623,67 +3917,67 @@ The application deploying version. Each updating, it must be different with curr
 The set of arguments for constructing a Cluster resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-cidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L168">property <b>cidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L167">property <b>cidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-diskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L169">property <b>diskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L168">property <b>diskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskCategory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-diskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L170">property <b>diskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L169">property <b>diskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L171">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L170">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L172">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L171">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-isOutdated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L173">property <b>isOutdated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L172">property <b>isOutdated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isOutdated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L174">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L173">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L175">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L174">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-needSlb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L176">property <b>needSlb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L175">property <b>needSlb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>needSlb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-nodeNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L177">property <b>nodeNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L176">property <b>nodeNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeNumber?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L178">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L177">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-releaseEip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L179">property <b>releaseEip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L178">property <b>releaseEip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>releaseEip?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L183">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L182">property <b>size</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3692,12 +3986,12 @@ Field &#39;size&#39; has been deprecated from provider version 1.9.1. New field 
 </div>
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterArgs-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L184">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L183">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ClusterState" data-link-title="ClusterState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L138">
         interface <strong>ClusterState</strong>
     </a>
 </h3>
@@ -3707,82 +4001,82 @@ Field &#39;size&#39; has been deprecated from provider version 1.9.1. New field 
 Input properties used for looking up and filtering Cluster resources.
 
 <h4 class="pdoc-member-header" id="ClusterState-agentVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L140">property <b>agentVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L139">property <b>agentVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>agentVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-cidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L141">property <b>cidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L140">property <b>cidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrBlock?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-diskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L142">property <b>diskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L141">property <b>diskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskCategory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-diskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L143">property <b>diskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L142">property <b>diskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L144">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L143">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L145">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L144">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-isOutdated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L146">property <b>isOutdated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L145">property <b>isOutdated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isOutdated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L147">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L146">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L148">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L147">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-needSlb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L149">property <b>needSlb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L148">property <b>needSlb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>needSlb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-nodeNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L150">property <b>nodeNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L149">property <b>nodeNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeNumber?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-nodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L151">property <b>nodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L150">property <b>nodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ClusterNode'>ClusterNode</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L152">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L151">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-releaseEip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L153">property <b>releaseEip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L152">property <b>releaseEip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>releaseEip?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L154">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L153">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L158">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L157">property <b>size</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3791,22 +4085,22 @@ Field &#39;size&#39; has been deprecated from provider version 1.9.1. New field 
 </div>
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-slbId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L159">property <b>slbId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L158">property <b>slbId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slbId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L160">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L159">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ClusterState-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/cluster.ts#L161">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/cluster.ts#L160">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="EdgeKubernetesArgs" data-link-title="EdgeKubernetesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L402">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L434">
         interface <strong>EdgeKubernetesArgs</strong>
     </a>
 </h3>
@@ -3816,12 +4110,12 @@ Field &#39;size&#39; has been deprecated from provider version 1.9.1. New field 
 The set of arguments for constructing a EdgeKubernetes resource.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-addons">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L403">property <b>addons</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L435">property <b>addons</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addons?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#EdgeKubernetesAddon'>EdgeKubernetesAddon</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L407">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L439">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3829,7 +4123,7 @@ The set of arguments for constructing a EdgeKubernetes resource.
 The ID of availability zone.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-clientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L411">property <b>clientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L443">property <b>clientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3837,7 +4131,7 @@ The ID of availability zone.
 The path of client certificate, like `~/.kube/client-cert.pem`.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-clientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L415">property <b>clientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L447">property <b>clientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3845,23 +4139,31 @@ The path of client certificate, like `~/.kube/client-cert.pem`.
 The path of client key, like `~/.kube/client-key.pem`.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-clusterCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L419">property <b>clusterCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L451">property <b>clusterCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The path of cluster ca certificate, like `~/.kube/cluster-ca-cert.pem`
 
+<h4 class="pdoc-member-header" id="EdgeKubernetesArgs-deletionProtection">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L455">property <b>deletionProtection</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>deletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Whether to enable cluster deletion protection.
+
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-installCloudMonitor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L423">property <b>installCloudMonitor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L459">property <b>installCloudMonitor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>installCloudMonitor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Install cloud monitor agent on ECS. default: `true`
+Install cloud monitor agent on ECS. default: `true`.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-isEnterpriseSecurityGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L427">property <b>isEnterpriseSecurityGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L463">property <b>isEnterpriseSecurityGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnterpriseSecurityGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3869,7 +4171,7 @@ Install cloud monitor agent on ECS. default: `true`
 Enable to create advanced security group. default: false. See [Advanced security group](https://www.alibabacloud.com/help/doc-detail/120621.htm).
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-keyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L431">property <b>keyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L467">property <b>keyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3877,7 +4179,7 @@ Enable to create advanced security group. default: false. See [Advanced security
 The keypair of ssh login cluster node, you have to create it first. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-kubeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L435">property <b>kubeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L471">property <b>kubeConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3885,12 +4187,12 @@ The keypair of ssh login cluster node, you have to create it first. You have to 
 The path of kube config, like `~/.kube/config`.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-logConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L436">property <b>logConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L472">property <b>logConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#EdgeKubernetesLogConfig'>EdgeKubernetesLogConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L440">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L476">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3898,12 +4200,12 @@ The path of kube config, like `~/.kube/config`.
 The kubernetes cluster's name. It is unique in one Alicloud account.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L441">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L477">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-newNatGateway">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L445">property <b>newNatGateway</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L481">property <b>newNatGateway</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>newNatGateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3911,7 +4213,7 @@ The kubernetes cluster's name. It is unique in one Alicloud account.
 Whether to create a new nat gateway while creating kubernetes cluster. Default to true. Then openapi in Alibaba Cloud are not all on intranet, So turn this option on is a good choice.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-nodeCidrMask">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L449">property <b>nodeCidrMask</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L485">property <b>nodeCidrMask</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCidrMask?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3919,15 +4221,15 @@ Whether to create a new nat gateway while creating kubernetes cluster. Default t
 The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L453">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L489">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The password of ssh login cluster node. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
+The password of ssh login cluster node. You have to specify one of `password`, `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-podCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L457">property <b>podCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L493">property <b>podCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>podCidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3935,15 +4237,28 @@ The password of ssh login cluster node. You have to specify one of `password` `k
 [Flannel Specific] The CIDR block for the pod network when using Flannel.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-proxyMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L461">property <b>proxyMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L497">property <b>proxyMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>proxyMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
 
+<h4 class="pdoc-member-header" id="EdgeKubernetesArgs-rdsInstances">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L498">property <b>rdsInstances</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>rdsInstances?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="EdgeKubernetesArgs-resourceGroupId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L502">property <b>resourceGroupId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
+
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L465">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L506">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3951,7 +4266,7 @@ Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
 The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-serviceCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L469">property <b>serviceCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L510">property <b>serviceCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceCidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3959,7 +4274,7 @@ The ID of the security group to which the ECS instances in the cluster belong. I
 The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-slbInternetEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L473">property <b>slbInternetEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L514">property <b>slbInternetEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slbInternetEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3967,7 +4282,7 @@ The CIDR block for the service network. It cannot be duplicated with the VPC CID
 Whether to create internet load balancer for API Server. Default to true.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L477">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L518">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3975,7 +4290,7 @@ Whether to create internet load balancer for API Server. Default to true.
 Windows instances support batch and PowerShell scripts. If your script file is larger than 1 KB, we recommend that you upload the script to Object Storage Service (OSS) and pull it through the internal endpoint of your OSS bucket.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L481">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L522">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3983,29 +4298,29 @@ Windows instances support batch and PowerShell scripts. If your script file is l
 Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-workerDataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L491">property <b>workerDataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L532">property <b>workerDataDisks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDataDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#EdgeKubernetesWorkerDataDisk'>EdgeKubernetesWorkerDataDisk</a>&gt;[]&gt;;</code></pre>
 
 The data disk configurations of worker nodes, such as the disk type and disk size.
-- category: the type of the data disks. Valid values:
-+ cloud: basic disks.
-+ cloud_efficiency: ultra disks.
-+ cloud_ssd: SSDs.
-- size: the size of a data disk. Unit: GiB.
-- encrypted: specifies whether to encrypt data disks. Valid values: true and false.
+* `category`: the type of the data disks. Valid values:
+* cloud: basic disks.
+* cloud_efficiency: ultra disks.
+* cloud_ssd: SSDs.
+* `size`: the size of a data disk. Unit: GiB.
+* `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-workerDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L495">property <b>workerDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L536">property <b>workerDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDiskCategory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The system disk category of worker node. Its valid value are `cloudSsd` and `cloudEfficiency`. Default to `cloudEfficiency`.
+The system disk category of worker node. Its valid value are `cloudEfficiency`, `cloudSsd` and `cloudEssd` and . Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-workerDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L499">property <b>workerDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L540">property <b>workerDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDiskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4013,12 +4328,12 @@ The system disk category of worker node. Its valid value are `cloudSsd` and `clo
 The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-workerInstanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L500">property <b>workerInstanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L541">property <b>workerInstanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerInstanceChargeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-workerInstanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L504">property <b>workerInstanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L545">property <b>workerInstanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerInstanceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4026,7 +4341,7 @@ The system disk size of worker node. Its valid value range [20~32768] in GB. Def
 The instance types of worker node, you can set multiple types to avoid NoStock of a certain type
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-workerNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L508">property <b>workerNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L549">property <b>workerNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerNumber: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4034,12 +4349,12 @@ The instance types of worker node, you can set multiple types to avoid NoStock o
 The cloud worker node number of the edge kubernetes cluster. Default to 1. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesArgs-workerVswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L509">property <b>workerVswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L550">property <b>workerVswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerVswitchIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="EdgeKubernetesState" data-link-title="EdgeKubernetesState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L271">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L294">
         interface <strong>EdgeKubernetesState</strong>
     </a>
 </h3>
@@ -4049,12 +4364,12 @@ The cloud worker node number of the edge kubernetes cluster. Default to 1. It is
 Input properties used for looking up and filtering EdgeKubernetes resources.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-addons">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L272">property <b>addons</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L295">property <b>addons</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addons?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#EdgeKubernetesAddon'>EdgeKubernetesAddon</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L276">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L299">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4062,7 +4377,7 @@ Input properties used for looking up and filtering EdgeKubernetes resources.
 The ID of availability zone.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-clientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L280">property <b>clientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L303">property <b>clientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4070,7 +4385,7 @@ The ID of availability zone.
 The path of client certificate, like `~/.kube/client-cert.pem`.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-clientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L284">property <b>clientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L307">property <b>clientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4078,7 +4393,7 @@ The path of client certificate, like `~/.kube/client-cert.pem`.
 The path of client key, like `~/.kube/client-key.pem`.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-clusterCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L288">property <b>clusterCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L311">property <b>clusterCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4086,20 +4401,28 @@ The path of client key, like `~/.kube/client-key.pem`.
 The path of cluster ca certificate, like `~/.kube/cluster-ca-cert.pem`
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-connections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L289">property <b>connections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L312">property <b>connections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connections?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#EdgeKubernetesConnections'>EdgeKubernetesConnections</a>&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="EdgeKubernetesState-deletionProtection">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L316">property <b>deletionProtection</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>deletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Whether to enable cluster deletion protection.
+
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-installCloudMonitor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L293">property <b>installCloudMonitor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L320">property <b>installCloudMonitor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>installCloudMonitor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Install cloud monitor agent on ECS. default: `true`
+Install cloud monitor agent on ECS. default: `true`.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-isEnterpriseSecurityGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L297">property <b>isEnterpriseSecurityGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L324">property <b>isEnterpriseSecurityGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnterpriseSecurityGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4107,7 +4430,7 @@ Install cloud monitor agent on ECS. default: `true`
 Enable to create advanced security group. default: false. See [Advanced security group](https://www.alibabacloud.com/help/doc-detail/120621.htm).
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-keyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L301">property <b>keyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L328">property <b>keyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4115,7 +4438,7 @@ Enable to create advanced security group. default: false. See [Advanced security
 The keypair of ssh login cluster node, you have to create it first. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-kubeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L305">property <b>kubeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L332">property <b>kubeConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4123,12 +4446,12 @@ The keypair of ssh login cluster node, you have to create it first. You have to 
 The path of kube config, like `~/.kube/config`.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-logConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L306">property <b>logConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L333">property <b>logConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#EdgeKubernetesLogConfig'>EdgeKubernetesLogConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L310">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L337">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4136,12 +4459,12 @@ The path of kube config, like `~/.kube/config`.
 The kubernetes cluster's name. It is unique in one Alicloud account.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L311">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L338">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-natGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L315">property <b>natGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L342">property <b>natGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>natGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4149,7 +4472,7 @@ The kubernetes cluster's name. It is unique in one Alicloud account.
 The ID of nat gateway used to launch kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-newNatGateway">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L319">property <b>newNatGateway</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L346">property <b>newNatGateway</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>newNatGateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4157,7 +4480,7 @@ The ID of nat gateway used to launch kubernetes cluster.
 Whether to create a new nat gateway while creating kubernetes cluster. Default to true. Then openapi in Alibaba Cloud are not all on intranet, So turn this option on is a good choice.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-nodeCidrMask">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L323">property <b>nodeCidrMask</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L350">property <b>nodeCidrMask</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCidrMask?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4165,15 +4488,15 @@ Whether to create a new nat gateway while creating kubernetes cluster. Default t
 The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L327">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L354">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The password of ssh login cluster node. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
+The password of ssh login cluster node. You have to specify one of `password`, `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-podCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L331">property <b>podCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L358">property <b>podCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>podCidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4181,15 +4504,28 @@ The password of ssh login cluster node. You have to specify one of `password` `k
 [Flannel Specific] The CIDR block for the pod network when using Flannel.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-proxyMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L335">property <b>proxyMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L362">property <b>proxyMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>proxyMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
 
+<h4 class="pdoc-member-header" id="EdgeKubernetesState-rdsInstances">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L363">property <b>rdsInstances</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>rdsInstances?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+<h4 class="pdoc-member-header" id="EdgeKubernetesState-resourceGroupId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L367">property <b>resourceGroupId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
+
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L339">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L371">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4197,7 +4533,7 @@ Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
 The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-serviceCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L343">property <b>serviceCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L375">property <b>serviceCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceCidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4205,12 +4541,12 @@ The ID of the security group to which the ECS instances in the cluster belong. I
 The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-slbInternet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L344">property <b>slbInternet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L376">property <b>slbInternet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slbInternet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-slbInternetEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L348">property <b>slbInternetEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L380">property <b>slbInternetEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slbInternetEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4218,7 +4554,7 @@ The CIDR block for the service network. It cannot be duplicated with the VPC CID
 Whether to create internet load balancer for API Server. Default to true.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-slbIntranet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L352">property <b>slbIntranet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L384">property <b>slbIntranet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slbIntranet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4226,7 +4562,7 @@ Whether to create internet load balancer for API Server. Default to true.
 The ID of private load balancer where the current cluster master node is located.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L356">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L388">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4234,7 +4570,7 @@ The ID of private load balancer where the current cluster master node is located
 Windows instances support batch and PowerShell scripts. If your script file is larger than 1 KB, we recommend that you upload the script to Object Storage Service (OSS) and pull it through the internal endpoint of your OSS bucket.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L360">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L392">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4242,7 +4578,7 @@ Windows instances support batch and PowerShell scripts. If your script file is l
 Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L364">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L396">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4250,29 +4586,29 @@ Desired Kubernetes version. If you do not specify a value, the latest available 
 The ID of VPC where the current cluster is located.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-workerDataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L374">property <b>workerDataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L406">property <b>workerDataDisks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDataDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#EdgeKubernetesWorkerDataDisk'>EdgeKubernetesWorkerDataDisk</a>&gt;[]&gt;;</code></pre>
 
 The data disk configurations of worker nodes, such as the disk type and disk size.
-- category: the type of the data disks. Valid values:
-+ cloud: basic disks.
-+ cloud_efficiency: ultra disks.
-+ cloud_ssd: SSDs.
-- size: the size of a data disk. Unit: GiB.
-- encrypted: specifies whether to encrypt data disks. Valid values: true and false.
+* `category`: the type of the data disks. Valid values:
+* cloud: basic disks.
+* cloud_efficiency: ultra disks.
+* cloud_ssd: SSDs.
+* `size`: the size of a data disk. Unit: GiB.
+* `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-workerDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L378">property <b>workerDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L410">property <b>workerDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDiskCategory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The system disk category of worker node. Its valid value are `cloudSsd` and `cloudEfficiency`. Default to `cloudEfficiency`.
+The system disk category of worker node. Its valid value are `cloudEfficiency`, `cloudSsd` and `cloudEssd` and . Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-workerDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L382">property <b>workerDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L414">property <b>workerDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDiskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4280,12 +4616,12 @@ The system disk category of worker node. Its valid value are `cloudSsd` and `clo
 The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-workerInstanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L383">property <b>workerInstanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L415">property <b>workerInstanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerInstanceChargeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-workerInstanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L387">property <b>workerInstanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L419">property <b>workerInstanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerInstanceTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4293,7 +4629,7 @@ The system disk size of worker node. Its valid value range [20~32768] in GB. Def
 The instance types of worker node, you can set multiple types to avoid NoStock of a certain type
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-workerNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L391">property <b>workerNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L423">property <b>workerNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#EdgeKubernetesWorkerNode'>EdgeKubernetesWorkerNode</a>&gt;[]&gt;;</code></pre>
@@ -4301,7 +4637,7 @@ The instance types of worker node, you can set multiple types to avoid NoStock o
 List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-workerNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L395">property <b>workerNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L427">property <b>workerNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerNumber?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4309,12 +4645,12 @@ List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 The cloud worker node number of the edge kubernetes cluster. Default to 1. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
 
 <h4 class="pdoc-member-header" id="EdgeKubernetesState-workerVswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/edgeKubernetes.ts#L396">property <b>workerVswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/edgeKubernetes.ts#L428">property <b>workerVswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerVswitchIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="GetEdgeKubernetesClustersArgs" data-link-title="GetEdgeKubernetesClustersArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L46">
         interface <strong>GetEdgeKubernetesClustersArgs</strong>
     </a>
 </h3>
@@ -4324,12 +4660,12 @@ The cloud worker node number of the edge kubernetes cluster. Default to 1. It is
 A collection of arguments for invoking getEdgeKubernetesClusters.
 
 <h4 class="pdoc-member-header" id="GetEdgeKubernetesClustersArgs-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L48">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L47">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetEdgeKubernetesClustersArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L52">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L51">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4337,7 +4673,7 @@ A collection of arguments for invoking getEdgeKubernetesClusters.
 Cluster IDs to filter.
 
 <h4 class="pdoc-member-header" id="GetEdgeKubernetesClustersArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L56">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L55">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4345,12 +4681,12 @@ Cluster IDs to filter.
 A regex string to filter results by cluster name.
 
 <h4 class="pdoc-member-header" id="GetEdgeKubernetesClustersArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L57">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L56">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetEdgeKubernetesClustersResult" data-link-title="GetEdgeKubernetesClustersResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L63">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L62">
         interface <strong>GetEdgeKubernetesClustersResult</strong>
     </a>
 </h3>
@@ -4360,7 +4696,7 @@ A regex string to filter results by cluster name.
 A collection of values returned by getEdgeKubernetesClusters.
 
 <h4 class="pdoc-member-header" id="GetEdgeKubernetesClustersResult-clusters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L67">property <b>clusters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L66">property <b>clusters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusters: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetEdgeKubernetesClustersCluster'>GetEdgeKubernetesClustersCluster</a>[];</code></pre>
@@ -4368,12 +4704,12 @@ A collection of values returned by getEdgeKubernetesClusters.
 A list of matched Kubernetes clusters. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetEdgeKubernetesClustersResult-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L68">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L67">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetEdgeKubernetesClustersResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4381,7 +4717,7 @@ A list of matched Kubernetes clusters. Each element contains the following attri
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetEdgeKubernetesClustersResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L76">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L75">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4389,12 +4725,12 @@ The provider-assigned unique ID for this managed resource.
 A list of matched Kubernetes clusters' ids.
 
 <h4 class="pdoc-member-header" id="GetEdgeKubernetesClustersResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L77">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L76">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetEdgeKubernetesClustersResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L81">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L80">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4402,12 +4738,12 @@ A list of matched Kubernetes clusters' ids.
 A list of matched Kubernetes clusters' names.
 
 <h4 class="pdoc-member-header" id="GetEdgeKubernetesClustersResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L82">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getEdgeKubernetesClusters.ts#L81">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetKubernetesClustersArgs" data-link-title="GetKubernetesClustersArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getKubernetesClusters.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getKubernetesClusters.ts#L48">
         interface <strong>GetKubernetesClustersArgs</strong>
     </a>
 </h3>
@@ -4417,12 +4753,12 @@ A list of matched Kubernetes clusters' names.
 A collection of arguments for invoking getKubernetesClusters.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClustersArgs-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getKubernetesClusters.ts#L50">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getKubernetesClusters.ts#L49">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKubernetesClustersArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getKubernetesClusters.ts#L54">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getKubernetesClusters.ts#L53">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4430,7 +4766,7 @@ A collection of arguments for invoking getKubernetesClusters.
 Cluster IDs to filter.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClustersArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getKubernetesClusters.ts#L58">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getKubernetesClusters.ts#L57">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4438,12 +4774,12 @@ Cluster IDs to filter.
 A regex string to filter results by cluster name.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClustersArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getKubernetesClusters.ts#L59">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getKubernetesClusters.ts#L58">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetKubernetesClustersResult" data-link-title="GetKubernetesClustersResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getKubernetesClusters.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getKubernetesClusters.ts#L64">
         interface <strong>GetKubernetesClustersResult</strong>
     </a>
 </h3>
@@ -4453,7 +4789,7 @@ A regex string to filter results by cluster name.
 A collection of values returned by getKubernetesClusters.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClustersResult-clusters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getKubernetesClusters.ts#L69">property <b>clusters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getKubernetesClusters.ts#L68">property <b>clusters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusters: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetKubernetesClustersCluster'>GetKubernetesClustersCluster</a>[];</code></pre>
@@ -4461,12 +4797,12 @@ A collection of values returned by getKubernetesClusters.
 A list of matched Kubernetes clusters. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetKubernetesClustersResult-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getKubernetesClusters.ts#L70">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getKubernetesClusters.ts#L69">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKubernetesClustersResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getKubernetesClusters.ts#L74">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getKubernetesClusters.ts#L73">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4474,7 +4810,7 @@ A list of matched Kubernetes clusters. Each element contains the following attri
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClustersResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getKubernetesClusters.ts#L78">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getKubernetesClusters.ts#L77">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4482,12 +4818,12 @@ The provider-assigned unique ID for this managed resource.
 A list of matched Kubernetes clusters' ids.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClustersResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getKubernetesClusters.ts#L79">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getKubernetesClusters.ts#L78">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKubernetesClustersResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getKubernetesClusters.ts#L83">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getKubernetesClusters.ts#L82">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4495,12 +4831,12 @@ A list of matched Kubernetes clusters' ids.
 A list of matched Kubernetes clusters' names.
 
 <h4 class="pdoc-member-header" id="GetKubernetesClustersResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getKubernetesClusters.ts#L84">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getKubernetesClusters.ts#L83">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetManagedKubernetesClustersArgs" data-link-title="GetManagedKubernetesClustersArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L48">
         interface <strong>GetManagedKubernetesClustersArgs</strong>
     </a>
 </h3>
@@ -4510,12 +4846,12 @@ A list of matched Kubernetes clusters' names.
 A collection of arguments for invoking getManagedKubernetesClusters.
 
 <h4 class="pdoc-member-header" id="GetManagedKubernetesClustersArgs-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L50">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L49">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetManagedKubernetesClustersArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L54">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L53">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4523,7 +4859,7 @@ A collection of arguments for invoking getManagedKubernetesClusters.
 Cluster IDs to filter.
 
 <h4 class="pdoc-member-header" id="GetManagedKubernetesClustersArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L58">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L57">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4531,12 +4867,12 @@ Cluster IDs to filter.
 A regex string to filter results by cluster name.
 
 <h4 class="pdoc-member-header" id="GetManagedKubernetesClustersArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L59">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L58">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetManagedKubernetesClustersResult" data-link-title="GetManagedKubernetesClustersResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L64">
         interface <strong>GetManagedKubernetesClustersResult</strong>
     </a>
 </h3>
@@ -4546,7 +4882,7 @@ A regex string to filter results by cluster name.
 A collection of values returned by getManagedKubernetesClusters.
 
 <h4 class="pdoc-member-header" id="GetManagedKubernetesClustersResult-clusters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L69">property <b>clusters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L68">property <b>clusters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusters: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetManagedKubernetesClustersCluster'>GetManagedKubernetesClustersCluster</a>[];</code></pre>
@@ -4554,12 +4890,12 @@ A collection of values returned by getManagedKubernetesClusters.
 A list of matched Kubernetes clusters. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetManagedKubernetesClustersResult-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L70">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L69">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetManagedKubernetesClustersResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L74">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L73">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4567,7 +4903,7 @@ A list of matched Kubernetes clusters. Each element contains the following attri
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetManagedKubernetesClustersResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L78">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L77">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4575,12 +4911,12 @@ The provider-assigned unique ID for this managed resource.
 A list of matched Kubernetes clusters' ids.
 
 <h4 class="pdoc-member-header" id="GetManagedKubernetesClustersResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L79">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L78">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetManagedKubernetesClustersResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L83">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L82">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4588,12 +4924,12 @@ A list of matched Kubernetes clusters' ids.
 A list of matched Kubernetes clusters' names.
 
 <h4 class="pdoc-member-header" id="GetManagedKubernetesClustersResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L84">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getManagedKubernetesClusters.ts#L83">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRegistryEnterpriseInstancesArgs" data-link-title="GetRegistryEnterpriseInstancesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L47">
         interface <strong>GetRegistryEnterpriseInstancesArgs</strong>
     </a>
 </h3>
@@ -4603,7 +4939,7 @@ A list of matched Kubernetes clusters' names.
 A collection of arguments for invoking getRegistryEnterpriseInstances.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseInstancesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L52">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L51">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4611,7 +4947,7 @@ A collection of arguments for invoking getRegistryEnterpriseInstances.
 A list of ids to filter results by instance id.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseInstancesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L56">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L55">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4619,12 +4955,12 @@ A list of ids to filter results by instance id.
 A regex string to filter results by instance name.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseInstancesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L57">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L56">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRegistryEnterpriseInstancesResult" data-link-title="GetRegistryEnterpriseInstancesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L63">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L62">
         interface <strong>GetRegistryEnterpriseInstancesResult</strong>
     </a>
 </h3>
@@ -4634,7 +4970,7 @@ A regex string to filter results by instance name.
 A collection of values returned by getRegistryEnterpriseInstances.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseInstancesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L67">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L66">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4642,7 +4978,7 @@ A collection of values returned by getRegistryEnterpriseInstances.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseInstancesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L71">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L70">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4650,7 +4986,7 @@ The provider-assigned unique ID for this managed resource.
 A list of matched Container Registry Enterprise Edition instances. Its element is an instance uuid.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseInstancesResult-instances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L75">property <b>instances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L74">property <b>instances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRegistryEnterpriseInstancesInstance'>GetRegistryEnterpriseInstancesInstance</a>[];</code></pre>
@@ -4658,12 +4994,12 @@ A list of matched Container Registry Enterprise Edition instances. Its element i
 A list of matched Container Registry Enterprise Editioninstances. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseInstancesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L76">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L75">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseInstancesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L80">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L79">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4671,12 +5007,12 @@ A list of matched Container Registry Enterprise Editioninstances. Each element c
 A list of instance names.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseInstancesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L81">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseInstances.ts#L80">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRegistryEnterpriseNamespacesArgs" data-link-title="GetRegistryEnterpriseNamespacesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L48">
         interface <strong>GetRegistryEnterpriseNamespacesArgs</strong>
     </a>
 </h3>
@@ -4686,7 +5022,7 @@ A list of instance names.
 A collection of arguments for invoking getRegistryEnterpriseNamespaces.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseNamespacesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L53">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L52">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4694,7 +5030,7 @@ A collection of arguments for invoking getRegistryEnterpriseNamespaces.
 A list of ids to filter results by namespace id.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseNamespacesArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L57">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L56">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4702,7 +5038,7 @@ A list of ids to filter results by namespace id.
 ID of Container Registry Enterprise Edition instance.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseNamespacesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L61">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L60">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4710,12 +5046,12 @@ ID of Container Registry Enterprise Edition instance.
 A regex string to filter results by namespace name.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseNamespacesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L62">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L61">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRegistryEnterpriseNamespacesResult" data-link-title="GetRegistryEnterpriseNamespacesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L67">
         interface <strong>GetRegistryEnterpriseNamespacesResult</strong>
     </a>
 </h3>
@@ -4725,7 +5061,7 @@ A regex string to filter results by namespace name.
 A collection of values returned by getRegistryEnterpriseNamespaces.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseNamespacesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4733,7 +5069,7 @@ A collection of values returned by getRegistryEnterpriseNamespaces.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseNamespacesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L76">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L75">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4741,7 +5077,7 @@ The provider-assigned unique ID for this managed resource.
 A list of matched Container Registry Enterprise Edition namespaces. Its element is a namespace uuid.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseNamespacesResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L80">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L79">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4749,12 +5085,12 @@ A list of matched Container Registry Enterprise Edition namespaces. Its element 
 ID of Container Registry Enterprise Edition instance.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseNamespacesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L81">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L80">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseNamespacesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L85">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L84">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4762,7 +5098,7 @@ ID of Container Registry Enterprise Edition instance.
 A list of namespace names.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseNamespacesResult-namespaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L89">property <b>namespaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L88">property <b>namespaces</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaces: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRegistryEnterpriseNamespacesNamespace'>GetRegistryEnterpriseNamespacesNamespace</a>[];</code></pre>
@@ -4770,12 +5106,12 @@ A list of namespace names.
 A list of matched Container Registry Enterprise Edition namespaces. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseNamespacesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L90">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseNamespaces.ts#L89">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRegistryEnterpriseReposArgs" data-link-title="GetRegistryEnterpriseReposArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L50">
         interface <strong>GetRegistryEnterpriseReposArgs</strong>
     </a>
 </h3>
@@ -4785,7 +5121,7 @@ A list of matched Container Registry Enterprise Edition namespaces. Each element
 A collection of arguments for invoking getRegistryEnterpriseRepos.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseReposArgs-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L55">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L54">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -4793,7 +5129,7 @@ A collection of arguments for invoking getRegistryEnterpriseRepos.
 Boolean, false by default, only repository attributes are exported. Set to true if tags belong to this repository are needed. See `tags` in attributes.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseReposArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L59">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L58">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4801,7 +5137,7 @@ Boolean, false by default, only repository attributes are exported. Set to true 
 A list of ids to filter results by repository id.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseReposArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L63">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L62">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4809,7 +5145,7 @@ A list of ids to filter results by repository id.
 ID of Container Registry Enterprise Edition instance.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseReposArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L67">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L66">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4817,7 +5153,7 @@ ID of Container Registry Enterprise Edition instance.
 A regex string to filter results by repository name.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseReposArgs-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L71">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L70">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4825,12 +5161,12 @@ A regex string to filter results by repository name.
 Name of Container Registry Enterprise Edition namespace where the repositories are located in.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseReposArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L72">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L71">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRegistryEnterpriseReposResult" data-link-title="GetRegistryEnterpriseReposResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L78">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L77">
         interface <strong>GetRegistryEnterpriseReposResult</strong>
     </a>
 </h3>
@@ -4840,12 +5176,12 @@ Name of Container Registry Enterprise Edition namespace where the repositories a
 A collection of values returned by getRegistryEnterpriseRepos.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseReposResult-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L79">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L78">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseReposResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L83">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L82">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4853,7 +5189,7 @@ A collection of values returned by getRegistryEnterpriseRepos.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseReposResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L87">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L86">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4861,7 +5197,7 @@ The provider-assigned unique ID for this managed resource.
 A list of matched Container Registry Enterprise Edition repositories. Its element is a repository id.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseReposResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L91">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L90">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4869,12 +5205,12 @@ A list of matched Container Registry Enterprise Edition repositories. Its elemen
 ID of Container Registry Enterprise Edition instance.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseReposResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L92">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L91">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseReposResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L96">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L95">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4882,7 +5218,7 @@ ID of Container Registry Enterprise Edition instance.
 A list of repository names.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseReposResult-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L100">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L99">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4890,12 +5226,12 @@ A list of repository names.
 Name of Container Registry Enterprise Edition namespace where repo is located.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseReposResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L101">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L100">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseReposResult-repos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L105">property <b>repos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseRepos.ts#L104">property <b>repos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repos: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRegistryEnterpriseReposRepo'>GetRegistryEnterpriseReposRepo</a>[];</code></pre>
@@ -4903,7 +5239,7 @@ Name of Container Registry Enterprise Edition namespace where repo is located.
 A list of matched Container Registry Enterprise Edition namespaces. Each element contains the following attributes:
 
 <h3 class="pdoc-module-header" id="GetRegistryEnterpriseSyncRulesArgs" data-link-title="GetRegistryEnterpriseSyncRulesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L51">
         interface <strong>GetRegistryEnterpriseSyncRulesArgs</strong>
     </a>
 </h3>
@@ -4913,7 +5249,7 @@ A list of matched Container Registry Enterprise Edition namespaces. Each element
 A collection of arguments for invoking getRegistryEnterpriseSyncRules.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseSyncRulesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L56">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L55">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4921,7 +5257,7 @@ A collection of arguments for invoking getRegistryEnterpriseSyncRules.
 A list of ids to filter results by sync rule id.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseSyncRulesArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L60">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L59">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4929,7 +5265,7 @@ A list of ids to filter results by sync rule id.
 ID of Container Registry Enterprise Edition local instance.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseSyncRulesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L64">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L63">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4937,7 +5273,7 @@ ID of Container Registry Enterprise Edition local instance.
 A regex string to filter results by sync rule name.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseSyncRulesArgs-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L68">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L67">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4945,12 +5281,12 @@ A regex string to filter results by sync rule name.
 Name of Container Registry Enterprise Edition local namespace.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseSyncRulesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L69">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L68">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseSyncRulesArgs-repoName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L73">property <b>repoName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L72">property <b>repoName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repoName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4958,7 +5294,7 @@ Name of Container Registry Enterprise Edition local namespace.
 Name of Container Registry Enterprise Edition local repo.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseSyncRulesArgs-targetInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L77">property <b>targetInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L76">property <b>targetInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetInstanceId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4966,7 +5302,7 @@ Name of Container Registry Enterprise Edition local repo.
 ID of Container Registry Enterprise Edition target instance.
 
 <h3 class="pdoc-module-header" id="GetRegistryEnterpriseSyncRulesResult" data-link-title="GetRegistryEnterpriseSyncRulesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L83">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L82">
         interface <strong>GetRegistryEnterpriseSyncRulesResult</strong>
     </a>
 </h3>
@@ -4976,7 +5312,7 @@ ID of Container Registry Enterprise Edition target instance.
 A collection of values returned by getRegistryEnterpriseSyncRules.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseSyncRulesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L87">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L86">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -4984,7 +5320,7 @@ A collection of values returned by getRegistryEnterpriseSyncRules.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseSyncRulesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L91">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L90">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -4992,7 +5328,7 @@ The provider-assigned unique ID for this managed resource.
 A list of matched Container Registry Enterprise Edition sync rules. Its element is a sync rule uuid.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseSyncRulesResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L95">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L94">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5000,12 +5336,12 @@ A list of matched Container Registry Enterprise Edition sync rules. Its element 
 ID of Container Registry Enterprise Edition local instance.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseSyncRulesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L96">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L95">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseSyncRulesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L100">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L99">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -5013,7 +5349,7 @@ ID of Container Registry Enterprise Edition local instance.
 A list of sync rule names.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseSyncRulesResult-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L104">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L103">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5021,12 +5357,12 @@ A list of sync rule names.
 Name of Container Registry Enterprise Edition local namespace.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseSyncRulesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L105">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L104">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseSyncRulesResult-repoName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L109">property <b>repoName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L108">property <b>repoName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repoName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5034,7 +5370,7 @@ Name of Container Registry Enterprise Edition local namespace.
 Name of Container Registry Enterprise Edition local repo.
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseSyncRulesResult-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L113">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L112">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRegistryEnterpriseSyncRulesRule'>GetRegistryEnterpriseSyncRulesRule</a>[];</code></pre>
@@ -5042,7 +5378,7 @@ Name of Container Registry Enterprise Edition local repo.
 A list of matched Container Registry Enterprise Edition sync rules. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetRegistryEnterpriseSyncRulesResult-targetInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L117">property <b>targetInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getRegistryEnterpriseSyncRules.ts#L116">property <b>targetInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetInstanceId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5050,7 +5386,7 @@ A list of matched Container Registry Enterprise Edition sync rules. Each element
 ID of Container Registry Enterprise Edition target instance.
 
 <h3 class="pdoc-module-header" id="GetServerlessKubernetesClustersArgs" data-link-title="GetServerlessKubernetesClustersArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L48">
         interface <strong>GetServerlessKubernetesClustersArgs</strong>
     </a>
 </h3>
@@ -5060,12 +5396,12 @@ ID of Container Registry Enterprise Edition target instance.
 A collection of arguments for invoking getServerlessKubernetesClusters.
 
 <h4 class="pdoc-member-header" id="GetServerlessKubernetesClustersArgs-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L50">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L49">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServerlessKubernetesClustersArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L54">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L53">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -5073,7 +5409,7 @@ A collection of arguments for invoking getServerlessKubernetesClusters.
 Cluster IDs to filter.
 
 <h4 class="pdoc-member-header" id="GetServerlessKubernetesClustersArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L58">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L57">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5081,12 +5417,12 @@ Cluster IDs to filter.
 A regex string to filter results by cluster name.
 
 <h4 class="pdoc-member-header" id="GetServerlessKubernetesClustersArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L59">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L58">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServerlessKubernetesClustersResult" data-link-title="GetServerlessKubernetesClustersResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L64">
         interface <strong>GetServerlessKubernetesClustersResult</strong>
     </a>
 </h3>
@@ -5096,7 +5432,7 @@ A regex string to filter results by cluster name.
 A collection of values returned by getServerlessKubernetesClusters.
 
 <h4 class="pdoc-member-header" id="GetServerlessKubernetesClustersResult-clusters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L69">property <b>clusters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L68">property <b>clusters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusters: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetServerlessKubernetesClustersCluster'>GetServerlessKubernetesClustersCluster</a>[];</code></pre>
@@ -5104,12 +5440,12 @@ A collection of values returned by getServerlessKubernetesClusters.
 A list of matched Kubernetes clusters. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetServerlessKubernetesClustersResult-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L70">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L69">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServerlessKubernetesClustersResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L74">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L73">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -5117,7 +5453,7 @@ A list of matched Kubernetes clusters. Each element contains the following attri
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetServerlessKubernetesClustersResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L78">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L77">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -5125,12 +5461,12 @@ The provider-assigned unique ID for this managed resource.
 A list of matched Kubernetes clusters' ids.
 
 <h4 class="pdoc-member-header" id="GetServerlessKubernetesClustersResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L79">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L78">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServerlessKubernetesClustersResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L83">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L82">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -5138,12 +5474,12 @@ A list of matched Kubernetes clusters' ids.
 A list of matched Kubernetes clusters' names.
 
 <h4 class="pdoc-member-header" id="GetServerlessKubernetesClustersResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L84">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/getServerlessKubernetesClusters.ts#L83">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="KubernetesArgs" data-link-title="KubernetesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L714">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L818">
         interface <strong>KubernetesArgs</strong>
     </a>
 </h3>
@@ -5153,12 +5489,12 @@ A list of matched Kubernetes clusters' names.
 The set of arguments for constructing a Kubernetes resource.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-addons">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L715">property <b>addons</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L819">property <b>addons</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addons?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#KubernetesAddon'>KubernetesAddon</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesArgs-apiAudiences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L719">property <b>apiAudiences</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L823">property <b>apiAudiences</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiAudiences?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5166,7 +5502,7 @@ The set of arguments for constructing a Kubernetes resource.
 A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature (requires specifying `serviceAccountIssuer` as well.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L723">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L827">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5174,7 +5510,7 @@ A list of API audiences for [Service Account Token Volume Projection](https://ww
 The Zone where new kubernetes cluster will be located. If it is not be specified, the `vswitchIds` should be set, its value will be vswitch's zone.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-clientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L727">property <b>clientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L831">property <b>clientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5182,7 +5518,7 @@ The Zone where new kubernetes cluster will be located. If it is not be specified
 The path of client certificate, like `~/.kube/client-cert.pem`.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-clientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L731">property <b>clientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L835">property <b>clientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5190,39 +5526,63 @@ The path of client certificate, like `~/.kube/client-cert.pem`.
 The path of client key, like `~/.kube/client-key.pem`.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-clusterCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L735">property <b>clusterCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L839">property <b>clusterCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The path of cluster ca certificate, like `~/.kube/cluster-ca-cert.pem`
 
+<h4 class="pdoc-member-header" id="KubernetesArgs-clusterDomain">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L843">property <b>clusterDomain</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>clusterDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Cluster local domain name, Default to `cluster.local`. A domain name consists of one or more sections separated by a decimal point (.), each of which is up to 63 characters long, and can be lowercase, numerals, and underscores (-), and must be lowercase or numerals at the beginning and end.
+
 <h4 class="pdoc-member-header" id="KubernetesArgs-cpuPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L739">property <b>cpuPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L847">property <b>cpuPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpuPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-kubelet cpu policy. options: static|none. default: none.
+Kubelet cpu policy. For Kubernetes 1.12.6 and later, its valid value is either `static` or `none`. Default to `none`.
+
+<h4 class="pdoc-member-header" id="KubernetesArgs-customSan">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L851">property <b>customSan</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>customSan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Customize the certificate SAN, multiple IP or domain names are separated by English commas (,).
+
+<h4 class="pdoc-member-header" id="KubernetesArgs-deletionProtection">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L855">property <b>deletionProtection</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>deletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Whether to enable cluster deletion protection.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-enableSsh">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L743">property <b>enableSsh</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L859">property <b>enableSsh</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableSsh?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Enable login to the node through SSH. default: false
+Enable login to the node through SSH. Default to `false`.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-excludeAutoscalerNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L747">property <b>excludeAutoscalerNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L863">property <b>excludeAutoscalerNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludeAutoscalerNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Exclude autoscaler nodes from `workerNodes`. default: false
+Exclude autoscaler nodes from `workerNodes`. Default to `false`.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L751">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L867">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5230,15 +5590,15 @@ Exclude autoscaler nodes from `workerNodes`. default: false
 Custom Image support. Must based on CentOS7 or AliyunLinux2.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-installCloudMonitor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L755">property <b>installCloudMonitor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L871">property <b>installCloudMonitor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>installCloudMonitor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Install cloud monitor agent on ECS. default: true
+Install cloud monitor agent on ECS. Default to `true`.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-isEnterpriseSecurityGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L759">property <b>isEnterpriseSecurityGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L875">property <b>isEnterpriseSecurityGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnterpriseSecurityGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5246,7 +5606,7 @@ Install cloud monitor agent on ECS. default: true
 Enable to create advanced security group. default: false. See [Advanced security group](https://www.alibabacloud.com/help/doc-detail/120621.htm).
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-keyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L763">property <b>keyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L879">property <b>keyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5254,7 +5614,7 @@ Enable to create advanced security group. default: false. See [Advanced security
 The keypair of ssh login cluster node, you have to create it first. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L767">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L883">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5262,7 +5622,7 @@ The keypair of ssh login cluster node, you have to create it first. You have to 
 An KMS encrypts password used to a cs kubernetes. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-kmsEncryptionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L771">property <b>kmsEncryptionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L887">property <b>kmsEncryptionContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptionContext?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -5270,7 +5630,7 @@ An KMS encrypts password used to a cs kubernetes. You have to specify one of `pa
 An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating or updating a cs kubernetes with `kmsEncryptedPassword`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kmsEncryptedPassword` is set.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-kubeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L775">property <b>kubeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L891">property <b>kubeConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5278,7 +5638,7 @@ An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating
 The path of kube config, like `~/.kube/config`.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-masterAutoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L779">property <b>masterAutoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L895">property <b>masterAutoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAutoRenew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5286,23 +5646,23 @@ The path of kube config, like `~/.kube/config`.
 Enable master payment auto-renew, defaults to false.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-masterAutoRenewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L783">property <b>masterAutoRenewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L899">property <b>masterAutoRenewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAutoRenewPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-Master payment auto-renew period. When period unit is `Month`, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”}.
+Master payment auto-renew period, it can be one of {1, 2, 3, 6, 12}.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-masterDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L787">property <b>masterDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L903">property <b>masterDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterDiskCategory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The system disk category of master node. Its valid value are `cloudSsd` and `cloudEfficiency`. Default to `cloudEfficiency`.
+The system disk category of master node. Its valid value are `cloudSsd`, `cloudEssd` and `cloudEfficiency`. Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-masterDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L791">property <b>masterDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L907">property <b>masterDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterDiskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5310,15 +5670,15 @@ The system disk category of master node. Its valid value are `cloudSsd` and `clo
 The system disk size of master node. Its valid value range [20~500] in GB. Default to 20.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-masterInstanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L795">property <b>masterInstanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L911">property <b>masterInstanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterInstanceChargeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Master payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
+Master payment type. or `PostPaid` or `PrePaid`, defaults to `PostPaid`. If value is `PrePaid`, the files `masterPeriod`, `masterPeriodUnit`, `masterAutoRenew` and `masterAutoRenewPeriod` are required.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-masterInstanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L799">property <b>masterInstanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L915">property <b>masterInstanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterInstanceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5326,28 +5686,28 @@ Master payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
 The instance type of master node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-masterPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L803">property <b>masterPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L919">property <b>masterPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-Master payment period. When period unit is `Month`, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”, “4”}.
+Master payment period.Its valid value is one of {1, 2, 3, 6, 12, 24, 36, 48, 60}.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-masterPeriodUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L807">property <b>masterPeriodUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L923">property <b>masterPeriodUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterPeriodUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Master payment period unit. `Month` or `Week`, defaults to `Month`.
+Master payment period unit, the valid value is `Month`.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-masterVswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L808">property <b>masterVswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L924">property <b>masterVswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterVswitchIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L812">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L928">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5355,7 +5715,7 @@ Master payment period unit. `Month` or `Week`, defaults to `Month`.
 The kubernetes cluster's name. It is unique in one Alicloud account.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L816">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L932">property <b>namePrefix</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -5364,7 +5724,7 @@ Field &#39;name_prefix&#39; has been deprecated from provider version 1.75.0.
 </div>
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesArgs-newNatGateway">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L820">property <b>newNatGateway</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L936">property <b>newNatGateway</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>newNatGateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5372,7 +5732,7 @@ Field &#39;name_prefix&#39; has been deprecated from provider version 1.75.0.
 Whether to create a new nat gateway while creating kubernetes cluster. Default to true. Then openapi in Alibaba Cloud are not all on intranet, So turn this option on is a good choice.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-nodeCidrMask">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L824">property <b>nodeCidrMask</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L940">property <b>nodeCidrMask</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCidrMask?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5380,55 +5740,92 @@ Whether to create a new nat gateway while creating kubernetes cluster. Default t
 The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-nodeNameMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L828">property <b>nodeNameMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L944">property <b>nodeNameMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeNameMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.
+Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be `aliyun.com00055test`.
+
+<h4 class="pdoc-member-header" id="KubernetesArgs-nodePortRange">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L948">property <b>nodePortRange</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>nodePortRange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The service port range of nodes, valid values: `30000` to `65535`. Default to `30000-32767`.
+
+<h4 class="pdoc-member-header" id="KubernetesArgs-osType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L952">property <b>osType</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>osType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The operating system of the nodes that run pods, its valid value is either `Linux` or `Windows`. Default to `Linux`.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L832">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L956">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The password of ssh login cluster node. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
+<h4 class="pdoc-member-header" id="KubernetesArgs-platform">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L960">property <b>platform</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>platform?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The architecture of the nodes that run pods, its valid value is either `CentOS` or `AliyunLinux`. Default to `CentOS`.
+
 <h4 class="pdoc-member-header" id="KubernetesArgs-podCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L836">property <b>podCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L964">property <b>podCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>podCidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-[Flannel Specific] The CIDR block for the pod network when using Flannel.
+- [Flannel Specific] The CIDR block for the pod network when using Flannel.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-podVswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L840">property <b>podVswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L968">property <b>podVswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>podVswitchIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 
-[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `podVswitchIds` can not equal to `workerVswtichIds` or `masterVswtichIds` but must be in same availability zones.
+- [Terway Specific] The vswitches for the pod network when using Terway.Be careful the `podVswitchIds` can not equal to `workerVswtichIds` or `masterVswtichIds` but must be in same availability zones.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-proxyMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L844">property <b>proxyMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L972">property <b>proxyMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>proxyMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
+Proxy mode is option of kube-proxy. options: iptables | ipvs. default: ipvs.
 
+<h4 class="pdoc-member-header" id="KubernetesArgs-rdsInstances">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L973">property <b>rdsInstances</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>rdsInstances?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesArgs-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L848">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L977">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
 
+<h4 class="pdoc-member-header" id="KubernetesArgs-runtime">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L981">property <b>runtime</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>runtime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#KubernetesRuntime'>KubernetesRuntime</a>&gt;;</code></pre>
+
+The runtime of containers. Default to `docker`. If you select another container runtime, see [How do I select between Docker and Sandboxed-Container](https://www.alibabacloud.com/help/doc-detail/160313.htm?spm=a2c63.p38356.b99.440.22563866AJkBgI). Detailed below.
+
 <h4 class="pdoc-member-header" id="KubernetesArgs-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L852">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L985">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5436,7 +5833,7 @@ The ID of the resource group,by default these cloud resources are automatically 
 The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-serviceAccountIssuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L856">property <b>serviceAccountIssuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L989">property <b>serviceAccountIssuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountIssuer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5444,7 +5841,7 @@ The ID of the security group to which the ECS instances in the cluster belong. I
 The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `"kubernetes.default.svc"` to enable the Token Volume Projection feature (requires specifying `apiAudiences` as well).
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-serviceCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L860">property <b>serviceCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L993">property <b>serviceCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceCidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5452,7 +5849,7 @@ The issuer of the Service Account token for [Service Account Token Volume Projec
 The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-slbInternetEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L864">property <b>slbInternetEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L997">property <b>slbInternetEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slbInternetEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5460,15 +5857,31 @@ The CIDR block for the service network. It cannot be duplicated with the VPC CID
 Whether to create internet load balancer for API Server. Default to true.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L868">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L1001">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 
-Default nil, A map of tags assigned to the kubernetes cluster .
+Default nil, A map of tags assigned to the kubernetes cluster . Detailed below.
+
+<h4 class="pdoc-member-header" id="KubernetesArgs-taints">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L1005">property <b>taints</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>taints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#KubernetesTaint'>KubernetesTaint</a>&gt;[]&gt;;</code></pre>
+
+Taints ensure pods are not scheduled onto inappropriate nodes. One or more taints are applied to a node; this marks that the node should not accept any pods that do not tolerate the taints. For more information, see [Taints and Tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/). Detailed below.
+
+<h4 class="pdoc-member-header" id="KubernetesArgs-timezone">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L1009">property <b>timezone</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>timezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+When you create a cluster, set the time zones for the Master and Woker nodes. You can only change the managed node time zone if you create a cluster. Once the cluster is created, you can only change the time zone of the Worker node.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-userCa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L872">property <b>userCa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L1013">property <b>userCa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userCa?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5476,15 +5889,15 @@ Default nil, A map of tags assigned to the kubernetes cluster .
 The path of customized CA cert, you can use this CA to sign client certs to connect your cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L876">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L1017">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Windows instances support batch and PowerShell scripts. If your script file is larger than 1 KB, we recommend that you upload the script to Object Storage Service (OSS) and pull it through the internal endpoint of your OSS bucket.
+Custom data that can execute on nodes. For more information, see [Prepare user data](https://www.alibabacloud.com/help/doc-detail/49121.htm).
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L880">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L1021">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5492,7 +5905,7 @@ Windows instances support batch and PowerShell scripts. If your script file is l
 Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-workerAutoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L884">property <b>workerAutoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L1025">property <b>workerAutoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerAutoRenew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5500,47 +5913,48 @@ Desired Kubernetes version. If you do not specify a value, the latest available 
 Enable worker payment auto-renew, defaults to false.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-workerAutoRenewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L888">property <b>workerAutoRenewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L1029">property <b>workerAutoRenewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerAutoRenewPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-Worker payment auto-renew period. When period unit is `Month`, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”}.
+Worker payment auto-renew period,, it can be one of {1, 2, 3, 6, 12}.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-workerDataDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L889">property <b>workerDataDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L1030">property <b>workerDataDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDataDiskCategory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesArgs-workerDataDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L890">property <b>workerDataDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L1031">property <b>workerDataDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDataDiskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesArgs-workerDataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L900">property <b>workerDataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L1042">property <b>workerDataDisks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDataDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#KubernetesWorkerDataDisk'>KubernetesWorkerDataDisk</a>&gt;[]&gt;;</code></pre>
 
 The data disk configurations of worker nodes, such as the disk type and disk size.
-- category: the type of the data disks. Valid values:
-+ cloud: basic disks.
-+ cloud_efficiency: ultra disks.
-+ cloud_ssd: SSDs.
-- size: the size of a data disk. Unit: GiB.
-- encrypted: specifies whether to encrypt data disks. Valid values: true and false.
+* `category`: the type of the data disks. Valid values:
+* cloud: basic disks.
+* cloud_efficiency: ultra disks.
+* cloud_ssd: SSDs.
+* cloud_essd: essd.
+* `size`: the size of a data disk. Unit: GiB.
+* `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-workerDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L904">property <b>workerDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L1046">property <b>workerDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDiskCategory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The system disk category of worker node. Its valid value are `cloudSsd` and `cloudEfficiency`. Default to `cloudEfficiency`.
+The system disk category of worker node. Its valid value are `cloud`, `cloudSsd`, `cloudEssd` and `cloudEfficiency`. Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-workerDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L908">property <b>workerDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L1050">property <b>workerDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDiskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5548,15 +5962,15 @@ The system disk category of worker node. Its valid value are `cloudSsd` and `clo
 The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-workerInstanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L912">property <b>workerInstanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L1054">property <b>workerInstanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerInstanceChargeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Worker payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
+Worker payment type, its valid value is either or `PostPaid` or `PrePaid`. Defaults to `PostPaid`. If value is `PrePaid`, the files `workerPeriod`, `workerPeriodUnit`, `workerAutoRenew` and `workerAutoRenewPeriod` are required.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-workerInstanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L916">property <b>workerInstanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L1058">property <b>workerInstanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerInstanceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5564,7 +5978,7 @@ Worker payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
 The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-workerNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L920">property <b>workerNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L1062">property <b>workerNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerNumber: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5572,28 +5986,28 @@ The instance type of worker node. Specify one type for single AZ Cluster, three 
 The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-workerPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L924">property <b>workerPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L1066">property <b>workerPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-Worker payment period. When period unit is `Month`, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”, “4”}.
+Worker payment period. The unit is `Month`. Its valid value is one of {1, 2, 3, 6, 12, 24, 36, 48, 60}.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-workerPeriodUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L928">property <b>workerPeriodUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L1070">property <b>workerPeriodUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerPeriodUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Worker payment period unit. `Month` or `Week`, defaults to `Month`.
+Worker payment period unit, the valid value is `Month`.
 
 <h4 class="pdoc-member-header" id="KubernetesArgs-workerVswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L929">property <b>workerVswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L1071">property <b>workerVswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerVswitchIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="KubernetesAutoscalerArgs" data-link-title="KubernetesAutoscalerArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L181">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L218">
         interface <strong>KubernetesAutoscalerArgs</strong>
     </a>
 </h3>
@@ -5603,7 +6017,7 @@ Worker payment period unit. `Month` or `Week`, defaults to `Month`.
 The set of arguments for constructing a KubernetesAutoscaler resource.
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscalerArgs-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L185">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L222">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5611,7 +6025,7 @@ The set of arguments for constructing a KubernetesAutoscaler resource.
 The id of kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscalerArgs-coolDownDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L189">property <b>coolDownDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L226">property <b>coolDownDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>coolDownDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5619,7 +6033,7 @@ The id of kubernetes cluster.
 The coolDownDuration option of cluster-autoscaler.
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscalerArgs-deferScaleInDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L193">property <b>deferScaleInDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L230">property <b>deferScaleInDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deferScaleInDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5627,7 +6041,7 @@ The coolDownDuration option of cluster-autoscaler.
 The deferScaleInDuration option of cluster-autoscaler.
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscalerArgs-nodepools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L199">property <b>nodepools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L236">property <b>nodepools</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodepools?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#KubernetesAutoscalerNodepool'>KubernetesAutoscalerNodepool</a>&gt;[]&gt;;</code></pre>
@@ -5637,7 +6051,7 @@ The deferScaleInDuration option of cluster-autoscaler.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscalerArgs-useEcsRamRoleToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L203">property <b>useEcsRamRoleToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L240">property <b>useEcsRamRoleToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useEcsRamRoleToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5645,7 +6059,7 @@ The deferScaleInDuration option of cluster-autoscaler.
 Enable autoscaler access to alibabacloud service by ecs ramrole token. default: false
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscalerArgs-utilization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L207">property <b>utilization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L244">property <b>utilization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>utilization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5653,7 +6067,7 @@ Enable autoscaler access to alibabacloud service by ecs ramrole token. default: 
 The utilization option of cluster-autoscaler.
 
 <h3 class="pdoc-module-header" id="KubernetesAutoscalerState" data-link-title="KubernetesAutoscalerState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L149">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L186">
         interface <strong>KubernetesAutoscalerState</strong>
     </a>
 </h3>
@@ -5663,7 +6077,7 @@ The utilization option of cluster-autoscaler.
 Input properties used for looking up and filtering KubernetesAutoscaler resources.
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscalerState-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L153">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L190">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5671,7 +6085,7 @@ Input properties used for looking up and filtering KubernetesAutoscaler resource
 The id of kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscalerState-coolDownDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L157">property <b>coolDownDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L194">property <b>coolDownDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>coolDownDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5679,7 +6093,7 @@ The id of kubernetes cluster.
 The coolDownDuration option of cluster-autoscaler.
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscalerState-deferScaleInDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L161">property <b>deferScaleInDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L198">property <b>deferScaleInDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deferScaleInDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5687,7 +6101,7 @@ The coolDownDuration option of cluster-autoscaler.
 The deferScaleInDuration option of cluster-autoscaler.
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscalerState-nodepools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L167">property <b>nodepools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L204">property <b>nodepools</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodepools?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#KubernetesAutoscalerNodepool'>KubernetesAutoscalerNodepool</a>&gt;[]&gt;;</code></pre>
@@ -5697,7 +6111,7 @@ The deferScaleInDuration option of cluster-autoscaler.
 * `nodepools.labels` - (Required) The labels for the nodes in scaling group.
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscalerState-useEcsRamRoleToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L171">property <b>useEcsRamRoleToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L208">property <b>useEcsRamRoleToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>useEcsRamRoleToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5705,7 +6119,7 @@ The deferScaleInDuration option of cluster-autoscaler.
 Enable autoscaler access to alibabacloud service by ecs ramrole token. default: false
 
 <h4 class="pdoc-member-header" id="KubernetesAutoscalerState-utilization">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetesAutoscaler.ts#L175">property <b>utilization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetesAutoscaler.ts#L212">property <b>utilization</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>utilization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5713,7 +6127,7 @@ Enable autoscaler access to alibabacloud service by ecs ramrole token. default: 
 The utilization option of cluster-autoscaler.
 
 <h3 class="pdoc-module-header" id="KubernetesState" data-link-title="KubernetesState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L460">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L526">
         interface <strong>KubernetesState</strong>
     </a>
 </h3>
@@ -5723,12 +6137,12 @@ The utilization option of cluster-autoscaler.
 Input properties used for looking up and filtering Kubernetes resources.
 
 <h4 class="pdoc-member-header" id="KubernetesState-addons">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L461">property <b>addons</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L527">property <b>addons</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addons?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#KubernetesAddon'>KubernetesAddon</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesState-apiAudiences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L465">property <b>apiAudiences</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L531">property <b>apiAudiences</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiAudiences?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5736,7 +6150,7 @@ Input properties used for looking up and filtering Kubernetes resources.
 A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature (requires specifying `serviceAccountIssuer` as well.
 
 <h4 class="pdoc-member-header" id="KubernetesState-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L469">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L535">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5744,7 +6158,7 @@ A list of API audiences for [Service Account Token Volume Projection](https://ww
 The Zone where new kubernetes cluster will be located. If it is not be specified, the `vswitchIds` should be set, its value will be vswitch's zone.
 
 <h4 class="pdoc-member-header" id="KubernetesState-clientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L473">property <b>clientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L539">property <b>clientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5752,7 +6166,7 @@ The Zone where new kubernetes cluster will be located. If it is not be specified
 The path of client certificate, like `~/.kube/client-cert.pem`.
 
 <h4 class="pdoc-member-header" id="KubernetesState-clientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L477">property <b>clientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L543">property <b>clientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5760,15 +6174,23 @@ The path of client certificate, like `~/.kube/client-cert.pem`.
 The path of client key, like `~/.kube/client-key.pem`.
 
 <h4 class="pdoc-member-header" id="KubernetesState-clusterCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L481">property <b>clusterCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L547">property <b>clusterCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The path of cluster ca certificate, like `~/.kube/cluster-ca-cert.pem`
 
+<h4 class="pdoc-member-header" id="KubernetesState-clusterDomain">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L551">property <b>clusterDomain</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>clusterDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Cluster local domain name, Default to `cluster.local`. A domain name consists of one or more sections separated by a decimal point (.), each of which is up to 63 characters long, and can be lowercase, numerals, and underscores (-), and must be lowercase or numerals at the beginning and end.
+
 <h4 class="pdoc-member-header" id="KubernetesState-connections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L485">property <b>connections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L555">property <b>connections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connections?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#KubernetesConnections'>KubernetesConnections</a>&gt;;</code></pre>
@@ -5776,31 +6198,47 @@ The path of cluster ca certificate, like `~/.kube/cluster-ca-cert.pem`
 Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
 
 <h4 class="pdoc-member-header" id="KubernetesState-cpuPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L489">property <b>cpuPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L559">property <b>cpuPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpuPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-kubelet cpu policy. options: static|none. default: none.
+Kubelet cpu policy. For Kubernetes 1.12.6 and later, its valid value is either `static` or `none`. Default to `none`.
+
+<h4 class="pdoc-member-header" id="KubernetesState-customSan">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L563">property <b>customSan</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>customSan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Customize the certificate SAN, multiple IP or domain names are separated by English commas (,).
+
+<h4 class="pdoc-member-header" id="KubernetesState-deletionProtection">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L567">property <b>deletionProtection</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>deletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Whether to enable cluster deletion protection.
 
 <h4 class="pdoc-member-header" id="KubernetesState-enableSsh">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L493">property <b>enableSsh</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L571">property <b>enableSsh</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableSsh?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Enable login to the node through SSH. default: false
+Enable login to the node through SSH. Default to `false`.
 
 <h4 class="pdoc-member-header" id="KubernetesState-excludeAutoscalerNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L497">property <b>excludeAutoscalerNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L575">property <b>excludeAutoscalerNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludeAutoscalerNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Exclude autoscaler nodes from `workerNodes`. default: false
+Exclude autoscaler nodes from `workerNodes`. Default to `false`.
 
 <h4 class="pdoc-member-header" id="KubernetesState-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L501">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L579">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5808,15 +6246,15 @@ Exclude autoscaler nodes from `workerNodes`. default: false
 Custom Image support. Must based on CentOS7 or AliyunLinux2.
 
 <h4 class="pdoc-member-header" id="KubernetesState-installCloudMonitor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L505">property <b>installCloudMonitor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L583">property <b>installCloudMonitor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>installCloudMonitor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Install cloud monitor agent on ECS. default: true
+Install cloud monitor agent on ECS. Default to `true`.
 
 <h4 class="pdoc-member-header" id="KubernetesState-isEnterpriseSecurityGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L509">property <b>isEnterpriseSecurityGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L587">property <b>isEnterpriseSecurityGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnterpriseSecurityGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5824,7 +6262,7 @@ Install cloud monitor agent on ECS. default: true
 Enable to create advanced security group. default: false. See [Advanced security group](https://www.alibabacloud.com/help/doc-detail/120621.htm).
 
 <h4 class="pdoc-member-header" id="KubernetesState-keyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L513">property <b>keyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L591">property <b>keyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5832,7 +6270,7 @@ Enable to create advanced security group. default: false. See [Advanced security
 The keypair of ssh login cluster node, you have to create it first. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="KubernetesState-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L517">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L595">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5840,7 +6278,7 @@ The keypair of ssh login cluster node, you have to create it first. You have to 
 An KMS encrypts password used to a cs kubernetes. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="KubernetesState-kmsEncryptionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L521">property <b>kmsEncryptionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L599">property <b>kmsEncryptionContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptionContext?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -5848,7 +6286,7 @@ An KMS encrypts password used to a cs kubernetes. You have to specify one of `pa
 An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating or updating a cs kubernetes with `kmsEncryptedPassword`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kmsEncryptedPassword` is set.
 
 <h4 class="pdoc-member-header" id="KubernetesState-kubeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L525">property <b>kubeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L603">property <b>kubeConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5856,7 +6294,7 @@ An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating
 The path of kube config, like `~/.kube/config`.
 
 <h4 class="pdoc-member-header" id="KubernetesState-masterAutoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L529">property <b>masterAutoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L607">property <b>masterAutoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAutoRenew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5864,23 +6302,23 @@ The path of kube config, like `~/.kube/config`.
 Enable master payment auto-renew, defaults to false.
 
 <h4 class="pdoc-member-header" id="KubernetesState-masterAutoRenewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L533">property <b>masterAutoRenewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L611">property <b>masterAutoRenewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterAutoRenewPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-Master payment auto-renew period. When period unit is `Month`, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”}.
+Master payment auto-renew period, it can be one of {1, 2, 3, 6, 12}.
 
 <h4 class="pdoc-member-header" id="KubernetesState-masterDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L537">property <b>masterDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L615">property <b>masterDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterDiskCategory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The system disk category of master node. Its valid value are `cloudSsd` and `cloudEfficiency`. Default to `cloudEfficiency`.
+The system disk category of master node. Its valid value are `cloudSsd`, `cloudEssd` and `cloudEfficiency`. Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="KubernetesState-masterDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L541">property <b>masterDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L619">property <b>masterDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterDiskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5888,15 +6326,15 @@ The system disk category of master node. Its valid value are `cloudSsd` and `clo
 The system disk size of master node. Its valid value range [20~500] in GB. Default to 20.
 
 <h4 class="pdoc-member-header" id="KubernetesState-masterInstanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L545">property <b>masterInstanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L623">property <b>masterInstanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterInstanceChargeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Master payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
+Master payment type. or `PostPaid` or `PrePaid`, defaults to `PostPaid`. If value is `PrePaid`, the files `masterPeriod`, `masterPeriodUnit`, `masterAutoRenew` and `masterAutoRenewPeriod` are required.
 
 <h4 class="pdoc-member-header" id="KubernetesState-masterInstanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L549">property <b>masterInstanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L627">property <b>masterInstanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterInstanceTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5904,7 +6342,7 @@ Master payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
 The instance type of master node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesState-masterNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L553">property <b>masterNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L631">property <b>masterNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#KubernetesMasterNode'>KubernetesMasterNode</a>&gt;[]&gt;;</code></pre>
@@ -5912,28 +6350,28 @@ The instance type of master node. Specify one type for single AZ Cluster, three 
 List of cluster master nodes. It contains several attributes to `Block Nodes`.
 
 <h4 class="pdoc-member-header" id="KubernetesState-masterPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L557">property <b>masterPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L635">property <b>masterPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-Master payment period. When period unit is `Month`, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”, “4”}.
+Master payment period.Its valid value is one of {1, 2, 3, 6, 12, 24, 36, 48, 60}.
 
 <h4 class="pdoc-member-header" id="KubernetesState-masterPeriodUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L561">property <b>masterPeriodUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L639">property <b>masterPeriodUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterPeriodUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Master payment period unit. `Month` or `Week`, defaults to `Month`.
+Master payment period unit, the valid value is `Month`.
 
 <h4 class="pdoc-member-header" id="KubernetesState-masterVswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L562">property <b>masterVswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L640">property <b>masterVswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterVswitchIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L566">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L644">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5941,7 +6379,7 @@ Master payment period unit. `Month` or `Week`, defaults to `Month`.
 The kubernetes cluster's name. It is unique in one Alicloud account.
 
 <h4 class="pdoc-member-header" id="KubernetesState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L570">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L648">property <b>namePrefix</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -5950,7 +6388,7 @@ Field &#39;name_prefix&#39; has been deprecated from provider version 1.75.0.
 </div>
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesState-natGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L574">property <b>natGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L652">property <b>natGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>natGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5958,7 +6396,7 @@ Field &#39;name_prefix&#39; has been deprecated from provider version 1.75.0.
 The ID of nat gateway used to launch kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesState-newNatGateway">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L578">property <b>newNatGateway</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L656">property <b>newNatGateway</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>newNatGateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5966,7 +6404,7 @@ The ID of nat gateway used to launch kubernetes cluster.
 Whether to create a new nat gateway while creating kubernetes cluster. Default to true. Then openapi in Alibaba Cloud are not all on intranet, So turn this option on is a good choice.
 
 <h4 class="pdoc-member-header" id="KubernetesState-nodeCidrMask">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L582">property <b>nodeCidrMask</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L660">property <b>nodeCidrMask</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCidrMask?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5974,55 +6412,92 @@ Whether to create a new nat gateway while creating kubernetes cluster. Default t
 The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24
 
 <h4 class="pdoc-member-header" id="KubernetesState-nodeNameMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L586">property <b>nodeNameMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L664">property <b>nodeNameMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeNameMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.
+Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be `aliyun.com00055test`.
+
+<h4 class="pdoc-member-header" id="KubernetesState-nodePortRange">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L668">property <b>nodePortRange</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>nodePortRange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The service port range of nodes, valid values: `30000` to `65535`. Default to `30000-32767`.
+
+<h4 class="pdoc-member-header" id="KubernetesState-osType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L672">property <b>osType</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>osType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The operating system of the nodes that run pods, its valid value is either `Linux` or `Windows`. Default to `Linux`.
 
 <h4 class="pdoc-member-header" id="KubernetesState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L590">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L676">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The password of ssh login cluster node. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
+<h4 class="pdoc-member-header" id="KubernetesState-platform">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L680">property <b>platform</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>platform?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The architecture of the nodes that run pods, its valid value is either `CentOS` or `AliyunLinux`. Default to `CentOS`.
+
 <h4 class="pdoc-member-header" id="KubernetesState-podCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L594">property <b>podCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L684">property <b>podCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>podCidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-[Flannel Specific] The CIDR block for the pod network when using Flannel.
+- [Flannel Specific] The CIDR block for the pod network when using Flannel.
 
 <h4 class="pdoc-member-header" id="KubernetesState-podVswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L598">property <b>podVswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L688">property <b>podVswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>podVswitchIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 
-[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `podVswitchIds` can not equal to `workerVswtichIds` or `masterVswtichIds` but must be in same availability zones.
+- [Terway Specific] The vswitches for the pod network when using Terway.Be careful the `podVswitchIds` can not equal to `workerVswtichIds` or `masterVswtichIds` but must be in same availability zones.
 
 <h4 class="pdoc-member-header" id="KubernetesState-proxyMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L602">property <b>proxyMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L692">property <b>proxyMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>proxyMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
+Proxy mode is option of kube-proxy. options: iptables | ipvs. default: ipvs.
 
+<h4 class="pdoc-member-header" id="KubernetesState-rdsInstances">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L693">property <b>rdsInstances</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>rdsInstances?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesState-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L606">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L697">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
 
+<h4 class="pdoc-member-header" id="KubernetesState-runtime">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L701">property <b>runtime</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>runtime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#KubernetesRuntime'>KubernetesRuntime</a>&gt;;</code></pre>
+
+The runtime of containers. Default to `docker`. If you select another container runtime, see [How do I select between Docker and Sandboxed-Container](https://www.alibabacloud.com/help/doc-detail/160313.htm?spm=a2c63.p38356.b99.440.22563866AJkBgI). Detailed below.
+
 <h4 class="pdoc-member-header" id="KubernetesState-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L610">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L705">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6030,7 +6505,7 @@ The ID of the resource group,by default these cloud resources are automatically 
 The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 
 <h4 class="pdoc-member-header" id="KubernetesState-serviceAccountIssuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L614">property <b>serviceAccountIssuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L709">property <b>serviceAccountIssuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountIssuer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6038,7 +6513,7 @@ The ID of the security group to which the ECS instances in the cluster belong. I
 The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `"kubernetes.default.svc"` to enable the Token Volume Projection feature (requires specifying `apiAudiences` as well).
 
 <h4 class="pdoc-member-header" id="KubernetesState-serviceCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L618">property <b>serviceCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L713">property <b>serviceCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceCidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6046,7 +6521,7 @@ The issuer of the Service Account token for [Service Account Token Volume Projec
 The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
 
 <h4 class="pdoc-member-header" id="KubernetesState-slbId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L622">property <b>slbId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L717">property <b>slbId</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -6055,12 +6530,12 @@ Field &#39;slb_id&#39; has been deprecated from provider version 1.9.2. New fiel
 </div>
 <pre class="highlight"><code><span class='kd'></span>slbId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesState-slbInternet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L623">property <b>slbInternet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L718">property <b>slbInternet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slbInternet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesState-slbInternetEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L627">property <b>slbInternetEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L722">property <b>slbInternetEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slbInternetEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6068,7 +6543,7 @@ Field &#39;slb_id&#39; has been deprecated from provider version 1.9.2. New fiel
 Whether to create internet load balancer for API Server. Default to true.
 
 <h4 class="pdoc-member-header" id="KubernetesState-slbIntranet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L631">property <b>slbIntranet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L726">property <b>slbIntranet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slbIntranet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6076,15 +6551,31 @@ Whether to create internet load balancer for API Server. Default to true.
 The ID of private load balancer where the current cluster master node is located.
 
 <h4 class="pdoc-member-header" id="KubernetesState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L635">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L730">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 
-Default nil, A map of tags assigned to the kubernetes cluster .
+Default nil, A map of tags assigned to the kubernetes cluster . Detailed below.
+
+<h4 class="pdoc-member-header" id="KubernetesState-taints">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L734">property <b>taints</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>taints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#KubernetesTaint'>KubernetesTaint</a>&gt;[]&gt;;</code></pre>
+
+Taints ensure pods are not scheduled onto inappropriate nodes. One or more taints are applied to a node; this marks that the node should not accept any pods that do not tolerate the taints. For more information, see [Taints and Tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/). Detailed below.
+
+<h4 class="pdoc-member-header" id="KubernetesState-timezone">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L738">property <b>timezone</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>timezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+When you create a cluster, set the time zones for the Master and Woker nodes. You can only change the managed node time zone if you create a cluster. Once the cluster is created, you can only change the time zone of the Worker node.
 
 <h4 class="pdoc-member-header" id="KubernetesState-userCa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L639">property <b>userCa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L742">property <b>userCa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userCa?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6092,15 +6583,15 @@ Default nil, A map of tags assigned to the kubernetes cluster .
 The path of customized CA cert, you can use this CA to sign client certs to connect your cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesState-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L643">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L746">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Windows instances support batch and PowerShell scripts. If your script file is larger than 1 KB, we recommend that you upload the script to Object Storage Service (OSS) and pull it through the internal endpoint of your OSS bucket.
+Custom data that can execute on nodes. For more information, see [Prepare user data](https://www.alibabacloud.com/help/doc-detail/49121.htm).
 
 <h4 class="pdoc-member-header" id="KubernetesState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L647">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L750">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6108,7 +6599,7 @@ Windows instances support batch and PowerShell scripts. If your script file is l
 Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.
 
 <h4 class="pdoc-member-header" id="KubernetesState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L651">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L754">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6116,7 +6607,7 @@ Desired Kubernetes version. If you do not specify a value, the latest available 
 The ID of VPC where the current cluster is located.
 
 <h4 class="pdoc-member-header" id="KubernetesState-workerAutoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L655">property <b>workerAutoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L758">property <b>workerAutoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerAutoRenew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6124,47 +6615,48 @@ The ID of VPC where the current cluster is located.
 Enable worker payment auto-renew, defaults to false.
 
 <h4 class="pdoc-member-header" id="KubernetesState-workerAutoRenewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L659">property <b>workerAutoRenewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L762">property <b>workerAutoRenewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerAutoRenewPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-Worker payment auto-renew period. When period unit is `Month`, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”}.
+Worker payment auto-renew period,, it can be one of {1, 2, 3, 6, 12}.
 
 <h4 class="pdoc-member-header" id="KubernetesState-workerDataDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L660">property <b>workerDataDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L763">property <b>workerDataDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDataDiskCategory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesState-workerDataDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L661">property <b>workerDataDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L764">property <b>workerDataDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDataDiskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KubernetesState-workerDataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L671">property <b>workerDataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L775">property <b>workerDataDisks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDataDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#KubernetesWorkerDataDisk'>KubernetesWorkerDataDisk</a>&gt;[]&gt;;</code></pre>
 
 The data disk configurations of worker nodes, such as the disk type and disk size.
-- category: the type of the data disks. Valid values:
-+ cloud: basic disks.
-+ cloud_efficiency: ultra disks.
-+ cloud_ssd: SSDs.
-- size: the size of a data disk. Unit: GiB.
-- encrypted: specifies whether to encrypt data disks. Valid values: true and false.
+* `category`: the type of the data disks. Valid values:
+* cloud: basic disks.
+* cloud_efficiency: ultra disks.
+* cloud_ssd: SSDs.
+* cloud_essd: essd.
+* `size`: the size of a data disk. Unit: GiB.
+* `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 
 <h4 class="pdoc-member-header" id="KubernetesState-workerDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L675">property <b>workerDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L779">property <b>workerDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDiskCategory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The system disk category of worker node. Its valid value are `cloudSsd` and `cloudEfficiency`. Default to `cloudEfficiency`.
+The system disk category of worker node. Its valid value are `cloud`, `cloudSsd`, `cloudEssd` and `cloudEfficiency`. Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="KubernetesState-workerDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L679">property <b>workerDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L783">property <b>workerDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDiskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6172,15 +6664,15 @@ The system disk category of worker node. Its valid value are `cloudSsd` and `clo
 The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
 
 <h4 class="pdoc-member-header" id="KubernetesState-workerInstanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L683">property <b>workerInstanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L787">property <b>workerInstanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerInstanceChargeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Worker payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
+Worker payment type, its valid value is either or `PostPaid` or `PrePaid`. Defaults to `PostPaid`. If value is `PrePaid`, the files `workerPeriod`, `workerPeriodUnit`, `workerAutoRenew` and `workerAutoRenewPeriod` are required.
 
 <h4 class="pdoc-member-header" id="KubernetesState-workerInstanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L687">property <b>workerInstanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L791">property <b>workerInstanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerInstanceTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6188,7 +6680,7 @@ Worker payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
 The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.
 
 <h4 class="pdoc-member-header" id="KubernetesState-workerNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L691">property <b>workerNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L795">property <b>workerNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#KubernetesWorkerNode'>KubernetesWorkerNode</a>&gt;[]&gt;;</code></pre>
@@ -6196,7 +6688,7 @@ The instance type of worker node. Specify one type for single AZ Cluster, three 
 List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 
 <h4 class="pdoc-member-header" id="KubernetesState-workerNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L695">property <b>workerNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L799">property <b>workerNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerNumber?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6204,23 +6696,23 @@ List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
 
 <h4 class="pdoc-member-header" id="KubernetesState-workerPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L699">property <b>workerPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L803">property <b>workerPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-Worker payment period. When period unit is `Month`, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”, “4”}.
+Worker payment period. The unit is `Month`. Its valid value is one of {1, 2, 3, 6, 12, 24, 36, 48, 60}.
 
 <h4 class="pdoc-member-header" id="KubernetesState-workerPeriodUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L703">property <b>workerPeriodUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L807">property <b>workerPeriodUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerPeriodUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Worker payment period unit. `Month` or `Week`, defaults to `Month`.
+Worker payment period unit, the valid value is `Month`.
 
 <h4 class="pdoc-member-header" id="KubernetesState-workerRamRoleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L707">property <b>workerRamRoleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L811">property <b>workerRamRoleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerRamRoleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6228,12 +6720,12 @@ Worker payment period unit. `Month` or `Week`, defaults to `Month`.
 The RamRole Name attached to worker node.
 
 <h4 class="pdoc-member-header" id="KubernetesState-workerVswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/kubernetes.ts#L708">property <b>workerVswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/kubernetes.ts#L812">property <b>workerVswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerVswitchIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ManagedKubernetesArgs" data-link-title="ManagedKubernetesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L622">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L726">
         interface <strong>ManagedKubernetesArgs</strong>
     </a>
 </h3>
@@ -6243,20 +6735,20 @@ The RamRole Name attached to worker node.
 The set of arguments for constructing a ManagedKubernetes resource.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-addons">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L623">property <b>addons</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L727">property <b>addons</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addons?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ManagedKubernetesAddon'>ManagedKubernetesAddon</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-apiAudiences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L627">property <b>apiAudiences</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L731">property <b>apiAudiences</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiAudiences?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 
-A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature.
+A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature (requires specifying `serviceAccountIssuer` as well.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L631">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L735">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6264,7 +6756,7 @@ A list of API audiences for [Service Account Token Volume Projection](https://ww
 The Zone where new kubernetes cluster will be located. If it is not be specified, the `vswitchIds` should be set, its value will be vswitch's zone.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-clientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L635">property <b>clientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L739">property <b>clientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6272,7 +6764,7 @@ The Zone where new kubernetes cluster will be located. If it is not be specified
 The path of client certificate, like `~/.kube/client-cert.pem`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-clientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L639">property <b>clientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L743">property <b>clientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6280,49 +6772,76 @@ The path of client certificate, like `~/.kube/client-cert.pem`.
 The path of client key, like `~/.kube/client-key.pem`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-clusterCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L643">property <b>clusterCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L747">property <b>clusterCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The path of cluster ca certificate, like `~/.kube/cluster-ca-cert.pem`
 
+<h4 class="pdoc-member-header" id="ManagedKubernetesArgs-clusterDomain">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L751">property <b>clusterDomain</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>clusterDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Cluster local domain name, Default to `cluster.local`. A domain name consists of one or more sections separated by a decimal point (.), each of which is up to 63 characters long, and can be lowercase, numerals, and underscores (-), and must be lowercase or numerals at the beginning and end.
+
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-clusterSpec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L649">property <b>clusterSpec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L752">property <b>clusterSpec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterSpec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-The cluster specifications of kubernetes cluster,which can be empty.Valid values:
-- ack.standard: Standard managed clusters.
-- ack.pro.small:  Professional managed clusters.
-
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-cpuPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L653">property <b>cpuPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L756">property <b>cpuPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpuPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-kubelet cpu policy. options: static|none. default: none.
+Kubelet cpu policy. For Kubernetes 1.12.6 and later, its valid value is either `static` or `none`. Default to `none`.
+
+<h4 class="pdoc-member-header" id="ManagedKubernetesArgs-customSan">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L760">property <b>customSan</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>customSan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Customize the certificate SAN, multiple IP or domain names are separated by English commas (,).
+
+<h4 class="pdoc-member-header" id="ManagedKubernetesArgs-deletionProtection">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L764">property <b>deletionProtection</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>deletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Whether to enable cluster deletion protection.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-enableSsh">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L657">property <b>enableSsh</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L768">property <b>enableSsh</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableSsh?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Enable login to the node through SSH. default: false
+Enable login to the node through SSH. Default to `false`.
+
+<h4 class="pdoc-member-header" id="ManagedKubernetesArgs-encryptionProviderKey">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L772">property <b>encryptionProviderKey</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>encryptionProviderKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The disk encryption key.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-excludeAutoscalerNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L661">property <b>excludeAutoscalerNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L776">property <b>excludeAutoscalerNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludeAutoscalerNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Exclude autoscaler nodes from `workerNodes`. default: false
+Exclude autoscaler nodes from `workerNodes`. Default to `false`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L665">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L780">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6330,15 +6849,15 @@ Exclude autoscaler nodes from `workerNodes`. default: false
 Custom Image support. Must based on CentOS7 or AliyunLinux2.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-installCloudMonitor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L669">property <b>installCloudMonitor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L784">property <b>installCloudMonitor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>installCloudMonitor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Install cloud monitor agent on ECS. default: true
+Install cloud monitor agent on ECS. Default to `true`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-isEnterpriseSecurityGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L673">property <b>isEnterpriseSecurityGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L788">property <b>isEnterpriseSecurityGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnterpriseSecurityGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6346,7 +6865,7 @@ Install cloud monitor agent on ECS. default: true
 Enable to create advanced security group. default: false. See [Advanced security group](https://www.alibabacloud.com/help/doc-detail/120621.htm).
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-keyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L677">property <b>keyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L792">property <b>keyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6354,7 +6873,7 @@ Enable to create advanced security group. default: false. See [Advanced security
 The keypair of ssh login cluster node, you have to create it first. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L681">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L796">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6362,7 +6881,7 @@ The keypair of ssh login cluster node, you have to create it first. You have to 
 An KMS encrypts password used to a cs kubernetes. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-kmsEncryptionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L685">property <b>kmsEncryptionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L800">property <b>kmsEncryptionContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptionContext?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -6370,7 +6889,7 @@ An KMS encrypts password used to a cs kubernetes. You have to specify one of `pa
 An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating or updating a cs kubernetes with `kmsEncryptedPassword`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kmsEncryptedPassword` is set.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-kubeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L689">property <b>kubeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L804">property <b>kubeConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6378,7 +6897,7 @@ An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating
 The path of kube config, like `~/.kube/config`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L693">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L808">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6386,12 +6905,12 @@ The path of kube config, like `~/.kube/config`.
 The kubernetes cluster's name. It is unique in one Alicloud account.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L694">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L809">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-newNatGateway">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L698">property <b>newNatGateway</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L813">property <b>newNatGateway</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>newNatGateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6399,7 +6918,7 @@ The kubernetes cluster's name. It is unique in one Alicloud account.
 Whether to create a new nat gateway while creating kubernetes cluster. Default to true. Then openapi in Alibaba Cloud are not all on intranet, So turn this option on is a good choice.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-nodeCidrMask">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L702">property <b>nodeCidrMask</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L817">property <b>nodeCidrMask</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCidrMask?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6407,55 +6926,92 @@ Whether to create a new nat gateway while creating kubernetes cluster. Default t
 The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-nodeNameMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L706">property <b>nodeNameMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L821">property <b>nodeNameMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeNameMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.
+Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be `aliyun.com00055test`.
+
+<h4 class="pdoc-member-header" id="ManagedKubernetesArgs-nodePortRange">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L825">property <b>nodePortRange</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>nodePortRange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The service port range of nodes, valid values: `30000` to `65535`. Default to `30000-32767`.
+
+<h4 class="pdoc-member-header" id="ManagedKubernetesArgs-osType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L829">property <b>osType</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>osType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The operating system of the nodes that run pods, its valid value is either `Linux` or `Windows`. Default to `Linux`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L710">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L833">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The password of ssh login cluster node. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
+<h4 class="pdoc-member-header" id="ManagedKubernetesArgs-platform">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L837">property <b>platform</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>platform?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The architecture of the nodes that run pods, its valid value is either `CentOS` or `AliyunLinux`. Default to `CentOS`.
+
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-podCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L714">property <b>podCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L841">property <b>podCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>podCidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-[Flannel Specific] The CIDR block for the pod network when using Flannel.
+- [Flannel Specific] The CIDR block for the pod network when using Flannel.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-podVswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L718">property <b>podVswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L845">property <b>podVswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>podVswitchIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 
-[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `podVswitchIds` can not equal to `workerVswtichIds`.but must be in same availability zones.
+- [Terway Specific] The vswitches for the pod network when using Terway.Be careful the `podVswitchIds` can not equal to `workerVswtichIds` or `masterVswtichIds` but must be in same availability zones.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-proxyMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L722">property <b>proxyMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L849">property <b>proxyMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>proxyMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
 
+<h4 class="pdoc-member-header" id="ManagedKubernetesArgs-rdsInstances">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L850">property <b>rdsInstances</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>rdsInstances?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L726">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L854">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
 
+<h4 class="pdoc-member-header" id="ManagedKubernetesArgs-runtime">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L858">property <b>runtime</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>runtime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ManagedKubernetesRuntime'>ManagedKubernetesRuntime</a>&gt;;</code></pre>
+
+The runtime of containers. Default to `docker`. If you select another container runtime, see [How do I select between Docker and Sandboxed-Container](https://www.alibabacloud.com/help/doc-detail/160313.htm?spm=a2c63.p38356.b99.440.22563866AJkBgI). Detailed below.
+
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L730">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L862">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6463,15 +7019,15 @@ The ID of the resource group,by default these cloud resources are automatically 
 The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-serviceAccountIssuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L734">property <b>serviceAccountIssuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L866">property <b>serviceAccountIssuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountIssuer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `kubernetes.default.svc` to enable the Token Volume Projection feature.
+The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `"kubernetes.default.svc"` to enable the Token Volume Projection feature (requires specifying `apiAudiences` as well).
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-serviceCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L738">property <b>serviceCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L870">property <b>serviceCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceCidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6479,7 +7035,7 @@ The issuer of the Service Account token for [Service Account Token Volume Projec
 The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-slbInternetEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L742">property <b>slbInternetEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L874">property <b>slbInternetEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slbInternetEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6487,15 +7043,31 @@ The CIDR block for the service network. It cannot be duplicated with the VPC CID
 Whether to create internet load balancer for API Server. Default to true.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L746">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L878">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 
-Default nil, A map of tags assigned to the kubernetes cluster .
+Default nil, A map of tags assigned to the kubernetes cluster . Detailed below.
+
+<h4 class="pdoc-member-header" id="ManagedKubernetesArgs-taints">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L882">property <b>taints</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>taints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ManagedKubernetesTaint'>ManagedKubernetesTaint</a>&gt;[]&gt;;</code></pre>
+
+Taints ensure pods are not scheduled onto inappropriate nodes. One or more taints are applied to a node; this marks that the node should not accept any pods that do not tolerate the taints. For more information, see [Taints and Tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/). Detailed below.
+
+<h4 class="pdoc-member-header" id="ManagedKubernetesArgs-timezone">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L886">property <b>timezone</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>timezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+When you create a cluster, set the time zones for the Master and Woker nodes. You can only change the managed node time zone if you create a cluster. Once the cluster is created, you can only change the time zone of the Worker node.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-userCa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L750">property <b>userCa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L890">property <b>userCa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userCa?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6503,15 +7075,15 @@ Default nil, A map of tags assigned to the kubernetes cluster .
 The path of customized CA cert, you can use this CA to sign client certs to connect your cluster.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L754">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L894">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Windows instances support batch and PowerShell scripts. If your script file is larger than 1 KB, we recommend that you upload the script to Object Storage Service (OSS) and pull it through the internal endpoint of your OSS bucket.
+Custom data that can execute on nodes. For more information, see [Prepare user data](https://www.alibabacloud.com/help/doc-detail/49121.htm).
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L758">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L898">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6519,7 +7091,7 @@ Windows instances support batch and PowerShell scripts. If your script file is l
 Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-workerAutoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L762">property <b>workerAutoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L902">property <b>workerAutoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerAutoRenew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6527,47 +7099,48 @@ Desired Kubernetes version. If you do not specify a value, the latest available 
 Enable worker payment auto-renew, defaults to false.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-workerAutoRenewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L766">property <b>workerAutoRenewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L906">property <b>workerAutoRenewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerAutoRenewPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-Worker payment auto-renew period. When period unit is `Month`, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”}.
+Worker payment auto-renew period,, it can be one of {1, 2, 3, 6, 12}.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-workerDataDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L767">property <b>workerDataDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L907">property <b>workerDataDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDataDiskCategory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-workerDataDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L768">property <b>workerDataDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L908">property <b>workerDataDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDataDiskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-workerDataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L778">property <b>workerDataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L919">property <b>workerDataDisks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDataDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ManagedKubernetesWorkerDataDisk'>ManagedKubernetesWorkerDataDisk</a>&gt;[]&gt;;</code></pre>
 
 The data disk configurations of worker nodes, such as the disk type and disk size.
-- category: the type of the data disks. Valid values:
-+ cloud: basic disks.
-+ cloud_efficiency: ultra disks.
-+ cloud_ssd: SSDs.
-- size: the size of a data disk. Unit: GiB.
-- encrypted: specifies whether to encrypt data disks. Valid values: true and false.
+* `category`: the type of the data disks. Valid values:
+* cloud: basic disks.
+* cloud_efficiency: ultra disks.
+* cloud_ssd: SSDs.
+* cloud_essd: essd.
+* `size`: the size of a data disk. Unit: GiB.
+* `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-workerDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L782">property <b>workerDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L923">property <b>workerDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDiskCategory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The system disk category of worker node. Its valid value are `cloudSsd` and `cloudEfficiency`. Default to `cloudEfficiency`.
+The system disk category of worker node. Its valid value are `cloud`, `cloudSsd`, `cloudEssd` and `cloudEfficiency`. Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-workerDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L786">property <b>workerDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L927">property <b>workerDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDiskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6575,15 +7148,15 @@ The system disk category of worker node. Its valid value are `cloudSsd` and `clo
 The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-workerInstanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L790">property <b>workerInstanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L931">property <b>workerInstanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerInstanceChargeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Worker payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
+Worker payment type, its valid value is either or `PostPaid` or `PrePaid`. Defaults to `PostPaid`. If value is `PrePaid`, the files `workerPeriod`, `workerPeriodUnit`, `workerAutoRenew` and `workerAutoRenewPeriod` are required.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-workerInstanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L794">property <b>workerInstanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L935">property <b>workerInstanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerInstanceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -6591,7 +7164,7 @@ Worker payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
 The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-workerNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L798">property <b>workerNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L939">property <b>workerNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerNumber: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6599,28 +7172,28 @@ The instance type of worker node. Specify one type for single AZ Cluster, three 
 The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-workerPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L802">property <b>workerPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L943">property <b>workerPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-Worker payment period. When period unit is `Month`, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”, “4”}.
+Worker payment period. The unit is `Month`. Its valid value is one of {1, 2, 3, 6, 12, 24, 36, 48, 60}.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-workerPeriodUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L806">property <b>workerPeriodUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L947">property <b>workerPeriodUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerPeriodUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Worker payment period unit. `Month` or `Week`, defaults to `Month`.
+Worker payment period unit, the valid value is `Month`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesArgs-workerVswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L807">property <b>workerVswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L948">property <b>workerVswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerVswitchIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ManagedKubernetesState" data-link-title="ManagedKubernetesState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L402">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L469">
         interface <strong>ManagedKubernetesState</strong>
     </a>
 </h3>
@@ -6630,20 +7203,20 @@ Worker payment period unit. `Month` or `Week`, defaults to `Month`.
 Input properties used for looking up and filtering ManagedKubernetes resources.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-addons">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L403">property <b>addons</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L470">property <b>addons</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addons?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ManagedKubernetesAddon'>ManagedKubernetesAddon</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-apiAudiences">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L407">property <b>apiAudiences</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L474">property <b>apiAudiences</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiAudiences?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 
-A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature.
+A list of API audiences for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm). Set this to `["kubernetes.default.svc"]` if you want to enable the Token Volume Projection feature (requires specifying `serviceAccountIssuer` as well.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L411">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L478">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6651,7 +7224,7 @@ A list of API audiences for [Service Account Token Volume Projection](https://ww
 The Zone where new kubernetes cluster will be located. If it is not be specified, the `vswitchIds` should be set, its value will be vswitch's zone.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-clientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L415">property <b>clientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L482">property <b>clientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6659,7 +7232,7 @@ The Zone where new kubernetes cluster will be located. If it is not be specified
 The path of client certificate, like `~/.kube/client-cert.pem`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-clientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L419">property <b>clientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L486">property <b>clientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6667,25 +7240,28 @@ The path of client certificate, like `~/.kube/client-cert.pem`.
 The path of client key, like `~/.kube/client-key.pem`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-clusterCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L423">property <b>clusterCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L490">property <b>clusterCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The path of cluster ca certificate, like `~/.kube/cluster-ca-cert.pem`
 
+<h4 class="pdoc-member-header" id="ManagedKubernetesState-clusterDomain">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L494">property <b>clusterDomain</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>clusterDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Cluster local domain name, Default to `cluster.local`. A domain name consists of one or more sections separated by a decimal point (.), each of which is up to 63 characters long, and can be lowercase, numerals, and underscores (-), and must be lowercase or numerals at the beginning and end.
+
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-clusterSpec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L429">property <b>clusterSpec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L495">property <b>clusterSpec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterSpec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
-
-The cluster specifications of kubernetes cluster,which can be empty.Valid values:
-- ack.standard: Standard managed clusters.
-- ack.pro.small:  Professional managed clusters.
-
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-connections">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L433">property <b>connections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L499">property <b>connections</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connections?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ManagedKubernetesConnections'>ManagedKubernetesConnections</a>&gt;;</code></pre>
@@ -6693,31 +7269,55 @@ The cluster specifications of kubernetes cluster,which can be empty.Valid values
 Map of kubernetes cluster connection information. It contains several attributes to `Block Connections`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-cpuPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L437">property <b>cpuPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L503">property <b>cpuPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cpuPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-kubelet cpu policy. options: static|none. default: none.
+Kubelet cpu policy. For Kubernetes 1.12.6 and later, its valid value is either `static` or `none`. Default to `none`.
+
+<h4 class="pdoc-member-header" id="ManagedKubernetesState-customSan">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L507">property <b>customSan</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>customSan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Customize the certificate SAN, multiple IP or domain names are separated by English commas (,).
+
+<h4 class="pdoc-member-header" id="ManagedKubernetesState-deletionProtection">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L511">property <b>deletionProtection</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>deletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Whether to enable cluster deletion protection.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-enableSsh">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L441">property <b>enableSsh</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L515">property <b>enableSsh</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableSsh?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Enable login to the node through SSH. default: false
+Enable login to the node through SSH. Default to `false`.
+
+<h4 class="pdoc-member-header" id="ManagedKubernetesState-encryptionProviderKey">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L519">property <b>encryptionProviderKey</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>encryptionProviderKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The disk encryption key.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-excludeAutoscalerNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L445">property <b>excludeAutoscalerNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L523">property <b>excludeAutoscalerNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludeAutoscalerNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Exclude autoscaler nodes from `workerNodes`. default: false
+Exclude autoscaler nodes from `workerNodes`. Default to `false`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L449">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L527">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6725,15 +7325,15 @@ Exclude autoscaler nodes from `workerNodes`. default: false
 Custom Image support. Must based on CentOS7 or AliyunLinux2.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-installCloudMonitor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L453">property <b>installCloudMonitor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L531">property <b>installCloudMonitor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>installCloudMonitor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Install cloud monitor agent on ECS. default: true
+Install cloud monitor agent on ECS. Default to `true`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-isEnterpriseSecurityGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L457">property <b>isEnterpriseSecurityGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L535">property <b>isEnterpriseSecurityGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isEnterpriseSecurityGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6741,7 +7341,7 @@ Install cloud monitor agent on ECS. default: true
 Enable to create advanced security group. default: false. See [Advanced security group](https://www.alibabacloud.com/help/doc-detail/120621.htm).
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-keyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L461">property <b>keyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L539">property <b>keyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6749,7 +7349,7 @@ Enable to create advanced security group. default: false. See [Advanced security
 The keypair of ssh login cluster node, you have to create it first. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L465">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L543">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6757,7 +7357,7 @@ The keypair of ssh login cluster node, you have to create it first. You have to 
 An KMS encrypts password used to a cs kubernetes. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-kmsEncryptionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L469">property <b>kmsEncryptionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L547">property <b>kmsEncryptionContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptionContext?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -6765,7 +7365,7 @@ An KMS encrypts password used to a cs kubernetes. You have to specify one of `pa
 An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating or updating a cs kubernetes with `kmsEncryptedPassword`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kmsEncryptedPassword` is set.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-kubeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L473">property <b>kubeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L551">property <b>kubeConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6773,7 +7373,7 @@ An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating
 The path of kube config, like `~/.kube/config`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L477">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L555">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6781,12 +7381,12 @@ The path of kube config, like `~/.kube/config`.
 The kubernetes cluster's name. It is unique in one Alicloud account.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L478">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L556">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-natGatewayId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L482">property <b>natGatewayId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L560">property <b>natGatewayId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>natGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6794,7 +7394,7 @@ The kubernetes cluster's name. It is unique in one Alicloud account.
 The ID of nat gateway used to launch kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-newNatGateway">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L486">property <b>newNatGateway</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L564">property <b>newNatGateway</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>newNatGateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6802,7 +7402,7 @@ The ID of nat gateway used to launch kubernetes cluster.
 Whether to create a new nat gateway while creating kubernetes cluster. Default to true. Then openapi in Alibaba Cloud are not all on intranet, So turn this option on is a good choice.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-nodeCidrMask">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L490">property <b>nodeCidrMask</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L568">property <b>nodeCidrMask</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCidrMask?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -6810,55 +7410,92 @@ Whether to create a new nat gateway while creating kubernetes cluster. Default t
 The node cidr block to specific how many pods can run on single node. 24-28 is allowed. 24 means 2^(32-24)-1=255 and the node can run at most 255 pods. default: 24
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-nodeNameMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L494">property <b>nodeNameMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L572">property <b>nodeNameMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeNameMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.
+Each node name consists of a prefix, an IP substring, and a suffix. For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be `aliyun.com00055test`.
+
+<h4 class="pdoc-member-header" id="ManagedKubernetesState-nodePortRange">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L576">property <b>nodePortRange</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>nodePortRange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The service port range of nodes, valid values: `30000` to `65535`. Default to `30000-32767`.
+
+<h4 class="pdoc-member-header" id="ManagedKubernetesState-osType">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L580">property <b>osType</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>osType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The operating system of the nodes that run pods, its valid value is either `Linux` or `Windows`. Default to `Linux`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L498">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L584">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The password of ssh login cluster node. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
+<h4 class="pdoc-member-header" id="ManagedKubernetesState-platform">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L588">property <b>platform</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>platform?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The architecture of the nodes that run pods, its valid value is either `CentOS` or `AliyunLinux`. Default to `CentOS`.
+
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-podCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L502">property <b>podCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L592">property <b>podCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>podCidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-[Flannel Specific] The CIDR block for the pod network when using Flannel.
+- [Flannel Specific] The CIDR block for the pod network when using Flannel.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-podVswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L506">property <b>podVswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L596">property <b>podVswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>podVswitchIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 
-[Terway Specific] The vswitches for the pod network when using Terway.Be careful the `podVswitchIds` can not equal to `workerVswtichIds`.but must be in same availability zones.
+- [Terway Specific] The vswitches for the pod network when using Terway.Be careful the `podVswitchIds` can not equal to `workerVswtichIds` or `masterVswtichIds` but must be in same availability zones.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-proxyMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L510">property <b>proxyMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L600">property <b>proxyMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>proxyMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 Proxy mode is option of kube-proxy. options: iptables|ipvs. default: ipvs.
 
+<h4 class="pdoc-member-header" id="ManagedKubernetesState-rdsInstances">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L601">property <b>rdsInstances</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>rdsInstances?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L514">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L605">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
 
+<h4 class="pdoc-member-header" id="ManagedKubernetesState-runtime">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L609">property <b>runtime</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>runtime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ManagedKubernetesRuntime'>ManagedKubernetesRuntime</a>&gt;;</code></pre>
+
+The runtime of containers. Default to `docker`. If you select another container runtime, see [How do I select between Docker and Sandboxed-Container](https://www.alibabacloud.com/help/doc-detail/160313.htm?spm=a2c63.p38356.b99.440.22563866AJkBgI). Detailed below.
+
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L518">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L613">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6866,15 +7503,15 @@ The ID of the resource group,by default these cloud resources are automatically 
 The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-serviceAccountIssuer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L522">property <b>serviceAccountIssuer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L617">property <b>serviceAccountIssuer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountIssuer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `kubernetes.default.svc` to enable the Token Volume Projection feature.
+The issuer of the Service Account token for [Service Account Token Volume Projection](https://www.alibabacloud.com/help/doc-detail/160384.htm), corresponds to the `iss` field in the token payload. Set this to `"kubernetes.default.svc"` to enable the Token Volume Projection feature (requires specifying `apiAudiences` as well).
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-serviceCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L526">property <b>serviceCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L621">property <b>serviceCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceCidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6882,7 +7519,7 @@ The issuer of the Service Account token for [Service Account Token Volume Projec
 The CIDR block for the service network. It cannot be duplicated with the VPC CIDR and CIDR used by Kubernetes cluster in VPC, cannot be modified after creation.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-slbId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L530">property <b>slbId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L625">property <b>slbId</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -6891,12 +7528,12 @@ Field &#39;slb_id&#39; has been deprecated from provider version 1.9.2. New fiel
 </div>
 <pre class="highlight"><code><span class='kd'></span>slbId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-slbInternet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L531">property <b>slbInternet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L626">property <b>slbInternet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slbInternet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-slbInternetEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L535">property <b>slbInternetEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L630">property <b>slbInternetEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slbInternetEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6904,7 +7541,7 @@ Field &#39;slb_id&#39; has been deprecated from provider version 1.9.2. New fiel
 Whether to create internet load balancer for API Server. Default to true.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-slbIntranet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L539">property <b>slbIntranet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L634">property <b>slbIntranet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slbIntranet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6912,15 +7549,31 @@ Whether to create internet load balancer for API Server. Default to true.
 The ID of private load balancer where the current cluster master node is located.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L543">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L638">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 
-Default nil, A map of tags assigned to the kubernetes cluster .
+Default nil, A map of tags assigned to the kubernetes cluster . Detailed below.
+
+<h4 class="pdoc-member-header" id="ManagedKubernetesState-taints">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L642">property <b>taints</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>taints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ManagedKubernetesTaint'>ManagedKubernetesTaint</a>&gt;[]&gt;;</code></pre>
+
+Taints ensure pods are not scheduled onto inappropriate nodes. One or more taints are applied to a node; this marks that the node should not accept any pods that do not tolerate the taints. For more information, see [Taints and Tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/). Detailed below.
+
+<h4 class="pdoc-member-header" id="ManagedKubernetesState-timezone">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L646">property <b>timezone</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>timezone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+When you create a cluster, set the time zones for the Master and Woker nodes. You can only change the managed node time zone if you create a cluster. Once the cluster is created, you can only change the time zone of the Worker node.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-userCa">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L547">property <b>userCa</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L650">property <b>userCa</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userCa?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6928,15 +7581,15 @@ Default nil, A map of tags assigned to the kubernetes cluster .
 The path of customized CA cert, you can use this CA to sign client certs to connect your cluster.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L551">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L654">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Windows instances support batch and PowerShell scripts. If your script file is larger than 1 KB, we recommend that you upload the script to Object Storage Service (OSS) and pull it through the internal endpoint of your OSS bucket.
+Custom data that can execute on nodes. For more information, see [Prepare user data](https://www.alibabacloud.com/help/doc-detail/49121.htm).
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L555">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L658">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6944,7 +7597,7 @@ Windows instances support batch and PowerShell scripts. If your script file is l
 Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except you set a higher version number. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by ACK.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L559">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L662">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -6952,7 +7605,7 @@ Desired Kubernetes version. If you do not specify a value, the latest available 
 The ID of VPC where the current cluster is located.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-workerAutoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L563">property <b>workerAutoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L666">property <b>workerAutoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerAutoRenew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -6960,47 +7613,48 @@ The ID of VPC where the current cluster is located.
 Enable worker payment auto-renew, defaults to false.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-workerAutoRenewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L567">property <b>workerAutoRenewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L670">property <b>workerAutoRenewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerAutoRenewPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-Worker payment auto-renew period. When period unit is `Month`, it can be one of {“1”, “2”, “3”, “6”, “12”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”}.
+Worker payment auto-renew period,, it can be one of {1, 2, 3, 6, 12}.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-workerDataDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L568">property <b>workerDataDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L671">property <b>workerDataDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDataDiskCategory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-workerDataDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L569">property <b>workerDataDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L672">property <b>workerDataDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDataDiskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-workerDataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L579">property <b>workerDataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L683">property <b>workerDataDisks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDataDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ManagedKubernetesWorkerDataDisk'>ManagedKubernetesWorkerDataDisk</a>&gt;[]&gt;;</code></pre>
 
 The data disk configurations of worker nodes, such as the disk type and disk size.
-- category: the type of the data disks. Valid values:
-+ cloud: basic disks.
-+ cloud_efficiency: ultra disks.
-+ cloud_ssd: SSDs.
-- size: the size of a data disk. Unit: GiB.
-- encrypted: specifies whether to encrypt data disks. Valid values: true and false.
+* `category`: the type of the data disks. Valid values:
+* cloud: basic disks.
+* cloud_efficiency: ultra disks.
+* cloud_ssd: SSDs.
+* cloud_essd: essd.
+* `size`: the size of a data disk. Unit: GiB.
+* `encrypted`: specifies whether to encrypt data disks. Valid values: true and false.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-workerDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L583">property <b>workerDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L687">property <b>workerDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDiskCategory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The system disk category of worker node. Its valid value are `cloudSsd` and `cloudEfficiency`. Default to `cloudEfficiency`.
+The system disk category of worker node. Its valid value are `cloud`, `cloudSsd`, `cloudEssd` and `cloudEfficiency`. Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-workerDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L587">property <b>workerDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L691">property <b>workerDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerDiskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7008,15 +7662,15 @@ The system disk category of worker node. Its valid value are `cloudSsd` and `clo
 The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-workerInstanceChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L591">property <b>workerInstanceChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L695">property <b>workerInstanceChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerInstanceChargeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Worker payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
+Worker payment type, its valid value is either or `PostPaid` or `PrePaid`. Defaults to `PostPaid`. If value is `PrePaid`, the files `workerPeriod`, `workerPeriodUnit`, `workerAutoRenew` and `workerAutoRenewPeriod` are required.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-workerInstanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L595">property <b>workerInstanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L699">property <b>workerInstanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerInstanceTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7024,7 +7678,7 @@ Worker payment type. `PrePaid` or `PostPaid`, defaults to `PostPaid`.
 The instance type of worker node. Specify one type for single AZ Cluster, three types for MultiAZ Cluster.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-workerNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L599">property <b>workerNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L703">property <b>workerNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ManagedKubernetesWorkerNode'>ManagedKubernetesWorkerNode</a>&gt;[]&gt;;</code></pre>
@@ -7032,7 +7686,7 @@ The instance type of worker node. Specify one type for single AZ Cluster, three 
 List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-workerNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L603">property <b>workerNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L707">property <b>workerNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerNumber?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7040,23 +7694,23 @@ List of cluster worker nodes. It contains several attributes to `Block Nodes`.
 The worker node number of the kubernetes cluster. Default to 3. It is limited up to 50 and if you want to enlarge it, please apply white list or contact with us.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-workerPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L607">property <b>workerPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L711">property <b>workerPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-Worker payment period. When period unit is `Month`, it can be one of { “1”, “2”, “3”, “4”, “5”, “6”, “7”, “8”, “9”, “12”, “24”, “36”,”48”,”60”}.  When period unit is `Week`, it can be one of {“1”, “2”, “3”, “4”}.
+Worker payment period. The unit is `Month`. Its valid value is one of {1, 2, 3, 6, 12, 24, 36, 48, 60}.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-workerPeriodUnit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L611">property <b>workerPeriodUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L715">property <b>workerPeriodUnit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerPeriodUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Worker payment period unit. `Month` or `Week`, defaults to `Month`.
+Worker payment period unit, the valid value is `Month`.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-workerRamRoleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L615">property <b>workerRamRoleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L719">property <b>workerRamRoleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerRamRoleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7064,12 +7718,12 @@ Worker payment period unit. `Month` or `Week`, defaults to `Month`.
 The RamRole Name attached to worker node.
 
 <h4 class="pdoc-member-header" id="ManagedKubernetesState-workerVswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/managedKubernetes.ts#L616">property <b>workerVswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/managedKubernetes.ts#L720">property <b>workerVswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workerVswitchIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="NodePoolArgs" data-link-title="NodePoolArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L295">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L294">
         interface <strong>NodePoolArgs</strong>
     </a>
 </h3>
@@ -7079,7 +7733,7 @@ The RamRole Name attached to worker node.
 The set of arguments for constructing a NodePool resource.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L299">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L298">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7087,12 +7741,12 @@ The set of arguments for constructing a NodePool resource.
 The id of kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-dataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L300">property <b>dataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L299">property <b>dataDisks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#NodePoolDataDisk'>NodePoolDataDisk</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NodePoolArgs-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L304">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L303">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7100,7 +7754,7 @@ The id of kubernetes cluster.
 Custom Image support. Must based on CentOS7 or AliyunLinux2.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-instanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L308">property <b>instanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L307">property <b>instanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7108,7 +7762,7 @@ Custom Image support. Must based on CentOS7 or AliyunLinux2.
 The instance type of worker node.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-keyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L312">property <b>keyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L311">property <b>keyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7116,7 +7770,7 @@ The instance type of worker node.
 The keypair of ssh login cluster node, you have to create it first. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L316">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L315">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7124,7 +7778,7 @@ The keypair of ssh login cluster node, you have to create it first. You have to 
 An KMS encrypts password used to a cs kubernetes. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L320">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L319">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#NodePoolLabel'>NodePoolLabel</a>&gt;[]&gt;;</code></pre>
@@ -7132,7 +7786,7 @@ An KMS encrypts password used to a cs kubernetes. You have to specify one of `pa
 A List of Kubernetes labels to assign to the nodes . Only labels that are applied with the ACK API are managed by this argument.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L324">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L323">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7140,7 +7794,7 @@ A List of Kubernetes labels to assign to the nodes . Only labels that are applie
 The name of node pool.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L328">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L327">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7148,7 +7802,7 @@ The name of node pool.
 The worker node number of the node pool.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-nodeNameMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L332">property <b>nodeNameMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L331">property <b>nodeNameMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeNameMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7156,7 +7810,7 @@ The worker node number of the node pool.
 Each node name consists of a prefix, an IP substring, and a suffix. For example "customized,aliyun.com,5,test", if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L336">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L335">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7164,7 +7818,7 @@ Each node name consists of a prefix, an IP substring, and a suffix. For example 
 The password of ssh login cluster node. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L340">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L339">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7172,7 +7826,7 @@ The password of ssh login cluster node. You have to specify one of `password` `k
 The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-systemDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L344">property <b>systemDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L343">property <b>systemDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>systemDiskCategory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7180,7 +7834,7 @@ The system disk size of worker node. Its valid value range [20~32768] in GB. Def
 The system disk category of worker node. Its valid value are `cloudSsd` and `cloudEfficiency`. Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-systemDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L348">property <b>systemDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L347">property <b>systemDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>systemDiskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7188,7 +7842,7 @@ The system disk category of worker node. Its valid value are `cloudSsd` and `clo
 The system disk category of worker node. Its valid value are `cloudSsd` and `cloudEfficiency`. Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L354">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L353">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -7198,7 +7852,7 @@ A List of tags to assign to the resource. It will be applied for ECS instances f
 - value: It can be up to 128 characters in length. It cannot begin with "aliyun", "http://", or "https://" It can be a null string.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-taints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L358">property <b>taints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L357">property <b>taints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#NodePoolTaint'>NodePoolTaint</a>&gt;[]&gt;;</code></pre>
@@ -7206,7 +7860,7 @@ A List of tags to assign to the resource. It will be applied for ECS instances f
 A List of Kubernetes taints to assign to the nodes.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L362">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L361">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7214,7 +7868,7 @@ A List of Kubernetes taints to assign to the nodes.
 Windows instances support batch and PowerShell scripts. If your script file is larger than 1 KB, we recommend that you upload the script to Object Storage Service (OSS) and pull it through the internal endpoint of your OSS bucket.
 
 <h4 class="pdoc-member-header" id="NodePoolArgs-vswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L366">property <b>vswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L365">property <b>vswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7222,7 +7876,7 @@ Windows instances support batch and PowerShell scripts. If your script file is l
 The vswitches used by node pool workers.
 
 <h3 class="pdoc-module-header" id="NodePoolState" data-link-title="NodePoolState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L214">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L213">
         interface <strong>NodePoolState</strong>
     </a>
 </h3>
@@ -7232,7 +7886,7 @@ The vswitches used by node pool workers.
 Input properties used for looking up and filtering NodePool resources.
 
 <h4 class="pdoc-member-header" id="NodePoolState-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L218">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L217">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7240,12 +7894,12 @@ Input properties used for looking up and filtering NodePool resources.
 The id of kubernetes cluster.
 
 <h4 class="pdoc-member-header" id="NodePoolState-dataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L219">property <b>dataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L218">property <b>dataDisks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#NodePoolDataDisk'>NodePoolDataDisk</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NodePoolState-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L223">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L222">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7253,7 +7907,7 @@ The id of kubernetes cluster.
 Custom Image support. Must based on CentOS7 or AliyunLinux2.
 
 <h4 class="pdoc-member-header" id="NodePoolState-instanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L227">property <b>instanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L226">property <b>instanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7261,7 +7915,7 @@ Custom Image support. Must based on CentOS7 or AliyunLinux2.
 The instance type of worker node.
 
 <h4 class="pdoc-member-header" id="NodePoolState-keyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L231">property <b>keyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L230">property <b>keyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7269,7 +7923,7 @@ The instance type of worker node.
 The keypair of ssh login cluster node, you have to create it first. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="NodePoolState-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L235">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L234">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7277,7 +7931,7 @@ The keypair of ssh login cluster node, you have to create it first. You have to 
 An KMS encrypts password used to a cs kubernetes. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="NodePoolState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L239">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L238">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#NodePoolLabel'>NodePoolLabel</a>&gt;[]&gt;;</code></pre>
@@ -7285,7 +7939,7 @@ An KMS encrypts password used to a cs kubernetes. You have to specify one of `pa
 A List of Kubernetes labels to assign to the nodes . Only labels that are applied with the ACK API are managed by this argument.
 
 <h4 class="pdoc-member-header" id="NodePoolState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L243">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L242">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7293,7 +7947,7 @@ A List of Kubernetes labels to assign to the nodes . Only labels that are applie
 The name of node pool.
 
 <h4 class="pdoc-member-header" id="NodePoolState-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L247">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L246">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7301,7 +7955,7 @@ The name of node pool.
 The worker node number of the node pool.
 
 <h4 class="pdoc-member-header" id="NodePoolState-nodeNameMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L251">property <b>nodeNameMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L250">property <b>nodeNameMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeNameMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7309,7 +7963,7 @@ The worker node number of the node pool.
 Each node name consists of a prefix, an IP substring, and a suffix. For example "customized,aliyun.com,5,test", if the node IP address is 192.168.0.55, the prefix is aliyun.com, IP substring length is 5, and the suffix is test, the node name will be aliyun.com00055test.
 
 <h4 class="pdoc-member-header" id="NodePoolState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L255">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L254">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7317,7 +7971,7 @@ Each node name consists of a prefix, an IP substring, and a suffix. For example 
 The password of ssh login cluster node. You have to specify one of `password` `keyName` `kmsEncryptedPassword` fields.
 
 <h4 class="pdoc-member-header" id="NodePoolState-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L259">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L258">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7325,7 +7979,7 @@ The password of ssh login cluster node. You have to specify one of `password` `k
 The system disk size of worker node. Its valid value range [20~32768] in GB. Default to 40.
 
 <h4 class="pdoc-member-header" id="NodePoolState-systemDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L263">property <b>systemDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L262">property <b>systemDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>systemDiskCategory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7333,7 +7987,7 @@ The system disk size of worker node. Its valid value range [20~32768] in GB. Def
 The system disk category of worker node. Its valid value are `cloudSsd` and `cloudEfficiency`. Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="NodePoolState-systemDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L267">property <b>systemDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L266">property <b>systemDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>systemDiskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -7341,7 +7995,7 @@ The system disk category of worker node. Its valid value are `cloudSsd` and `clo
 The system disk category of worker node. Its valid value are `cloudSsd` and `cloudEfficiency`. Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="NodePoolState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L273">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L272">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -7351,7 +8005,7 @@ A List of tags to assign to the resource. It will be applied for ECS instances f
 - value: It can be up to 128 characters in length. It cannot begin with "aliyun", "http://", or "https://" It can be a null string.
 
 <h4 class="pdoc-member-header" id="NodePoolState-taints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L277">property <b>taints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L276">property <b>taints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#NodePoolTaint'>NodePoolTaint</a>&gt;[]&gt;;</code></pre>
@@ -7359,7 +8013,7 @@ A List of tags to assign to the resource. It will be applied for ECS instances f
 A List of Kubernetes taints to assign to the nodes.
 
 <h4 class="pdoc-member-header" id="NodePoolState-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L281">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L280">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7367,7 +8021,7 @@ A List of Kubernetes taints to assign to the nodes.
 Windows instances support batch and PowerShell scripts. If your script file is larger than 1 KB, we recommend that you upload the script to Object Storage Service (OSS) and pull it through the internal endpoint of your OSS bucket.
 
 <h4 class="pdoc-member-header" id="NodePoolState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L285">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L284">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7375,7 +8029,7 @@ Windows instances support batch and PowerShell scripts. If your script file is l
 The ID of VPC where the current cluster is located.
 
 <h4 class="pdoc-member-header" id="NodePoolState-vswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/nodePool.ts#L289">property <b>vswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/nodePool.ts#L288">property <b>vswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7383,7 +8037,7 @@ The ID of VPC where the current cluster is located.
 The vswitches used by node pool workers.
 
 <h3 class="pdoc-module-header" id="RegistryEnterpriseNamespaceArgs" data-link-title="RegistryEnterpriseNamespaceArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L152">
         interface <strong>RegistryEnterpriseNamespaceArgs</strong>
     </a>
 </h3>
@@ -7393,7 +8047,7 @@ The vswitches used by node pool workers.
 The set of arguments for constructing a RegistryEnterpriseNamespace resource.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseNamespaceArgs-autoCreate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L148">property <b>autoCreate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L156">property <b>autoCreate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoCreate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7401,7 +8055,7 @@ The set of arguments for constructing a RegistryEnterpriseNamespace resource.
 Boolean, when it set to true, repositories are automatically created when pushing new images. If it set to false, you create repository for images before pushing.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseNamespaceArgs-defaultVisibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L152">property <b>defaultVisibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L160">property <b>defaultVisibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultVisibility: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7409,7 +8063,7 @@ Boolean, when it set to true, repositories are automatically created when pushin
 `PUBLIC` or `PRIVATE`, default repository visibility in this namespace.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseNamespaceArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L156">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L164">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7417,7 +8071,7 @@ Boolean, when it set to true, repositories are automatically created when pushin
 ID of Container Registry Enterprise Edition instance.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseNamespaceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L160">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L168">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7425,7 +8079,7 @@ ID of Container Registry Enterprise Edition instance.
 Name of Container Registry Enterprise Edition namespace. It can contain 2 to 30 characters.
 
 <h3 class="pdoc-module-header" id="RegistryEnterpriseNamespaceState" data-link-title="RegistryEnterpriseNamespaceState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L130">
         interface <strong>RegistryEnterpriseNamespaceState</strong>
     </a>
 </h3>
@@ -7435,7 +8089,7 @@ Name of Container Registry Enterprise Edition namespace. It can contain 2 to 30 
 Input properties used for looking up and filtering RegistryEnterpriseNamespace resources.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseNamespaceState-autoCreate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L126">property <b>autoCreate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L134">property <b>autoCreate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoCreate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7443,7 +8097,7 @@ Input properties used for looking up and filtering RegistryEnterpriseNamespace r
 Boolean, when it set to true, repositories are automatically created when pushing new images. If it set to false, you create repository for images before pushing.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseNamespaceState-defaultVisibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L130">property <b>defaultVisibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L138">property <b>defaultVisibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultVisibility?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7451,7 +8105,7 @@ Boolean, when it set to true, repositories are automatically created when pushin
 `PUBLIC` or `PRIVATE`, default repository visibility in this namespace.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseNamespaceState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L134">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L142">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7459,7 +8113,7 @@ Boolean, when it set to true, repositories are automatically created when pushin
 ID of Container Registry Enterprise Edition instance.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseNamespaceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseNamespace.ts#L146">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7467,7 +8121,7 @@ ID of Container Registry Enterprise Edition instance.
 Name of Container Registry Enterprise Edition namespace. It can contain 2 to 30 characters.
 
 <h3 class="pdoc-module-header" id="RegistryEnterpriseRepoArgs" data-link-title="RegistryEnterpriseRepoArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L184">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L192">
         interface <strong>RegistryEnterpriseRepoArgs</strong>
     </a>
 </h3>
@@ -7477,7 +8131,7 @@ Name of Container Registry Enterprise Edition namespace. It can contain 2 to 30 
 The set of arguments for constructing a RegistryEnterpriseRepo resource.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepoArgs-detail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L188">property <b>detail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L196">property <b>detail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7485,7 +8139,7 @@ The set of arguments for constructing a RegistryEnterpriseRepo resource.
 The repository specific information. MarkDown format is supported, and the length limit is 2000.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepoArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L192">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L200">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7493,7 +8147,7 @@ The repository specific information. MarkDown format is supported, and the lengt
 ID of Container Registry Enterprise Edition instance.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepoArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L196">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L204">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7501,7 +8155,7 @@ ID of Container Registry Enterprise Edition instance.
 Name of Container Registry Enterprise Edition repository. It can contain 2 to 64 characters.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepoArgs-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L200">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L208">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7509,7 +8163,7 @@ Name of Container Registry Enterprise Edition repository. It can contain 2 to 64
 Name of Container Registry Enterprise Edition namespace where repository is located. It can contain 2 to 30 characters.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepoArgs-repoType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L204">property <b>repoType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L212">property <b>repoType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repoType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7517,7 +8171,7 @@ Name of Container Registry Enterprise Edition namespace where repository is loca
 `PUBLIC` or `PRIVATE`, repo's visibility.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepoArgs-summary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L208">property <b>summary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L216">property <b>summary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>summary: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7525,7 +8179,7 @@ Name of Container Registry Enterprise Edition namespace where repository is loca
 The repository general information. It can contain 1 to 100 characters.
 
 <h3 class="pdoc-module-header" id="RegistryEnterpriseRepoState" data-link-title="RegistryEnterpriseRepoState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L150">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L158">
         interface <strong>RegistryEnterpriseRepoState</strong>
     </a>
 </h3>
@@ -7535,7 +8189,7 @@ The repository general information. It can contain 1 to 100 characters.
 Input properties used for looking up and filtering RegistryEnterpriseRepo resources.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepoState-detail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L154">property <b>detail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L162">property <b>detail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>detail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7543,7 +8197,7 @@ Input properties used for looking up and filtering RegistryEnterpriseRepo resour
 The repository specific information. MarkDown format is supported, and the length limit is 2000.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepoState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L158">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L166">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7551,7 +8205,7 @@ The repository specific information. MarkDown format is supported, and the lengt
 ID of Container Registry Enterprise Edition instance.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepoState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L162">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L170">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7559,7 +8213,7 @@ ID of Container Registry Enterprise Edition instance.
 Name of Container Registry Enterprise Edition repository. It can contain 2 to 64 characters.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepoState-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L166">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L174">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7567,7 +8221,7 @@ Name of Container Registry Enterprise Edition repository. It can contain 2 to 64
 Name of Container Registry Enterprise Edition namespace where repository is located. It can contain 2 to 30 characters.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepoState-repoId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L170">property <b>repoId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L178">property <b>repoId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repoId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7575,7 +8229,7 @@ Name of Container Registry Enterprise Edition namespace where repository is loca
 The uuid of Container Registry Enterprise Edition repository.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepoState-repoType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L174">property <b>repoType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L182">property <b>repoType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repoType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7583,7 +8237,7 @@ The uuid of Container Registry Enterprise Edition repository.
 `PUBLIC` or `PRIVATE`, repo's visibility.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseRepoState-summary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseRepo.ts#L178">property <b>summary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseRepo.ts#L186">property <b>summary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>summary?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7591,7 +8245,7 @@ The uuid of Container Registry Enterprise Edition repository.
 The repository general information. It can contain 1 to 100 characters.
 
 <h3 class="pdoc-module-header" id="RegistryEnterpriseSyncRuleArgs" data-link-title="RegistryEnterpriseSyncRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L238">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L246">
         interface <strong>RegistryEnterpriseSyncRuleArgs</strong>
     </a>
 </h3>
@@ -7601,7 +8255,7 @@ The repository general information. It can contain 1 to 100 characters.
 The set of arguments for constructing a RegistryEnterpriseSyncRule resource.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRuleArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L242">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L250">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7609,7 +8263,7 @@ The set of arguments for constructing a RegistryEnterpriseSyncRule resource.
 ID of Container Registry Enterprise Edition source instance.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRuleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L246">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L254">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7617,7 +8271,7 @@ ID of Container Registry Enterprise Edition source instance.
 Name of Container Registry Enterprise Edition sync rule.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRuleArgs-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L250">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L258">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7625,7 +8279,7 @@ Name of Container Registry Enterprise Edition sync rule.
 Name of Container Registry Enterprise Edition source namespace. It can contain 2 to 30 characters.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRuleArgs-repoName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L254">property <b>repoName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L262">property <b>repoName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repoName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7633,7 +8287,7 @@ Name of Container Registry Enterprise Edition source namespace. It can contain 2
 Name of the source repository which should be set together with `targetRepoName`, if empty means that the synchronization scope is the entire namespace level.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRuleArgs-tagFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L258">property <b>tagFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L266">property <b>tagFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tagFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7641,7 +8295,7 @@ Name of the source repository which should be set together with `targetRepoName`
 The regular expression used to filter image tags for synchronization in the source repository.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRuleArgs-targetInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L262">property <b>targetInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L270">property <b>targetInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetInstanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7649,7 +8303,7 @@ The regular expression used to filter image tags for synchronization in the sour
 ID of Container Registry Enterprise Edition target instance to be synchronized.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRuleArgs-targetNamespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L266">property <b>targetNamespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L274">property <b>targetNamespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetNamespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7657,7 +8311,7 @@ ID of Container Registry Enterprise Edition target instance to be synchronized.
 Name of Container Registry Enterprise Edition target namespace to be synchronized. It can contain 2 to 30 characters.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRuleArgs-targetRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L270">property <b>targetRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L278">property <b>targetRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetRegionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7665,7 +8319,7 @@ Name of Container Registry Enterprise Edition target namespace to be synchronize
 The target region to be synchronized.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRuleArgs-targetRepoName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L274">property <b>targetRepoName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L282">property <b>targetRepoName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetRepoName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7673,7 +8327,7 @@ The target region to be synchronized.
 Name of the target repository.
 
 <h3 class="pdoc-module-header" id="RegistryEnterpriseSyncRuleState" data-link-title="RegistryEnterpriseSyncRuleState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L184">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L192">
         interface <strong>RegistryEnterpriseSyncRuleState</strong>
     </a>
 </h3>
@@ -7683,7 +8337,7 @@ Name of the target repository.
 Input properties used for looking up and filtering RegistryEnterpriseSyncRule resources.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRuleState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L188">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L196">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7691,7 +8345,7 @@ Input properties used for looking up and filtering RegistryEnterpriseSyncRule re
 ID of Container Registry Enterprise Edition source instance.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRuleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L192">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L200">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7699,7 +8353,7 @@ ID of Container Registry Enterprise Edition source instance.
 Name of Container Registry Enterprise Edition sync rule.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRuleState-namespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L196">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L204">property <b>namespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7707,7 +8361,7 @@ Name of Container Registry Enterprise Edition sync rule.
 Name of Container Registry Enterprise Edition source namespace. It can contain 2 to 30 characters.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRuleState-repoName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L200">property <b>repoName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L208">property <b>repoName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>repoName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7715,7 +8369,7 @@ Name of Container Registry Enterprise Edition source namespace. It can contain 2
 Name of the source repository which should be set together with `targetRepoName`, if empty means that the synchronization scope is the entire namespace level.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRuleState-ruleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L204">property <b>ruleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L212">property <b>ruleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7723,7 +8377,7 @@ Name of the source repository which should be set together with `targetRepoName`
 The uuid of Container Registry Enterprise Edition sync rule.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRuleState-syncDirection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L208">property <b>syncDirection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L216">property <b>syncDirection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>syncDirection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7731,7 +8385,7 @@ The uuid of Container Registry Enterprise Edition sync rule.
 `FROM` or `TO`, the direction of synchronization. `FROM` means source instance, `TO` means target instance.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRuleState-syncScope">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L212">property <b>syncScope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L220">property <b>syncScope</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>syncScope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7739,7 +8393,7 @@ The uuid of Container Registry Enterprise Edition sync rule.
 `REPO` or `NAMESPACE`,the scope that the synchronization rule applies.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRuleState-tagFilter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L216">property <b>tagFilter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L224">property <b>tagFilter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tagFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7747,7 +8401,7 @@ The uuid of Container Registry Enterprise Edition sync rule.
 The regular expression used to filter image tags for synchronization in the source repository.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRuleState-targetInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L220">property <b>targetInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L228">property <b>targetInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetInstanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7755,7 +8409,7 @@ The regular expression used to filter image tags for synchronization in the sour
 ID of Container Registry Enterprise Edition target instance to be synchronized.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRuleState-targetNamespaceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L224">property <b>targetNamespaceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L232">property <b>targetNamespaceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetNamespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7763,7 +8417,7 @@ ID of Container Registry Enterprise Edition target instance to be synchronized.
 Name of Container Registry Enterprise Edition target namespace to be synchronized. It can contain 2 to 30 characters.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRuleState-targetRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L228">property <b>targetRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L236">property <b>targetRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetRegionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7771,7 +8425,7 @@ Name of Container Registry Enterprise Edition target namespace to be synchronize
 The target region to be synchronized.
 
 <h4 class="pdoc-member-header" id="RegistryEnterpriseSyncRuleState-targetRepoName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L232">property <b>targetRepoName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/registryEnterpriseSyncRule.ts#L240">property <b>targetRepoName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetRepoName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7779,7 +8433,7 @@ The target region to be synchronized.
 Name of the target repository.
 
 <h3 class="pdoc-module-header" id="ServerlessKubernetesArgs" data-link-title="ServerlessKubernetesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L262">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L270">
         interface <strong>ServerlessKubernetesArgs</strong>
     </a>
 </h3>
@@ -7789,12 +8443,12 @@ Name of the target repository.
 The set of arguments for constructing a ServerlessKubernetes resource.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesArgs-addons">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L263">property <b>addons</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L271">property <b>addons</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addons?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ServerlessKubernetesAddon'>ServerlessKubernetesAddon</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServerlessKubernetesArgs-clientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L267">property <b>clientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L275">property <b>clientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7802,7 +8456,7 @@ The set of arguments for constructing a ServerlessKubernetes resource.
 The path of client certificate, like `~/.kube/client-cert.pem`.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesArgs-clientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L271">property <b>clientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L279">property <b>clientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7810,7 +8464,7 @@ The path of client certificate, like `~/.kube/client-cert.pem`.
 The path of client key, like `~/.kube/client-key.pem`.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesArgs-clusterCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L275">property <b>clusterCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L283">property <b>clusterCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7818,7 +8472,7 @@ The path of client key, like `~/.kube/client-key.pem`.
 The path of cluster ca certificate, like `~/.kube/cluster-ca-cert.pem`
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesArgs-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L281">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L289">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7828,7 +8482,7 @@ Whether enable the deletion protection or not.
 - false: Disable deletion protection.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesArgs-endpointPublicAccessEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L285">property <b>endpointPublicAccessEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L293">property <b>endpointPublicAccessEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointPublicAccessEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7836,7 +8490,7 @@ Whether enable the deletion protection or not.
 Whether to create internet  eip for API Server. Default to false.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesArgs-forceUpdate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L289">property <b>forceUpdate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L297">property <b>forceUpdate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceUpdate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7844,7 +8498,7 @@ Whether to create internet  eip for API Server. Default to false.
 Default false, when you want to change `vpcId` and `vswitchId`, you have to set this field to true, then the cluster will be recreated.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesArgs-kubeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L293">property <b>kubeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L301">property <b>kubeConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7852,7 +8506,7 @@ Default false, when you want to change `vpcId` and `vswitchId`, you have to set 
 The path of kube config, like `~/.kube/config`.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L297">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L305">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7860,12 +8514,12 @@ The path of kube config, like `~/.kube/config`.
 The kubernetes cluster's name. It is the only in one Alicloud account.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L298">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L306">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServerlessKubernetesArgs-newNatGateway">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L302">property <b>newNatGateway</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L310">property <b>newNatGateway</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>newNatGateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7873,7 +8527,7 @@ The kubernetes cluster's name. It is the only in one Alicloud account.
 Whether to create a new nat gateway while creating kubernetes cluster. Default to true.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesArgs-privateZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L306">property <b>privateZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L314">property <b>privateZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7881,7 +8535,7 @@ Whether to create a new nat gateway while creating kubernetes cluster. Default t
 Enable Privatezone if you need to use the service discovery feature within the serverless cluster. Default to false.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesArgs-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L310">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L318">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7889,7 +8543,7 @@ Enable Privatezone if you need to use the service discovery feature within the s
 The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesArgs-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L314">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L322">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7897,7 +8551,7 @@ The ID of the resource group,by default these cloud resources are automatically 
 The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L318">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L326">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -7905,7 +8559,7 @@ The ID of the security group to which the ECS instances in the cluster belong. I
 Default nil, A map of tags assigned to the kubernetes cluster .
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L322">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L330">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7913,7 +8567,7 @@ Default nil, A map of tags assigned to the kubernetes cluster .
 Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesArgs-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L326">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L334">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7921,7 +8575,7 @@ Desired Kubernetes version. If you do not specify a value, the latest available 
 The vpc where new kubernetes cluster will be located. Specify one vpc's id, if it is not specified, a new VPC  will be built.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesArgs-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L332">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L340">property <b>vswitchId</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -7933,7 +8587,7 @@ Field &#39;vswitch_id&#39; has been deprecated from provider version 1.91.0. New
 (Required, ForceNew) The vswitch where new kubernetes cluster will be located. Specify one vswitch's id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which `availabilityZone` specified.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesArgs-vswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L336">property <b>vswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L344">property <b>vswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -7941,7 +8595,7 @@ Field &#39;vswitch_id&#39; has been deprecated from provider version 1.91.0. New
 The vswitches where new kubernetes cluster will be located.
 
 <h3 class="pdoc-module-header" id="ServerlessKubernetesState" data-link-title="ServerlessKubernetesState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L182">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L190">
         interface <strong>ServerlessKubernetesState</strong>
     </a>
 </h3>
@@ -7951,12 +8605,12 @@ The vswitches where new kubernetes cluster will be located.
 Input properties used for looking up and filtering ServerlessKubernetes resources.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesState-addons">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L183">property <b>addons</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L191">property <b>addons</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addons?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ServerlessKubernetesAddon'>ServerlessKubernetesAddon</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServerlessKubernetesState-clientCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L187">property <b>clientCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L195">property <b>clientCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7964,7 +8618,7 @@ Input properties used for looking up and filtering ServerlessKubernetes resource
 The path of client certificate, like `~/.kube/client-cert.pem`.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesState-clientKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L191">property <b>clientKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L199">property <b>clientKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7972,7 +8626,7 @@ The path of client certificate, like `~/.kube/client-cert.pem`.
 The path of client key, like `~/.kube/client-key.pem`.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesState-clusterCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L195">property <b>clusterCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L203">property <b>clusterCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -7980,7 +8634,7 @@ The path of client key, like `~/.kube/client-key.pem`.
 The path of cluster ca certificate, like `~/.kube/cluster-ca-cert.pem`
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesState-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L201">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L209">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7990,7 +8644,7 @@ Whether enable the deletion protection or not.
 - false: Disable deletion protection.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesState-endpointPublicAccessEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L205">property <b>endpointPublicAccessEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L213">property <b>endpointPublicAccessEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointPublicAccessEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -7998,7 +8652,7 @@ Whether enable the deletion protection or not.
 Whether to create internet  eip for API Server. Default to false.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesState-forceUpdate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L209">property <b>forceUpdate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L217">property <b>forceUpdate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceUpdate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8006,7 +8660,7 @@ Whether to create internet  eip for API Server. Default to false.
 Default false, when you want to change `vpcId` and `vswitchId`, you have to set this field to true, then the cluster will be recreated.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesState-kubeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L213">property <b>kubeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L221">property <b>kubeConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kubeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8014,7 +8668,7 @@ Default false, when you want to change `vpcId` and `vswitchId`, you have to set 
 The path of kube config, like `~/.kube/config`.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L217">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L225">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8022,12 +8676,12 @@ The path of kube config, like `~/.kube/config`.
 The kubernetes cluster's name. It is the only in one Alicloud account.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L218">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L226">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ServerlessKubernetesState-newNatGateway">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L222">property <b>newNatGateway</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L230">property <b>newNatGateway</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>newNatGateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8035,7 +8689,7 @@ The kubernetes cluster's name. It is the only in one Alicloud account.
 Whether to create a new nat gateway while creating kubernetes cluster. Default to true.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesState-privateZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L226">property <b>privateZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L234">property <b>privateZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8043,7 +8697,7 @@ Whether to create a new nat gateway while creating kubernetes cluster. Default t
 Enable Privatezone if you need to use the service discovery feature within the serverless cluster. Default to false.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesState-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L230">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L238">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8051,7 +8705,7 @@ Enable Privatezone if you need to use the service discovery feature within the s
 The ID of the resource group,by default these cloud resources are automatically assigned to the default resource group.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesState-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L234">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L242">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8059,7 +8713,7 @@ The ID of the resource group,by default these cloud resources are automatically 
 The ID of the security group to which the ECS instances in the cluster belong. If it is not specified, a new Security group will be built.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L238">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L246">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -8067,7 +8721,7 @@ The ID of the security group to which the ECS instances in the cluster belong. I
 Default nil, A map of tags assigned to the kubernetes cluster .
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L242">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L250">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8075,7 +8729,7 @@ Default nil, A map of tags assigned to the kubernetes cluster .
 Desired Kubernetes version. If you do not specify a value, the latest available version at resource creation is used.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L246">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L254">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8083,7 +8737,7 @@ Desired Kubernetes version. If you do not specify a value, the latest available 
 The vpc where new kubernetes cluster will be located. Specify one vpc's id, if it is not specified, a new VPC  will be built.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesState-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L252">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L260">property <b>vswitchId</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -8095,7 +8749,7 @@ Field &#39;vswitch_id&#39; has been deprecated from provider version 1.91.0. New
 (Required, ForceNew) The vswitch where new kubernetes cluster will be located. Specify one vswitch's id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which `availabilityZone` specified.
 
 <h4 class="pdoc-member-header" id="ServerlessKubernetesState-vswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/serverlessKubernetes.ts#L256">property <b>vswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/serverlessKubernetes.ts#L264">property <b>vswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -8103,7 +8757,7 @@ Field &#39;vswitch_id&#39; has been deprecated from provider version 1.91.0. New
 The vswitches where new kubernetes cluster will be located.
 
 <h3 class="pdoc-module-header" id="SwarmArgs" data-link-title="SwarmArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L308">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L315">
         interface <strong>SwarmArgs</strong>
     </a>
 </h3>
@@ -8113,7 +8767,7 @@ The vswitches where new kubernetes cluster will be located.
 The set of arguments for constructing a Swarm resource.
 
 <h4 class="pdoc-member-header" id="SwarmArgs-cidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L316">property <b>cidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L323">property <b>cidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8125,7 +8779,7 @@ Valid value:
 - 10.0.0.0/16
 
 <h4 class="pdoc-member-header" id="SwarmArgs-diskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L320">property <b>diskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L327">property <b>diskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskCategory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8133,7 +8787,7 @@ Valid value:
 The data disk category of ECS instance node. Its valid value are `cloud`, `cloudSsd`, `cloudEssd`, `ephemeralEssd` and `cloudEfficiency`. Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="SwarmArgs-diskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L324">property <b>diskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L331">property <b>diskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -8141,7 +8795,7 @@ The data disk category of ECS instance node. Its valid value are `cloud`, `cloud
 The data disk size of ECS instance node. Its valid value is 20~32768 GB. Default to 20.
 
 <h4 class="pdoc-member-header" id="SwarmArgs-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L328">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L335">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8149,7 +8803,7 @@ The data disk size of ECS instance node. Its valid value is 20~32768 GB. Default
 The image ID of ECS instance node used. Default to System automate allocated.
 
 <h4 class="pdoc-member-header" id="SwarmArgs-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L332">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L339">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8157,7 +8811,7 @@ The image ID of ECS instance node used. Default to System automate allocated.
 The type of ECS instance node.
 
 <h4 class="pdoc-member-header" id="SwarmArgs-isOutdated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L336">property <b>isOutdated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L343">property <b>isOutdated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isOutdated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8165,7 +8819,7 @@ The type of ECS instance node.
 Whether to use outdated instance type. Default to false.
 
 <h4 class="pdoc-member-header" id="SwarmArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L340">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L347">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8173,12 +8827,12 @@ Whether to use outdated instance type. Default to false.
 The container cluster's name. It is the only in one Alicloud account.
 
 <h4 class="pdoc-member-header" id="SwarmArgs-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L341">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L348">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SwarmArgs-needSlb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L345">property <b>needSlb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L352">property <b>needSlb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>needSlb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8186,7 +8840,7 @@ The container cluster's name. It is the only in one Alicloud account.
 Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
 
 <h4 class="pdoc-member-header" id="SwarmArgs-nodeNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L349">property <b>nodeNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L356">property <b>nodeNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeNumber?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -8194,7 +8848,7 @@ Whether to create the default simple routing Server Load Balancer instance for t
 The ECS node number of the container cluster. Its value choices are 1~50, and default to 1.
 
 <h4 class="pdoc-member-header" id="SwarmArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L353">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L360">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8202,7 +8856,7 @@ The ECS node number of the container cluster. Its value choices are 1~50, and de
 The password of ECS instance node.
 
 <h4 class="pdoc-member-header" id="SwarmArgs-releaseEip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L357">property <b>releaseEip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L364">property <b>releaseEip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>releaseEip?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8210,7 +8864,7 @@ The password of ECS instance node.
 Whether to release EIP after creating swarm cluster successfully. Default to false.
 
 <h4 class="pdoc-member-header" id="SwarmArgs-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L363">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L370">property <b>size</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -8222,7 +8876,7 @@ Field &#39;size&#39; has been deprecated from provider version 1.9.1. New field 
 Field 'size' has been deprecated from provider version 1.9.1. New field 'node_number' replaces it.
 
 <h4 class="pdoc-member-header" id="SwarmArgs-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L367">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L374">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8230,7 +8884,7 @@ Field 'size' has been deprecated from provider version 1.9.1. New field 'node_nu
 The password of ECS instance node. If it is not specified, the container cluster's network mode will be `Classic`.
 
 <h3 class="pdoc-module-header" id="SwarmState" data-link-title="SwarmState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L223">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L230">
         interface <strong>SwarmState</strong>
     </a>
 </h3>
@@ -8240,7 +8894,7 @@ The password of ECS instance node. If it is not specified, the container cluster
 Input properties used for looking up and filtering Swarm resources.
 
 <h4 class="pdoc-member-header" id="SwarmState-agentVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L227">property <b>agentVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L234">property <b>agentVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>agentVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8248,7 +8902,7 @@ Input properties used for looking up and filtering Swarm resources.
 The nodes agent version.
 
 <h4 class="pdoc-member-header" id="SwarmState-cidrBlock">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L235">property <b>cidrBlock</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L242">property <b>cidrBlock</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrBlock?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8260,7 +8914,7 @@ Valid value:
 - 10.0.0.0/16
 
 <h4 class="pdoc-member-header" id="SwarmState-diskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L239">property <b>diskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L246">property <b>diskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskCategory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8268,7 +8922,7 @@ Valid value:
 The data disk category of ECS instance node. Its valid value are `cloud`, `cloudSsd`, `cloudEssd`, `ephemeralEssd` and `cloudEfficiency`. Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="SwarmState-diskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L243">property <b>diskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L250">property <b>diskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -8276,7 +8930,7 @@ The data disk category of ECS instance node. Its valid value are `cloud`, `cloud
 The data disk size of ECS instance node. Its valid value is 20~32768 GB. Default to 20.
 
 <h4 class="pdoc-member-header" id="SwarmState-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L247">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L254">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8284,7 +8938,7 @@ The data disk size of ECS instance node. Its valid value is 20~32768 GB. Default
 The image ID of ECS instance node used. Default to System automate allocated.
 
 <h4 class="pdoc-member-header" id="SwarmState-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L251">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L258">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8292,7 +8946,7 @@ The image ID of ECS instance node used. Default to System automate allocated.
 The type of ECS instance node.
 
 <h4 class="pdoc-member-header" id="SwarmState-isOutdated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L255">property <b>isOutdated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L262">property <b>isOutdated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isOutdated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8300,7 +8954,7 @@ The type of ECS instance node.
 Whether to use outdated instance type. Default to false.
 
 <h4 class="pdoc-member-header" id="SwarmState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L259">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L266">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8308,12 +8962,12 @@ Whether to use outdated instance type. Default to false.
 The container cluster's name. It is the only in one Alicloud account.
 
 <h4 class="pdoc-member-header" id="SwarmState-namePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L260">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L267">property <b>namePrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="SwarmState-needSlb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L264">property <b>needSlb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L271">property <b>needSlb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>needSlb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8321,7 +8975,7 @@ The container cluster's name. It is the only in one Alicloud account.
 Whether to create the default simple routing Server Load Balancer instance for the cluster. The default value is true.
 
 <h4 class="pdoc-member-header" id="SwarmState-nodeNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L268">property <b>nodeNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L275">property <b>nodeNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeNumber?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -8329,7 +8983,7 @@ Whether to create the default simple routing Server Load Balancer instance for t
 The ECS node number of the container cluster. Its value choices are 1~50, and default to 1.
 
 <h4 class="pdoc-member-header" id="SwarmState-nodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L272">property <b>nodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L279">property <b>nodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#SwarmNode'>SwarmNode</a>&gt;[]&gt;;</code></pre>
@@ -8337,7 +8991,7 @@ The ECS node number of the container cluster. Its value choices are 1~50, and de
 List of cluster nodes. It contains several attributes to `Block Nodes`.
 
 <h4 class="pdoc-member-header" id="SwarmState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L276">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L283">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8345,7 +8999,7 @@ List of cluster nodes. It contains several attributes to `Block Nodes`.
 The password of ECS instance node.
 
 <h4 class="pdoc-member-header" id="SwarmState-releaseEip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L280">property <b>releaseEip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L287">property <b>releaseEip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>releaseEip?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -8353,7 +9007,7 @@ The password of ECS instance node.
 Whether to release EIP after creating swarm cluster successfully. Default to false.
 
 <h4 class="pdoc-member-header" id="SwarmState-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L284">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L291">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8361,7 +9015,7 @@ Whether to release EIP after creating swarm cluster successfully. Default to fal
 The ID of security group where the current cluster worker node is located.
 
 <h4 class="pdoc-member-header" id="SwarmState-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L290">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L297">property <b>size</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -8373,7 +9027,7 @@ Field &#39;size&#39; has been deprecated from provider version 1.9.1. New field 
 Field 'size' has been deprecated from provider version 1.9.1. New field 'node_number' replaces it.
 
 <h4 class="pdoc-member-header" id="SwarmState-slbId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L294">property <b>slbId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L301">property <b>slbId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slbId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8381,7 +9035,7 @@ Field 'size' has been deprecated from provider version 1.9.1. New field 'node_nu
 The ID of load balancer where the current cluster worker node is located.
 
 <h4 class="pdoc-member-header" id="SwarmState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L298">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L305">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -8389,7 +9043,7 @@ The ID of load balancer where the current cluster worker node is located.
 The ID of VPC where the current cluster is located.
 
 <h4 class="pdoc-member-header" id="SwarmState-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/cs/swarm.ts#L302">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/cs/swarm.ts#L309">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

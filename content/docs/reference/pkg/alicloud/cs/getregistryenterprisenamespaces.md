@@ -14,6 +14,7 @@ This data source provides a list Container Registry Enterprise Edition namespace
 
 > **NOTE:** Available in v1.86.0+
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetRouteEntries function of the cen module, including ex
 
 This data source provides CEN Route Entries available to the user.
 
+
 {{% examples %}}
 ## Example Usage
 

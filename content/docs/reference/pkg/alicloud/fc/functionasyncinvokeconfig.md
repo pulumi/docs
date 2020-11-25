@@ -1764,6 +1764,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Function Compute Function Async Invoke Configs can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:fc/functionAsyncInvokeConfig:FunctionAsyncInvokeConfig example my_function
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

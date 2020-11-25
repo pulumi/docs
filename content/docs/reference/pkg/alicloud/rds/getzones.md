@@ -14,6 +14,7 @@ This data source provides availability zones for RDS that can be accessed by an 
 
 > **NOTE:** Available in v1.73.0+.
 
+
 {{% examples %}}
 ## Example Usage
 

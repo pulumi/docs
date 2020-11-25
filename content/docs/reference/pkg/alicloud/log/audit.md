@@ -922,6 +922,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Log alert can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:log/audit:Audit example tf-audit-test
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

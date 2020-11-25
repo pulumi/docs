@@ -14,6 +14,7 @@ This resource will help you to manager node pool in Kubernetes Cluster.
 
 > **NOTE:** Available in 1.97.0+.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -2839,6 +2840,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

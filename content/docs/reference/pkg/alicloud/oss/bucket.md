@@ -3771,6 +3771,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+OSS bucket can be imported using the bucket name, e.g.
+
+```sh
+ $ pulumi import alicloud:oss/bucket:Bucket bucket bucket-12345678
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

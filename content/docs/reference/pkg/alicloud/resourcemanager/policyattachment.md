@@ -906,6 +906,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Resource Manager Policy Attachment can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:resourcemanager/policyAttachment:PolicyAttachment example tf-testaccrdpolicy:Custom:tf-testaccrdpolicy@11827252********.onaliyun.com:IMSUser:rg******
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

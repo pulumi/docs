@@ -1277,6 +1277,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+PolarDB account can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:polardb/account:Account example "pc-12345:tf_account"
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

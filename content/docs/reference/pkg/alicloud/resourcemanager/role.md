@@ -1292,6 +1292,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Resource Manager can be imported using the id or role_name, e.g.
+
+```sh
+ $ pulumi import alicloud:resourcemanager/role:Role example testrd
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

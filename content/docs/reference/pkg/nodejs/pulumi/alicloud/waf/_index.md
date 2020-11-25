@@ -3,7 +3,7 @@ title: "Module waf"
 title_tag: "Module waf | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "waf"
 meta_desc: "Explore members of the waf module in the @pulumi/alicloud package."
-git_sha: "9ec8f284726861e94f025996ae4b75d2cbc8f5cd"
+git_sha: "6cf57c2bc1fac537aa1a1744db4b579895c55321"
 block_external_search_index: true
 ---
 
@@ -42,7 +42,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Domain" data-link-title="Domain">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L48">
         Resource <strong>Domain</strong>
     </a>
 </h3>
@@ -80,8 +80,16 @@ const domain = new alicloud.waf.Domain("domain", {
 });
 ```
 
+#### Import
+
+WAF domain can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:waf/domain:Domain domain waf-132435:www.domain.com
+```
+
 <h4 class="pdoc-member-header" id="Domain-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L145"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L152"> <b>constructor</b></a>
 </h4>
 
 
@@ -95,7 +103,7 @@ Create a Domain resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Domain-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -106,14 +114,14 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Domain-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L41">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L48">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Domain-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -124,7 +132,7 @@ Returns true if the given object is an instance of Domain.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Domain-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L72">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L79">property <b>clusterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -132,7 +140,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The type of the WAF cluster. Valid values: `PhysicalCluster` and `VirtualCluster`. Default to `PhysicalCluster`.
 
 <h4 class="pdoc-member-header" id="Domain-cname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L76">property <b>cname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L83">property <b>cname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -140,7 +148,7 @@ The type of the WAF cluster. Valid values: `PhysicalCluster` and `VirtualCluster
 The CNAME record assigned by the WAF instance to the specified domain.
 
 <h4 class="pdoc-member-header" id="Domain-connectionTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L80">property <b>connectionTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L87">property <b>connectionTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectionTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -148,7 +156,7 @@ The CNAME record assigned by the WAF instance to the specified domain.
 The connection timeout for WAF exclusive clusters. Unit: seconds.
 
 <h4 class="pdoc-member-header" id="Domain-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L86">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L93">property <b>domain</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -160,7 +168,7 @@ Field &#39;domain&#39; has been deprecated from version 1.94.0. Use &#39;domain_
 Field `domain` has been deprecated from version 1.94.0. Use `domainName` instead.
 
 <h4 class="pdoc-member-header" id="Domain-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L90">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L97">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -168,7 +176,7 @@ Field `domain` has been deprecated from version 1.94.0. Use `domainName` instead
 The domain that you want to add to WAF.
 
 <h4 class="pdoc-member-header" id="Domain-http2Ports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L94">property <b>http2Ports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L101">property <b>http2Ports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>http2Ports: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -176,7 +184,7 @@ The domain that you want to add to WAF.
 List of the HTTP 2.0 ports.
 
 <h4 class="pdoc-member-header" id="Domain-httpPorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L98">property <b>httpPorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L105">property <b>httpPorts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpPorts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -184,7 +192,7 @@ List of the HTTP 2.0 ports.
 List of the HTTP ports.
 
 <h4 class="pdoc-member-header" id="Domain-httpToUserIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L103">property <b>httpToUserIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L110">property <b>httpToUserIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpToUserIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -193,7 +201,7 @@ Specifies whether to enable the HTTP back-to-origin feature. After this feature 
 By default, port 80 is used to forward the requests to the origin server. Valid values: `On` and `Off`. Default to `Off`.
 
 <h4 class="pdoc-member-header" id="Domain-httpsPorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L107">property <b>httpsPorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L114">property <b>httpsPorts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpsPorts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -201,7 +209,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 List of the HTTPS ports.
 
 <h4 class="pdoc-member-header" id="Domain-httpsRedirect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L111">property <b>httpsRedirect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L118">property <b>httpsRedirect</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpsRedirect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -209,7 +217,7 @@ List of the HTTPS ports.
 Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On" and `Off`. Default to `Off`.
 
 <h4 class="pdoc-member-header" id="Domain-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L41">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -218,7 +226,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Domain-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L115">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L122">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -226,7 +234,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the WAF instance.
 
 <h4 class="pdoc-member-header" id="Domain-isAccessProduct">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L119">property <b>isAccessProduct</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L126">property <b>isAccessProduct</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isAccessProduct: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -234,7 +242,7 @@ The ID of the WAF instance.
 Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: `On` and `Off`. Default to `Off`.
 
 <h4 class="pdoc-member-header" id="Domain-loadBalancing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L123">property <b>loadBalancing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L130">property <b>loadBalancing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loadBalancing: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -242,7 +250,7 @@ Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to
 The load balancing algorithm that is used to forward requests to the origin. Valid values: `IpHash` and `RoundRobin`. Default to `IpHash`.
 
 <h4 class="pdoc-member-header" id="Domain-logHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L129">property <b>logHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L136">property <b>logHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logHeaders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#DomainLogHeader'>DomainLogHeader</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -252,7 +260,7 @@ The key-value pair that is used to mark the traffic that flows through WAF to th
 * value: The value of label
 
 <h4 class="pdoc-member-header" id="Domain-readTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L133">property <b>readTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L140">property <b>readTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>readTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -260,7 +268,7 @@ The key-value pair that is used to mark the traffic that flows through WAF to th
 The read timeout of a WAF exclusive cluster. Unit: seconds.
 
 <h4 class="pdoc-member-header" id="Domain-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L137">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L144">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -268,7 +276,7 @@ The read timeout of a WAF exclusive cluster. Unit: seconds.
 The ID of the resource group to which the queried domain belongs in Resource Management. By default, no value is specified, indicating that the domain belongs to the default resource group.
 
 <h4 class="pdoc-member-header" id="Domain-sourceIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L141">property <b>sourceIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L148">property <b>sourceIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -276,7 +284,7 @@ The ID of the resource group to which the queried domain belongs in Resource Man
 List of the IP address or domain of the origin server to which the specified domain points.
 
 <h4 class="pdoc-member-header" id="Domain-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L41">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L48">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -285,7 +293,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Domain-writeTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L145">property <b>writeTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L152">property <b>writeTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>writeTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -293,7 +301,7 @@ deployments.
 The timeout period for a WAF exclusive cluster write connection. Unit: seconds.
 
 <h3 class="pdoc-module-header" id="Instance" data-link-title="Instance">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L44">
         Resource <strong>Instance</strong>
     </a>
 </h3>
@@ -328,8 +336,16 @@ const defaultInstance = new alicloud.waf.Instance("default", {
 });
 ```
 
+#### Import
+
+WAF instance can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:waf/instance:Instance default waf-cn-132435
+```
+
 <h4 class="pdoc-member-header" id="Instance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L133"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L141"> <b>constructor</b></a>
 </h4>
 
 
@@ -343,7 +359,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Instance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -354,14 +370,14 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Instance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Instance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -372,7 +388,7 @@ Returns true if the given object is an instance of Instance.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Instance-bigScreen">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L67">property <b>bigScreen</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L75">property <b>bigScreen</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bigScreen: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -380,7 +396,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specify whether big screen is supported. Valid values: ["0", "1"]. "0" for false and "1" for true.
 
 <h4 class="pdoc-member-header" id="Instance-exclusiveIpPackage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L71">property <b>exclusiveIpPackage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L79">property <b>exclusiveIpPackage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>exclusiveIpPackage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -388,7 +404,7 @@ Specify whether big screen is supported. Valid values: ["0", "1"]. "0" for false
 Specify the number of exclusive WAF IP addresses.
 
 <h4 class="pdoc-member-header" id="Instance-extBandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L75">property <b>extBandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L83">property <b>extBandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>extBandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -396,7 +412,7 @@ Specify the number of exclusive WAF IP addresses.
 The extra bandwidth. Unit: Mbit/s.
 
 <h4 class="pdoc-member-header" id="Instance-extDomainPackage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L79">property <b>extDomainPackage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L87">property <b>extDomainPackage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>extDomainPackage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -404,7 +420,7 @@ The extra bandwidth. Unit: Mbit/s.
 The number of extra domains.
 
 <h4 class="pdoc-member-header" id="Instance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -413,7 +429,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Instance-logStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L83">property <b>logStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L91">property <b>logStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logStorage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -421,7 +437,7 @@ deployments and may be missing (undefined) during planning phases.
 Log storage size. Unit: T. Valid values: [3, 5, 10, 20, 50].
 
 <h4 class="pdoc-member-header" id="Instance-logTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L87">property <b>logTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L95">property <b>logTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -429,7 +445,7 @@ Log storage size. Unit: T. Valid values: [3, 5, 10, 20, 50].
 Log storage period. Unit: day. Valid values: [180, 360].
 
 <h4 class="pdoc-member-header" id="Instance-modifyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L91">property <b>modifyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L99">property <b>modifyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>modifyType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -437,7 +453,7 @@ Log storage period. Unit: day. Valid values: [180, 360].
 Type of configuration change. Valid value: Upgrade.
 
 <h4 class="pdoc-member-header" id="Instance-packageCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L99">property <b>packageCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L107">property <b>packageCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>packageCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -449,7 +465,7 @@ Subscription plan:
 * International site customers can purchase the following versions of International region: ["versionPro", "versionBusiness", "versionEnterprise"].
 
 <h4 class="pdoc-member-header" id="Instance-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L103">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L111">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -457,7 +473,7 @@ Subscription plan:
 Service time of Web Application Firewall.
 
 <h4 class="pdoc-member-header" id="Instance-prefessionalService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L107">property <b>prefessionalService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L115">property <b>prefessionalService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>prefessionalService: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -465,7 +481,7 @@ Service time of Web Application Firewall.
 Specify whether professional service is supported. Valid values: ["true", "false"]
 
 <h4 class="pdoc-member-header" id="Instance-renewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L111">property <b>renewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L119">property <b>renewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>renewPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -473,7 +489,7 @@ Specify whether professional service is supported. Valid values: ["true", "false
 Renewal period of WAF service. Unit: month
 
 <h4 class="pdoc-member-header" id="Instance-renewalStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L117">property <b>renewalStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L125">property <b>renewalStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>renewalStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -483,7 +499,7 @@ Renewal status of WAF service. Valid values:
 * ManualRenewal (default): The service time of WAF is renewed manually.Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: "On" and "Off". Default to "Off".
 
 <h4 class="pdoc-member-header" id="Instance-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L121">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L129">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -491,7 +507,7 @@ Renewal status of WAF service. Valid values:
 The resource group ID.
 
 <h4 class="pdoc-member-header" id="Instance-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L125">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L133">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -499,7 +515,7 @@ The resource group ID.
 The status of the instance.
 
 <h4 class="pdoc-member-header" id="Instance-subscriptionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L129">property <b>subscriptionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L137">property <b>subscriptionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subscriptionType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -507,7 +523,7 @@ The status of the instance.
 Subscription of WAF service. Valid values: ["Subscription", "PayAsYouGo"].
 
 <h4 class="pdoc-member-header" id="Instance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -516,7 +532,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Instance-wafLog">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L133">property <b>wafLog</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L141">property <b>wafLog</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>wafLog: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -526,7 +542,7 @@ Specify whether Log service is supported. Valid values: ["true", "false"]
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getDomains" data-link-title="getDomains">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getDomains.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getDomains.ts#L26">
         Function <strong>getDomains</strong>
     </a>
 </h3>
@@ -553,7 +569,7 @@ const defaultDomains = pulumi.output(alicloud.waf.getDomains({
 ```
 
 <h3 class="pdoc-module-header" id="getInstances" data-link-title="getInstances">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getInstances.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getInstances.ts#L30">
         Function <strong>getInstances</strong>
     </a>
 </h3>
@@ -586,7 +602,7 @@ export const theFirstWafInstanceId = _default.then(_default => _default.instance
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DomainArgs" data-link-title="DomainArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L304">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L311">
         interface <strong>DomainArgs</strong>
     </a>
 </h3>
@@ -596,7 +612,7 @@ export const theFirstWafInstanceId = _default.then(_default => _default.instance
 The set of arguments for constructing a Domain resource.
 
 <h4 class="pdoc-member-header" id="DomainArgs-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L308">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L315">property <b>clusterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -604,7 +620,7 @@ The set of arguments for constructing a Domain resource.
 The type of the WAF cluster. Valid values: `PhysicalCluster` and `VirtualCluster`. Default to `PhysicalCluster`.
 
 <h4 class="pdoc-member-header" id="DomainArgs-connectionTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L312">property <b>connectionTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L319">property <b>connectionTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -612,7 +628,7 @@ The type of the WAF cluster. Valid values: `PhysicalCluster` and `VirtualCluster
 The connection timeout for WAF exclusive clusters. Unit: seconds.
 
 <h4 class="pdoc-member-header" id="DomainArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L318">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L325">property <b>domain</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -624,7 +640,7 @@ Field &#39;domain&#39; has been deprecated from version 1.94.0. Use &#39;domain_
 Field `domain` has been deprecated from version 1.94.0. Use `domainName` instead.
 
 <h4 class="pdoc-member-header" id="DomainArgs-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L322">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L329">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -632,7 +648,7 @@ Field `domain` has been deprecated from version 1.94.0. Use `domainName` instead
 The domain that you want to add to WAF.
 
 <h4 class="pdoc-member-header" id="DomainArgs-http2Ports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L326">property <b>http2Ports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L333">property <b>http2Ports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>http2Ports?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -640,7 +656,7 @@ The domain that you want to add to WAF.
 List of the HTTP 2.0 ports.
 
 <h4 class="pdoc-member-header" id="DomainArgs-httpPorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L330">property <b>httpPorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L337">property <b>httpPorts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -648,7 +664,7 @@ List of the HTTP 2.0 ports.
 List of the HTTP ports.
 
 <h4 class="pdoc-member-header" id="DomainArgs-httpToUserIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L335">property <b>httpToUserIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L342">property <b>httpToUserIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpToUserIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -657,7 +673,7 @@ Specifies whether to enable the HTTP back-to-origin feature. After this feature 
 By default, port 80 is used to forward the requests to the origin server. Valid values: `On` and `Off`. Default to `Off`.
 
 <h4 class="pdoc-member-header" id="DomainArgs-httpsPorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L339">property <b>httpsPorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L346">property <b>httpsPorts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -665,7 +681,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 List of the HTTPS ports.
 
 <h4 class="pdoc-member-header" id="DomainArgs-httpsRedirect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L343">property <b>httpsRedirect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L350">property <b>httpsRedirect</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsRedirect?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -673,7 +689,7 @@ List of the HTTPS ports.
 Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On" and `Off`. Default to `Off`.
 
 <h4 class="pdoc-member-header" id="DomainArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L347">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L354">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -681,7 +697,7 @@ Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On
 The ID of the WAF instance.
 
 <h4 class="pdoc-member-header" id="DomainArgs-isAccessProduct">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L351">property <b>isAccessProduct</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L358">property <b>isAccessProduct</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isAccessProduct: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -689,7 +705,7 @@ The ID of the WAF instance.
 Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: `On` and `Off`. Default to `Off`.
 
 <h4 class="pdoc-member-header" id="DomainArgs-loadBalancing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L355">property <b>loadBalancing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L362">property <b>loadBalancing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadBalancing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -697,7 +713,7 @@ Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to
 The load balancing algorithm that is used to forward requests to the origin. Valid values: `IpHash` and `RoundRobin`. Default to `IpHash`.
 
 <h4 class="pdoc-member-header" id="DomainArgs-logHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L361">property <b>logHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L368">property <b>logHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#DomainLogHeader'>DomainLogHeader</a>&gt;[]&gt;;</code></pre>
@@ -707,7 +723,7 @@ The key-value pair that is used to mark the traffic that flows through WAF to th
 * value: The value of label
 
 <h4 class="pdoc-member-header" id="DomainArgs-readTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L365">property <b>readTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L372">property <b>readTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -715,7 +731,7 @@ The key-value pair that is used to mark the traffic that flows through WAF to th
 The read timeout of a WAF exclusive cluster. Unit: seconds.
 
 <h4 class="pdoc-member-header" id="DomainArgs-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L369">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L376">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -723,7 +739,7 @@ The read timeout of a WAF exclusive cluster. Unit: seconds.
 The ID of the resource group to which the queried domain belongs in Resource Management. By default, no value is specified, indicating that the domain belongs to the default resource group.
 
 <h4 class="pdoc-member-header" id="DomainArgs-sourceIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L373">property <b>sourceIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L380">property <b>sourceIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -731,7 +747,7 @@ The ID of the resource group to which the queried domain belongs in Resource Man
 List of the IP address or domain of the origin server to which the specified domain points.
 
 <h4 class="pdoc-member-header" id="DomainArgs-writeTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L377">property <b>writeTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L384">property <b>writeTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writeTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -739,7 +755,7 @@ List of the IP address or domain of the origin server to which the specified dom
 The timeout period for a WAF exclusive cluster write connection. Unit: seconds.
 
 <h3 class="pdoc-module-header" id="DomainState" data-link-title="DomainState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L221">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L228">
         interface <strong>DomainState</strong>
     </a>
 </h3>
@@ -749,7 +765,7 @@ The timeout period for a WAF exclusive cluster write connection. Unit: seconds.
 Input properties used for looking up and filtering Domain resources.
 
 <h4 class="pdoc-member-header" id="DomainState-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L225">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L232">property <b>clusterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -757,7 +773,7 @@ Input properties used for looking up and filtering Domain resources.
 The type of the WAF cluster. Valid values: `PhysicalCluster` and `VirtualCluster`. Default to `PhysicalCluster`.
 
 <h4 class="pdoc-member-header" id="DomainState-cname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L229">property <b>cname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L236">property <b>cname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -765,7 +781,7 @@ The type of the WAF cluster. Valid values: `PhysicalCluster` and `VirtualCluster
 The CNAME record assigned by the WAF instance to the specified domain.
 
 <h4 class="pdoc-member-header" id="DomainState-connectionTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L233">property <b>connectionTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L240">property <b>connectionTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -773,7 +789,7 @@ The CNAME record assigned by the WAF instance to the specified domain.
 The connection timeout for WAF exclusive clusters. Unit: seconds.
 
 <h4 class="pdoc-member-header" id="DomainState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L239">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L246">property <b>domain</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -785,7 +801,7 @@ Field &#39;domain&#39; has been deprecated from version 1.94.0. Use &#39;domain_
 Field `domain` has been deprecated from version 1.94.0. Use `domainName` instead.
 
 <h4 class="pdoc-member-header" id="DomainState-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L243">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L250">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -793,7 +809,7 @@ Field `domain` has been deprecated from version 1.94.0. Use `domainName` instead
 The domain that you want to add to WAF.
 
 <h4 class="pdoc-member-header" id="DomainState-http2Ports">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L247">property <b>http2Ports</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L254">property <b>http2Ports</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>http2Ports?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -801,7 +817,7 @@ The domain that you want to add to WAF.
 List of the HTTP 2.0 ports.
 
 <h4 class="pdoc-member-header" id="DomainState-httpPorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L251">property <b>httpPorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L258">property <b>httpPorts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -809,7 +825,7 @@ List of the HTTP 2.0 ports.
 List of the HTTP ports.
 
 <h4 class="pdoc-member-header" id="DomainState-httpToUserIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L256">property <b>httpToUserIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L263">property <b>httpToUserIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpToUserIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -818,7 +834,7 @@ Specifies whether to enable the HTTP back-to-origin feature. After this feature 
 By default, port 80 is used to forward the requests to the origin server. Valid values: `On` and `Off`. Default to `Off`.
 
 <h4 class="pdoc-member-header" id="DomainState-httpsPorts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L260">property <b>httpsPorts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L267">property <b>httpsPorts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -826,7 +842,7 @@ By default, port 80 is used to forward the requests to the origin server. Valid 
 List of the HTTPS ports.
 
 <h4 class="pdoc-member-header" id="DomainState-httpsRedirect">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L264">property <b>httpsRedirect</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L271">property <b>httpsRedirect</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpsRedirect?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -834,7 +850,7 @@ List of the HTTPS ports.
 Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On" and `Off`. Default to `Off`.
 
 <h4 class="pdoc-member-header" id="DomainState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L268">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L275">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -842,7 +858,7 @@ Specifies whether to redirect HTTP requests as HTTPS requests. Valid values: "On
 The ID of the WAF instance.
 
 <h4 class="pdoc-member-header" id="DomainState-isAccessProduct">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L272">property <b>isAccessProduct</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L279">property <b>isAccessProduct</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isAccessProduct?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -850,7 +866,7 @@ The ID of the WAF instance.
 Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: `On` and `Off`. Default to `Off`.
 
 <h4 class="pdoc-member-header" id="DomainState-loadBalancing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L276">property <b>loadBalancing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L283">property <b>loadBalancing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadBalancing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -858,7 +874,7 @@ Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to
 The load balancing algorithm that is used to forward requests to the origin. Valid values: `IpHash` and `RoundRobin`. Default to `IpHash`.
 
 <h4 class="pdoc-member-header" id="DomainState-logHeaders">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L282">property <b>logHeaders</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L289">property <b>logHeaders</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#DomainLogHeader'>DomainLogHeader</a>&gt;[]&gt;;</code></pre>
@@ -868,7 +884,7 @@ The key-value pair that is used to mark the traffic that flows through WAF to th
 * value: The value of label
 
 <h4 class="pdoc-member-header" id="DomainState-readTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L286">property <b>readTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L293">property <b>readTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -876,7 +892,7 @@ The key-value pair that is used to mark the traffic that flows through WAF to th
 The read timeout of a WAF exclusive cluster. Unit: seconds.
 
 <h4 class="pdoc-member-header" id="DomainState-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L290">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L297">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -884,7 +900,7 @@ The read timeout of a WAF exclusive cluster. Unit: seconds.
 The ID of the resource group to which the queried domain belongs in Resource Management. By default, no value is specified, indicating that the domain belongs to the default resource group.
 
 <h4 class="pdoc-member-header" id="DomainState-sourceIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L294">property <b>sourceIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L301">property <b>sourceIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -892,7 +908,7 @@ The ID of the resource group to which the queried domain belongs in Resource Man
 List of the IP address or domain of the origin server to which the specified domain points.
 
 <h4 class="pdoc-member-header" id="DomainState-writeTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/domain.ts#L298">property <b>writeTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/domain.ts#L305">property <b>writeTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writeTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -900,7 +916,7 @@ List of the IP address or domain of the origin server to which the specified dom
 The timeout period for a WAF exclusive cluster write connection. Unit: seconds.
 
 <h3 class="pdoc-module-header" id="GetDomainsArgs" data-link-title="GetDomainsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getDomains.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getDomains.ts#L47">
         interface <strong>GetDomainsArgs</strong>
     </a>
 </h3>
@@ -910,7 +926,7 @@ The timeout period for a WAF exclusive cluster write connection. Unit: seconds.
 A collection of arguments for invoking getDomains.
 
 <h4 class="pdoc-member-header" id="GetDomainsArgs-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getDomains.ts#L52">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getDomains.ts#L51">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -918,7 +934,7 @@ A collection of arguments for invoking getDomains.
 Default to false and only output `id`, `domainName`. Set it to true can output more details.
 
 <h4 class="pdoc-member-header" id="GetDomainsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getDomains.ts#L56">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getDomains.ts#L55">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -926,7 +942,7 @@ Default to false and only output `id`, `domainName`. Set it to true can output m
 A list of WAF domain names. Each item is domain name.
 
 <h4 class="pdoc-member-header" id="GetDomainsArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getDomains.ts#L60">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getDomains.ts#L59">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -934,7 +950,7 @@ A list of WAF domain names. Each item is domain name.
 The Id of waf instance to which waf domain belongs.
 
 <h4 class="pdoc-member-header" id="GetDomainsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getDomains.ts#L64">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getDomains.ts#L63">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -942,12 +958,12 @@ The Id of waf instance to which waf domain belongs.
 A regex string to filter results by domain name.
 
 <h4 class="pdoc-member-header" id="GetDomainsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getDomains.ts#L65">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getDomains.ts#L64">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainsArgs-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getDomains.ts#L69">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getDomains.ts#L68">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -955,7 +971,7 @@ A regex string to filter results by domain name.
 The ID of the resource group to which the queried domain belongs in Resource Management.
 
 <h3 class="pdoc-module-header" id="GetDomainsResult" data-link-title="GetDomainsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getDomains.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getDomains.ts#L74">
         interface <strong>GetDomainsResult</strong>
     </a>
 </h3>
@@ -965,7 +981,7 @@ The ID of the resource group to which the queried domain belongs in Resource Man
 A collection of values returned by getDomains.
 
 <h4 class="pdoc-member-header" id="GetDomainsResult-domains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getDomains.ts#L79">property <b>domains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getDomains.ts#L78">property <b>domains</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domains: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetDomainsDomain'>GetDomainsDomain</a>[];</code></pre>
@@ -973,12 +989,12 @@ A collection of values returned by getDomains.
 A list of Domains. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetDomainsResult-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getDomains.ts#L80">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getDomains.ts#L79">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getDomains.ts#L84">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getDomains.ts#L83">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -986,7 +1002,7 @@ A list of Domains. Each element contains the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDomainsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getDomains.ts#L88">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getDomains.ts#L87">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -994,17 +1010,17 @@ The provider-assigned unique ID for this managed resource.
 A list of WAF domain self ID, value as `domainName`.
 
 <h4 class="pdoc-member-header" id="GetDomainsResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getDomains.ts#L89">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getDomains.ts#L88">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getDomains.ts#L90">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getDomains.ts#L89">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getDomains.ts#L94">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getDomains.ts#L93">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1012,12 +1028,12 @@ A list of WAF domain self ID, value as `domainName`.
 A list of WAF domain names.
 
 <h4 class="pdoc-member-header" id="GetDomainsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getDomains.ts#L95">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getDomains.ts#L94">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainsResult-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getDomains.ts#L99">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getDomains.ts#L98">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1025,7 +1041,7 @@ A list of WAF domain names.
 The ID of the resource group to which the queried domain belongs in Resource Management.
 
 <h3 class="pdoc-module-header" id="GetInstancesArgs" data-link-title="GetInstancesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getInstances.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getInstances.ts#L51">
         interface <strong>GetInstancesArgs</strong>
     </a>
 </h3>
@@ -1035,7 +1051,7 @@ The ID of the resource group to which the queried domain belongs in Resource Man
 A collection of arguments for invoking getInstances.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getInstances.ts#L56">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getInstances.ts#L55">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1043,7 +1059,7 @@ A collection of arguments for invoking getInstances.
 A list of WAF instance IDs.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-instanceSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getInstances.ts#L60">property <b>instanceSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getInstances.ts#L59">property <b>instanceSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceSource?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1051,12 +1067,12 @@ A list of WAF instance IDs.
 The source of the WAF instance.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getInstances.ts#L61">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getInstances.ts#L60">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesArgs-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getInstances.ts#L65">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getInstances.ts#L64">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1064,7 +1080,7 @@ The source of the WAF instance.
 The ID of resource group to which WAF instance belongs.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getInstances.ts#L69">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getInstances.ts#L68">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1072,7 +1088,7 @@ The ID of resource group to which WAF instance belongs.
 The status of WAF instance to filter results. Optional value: `0`: The instance has expired, `1` : The instance has not expired and is working properly.
 
 <h3 class="pdoc-module-header" id="GetInstancesResult" data-link-title="GetInstancesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getInstances.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getInstances.ts#L74">
         interface <strong>GetInstancesResult</strong>
     </a>
 </h3>
@@ -1082,7 +1098,7 @@ The status of WAF instance to filter results. Optional value: `0`: The instance 
 A collection of values returned by getInstances.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getInstances.ts#L79">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getInstances.ts#L78">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1090,7 +1106,7 @@ A collection of values returned by getInstances.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getInstances.ts#L83">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getInstances.ts#L82">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1098,12 +1114,12 @@ The provider-assigned unique ID for this managed resource.
 (Optional) A list of WAF instance IDs.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-instanceSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getInstances.ts#L84">property <b>instanceSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getInstances.ts#L83">property <b>instanceSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceSource?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesResult-instances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getInstances.ts#L88">property <b>instances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getInstances.ts#L87">property <b>instances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstancesInstance'>GetInstancesInstance</a>[];</code></pre>
@@ -1111,17 +1127,17 @@ The provider-assigned unique ID for this managed resource.
 A list of WAF instances. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getInstances.ts#L89">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getInstances.ts#L88">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesResult-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getInstances.ts#L90">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getInstances.ts#L89">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/getInstances.ts#L94">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/getInstances.ts#L93">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1129,7 +1145,7 @@ A list of WAF instances. Each element contains the following attributes:
 Indicates whether the WAF instance has expired.
 
 <h3 class="pdoc-module-header" id="InstanceArgs" data-link-title="InstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L302">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L310">
         interface <strong>InstanceArgs</strong>
     </a>
 </h3>
@@ -1139,7 +1155,7 @@ Indicates whether the WAF instance has expired.
 The set of arguments for constructing a Instance resource.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-bigScreen">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L306">property <b>bigScreen</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L314">property <b>bigScreen</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigScreen: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1147,7 +1163,7 @@ The set of arguments for constructing a Instance resource.
 Specify whether big screen is supported. Valid values: ["0", "1"]. "0" for false and "1" for true.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-exclusiveIpPackage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L310">property <b>exclusiveIpPackage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L318">property <b>exclusiveIpPackage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>exclusiveIpPackage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1155,7 +1171,7 @@ Specify whether big screen is supported. Valid values: ["0", "1"]. "0" for false
 Specify the number of exclusive WAF IP addresses.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-extBandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L314">property <b>extBandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L322">property <b>extBandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extBandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1163,7 +1179,7 @@ Specify the number of exclusive WAF IP addresses.
 The extra bandwidth. Unit: Mbit/s.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-extDomainPackage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L318">property <b>extDomainPackage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L326">property <b>extDomainPackage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extDomainPackage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1171,7 +1187,7 @@ The extra bandwidth. Unit: Mbit/s.
 The number of extra domains.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-logStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L322">property <b>logStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L330">property <b>logStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logStorage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1179,7 +1195,7 @@ The number of extra domains.
 Log storage size. Unit: T. Valid values: [3, 5, 10, 20, 50].
 
 <h4 class="pdoc-member-header" id="InstanceArgs-logTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L326">property <b>logTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L334">property <b>logTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1187,7 +1203,7 @@ Log storage size. Unit: T. Valid values: [3, 5, 10, 20, 50].
 Log storage period. Unit: day. Valid values: [180, 360].
 
 <h4 class="pdoc-member-header" id="InstanceArgs-modifyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L330">property <b>modifyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L338">property <b>modifyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>modifyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1195,7 +1211,7 @@ Log storage period. Unit: day. Valid values: [180, 360].
 Type of configuration change. Valid value: Upgrade.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-packageCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L338">property <b>packageCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L346">property <b>packageCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packageCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1207,7 +1223,7 @@ Subscription plan:
 * International site customers can purchase the following versions of International region: ["versionPro", "versionBusiness", "versionEnterprise"].
 
 <h4 class="pdoc-member-header" id="InstanceArgs-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L342">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L350">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1215,7 +1231,7 @@ Subscription plan:
 Service time of Web Application Firewall.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-prefessionalService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L346">property <b>prefessionalService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L354">property <b>prefessionalService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prefessionalService: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1223,7 +1239,7 @@ Service time of Web Application Firewall.
 Specify whether professional service is supported. Valid values: ["true", "false"]
 
 <h4 class="pdoc-member-header" id="InstanceArgs-renewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L350">property <b>renewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L358">property <b>renewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>renewPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1231,7 +1247,7 @@ Specify whether professional service is supported. Valid values: ["true", "false
 Renewal period of WAF service. Unit: month
 
 <h4 class="pdoc-member-header" id="InstanceArgs-renewalStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L356">property <b>renewalStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L364">property <b>renewalStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>renewalStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1241,7 +1257,7 @@ Renewal status of WAF service. Valid values:
 * ManualRenewal (default): The service time of WAF is renewed manually.Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: "On" and "Off". Default to "Off".
 
 <h4 class="pdoc-member-header" id="InstanceArgs-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L360">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L368">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1249,7 +1265,7 @@ Renewal status of WAF service. Valid values:
 The resource group ID.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-subscriptionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L364">property <b>subscriptionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L372">property <b>subscriptionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1257,7 +1273,7 @@ The resource group ID.
 Subscription of WAF service. Valid values: ["Subscription", "PayAsYouGo"].
 
 <h4 class="pdoc-member-header" id="InstanceArgs-wafLog">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L368">property <b>wafLog</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L376">property <b>wafLog</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>wafLog: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1265,7 +1281,7 @@ Subscription of WAF service. Valid values: ["Subscription", "PayAsYouGo"].
 Specify whether Log service is supported. Valid values: ["true", "false"]
 
 <h3 class="pdoc-module-header" id="InstanceState" data-link-title="InstanceState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L226">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L234">
         interface <strong>InstanceState</strong>
     </a>
 </h3>
@@ -1275,7 +1291,7 @@ Specify whether Log service is supported. Valid values: ["true", "false"]
 Input properties used for looking up and filtering Instance resources.
 
 <h4 class="pdoc-member-header" id="InstanceState-bigScreen">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L230">property <b>bigScreen</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L238">property <b>bigScreen</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bigScreen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1283,7 +1299,7 @@ Input properties used for looking up and filtering Instance resources.
 Specify whether big screen is supported. Valid values: ["0", "1"]. "0" for false and "1" for true.
 
 <h4 class="pdoc-member-header" id="InstanceState-exclusiveIpPackage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L234">property <b>exclusiveIpPackage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L242">property <b>exclusiveIpPackage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>exclusiveIpPackage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1291,7 +1307,7 @@ Specify whether big screen is supported. Valid values: ["0", "1"]. "0" for false
 Specify the number of exclusive WAF IP addresses.
 
 <h4 class="pdoc-member-header" id="InstanceState-extBandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L238">property <b>extBandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L246">property <b>extBandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extBandwidth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1299,7 +1315,7 @@ Specify the number of exclusive WAF IP addresses.
 The extra bandwidth. Unit: Mbit/s.
 
 <h4 class="pdoc-member-header" id="InstanceState-extDomainPackage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L242">property <b>extDomainPackage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L250">property <b>extDomainPackage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extDomainPackage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1307,7 +1323,7 @@ The extra bandwidth. Unit: Mbit/s.
 The number of extra domains.
 
 <h4 class="pdoc-member-header" id="InstanceState-logStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L246">property <b>logStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L254">property <b>logStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logStorage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1315,7 +1331,7 @@ The number of extra domains.
 Log storage size. Unit: T. Valid values: [3, 5, 10, 20, 50].
 
 <h4 class="pdoc-member-header" id="InstanceState-logTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L250">property <b>logTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L258">property <b>logTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1323,7 +1339,7 @@ Log storage size. Unit: T. Valid values: [3, 5, 10, 20, 50].
 Log storage period. Unit: day. Valid values: [180, 360].
 
 <h4 class="pdoc-member-header" id="InstanceState-modifyType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L254">property <b>modifyType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L262">property <b>modifyType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>modifyType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1331,7 +1347,7 @@ Log storage period. Unit: day. Valid values: [180, 360].
 Type of configuration change. Valid value: Upgrade.
 
 <h4 class="pdoc-member-header" id="InstanceState-packageCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L262">property <b>packageCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L270">property <b>packageCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packageCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1343,7 +1359,7 @@ Subscription plan:
 * International site customers can purchase the following versions of International region: ["versionPro", "versionBusiness", "versionEnterprise"].
 
 <h4 class="pdoc-member-header" id="InstanceState-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L266">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L274">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1351,7 +1367,7 @@ Subscription plan:
 Service time of Web Application Firewall.
 
 <h4 class="pdoc-member-header" id="InstanceState-prefessionalService">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L270">property <b>prefessionalService</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L278">property <b>prefessionalService</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prefessionalService?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1359,7 +1375,7 @@ Service time of Web Application Firewall.
 Specify whether professional service is supported. Valid values: ["true", "false"]
 
 <h4 class="pdoc-member-header" id="InstanceState-renewPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L274">property <b>renewPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L282">property <b>renewPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>renewPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1367,7 +1383,7 @@ Specify whether professional service is supported. Valid values: ["true", "false
 Renewal period of WAF service. Unit: month
 
 <h4 class="pdoc-member-header" id="InstanceState-renewalStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L280">property <b>renewalStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L288">property <b>renewalStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>renewalStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1377,7 +1393,7 @@ Renewal status of WAF service. Valid values:
 * ManualRenewal (default): The service time of WAF is renewed manually.Specifies whether to configure a Layer-7 proxy, such as Anti-DDoS Pro or CDN, to filter the inbound traffic before it is forwarded to WAF. Valid values: "On" and "Off". Default to "Off".
 
 <h4 class="pdoc-member-header" id="InstanceState-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L284">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L292">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1385,7 +1401,7 @@ Renewal status of WAF service. Valid values:
 The resource group ID.
 
 <h4 class="pdoc-member-header" id="InstanceState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L288">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L296">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1393,7 +1409,7 @@ The resource group ID.
 The status of the instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-subscriptionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L292">property <b>subscriptionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L300">property <b>subscriptionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptionType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1401,7 +1417,7 @@ The status of the instance.
 Subscription of WAF service. Valid values: ["Subscription", "PayAsYouGo"].
 
 <h4 class="pdoc-member-header" id="InstanceState-wafLog">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/9ec8f284726861e94f025996ae4b75d2cbc8f5cd/sdk/nodejs/waf/instance.ts#L296">property <b>wafLog</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/waf/instance.ts#L304">property <b>wafLog</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>wafLog?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

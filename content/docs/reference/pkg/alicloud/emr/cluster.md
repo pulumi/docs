@@ -14,6 +14,7 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
 
 > **NOTE:** Available in 1.57.0+.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -4451,6 +4452,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -20,6 +20,7 @@ This data source provides a list of Common Bandwidth Packages owned by an Alibab
   * `ip_address`   - The address of the EIP.
   * `allocation_id` - The ID of the EIP instance.
 
+
 {{% examples %}}
 ## Example Usage
 

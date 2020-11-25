@@ -35,7 +35,7 @@ class MyStack : Stack
             PeriodUnit = "Year",
             OfferingType = "All Upfront",
             Description = "ReservedInstance",
-            ZoneId = "cn-shanghai-g",
+            ZoneId = "cn-hangzhou-h",
             Scope = "Zone",
             Period = 1,
         });
@@ -63,7 +63,7 @@ func main() {
 			PeriodUnit:     pulumi.String("Year"),
 			OfferingType:   pulumi.String("All Upfront"),
 			Description:    pulumi.String("ReservedInstance"),
-			ZoneId:         pulumi.String("cn-shanghai-g"),
+			ZoneId:         pulumi.String("cn-hangzhou-h"),
 			Scope:          pulumi.String("Zone"),
 			Period:         pulumi.Int(1),
 		})
@@ -88,7 +88,7 @@ default = alicloud.ecs.ReservedInstance("default",
     period_unit="Year",
     offering_type="All Upfront",
     description="ReservedInstance",
-    zone_id="cn-shanghai-g",
+    zone_id="cn-hangzhou-h",
     scope="Zone",
     period=1)
 ```
@@ -107,7 +107,7 @@ const _default = new alicloud.ecs.ReservedInstance("default", {
     periodUnit: "Year",
     offeringType: "All Upfront",
     description: "ReservedInstance",
-    zoneId: "cn-shanghai-g",
+    zoneId: "cn-hangzhou-h",
     scope: "Zone",
     period: "1",
 });
@@ -1523,6 +1523,18 @@ The following state arguments are supported:
 
 
 
+
+
+
+
+## Import
+
+
+reservedInstance can be imported using id, e.g.
+
+```sh
+ $ pulumi import alicloud:ecs/reservedInstance:ReservedInstance default ecsri-uf6df4xm0h3licit****
+```
 
 
 

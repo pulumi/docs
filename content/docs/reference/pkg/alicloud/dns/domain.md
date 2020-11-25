@@ -11,6 +11,14 @@ meta_desc: "Explore the Domain resource of the dns module, including examples, i
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 <p class="resource-deprecated">Deprecated: {{% md %}}This resource has been deprecated in favour of DnsDomain{{% /md %}}</p>
 
+## Import
+
+DNS can be imported using the id or domain name, e.g.
+
+```sh
+ $ pulumi import alicloud:dns/domain:Domain example "aliyun.com"
+```
+
 
 
 
@@ -892,6 +900,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

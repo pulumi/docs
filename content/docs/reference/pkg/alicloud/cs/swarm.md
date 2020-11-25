@@ -2537,6 +2537,18 @@ Valid value:
 
 
 
+## Import
+
+
+Swarm cluster can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:cs/swarm:Swarm foo cf123456789
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

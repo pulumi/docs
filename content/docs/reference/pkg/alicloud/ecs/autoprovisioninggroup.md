@@ -19,7 +19,7 @@ The config mapping supports the following:
 * `instance_type` - (Optional) The instance type of the Nth extended configurations of the launch template.
 * `max_price` - (Required) The maximum price of the instance type specified in the Nth extended configurations of the launch template.
 * `vswitch_id` - (Required) The ID of the VSwitch in the Nth extended configurations of the launch template.
-* `weighted_capacity` - (Optional) The weight of the instance type specified in the Nth extended configurations of the launch template.
+* `weighted_capacity` - (Required) The weight of the instance type specified in the Nth extended configurations of the launch template.
 * `priority` - (Optional) The priority of the instance type specified in the Nth extended configurations of the launch template. A value of 0 indicates the highest priority.
 
 {{% examples %}}
@@ -81,6 +81,8 @@ class MyStack : Stack
                 {
                     InstanceType = "ecs.n1.small",
                     VswitchId = defaultSwitch.Id,
+                    WeightedCapacity = "2",
+                    MaxPrice = "2",
                 },
             },
         });
@@ -165,8 +167,10 @@ func main() {
 			SpotTargetCapacity:       pulumi.String("2"),
 			LaunchTemplateConfigs: ecs.AutoProvisioningGroupLaunchTemplateConfigArray{
 				&ecs.AutoProvisioningGroupLaunchTemplateConfigArgs{
-					InstanceType: pulumi.String("ecs.n1.small"),
-					VswitchId:    defaultSwitch.ID(),
+					InstanceType:     pulumi.String("ecs.n1.small"),
+					VswitchId:        defaultSwitch.ID(),
+					WeightedCapacity: pulumi.String("2"),
+					MaxPrice:         pulumi.String("2"),
 				},
 			},
 		})
@@ -212,6 +216,8 @@ default_auto_provisioning_group = alicloud.ecs.AutoProvisioningGroup("defaultAut
     launch_template_configs=[alicloud.ecs.AutoProvisioningGroupLaunchTemplateConfigArgs(
         instance_type="ecs.n1.small",
         vswitch_id=default_switch.id,
+        weighted_capacity="2",
+        max_price="2",
     )])
 ```
 
@@ -254,6 +260,8 @@ const defaultAutoProvisioningGroup = new alicloud.ecs.AutoProvisioningGroup("def
     launchTemplateConfigs: [{
         instanceType: "ecs.n1.small",
         vswitchId: defaultSwitch.id,
+        weightedCapacity: "2",
+        maxPrice: "2",
     }],
 });
 ```
@@ -2512,6 +2520,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="weightedcapacity_csharp">
+<a href="#weightedcapacity_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="instancetype_csharp">
@@ -2526,16 +2544,6 @@ The following state arguments are supported:
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="weightedcapacity_csharp">
-<a href="#weightedcapacity_csharp" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -2569,6 +2577,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="weightedcapacity_go">
+<a href="#weightedcapacity_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="instancetype_go">
@@ -2583,16 +2601,6 @@ The following state arguments are supported:
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="weightedcapacity_go">
-<a href="#weightedcapacity_go" style="color: inherit; text-decoration: inherit;">Weighted<wbr>Capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -2626,6 +2634,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="weightedcapacity_nodejs">
+<a href="#weightedcapacity_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="instancetype_nodejs">
@@ -2640,16 +2658,6 @@ The following state arguments are supported:
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="weightedcapacity_nodejs">
-<a href="#weightedcapacity_nodejs" style="color: inherit; text-decoration: inherit;">weighted<wbr>Capacity</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -2683,6 +2691,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span id="weighted_capacity_python">
+<a href="#weighted_capacity_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>capacity</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span id="instance_type_python">
@@ -2703,16 +2721,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="weighted_capacity_python">
-<a href="#weighted_capacity_python" style="color: inherit; text-decoration: inherit;">weighted_<wbr>capacity</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2720,6 +2728,18 @@ The following state arguments are supported:
 
 
 
+
+
+
+
+## Import
+
+
+ECS auto provisioning group can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:ecs/autoProvisioningGroup:AutoProvisioningGroup example asg-abc123456
+```
 
 
 

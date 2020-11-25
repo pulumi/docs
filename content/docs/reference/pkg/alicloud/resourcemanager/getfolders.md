@@ -16,6 +16,7 @@ This data source provides the resource manager folders of the current Alibaba Cl
 
 > **NOTE:**  You can view only the information of the first-level child folders of the specified folder.
 
+
 {{% examples %}}
 ## Example Usage
 

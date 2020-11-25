@@ -12,6 +12,7 @@ meta_desc: "Explore the GetNetworks function of the vpc module, including exampl
 
 This data source provides VPCs available to the user.
 
+
 {{% examples %}}
 ## Example Usage
 

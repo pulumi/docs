@@ -3778,6 +3778,18 @@ The multiple zone ID can be retrieved by setting `multi` to "true" in the data s
 
 
 
+## Import
+
+
+RDS instance can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:rds/instance:Instance example rm-abc12345678
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

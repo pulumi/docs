@@ -1534,6 +1534,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+DdosCoo Scheduler Rule can be imported using the id or the rule name, e.g.
+
+```sh
+ $ pulumi import alicloud:ddos/schedulerRule:SchedulerRule example fbb20dc77e8fc******
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

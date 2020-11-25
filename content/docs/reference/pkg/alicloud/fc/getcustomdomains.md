@@ -14,6 +14,7 @@ This data source provides the Function Compute custom domains of the current Ali
 
 > **NOTE:** Available in 1.98.0+
 
+
 {{% examples %}}
 ## Example Usage
 

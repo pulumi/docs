@@ -12,6 +12,7 @@ meta_desc: "Explore the GetQueues function of the mns module, including examples
 
 This data source provides a list of MNS queues in an Alibaba Cloud account according to the specified parameters.
 
+
 {{% examples %}}
 ## Example Usage
 

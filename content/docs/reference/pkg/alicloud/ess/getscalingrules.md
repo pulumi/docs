@@ -12,6 +12,7 @@ meta_desc: "Explore the GetScalingRules function of the ess module, including ex
 
 This data source provides available scaling rule resources.
 
+
 {{% examples %}}
 ## Example Usage
 

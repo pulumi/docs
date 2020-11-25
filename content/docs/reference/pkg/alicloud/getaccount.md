@@ -12,6 +12,7 @@ meta_desc: "Explore the GetAccount function of the AliCloud package, including e
 
 This data source provides information about the current account.
 
+
 {{% examples %}}
 ## Example Usage
 

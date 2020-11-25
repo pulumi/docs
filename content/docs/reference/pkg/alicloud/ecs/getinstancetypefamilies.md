@@ -14,6 +14,7 @@ This data source provides the ECS instance type families of Alibaba Cloud.
 
 > **NOTE:** Available in 1.54.0+
 
+
 {{% examples %}}
 ## Example Usage
 

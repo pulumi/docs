@@ -16,6 +16,7 @@ This data source provides available alarm resources.
 
 
 
+
 ## Using GetAlarms {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

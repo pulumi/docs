@@ -12,6 +12,7 @@ meta_desc: "Explore the GetListeners function of the slb module, including examp
 
 This data source provides the listeners related to a server load balancer of the current Alibaba Cloud user.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the InstanceAttachment resource of the ots module, including
 
 This resource will help you to bind a VPC to an OTS instance.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -977,6 +978,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

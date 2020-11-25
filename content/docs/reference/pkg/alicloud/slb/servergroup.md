@@ -1047,6 +1047,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Load balancer backend server group can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:slb/serverGroup:ServerGroup example abc123456
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

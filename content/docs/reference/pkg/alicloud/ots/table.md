@@ -1334,6 +1334,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+OTS table can be imported using id, e.g.
+
+```sh
+ $ pulumi import alicloud:ots/table:Table table "my-ots:ots_table"
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

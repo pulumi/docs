@@ -851,6 +851,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Network Interfaces Attachment resource can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:vpc/networkInterfaceAttachment:NetworkInterfaceAttachment eni eni-abc123456789000:i-abc123456789000
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

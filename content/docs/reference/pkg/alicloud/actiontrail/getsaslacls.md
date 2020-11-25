@@ -14,6 +14,7 @@ This data source provides a list of ALIKAFKA Sasl acls in an Alibaba Cloud accou
 
 > **NOTE:** Available in 1.66.0+
 
+
 {{% examples %}}
 ## Example Usage
 

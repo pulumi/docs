@@ -14,6 +14,7 @@ This data source provides the RDS instance classes resource available info of Al
 
 > **NOTE:** Available in v1.46.0+
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -1953,6 +1953,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+ALIKAFKA TOPIC can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:alikafka/instance:Instance instance alikafka_post-cn-123455abc
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

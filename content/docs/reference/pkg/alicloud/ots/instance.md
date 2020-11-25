@@ -1002,6 +1002,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+OTS instance can be imported using instance id or name, e.g.
+
+```sh
+ $ pulumi import alicloud:ots/instance:Instance foo "my-ots-instance"
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

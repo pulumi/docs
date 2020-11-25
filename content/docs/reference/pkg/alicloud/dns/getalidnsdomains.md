@@ -14,6 +14,7 @@ This data source provides a list of Alidns Domains in an Alibaba Cloud account a
 
 > **NOTE:**  Available in 1.95.0+.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -1167,6 +1167,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Key pair can be imported using the name, e.g.
+
+```sh
+ $ pulumi import alicloud:ecs/keyPair:KeyPair example my_public_key
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

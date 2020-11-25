@@ -12,6 +12,7 @@ meta_desc: "Explore the GetGroups function of the apigateway module, including e
 
 This data source provides the api groups of the current Alibaba Cloud user.
 
+
 {{% examples %}}
 ## Example Usage
 

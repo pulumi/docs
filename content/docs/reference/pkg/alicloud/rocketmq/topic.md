@@ -1220,6 +1220,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+ONS TOPIC can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:rocketmq/topic:Topic topic MQ_INST_1234567890_Baso1234567:onsTopicDemo
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

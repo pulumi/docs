@@ -14,6 +14,7 @@ This data source provides a list of EDAS application in an Alibaba Cloud account
 
 > **NOTE:** Available in 1.82.0+
 
+
 {{% examples %}}
 ## Example Usage
 

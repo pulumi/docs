@@ -16,6 +16,7 @@ For information about API Gateway and how to use it, see [What is API Gateway](h
 
 > **NOTE:** Available in v1.96.0+
 
+
 {{% examples %}}
 ## Example Usage
 

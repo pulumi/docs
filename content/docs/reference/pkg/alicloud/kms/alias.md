@@ -728,6 +728,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+KMS alias can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:kms/alias:Alias example alias/test_kms_alias
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

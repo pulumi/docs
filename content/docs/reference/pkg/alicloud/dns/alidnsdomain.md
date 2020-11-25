@@ -1453,6 +1453,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Alidns domain can be imported using the id or domain name, e.g.
+
+```sh
+ $ pulumi import alicloud:dns/alidnsDomain:AlidnsDomain example aliyun.com
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

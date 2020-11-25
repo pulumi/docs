@@ -1267,6 +1267,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+ONS INSTANCE can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:rocketmq/instance:Instance instance MQ_INST_1234567890_Baso1234567
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

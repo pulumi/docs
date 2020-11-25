@@ -2042,6 +2042,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+OOS Template can be imported using the id or template_name, e.g.
+
+```sh
+ $ pulumi import alicloud:oos/template:Template example template_name
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

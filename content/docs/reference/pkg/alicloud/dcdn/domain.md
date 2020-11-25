@@ -2111,6 +2111,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+DCDN Domain can be imported using the id or DCDN Domain name, e.g.
+
+```sh
+ $ pulumi import alicloud:dcdn/domain:Domain example example.com
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetCaCertificates function of the slb module, including 
 
 This data source provides the CA certificate list.
 
+
 {{% examples %}}
 ## Example Usage
 

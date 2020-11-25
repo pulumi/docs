@@ -2586,6 +2586,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Cassandra cluster can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:cassandra/cluster:Cluster example cds-wz9sr400dd7xxxxx
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

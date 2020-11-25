@@ -12,6 +12,7 @@ meta_desc: "Explore the GetScalingGroups function of the ess module, including e
 
 This data source provides available scaling group resources.
 
+
 {{% examples %}}
 ## Example Usage
 

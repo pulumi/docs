@@ -12,6 +12,7 @@ meta_desc: "Explore the RoleAttachment resource of the ram module, including exa
 
 Provides a RAM role attachment resource to bind role for several ECS instances.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -886,6 +887,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the GetRegions function of the AliCloud package, including e
 
 This data source provides Alibaba Cloud regions.
 
+
 {{% examples %}}
 ## Example Usage
 

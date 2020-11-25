@@ -1251,6 +1251,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+The Sag ClientUser can be imported using the name, e.g.
+
+```sh
+ $ pulumi import alicloud:rocketmq/clientUser:ClientUser example sag-abc123456:tf-username-abc123456
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

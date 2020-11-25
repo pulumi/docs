@@ -14,6 +14,7 @@ This data source provides the master slave server groups related to a server loa
 
 > **NOTE:** Available in 1.54.0+
 
+
 {{% examples %}}
 ## Example Usage
 

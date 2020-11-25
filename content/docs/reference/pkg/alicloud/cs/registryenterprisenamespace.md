@@ -903,6 +903,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Container Registry Enterprise Edition namespace can be imported using the `{instance_id}:{namespace}`, e.g.
+
+```sh
+ $ pulumi import alicloud:cs/registryEnterpriseNamespace:RegistryEnterpriseNamespace default cri-xxx:my-namespace
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

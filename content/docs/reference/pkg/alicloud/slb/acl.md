@@ -1203,6 +1203,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+Server Load balancer access control list can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:slb/acl:Acl example acl-abc123456
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

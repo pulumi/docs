@@ -12,6 +12,7 @@ meta_desc: "Explore the GetApps function of the apigateway module, including exa
 
 This data source provides the apps of the current Alibaba Cloud user.
 
+
 {{% examples %}}
 ## Example Usage
 

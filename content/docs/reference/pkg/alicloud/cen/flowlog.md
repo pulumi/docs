@@ -1143,6 +1143,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+CEN flowlog can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:cen/flowLog:FlowLog default flowlog-tig1xxxxxx
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

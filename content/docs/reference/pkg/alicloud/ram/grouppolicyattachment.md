@@ -904,6 +904,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+RAM Group Policy attachment can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:ram/groupPolicyAttachment:GroupPolicyAttachment example group:my-policy:Custom:my-group
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

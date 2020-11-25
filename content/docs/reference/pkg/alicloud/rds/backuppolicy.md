@@ -2318,6 +2318,18 @@ The following state arguments are supported:
 
 
 
+## Import
+
+
+RDS backup policy can be imported using the id or instance id, e.g.
+
+```sh
+ $ pulumi import alicloud:rds/backupPolicy:BackupPolicy example "rm-12345678"
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>

@@ -14,6 +14,7 @@ This data source provides a list Container Registry Enterprise Edition sync rule
 
 > **NOTE:** Available in v1.90.0+
 
+
 {{% examples %}}
 ## Example Usage
 

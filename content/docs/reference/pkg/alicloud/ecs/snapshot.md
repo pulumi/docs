@@ -1004,6 +1004,18 @@ It cannot start with auto, because snapshot names starting with auto are recogni
 
 
 
+## Import
+
+
+Snapshot can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:ecs/snapshot:Snapshot snapshot s-abc1234567890000
+```
+
+
+
+
 <h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
