@@ -397,6 +397,28 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="signingjobarn_csharp">
+<a href="#signingjobarn_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Job<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of a signing job.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="signingprofileversionarn_csharp">
+<a href="#signingprofileversionarn_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Profile<wbr>Version<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for a signing profile version.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="sourcecodehash_csharp">
 <a href="#sourcecodehash_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Code<wbr>Hash</a>
 </span> 
@@ -530,6 +552,28 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}License info associated with the specific Lambda Layer version.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="signingjobarn_go">
+<a href="#signingjobarn_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Job<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of a signing job.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="signingprofileversionarn_go">
+<a href="#signingprofileversionarn_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Profile<wbr>Version<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for a signing profile version.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -671,6 +715,28 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="signingjobarn_nodejs">
+<a href="#signingjobarn_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Job<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of a signing job.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="signingprofileversionarn_nodejs">
+<a href="#signingprofileversionarn_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Profile<wbr>Version<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for a signing profile version.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="sourcecodehash_nodejs">
 <a href="#sourcecodehash_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Code<wbr>Hash</a>
 </span> 
@@ -804,6 +870,28 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}License info associated with the specific Lambda Layer version.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="signing_job_arn_python">
+<a href="#signing_job_arn_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>job_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of a signing job.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="signing_profile_version_arn_python">
+<a href="#signing_profile_version_arn_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>profile_<wbr>version_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for a signing profile version.
 {{% /md %}}</dd>
 
     <dt class="property-"

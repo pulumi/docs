@@ -756,6 +756,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="firewallstatuses_csharp">
+<a href="#firewallstatuses_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallfirewallstatus">List&lt;Firewall<wbr>Firewall<wbr>Status&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Nested list of information about the current status of the firewall.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -791,6 +802,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the firewall.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="firewallstatuses_go">
+<a href="#firewallstatuses_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallfirewallstatus">[]Firewall<wbr>Firewall<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}Nested list of information about the current status of the firewall.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -834,6 +856,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="firewallstatuses_nodejs">
+<a href="#firewallstatuses_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallfirewallstatus">Firewall<wbr>Firewall<wbr>Status[]</a></span>
+    </dt>
+    <dd>{{% md %}}Nested list of information about the current status of the firewall.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -869,6 +902,17 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the firewall.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="firewall_statuses_python">
+<a href="#firewall_statuses_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallfirewallstatus">Sequence[Firewall<wbr>Firewall<wbr>Status]</a></span>
+    </dt>
+    <dd>{{% md %}}Nested list of information about the current status of the firewall.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -912,7 +956,7 @@ Get an existing Firewall resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_policy_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_policy_change_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_change_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">subnet_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallSubnetMappingArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">update_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Firewall</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">delete_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_policy_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">firewall_policy_change_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">firewall_statuses</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallFirewallStatusArgs]]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_change_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">subnet_mappings</span><span class="p">:</span> <span class="nx">Optional[Sequence[FirewallSubnetMappingArgs]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">update_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Firewall</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1083,6 +1127,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_firewallstatuses_csharp">
+<a href="#state_firewallstatuses_csharp" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallfirewallstatus">List&lt;Firewall<wbr>Firewall<wbr>Status<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Nested list of information about the current status of the firewall.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -1207,6 +1262,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}A boolean flag indicating whether it is possible to change the associated firewall policy. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_firewallstatuses_go">
+<a href="#state_firewallstatuses_go" style="color: inherit; text-decoration: inherit;">Firewall<wbr>Statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallfirewallstatus">[]Firewall<wbr>Firewall<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}Nested list of information about the current status of the firewall.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1339,6 +1405,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_firewallstatuses_nodejs">
+<a href="#state_firewallstatuses_nodejs" style="color: inherit; text-decoration: inherit;">firewall<wbr>Statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallfirewallstatus">Firewall<wbr>Firewall<wbr>Status[]</a></span>
+    </dt>
+    <dd>{{% md %}}Nested list of information about the current status of the firewall.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -1467,6 +1544,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_firewall_statuses_python">
+<a href="#state_firewall_statuses_python" style="color: inherit; text-decoration: inherit;">firewall_<wbr>statuses</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallfirewallstatus">Sequence[Firewall<wbr>Firewall<wbr>Status<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Nested list of information about the current status of the firewall.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -1544,6 +1632,364 @@ The following state arguments are supported:
 
 
 ## Supporting Types
+
+
+<h4 id="firewallfirewallstatus">Firewall<wbr>Firewall<wbr>Status</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirewallFirewallStatus">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#FirewallFirewallStatusOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.FirewallFirewallStatus.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncstates_csharp">
+<a href="#syncstates_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>States</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallfirewallstatussyncstate">List&lt;Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Set of subnets configured for use by the firewall.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncstates_go">
+<a href="#syncstates_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>States</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallfirewallstatussyncstate">[]Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State</a></span>
+    </dt>
+    <dd>{{% md %}}Set of subnets configured for use by the firewall.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncstates_nodejs">
+<a href="#syncstates_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>States</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallfirewallstatussyncstate">Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State[]</a></span>
+    </dt>
+    <dd>{{% md %}}Set of subnets configured for use by the firewall.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sync_states_python">
+<a href="#sync_states_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>states</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallfirewallstatussyncstate">Sequence[Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Set of subnets configured for use by the firewall.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="firewallfirewallstatussyncstate">Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirewallFirewallStatusSyncState">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#FirewallFirewallStatusSyncStateOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.FirewallFirewallStatusSyncState.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="attachments_csharp">
+<a href="#attachments_csharp" style="color: inherit; text-decoration: inherit;">Attachments</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallfirewallstatussyncstateattachment">List&lt;Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State<wbr>Attachment<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Nested list describing the attachment status of the firewall's association with a single VPC subnet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="availabilityzone_csharp">
+<a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Availability Zone where the subnet is configured.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="attachments_go">
+<a href="#attachments_go" style="color: inherit; text-decoration: inherit;">Attachments</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallfirewallstatussyncstateattachment">[]Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State<wbr>Attachment</a></span>
+    </dt>
+    <dd>{{% md %}}Nested list describing the attachment status of the firewall's association with a single VPC subnet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="availabilityzone_go">
+<a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Availability Zone where the subnet is configured.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="attachments_nodejs">
+<a href="#attachments_nodejs" style="color: inherit; text-decoration: inherit;">attachments</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallfirewallstatussyncstateattachment">Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State<wbr>Attachment[]</a></span>
+    </dt>
+    <dd>{{% md %}}Nested list describing the attachment status of the firewall's association with a single VPC subnet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="availabilityzone_nodejs">
+<a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Availability Zone where the subnet is configured.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="attachments_python">
+<a href="#attachments_python" style="color: inherit; text-decoration: inherit;">attachments</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firewallfirewallstatussyncstateattachment">Sequence[Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State<wbr>Attachment<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Nested list describing the attachment status of the firewall's association with a single VPC subnet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="availability_zone_python">
+<a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Availability Zone where the subnet is configured.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="firewallfirewallstatussyncstateattachment">Firewall<wbr>Firewall<wbr>Status<wbr>Sync<wbr>State<wbr>Attachment</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirewallFirewallStatusSyncStateAttachment">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/networkfirewall?tab=doc#FirewallFirewallStatusSyncStateAttachmentOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.NetworkFirewall.Outputs.FirewallFirewallStatusSyncStateAttachment.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpointid_csharp">
+<a href="#endpointid_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identifier of the firewall endpoint that AWS Network Firewall has instantiated in the subnet. You use this to identify the firewall endpoint in the VPC route tables, when you redirect the VPC traffic through the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique identifier for the subnet.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpointid_go">
+<a href="#endpointid_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identifier of the firewall endpoint that AWS Network Firewall has instantiated in the subnet. You use this to identify the firewall endpoint in the VPC route tables, when you redirect the VPC traffic through the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique identifier for the subnet.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpointid_nodejs">
+<a href="#endpointid_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The identifier of the firewall endpoint that AWS Network Firewall has instantiated in the subnet. You use this to identify the firewall endpoint in the VPC route tables, when you redirect the VPC traffic through the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The unique identifier for the subnet.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endpoint_id_python">
+<a href="#endpoint_id_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The identifier of the firewall endpoint that AWS Network Firewall has instantiated in the subnet. You use this to identify the firewall endpoint in the VPC route tables, when you redirect the VPC traffic through the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The unique identifier for the subnet.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="firewallsubnetmapping">Firewall<wbr>Subnet<wbr>Mapping</h4>

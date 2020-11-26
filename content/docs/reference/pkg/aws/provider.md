@@ -2813,6 +2813,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="signer_csharp">
+<a href="#signer_csharp" style="color: inherit; text-decoration: inherit;">Signer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sns_csharp">
 <a href="#sns_csharp" style="color: inherit; text-decoration: inherit;">Sns</a>
 </span> 
@@ -4272,6 +4282,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="shield_go">
 <a href="#shield_go" style="color: inherit; text-decoration: inherit;">Shield</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signer_go">
+<a href="#signer_go" style="color: inherit; text-decoration: inherit;">Signer</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -5747,6 +5767,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="signer_nodejs">
+<a href="#signer_nodejs" style="color: inherit; text-decoration: inherit;">signer</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="sns_nodejs">
 <a href="#sns_nodejs" style="color: inherit; text-decoration: inherit;">sns</a>
 </span> 
@@ -7206,6 +7236,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="shield_python">
 <a href="#shield_python" style="color: inherit; text-decoration: inherit;">shield</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signer_python">
+<a href="#signer_python" style="color: inherit; text-decoration: inherit;">signer</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

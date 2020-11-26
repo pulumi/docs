@@ -776,6 +776,170 @@ const frontEndListener = new aws.lb.Listener("frontEndListener", {
 
 {{% /example %}}
 
+### Gateway Load Balancer Listener
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleLoadBalancer = new Aws.LB.LoadBalancer("exampleLoadBalancer", new Aws.LB.LoadBalancerArgs
+        {
+            LoadBalancerType = "gateway",
+            SubnetMappings = 
+            {
+                new Aws.LB.Inputs.LoadBalancerSubnetMappingArgs
+                {
+                    SubnetId = aws_subnet.Example.Id,
+                },
+            },
+        });
+        var exampleTargetGroup = new Aws.LB.TargetGroup("exampleTargetGroup", new Aws.LB.TargetGroupArgs
+        {
+            Port = 6081,
+            Protocol = "GENEVE",
+            VpcId = aws_vpc.Example.Id,
+            HealthCheck = new Aws.LB.Inputs.TargetGroupHealthCheckArgs
+            {
+                Port = "80",
+                Protocol = "HTTP",
+            },
+        });
+        var exampleListener = new Aws.LB.Listener("exampleListener", new Aws.LB.ListenerArgs
+        {
+            LoadBalancerArn = exampleLoadBalancer.Id,
+            DefaultActions = 
+            {
+                new Aws.LB.Inputs.ListenerDefaultActionArgs
+                {
+                    TargetGroupArn = exampleTargetGroup.Id,
+                    Type = "forward",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/lb"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleLoadBalancer, err := lb.NewLoadBalancer(ctx, "exampleLoadBalancer", &lb.LoadBalancerArgs{
+			LoadBalancerType: pulumi.String("gateway"),
+			SubnetMappings: lb.LoadBalancerSubnetMappingArray{
+				&lb.LoadBalancerSubnetMappingArgs{
+					SubnetId: pulumi.Any(aws_subnet.Example.Id),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		exampleTargetGroup, err := lb.NewTargetGroup(ctx, "exampleTargetGroup", &lb.TargetGroupArgs{
+			Port:     pulumi.Int(6081),
+			Protocol: pulumi.String("GENEVE"),
+			VpcId:    pulumi.Any(aws_vpc.Example.Id),
+			HealthCheck: &lb.TargetGroupHealthCheckArgs{
+				Port:     pulumi.String("80"),
+				Protocol: pulumi.String("HTTP"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = lb.NewListener(ctx, "exampleListener", &lb.ListenerArgs{
+			LoadBalancerArn: exampleLoadBalancer.ID(),
+			DefaultActions: lb.ListenerDefaultActionArray{
+				&lb.ListenerDefaultActionArgs{
+					TargetGroupArn: exampleTargetGroup.ID(),
+					Type:           pulumi.String("forward"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_load_balancer = aws.lb.LoadBalancer("exampleLoadBalancer",
+    load_balancer_type="gateway",
+    subnet_mappings=[aws.lb.LoadBalancerSubnetMappingArgs(
+        subnet_id=aws_subnet["example"]["id"],
+    )])
+example_target_group = aws.lb.TargetGroup("exampleTargetGroup",
+    port=6081,
+    protocol="GENEVE",
+    vpc_id=aws_vpc["example"]["id"],
+    health_check=aws.lb.TargetGroupHealthCheckArgs(
+        port="80",
+        protocol="HTTP",
+    ))
+example_listener = aws.lb.Listener("exampleListener",
+    load_balancer_arn=example_load_balancer.id,
+    default_actions=[aws.lb.ListenerDefaultActionArgs(
+        target_group_arn=example_target_group.id,
+        type="forward",
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleLoadBalancer = new aws.lb.LoadBalancer("exampleLoadBalancer", {
+    loadBalancerType: "gateway",
+    subnetMappings: [{
+        subnetId: aws_subnet.example.id,
+    }],
+});
+const exampleTargetGroup = new aws.lb.TargetGroup("exampleTargetGroup", {
+    port: 6081,
+    protocol: "GENEVE",
+    vpcId: aws_vpc.example.id,
+    healthCheck: {
+        port: 80,
+        protocol: "HTTP",
+    },
+});
+const exampleListener = new aws.lb.Listener("exampleListener", {
+    loadBalancerArn: exampleLoadBalancer.id,
+    defaultActions: [{
+        targetGroupArn: exampleTargetGroup.id,
+        type: "forward",
+    }],
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -982,17 +1146,6 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The ARN of the load balancer.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="port_csharp">
-<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certificatearn_csharp">
@@ -1006,13 +1159,24 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="port_csharp">
+<a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The port on which the load balancer is listening. Not valid for Gateway Load Balancers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The protocol for connections from clients to the load balancer. Valid values are `TCP`, `TLS`, `UDP`, `TCP_UDP`, `HTTP` and `HTTPS`. Defaults to `HTTP`.
+    <dd>{{% md %}}The protocol for connections from clients to the load balancer. For Application Load Balancers, valid values are `HTTP` and `HTTPS`, with a default of `HTTP`. For Network Load Balancers, valid values are `TCP`, `TLS`, `UDP`, and `TCP_UDP`. Not valid to use `UDP` or `TCP_UDP` if dual-stack mode is enabled. Not valid for Gateway Load Balancers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1055,17 +1219,6 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The ARN of the load balancer.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="port_go">
-<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certificatearn_go">
@@ -1079,13 +1232,24 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="port_go">
+<a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The port on which the load balancer is listening. Not valid for Gateway Load Balancers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The protocol for connections from clients to the load balancer. Valid values are `TCP`, `TLS`, `UDP`, `TCP_UDP`, `HTTP` and `HTTPS`. Defaults to `HTTP`.
+    <dd>{{% md %}}The protocol for connections from clients to the load balancer. For Application Load Balancers, valid values are `HTTP` and `HTTPS`, with a default of `HTTP`. For Network Load Balancers, valid values are `TCP`, `TLS`, `UDP`, and `TCP_UDP`. Not valid to use `UDP` or `TCP_UDP` if dual-stack mode is enabled. Not valid for Gateway Load Balancers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1128,17 +1292,6 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The ARN of the load balancer.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="port_nodejs">
-<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certificatearn_nodejs">
@@ -1152,13 +1305,24 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="port_nodejs">
+<a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The port on which the load balancer is listening. Not valid for Gateway Load Balancers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The protocol for connections from clients to the load balancer. Valid values are `TCP`, `TLS`, `UDP`, `TCP_UDP`, `HTTP` and `HTTPS`. Defaults to `HTTP`.
+    <dd>{{% md %}}The protocol for connections from clients to the load balancer. For Application Load Balancers, valid values are `HTTP` and `HTTPS`, with a default of `HTTP`. For Network Load Balancers, valid values are `TCP`, `TLS`, `UDP`, and `TCP_UDP`. Not valid to use `UDP` or `TCP_UDP` if dual-stack mode is enabled. Not valid for Gateway Load Balancers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1201,17 +1365,6 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The ARN of the load balancer.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span id="port_python">
-<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
-    </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certificate_arn_python">
@@ -1225,13 +1378,24 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="port_python">
+<a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}The port on which the load balancer is listening. Not valid for Gateway Load Balancers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The protocol for connections from clients to the load balancer. Valid values are `TCP`, `TLS`, `UDP`, `TCP_UDP`, `HTTP` and `HTTPS`. Defaults to `HTTP`.
+    <dd>{{% md %}}The protocol for connections from clients to the load balancer. For Application Load Balancers, valid values are `HTTP` and `HTTPS`, with a default of `HTTP`. For Network Load Balancers, valid values are `TCP`, `TLS`, `UDP`, and `TCP_UDP`. Not valid to use `UDP` or `TCP_UDP` if dual-stack mode is enabled. Not valid for Gateway Load Balancers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1554,7 +1718,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening.
+    <dd>{{% md %}}The port on which the load balancer is listening. Not valid for Gateway Load Balancers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1565,7 +1729,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The protocol for connections from clients to the load balancer. Valid values are `TCP`, `TLS`, `UDP`, `TCP_UDP`, `HTTP` and `HTTPS`. Defaults to `HTTP`.
+    <dd>{{% md %}}The protocol for connections from clients to the load balancer. For Application Load Balancers, valid values are `HTTP` and `HTTPS`, with a default of `HTTP`. For Network Load Balancers, valid values are `TCP`, `TLS`, `UDP`, and `TCP_UDP`. Not valid to use `UDP` or `TCP_UDP` if dual-stack mode is enabled. Not valid for Gateway Load Balancers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1638,7 +1802,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening.
+    <dd>{{% md %}}The port on which the load balancer is listening. Not valid for Gateway Load Balancers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1649,7 +1813,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The protocol for connections from clients to the load balancer. Valid values are `TCP`, `TLS`, `UDP`, `TCP_UDP`, `HTTP` and `HTTPS`. Defaults to `HTTP`.
+    <dd>{{% md %}}The protocol for connections from clients to the load balancer. For Application Load Balancers, valid values are `HTTP` and `HTTPS`, with a default of `HTTP`. For Network Load Balancers, valid values are `TCP`, `TLS`, `UDP`, and `TCP_UDP`. Not valid to use `UDP` or `TCP_UDP` if dual-stack mode is enabled. Not valid for Gateway Load Balancers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1722,7 +1886,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening.
+    <dd>{{% md %}}The port on which the load balancer is listening. Not valid for Gateway Load Balancers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1733,7 +1897,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The protocol for connections from clients to the load balancer. Valid values are `TCP`, `TLS`, `UDP`, `TCP_UDP`, `HTTP` and `HTTPS`. Defaults to `HTTP`.
+    <dd>{{% md %}}The protocol for connections from clients to the load balancer. For Application Load Balancers, valid values are `HTTP` and `HTTPS`, with a default of `HTTP`. For Network Load Balancers, valid values are `TCP`, `TLS`, `UDP`, and `TCP_UDP`. Not valid to use `UDP` or `TCP_UDP` if dual-stack mode is enabled. Not valid for Gateway Load Balancers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1806,7 +1970,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening.
+    <dd>{{% md %}}The port on which the load balancer is listening. Not valid for Gateway Load Balancers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1817,7 +1981,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The protocol for connections from clients to the load balancer. Valid values are `TCP`, `TLS`, `UDP`, `TCP_UDP`, `HTTP` and `HTTPS`. Defaults to `HTTP`.
+    <dd>{{% md %}}The protocol for connections from clients to the load balancer. For Application Load Balancers, valid values are `HTTP` and `HTTPS`, with a default of `HTTP`. For Network Load Balancers, valid values are `TCP`, `TLS`, `UDP`, and `TCP_UDP`. Not valid to use `UDP` or `TCP_UDP` if dual-stack mode is enabled. Not valid for Gateway Load Balancers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
