@@ -14,6 +14,7 @@ Explore the resources and functions of the cms module in the AliCloud package.
     <li><a href="alarm" title="Alarm"><span class="symbol resource"></span>Alarm</a></li>
     <li><a href="alarmcontact" title="AlarmContact"><span class="symbol resource"></span>AlarmContact</a></li>
     <li><a href="alarmcontactgroup" title="AlarmContactGroup"><span class="symbol resource"></span>AlarmContactGroup</a></li>
+    <li><a href="groupmetricrule" title="GroupMetricRule"><span class="symbol resource"></span>GroupMetricRule</a></li>
     <li><a href="sitemonitor" title="SiteMonitor"><span class="symbol resource"></span>SiteMonitor</a></li>
 </ul>
 
@@ -21,6 +22,7 @@ Explore the resources and functions of the cms module in the AliCloud package.
 <ul class="api">
     <li><a href="getalarmcontactgroups" title="GetAlarmContactGroups"><span class="symbol function"></span>GetAlarmContactGroups</a></li>
     <li><a href="getalarmcontacts" title="GetAlarmContacts"><span class="symbol function"></span>GetAlarmContacts</a></li>
+    <li><a href="getgroupmetricrules" title="GetGroupMetricRules"><span class="symbol function"></span>GetGroupMetricRules</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -32,7 +34,7 @@ Explore the resources and functions of the cms module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.25.1</dd>
+	<dd>2.26.0</dd>
 </dl>
 
 
