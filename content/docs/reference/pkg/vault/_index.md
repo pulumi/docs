@@ -14,6 +14,7 @@ A Pulumi package for creating and managing vault cloud resources.
 
 <h2 id="modules">Modules</h2>
 <ul class="api">
+    <li><a href="ad/" title="ad"><span class="symbol module"></span>ad</a></li>
     <li><a href="alicloud/" title="alicloud"><span class="symbol module"></span>alicloud</a></li>
     <li><a href="approle/" title="appRole"><span class="symbol module"></span>appRole</a></li>
     <li><a href="aws/" title="aws"><span class="symbol module"></span>aws</a></li>
@@ -67,7 +68,7 @@ A Pulumi package for creating and managing vault cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 	<dt>Version</dt>
-	<dd>3.0.2</dd>
+	<dd>3.1.0</dd>
 </dl>
 
 

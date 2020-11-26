@@ -25,7 +25,7 @@ Explore the resources and functions of the ldap module in the Vault package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 	<dt>Version</dt>
-	<dd>3.0.2</dd>
+	<dd>3.1.0</dd>
 </dl>
 
 
