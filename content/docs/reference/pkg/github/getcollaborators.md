@@ -12,6 +12,7 @@ meta_desc: "Explore the GetCollaborators function of the GitHub package, includi
 
 Use this data source to retrieve the collaborators for a given repository.
 
+
 {{% examples %}}
 ## Example Usage
 

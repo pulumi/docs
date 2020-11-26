@@ -12,6 +12,7 @@ meta_desc: "Explore the OrganizationBlock resource of the GitHub package, includ
 
 This resource allows you to create and manage blocks for GitHub organizations.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -693,6 +694,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the UserInvitationAccepter resource of the GitHub package, i
 
 Provides a resource to manage GitHub repository collaborator invitations.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -665,6 +666,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

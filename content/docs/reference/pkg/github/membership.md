@@ -16,6 +16,7 @@ This resource allows you to add/remove users from your organization. When applie
 an invitation will be sent to the user to become part of the organization. When
 destroyed, either the invitation will be cancelled or the user will be removed.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -801,6 +802,8 @@ Must be one of `member` or `admin`. Defaults to `member`.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

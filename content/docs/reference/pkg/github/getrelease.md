@@ -12,6 +12,7 @@ meta_desc: "Explore the GetRelease function of the GitHub package, including exa
 
 Use this data source to retrieve information about a GitHub release in a specific repository.
 
+
 {{% examples %}}
 ## Example Usage
 

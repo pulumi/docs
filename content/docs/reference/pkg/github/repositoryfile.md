@@ -13,6 +13,7 @@ meta_desc: "Explore the RepositoryFile resource of the GitHub package, including
 This resource allows you to create and manage files within a
 GitHub repository.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1367,6 +1368,8 @@ The branch must already exist, it will not be created if it does not already exi
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

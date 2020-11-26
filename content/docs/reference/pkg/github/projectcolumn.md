@@ -12,6 +12,7 @@ meta_desc: "Explore the ProjectColumn resource of the GitHub package, including 
 
 This resource allows you to create and manage columns for GitHub projects.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -795,6 +796,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
