@@ -31,7 +31,7 @@ Explore the resources and functions of the cloudformation module in the AWS pack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.14.0</dd>
+	<dd>3.15.0</dd>
 </dl>
 
 

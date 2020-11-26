@@ -464,6 +464,93 @@ const exampleDirectoryservice_directoryDirectory = new aws.directoryservice.Dire
 
 {{% /example %}}
 
+### IP Groups
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var exampleIpGroup = new Aws.Workspaces.IpGroup("exampleIpGroup", new Aws.Workspaces.IpGroupArgs
+        {
+        });
+        var exampleDirectory = new Aws.Workspaces.Directory("exampleDirectory", new Aws.Workspaces.DirectoryArgs
+        {
+            DirectoryId = aws_directory_service_directory.Example.Id,
+            IpGroupIds = 
+            {
+                exampleIpGroup.Id,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		exampleIpGroup, err := workspaces.NewIpGroup(ctx, "exampleIpGroup", nil)
+		if err != nil {
+			return err
+		}
+		_, err = workspaces.NewDirectory(ctx, "exampleDirectory", &workspaces.DirectoryArgs{
+			DirectoryId: pulumi.Any(aws_directory_service_directory.Example.Id),
+			IpGroupIds: pulumi.StringArray{
+				exampleIpGroup.ID(),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+example_ip_group = aws.workspaces.IpGroup("exampleIpGroup")
+example_directory = aws.workspaces.Directory("exampleDirectory",
+    directory_id=aws_directory_service_directory["example"]["id"],
+    ip_group_ids=[example_ip_group.id])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleIpGroup = new aws.workspaces.IpGroup("exampleIpGroup", {});
+const exampleDirectory = new aws.workspaces.Directory("exampleDirectory", {
+    directoryId: aws_directory_service_directory.example.id,
+    ipGroupIds: [exampleIpGroup.id],
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -476,7 +563,7 @@ const exampleDirectoryservice_directoryDirectory = new aws.directoryservice.Dire
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/workspaces/#pulumi_aws.workspaces.Directory">Directory</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_service_permissions</span><span class="p">:</span> <span class="nx">Optional[DirectorySelfServicePermissionsArgs]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">workspace_creation_properties</span><span class="p">:</span> <span class="nx">Optional[DirectoryWorkspaceCreationPropertiesArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/workspaces/#pulumi_aws.workspaces.Directory">Directory</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">self_service_permissions</span><span class="p">:</span> <span class="nx">Optional[DirectorySelfServicePermissionsArgs]</span> = None<span class="p">, </span><span class="nx">subnet_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">workspace_creation_properties</span><span class="p">:</span> <span class="nx">Optional[DirectoryWorkspaceCreationPropertiesArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -661,6 +748,17 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="ipgroupids_csharp">
+<a href="#ipgroupids_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Group<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The identifiers of the IP access control groups associated with the directory.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="selfservicepermissions_csharp">
 <a href="#selfservicepermissions_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Service<wbr>Permissions</a>
 </span> 
@@ -678,7 +776,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The subnets identifiers where the workspaces are created.
+    <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -723,6 +821,17 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="ipgroupids_go">
+<a href="#ipgroupids_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Group<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The identifiers of the IP access control groups associated with the directory.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="selfservicepermissions_go">
 <a href="#selfservicepermissions_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Service<wbr>Permissions</a>
 </span> 
@@ -740,7 +849,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The subnets identifiers where the workspaces are created.
+    <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -785,6 +894,17 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="ipgroupids_nodejs">
+<a href="#ipgroupids_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Group<wbr>Ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The identifiers of the IP access control groups associated with the directory.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="selfservicepermissions_nodejs">
 <a href="#selfservicepermissions_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Service<wbr>Permissions</a>
 </span> 
@@ -802,7 +922,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The subnets identifiers where the workspaces are created.
+    <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -847,6 +967,17 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="ip_group_ids_python">
+<a href="#ip_group_ids_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>group_<wbr>ids</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The identifiers of the IP access control groups associated with the directory.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="self_service_permissions_python">
 <a href="#self_service_permissions_python" style="color: inherit; text-decoration: inherit;">self_<wbr>service_<wbr>permissions</a>
 </span> 
@@ -864,7 +995,7 @@ The Directory resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}The subnets identifiers where the workspaces are created.
+    <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -985,17 +1116,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="ipgroupids_csharp">
-<a href="#ipgroupids_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Group<wbr>Ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The identifiers of the IP access control groups associated with the directory.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="registrationcode_csharp">
 <a href="#registrationcode_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Code</a>
 </span> 
@@ -1098,17 +1218,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="ipgroupids_go">
-<a href="#ipgroupids_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Group<wbr>Ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}The identifiers of the IP access control groups associated with the directory.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1217,17 +1326,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
-        <span id="ipgroupids_nodejs">
-<a href="#ipgroupids_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Group<wbr>Ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}The identifiers of the IP access control groups associated with the directory.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span id="registrationcode_nodejs">
 <a href="#registrationcode_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Code</a>
 </span> 
@@ -1330,17 +1428,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span id="ip_group_ids_python">
-<a href="#ip_group_ids_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>group_<wbr>ids</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
-    </dt>
-    <dd>{{% md %}}The identifiers of the IP access control groups associated with the directory.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1616,7 +1703,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The subnets identifiers where the workspaces are created.
+    <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1777,7 +1864,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The subnets identifiers where the workspaces are created.
+    <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1938,7 +2025,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The subnets identifiers where the workspaces are created.
+    <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2099,7 +2186,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}The subnets identifiers where the workspaces are created.
+    <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

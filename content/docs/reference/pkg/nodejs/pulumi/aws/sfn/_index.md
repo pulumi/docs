@@ -3,7 +3,7 @@ title: "Module sfn"
 title_tag: "Module sfn | Package @pulumi/aws | Node.js SDK"
 linktitle: "sfn"
 meta_desc: "Explore members of the sfn module in the @pulumi/aws package."
-git_sha: "8a8be2819c5dd987f03d94fb4fe439ca6be643bb"
+git_sha: "4ce7973445e1b41a7297cc15ad476f490c9f4e1e"
 block_external_search_index: true
 ---
 
@@ -42,7 +42,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Activity" data-link-title="Activity">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/activity.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/activity.ts#L27">
         Resource <strong>Activity</strong>
     </a>
 </h3>
@@ -69,7 +69,7 @@ Activities can be imported using the `arn`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Activity-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/activity.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/activity.ts#L66"> <b>constructor</b></a>
 </h4>
 
 
@@ -83,7 +83,7 @@ Create a Activity resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Activity-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/activity.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/activity.ts#L37">method <b>get</b></a>
 </h4>
 
 
@@ -94,14 +94,14 @@ Get an existing Activity resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Activity-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/activity.ts#L27">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/activity.ts#L27">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Activity-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/activity.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/activity.ts#L48">method <b>isInstance</b></a>
 </h4>
 
 
@@ -112,7 +112,7 @@ Returns true if the given object is an instance of Activity.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Activity-creationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/activity.ts#L58">property <b>creationDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/activity.ts#L58">property <b>creationDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>creationDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -120,7 +120,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The date the activity was created.
 
 <h4 class="pdoc-member-header" id="Activity-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/activity.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/activity.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -129,7 +129,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Activity-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/activity.ts#L62">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/activity.ts#L62">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -137,7 +137,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the activity to create.
 
 <h4 class="pdoc-member-header" id="Activity-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/activity.ts#L66">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/activity.ts#L66">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -145,7 +145,7 @@ The name of the activity to create.
 Key-value map of resource tags
 
 <h4 class="pdoc-member-header" id="Activity-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/activity.ts#L27">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/activity.ts#L27">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -154,7 +154,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="StateMachine" data-link-title="StateMachine">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L42">
         Resource <strong>StateMachine</strong>
     </a>
 </h3>
@@ -196,7 +196,7 @@ State Machines can be imported using the `arn`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="StateMachine-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L97"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L97"> <b>constructor</b></a>
 </h4>
 
 
@@ -210,7 +210,7 @@ Create a StateMachine resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="StateMachine-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -221,14 +221,14 @@ Get an existing StateMachine resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="StateMachine-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="StateMachine-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -239,7 +239,7 @@ Returns true if the given object is an instance of StateMachine.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="StateMachine-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L73">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L73">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -247,7 +247,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the state machine.
 
 <h4 class="pdoc-member-header" id="StateMachine-creationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L77">property <b>creationDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L77">property <b>creationDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>creationDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -255,7 +255,7 @@ The ARN of the state machine.
 The date the state machine was created.
 
 <h4 class="pdoc-member-header" id="StateMachine-definition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L81">property <b>definition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L81">property <b>definition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>definition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -263,7 +263,7 @@ The date the state machine was created.
 The Amazon States Language definition of the state machine.
 
 <h4 class="pdoc-member-header" id="StateMachine-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -272,7 +272,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="StateMachine-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L85">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L85">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -280,7 +280,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the state machine.
 
 <h4 class="pdoc-member-header" id="StateMachine-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L89">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L89">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -288,7 +288,7 @@ The name of the state machine.
 The Amazon Resource Name (ARN) of the IAM role to use for this state machine.
 
 <h4 class="pdoc-member-header" id="StateMachine-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L93">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L93">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -296,7 +296,7 @@ The Amazon Resource Name (ARN) of the IAM role to use for this state machine.
 The current status of the state machine. Either "ACTIVE" or "DELETING".
 
 <h4 class="pdoc-member-header" id="StateMachine-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L97">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L97">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -304,7 +304,7 @@ The current status of the state machine. Either "ACTIVE" or "DELETING".
 Key-value map of resource tags
 
 <h4 class="pdoc-member-header" id="StateMachine-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -315,7 +315,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getActivity" data-link-title="getActivity">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/getActivity.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/getActivity.ts#L22">
         Function <strong>getActivity</strong>
     </a>
 </h3>
@@ -338,7 +338,7 @@ const sfnActivity = pulumi.output(aws.sfn.getActivity({
 ```
 
 <h3 class="pdoc-module-header" id="getStateMachine" data-link-title="getStateMachine">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/getStateMachine.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/getStateMachine.ts#L24">
         Function <strong>getStateMachine</strong>
     </a>
 </h3>
@@ -365,7 +365,7 @@ const example = pulumi.output(aws.sfn.getStateMachine({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ActivityArgs" data-link-title="ActivityArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/activity.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/activity.ts#L121">
         interface <strong>ActivityArgs</strong>
     </a>
 </h3>
@@ -375,7 +375,7 @@ const example = pulumi.output(aws.sfn.getStateMachine({
 The set of arguments for constructing a Activity resource.
 
 <h4 class="pdoc-member-header" id="ActivityArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/activity.ts#L125">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/activity.ts#L125">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -383,7 +383,7 @@ The set of arguments for constructing a Activity resource.
 The name of the activity to create.
 
 <h4 class="pdoc-member-header" id="ActivityArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/activity.ts#L129">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/activity.ts#L129">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -391,7 +391,7 @@ The name of the activity to create.
 Key-value map of resource tags
 
 <h3 class="pdoc-module-header" id="ActivityState" data-link-title="ActivityState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/activity.ts#L103">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/activity.ts#L103">
         interface <strong>ActivityState</strong>
     </a>
 </h3>
@@ -401,7 +401,7 @@ Key-value map of resource tags
 Input properties used for looking up and filtering Activity resources.
 
 <h4 class="pdoc-member-header" id="ActivityState-creationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/activity.ts#L107">property <b>creationDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/activity.ts#L107">property <b>creationDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -409,7 +409,7 @@ Input properties used for looking up and filtering Activity resources.
 The date the activity was created.
 
 <h4 class="pdoc-member-header" id="ActivityState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/activity.ts#L111">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/activity.ts#L111">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -417,7 +417,7 @@ The date the activity was created.
 The name of the activity to create.
 
 <h4 class="pdoc-member-header" id="ActivityState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/activity.ts#L115">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/activity.ts#L115">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -425,7 +425,7 @@ The name of the activity to create.
 Key-value map of resource tags
 
 <h3 class="pdoc-module-header" id="GetActivityArgs" data-link-title="GetActivityArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/getActivity.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/getActivity.ts#L40">
         interface <strong>GetActivityArgs</strong>
     </a>
 </h3>
@@ -435,7 +435,7 @@ Key-value map of resource tags
 A collection of arguments for invoking getActivity.
 
 <h4 class="pdoc-member-header" id="GetActivityArgs-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/getActivity.ts#L44">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/getActivity.ts#L44">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -443,7 +443,7 @@ A collection of arguments for invoking getActivity.
 The Amazon Resource Name (ARN) that identifies the activity.
 
 <h4 class="pdoc-member-header" id="GetActivityArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/getActivity.ts#L48">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/getActivity.ts#L48">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -451,7 +451,7 @@ The Amazon Resource Name (ARN) that identifies the activity.
 The name that identifies the activity.
 
 <h3 class="pdoc-module-header" id="GetActivityResult" data-link-title="GetActivityResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/getActivity.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/getActivity.ts#L54">
         interface <strong>GetActivityResult</strong>
     </a>
 </h3>
@@ -461,12 +461,12 @@ The name that identifies the activity.
 A collection of values returned by getActivity.
 
 <h4 class="pdoc-member-header" id="GetActivityResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/getActivity.ts#L55">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/getActivity.ts#L55">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetActivityResult-creationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/getActivity.ts#L59">property <b>creationDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/getActivity.ts#L59">property <b>creationDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -474,7 +474,7 @@ A collection of values returned by getActivity.
 The date the activity was created.
 
 <h4 class="pdoc-member-header" id="GetActivityResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/getActivity.ts#L63">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/getActivity.ts#L63">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -482,12 +482,12 @@ The date the activity was created.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetActivityResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/getActivity.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/getActivity.ts#L64">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetStateMachineArgs" data-link-title="GetStateMachineArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/getStateMachine.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/getStateMachine.ts#L40">
         interface <strong>GetStateMachineArgs</strong>
     </a>
 </h3>
@@ -497,7 +497,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getStateMachine.
 
 <h4 class="pdoc-member-header" id="GetStateMachineArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/getStateMachine.ts#L44">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/getStateMachine.ts#L44">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -505,7 +505,7 @@ A collection of arguments for invoking getStateMachine.
 The friendly name of the state machine to match.
 
 <h3 class="pdoc-module-header" id="GetStateMachineResult" data-link-title="GetStateMachineResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/getStateMachine.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/getStateMachine.ts#L50">
         interface <strong>GetStateMachineResult</strong>
     </a>
 </h3>
@@ -515,7 +515,7 @@ The friendly name of the state machine to match.
 A collection of values returned by getStateMachine.
 
 <h4 class="pdoc-member-header" id="GetStateMachineResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/getStateMachine.ts#L54">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/getStateMachine.ts#L54">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -523,7 +523,7 @@ A collection of values returned by getStateMachine.
 Set to the arn of the state function.
 
 <h4 class="pdoc-member-header" id="GetStateMachineResult-creationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/getStateMachine.ts#L58">property <b>creationDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/getStateMachine.ts#L58">property <b>creationDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -531,7 +531,7 @@ Set to the arn of the state function.
 The date the state machine was created.
 
 <h4 class="pdoc-member-header" id="GetStateMachineResult-definition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/getStateMachine.ts#L62">property <b>definition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/getStateMachine.ts#L62">property <b>definition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>definition: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -539,7 +539,7 @@ The date the state machine was created.
 Set to the state machine definition.
 
 <h4 class="pdoc-member-header" id="GetStateMachineResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/getStateMachine.ts#L66">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/getStateMachine.ts#L66">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -547,12 +547,12 @@ Set to the state machine definition.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetStateMachineResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/getStateMachine.ts#L67">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/getStateMachine.ts#L67">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetStateMachineResult-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/getStateMachine.ts#L71">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/getStateMachine.ts#L71">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -560,7 +560,7 @@ The provider-assigned unique ID for this managed resource.
 Set to the roleArn used by the state function.
 
 <h4 class="pdoc-member-header" id="GetStateMachineResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/getStateMachine.ts#L75">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/getStateMachine.ts#L75">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -568,7 +568,7 @@ Set to the roleArn used by the state function.
 Set to the current status of the state machine.
 
 <h3 class="pdoc-module-header" id="StateMachineArgs" data-link-title="StateMachineArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L182">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L182">
         interface <strong>StateMachineArgs</strong>
     </a>
 </h3>
@@ -578,7 +578,7 @@ Set to the current status of the state machine.
 The set of arguments for constructing a StateMachine resource.
 
 <h4 class="pdoc-member-header" id="StateMachineArgs-definition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L186">property <b>definition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L186">property <b>definition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>definition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -586,7 +586,7 @@ The set of arguments for constructing a StateMachine resource.
 The Amazon States Language definition of the state machine.
 
 <h4 class="pdoc-member-header" id="StateMachineArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L190">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L190">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -594,7 +594,7 @@ The Amazon States Language definition of the state machine.
 The name of the state machine.
 
 <h4 class="pdoc-member-header" id="StateMachineArgs-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L194">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L194">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -602,7 +602,7 @@ The name of the state machine.
 The Amazon Resource Name (ARN) of the IAM role to use for this state machine.
 
 <h4 class="pdoc-member-header" id="StateMachineArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L198">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L198">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -610,7 +610,7 @@ The Amazon Resource Name (ARN) of the IAM role to use for this state machine.
 Key-value map of resource tags
 
 <h3 class="pdoc-module-header" id="StateMachineState" data-link-title="StateMachineState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L148">
         interface <strong>StateMachineState</strong>
     </a>
 </h3>
@@ -620,7 +620,7 @@ Key-value map of resource tags
 Input properties used for looking up and filtering StateMachine resources.
 
 <h4 class="pdoc-member-header" id="StateMachineState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L152">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L152">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -628,7 +628,7 @@ Input properties used for looking up and filtering StateMachine resources.
 The ARN of the state machine.
 
 <h4 class="pdoc-member-header" id="StateMachineState-creationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L156">property <b>creationDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L156">property <b>creationDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -636,7 +636,7 @@ The ARN of the state machine.
 The date the state machine was created.
 
 <h4 class="pdoc-member-header" id="StateMachineState-definition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L160">property <b>definition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L160">property <b>definition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>definition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -644,7 +644,7 @@ The date the state machine was created.
 The Amazon States Language definition of the state machine.
 
 <h4 class="pdoc-member-header" id="StateMachineState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L164">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L164">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -652,7 +652,7 @@ The Amazon States Language definition of the state machine.
 The name of the state machine.
 
 <h4 class="pdoc-member-header" id="StateMachineState-roleArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L168">property <b>roleArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L168">property <b>roleArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -660,7 +660,7 @@ The name of the state machine.
 The Amazon Resource Name (ARN) of the IAM role to use for this state machine.
 
 <h4 class="pdoc-member-header" id="StateMachineState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L172">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L172">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -668,7 +668,7 @@ The Amazon Resource Name (ARN) of the IAM role to use for this state machine.
 The current status of the state machine. Either "ACTIVE" or "DELETING".
 
 <h4 class="pdoc-member-header" id="StateMachineState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/sfn/stateMachine.ts#L176">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/sfn/stateMachine.ts#L176">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>

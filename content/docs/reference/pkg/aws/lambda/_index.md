@@ -12,6 +12,7 @@ Explore the resources and functions of the lambda module in the AWS package.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="alias" title="Alias"><span class="symbol resource"></span>Alias</a></li>
+    <li><a href="codesigningconfig" title="CodeSigningConfig"><span class="symbol resource"></span>CodeSigningConfig</a></li>
     <li><a href="eventsourcemapping" title="EventSourceMapping"><span class="symbol resource"></span>EventSourceMapping</a></li>
     <li><a href="function" title="Function"><span class="symbol resource"></span>Function</a></li>
     <li><a href="functioneventinvokeconfig" title="FunctionEventInvokeConfig"><span class="symbol resource"></span>FunctionEventInvokeConfig</a></li>
@@ -23,6 +24,7 @@ Explore the resources and functions of the lambda module in the AWS package.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getalias" title="GetAlias"><span class="symbol function"></span>GetAlias</a></li>
+    <li><a href="getcodesigningconfig" title="GetCodeSigningConfig"><span class="symbol function"></span>GetCodeSigningConfig</a></li>
     <li><a href="getfunction" title="GetFunction"><span class="symbol function"></span>GetFunction</a></li>
     <li><a href="getinvocation" title="GetInvocation"><span class="symbol function"></span>GetInvocation</a></li>
     <li><a href="getlayerversion" title="GetLayerVersion"><span class="symbol function"></span>GetLayerVersion</a></li>
@@ -37,7 +39,7 @@ Explore the resources and functions of the lambda module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.14.0</dd>
+	<dd>3.15.0</dd>
 </dl>
 
 

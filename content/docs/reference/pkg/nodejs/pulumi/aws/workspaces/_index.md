@@ -3,7 +3,7 @@ title: "Module workspaces"
 title_tag: "Module workspaces | Package @pulumi/aws | Node.js SDK"
 linktitle: "workspaces"
 meta_desc: "Explore members of the workspaces module in the @pulumi/aws package."
-git_sha: "8a8be2819c5dd987f03d94fb4fe439ca6be643bb"
+git_sha: "4ce7973445e1b41a7297cc15ad476f490c9f4e1e"
 block_external_search_index: true
 ---
 
@@ -51,7 +51,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Directory" data-link-title="Directory">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L109">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L121">
         Resource <strong>Directory</strong>
     </a>
 </h3>
@@ -149,6 +149,18 @@ const exampleDirectoryservice_directoryDirectory = new aws.directoryservice.Dire
     },
 });
 ```
+##### IP Groups
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const exampleIpGroup = new aws.workspaces.IpGroup("exampleIpGroup", {});
+const exampleDirectory = new aws.workspaces.Directory("exampleDirectory", {
+    directoryId: aws_directory_service_directory.example.id,
+    ipGroupIds: [exampleIpGroup.id],
+});
+```
 
 #### Import
 
@@ -159,7 +171,7 @@ Workspaces directory can be imported using the directory ID, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Directory-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L192"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L204"> <b>constructor</b></a>
 </h4>
 
 
@@ -173,7 +185,7 @@ Create a Directory resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Directory-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L119">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L131">method <b>get</b></a>
 </h4>
 
 
@@ -184,14 +196,14 @@ Get an existing Directory resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Directory-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L109">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L121">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Directory-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L130">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L142">method <b>isInstance</b></a>
 </h4>
 
 
@@ -202,7 +214,7 @@ Returns true if the given object is an instance of Directory.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Directory-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L140">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L152">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -210,7 +222,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The directory alias.
 
 <h4 class="pdoc-member-header" id="Directory-customerUserName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L144">property <b>customerUserName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L156">property <b>customerUserName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customerUserName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -218,7 +230,7 @@ The directory alias.
 The user name for the service account.
 
 <h4 class="pdoc-member-header" id="Directory-directoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L148">property <b>directoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L160">property <b>directoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>directoryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -226,7 +238,7 @@ The user name for the service account.
 The directory identifier for registration in WorkSpaces service.
 
 <h4 class="pdoc-member-header" id="Directory-directoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L152">property <b>directoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L164">property <b>directoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>directoryName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -234,7 +246,7 @@ The directory identifier for registration in WorkSpaces service.
 The name of the directory.
 
 <h4 class="pdoc-member-header" id="Directory-directoryType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L156">property <b>directoryType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L168">property <b>directoryType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>directoryType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -242,7 +254,7 @@ The name of the directory.
 The directory type.
 
 <h4 class="pdoc-member-header" id="Directory-dnsIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L160">property <b>dnsIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L172">property <b>dnsIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsIpAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -250,7 +262,7 @@ The directory type.
 The IP addresses of the DNS servers for the directory.
 
 <h4 class="pdoc-member-header" id="Directory-iamRoleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L164">property <b>iamRoleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L176">property <b>iamRoleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iamRoleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -258,7 +270,7 @@ The IP addresses of the DNS servers for the directory.
 The identifier of the IAM role. This is the role that allows Amazon WorkSpaces to make calls to other services, such as Amazon EC2, on your behalf.
 
 <h4 class="pdoc-member-header" id="Directory-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L109">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L121">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -267,7 +279,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Directory-ipGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L168">property <b>ipGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L180">property <b>ipGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -275,7 +287,7 @@ deployments and may be missing (undefined) during planning phases.
 The identifiers of the IP access control groups associated with the directory.
 
 <h4 class="pdoc-member-header" id="Directory-registrationCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L172">property <b>registrationCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L184">property <b>registrationCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>registrationCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -283,7 +295,7 @@ The identifiers of the IP access control groups associated with the directory.
 The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.
 
 <h4 class="pdoc-member-header" id="Directory-selfServicePermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L176">property <b>selfServicePermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L188">property <b>selfServicePermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>selfServicePermissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DirectorySelfServicePermissions'>DirectorySelfServicePermissions</a>&gt;;</code></pre>
@@ -291,15 +303,15 @@ The registration code for the directory. This is the code that users enter in th
 Permissions to enable or disable self-service capabilities. Defined below.
 
 <h4 class="pdoc-member-header" id="Directory-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L180">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L192">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 
-The subnets identifiers where the workspaces are created.
+The identifiers of the subnets where the directory resides.
 
 <h4 class="pdoc-member-header" id="Directory-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L184">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L196">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -307,7 +319,7 @@ The subnets identifiers where the workspaces are created.
 A map of tags assigned to the WorkSpaces directory.
 
 <h4 class="pdoc-member-header" id="Directory-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L109">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L121">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -316,7 +328,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Directory-workspaceCreationProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L188">property <b>workspaceCreationProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L200">property <b>workspaceCreationProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workspaceCreationProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DirectoryWorkspaceCreationProperties'>DirectoryWorkspaceCreationProperties</a>&gt;;</code></pre>
@@ -324,7 +336,7 @@ deployments.
 Default properties that are used for creating WorkSpaces. Defined below.
 
 <h4 class="pdoc-member-header" id="Directory-workspaceSecurityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L192">property <b>workspaceSecurityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L204">property <b>workspaceSecurityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workspaceSecurityGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -332,7 +344,7 @@ Default properties that are used for creating WorkSpaces. Defined below.
 The identifier of the security group that is assigned to new WorkSpaces.
 
 <h3 class="pdoc-module-header" id="IpGroup" data-link-title="IpGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/ipGroup.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/ipGroup.ts#L30">
         Resource <strong>IpGroup</strong>
     </a>
 </h3>
@@ -361,7 +373,7 @@ WorkSpaces IP groups can be imported using their GroupID, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="IpGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/ipGroup.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/ipGroup.ts#L70"> <b>constructor</b></a>
 </h4>
 
 
@@ -375,7 +387,7 @@ Create a IpGroup resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="IpGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/ipGroup.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/ipGroup.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -386,14 +398,14 @@ Get an existing IpGroup resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="IpGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/ipGroup.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/ipGroup.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="IpGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/ipGroup.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/ipGroup.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -404,7 +416,7 @@ Returns true if the given object is an instance of IpGroup.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="IpGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/ipGroup.ts#L61">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/ipGroup.ts#L61">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -412,7 +424,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The description.
 
 <h4 class="pdoc-member-header" id="IpGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/ipGroup.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/ipGroup.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -421,7 +433,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="IpGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/ipGroup.ts#L65">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/ipGroup.ts#L65">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -429,7 +441,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the IP group.
 
 <h4 class="pdoc-member-header" id="IpGroup-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/ipGroup.ts#L69">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/ipGroup.ts#L69">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IpGroupRule'>IpGroupRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -437,12 +449,12 @@ The name of the IP group.
 One or more pairs specifying the IP group rule (in CIDR format) from which web requests originate.
 
 <h4 class="pdoc-member-header" id="IpGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/ipGroup.ts#L70">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/ipGroup.ts#L70">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IpGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/ipGroup.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/ipGroup.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -451,7 +463,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Workspace" data-link-title="Workspace">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L50">
         Resource <strong>Workspace</strong>
     </a>
 </h3>
@@ -500,7 +512,7 @@ Workspaces can be imported using their ID, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Workspace-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L121"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L121"> <b>constructor</b></a>
 </h4>
 
 
@@ -514,7 +526,7 @@ Create a Workspace resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Workspace-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L60">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L60">method <b>get</b></a>
 </h4>
 
 
@@ -525,14 +537,14 @@ Get an existing Workspace resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Workspace-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L50">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L50">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Workspace-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L71">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L71">method <b>isInstance</b></a>
 </h4>
 
 
@@ -543,7 +555,7 @@ Returns true if the given object is an instance of Workspace.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Workspace-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L81">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L81">property <b>bundleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bundleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -551,7 +563,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the bundle for the WorkSpace.
 
 <h4 class="pdoc-member-header" id="Workspace-computerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L85">property <b>computerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L85">property <b>computerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>computerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -559,7 +571,7 @@ The ID of the bundle for the WorkSpace.
 The name of the WorkSpace, as seen by the operating system.
 
 <h4 class="pdoc-member-header" id="Workspace-directoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L89">property <b>directoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L89">property <b>directoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>directoryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -567,7 +579,7 @@ The name of the WorkSpace, as seen by the operating system.
 The ID of the directory for the WorkSpace.
 
 <h4 class="pdoc-member-header" id="Workspace-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L50">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L50">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -576,7 +588,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Workspace-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L93">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L93">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -584,7 +596,7 @@ deployments and may be missing (undefined) during planning phases.
 The IP address of the WorkSpace.
 
 <h4 class="pdoc-member-header" id="Workspace-rootVolumeEncryptionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L97">property <b>rootVolumeEncryptionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L97">property <b>rootVolumeEncryptionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rootVolumeEncryptionEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -592,7 +604,7 @@ The IP address of the WorkSpace.
 Indicates whether the data stored on the root volume is encrypted.
 
 <h4 class="pdoc-member-header" id="Workspace-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L101">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L101">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -600,7 +612,7 @@ Indicates whether the data stored on the root volume is encrypted.
 The operational state of the WorkSpace.
 
 <h4 class="pdoc-member-header" id="Workspace-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L105">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L105">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -608,7 +620,7 @@ The operational state of the WorkSpace.
 The tags for the WorkSpace.
 
 <h4 class="pdoc-member-header" id="Workspace-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L50">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L50">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -617,7 +629,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Workspace-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L109">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L109">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -625,7 +637,7 @@ deployments.
 The user name of the user for the WorkSpace. This user name must exist in the directory for the WorkSpace.
 
 <h4 class="pdoc-member-header" id="Workspace-userVolumeEncryptionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L113">property <b>userVolumeEncryptionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L113">property <b>userVolumeEncryptionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userVolumeEncryptionEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -633,7 +645,7 @@ The user name of the user for the WorkSpace. This user name must exist in the di
 Indicates whether the data stored on the user volume is encrypted.
 
 <h4 class="pdoc-member-header" id="Workspace-volumeEncryptionKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L117">property <b>volumeEncryptionKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L117">property <b>volumeEncryptionKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>volumeEncryptionKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -641,7 +653,7 @@ Indicates whether the data stored on the user volume is encrypted.
 The symmetric AWS KMS customer master key (CMK) used to encrypt data stored on your WorkSpace. Amazon WorkSpaces does not support asymmetric CMKs.
 
 <h4 class="pdoc-member-header" id="Workspace-workspaceProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L121">property <b>workspaceProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L121">property <b>workspaceProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>workspaceProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WorkspaceWorkspaceProperties'>WorkspaceWorkspaceProperties</a>&gt;;</code></pre>
@@ -651,7 +663,7 @@ The WorkSpace properties.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getBundle" data-link-title="getBundle">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getBundle.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getBundle.ts#L34">
         Function <strong>getBundle</strong>
     </a>
 </h3>
@@ -686,7 +698,7 @@ const example = pulumi.output(aws.workspaces.getBundle({
 ```
 
 <h3 class="pdoc-module-header" id="getDirectory" data-link-title="getDirectory">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getDirectory.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getDirectory.ts#L22">
         Function <strong>getDirectory</strong>
     </a>
 </h3>
@@ -709,7 +721,7 @@ const example = pulumi.output(aws.workspaces.getDirectory({
 ```
 
 <h3 class="pdoc-module-header" id="getImage" data-link-title="getImage">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getImage.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getImage.ts#L22">
         Function <strong>getImage</strong>
     </a>
 </h3>
@@ -732,7 +744,7 @@ const example = pulumi.output(aws.workspaces.getImage({
 ```
 
 <h3 class="pdoc-module-header" id="getWorkspace" data-link-title="getWorkspace">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getWorkspace.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getWorkspace.ts#L34">
         Function <strong>getWorkspace</strong>
     </a>
 </h3>
@@ -769,7 +781,7 @@ const example = pulumi.output(aws.workspaces.getWorkspace({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DirectoryArgs" data-link-title="DirectoryArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L316">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L328">
         interface <strong>DirectoryArgs</strong>
     </a>
 </h3>
@@ -779,15 +791,23 @@ const example = pulumi.output(aws.workspaces.getWorkspace({
 The set of arguments for constructing a Directory resource.
 
 <h4 class="pdoc-member-header" id="DirectoryArgs-directoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L320">property <b>directoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L332">property <b>directoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directoryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The directory identifier for registration in WorkSpaces service.
 
+<h4 class="pdoc-member-header" id="DirectoryArgs-ipGroupIds">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L336">property <b>ipGroupIds</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ipGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+The identifiers of the IP access control groups associated with the directory.
+
 <h4 class="pdoc-member-header" id="DirectoryArgs-selfServicePermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L324">property <b>selfServicePermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L340">property <b>selfServicePermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfServicePermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DirectorySelfServicePermissions'>DirectorySelfServicePermissions</a>&gt;;</code></pre>
@@ -795,15 +815,15 @@ The directory identifier for registration in WorkSpaces service.
 Permissions to enable or disable self-service capabilities. Defined below.
 
 <h4 class="pdoc-member-header" id="DirectoryArgs-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L328">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L344">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 
-The subnets identifiers where the workspaces are created.
+The identifiers of the subnets where the directory resides.
 
 <h4 class="pdoc-member-header" id="DirectoryArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L332">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L348">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -811,7 +831,7 @@ The subnets identifiers where the workspaces are created.
 A map of tags assigned to the WorkSpaces directory.
 
 <h4 class="pdoc-member-header" id="DirectoryArgs-workspaceCreationProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L336">property <b>workspaceCreationProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L352">property <b>workspaceCreationProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workspaceCreationProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DirectoryWorkspaceCreationProperties'>DirectoryWorkspaceCreationProperties</a>&gt;;</code></pre>
@@ -819,7 +839,7 @@ A map of tags assigned to the WorkSpaces directory.
 Default properties that are used for creating WorkSpaces. Defined below.
 
 <h3 class="pdoc-module-header" id="DirectoryState" data-link-title="DirectoryState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L254">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L266">
         interface <strong>DirectoryState</strong>
     </a>
 </h3>
@@ -829,7 +849,7 @@ Default properties that are used for creating WorkSpaces. Defined below.
 Input properties used for looking up and filtering Directory resources.
 
 <h4 class="pdoc-member-header" id="DirectoryState-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L258">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L270">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -837,7 +857,7 @@ Input properties used for looking up and filtering Directory resources.
 The directory alias.
 
 <h4 class="pdoc-member-header" id="DirectoryState-customerUserName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L262">property <b>customerUserName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L274">property <b>customerUserName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customerUserName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -845,7 +865,7 @@ The directory alias.
 The user name for the service account.
 
 <h4 class="pdoc-member-header" id="DirectoryState-directoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L266">property <b>directoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L278">property <b>directoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -853,7 +873,7 @@ The user name for the service account.
 The directory identifier for registration in WorkSpaces service.
 
 <h4 class="pdoc-member-header" id="DirectoryState-directoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L270">property <b>directoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L282">property <b>directoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directoryName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -861,7 +881,7 @@ The directory identifier for registration in WorkSpaces service.
 The name of the directory.
 
 <h4 class="pdoc-member-header" id="DirectoryState-directoryType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L274">property <b>directoryType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L286">property <b>directoryType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directoryType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -869,7 +889,7 @@ The name of the directory.
 The directory type.
 
 <h4 class="pdoc-member-header" id="DirectoryState-dnsIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L278">property <b>dnsIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L290">property <b>dnsIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsIpAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -877,7 +897,7 @@ The directory type.
 The IP addresses of the DNS servers for the directory.
 
 <h4 class="pdoc-member-header" id="DirectoryState-iamRoleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L282">property <b>iamRoleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L294">property <b>iamRoleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamRoleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -885,7 +905,7 @@ The IP addresses of the DNS servers for the directory.
 The identifier of the IAM role. This is the role that allows Amazon WorkSpaces to make calls to other services, such as Amazon EC2, on your behalf.
 
 <h4 class="pdoc-member-header" id="DirectoryState-ipGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L286">property <b>ipGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L298">property <b>ipGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -893,7 +913,7 @@ The identifier of the IAM role. This is the role that allows Amazon WorkSpaces t
 The identifiers of the IP access control groups associated with the directory.
 
 <h4 class="pdoc-member-header" id="DirectoryState-registrationCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L290">property <b>registrationCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L302">property <b>registrationCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>registrationCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -901,7 +921,7 @@ The identifiers of the IP access control groups associated with the directory.
 The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.
 
 <h4 class="pdoc-member-header" id="DirectoryState-selfServicePermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L294">property <b>selfServicePermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L306">property <b>selfServicePermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfServicePermissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DirectorySelfServicePermissions'>DirectorySelfServicePermissions</a>&gt;;</code></pre>
@@ -909,15 +929,15 @@ The registration code for the directory. This is the code that users enter in th
 Permissions to enable or disable self-service capabilities. Defined below.
 
 <h4 class="pdoc-member-header" id="DirectoryState-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L298">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L310">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 
-The subnets identifiers where the workspaces are created.
+The identifiers of the subnets where the directory resides.
 
 <h4 class="pdoc-member-header" id="DirectoryState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L302">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L314">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -925,7 +945,7 @@ The subnets identifiers where the workspaces are created.
 A map of tags assigned to the WorkSpaces directory.
 
 <h4 class="pdoc-member-header" id="DirectoryState-workspaceCreationProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L306">property <b>workspaceCreationProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L318">property <b>workspaceCreationProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workspaceCreationProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DirectoryWorkspaceCreationProperties'>DirectoryWorkspaceCreationProperties</a>&gt;;</code></pre>
@@ -933,7 +953,7 @@ A map of tags assigned to the WorkSpaces directory.
 Default properties that are used for creating WorkSpaces. Defined below.
 
 <h4 class="pdoc-member-header" id="DirectoryState-workspaceSecurityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/directory.ts#L310">property <b>workspaceSecurityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/directory.ts#L322">property <b>workspaceSecurityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workspaceSecurityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -941,7 +961,7 @@ Default properties that are used for creating WorkSpaces. Defined below.
 The identifier of the security group that is assigned to new WorkSpaces.
 
 <h3 class="pdoc-module-header" id="GetBundleArgs" data-link-title="GetBundleArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getBundle.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getBundle.ts#L53">
         interface <strong>GetBundleArgs</strong>
     </a>
 </h3>
@@ -951,7 +971,7 @@ The identifier of the security group that is assigned to new WorkSpaces.
 A collection of arguments for invoking getBundle.
 
 <h4 class="pdoc-member-header" id="GetBundleArgs-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getBundle.ts#L57">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getBundle.ts#L57">property <b>bundleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bundleId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -959,7 +979,7 @@ A collection of arguments for invoking getBundle.
 The ID of the bundle.
 
 <h4 class="pdoc-member-header" id="GetBundleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getBundle.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getBundle.ts#L61">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -967,7 +987,7 @@ The ID of the bundle.
 The name of the bundle. You cannot combine this parameter with `bundleId`.
 
 <h4 class="pdoc-member-header" id="GetBundleArgs-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getBundle.ts#L65">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getBundle.ts#L65">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -975,7 +995,7 @@ The name of the bundle. You cannot combine this parameter with `bundleId`.
 The owner of the bundles. You have to leave it blank for own bundles. You cannot combine this parameter with `bundleId`.
 
 <h3 class="pdoc-module-header" id="GetBundleResult" data-link-title="GetBundleResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getBundle.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getBundle.ts#L71">
         interface <strong>GetBundleResult</strong>
     </a>
 </h3>
@@ -985,7 +1005,7 @@ The owner of the bundles. You have to leave it blank for own bundles. You cannot
 A collection of values returned by getBundle.
 
 <h4 class="pdoc-member-header" id="GetBundleResult-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getBundle.ts#L75">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getBundle.ts#L75">property <b>bundleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bundleId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -993,7 +1013,7 @@ A collection of values returned by getBundle.
 The ID of the bundle.
 
 <h4 class="pdoc-member-header" id="GetBundleResult-computeTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getBundle.ts#L79">property <b>computeTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getBundle.ts#L79">property <b>computeTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>computeTypes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBundleComputeType'>GetBundleComputeType</a>[];</code></pre>
@@ -1001,7 +1021,7 @@ The ID of the bundle.
 The compute type. See supported fields below.
 
 <h4 class="pdoc-member-header" id="GetBundleResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getBundle.ts#L83">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getBundle.ts#L83">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1009,7 +1029,7 @@ The compute type. See supported fields below.
 The description of the bundle.
 
 <h4 class="pdoc-member-header" id="GetBundleResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getBundle.ts#L87">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getBundle.ts#L87">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1017,7 +1037,7 @@ The description of the bundle.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetBundleResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getBundle.ts#L91">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getBundle.ts#L91">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1025,7 +1045,7 @@ The provider-assigned unique ID for this managed resource.
 The name of the compute type.
 
 <h4 class="pdoc-member-header" id="GetBundleResult-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getBundle.ts#L95">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getBundle.ts#L95">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1033,7 +1053,7 @@ The name of the compute type.
 The owner of the bundle.
 
 <h4 class="pdoc-member-header" id="GetBundleResult-rootStorages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getBundle.ts#L99">property <b>rootStorages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getBundle.ts#L99">property <b>rootStorages</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootStorages: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBundleRootStorage'>GetBundleRootStorage</a>[];</code></pre>
@@ -1041,7 +1061,7 @@ The owner of the bundle.
 The root volume. See supported fields below.
 
 <h4 class="pdoc-member-header" id="GetBundleResult-userStorages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getBundle.ts#L103">property <b>userStorages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getBundle.ts#L103">property <b>userStorages</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userStorages: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBundleUserStorage'>GetBundleUserStorage</a>[];</code></pre>
@@ -1049,7 +1069,7 @@ The root volume. See supported fields below.
 The user storage. See supported fields below.
 
 <h3 class="pdoc-module-header" id="GetDirectoryArgs" data-link-title="GetDirectoryArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getDirectory.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getDirectory.ts#L40">
         interface <strong>GetDirectoryArgs</strong>
     </a>
 </h3>
@@ -1059,7 +1079,7 @@ The user storage. See supported fields below.
 A collection of arguments for invoking getDirectory.
 
 <h4 class="pdoc-member-header" id="GetDirectoryArgs-directoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getDirectory.ts#L44">property <b>directoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getDirectory.ts#L44">property <b>directoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directoryId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1067,7 +1087,7 @@ A collection of arguments for invoking getDirectory.
 The directory identifier for registration in WorkSpaces service.
 
 <h4 class="pdoc-member-header" id="GetDirectoryArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getDirectory.ts#L48">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getDirectory.ts#L48">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1075,7 +1095,7 @@ The directory identifier for registration in WorkSpaces service.
 A map of tags assigned to the WorkSpaces directory.
 
 <h4 class="pdoc-member-header" id="GetDirectoryArgs-workspaceCreationProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getDirectory.ts#L52">property <b>workspaceCreationProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getDirectory.ts#L52">property <b>workspaceCreationProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workspaceCreationProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetDirectoryWorkspaceCreationProperties'>inputs.workspaces.GetDirectoryWorkspaceCreationProperties</a>;</code></pre>
@@ -1083,7 +1103,7 @@ A map of tags assigned to the WorkSpaces directory.
 The default properties that are used for creating WorkSpaces. Defined below.
 
 <h3 class="pdoc-module-header" id="GetDirectoryResult" data-link-title="GetDirectoryResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getDirectory.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getDirectory.ts#L58">
         interface <strong>GetDirectoryResult</strong>
     </a>
 </h3>
@@ -1093,7 +1113,7 @@ The default properties that are used for creating WorkSpaces. Defined below.
 A collection of values returned by getDirectory.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-alias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getDirectory.ts#L62">property <b>alias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getDirectory.ts#L62">property <b>alias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alias: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1101,7 +1121,7 @@ A collection of values returned by getDirectory.
 The directory alias.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-customerUserName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getDirectory.ts#L66">property <b>customerUserName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getDirectory.ts#L66">property <b>customerUserName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customerUserName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1109,12 +1129,12 @@ The directory alias.
 The user name for the service account.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-directoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getDirectory.ts#L67">property <b>directoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getDirectory.ts#L67">property <b>directoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directoryId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDirectoryResult-directoryName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getDirectory.ts#L71">property <b>directoryName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getDirectory.ts#L71">property <b>directoryName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directoryName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1122,7 +1142,7 @@ The user name for the service account.
 The name of the directory.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-directoryType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getDirectory.ts#L75">property <b>directoryType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getDirectory.ts#L75">property <b>directoryType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directoryType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1130,7 +1150,7 @@ The name of the directory.
 The directory type.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-dnsIpAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getDirectory.ts#L79">property <b>dnsIpAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getDirectory.ts#L79">property <b>dnsIpAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsIpAddresses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1138,7 +1158,7 @@ The directory type.
 The IP addresses of the DNS servers for the directory.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-iamRoleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getDirectory.ts#L83">property <b>iamRoleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getDirectory.ts#L83">property <b>iamRoleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamRoleId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1146,7 +1166,7 @@ The IP addresses of the DNS servers for the directory.
 The identifier of the IAM role. This is the role that allows Amazon WorkSpaces to make calls to other services, such as Amazon EC2, on your behalf.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getDirectory.ts#L87">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getDirectory.ts#L87">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1154,7 +1174,7 @@ The identifier of the IAM role. This is the role that allows Amazon WorkSpaces t
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-ipGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getDirectory.ts#L91">property <b>ipGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getDirectory.ts#L91">property <b>ipGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipGroupIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1162,7 +1182,7 @@ The provider-assigned unique ID for this managed resource.
 The identifiers of the IP access control groups associated with the directory.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-registrationCode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getDirectory.ts#L95">property <b>registrationCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getDirectory.ts#L95">property <b>registrationCode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>registrationCode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1170,7 +1190,7 @@ The identifiers of the IP access control groups associated with the directory.
 The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-selfServicePermissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getDirectory.ts#L99">property <b>selfServicePermissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getDirectory.ts#L99">property <b>selfServicePermissions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfServicePermissions: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDirectorySelfServicePermission'>GetDirectorySelfServicePermission</a>[];</code></pre>
@@ -1178,7 +1198,7 @@ The registration code for the directory. This is the code that users enter in th
 The permissions to enable or disable self-service capabilities.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getDirectory.ts#L103">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getDirectory.ts#L103">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1186,7 +1206,7 @@ The permissions to enable or disable self-service capabilities.
 The identifiers of the subnets where the directory resides.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getDirectory.ts#L107">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getDirectory.ts#L107">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1194,7 +1214,7 @@ The identifiers of the subnets where the directory resides.
 A map of tags assigned to the WorkSpaces directory.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-workspaceCreationProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getDirectory.ts#L111">property <b>workspaceCreationProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getDirectory.ts#L111">property <b>workspaceCreationProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workspaceCreationProperties: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDirectoryWorkspaceCreationProperties'>GetDirectoryWorkspaceCreationProperties</a>;</code></pre>
@@ -1202,7 +1222,7 @@ A map of tags assigned to the WorkSpaces directory.
 The default properties that are used for creating WorkSpaces. Defined below.
 
 <h4 class="pdoc-member-header" id="GetDirectoryResult-workspaceSecurityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getDirectory.ts#L115">property <b>workspaceSecurityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getDirectory.ts#L115">property <b>workspaceSecurityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workspaceSecurityGroupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1210,7 +1230,7 @@ The default properties that are used for creating WorkSpaces. Defined below.
 The identifier of the security group that is assigned to new WorkSpaces. Defined below.
 
 <h3 class="pdoc-module-header" id="GetImageArgs" data-link-title="GetImageArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getImage.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getImage.ts#L38">
         interface <strong>GetImageArgs</strong>
     </a>
 </h3>
@@ -1220,7 +1240,7 @@ The identifier of the security group that is assigned to new WorkSpaces. Defined
 A collection of arguments for invoking getImage.
 
 <h4 class="pdoc-member-header" id="GetImageArgs-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getImage.ts#L42">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getImage.ts#L42">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1228,7 +1248,7 @@ A collection of arguments for invoking getImage.
 The ID of the image.
 
 <h3 class="pdoc-module-header" id="GetImageResult" data-link-title="GetImageResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getImage.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getImage.ts#L48">
         interface <strong>GetImageResult</strong>
     </a>
 </h3>
@@ -1238,7 +1258,7 @@ The ID of the image.
 A collection of values returned by getImage.
 
 <h4 class="pdoc-member-header" id="GetImageResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getImage.ts#L52">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getImage.ts#L52">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1246,7 +1266,7 @@ A collection of values returned by getImage.
 The description of the image.
 
 <h4 class="pdoc-member-header" id="GetImageResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getImage.ts#L56">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getImage.ts#L56">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1254,12 +1274,12 @@ The description of the image.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetImageResult-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getImage.ts#L57">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getImage.ts#L57">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getImage.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getImage.ts#L61">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1267,12 +1287,12 @@ The provider-assigned unique ID for this managed resource.
 The name of the image.
 
 <h4 class="pdoc-member-header" id="GetImageResult-operatingSystemType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getImage.ts#L62">property <b>operatingSystemType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getImage.ts#L62">property <b>operatingSystemType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operatingSystemType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-requiredTenancy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getImage.ts#L66">property <b>requiredTenancy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getImage.ts#L66">property <b>requiredTenancy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requiredTenancy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1280,7 +1300,7 @@ The name of the image.
 Specifies whether the image is running on dedicated hardware. When Bring Your Own License (BYOL) is enabled, this value is set to DEDICATED. For more information, see [Bring Your Own Windows Desktop Images](https://docs.aws.amazon.com/workspaces/latest/adminguide/byol-windows-images.html).
 
 <h4 class="pdoc-member-header" id="GetImageResult-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getImage.ts#L70">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getImage.ts#L70">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1288,7 +1308,7 @@ Specifies whether the image is running on dedicated hardware. When Bring Your Ow
 The status of the image.
 
 <h3 class="pdoc-module-header" id="GetWorkspaceArgs" data-link-title="GetWorkspaceArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getWorkspace.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getWorkspace.ts#L54">
         interface <strong>GetWorkspaceArgs</strong>
     </a>
 </h3>
@@ -1298,7 +1318,7 @@ The status of the image.
 A collection of arguments for invoking getWorkspace.
 
 <h4 class="pdoc-member-header" id="GetWorkspaceArgs-directoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getWorkspace.ts#L58">property <b>directoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getWorkspace.ts#L58">property <b>directoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directoryId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1306,7 +1326,7 @@ A collection of arguments for invoking getWorkspace.
 The ID of the directory for the WorkSpace. You have to specify `userName` along with `directoryId`. You cannot combine this parameter with `workspaceId`.
 
 <h4 class="pdoc-member-header" id="GetWorkspaceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getWorkspace.ts#L62">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getWorkspace.ts#L62">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1314,7 +1334,7 @@ The ID of the directory for the WorkSpace. You have to specify `userName` along 
 The tags for the WorkSpace.
 
 <h4 class="pdoc-member-header" id="GetWorkspaceArgs-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getWorkspace.ts#L66">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getWorkspace.ts#L66">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1322,7 +1342,7 @@ The tags for the WorkSpace.
 The user name of the user for the WorkSpace. This user name must exist in the directory for the WorkSpace. You cannot combine this parameter with `workspaceId`.
 
 <h4 class="pdoc-member-header" id="GetWorkspaceArgs-workspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getWorkspace.ts#L70">property <b>workspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getWorkspace.ts#L70">property <b>workspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workspaceId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1330,7 +1350,7 @@ The user name of the user for the WorkSpace. This user name must exist in the di
 The ID of the WorkSpace. You cannot combine this parameter with `directoryId`.
 
 <h3 class="pdoc-module-header" id="GetWorkspaceResult" data-link-title="GetWorkspaceResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getWorkspace.ts#L76">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getWorkspace.ts#L76">
         interface <strong>GetWorkspaceResult</strong>
     </a>
 </h3>
@@ -1340,12 +1360,12 @@ The ID of the WorkSpace. You cannot combine this parameter with `directoryId`.
 A collection of values returned by getWorkspace.
 
 <h4 class="pdoc-member-header" id="GetWorkspaceResult-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getWorkspace.ts#L77">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getWorkspace.ts#L77">property <b>bundleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bundleId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetWorkspaceResult-computerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getWorkspace.ts#L81">property <b>computerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getWorkspace.ts#L81">property <b>computerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>computerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1353,12 +1373,12 @@ A collection of values returned by getWorkspace.
 The name of the WorkSpace, as seen by the operating system.
 
 <h4 class="pdoc-member-header" id="GetWorkspaceResult-directoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getWorkspace.ts#L82">property <b>directoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getWorkspace.ts#L82">property <b>directoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directoryId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetWorkspaceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getWorkspace.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getWorkspace.ts#L86">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1366,7 +1386,7 @@ The name of the WorkSpace, as seen by the operating system.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetWorkspaceResult-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getWorkspace.ts#L90">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getWorkspace.ts#L90">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1374,12 +1394,12 @@ The provider-assigned unique ID for this managed resource.
 The IP address of the WorkSpace.
 
 <h4 class="pdoc-member-header" id="GetWorkspaceResult-rootVolumeEncryptionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getWorkspace.ts#L91">property <b>rootVolumeEncryptionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getWorkspace.ts#L91">property <b>rootVolumeEncryptionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootVolumeEncryptionEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetWorkspaceResult-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getWorkspace.ts#L95">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getWorkspace.ts#L95">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1387,37 +1407,37 @@ The IP address of the WorkSpace.
 The operational state of the WorkSpace.
 
 <h4 class="pdoc-member-header" id="GetWorkspaceResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getWorkspace.ts#L96">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getWorkspace.ts#L96">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetWorkspaceResult-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getWorkspace.ts#L97">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getWorkspace.ts#L97">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetWorkspaceResult-userVolumeEncryptionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getWorkspace.ts#L98">property <b>userVolumeEncryptionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getWorkspace.ts#L98">property <b>userVolumeEncryptionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userVolumeEncryptionEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetWorkspaceResult-volumeEncryptionKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getWorkspace.ts#L99">property <b>volumeEncryptionKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getWorkspace.ts#L99">property <b>volumeEncryptionKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeEncryptionKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetWorkspaceResult-workspaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getWorkspace.ts#L100">property <b>workspaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getWorkspace.ts#L100">property <b>workspaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workspaceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetWorkspaceResult-workspaceProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/getWorkspace.ts#L101">property <b>workspaceProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/getWorkspace.ts#L101">property <b>workspaceProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workspaceProperties: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetWorkspaceWorkspaceProperty'>GetWorkspaceWorkspaceProperty</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="IpGroupArgs" data-link-title="IpGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/ipGroup.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/ipGroup.ts#L128">
         interface <strong>IpGroupArgs</strong>
     </a>
 </h3>
@@ -1427,7 +1447,7 @@ The operational state of the WorkSpace.
 The set of arguments for constructing a IpGroup resource.
 
 <h4 class="pdoc-member-header" id="IpGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/ipGroup.ts#L132">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/ipGroup.ts#L132">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1435,7 +1455,7 @@ The set of arguments for constructing a IpGroup resource.
 The description.
 
 <h4 class="pdoc-member-header" id="IpGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/ipGroup.ts#L136">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/ipGroup.ts#L136">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1443,7 +1463,7 @@ The description.
 The name of the IP group.
 
 <h4 class="pdoc-member-header" id="IpGroupArgs-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/ipGroup.ts#L140">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/ipGroup.ts#L140">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IpGroupRule'>IpGroupRule</a>&gt;[]&gt;;</code></pre>
@@ -1451,12 +1471,12 @@ The name of the IP group.
 One or more pairs specifying the IP group rule (in CIDR format) from which web requests originate.
 
 <h4 class="pdoc-member-header" id="IpGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/ipGroup.ts#L141">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/ipGroup.ts#L141">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="IpGroupState" data-link-title="IpGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/ipGroup.ts#L109">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/ipGroup.ts#L109">
         interface <strong>IpGroupState</strong>
     </a>
 </h3>
@@ -1466,7 +1486,7 @@ One or more pairs specifying the IP group rule (in CIDR format) from which web r
 Input properties used for looking up and filtering IpGroup resources.
 
 <h4 class="pdoc-member-header" id="IpGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/ipGroup.ts#L113">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/ipGroup.ts#L113">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1474,7 +1494,7 @@ Input properties used for looking up and filtering IpGroup resources.
 The description.
 
 <h4 class="pdoc-member-header" id="IpGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/ipGroup.ts#L117">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/ipGroup.ts#L117">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1482,7 +1502,7 @@ The description.
 The name of the IP group.
 
 <h4 class="pdoc-member-header" id="IpGroupState-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/ipGroup.ts#L121">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/ipGroup.ts#L121">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IpGroupRule'>IpGroupRule</a>&gt;[]&gt;;</code></pre>
@@ -1490,12 +1510,12 @@ The name of the IP group.
 One or more pairs specifying the IP group rule (in CIDR format) from which web requests originate.
 
 <h4 class="pdoc-member-header" id="IpGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/ipGroup.ts#L122">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/ipGroup.ts#L122">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="WorkspaceArgs" data-link-title="WorkspaceArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L233">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L233">
         interface <strong>WorkspaceArgs</strong>
     </a>
 </h3>
@@ -1505,7 +1525,7 @@ One or more pairs specifying the IP group rule (in CIDR format) from which web r
 The set of arguments for constructing a Workspace resource.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L237">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L237">property <b>bundleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bundleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1513,7 +1533,7 @@ The set of arguments for constructing a Workspace resource.
 The ID of the bundle for the WorkSpace.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-directoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L241">property <b>directoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L241">property <b>directoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directoryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1521,7 +1541,7 @@ The ID of the bundle for the WorkSpace.
 The ID of the directory for the WorkSpace.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-rootVolumeEncryptionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L245">property <b>rootVolumeEncryptionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L245">property <b>rootVolumeEncryptionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootVolumeEncryptionEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1529,7 +1549,7 @@ The ID of the directory for the WorkSpace.
 Indicates whether the data stored on the root volume is encrypted.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L249">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L249">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1537,7 +1557,7 @@ Indicates whether the data stored on the root volume is encrypted.
 The tags for the WorkSpace.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L253">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L253">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1545,7 +1565,7 @@ The tags for the WorkSpace.
 The user name of the user for the WorkSpace. This user name must exist in the directory for the WorkSpace.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-userVolumeEncryptionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L257">property <b>userVolumeEncryptionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L257">property <b>userVolumeEncryptionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userVolumeEncryptionEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1553,7 +1573,7 @@ The user name of the user for the WorkSpace. This user name must exist in the di
 Indicates whether the data stored on the user volume is encrypted.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-volumeEncryptionKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L261">property <b>volumeEncryptionKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L261">property <b>volumeEncryptionKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1561,7 +1581,7 @@ Indicates whether the data stored on the user volume is encrypted.
 The symmetric AWS KMS customer master key (CMK) used to encrypt data stored on your WorkSpace. Amazon WorkSpaces does not support asymmetric CMKs.
 
 <h4 class="pdoc-member-header" id="WorkspaceArgs-workspaceProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L265">property <b>workspaceProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L265">property <b>workspaceProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workspaceProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WorkspaceWorkspaceProperties'>WorkspaceWorkspaceProperties</a>&gt;;</code></pre>
@@ -1569,7 +1589,7 @@ The symmetric AWS KMS customer master key (CMK) used to encrypt data stored on y
 The WorkSpace properties.
 
 <h3 class="pdoc-module-header" id="WorkspaceState" data-link-title="WorkspaceState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L183">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L183">
         interface <strong>WorkspaceState</strong>
     </a>
 </h3>
@@ -1579,7 +1599,7 @@ The WorkSpace properties.
 Input properties used for looking up and filtering Workspace resources.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-bundleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L187">property <b>bundleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L187">property <b>bundleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bundleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1587,7 +1607,7 @@ Input properties used for looking up and filtering Workspace resources.
 The ID of the bundle for the WorkSpace.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-computerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L191">property <b>computerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L191">property <b>computerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>computerName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1595,7 +1615,7 @@ The ID of the bundle for the WorkSpace.
 The name of the WorkSpace, as seen by the operating system.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-directoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L195">property <b>directoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L195">property <b>directoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>directoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1603,7 +1623,7 @@ The name of the WorkSpace, as seen by the operating system.
 The ID of the directory for the WorkSpace.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L199">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L199">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1611,7 +1631,7 @@ The ID of the directory for the WorkSpace.
 The IP address of the WorkSpace.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-rootVolumeEncryptionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L203">property <b>rootVolumeEncryptionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L203">property <b>rootVolumeEncryptionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootVolumeEncryptionEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1619,7 +1639,7 @@ The IP address of the WorkSpace.
 Indicates whether the data stored on the root volume is encrypted.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L207">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L207">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1627,7 +1647,7 @@ Indicates whether the data stored on the root volume is encrypted.
 The operational state of the WorkSpace.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L211">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L211">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1635,7 +1655,7 @@ The operational state of the WorkSpace.
 The tags for the WorkSpace.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L215">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L215">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1643,7 +1663,7 @@ The tags for the WorkSpace.
 The user name of the user for the WorkSpace. This user name must exist in the directory for the WorkSpace.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-userVolumeEncryptionEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L219">property <b>userVolumeEncryptionEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L219">property <b>userVolumeEncryptionEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userVolumeEncryptionEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1651,7 +1671,7 @@ The user name of the user for the WorkSpace. This user name must exist in the di
 Indicates whether the data stored on the user volume is encrypted.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-volumeEncryptionKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L223">property <b>volumeEncryptionKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L223">property <b>volumeEncryptionKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeEncryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1659,7 +1679,7 @@ Indicates whether the data stored on the user volume is encrypted.
 The symmetric AWS KMS customer master key (CMK) used to encrypt data stored on your WorkSpace. Amazon WorkSpaces does not support asymmetric CMKs.
 
 <h4 class="pdoc-member-header" id="WorkspaceState-workspaceProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/workspaces/workspace.ts#L227">property <b>workspaceProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/4ce7973445e1b41a7297cc15ad476f490c9f4e1e/sdk/nodejs/workspaces/workspace.ts#L227">property <b>workspaceProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>workspaceProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WorkspaceWorkspaceProperties'>WorkspaceWorkspaceProperties</a>&gt;;</code></pre>

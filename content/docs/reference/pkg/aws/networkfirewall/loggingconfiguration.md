@@ -1107,7 +1107,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A map describing the logging destination for the chosen `log_destination_type`.
 * For an Amazon S3 bucket, specify the key `bucketName` with the URL of the bucket and optionally specify the key `prefix` with a path.
-* For a CloudWatch log group, specify the key `logGroup` with the Amazon Resource Name (ARN) of the CloudWatch log group.
+* For a CloudWatch log group, specify the key `logGroup` with the name of the CloudWatch log group.
 * For a Kinesis Data Firehose delivery stream, specify the key `deliveryStream` with the Amazon Resource Name (ARN) of the delivery stream.
 {{% /md %}}</dd>
 
@@ -1150,7 +1150,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A map describing the logging destination for the chosen `log_destination_type`.
 * For an Amazon S3 bucket, specify the key `bucketName` with the URL of the bucket and optionally specify the key `prefix` with a path.
-* For a CloudWatch log group, specify the key `logGroup` with the Amazon Resource Name (ARN) of the CloudWatch log group.
+* For a CloudWatch log group, specify the key `logGroup` with the name of the CloudWatch log group.
 * For a Kinesis Data Firehose delivery stream, specify the key `deliveryStream` with the Amazon Resource Name (ARN) of the delivery stream.
 {{% /md %}}</dd>
 
@@ -1193,7 +1193,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A map describing the logging destination for the chosen `log_destination_type`.
 * For an Amazon S3 bucket, specify the key `bucketName` with the URL of the bucket and optionally specify the key `prefix` with a path.
-* For a CloudWatch log group, specify the key `logGroup` with the Amazon Resource Name (ARN) of the CloudWatch log group.
+* For a CloudWatch log group, specify the key `logGroup` with the name of the CloudWatch log group.
 * For a Kinesis Data Firehose delivery stream, specify the key `deliveryStream` with the Amazon Resource Name (ARN) of the delivery stream.
 {{% /md %}}</dd>
 
@@ -1236,7 +1236,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A map describing the logging destination for the chosen `log_destination_type`.
 * For an Amazon S3 bucket, specify the key `bucketName` with the URL of the bucket and optionally specify the key `prefix` with a path.
-* For a CloudWatch log group, specify the key `logGroup` with the Amazon Resource Name (ARN) of the CloudWatch log group.
+* For a CloudWatch log group, specify the key `logGroup` with the name of the CloudWatch log group.
 * For a Kinesis Data Firehose delivery stream, specify the key `deliveryStream` with the Amazon Resource Name (ARN) of the delivery stream.
 {{% /md %}}</dd>
 
