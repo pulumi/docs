@@ -352,7 +352,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws_glue_catalog_table", 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.CatalogTable">CatalogTable</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">catalog_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">partition_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[CatalogTablePartitionKeyArgs]]</span> = None<span class="p">, </span><span class="nx">retention</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">storage_descriptor</span><span class="p">:</span> <span class="nx">Optional[CatalogTableStorageDescriptorArgs]</span> = None<span class="p">, </span><span class="nx">table_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view_expanded_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view_original_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/glue/#pulumi_aws.glue.CatalogTable">CatalogTable</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">catalog_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">partition_indices</span><span class="p">:</span> <span class="nx">Optional[Sequence[CatalogTablePartitionIndexArgs]]</span> = None<span class="p">, </span><span class="nx">partition_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[CatalogTablePartitionKeyArgs]]</span> = None<span class="p">, </span><span class="nx">retention</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">storage_descriptor</span><span class="p">:</span> <span class="nx">Optional[CatalogTableStorageDescriptorArgs]</span> = None<span class="p">, </span><span class="nx">table_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view_expanded_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view_original_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -592,6 +592,17 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="partitionindices_csharp">
+<a href="#partitionindices_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Indices</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogtablepartitionindex">List&lt;Catalog<wbr>Table<wbr>Partition<wbr>Index<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of partition indexes. see Partition Index below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="partitionkeys_csharp">
 <a href="#partitionkeys_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Keys</a>
 </span> 
@@ -727,6 +738,17 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="partitionindices_go">
+<a href="#partitionindices_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Indices</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogtablepartitionindex">[]Catalog<wbr>Table<wbr>Partition<wbr>Index</a></span>
+    </dt>
+    <dd>{{% md %}}A list of partition indexes. see Partition Index below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -870,6 +892,17 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 
     <dt class="property-optional"
             title="Optional">
+        <span id="partitionindices_nodejs">
+<a href="#partitionindices_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Indices</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogtablepartitionindex">Catalog<wbr>Table<wbr>Partition<wbr>Index[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of partition indexes. see Partition Index below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="partitionkeys_nodejs">
 <a href="#partitionkeys_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Keys</a>
 </span> 
@@ -1005,6 +1038,17 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="partition_indices_python">
+<a href="#partition_indices_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>indices</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogtablepartitionindex">Sequence[Catalog<wbr>Table<wbr>Partition<wbr>Index<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of partition indexes. see Partition Index below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1216,7 +1260,7 @@ Get an existing CatalogTable resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">catalog_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">partition_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[CatalogTablePartitionKeyArgs]]</span> = None<span class="p">, </span><span class="nx">retention</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">storage_descriptor</span><span class="p">:</span> <span class="nx">Optional[CatalogTableStorageDescriptorArgs]</span> = None<span class="p">, </span><span class="nx">table_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view_expanded_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view_original_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CatalogTable</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">catalog_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">owner</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">parameters</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">partition_indices</span><span class="p">:</span> <span class="nx">Optional[Sequence[CatalogTablePartitionIndexArgs]]</span> = None<span class="p">, </span><span class="nx">partition_keys</span><span class="p">:</span> <span class="nx">Optional[Sequence[CatalogTablePartitionKeyArgs]]</span> = None<span class="p">, </span><span class="nx">retention</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">storage_descriptor</span><span class="p">:</span> <span class="nx">Optional[CatalogTableStorageDescriptorArgs]</span> = None<span class="p">, </span><span class="nx">table_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view_expanded_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">view_original_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CatalogTable</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1409,6 +1453,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_partitionindices_csharp">
+<a href="#state_partitionindices_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Indices</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogtablepartitionindex">List&lt;Catalog<wbr>Table<wbr>Partition<wbr>Index<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of partition indexes. see Partition Index below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_partitionkeys_csharp">
 <a href="#state_partitionkeys_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Keys</a>
 </span> 
@@ -1555,6 +1610,17 @@ The following state arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_partitionindices_go">
+<a href="#state_partitionindices_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Indices</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogtablepartitionindex">[]Catalog<wbr>Table<wbr>Partition<wbr>Index</a></span>
+    </dt>
+    <dd>{{% md %}}A list of partition indexes. see Partition Index below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1709,6 +1775,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_partitionindices_nodejs">
+<a href="#state_partitionindices_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Indices</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogtablepartitionindex">Catalog<wbr>Table<wbr>Partition<wbr>Index[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of partition indexes. see Partition Index below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_partitionkeys_nodejs">
 <a href="#state_partitionkeys_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Keys</a>
 </span> 
@@ -1859,6 +1936,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_partition_indices_python">
+<a href="#state_partition_indices_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>indices</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#catalogtablepartitionindex">Sequence[Catalog<wbr>Table<wbr>Partition<wbr>Index<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of partition indexes. see Partition Index below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_partition_keys_python">
 <a href="#state_partition_keys_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>keys</a>
 </span> 
@@ -1936,6 +2024,180 @@ The following state arguments are supported:
 
 
 ## Supporting Types
+
+
+<h4 id="catalogtablepartitionindex">Catalog<wbr>Table<wbr>Partition<wbr>Index</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CatalogTablePartitionIndex">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CatalogTablePartitionIndex">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#CatalogTablePartitionIndexArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#CatalogTablePartitionIndexOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Inputs.CatalogTablePartitionIndexArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Outputs.CatalogTablePartitionIndex.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="indexname_csharp">
+<a href="#indexname_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the partition index.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keys_csharp">
+<a href="#keys_csharp" style="color: inherit; text-decoration: inherit;">Keys</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The keys for the partition index.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="indexstatus_csharp">
+<a href="#indexstatus_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="indexname_go">
+<a href="#indexname_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the partition index.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keys_go">
+<a href="#keys_go" style="color: inherit; text-decoration: inherit;">Keys</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The keys for the partition index.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="indexstatus_go">
+<a href="#indexstatus_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="indexname_nodejs">
+<a href="#indexname_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the partition index.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keys_nodejs">
+<a href="#keys_nodejs" style="color: inherit; text-decoration: inherit;">keys</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The keys for the partition index.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="indexstatus_nodejs">
+<a href="#indexstatus_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="index_name_python">
+<a href="#index_name_python" style="color: inherit; text-decoration: inherit;">index_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the partition index.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="keys_python">
+<a href="#keys_python" style="color: inherit; text-decoration: inherit;">keys</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The keys for the partition index.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="index_status_python">
+<a href="#index_status_python" style="color: inherit; text-decoration: inherit;">index_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="catalogtablepartitionkey">Catalog<wbr>Table<wbr>Partition<wbr>Key</h4>

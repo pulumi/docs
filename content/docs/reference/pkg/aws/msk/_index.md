@@ -13,6 +13,7 @@ Explore the resources and functions of the msk module in the AWS package.
 <ul class="api">
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
     <li><a href="configuration" title="Configuration"><span class="symbol resource"></span>Configuration</a></li>
+    <li><a href="scramsecretassociation" title="ScramSecretAssociation"><span class="symbol resource"></span>ScramSecretAssociation</a></li>
 </ul>
 
 <h2 id="functions">Functions</h2>
@@ -30,7 +31,7 @@ Explore the resources and functions of the msk module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.14.0</dd>
+	<dd>3.16.0</dd>
 </dl>
 
 

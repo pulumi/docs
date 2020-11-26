@@ -725,7 +725,7 @@ const fooSpotFleetRequest = new aws.ec2.SpotFleetRequest("fooSpotFleetRequest", 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.SpotFleetRequest">SpotFleetRequest</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allocation_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excess_capacity_termination_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fleet_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_fleet_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_interruption_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_pools_to_use_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">launch_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpotFleetRequestLaunchSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">launch_template_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpotFleetRequestLaunchTemplateConfigArgs]]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">replace_unhealthy_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">spot_price</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">terminate_instances_with_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">valid_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_fulfillment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.SpotFleetRequest">SpotFleetRequest</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allocation_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excess_capacity_termination_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fleet_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_fleet_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_interruption_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_pools_to_use_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">launch_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpotFleetRequestLaunchSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">launch_template_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpotFleetRequestLaunchTemplateConfigArgs]]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">replace_unhealthy_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">spot_maintenance_strategies</span><span class="p">:</span> <span class="nx">Optional[SpotFleetRequestSpotMaintenanceStrategiesArgs]</span> = None<span class="p">, </span><span class="nx">spot_price</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">terminate_instances_with_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">valid_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_fulfillment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1037,6 +1037,17 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="spotmaintenancestrategies_csharp">
+<a href="#spotmaintenancestrategies_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Maintenance<wbr>Strategies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategies">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="spotprice_csharp">
 <a href="#spotprice_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
 </span> 
@@ -1258,6 +1269,17 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether Spot fleet should replace unhealthy instances. Default `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="spotmaintenancestrategies_go">
+<a href="#spotmaintenancestrategies_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Maintenance<wbr>Strategies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategies">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies</a></span>
+    </dt>
+    <dd>{{% md %}}Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1487,6 +1509,17 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="spotmaintenancestrategies_nodejs">
+<a href="#spotmaintenancestrategies_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Maintenance<wbr>Strategies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategies">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies</a></span>
+    </dt>
+    <dd>{{% md %}}Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="spotprice_nodejs">
 <a href="#spotprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Price</a>
 </span> 
@@ -1708,6 +1741,17 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether Spot fleet should replace unhealthy instances. Default `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="spot_maintenance_strategies_python">
+<a href="#spot_maintenance_strategies_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>maintenance_<wbr>strategies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategies">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1973,7 +2017,7 @@ Get an existing SpotFleetRequest resource's state with the given name, ID, and o
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allocation_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excess_capacity_termination_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fleet_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_fleet_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_interruption_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_pools_to_use_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">launch_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpotFleetRequestLaunchSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">launch_template_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpotFleetRequestLaunchTemplateConfigArgs]]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">replace_unhealthy_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">spot_price</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spot_request_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">terminate_instances_with_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">valid_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_fulfillment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> SpotFleetRequest</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allocation_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">client_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">excess_capacity_termination_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fleet_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_fleet_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_interruption_behaviour</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_pools_to_use_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">launch_specifications</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpotFleetRequestLaunchSpecificationArgs]]</span> = None<span class="p">, </span><span class="nx">launch_template_configs</span><span class="p">:</span> <span class="nx">Optional[Sequence[SpotFleetRequestLaunchTemplateConfigArgs]]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">replace_unhealthy_instances</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">spot_maintenance_strategies</span><span class="p">:</span> <span class="nx">Optional[SpotFleetRequestSpotMaintenanceStrategiesArgs]</span> = None<span class="p">, </span><span class="nx">spot_price</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spot_request_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">target_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">terminate_instances_with_expiration</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">valid_from</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">valid_until</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_fulfillment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> SpotFleetRequest</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2224,6 +2268,17 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_spotmaintenancestrategies_csharp">
+<a href="#state_spotmaintenancestrategies_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Maintenance<wbr>Strategies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategies">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_spotprice_csharp">
 <a href="#state_spotprice_csharp" style="color: inherit; text-decoration: inherit;">Spot<wbr>Price</a>
 </span> 
@@ -2466,6 +2521,17 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether Spot fleet should replace unhealthy instances. Default `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_spotmaintenancestrategies_go">
+<a href="#state_spotmaintenancestrategies_go" style="color: inherit; text-decoration: inherit;">Spot<wbr>Maintenance<wbr>Strategies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategies">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies</a></span>
+    </dt>
+    <dd>{{% md %}}Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2716,6 +2782,17 @@ across different markets and instance types. Conflicts with `launch_template_con
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_spotmaintenancestrategies_nodejs">
+<a href="#state_spotmaintenancestrategies_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Maintenance<wbr>Strategies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategies">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies</a></span>
+    </dt>
+    <dd>{{% md %}}Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_spotprice_nodejs">
 <a href="#state_spotprice_nodejs" style="color: inherit; text-decoration: inherit;">spot<wbr>Price</a>
 </span> 
@@ -2958,6 +3035,17 @@ across different markets and instance types. Conflicts with `launch_template_con
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Indicates whether Spot fleet should replace unhealthy instances. Default `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_spot_maintenance_strategies_python">
+<a href="#state_spot_maintenance_strategies_python" style="color: inherit; text-decoration: inherit;">spot_<wbr>maintenance_<wbr>strategies</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategies">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5340,6 +5428,186 @@ timeout of 10m is reached.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The capacity added to the fleet by a fulfilled request.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="spotfleetrequestspotmaintenancestrategies">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotFleetRequestSpotMaintenanceStrategies">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotFleetRequestSpotMaintenanceStrategies">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequestSpotMaintenanceStrategiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequestSpotMaintenanceStrategiesOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.SpotFleetRequestSpotMaintenanceStrategiesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.SpotFleetRequestSpotMaintenanceStrategies.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacityrebalance_csharp">
+<a href="#capacityrebalance_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Rebalance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategiescapacityrebalance">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Nested argument containing the capacity rebalance for your fleet request. Defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacityrebalance_go">
+<a href="#capacityrebalance_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Rebalance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategiescapacityrebalance">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance</a></span>
+    </dt>
+    <dd>{{% md %}}Nested argument containing the capacity rebalance for your fleet request. Defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacityrebalance_nodejs">
+<a href="#capacityrebalance_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Rebalance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategiescapacityrebalance">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance</a></span>
+    </dt>
+    <dd>{{% md %}}Nested argument containing the capacity rebalance for your fleet request. Defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="capacity_rebalance_python">
+<a href="#capacity_rebalance_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>rebalance</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spotfleetrequestspotmaintenancestrategiescapacityrebalance">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Nested argument containing the capacity rebalance for your fleet request. Defined below.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="spotfleetrequestspotmaintenancestrategiescapacityrebalance">Spot<wbr>Fleet<wbr>Request<wbr>Spot<wbr>Maintenance<wbr>Strategies<wbr>Capacity<wbr>Rebalance</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalance">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalance">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalance.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replacementstrategy_csharp">
+<a href="#replacementstrategy_csharp" style="color: inherit; text-decoration: inherit;">Replacement<wbr>Strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The replacement strategy to use. Only available for spot fleets with `fleet_type` set to `maintain`. Valid values: `launch`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replacementstrategy_go">
+<a href="#replacementstrategy_go" style="color: inherit; text-decoration: inherit;">Replacement<wbr>Strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The replacement strategy to use. Only available for spot fleets with `fleet_type` set to `maintain`. Valid values: `launch`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replacementstrategy_nodejs">
+<a href="#replacementstrategy_nodejs" style="color: inherit; text-decoration: inherit;">replacement<wbr>Strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The replacement strategy to use. Only available for spot fleets with `fleet_type` set to `maintain`. Valid values: `launch`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="replacement_strategy_python">
+<a href="#replacement_strategy_python" style="color: inherit; text-decoration: inherit;">replacement_<wbr>strategy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The replacement strategy to use. Only available for spot fleets with `fleet_type` set to `maintain`. Valid values: `launch`.
 {{% /md %}}</dd>
 
 </dl>

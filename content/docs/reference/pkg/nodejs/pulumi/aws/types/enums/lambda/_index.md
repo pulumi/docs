@@ -3,7 +3,7 @@ title: "Module types/enums/lambda"
 title_tag: "Module types/enums/lambda | Package @pulumi/aws | Node.js SDK"
 linktitle: "enums/lambda"
 meta_desc: "Explore members of the enums/lambda module in the @pulumi/aws package."
-git_sha: "8a8be2819c5dd987f03d94fb4fe439ca6be643bb"
+git_sha: "3da96013c0cb291a4fe359589c7d79d5f0a10bf1"
 block_external_search_index: true
 ---
 
@@ -27,7 +27,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="Runtime" data-link-title="Runtime">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/types/enums/lambda/index.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/types/enums/lambda/index.ts#L27">
         type <strong>Runtime</strong>
     </a>
 </h3>
