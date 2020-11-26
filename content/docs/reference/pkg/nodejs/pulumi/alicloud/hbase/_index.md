@@ -3,7 +3,7 @@ title: "Module hbase"
 title_tag: "Module hbase | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "hbase"
 meta_desc: "Explore members of the hbase module in the @pulumi/alicloud package."
-git_sha: "6cf57c2bc1fac537aa1a1744db4b579895c55321"
+git_sha: "4c4dbebbf662f52b648cbfbe09ca1ee944b21850"
 block_external_search_index: true
 ---
 
@@ -39,7 +39,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Instance" data-link-title="Instance">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L50">
         Resource <strong>Instance</strong>
     </a>
 </h3>
@@ -89,7 +89,7 @@ HBase can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Instance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L146"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L146"> <b>constructor</b></a>
 </h4>
 
 
@@ -103,7 +103,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Instance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L60">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L60">method <b>get</b></a>
 </h4>
 
 
@@ -114,14 +114,14 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Instance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L50">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L50">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Instance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L71">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L71">method <b>isInstance</b></a>
 </h4>
 
 
@@ -132,7 +132,7 @@ Returns true if the given object is an instance of Instance.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Instance-autoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L81">property <b>autoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L81">property <b>autoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoRenew: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -140,7 +140,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 `true`, `false`, System default to `false`, valid when payType = PrePaid.
 
 <h4 class="pdoc-member-header" id="Instance-coldStorageSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L85">property <b>coldStorageSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L85">property <b>coldStorageSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>coldStorageSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -148,7 +148,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 0 or 0+. 0 means isColdStorage = false. 0+ means isColdStorage = true
 
 <h4 class="pdoc-member-header" id="Instance-coreDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L91">property <b>coreDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L91">property <b>coreDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>coreDiskSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -158,7 +158,7 @@ User-defined HBase instance one core node's storage space.Unit: GB. Value range:
 - 40-GB increments.
 
 <h4 class="pdoc-member-header" id="Instance-coreDiskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L95">property <b>coreDiskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L95">property <b>coreDiskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>coreDiskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -166,7 +166,7 @@ User-defined HBase instance one core node's storage space.Unit: GB. Value range:
 Valid values are `cloudSsd`, `cloudEfficiency`, `localHddPro`, `localSsdPro`. localDisk size is fixed.
 
 <h4 class="pdoc-member-header" id="Instance-coreInstanceQuantity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L99">property <b>coreInstanceQuantity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L99">property <b>coreInstanceQuantity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>coreInstanceQuantity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -174,12 +174,12 @@ Valid values are `cloudSsd`, `cloudEfficiency`, `localHddPro`, `localSsdPro`. lo
 default=2. if coreInstanceQuantity > 1,this is cluster's instance.  if coreInstanceQuantity = 1,this is a single instance.
 
 <h4 class="pdoc-member-header" id="Instance-coreInstanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L100">property <b>coreInstanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L100">property <b>coreInstanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>coreInstanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Instance-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L104">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L104">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deletionProtection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -187,7 +187,7 @@ default=2. if coreInstanceQuantity > 1,this is cluster's instance.  if coreInsta
 the switch of delete protection. true: delete protect, false: no delete protect. you must set false when you want to delete cluster.
 
 <h4 class="pdoc-member-header" id="Instance-duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L108">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L108">property <b>duration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>duration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -195,7 +195,7 @@ the switch of delete protection. true: delete protect, false: no delete protect.
 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 60, valid when payType = PrePaid. unit: month.
 
 <h4 class="pdoc-member-header" id="Instance-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L112">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L112">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engine: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -203,7 +203,7 @@ the switch of delete protection. true: delete protect, false: no delete protect.
 "hbase/hbaseue/bds", The following types are supported after v1.73.0: `hbaseue` and `bds `
 
 <h4 class="pdoc-member-header" id="Instance-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L117">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L117">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engineVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -212,7 +212,7 @@ hbase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine
 * `masterInstanceType`、`coreInstanceType` - (Required, ForceNew) Instance specification. see [Instance specifications](https://help.aliyun.com/document_detail/53532.html). or you can call describeInstanceType api.
 
 <h4 class="pdoc-member-header" id="Instance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L50">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L50">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -221,7 +221,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Instance-maintainEndTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L121">property <b>maintainEndTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L121">property <b>maintainEndTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maintainEndTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -229,7 +229,7 @@ deployments and may be missing (undefined) during planning phases.
 The end time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time).
 
 <h4 class="pdoc-member-header" id="Instance-maintainStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L125">property <b>maintainStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L125">property <b>maintainStartTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maintainStartTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -237,12 +237,12 @@ The end time of the operation and maintenance time period of the instance, in th
 The start time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time).
 
 <h4 class="pdoc-member-header" id="Instance-masterInstanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L126">property <b>masterInstanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L126">property <b>masterInstanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterInstanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Instance-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L130">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L130">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -250,7 +250,7 @@ The start time of the operation and maintenance time period of the instance, in 
 HBase instance name. Length must be 2-128 characters long. Only Chinese characters, English letters, numbers, period (.), underline (_), or dash (-) are permitted.
 
 <h4 class="pdoc-member-header" id="Instance-payType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L134">property <b>payType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L134">property <b>payType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>payType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -258,7 +258,7 @@ HBase instance name. Length must be 2-128 characters long. Only Chinese characte
 Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
 
 <h4 class="pdoc-member-header" id="Instance-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L138">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L138">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -266,7 +266,7 @@ Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Instance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L50">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L50">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -275,7 +275,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Instance-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L142">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L142">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -283,7 +283,7 @@ deployments.
 if vswitchId is not empty, that mean netType = vpc and has a same region. if vswitchId is empty, net_type_classic
 
 <h4 class="pdoc-member-header" id="Instance-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L146">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L146">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -293,7 +293,7 @@ The Zone to launch the HBase instance. if vswitchId is not empty, this zoneId ca
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getInstances" data-link-title="getInstances">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getInstances.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getInstances.ts#L26">
         Function <strong>getInstances</strong>
     </a>
 </h3>
@@ -320,7 +320,7 @@ const hbase = pulumi.output(alicloud.hbase.getInstances({
 ```
 
 <h3 class="pdoc-module-header" id="getZones" data-link-title="getZones">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getZones.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getZones.ts#L25">
         Function <strong>getZones</strong>
     </a>
 </h3>
@@ -348,7 +348,7 @@ const hbase = new alicloud.hbase.Instance("hbase", {zoneId: zonesIds.then(zonesI
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetInstancesArgs" data-link-title="GetInstancesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getInstances.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getInstances.ts#L47">
         interface <strong>GetInstancesArgs</strong>
     </a>
 </h3>
@@ -358,7 +358,7 @@ const hbase = new alicloud.hbase.Instance("hbase", {zoneId: zonesIds.then(zonesI
 A collection of arguments for invoking getInstances.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getInstances.ts#L51">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getInstances.ts#L51">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -366,7 +366,7 @@ A collection of arguments for invoking getInstances.
 Instance availability zone.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getInstances.ts#L55">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getInstances.ts#L55">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -374,7 +374,7 @@ Instance availability zone.
 The ids list of HBase instances
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getInstances.ts#L59">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getInstances.ts#L59">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -382,12 +382,12 @@ The ids list of HBase instances
 A regex string to apply to the instance name.
 
 <h4 class="pdoc-member-header" id="GetInstancesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getInstances.ts#L60">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getInstances.ts#L60">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getInstances.ts#L64">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getInstances.ts#L64">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -395,7 +395,7 @@ A regex string to apply to the instance name.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="GetInstancesResult" data-link-title="GetInstancesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getInstances.ts#L70">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getInstances.ts#L70">
         interface <strong>GetInstancesResult</strong>
     </a>
 </h3>
@@ -405,12 +405,12 @@ A mapping of tags to assign to the resource.
 A collection of values returned by getInstances.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getInstances.ts#L71">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getInstances.ts#L71">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getInstances.ts#L75">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getInstances.ts#L75">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -418,7 +418,7 @@ A collection of values returned by getInstances.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getInstances.ts#L79">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getInstances.ts#L79">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -426,7 +426,7 @@ The provider-assigned unique ID for this managed resource.
 The ids list of HBase instances
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-instances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getInstances.ts#L83">property <b>instances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getInstances.ts#L83">property <b>instances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstancesInstance'>GetInstancesInstance</a>[];</code></pre>
@@ -434,12 +434,12 @@ The ids list of HBase instances
 A list of HBase instances. Its every element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getInstances.ts#L84">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getInstances.ts#L84">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getInstances.ts#L88">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getInstances.ts#L88">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -447,12 +447,12 @@ A list of HBase instances. Its every element contains the following attributes:
 The names list of HBase instances
 
 <h4 class="pdoc-member-header" id="GetInstancesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getInstances.ts#L89">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getInstances.ts#L89">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstancesResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getInstances.ts#L93">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getInstances.ts#L93">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -460,7 +460,7 @@ The names list of HBase instances
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="GetZonesArgs" data-link-title="GetZonesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getZones.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getZones.ts#L42">
         interface <strong>GetZonesArgs</strong>
     </a>
 </h3>
@@ -470,12 +470,12 @@ A mapping of tags to assign to the resource.
 A collection of arguments for invoking getZones.
 
 <h4 class="pdoc-member-header" id="GetZonesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getZones.ts#L43">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getZones.ts#L43">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetZonesResult" data-link-title="GetZonesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getZones.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getZones.ts#L49">
         interface <strong>GetZonesResult</strong>
     </a>
 </h3>
@@ -485,7 +485,7 @@ A collection of arguments for invoking getZones.
 A collection of values returned by getZones.
 
 <h4 class="pdoc-member-header" id="GetZonesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getZones.ts#L53">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getZones.ts#L53">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -493,7 +493,7 @@ A collection of values returned by getZones.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetZonesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getZones.ts#L57">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getZones.ts#L57">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -501,12 +501,12 @@ The provider-assigned unique ID for this managed resource.
 A list of zone IDs.
 
 <h4 class="pdoc-member-header" id="GetZonesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getZones.ts#L58">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getZones.ts#L58">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZonesResult-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/getZones.ts#L62">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/getZones.ts#L62">property <b>zones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zones: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetZonesZone'>GetZonesZone</a>[];</code></pre>
@@ -514,7 +514,7 @@ A list of zone IDs.
 A list of availability zones. Each element contains the following attributes:
 
 <h3 class="pdoc-module-header" id="InstanceArgs" data-link-title="InstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L300">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L300">
         interface <strong>InstanceArgs</strong>
     </a>
 </h3>
@@ -524,7 +524,7 @@ A list of availability zones. Each element contains the following attributes:
 The set of arguments for constructing a Instance resource.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-autoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L304">property <b>autoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L304">property <b>autoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoRenew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -532,7 +532,7 @@ The set of arguments for constructing a Instance resource.
 `true`, `false`, System default to `false`, valid when payType = PrePaid.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-coldStorageSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L308">property <b>coldStorageSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L308">property <b>coldStorageSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>coldStorageSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -540,7 +540,7 @@ The set of arguments for constructing a Instance resource.
 0 or 0+. 0 means isColdStorage = false. 0+ means isColdStorage = true
 
 <h4 class="pdoc-member-header" id="InstanceArgs-coreDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L314">property <b>coreDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L314">property <b>coreDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>coreDiskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -550,7 +550,7 @@ User-defined HBase instance one core node's storage space.Unit: GB. Value range:
 - 40-GB increments.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-coreDiskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L318">property <b>coreDiskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L318">property <b>coreDiskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>coreDiskType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -558,7 +558,7 @@ User-defined HBase instance one core node's storage space.Unit: GB. Value range:
 Valid values are `cloudSsd`, `cloudEfficiency`, `localHddPro`, `localSsdPro`. localDisk size is fixed.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-coreInstanceQuantity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L322">property <b>coreInstanceQuantity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L322">property <b>coreInstanceQuantity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>coreInstanceQuantity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -566,12 +566,12 @@ Valid values are `cloudSsd`, `cloudEfficiency`, `localHddPro`, `localSsdPro`. lo
 default=2. if coreInstanceQuantity > 1,this is cluster's instance.  if coreInstanceQuantity = 1,this is a single instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-coreInstanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L323">property <b>coreInstanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L323">property <b>coreInstanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>coreInstanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceArgs-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L327">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L327">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -579,7 +579,7 @@ default=2. if coreInstanceQuantity > 1,this is cluster's instance.  if coreInsta
 the switch of delete protection. true: delete protect, false: no delete protect. you must set false when you want to delete cluster.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L331">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L331">property <b>duration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>duration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -587,7 +587,7 @@ the switch of delete protection. true: delete protect, false: no delete protect.
 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 60, valid when payType = PrePaid. unit: month.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L335">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L335">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -595,7 +595,7 @@ the switch of delete protection. true: delete protect, false: no delete protect.
 "hbase/hbaseue/bds", The following types are supported after v1.73.0: `hbaseue` and `bds `
 
 <h4 class="pdoc-member-header" id="InstanceArgs-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L340">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L340">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -604,7 +604,7 @@ hbase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine
 * `masterInstanceType`、`coreInstanceType` - (Required, ForceNew) Instance specification. see [Instance specifications](https://help.aliyun.com/document_detail/53532.html). or you can call describeInstanceType api.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-maintainEndTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L344">property <b>maintainEndTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L344">property <b>maintainEndTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintainEndTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -612,7 +612,7 @@ hbase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine
 The end time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time).
 
 <h4 class="pdoc-member-header" id="InstanceArgs-maintainStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L348">property <b>maintainStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L348">property <b>maintainStartTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintainStartTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -620,12 +620,12 @@ The end time of the operation and maintenance time period of the instance, in th
 The start time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time).
 
 <h4 class="pdoc-member-header" id="InstanceArgs-masterInstanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L349">property <b>masterInstanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L349">property <b>masterInstanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterInstanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L353">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L353">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -633,7 +633,7 @@ The start time of the operation and maintenance time period of the instance, in 
 HBase instance name. Length must be 2-128 characters long. Only Chinese characters, English letters, numbers, period (.), underline (_), or dash (-) are permitted.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-payType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L357">property <b>payType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L357">property <b>payType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -641,7 +641,7 @@ HBase instance name. Length must be 2-128 characters long. Only Chinese characte
 Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L361">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L361">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -649,7 +649,7 @@ Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L365">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L365">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -657,7 +657,7 @@ A mapping of tags to assign to the resource.
 if vswitchId is not empty, that mean netType = vpc and has a same region. if vswitchId is empty, net_type_classic
 
 <h4 class="pdoc-member-header" id="InstanceArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L369">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L369">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -665,7 +665,7 @@ if vswitchId is not empty, that mean netType = vpc and has a same region. if vsw
 The Zone to launch the HBase instance. if vswitchId is not empty, this zoneId can be "" or consistent.
 
 <h3 class="pdoc-module-header" id="InstanceState" data-link-title="InstanceState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L225">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L225">
         interface <strong>InstanceState</strong>
     </a>
 </h3>
@@ -675,7 +675,7 @@ The Zone to launch the HBase instance. if vswitchId is not empty, this zoneId ca
 Input properties used for looking up and filtering Instance resources.
 
 <h4 class="pdoc-member-header" id="InstanceState-autoRenew">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L229">property <b>autoRenew</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L229">property <b>autoRenew</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoRenew?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -683,7 +683,7 @@ Input properties used for looking up and filtering Instance resources.
 `true`, `false`, System default to `false`, valid when payType = PrePaid.
 
 <h4 class="pdoc-member-header" id="InstanceState-coldStorageSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L233">property <b>coldStorageSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L233">property <b>coldStorageSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>coldStorageSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -691,7 +691,7 @@ Input properties used for looking up and filtering Instance resources.
 0 or 0+. 0 means isColdStorage = false. 0+ means isColdStorage = true
 
 <h4 class="pdoc-member-header" id="InstanceState-coreDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L239">property <b>coreDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L239">property <b>coreDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>coreDiskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -701,7 +701,7 @@ User-defined HBase instance one core node's storage space.Unit: GB. Value range:
 - 40-GB increments.
 
 <h4 class="pdoc-member-header" id="InstanceState-coreDiskType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L243">property <b>coreDiskType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L243">property <b>coreDiskType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>coreDiskType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -709,7 +709,7 @@ User-defined HBase instance one core node's storage space.Unit: GB. Value range:
 Valid values are `cloudSsd`, `cloudEfficiency`, `localHddPro`, `localSsdPro`. localDisk size is fixed.
 
 <h4 class="pdoc-member-header" id="InstanceState-coreInstanceQuantity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L247">property <b>coreInstanceQuantity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L247">property <b>coreInstanceQuantity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>coreInstanceQuantity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -717,12 +717,12 @@ Valid values are `cloudSsd`, `cloudEfficiency`, `localHddPro`, `localSsdPro`. lo
 default=2. if coreInstanceQuantity > 1,this is cluster's instance.  if coreInstanceQuantity = 1,this is a single instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-coreInstanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L248">property <b>coreInstanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L248">property <b>coreInstanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>coreInstanceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceState-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L252">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L252">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -730,7 +730,7 @@ default=2. if coreInstanceQuantity > 1,this is cluster's instance.  if coreInsta
 the switch of delete protection. true: delete protect, false: no delete protect. you must set false when you want to delete cluster.
 
 <h4 class="pdoc-member-header" id="InstanceState-duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L256">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L256">property <b>duration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>duration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -738,7 +738,7 @@ the switch of delete protection. true: delete protect, false: no delete protect.
 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 60, valid when payType = PrePaid. unit: month.
 
 <h4 class="pdoc-member-header" id="InstanceState-engine">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L260">property <b>engine</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L260">property <b>engine</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engine?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -746,7 +746,7 @@ the switch of delete protection. true: delete protect, false: no delete protect.
 "hbase/hbaseue/bds", The following types are supported after v1.73.0: `hbaseue` and `bds `
 
 <h4 class="pdoc-member-header" id="InstanceState-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L265">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L265">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -755,7 +755,7 @@ hbase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine
 * `masterInstanceType`、`coreInstanceType` - (Required, ForceNew) Instance specification. see [Instance specifications](https://help.aliyun.com/document_detail/53532.html). or you can call describeInstanceType api.
 
 <h4 class="pdoc-member-header" id="InstanceState-maintainEndTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L269">property <b>maintainEndTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L269">property <b>maintainEndTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintainEndTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -763,7 +763,7 @@ hbase major version. hbase:1.1/2.0, hbaseue:2.0, bds:1.0, unsupport other engine
 The end time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time).
 
 <h4 class="pdoc-member-header" id="InstanceState-maintainStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L273">property <b>maintainStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L273">property <b>maintainStartTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maintainStartTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -771,12 +771,12 @@ The end time of the operation and maintenance time period of the instance, in th
 The start time of the operation and maintenance time period of the instance, in the format of HH:mmZ (UTC time).
 
 <h4 class="pdoc-member-header" id="InstanceState-masterInstanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L274">property <b>masterInstanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L274">property <b>masterInstanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterInstanceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L278">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L278">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -784,7 +784,7 @@ The start time of the operation and maintenance time period of the instance, in 
 HBase instance name. Length must be 2-128 characters long. Only Chinese characters, English letters, numbers, period (.), underline (_), or dash (-) are permitted.
 
 <h4 class="pdoc-member-header" id="InstanceState-payType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L282">property <b>payType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L282">property <b>payType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -792,7 +792,7 @@ HBase instance name. Length must be 2-128 characters long. Only Chinese characte
 Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
 
 <h4 class="pdoc-member-header" id="InstanceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L286">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L286">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -800,7 +800,7 @@ Valid values are `PrePaid`, `PostPaid`,System default to `PostPaid`.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="InstanceState-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L290">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L290">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -808,7 +808,7 @@ A mapping of tags to assign to the resource.
 if vswitchId is not empty, that mean netType = vpc and has a same region. if vswitchId is empty, net_type_classic
 
 <h4 class="pdoc-member-header" id="InstanceState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/hbase/instance.ts#L294">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/hbase/instance.ts#L294">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
