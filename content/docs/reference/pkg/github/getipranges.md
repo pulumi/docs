@@ -12,6 +12,7 @@ meta_desc: "Explore the GetIpRanges function of the GitHub package, including ex
 
 Use this data source to retrieve information about GitHub's IP addresses.
 
+
 {{% examples %}}
 ## Example Usage
 

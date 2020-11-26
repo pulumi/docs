@@ -12,6 +12,7 @@ meta_desc: "Explore the RepositoryProject resource of the GitHub package, includ
 
 This resource allows you to create and manage projects for GitHub repository.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -981,6 +982,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

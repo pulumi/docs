@@ -12,6 +12,7 @@ meta_desc: "Explore the GetBranch function of the GitHub package, including exam
 
 Use this data source to retrieve information about a repository branch.
 
+
 {{% examples %}}
 ## Example Usage
 

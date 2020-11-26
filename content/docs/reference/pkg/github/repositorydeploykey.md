@@ -21,6 +21,7 @@ This resource allows you to add/remove repository deploy keys.
 Further documentation on GitHub repository deploy keys:
 - [About deploy keys](https://developer.github.com/guides/managing-deploy-keys/#deploy-keys)
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -982,6 +983,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,6 +12,7 @@ meta_desc: "Explore the OrganizationProject resource of the GitHub package, incl
 
 This resource allows you to create and manage projects for GitHub organization.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -869,6 +870,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

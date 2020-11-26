@@ -12,6 +12,7 @@ meta_desc: "Explore the GetOrganizationTeamSyncGroups function of the GitHub pac
 
 Use this data source to retrieve the identity provider (IdP) groups for an organization.
 
+
 {{% examples %}}
 ## Example Usage
 

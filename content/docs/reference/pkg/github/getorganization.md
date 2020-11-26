@@ -12,6 +12,7 @@ meta_desc: "Explore the GetOrganization function of the GitHub package, includin
 
 Use this data source to retrieve basic information about a GitHub Organization.
 
+
 {{% examples %}}
 ## Example Usage
 
