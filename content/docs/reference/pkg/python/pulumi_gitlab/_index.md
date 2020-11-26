@@ -408,6 +408,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>expires_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time the token will expire it, RFC3339 format.</p></li>
 <li><p><strong>group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or id of the group to add the deploy token to.
 Either <code class="docutils literal notranslate"><span class="pre">project</span></code> or <code class="docutils literal notranslate"><span class="pre">group</span></code> must be set.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name to describe the deploy token with.</p></li>
@@ -429,6 +430,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>expires_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Time the token will expire it, RFC3339 format.</p></li>
 <li><p><strong>group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or id of the group to add the deploy token to.
 Either <code class="docutils literal notranslate"><span class="pre">project</span></code> or <code class="docutils literal notranslate"><span class="pre">group</span></code> must be set.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name to describe the deploy token with.</p></li>
@@ -440,6 +442,12 @@ Either <code class="docutils literal notranslate"><span class="pre">project</spa
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.DeployToken.expires_at">
+<em class="property">property </em><code class="sig-name descname">expires_at</code><a class="headerlink" href="#pulumi_gitlab.DeployToken.expires_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time the token will expire it, RFC3339 format.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2826,6 +2834,139 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_gitlab.ProjectApprovalRule">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">ProjectApprovalRule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">approvals_required</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_ids</span><span class="p">:</span> <span class="n">Union[Sequence[Union[int, Awaitable[int], Output[T]]], Awaitable[Sequence[Union[int, Awaitable[int], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_ids</span><span class="p">:</span> <span class="n">Union[Sequence[Union[int, Awaitable[int], Output[T]]], Awaitable[Sequence[Union[int, Awaitable[int], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectApprovalRule" title="Permalink to this definition">¶</a></dt>
+<dd><p>This resource allows you to create and manage multiple approval rules for your GitLab
+projects. For further information on approval rules, consult the <a class="reference external" href="https://docs.gitlab.com/ee/api/merge_request_approvals.html#project-level-mr-approvals">gitlab
+documentation</a>.</p>
+<blockquote>
+<div><p>This feature requires a GitLab Starter account or above.</p>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_gitlab</span> <span class="k">as</span> <span class="nn">gitlab</span>
+
+<span class="n">example_one</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">ProjectApprovalRule</span><span class="p">(</span><span class="s2">&quot;example-one&quot;</span><span class="p">,</span>
+    <span class="n">approvals_required</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+    <span class="n">group_ids</span><span class="o">=</span><span class="p">[</span><span class="mi">51</span><span class="p">],</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;5&quot;</span><span class="p">,</span>
+    <span class="n">user_ids</span><span class="o">=</span><span class="p">[</span>
+        <span class="mi">50</span><span class="p">,</span>
+        <span class="mi">500</span><span class="p">,</span>
+    <span class="p">])</span>
+<span class="n">example_two</span> <span class="o">=</span> <span class="n">gitlab</span><span class="o">.</span><span class="n">ProjectApprovalRule</span><span class="p">(</span><span class="s2">&quot;example-two&quot;</span><span class="p">,</span>
+    <span class="n">approvals_required</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">group_ids</span><span class="o">=</span><span class="p">[</span><span class="mi">52</span><span class="p">],</span>
+    <span class="n">project</span><span class="o">=</span><span class="s2">&quot;5&quot;</span><span class="p">,</span>
+    <span class="n">user_ids</span><span class="o">=</span><span class="p">[])</span>
+</pre></div>
+</div>
+<p>GitLab project approval rules can be imported using an id consisting of <code class="docutils literal notranslate"><span class="pre">project-id:rule-id</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import gitlab:index/projectApprovalRule:ProjectApprovalRule example <span class="s2">&quot;12345:6&quot;</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>approvals_required</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of approvals required for this rule.</p></li>
+<li><p><strong>group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>int</em><em>]</em><em>]</em><em>]</em>) – A list of group IDs who’s members can approve of the merge request</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the approval rule.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or id of the project to add the approval rules.</p></li>
+<li><p><strong>user_ids</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>int</em><em>]</em><em>]</em><em>]</em>) – A list of specific User IDs to add to the list of approvers.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_gitlab.ProjectApprovalRule.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">approvals_required</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_ids</span><span class="p">:</span> <span class="n">Union[Sequence[Union[int, Awaitable[int], Output[T]]], Awaitable[Sequence[Union[int, Awaitable[int], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_ids</span><span class="p">:</span> <span class="n">Union[Sequence[Union[int, Awaitable[int], Output[T]]], Awaitable[Sequence[Union[int, Awaitable[int], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_gitlab.project_approval_rule.ProjectApprovalRule<a class="headerlink" href="#pulumi_gitlab.ProjectApprovalRule.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ProjectApprovalRule resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>approvals_required</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of approvals required for this rule.</p></li>
+<li><p><strong>group_ids</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>int</em><em>]</em><em>]</em><em>]</em>) – A list of group IDs who’s members can approve of the merge request</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the approval rule.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or id of the project to add the approval rules.</p></li>
+<li><p><strong>user_ids</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>int</em><em>]</em><em>]</em><em>]</em>) – A list of specific User IDs to add to the list of approvers.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.ProjectApprovalRule.approvals_required">
+<em class="property">property </em><code class="sig-name descname">approvals_required</code><a class="headerlink" href="#pulumi_gitlab.ProjectApprovalRule.approvals_required" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of approvals required for this rule.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.ProjectApprovalRule.group_ids">
+<em class="property">property </em><code class="sig-name descname">group_ids</code><a class="headerlink" href="#pulumi_gitlab.ProjectApprovalRule.group_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of group IDs who’s members can approve of the merge request</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.ProjectApprovalRule.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_gitlab.ProjectApprovalRule.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the approval rule.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.ProjectApprovalRule.project">
+<em class="property">property </em><code class="sig-name descname">project</code><a class="headerlink" href="#pulumi_gitlab.ProjectApprovalRule.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name or id of the project to add the approval rules.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.ProjectApprovalRule.user_ids">
+<em class="property">property </em><code class="sig-name descname">user_ids</code><a class="headerlink" href="#pulumi_gitlab.ProjectApprovalRule.user_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of specific User IDs to add to the list of approvers.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.ProjectApprovalRule.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectApprovalRule.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_gitlab.ProjectApprovalRule.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectApprovalRule.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_gitlab.ProjectCluster">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gitlab.</code><code class="sig-name descname">ProjectCluster</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">environment_scope</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_api_url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_authorization_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_ca_cert</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_namespace</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kubernetes_token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">managed</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">management_project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gitlab.ProjectCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>This resource allows you to create and manage project clusters for your GitLab projects.
@@ -4744,7 +4885,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>starred</strong> (<em>bool</em>) – Limit by projects starred by the current user.</p></li>
 <li><p><strong>statistics</strong> (<em>bool</em>) – Include project statistics. Cannot be used with <code class="docutils literal notranslate"><span class="pre">group_id</span></code>.</p></li>
 <li><p><strong>visibility</strong> (<em>str</em>) – Limit by visibility <code class="docutils literal notranslate"><span class="pre">public</span></code>, <code class="docutils literal notranslate"><span class="pre">internal</span></code>, or <code class="docutils literal notranslate"><span class="pre">private</span></code>.</p></li>
-<li><p><strong>with_custom*attributes</strong> (<em>bool</em>) – <p>Include custom attributes in response <a href="#id16"><span class="problematic" id="id17">*</span></a>(admins only)_.</p>
+<li><p><strong>with_custom*attributes</strong> (<em>bool</em>) – <p>Include custom attributes in response <a href="#id17"><span class="problematic" id="id18">*</span></a>(admins only)_.</p>
 </p></li>
 <li><p><strong>with_issues_enabled</strong> (<em>bool</em>) – Limit by projects with issues feature enabled. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>with_merge_requests_enabled</strong> (<em>bool</em>) – Limit by projects with merge requests feature enabled. Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
