@@ -24,9 +24,9 @@ Explore the resources and functions of the gke module in the Spotinst package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`spotinst` Terraform Provider](https://github.com/terraform-providers/terraform-provider-spotinst).</dd>
+	<dd>This Pulumi package is based on the [`spotinst` Terraform Provider](https://github.com/spotinst/terraform-provider-spotinst).</dd>
 	<dt>Version</dt>
-	<dd>2.11.1</dd>
+	<dd>2.12.0</dd>
 </dl>
 
 

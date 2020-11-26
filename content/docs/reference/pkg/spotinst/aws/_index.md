@@ -17,6 +17,7 @@ Explore the resources and functions of the aws module in the Spotinst package.
     <li><a href="mrscalar" title="MrScalar"><span class="symbol resource"></span>MrScalar</a></li>
     <li><a href="ocean" title="Ocean"><span class="symbol resource"></span>Ocean</a></li>
     <li><a href="oceanlaunchspec" title="OceanLaunchSpec"><span class="symbol resource"></span>OceanLaunchSpec</a></li>
+    <li><a href="suspension" title="Suspension"><span class="symbol resource"></span>Suspension</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -26,9 +27,9 @@ Explore the resources and functions of the aws module in the Spotinst package.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`spotinst` Terraform Provider](https://github.com/terraform-providers/terraform-provider-spotinst).</dd>
+	<dd>This Pulumi package is based on the [`spotinst` Terraform Provider](https://github.com/spotinst/terraform-provider-spotinst).</dd>
 	<dt>Version</dt>
-	<dd>2.11.1</dd>
+	<dd>2.12.0</dd>
 </dl>
 
 
