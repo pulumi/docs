@@ -5,7 +5,7 @@ authors: ["joe-duffy"]
 tags: ["Docker", "Kubernetes"]
 meta_desc: "Go from Dockerfile to a fully running containerized service on your cloud of choice using infrastructure as code."
 date: "2020-11-30"
-# meta_image: "TODO"
+meta_image: "containers.png"
 ---
 
 Going from a containerized application to a service running in the cloud requires a few steps beyond an application's normal build-and-test cycle. Namely it means building and publishing a container image in a registry and then consuming that image from your target environment, whether that's Kubernetes, Amazon ECS, or another container orchestrator. It's not enough to just write a Dockerfile &mdash; you will need to pick a container registry, decide whether that registry should be public or private, authenticate against it, and ideally automate deploying subsequent updates. Infrastructure as code to the rescue! In this article, we'll see how to build, publish, and consume a simple container image, across any cloud, using just a few lines of code.
