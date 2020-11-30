@@ -81,7 +81,7 @@ As an optional step, if you have multiple AWS profiles set up, you can specify a
 * Set `AWS_PROFILE`as an <a href="{{< relref "/docs/intro/cloud-providers/aws/setup#environment-variables" >}}" target="_blank">environment variable</a>, or
 * After creating your project in the next step, run `pulumi config set aws:profile <profilename>`. See <a href="{{< relref "/docs/intro/cloud-providers/aws#configuration" >}}" target="_blank">AWS Configuration</a> for more configuration options.
 
-For additional information on how to setup Pulumi to work with AWS, see <a href="{{< relref "/docs/intro/cloud-providers/aws/setup" >}}" target="_blank">AWS Setup</a>.
+For additional information on how to setup Pulumi to work with AWS, see [AWS Setup]({{< relref "/docs/intro/cloud-providers/aws/setup" >}}).
 
 Next, you'll create a new project.
 
