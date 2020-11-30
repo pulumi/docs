@@ -1323,6 +1323,8 @@ var registry = new ContainerRegistry("my-reg", new ContainerRegistryArgs
 
 DigitalOcean supports generating temporary read or read/write credentials that Docker can use to authenticate with your new private container registry, which we'll now use. This resource returns a new credentials file similar to what the `docker login` command generates, and we can parse it and base64 decode its contents to discover the temporary username and password. Here we gather that plus the registry's URL endpoint in preparation for building and publishing the container image to the newly provisioned registry:
 
+{{< chooser language "javascript,typescript,python,go,csharp" / >}}
+
 {{< choosable language javascript >}}
 
 ```javascript
