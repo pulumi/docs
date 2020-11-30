@@ -546,6 +546,11 @@ $ curl http://$(pulumi stack output frontendIp)
 ...
 ```
 
+## Converting Kubernetes YAML
+
+In addition to deploying Kubernetes YAML via the methods above, you can also convert Kubernetes YAML to Pulumi program code using `kube2pulumi`. `kube2pulumi` will take your YAML manifest and
+convert it into the language of your choice. You can get started using `kube2pulumi` either by [installing the binary](https://github.com/pulumi/kube2pulumi#building-and-installation) or via the [web interface]({{< relref "/kube2pulumi" >}}).
+
 ## Rendering Kubernetes YAML
 
 While Pulumi has excellent support for deploying and updating Kubernetes resources on a cluster, Pulumi also offers the ability to render YAML to make it easier to integrate into existing workflows. This gives you the ability to author Kubernetes configuration using general-purpose programming languages, consume libraries, and easily mix in infrastructure configuration (e.g., managed database endpoints, object storage, etc.), all in the same program.
