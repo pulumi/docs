@@ -8,7 +8,9 @@ date: "2020-11-30"
 meta_image: "containers.png"
 ---
 
-Going from a containerized application to a service running in the cloud requires a few steps beyond an application's normal build-and-test cycle. Namely it means building and publishing a container image in a registry and then consuming that image from your target environment, whether that's Kubernetes, Amazon ECS, or another container orchestrator. It's not enough to just write a Dockerfile &mdash; you will need to pick a container registry, decide whether that registry should be public or private, authenticate against it, and ideally automate deploying subsequent updates. Infrastructure as code to the rescue! In this article, we'll see how to build, publish, and consume a simple container image, across any cloud, using just a few lines of code.
+Going from a containerized application to a service running in the cloud requires a few steps beyond an application's normal build-and-test cycle. Namely it means building and publishing a container image in a registry and then consuming that image from your target environment, whether that's Kubernetes, Amazon ECS, or another container orchestrator. It's not enough to just write a `Dockerfile` &mdash; you will need to pick a container registry, decide whether that registry should be public or private, authenticate against it, and ideally automate deploying subsequent updates. Infrastructure as code to the rescue! In this article, we'll see how to build, publish, and consume a simple container image, across any cloud, using just a few lines of code.
+
+<!--more-->
 
 ## Approach
 
@@ -18,7 +20,7 @@ The general approach will be to create a new infrastructure as code project that
 * Builds and publishes your container image to that registry
 * Optionally, consumes the resulting image URL from a containerized task definition in Kubernetes, Amazon ECS, or any other container orchestrator
 
-All told, this will be just a few dozen lines of code. This article demonstrates doing this in AWS, Azure, GCP, DigitalOcean, and Docker Hub, and offers code examples in each supported Pulumi language, namely Python, JavaScript, TypeScript, Go, and C#. These steps will work for any application that has a Dockerfile and is buildable by Docker. In principle, similar steps could be applied if you prefer to build your container image using different means, such as Buildpack.
+All told, this will be just a few dozen lines of code. This article demonstrates doing this in AWS, Azure, GCP, DigitalOcean, and Docker Hub, and offers code examples in each supported Pulumi language, namely Python, JavaScript, TypeScript, Go, and C#. These steps will work for any application that has a `Dockerfile` and is buildable by Docker. In principle, similar steps could be applied if you prefer to build your container image using different means, such as Buildpack.
 
 For purposes of illustration, we'll create a simple Nginx web server whose `Dockerfile` contains:
 
@@ -32,7 +34,7 @@ Now, let's dive in!
 
 ## Prepare a Container Registry
 
-The first step is to simply prepare a new container _registry_. A registry holds one or more _repositories_, each of which can store and serve many different container images with different tags and versoins. Afterwards, we'll show how to build and publish to this registry.
+The first step is to simply prepare a new container _registry_. A registry holds one or more _repositories_, each of which can store and serve many different container images with different tags and versions. Afterwards, we'll show how to build and publish to this registry.
 
 The specific details of how to prepare your registry differ by cloud provider, often significantly, particularly when it comes to authenticating. Pick your cloud provider to see the details:
 
@@ -331,7 +333,7 @@ var registryInfo = repo.RegistryId.Apply(async (id) =>
 
 {{< /choosable >}}
 
-#### Alternatievly, Authenticate with ECR Credential Helper
+#### Alternatively, Authenticate with ECR Credential Helper
 
 An alternative approach ECR supports is to [use the Docker credential helper from Amazon](https://aws.amazon.com/blogs/compute/authenticating-amazon-ecr-repositories-for-docker-cli-with-credential-helper/), which integrates with local IAM settings, adds smart caching, and removes the need for Docker to login. If you elect to go this route, simply leave out the username/password parts of the `docker.ImageRegistry`:
 
@@ -1868,7 +1870,7 @@ Outputs:
 Note also the base and versioned image URLs are exported as stack outputs. These are optional but have three benefits:
 
 1. As we see here, the CLI will print them after each deployment.
-2. The CLI can fetch them on-demand, e.g., ‘pulumi stack output fullImageName', making it easy to script actress to these container images.
+2. The CLI can fetch them on-demand, e.g., 'pulumi stack output fullImageName', making it easy to script actress to these container images.
 3. The [Pulumi `StackReference` component]({{< relref "/docs/intro/concepts/organizing-stacks-projects#inter-stack-dependencies" >}}) can be used to depend on this stack from another, allowing up to build higher levels of infrastructure that consume these images.
 
 As an example of (2) in action, let's run the image locally using the exported image name:
@@ -2174,7 +2176,7 @@ class Program
 
 {{< /choosable >}}
 
-Notice here that we are referring to the resulting image name from our service specification. All we need to do run a ‘pulumi up' and Pulumi will now build, publish, and consume our application's container image from within our Kubernetes cluster:
+Notice here that we are referring to the resulting image name from our service specification. All we need to do run a 'pulumi up' and Pulumi will now build, publish, and consume our application's container image from within our Kubernetes cluster:
 
 ```bash
 $ pulumi up
@@ -2239,7 +2241,7 @@ And there we go: we have gone from a `Dockerfile` to a published container image
 
 ## Wrapping Up
 
-In this article, we've seen how easy it is to build, publish, and use container images in many popular public and private container registry options. We have seen how to provision new registries using infrastructure as code and how easy it is to trigger deployments of application updates by simply running a single ‘pulumi up' command.
+In this article, we've seen how easy it is to build, publish, and use container images in many popular public and private container registry options. We have seen how to provision new registries using infrastructure as code and how easy it is to trigger deployments of application updates by simply running a single `pulumi up` command.
 
 All of these steps were manually run from a CLI, however, a natural next step is to [wire the entire process up to a CI/CD system]({{< relref "/docs/guides/continuous-delivery" >}}) such as [GitHub Actions]({{< relref "/docs/guides/continuous-delivery/github-actions" >}}), [GitLab Pipelines]({{< relref "/docs/guides/continuous-delivery/gitlab-ci" >}}), [Jenkins]({{< relref "/docs/guides/continuous-delivery/jenkins" >}}), [Spinnaker]({{< relref "/docs/guides/continuous-delivery/spinnaker" >}}), or one of the many available options, so that you can deploy continuously as you merge code.
 
