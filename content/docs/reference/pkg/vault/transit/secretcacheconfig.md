@@ -13,6 +13,116 @@ meta_desc: "Explore the SecretCacheConfig resource of the transit module, includ
 Configure the cache for the Transit Secret Backend in Vault.
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Vault = Pulumi.Vault;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var transit = new Vault.Mount("transit", new Vault.MountArgs
+        {
+            DefaultLeaseTtlSeconds = 3600,
+            Description = "Example description",
+            MaxLeaseTtlSeconds = 86400,
+            Path = "transit",
+            Type = "transit",
+        });
+        var cfg = new Vault.Transit.SecretCacheConfig("cfg", new Vault.Transit.SecretCacheConfigArgs
+        {
+            Backend = transit.Path,
+            Size = 500,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-vault/sdk/v3/go/vault"
+	"github.com/pulumi/pulumi-vault/sdk/v3/go/vault/transit"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		transit, err := vault.NewMount(ctx, "transit", &vault.MountArgs{
+			DefaultLeaseTtlSeconds: pulumi.Int(3600),
+			Description:            pulumi.String("Example description"),
+			MaxLeaseTtlSeconds:     pulumi.Int(86400),
+			Path:                   pulumi.String("transit"),
+			Type:                   pulumi.String("transit"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = transit.NewSecretCacheConfig(ctx, "cfg", &transit.SecretCacheConfigArgs{
+			Backend: transit.Path,
+			Size:    pulumi.Int(500),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_vault as vault
+
+transit = vault.Mount("transit",
+    default_lease_ttl_seconds=3600,
+    description="Example description",
+    max_lease_ttl_seconds=86400,
+    path="transit",
+    type="transit")
+cfg = vault.transit.SecretCacheConfig("cfg",
+    backend=transit.path,
+    size=500)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+
+const transit = new vault.Mount("transit", {
+    defaultLeaseTtlSeconds: 3600,
+    description: "Example description",
+    maxLeaseTtlSeconds: 86400,
+    path: "transit",
+    type: "transit",
+});
+const cfg = new vault.transit.SecretCacheConfig("cfg", {
+    backend: transit.path,
+    size: 500,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SecretCacheConfig Resource {#create}

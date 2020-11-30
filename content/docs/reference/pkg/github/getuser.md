@@ -12,6 +12,7 @@ meta_desc: "Explore the GetUser function of the GitHub package, including exampl
 
 Use this data source to retrieve information about a GitHub user.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -30,8 +31,15 @@ class MyStack : Stack
         {
             Username = "example",
         }));
+        var current = Output.Create(Github.GetUser.InvokeAsync(new Github.GetUserArgs
+        {
+            Username = "",
+        }));
+        this.CurrentGithubLogin = current.Apply(current => current.Login);
     }
 
+    [Output("currentGithubLogin")]
+    public Output<string> CurrentGithubLogin { get; set; }
 }
 ```
 
@@ -54,6 +62,13 @@ func main() {
 		if err != nil {
 			return err
 		}
+		current, err := github.GetUser(ctx, &github.GetUserArgs{
+			Username: "",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("currentGithubLogin", current.Login)
 		return nil
 	})
 }
@@ -67,6 +82,8 @@ import pulumi
 import pulumi_github as github
 
 example = github.get_user(username="example")
+current = github.get_user(username="")
+pulumi.export("currentGithubLogin", current.login)
 ```
 
 {{% /example %}}
@@ -77,9 +94,16 @@ example = github.get_user(username="example")
 import * as pulumi from "@pulumi/pulumi";
 import * as github from "@pulumi/github";
 
+// Retrieve information about a GitHub user.
 const example = pulumi.output(github.getUser({
     username: "example",
 }, { async: true }));
+// Retrieve information about the currently authenticated user.
+const current = pulumi.output(github.getUser({
+    username: "",
+}, { async: true }));
+
+export const currentGithubLogin = current.login;
 ```
 
 {{% /example %}}
@@ -131,7 +155,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The username.
+    <dd>{{% md %}}The username. Use an empty string `""` to retrieve information about the currently authenticated user.
 {{% /md %}}</dd>
 
 </dl>
@@ -149,7 +173,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The username.
+    <dd>{{% md %}}The username. Use an empty string `""` to retrieve information about the currently authenticated user.
 {{% /md %}}</dd>
 
 </dl>
@@ -167,7 +191,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The username.
+    <dd>{{% md %}}The username. Use an empty string `""` to retrieve information about the currently authenticated user.
 {{% /md %}}</dd>
 
 </dl>
@@ -185,7 +209,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The username.
+    <dd>{{% md %}}The username. Use an empty string `""` to retrieve information about the currently authenticated user.
 {{% /md %}}</dd>
 
 </dl>
@@ -370,7 +394,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}the Node ID of the user.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -606,7 +631,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}the Node ID of the user.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -842,7 +868,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}the Node ID of the user.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1078,7 +1105,8 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}the Node ID of the user.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

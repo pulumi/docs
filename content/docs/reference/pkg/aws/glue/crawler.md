@@ -496,6 +496,164 @@ const example = new aws.glue.Crawler("example", {
 
 {{% /example %}}
 
+### Configuration Settings
+{{% example csharp %}}
+```csharp
+using System.Collections.Generic;
+using System.Text.Json;
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var eventsCrawler = new Aws.Glue.Crawler("eventsCrawler", new Aws.Glue.CrawlerArgs
+        {
+            DatabaseName = aws_glue_catalog_database.Glue_database.Name,
+            Schedule = "cron(0 1 * * ? *)",
+            Role = aws_iam_role.Glue_role.Arn,
+            Tags = @var.Tags,
+            Configuration = JsonSerializer.Serialize(new Dictionary<string, object?>
+            {
+                { "Grouping", new Dictionary<string, object?>
+                {
+                    { "TableGroupingPolicy", "CombineCompatibleSchemas" },
+                } },
+                { "CrawlerOutput", new Dictionary<string, object?>
+                {
+                    { "Partitions", new Dictionary<string, object?>
+                    {
+                        { "AddOrUpdateBehavior", "InheritFromTable" },
+                    } },
+                } },
+                { "Version", 1 },
+            }),
+            S3Targets = 
+            {
+                new Aws.Glue.Inputs.CrawlerS3TargetArgs
+                {
+                    Path = $"s3://{aws_s3_bucket.Data_lake_bucket.Bucket}",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		tmpJSON0, err := json.Marshal(map[string]interface{}{
+			"Grouping": map[string]interface{}{
+				"TableGroupingPolicy": "CombineCompatibleSchemas",
+			},
+			"CrawlerOutput": map[string]interface{}{
+				"Partitions": map[string]interface{}{
+					"AddOrUpdateBehavior": "InheritFromTable",
+				},
+			},
+			"Version": 1,
+		})
+		if err != nil {
+			return err
+		}
+		json0 := string(tmpJSON0)
+		_, err := glue.NewCrawler(ctx, "eventsCrawler", &glue.CrawlerArgs{
+			DatabaseName:  pulumi.Any(aws_glue_catalog_database.Glue_database.Name),
+			Schedule:      pulumi.String("cron(0 1 * * ? *)"),
+			Role:          pulumi.Any(aws_iam_role.Glue_role.Arn),
+			Tags:          _var.Tags,
+			Configuration: pulumi.String(json0),
+			S3Targets: glue.CrawlerS3TargetArray{
+				&glue.CrawlerS3TargetArgs{
+					Path: pulumi.String(fmt.Sprintf("%v%v", "s3://", aws_s3_bucket.Data_lake_bucket.Bucket)),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import json
+import pulumi_aws as aws
+
+events_crawler = aws.glue.Crawler("eventsCrawler",
+    database_name=aws_glue_catalog_database["glue_database"]["name"],
+    schedule="cron(0 1 * * ? *)",
+    role=aws_iam_role["glue_role"]["arn"],
+    tags=var["tags"],
+    configuration=json.dumps({
+        "Grouping": {
+            "TableGroupingPolicy": "CombineCompatibleSchemas",
+        },
+        "CrawlerOutput": {
+            "Partitions": {
+                "AddOrUpdateBehavior": "InheritFromTable",
+            },
+        },
+        "Version": 1,
+    }),
+    s3_targets=[aws.glue.CrawlerS3TargetArgs(
+        path=f"s3://{aws_s3_bucket['data_lake_bucket']['bucket']}",
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const eventsCrawler = new aws.glue.Crawler("eventsCrawler", {
+    databaseName: aws_glue_catalog_database.glue_database.name,
+    schedule: "cron(0 1 * * ? *)",
+    role: aws_iam_role.glue_role.arn,
+    tags: _var.tags,
+    configuration: JSON.stringify({
+        Grouping: {
+            TableGroupingPolicy: "CombineCompatibleSchemas",
+        },
+        CrawlerOutput: {
+            Partitions: {
+                AddOrUpdateBehavior: "InheritFromTable",
+            },
+        },
+        Version: 1,
+    }),
+    s3Targets: [{
+        path: `s3://${aws_s3_bucket.data_lake_bucket.bucket}`,
+    }],
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -731,7 +889,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}JSON string of configuration information.
+    <dd>{{% md %}}JSON string of configuration information. For more details see [Setting Crawler Configuration Options](https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -913,7 +1071,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}JSON string of configuration information.
+    <dd>{{% md %}}JSON string of configuration information. For more details see [Setting Crawler Configuration Options](https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1095,7 +1253,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}JSON string of configuration information.
+    <dd>{{% md %}}JSON string of configuration information. For more details see [Setting Crawler Configuration Options](https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1277,7 +1435,7 @@ The Crawler resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}JSON string of configuration information.
+    <dd>{{% md %}}JSON string of configuration information. For more details see [Setting Crawler Configuration Options](https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1698,7 +1856,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}JSON string of configuration information.
+    <dd>{{% md %}}JSON string of configuration information. For more details see [Setting Crawler Configuration Options](https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1891,7 +2049,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}JSON string of configuration information.
+    <dd>{{% md %}}JSON string of configuration information. For more details see [Setting Crawler Configuration Options](https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2084,7 +2242,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}JSON string of configuration information.
+    <dd>{{% md %}}JSON string of configuration information. For more details see [Setting Crawler Configuration Options](https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2277,7 +2435,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}JSON string of configuration information.
+    <dd>{{% md %}}JSON string of configuration information. For more details see [Setting Crawler Configuration Options](https://docs.aws.amazon.com/glue/latest/dg/crawler-configuration.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"

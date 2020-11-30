@@ -316,7 +316,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>enforce_admins</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean, setting this to <code class="docutils literal notranslate"><span class="pre">true</span></code> enforces status checks for repository administrators.</p></li>
 <li><p><strong>pattern</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifies the protection rule pattern.</p></li>
 <li><p><strong>push_restrictions</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – The list of actor IDs that may push to the branch.</p></li>
-<li><p><strong>repository_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The repository associated with this branch protection rule.</p></li>
+<li><p><strong>repository_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or node ID of the repository associated with this branch protection rule.</p></li>
 <li><p><strong>require_signed_commits</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean, setting this to <code class="docutils literal notranslate"><span class="pre">true</span></code> requires all commits to be signed with GPG.</p></li>
 <li><p><strong>required_pull_request_reviews</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'BranchProtectionRequiredPullRequestReviewArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.</p></li>
 <li><p><strong>required_status_checks</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'BranchProtectionRequiredStatusCheckArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Enforce restrictions for required status checks. See Required Status Checks below for details.</p></li>
@@ -337,7 +337,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>enforce_admins</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean, setting this to <code class="docutils literal notranslate"><span class="pre">true</span></code> enforces status checks for repository administrators.</p></li>
 <li><p><strong>pattern</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Identifies the protection rule pattern.</p></li>
 <li><p><strong>push_restrictions</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – The list of actor IDs that may push to the branch.</p></li>
-<li><p><strong>repository_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The repository associated with this branch protection rule.</p></li>
+<li><p><strong>repository_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name or node ID of the repository associated with this branch protection rule.</p></li>
 <li><p><strong>require_signed_commits</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean, setting this to <code class="docutils literal notranslate"><span class="pre">true</span></code> requires all commits to be signed with GPG.</p></li>
 <li><p><strong>required_pull_request_reviews</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'BranchProtectionRequiredPullRequestReviewArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Enforce restrictions for pull request reviews. See Required Pull Request Reviews below for details.</p></li>
 <li><p><strong>required_status_checks</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'BranchProtectionRequiredStatusCheckArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Enforce restrictions for required status checks. See Required Status Checks below for details.</p></li>
@@ -367,7 +367,7 @@ properties used to qualify the lookup.</p>
 <dl class="py method">
 <dt id="pulumi_github.BranchProtection.repository_id">
 <em class="property">property </em><code class="sig-name descname">repository_id</code><a class="headerlink" href="#pulumi_github.BranchProtection.repository_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The repository associated with this branch protection rule.</p>
+<dd><p>The name or node ID of the repository associated with this branch protection rule.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -809,6 +809,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi_github.GetRepositoryResult.node_id">
+<em class="property">property </em><code class="sig-name descname">node_id</code><a class="headerlink" href="#pulumi_github.GetRepositoryResult.node_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>the Node ID of the repository.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_github.GetRepositoryResult.private">
 <em class="property">property </em><code class="sig-name descname">private</code><a class="headerlink" href="#pulumi_github.GetRepositoryResult.private" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether the repository is private.</p>
@@ -866,6 +872,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_github.GetTeamResult.name">
 <em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_github.GetTeamResult.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>the team’s full name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_github.GetTeamResult.node_id">
+<em class="property">property </em><code class="sig-name descname">node_id</code><a class="headerlink" href="#pulumi_github.GetTeamResult.node_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>the Node ID of the team.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -968,6 +980,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_github.GetUserResult.name">
 <em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_github.GetUserResult.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>the user’s full name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_github.GetUserResult.node_id">
+<em class="property">property </em><code class="sig-name descname">node_id</code><a class="headerlink" href="#pulumi_github.GetUserResult.node_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>the Node ID of the user.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1641,11 +1659,11 @@ GitHub organization or personal account.</p>
 
 <span class="n">example</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">Repository</span><span class="p">(</span><span class="s2">&quot;example&quot;</span><span class="p">,</span>
     <span class="n">description</span><span class="o">=</span><span class="s2">&quot;My awesome codebase&quot;</span><span class="p">,</span>
-    <span class="n">private</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">template</span><span class="o">=</span><span class="n">github</span><span class="o">.</span><span class="n">RepositoryTemplateArgs</span><span class="p">(</span>
         <span class="n">owner</span><span class="o">=</span><span class="s2">&quot;github&quot;</span><span class="p">,</span>
         <span class="n">repository</span><span class="o">=</span><span class="s2">&quot;terraform-module-template&quot;</span><span class="p">,</span>
-    <span class="p">))</span>
+    <span class="p">),</span>
+    <span class="n">visibility</span><span class="o">=</span><span class="s2">&quot;public&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -1726,6 +1744,7 @@ the repository.</p></li>
 <li><p><strong>license_template</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Use the <a class="reference external" href="https://github.com/github/choosealicense.com/tree/gh-pages/_licenses">name of the template</a> without the extension. For example, “mit” or “mpl-2.0”.</p>
 </p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the repository.</p></li>
+<li><p><strong>node_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – the Node ID of the Repository.</p></li>
 <li><p><strong>private</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to create a private repository.
 Repositories are created as public (e.g. open source) by default.</p></li>
 <li><p><strong>ssh_clone_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL that can be provided to <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> to clone the repository via SSH.</p></li>
@@ -1874,6 +1893,12 @@ the repository.</p>
 <dt id="pulumi_github.Repository.name">
 <em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_github.Repository.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the repository.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_github.Repository.node_id">
+<em class="property">property </em><code class="sig-name descname">node_id</code><a class="headerlink" href="#pulumi_github.Repository.node_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>the Node ID of the Repository.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2519,7 +2544,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>events</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – <p>A list of events which should trigger the webhook. See a list of <a class="reference external" href="https://developer.github.com/v3/activity/events/types/">available events</a>.</p>
 </p></li>
 <li><p><strong>repository</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The repository of the webhook.</p></li>
-<li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the webhook</p></li>
+<li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URL of the webhook.  This is a sensitive attribute because it may include basic auth credentials.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2552,7 +2577,7 @@ properties used to qualify the lookup.</p>
 <dl class="py method">
 <dt id="pulumi_github.RepositoryWebhook.url">
 <em class="property">property </em><code class="sig-name descname">url</code><a class="headerlink" href="#pulumi_github.RepositoryWebhook.url" title="Permalink to this definition">¶</a></dt>
-<dd><p>URL of the webhook</p>
+<dd><p>URL of the webhook.  This is a sensitive attribute because it may include basic auth credentials.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2614,7 +2639,7 @@ a new team will be created. When destroyed, that team will be removed.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the team.</p></li>
-<li><p><strong>ldap_dn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise.</p></li>
+<li><p><strong>ldap_dn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise Server.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the team.</p></li>
 <li><p><strong>parent_team_id</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The ID of the parent team, if this is a nested team.</p></li>
 <li><p><strong>privacy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The level of privacy for the team. Must be one of <code class="docutils literal notranslate"><span class="pre">secret</span></code> or <code class="docutils literal notranslate"><span class="pre">closed</span></code>.
@@ -2634,8 +2659,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the team.</p></li>
-<li><p><strong>ldap_dn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise.</p></li>
+<li><p><strong>ldap_dn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise Server.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the team.</p></li>
+<li><p><strong>node_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Node ID of the created team.</p></li>
 <li><p><strong>parent_team_id</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The ID of the parent team, if this is a nested team.</p></li>
 <li><p><strong>privacy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The level of privacy for the team. Must be one of <code class="docutils literal notranslate"><span class="pre">secret</span></code> or <code class="docutils literal notranslate"><span class="pre">closed</span></code>.
 Defaults to <code class="docutils literal notranslate"><span class="pre">secret</span></code>.</p></li>
@@ -2656,13 +2682,19 @@ Useful when referencing the team in <cite>``BranchProtection`</cite> &lt;<a clas
 <dl class="py method">
 <dt id="pulumi_github.Team.ldap_dn">
 <em class="property">property </em><code class="sig-name descname">ldap_dn</code><a class="headerlink" href="#pulumi_github.Team.ldap_dn" title="Permalink to this definition">¶</a></dt>
-<dd><p>The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise.</p>
+<dd><p>The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise Server.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_github.Team.name">
 <em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_github.Team.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of the team.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_github.Team.node_id">
+<em class="property">property </em><code class="sig-name descname">node_id</code><a class="headerlink" href="#pulumi_github.Team.node_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Node ID of the created team.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3553,11 +3585,13 @@ the role they would have once they accept will be returned.</p>
 <span class="kn">import</span> <span class="nn">pulumi_github</span> <span class="k">as</span> <span class="nn">github</span>
 
 <span class="n">example</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s2">&quot;example&quot;</span><span class="p">)</span>
+<span class="n">current</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">get_user</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s2">&quot;currentGithubLogin&quot;</span><span class="p">,</span> <span class="n">current</span><span class="o">.</span><span class="n">login</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>username</strong> (<em>str</em>) – The username.</p>
+<dd class="field-odd"><p><strong>username</strong> (<em>str</em>) – The username. Use an empty string <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code> to retrieve information about the currently authenticated user.</p>
 </dd>
 </dl>
 </dd></dl>

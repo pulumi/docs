@@ -15,6 +15,7 @@ meta_desc: "Explore the GetRepositories function of the GitHub package, includin
 
 Use this data source to retrieve a list of GitHub repositories using a search query.
 
+
 {{% examples %}}
 ## Example Usage
 

@@ -13,6 +13,7 @@ meta_desc: "Explore the Repository resource of the GitHub package, including exa
 This resource allows you to create and manage repositories within your
 GitHub organization or personal account.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -30,12 +31,12 @@ class MyStack : Stack
         var example = new Github.Repository("example", new Github.RepositoryArgs
         {
             Description = "My awesome codebase",
-            Private = true,
             Template = new Github.Inputs.RepositoryTemplateArgs
             {
                 Owner = "github",
                 Repository = "terraform-module-template",
             },
+            Visibility = "public",
         });
     }
 
@@ -57,11 +58,11 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := github.NewRepository(ctx, "example", &github.RepositoryArgs{
 			Description: pulumi.String("My awesome codebase"),
-			Private:     pulumi.Bool(true),
 			Template: &github.RepositoryTemplateArgs{
 				Owner:      pulumi.String("github"),
 				Repository: pulumi.String("terraform-module-template"),
 			},
+			Visibility: pulumi.String("public"),
 		})
 		if err != nil {
 			return err
@@ -80,11 +81,11 @@ import pulumi_github as github
 
 example = github.Repository("example",
     description="My awesome codebase",
-    private=True,
     template=github.RepositoryTemplateArgs(
         owner="github",
         repository="terraform-module-template",
-    ))
+    ),
+    visibility="public")
 ```
 
 {{% /example %}}
@@ -97,11 +98,11 @@ import * as github from "@pulumi/github";
 
 const example = new github.Repository("example", {
     description: "My awesome codebase",
-    private: true,
     template: {
         owner: "github",
         repository: "terraform-module-template",
     },
+    visibility: "public",
 });
 ```
 
@@ -1434,7 +1435,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}the Node ID of the Repository.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1537,7 +1539,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}the Node ID of the Repository.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1640,7 +1643,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}the Node ID of the Repository.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1743,7 +1747,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}the Node ID of the Repository.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2165,7 +2170,8 @@ the repository.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}the Node ID of the Repository.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2516,7 +2522,8 @@ the repository.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}the Node ID of the Repository.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -2867,7 +2874,8 @@ the repository.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}the Node ID of the Repository.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -3218,7 +3226,8 @@ the repository.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}the Node ID of the Repository.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -3434,6 +3443,8 @@ Repositories are created as public (e.g. open source) by default.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

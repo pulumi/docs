@@ -14,6 +14,7 @@ Explore the resources and functions of the networkfirewall module in the AWS pac
     <li><a href="firewall" title="Firewall"><span class="symbol resource"></span>Firewall</a></li>
     <li><a href="firewallpolicy" title="FirewallPolicy"><span class="symbol resource"></span>FirewallPolicy</a></li>
     <li><a href="loggingconfiguration" title="LoggingConfiguration"><span class="symbol resource"></span>LoggingConfiguration</a></li>
+    <li><a href="resourcepolicy" title="ResourcePolicy"><span class="symbol resource"></span>ResourcePolicy</a></li>
     <li><a href="rulegroup" title="RuleGroup"><span class="symbol resource"></span>RuleGroup</a></li>
 </ul>
 
@@ -26,7 +27,7 @@ Explore the resources and functions of the networkfirewall module in the AWS pac
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.14.0</dd>
+	<dd>3.16.0</dd>
 </dl>
 
 

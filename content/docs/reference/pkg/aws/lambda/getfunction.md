@@ -317,6 +317,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="codesigningconfigarn_csharp">
+<a href="#codesigningconfigarn_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Signing<wbr>Config<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) for a Code Signing Configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="deadletterconfig_csharp">
 <a href="#deadletterconfig_csharp" style="color: inherit; text-decoration: inherit;">Dead<wbr>Letter<wbr>Config</a>
 </span> 
@@ -487,7 +498,29 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The runtime environment for the Lambda function..
+    <dd>{{% md %}}The runtime environment for the Lambda function.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="signingjobarn_csharp">
+<a href="#signingjobarn_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Job<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of a signing job.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="signingprofileversionarn_csharp">
+<a href="#signingprofileversionarn_csharp" style="color: inherit; text-decoration: inherit;">Signing<wbr>Profile<wbr>Version<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for a signing profile version.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -592,6 +625,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Unqualified (no `:QUALIFIER` or `:VERSION` suffix) Amazon Resource Name (ARN) identifying your Lambda Function. See also `qualified_arn`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="codesigningconfigarn_go">
+<a href="#codesigningconfigarn_go" style="color: inherit; text-decoration: inherit;">Code<wbr>Signing<wbr>Config<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) for a Code Signing Configuration.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -766,7 +810,29 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The runtime environment for the Lambda function..
+    <dd>{{% md %}}The runtime environment for the Lambda function.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="signingjobarn_go">
+<a href="#signingjobarn_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Job<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of a signing job.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="signingprofileversionarn_go">
+<a href="#signingprofileversionarn_go" style="color: inherit; text-decoration: inherit;">Signing<wbr>Profile<wbr>Version<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for a signing profile version.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -871,6 +937,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Unqualified (no `:QUALIFIER` or `:VERSION` suffix) Amazon Resource Name (ARN) identifying your Lambda Function. See also `qualified_arn`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="codesigningconfigarn_nodejs">
+<a href="#codesigningconfigarn_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Signing<wbr>Config<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) for a Code Signing Configuration.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1045,7 +1122,29 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The runtime environment for the Lambda function..
+    <dd>{{% md %}}The runtime environment for the Lambda function.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="signingjobarn_nodejs">
+<a href="#signingjobarn_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Job<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of a signing job.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="signingprofileversionarn_nodejs">
+<a href="#signingprofileversionarn_nodejs" style="color: inherit; text-decoration: inherit;">signing<wbr>Profile<wbr>Version<wbr>Arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for a signing profile version.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1150,6 +1249,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Unqualified (no `:QUALIFIER` or `:VERSION` suffix) Amazon Resource Name (ARN) identifying your Lambda Function. See also `qualified_arn`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="code_signing_config_arn_python">
+<a href="#code_signing_config_arn_python" style="color: inherit; text-decoration: inherit;">code_<wbr>signing_<wbr>config_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) for a Code Signing Configuration.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1324,7 +1434,29 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The runtime environment for the Lambda function..
+    <dd>{{% md %}}The runtime environment for the Lambda function.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="signing_job_arn_python">
+<a href="#signing_job_arn_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>job_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of a signing job.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="signing_profile_version_arn_python">
+<a href="#signing_profile_version_arn_python" style="color: inherit; text-decoration: inherit;">signing_<wbr>profile_<wbr>version_<wbr>arn</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for a signing profile version.
 {{% /md %}}</dd>
 
     <dt class="property-"

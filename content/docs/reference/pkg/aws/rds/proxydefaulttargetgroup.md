@@ -204,17 +204,6 @@ The ProxyDefaultTargetGroup resource accepts the following [input]({{< relref "/
 
     <dt class="property-required"
             title="Required">
-        <span id="connectionpoolconfig_csharp">
-<a href="#connectionpoolconfig_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Pool<wbr>Config</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxydefaulttargetgroupconnectionpoolconfig">Proxy<wbr>Default<wbr>Target<wbr>Group<wbr>Connection<wbr>Pool<wbr>Config<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The settings that determine the size and behavior of the connection pool for the target group.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span id="dbproxyname_csharp">
 <a href="#dbproxyname_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Proxy<wbr>Name</a>
 </span> 
@@ -224,23 +213,23 @@ The ProxyDefaultTargetGroup resource accepts the following [input]({{< relref "/
     <dd>{{% md %}}Name of the RDS DB Proxy.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectionpoolconfig_csharp">
+<a href="#connectionpoolconfig_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Pool<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#proxydefaulttargetgroupconnectionpoolconfig">Proxy<wbr>Default<wbr>Target<wbr>Group<wbr>Connection<wbr>Pool<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The settings that determine the size and behavior of the connection pool for the target group.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="connectionpoolconfig_go">
-<a href="#connectionpoolconfig_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Pool<wbr>Config</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxydefaulttargetgroupconnectionpoolconfig">Proxy<wbr>Default<wbr>Target<wbr>Group<wbr>Connection<wbr>Pool<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}The settings that determine the size and behavior of the connection pool for the target group.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -253,23 +242,23 @@ The ProxyDefaultTargetGroup resource accepts the following [input]({{< relref "/
     <dd>{{% md %}}Name of the RDS DB Proxy.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="connectionpoolconfig_nodejs">
-<a href="#connectionpoolconfig_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Pool<wbr>Config</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectionpoolconfig_go">
+<a href="#connectionpoolconfig_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Pool<wbr>Config</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#proxydefaulttargetgroupconnectionpoolconfig">Proxy<wbr>Default<wbr>Target<wbr>Group<wbr>Connection<wbr>Pool<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The settings that determine the size and behavior of the connection pool for the target group.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -282,23 +271,23 @@ The ProxyDefaultTargetGroup resource accepts the following [input]({{< relref "/
     <dd>{{% md %}}Name of the RDS DB Proxy.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectionpoolconfig_nodejs">
+<a href="#connectionpoolconfig_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Pool<wbr>Config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#proxydefaulttargetgroupconnectionpoolconfig">Proxy<wbr>Default<wbr>Target<wbr>Group<wbr>Connection<wbr>Pool<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}The settings that determine the size and behavior of the connection pool for the target group.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="connection_pool_config_python">
-<a href="#connection_pool_config_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>pool_<wbr>config</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#proxydefaulttargetgroupconnectionpoolconfig">Proxy<wbr>Default<wbr>Target<wbr>Group<wbr>Connection<wbr>Pool<wbr>Config<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The settings that determine the size and behavior of the connection pool for the target group.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -309,6 +298,17 @@ The ProxyDefaultTargetGroup resource accepts the following [input]({{< relref "/
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the RDS DB Proxy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connection_pool_config_python">
+<a href="#connection_pool_config_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>pool_<wbr>config</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#proxydefaulttargetgroupconnectionpoolconfig">Proxy<wbr>Default<wbr>Target<wbr>Group<wbr>Connection<wbr>Pool<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The settings that determine the size and behavior of the connection pool for the target group.
 {{% /md %}}</dd>
 
 </dl>

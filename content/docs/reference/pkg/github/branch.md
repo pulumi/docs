@@ -15,6 +15,7 @@ This resource allows you to create and manage branches within your repository.
 Additional constraints can be applied to ensure your branch is created from
 another branch or commit.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1149,6 +1150,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

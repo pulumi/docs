@@ -1,282 +1,360 @@
 {{ define "hero" }}
-    <header class="header-hero header-hero-glow">
-        <div class="header-hero-items container mx-auto">
-            <div class="header-hero-item">
-                <h1>Modern Infrastructure as Code for AWS</h1>
-                <div class="flex flex-col md:flex-row">
-                    <p class="md:w-3/4 mr-4">
-                        Pulumi's infrastructure as code SDK helps create, deploy, and manage AWS containers, serverless functions, and infrastructure using modern programming languages.
-                    </p>
-                    <div class="top-0">
-                        <img class="object-scale-down w-48 md:mr-4" src="/images/partners/aws-apn.png" alt="AWS Technology Partner">
-                    </div>
-                </div>
-                <p>
-                    <strong>Now Available</strong>:
-                    <a href="{{ relref . "/crosswalk/aws" }}">
-                        Pulumi Crosswalk for AWS: Accelerate Delivery of Well-Architected AWS Infrastructure as Code
-                    </a>
-                </p>
-                <div class="header-hero-actions">
-                    <a class="btn btn-lg" href="{{ relref . "/docs/get-started/aws" }}">Get Started</a>
-                    <a class="btn btn-lg btn-orange-translucent" href="{{ relref . "#benefits" }}">Learn More</a>
+    <header class="header-hero-home mb-8 relative px-4 pb-56 lg:pb-40">
+        <div class="container mx-auto px-5">
+            <h1>{{ .Params.hero.title }}</h1>
+        </div>
+        <div class="flex flex-wrap container mx-auto">
+            <div class="w-full order-last mt-8 lg:mt-0 lg:order-first lg:w-1/2 px-5">
+                <p class="mr-4">{{ .Params.hero.description }}</p>
+                <div class="flex flex-col lg:flex-row mt-5">
+                    <a class="btn btn-lg text-center mb-4 lg:mb-0 lg:mr-4" href="{{ relref . "/docs/get-started/aws" }}">Get Started</a>
+                    <a class="btn btn-lg btn-orange-translucent text-center" href="{{ relref . "/resources#upcoming" }}">Join a Workshop</a>
                 </div>
             </div>
-            <div class="header-hero-item">
-                {{ $code := `const aws = require("@pulumi/aws");
-
-let size = "t2.micro";
-let ami  = "ami-7172b611"
-
-let group = new aws.ec2.SecurityGroup("web-secgrp", {
-    ingress: [
-        { protocol: "tcp", fromPort: 22,
-          toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
-        { protocol: "tcp", fromPort: 80,
-          toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
-    ],
-});
-
-let server = new aws.ec2.Instance("web-server-www", {
-    tags: { "Name": "web-server-www" },
-    instanceType: size,
-    securityGroups: [ group.name ],
-    ami: ami,
-    userData: userData
-});` }}
-                {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark" "chrome" true) }}
-
+            <div class="w-full order-first lg:order-last mt-8 lg:mt-0 lg:w-1/2 lg:mt-0">
+                <div class="rounded shadow-md" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                    <iframe
+                        src="//www.youtube.com/embed/cCzoCUxqiVo?rel=0"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;"
+                        allowfullscreen=""
+                        title="Pulumi + AWS: Modern Infrastructure as Code"
+                        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;top:0;bottom:0;margin:auto}</style><a href=https://www.youtube.com/embed/cCzoCUxqiVo?autoplay=1><img src='/images/partners/aws-apn-video-thumbnail.png' alt='Pulumi + AWS: Modern Infrastructure as Code'></a>"
+                    ></iframe>
+                </div>
             </div>
         </div>
     </header>
 {{ end }}
 
 {{ define "main" }}
-    <nav class="nav-section-sticky">
-        <div class="container mx-auto uppercase">
-            <ul>
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#code">Code</a></li>
-                <li><a href="#how-it-works">How it Works</a></li>
-                <li><a href="#case-study">Case Study</a></li>
-                <li><a href="#get-started">Get Started</a></li>
-                <li><a href="#contact-us">Contact Us</a></li>
-            </ul>
-        </div>
-    </nav>
+    {{ $pageContext := . }}
 
-    {{ partial "benefits-v1.html" . }}
-
-    <section id="code" class="bg-gray-200 py-16 px-4">
+    <!-- Customer logos -->
+    <section class="my-16 px-4">
+        <h3 class="mt-12 mb-8 text-center">
+            Trusted by top engineering teams
+        </h3>
         <div class="container mx-auto">
-
-            <!-- Example 1 -->
-            <div class="md:flex my-8">
-                <div class="md:w-1/2 md:mr-4">
-                    <h2>Creating a Serverless REST API</h2>
-                    <p>
-                        With Pulumi, you can combine infrastructure definitions and application code in one program. The
-                        <a href="{{ relref . "/crosswalk/aws" }}">
-                        Crosswalk for AWS Infrastructure Library</a> is a set of Pulumi components that provide a higher-level abstraction
-                        over AWS. So, instead of provisioning an API Gateway instance, Lambda functions, and setting up IAM roles,
-                        you can use this library and define application code at the same time as the infrastructure it depends on.
-                    </p>
-                    <p>
-                        This example shows how to create a simple REST API that counts the number of times a route has been hit. To implement this API, we need a DynamoDB table, an API endpoint, and a Lambda function.
-                    </p>
-                    <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
-                    </p>
-                </div>
-                <div class="md:w-1/2 md:ml:4">
-                    {{ $code := `import * as aws from "@pulumi/aws";
-import * as awsx from "@pulumi/awsx";
-
-// Create a mapping from 'route' to a count.
-let counterTable = new aws.dynamodb.Table("counterTable", {
-    attributes: [{ name: "id", type: "S" }],
-    hashKey: "id",
-    readCapacity: 5,
-    writeCapacity: 5,
-});
-
-// Create an API endpoint.
-let endpoint = new awsx.apigateway.API("hello-world", {
-    routes: [{
-        path: "/{route+}",
-        method: "GET",
-        eventHandler: (req, res) => {
-            let route = event.pathParameters!["route"];
-            let client = new aws.sdk.DynamoDB.DocumentClient();
-
-            // Get previous value and increment our table entry.
-            let tableData = await client.get({
-                TableName: counterTable.name.get(),
-                Key: { id: route },
-                ConsistentRead: true,
-            }).promise();
-
-            let value = tableData.Item;
-            let count = (value && value.count) || 0;
-            await client.put({
-                TableName: counterTable.name.get(),
-                Item: { id: route, count: ++count },
-            }).promise();
-
-            return {
-                statusCode: 200,
-                body: JSON.stringify({ route, count }),
-            };
-        },
-    }],
-});
-
-exports.endpoint = endpoint.url;` }}
-                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
-                </div>
+            <div class="lg:flex items-center justify-center my-4">
+                <a data-track="customer-logo" href="https://www.snowflake.com/" target="_blank" rel="noreferrer noopener">
+                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-12 mx-8" src="/logos/customers/snowflake-logo.svg" alt="Snowflake" title="Snowflake">
+                </a>
+                <a data-track="customer-logo" href="https://www.tableau.com/" target="_blank" rel="noreferrer noopener">
+                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-12 mx-8" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
+                </a>
+                <a data-track="customer-logo" href="https://www.mbusa.com/"  target="_blank" rel="noreferrer noopener">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-12 mx-8" src="/logos/customers/mercedes-benz-RDNA_logo.png" title="Mercedes-Benz Research and Development" alt="Mercedes-Benz Research and Development">
+                </a>
+                <a data-track="customer-logo" href="https://www.mindbodyonline.com/" target="_blank" rel="noreferrer noopener">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-6 mx-8" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody">
+                </a>
+                <a data-track="customer-logo" href="https://www.nih.gov/" target="_blank" rel="noreferrer noopener">
+                    <img class="mx-auto my-8 lg:my-2 lg:mx-8 h-10 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
+                </a>
             </div>
+        </div>
+        <p class="text-blue-500 text-center font-bold mt-10">
+            <a data-track="logos-case-study" href="{{ relref . "/case-studies" }}">Read our customer use cases</a> &rarr;
+        </p>
+    </section>
 
-            <!-- Example 2 -->
-            <div class="md:flex my-8">
-                <div class="md:w-1/2 md:mr-4">
-                    <h2>Build and deploy containers to AWS</h2>
-                    <p>
-                        Pulumi supports programming against container orchestrators – Amazon’s ECS, EKS, and AWS Fargate. Pulumi is entirely unopinionated about how containers are built, published, and deployed to your orchestrator.
-                    </p>
-                    <p>
-                        This code builds and deploys a custom Dockerfile to a private ECR repository, and spin up a load balanced ECS service listening on port 80. By default, this will run in Fargate when targeting AWS, which means you can skip the complications of configuring an orchestrator. After running <code>pulumi up</code>, the auto-assigned URL will be printed.
-                    </p>
-                    <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
-                    </p>
-                </div>
-                <div class="md:w-1/2 md:ml:4">
-                    {{ $code := `import * as awsx from "@pulumi/awsx";
+    <!-- Start AWS re:Invent takeover content -->
+    <section id="workshops" class="container mx-auto text-center mb-12">
+        <p class="text-3xl font-bold">JOIN A WORKSHOP</p>
+        <ul class="flex flex-col lg:flex-row list-none text-left items-center">
+            {{ $webinars := (where $.Site.Pages "Type" "webinars") }}
 
-const cluster = new awsx.ecs.Cluster("cluster");
+            {{ $reInventWorkshops := slice }}
+            {{ range $webinars }}
+                {{ if eq .Params.title "Building a Kubernetes Platform in Amazon EKS with Pulumi" }}
+                    {{ $reInventWorkshops = $reInventWorkshops | append . }}
+                {{ else if eq .Params.title "Deploying Microservices with Pulumi and AWS Lambda" }}
+                    {{ $reInventWorkshops = $reInventWorkshops | append . }}
+                {{ else if eq .Params.url_slug "introduction-to-pulumi" }}
+                    {{ $reInventWorkshops = $reInventWorkshops | append . }}
+                {{ end }}
+            {{ end }}
 
-const alb = new awsx.elasticloadbalancingv2.ApplicationLoadBalancer(
-    "net-lb", { external: true, securityGroups: cluster.securityGroups });
-const web = alb.createListener("web", { port: 80, external: true });
 
-const img = awsx.ecs.Image.fromPath("app-img", "./app");
+            {{ range $reInventWorkshops }}
+                {{ $link := printf "/resources/%s" .Params.url_slug }}
 
-const appService = new awsx.ecs.FargateService("app-svc", {
-    cluster,
-    taskDefinitionArgs: {
-        container: {
-            image: img,
-            cpu: 102 /*10% of 1024*/,
-            memory: 50 /*MB*/,
-            portMappings: [ web ],
-        },
-    },
-    desiredCount: 5,
-});
+                {{ $displayDate := "" }}
+                {{ if .Params.multiple }}
+                    {{ $displayDate = dateFormat "January 2, 2006" (index (.Params.multiple) 0).datetime }}
+                {{ else }}
+                    {{ $displayDate = dateFormat "January 2, 2006" .Params.main.sortable_date }}
+                {{ end }}
 
-export const url = web.endpoint.hostname;` }}
-                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
-                </div>
-            </div>
+                {{ $tileOptions := (dict "pageContext" $pageContext "external" false "filters" "" "link" $link "icon" "users" "description" .Params.meta_desc "displayDate" $displayDate "data" . ) }}
+                {{ partial "content-tile.html" $tileOptions }}
+            {{ end }}
+        </ul>
+    </section>
 
-            <!-- Example 3 -->
-            <div class="md:flex my-8">
-                <div class="md:w-1/2 md:mr-4">
-                    <h2>Build and deploy Kubernetes apps to AWS EKS</h2>
-                    <p>
-                        Pulumi supports programming against Kubernetes – Minikube, custom on-premises, or cloud-hosted custom clusters or in managed clusters such as Amazon EKS.
-                    </p>
-                    <p>
-                        This code runs a simple Kubernetes deployment using the Guestbook sample application composed of Redis and a web frontent onto Kubernetes. Pulumi supports sophisticated use cases such as advanced deployment scenarios, sidecar patterns, etc.
-                    </p>
-                    <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
-                    </p>
-                </div>
-                <div class="md:w-1/2 md:ml:4">
-                    {{ $code := `// Deploy a simple app to Kubernetes.
+    <!-- Pick the blog listings. -->
+    {{ $blog := where $.Site.Pages "Type" "blog" }}
 
-import * as k8sjs from "./k8sjs";
+    <section class="container mx-auto text-center mb-24">
+        <p class="text-3xl font-bold mb-16">AWS RE:INVENT NEWS & ANNOUNCEMENTS</p>
+        <div class="flex justify-center">
+            <div class="w-10/12">
+                <!-- This is a bit of hack to avoid listing an Azure blog post on the AWS page
+                     during the re:Invent takeover. Once we publish another blog we should remove
+                     this exclusion.
+                -->
+                {{ range first 3 ( where $blog ".Params.title" "ne" "Deploying Minecraft on Azure" ) }}
+                    <div class="flex flex-col lg:flex-row mb-12">
+                        <div class="w-full lg:w-1/2 mr-8">
+                            <a href="{{ .RelPermalink }}">
+                                <img class="rounded-lg lg:my-8 border-2 border-gray-100"
+                                     src="{{ (.Resources.GetMatch .Params.meta_image).RelPermalink }}"
+                                     alt="{{ .Title }}">
+                            </a>
+                        </div>
 
-let redisLeader = new k8sjs.ServiceDeployment("redis-leader", {
-    image: "redis",
-    ports: [ 6379 ]
-});
-
-let redisReplica = new k8sjs.ServiceDeployment("redis-replica", {
-    image: "pulumi/guestbook-redis-replica",
-    ports: [ 6379 ]
-});
-
-let frontend = new k8sjs.ServiceDeployment("frontend", {
-    replicas: 3,
-    image: "pulumi/guestbook-php-redis",
-    ports: [ 80 ],
-    loadBalancer: true,
-});
-
-export let frontendIp = frontend.ipAddress;` }}
-                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
-                </div>
-            </div>
-
-            <!-- Example 4 -->
-            <div class="md:flex my-8">
-                <div class="md:w-1/2 md:mr-4">
-                    <h2>Creating a Simple Web Server</h2>
-                    <p>
-                        Pulumi gives you a way to express AWS infrastructure configuration using your favorite programming language.
-                    </p>
-                    <p>
-                        This code uses TypeScript on Node.js to define the necessary security group, and defines a very simple web server, and then creates the instance, before exporting the IP and Hostname.
-                    </p>
-                    <p>
-                        <a class="btn inline-block my-2" href="{{ relref . "/docs/get-started" }}">Get Started</a>
-                    </p>
-                </div>
-                <div class="md:w-1/2 md:ml:4">
-                    {{ $code := `const aws = require("@pulumi/aws");
-
-let size = "t2.micro";
-let ami  = "ami-7172b611"
-
-// Create a new security group for port 80.
-let group = new aws.ec2.SecurityGroup("web-secgrp", {
-    ingress: [
-        { protocol: "tcp", fromPort: 22,
-          toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
-        { protocol: "tcp", fromPort: 80,
-          toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
-    ],
-});
-
-// Create a simple web server.
-let userData =
-    "#!/bin/bash \n" +
-    "echo 'Hello, World!' > index.html \n" +
-    "nohup python -m SimpleHTTPServer 80 &";
-
-let server = new aws.ec2.Instance("web-server-www", {
-    tags: { "Name": "web-server-www" },
-    instanceType: size,
-    securityGroups: [ group.name ],
-    ami: ami,
-    userData: userData
-});
-
-exports.publicIp = server.publicIp;
-exports.publicHostName = server.publicDns;` }}
-                    {{ partial "code" (dict "code" $code "lang" "js" "mode" "dark") }}
-                </div>
+                        <div class="w-full lg:w-1/2 text-left flex flex-col justify-center">
+                            <p class="no-anchor text-2xl font-bold"><a data-track="post-{{ .Title | urlize }}" href="{{ .Permalink }}">{{ .Title }}</a></p>
+                            <div class="flex items-center">
+                                <span>
+                                    {{ partial "blog/authors.html" (dict "context" . "authors" .Params.authors ) }}
+                                </span>
+                                <span class="mr-2">∙</span>
+                                <time>
+                                    {{ .Date.Format "Monday, Jan 2, 2006" }}
+                                </time>
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
             </div>
         </div>
     </section>
+    <!-- End AWS re:invent takeover content -->
 
-    {{ partial "how-pulumi-works.html" . }}
+    <div class="container mx-auto carousel-always-visible mb-24">
+        <section class="w-full text-center">
+            <div>
+                <div>
+                    <div class="inline-block bg-blue-100 border-4 border-blue-200 rounded-full p-3" style="fill: #4387c7;">
+                        {{ partial "superpower-icon.html" (dict "type" "architecture")}}
+                    </div>
+                </div>
+                <p class="text-3xl font-bold inline-block">CREATE</p>
+            </div>
+            <p class="w-10/12 mx-auto text-4xl mt-0">Start with the best experience for your engineering team.</p>
+            <p class="text-center w-full p-5 lg:w-1/2 lg:p-0 mx-auto">
+                Software development begins with the Engineer and they need tools and processes
+                that enable them to deliver their ideas with speed and reliability. Pulumi puts
+                the Engineer's experience first and focuses on providing familiar tools that make
+                delivery applications and infrastructure easier than ever before.
+            </p>
+            <div class="flex flex-col xl:flex-row xl:mt-12">
+                <div class="w-full p-5 xl:p-0 xl:w-1/2">
+                    <div class="carousel-item opacity-1 transition-all-200 text-xs shadow-xl">
+                        {{ partial "home/ide" . }}
+                    </div>
+                </div>
 
-    {{ partial "learning-machine.html" . }}
+                <div class="w-full xl:w-1/2 text-left px-10">
+                    <p class="text-lg font-bold">IDE Autocomplete</p>
+                    <p>
+                        By using Pulumi you use the productivity features available in
+                        your preferred IDE like autocompletion, to help write infrastructure
+                        programs faster and with more accuracy.
+                    </p>
 
-    {{ partial "get-started.html" . }}
+                    <p class="text-lg font-bold">Native Testing Frameworks</p>
+                    <p>
+                        With Pulumi you can take advantage of your favorite  programming languages
+                        and popular testing frameworks to validate your infrastructure and applications
+                        through their entire lifecycle.
+                    </p>
+
+                    <p class="text-lg font-bold">Sharing and Reuse</p>
+                    <p>
+                        Sharing and reusing your infrastructure code is available right out of the
+                        box with Pulumi. You can use your preferred programming language's native
+                        package managers to share and distribute infrastructure code within your organization.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full text-center mt-16">
+            <div>
+                <div>
+                    <div class="inline-block bg-blue-100 border-4 border-blue-200 rounded-full p-3" style="fill: #4387c7;">
+                        {{ partial "superpower-icon.html" (dict "type" "provisioning")}}
+                    </div>
+                </div>
+                <p class="text-3xl font-bold inline-block">DEPLOY</p>
+            </div>
+            <p class="w-10/12 mx-auto text-4xl mt-0">Reduce obstacles and increase collaboration to ship faster.</p>
+            <p class="text-center w-full p-5 lg:w-1/2 lg:p-0 mx-auto">
+                Getting an application into production can be an overwhelming process. Pulumi empowers you and your
+                team to work together to reduce obstacles and increase collaboration across your entire software
+                delivery pipeline.
+            </p>
+            <div class="flex flex-col xl:flex-row xl:mt-12">
+                <div class="w-full p-5 lg:p-0 xl:w-1/2">
+                    <div class="carousel-item opacity-1 transition-all-200 text-xs shadow-xl">
+                        {{ partial "home/cli" . }}
+                    </div>
+                </div>
+
+                <div class="w-full xl:w-1/2 text-left px-10 flex flex-col justify-center">
+                    <p class="text-lg font-bold">Architect for self-service</p>
+                    <p>
+                        Pulumi's unique approach to Infrastructure as Code allows you to build
+                        self-service infrastructure platforms. You can abstract away complexity
+                        for your teammates, allowing folks to focus on what's important.
+                    </p>
+
+                    <p class="text-lg font-bold">Continuously Delivery Value</p>
+                    <p>
+                        Pulumi gives you the power to continuously test and deliver your
+                        cloud infrastructure using your favorite CI/CD platforms. By
+                        automating your testing and delivery you can focus more on delivering
+                        value to your customers.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full text-center mt-16">
+            <div>
+                <div>
+                    <div class="inline-block bg-blue-100 border-4 border-blue-200 rounded-full p-3" style="fill: #4387c7;">
+                        {{ partial "superpower-icon.html" (dict "type" "testing")}}
+                    </div>
+                </div>
+                <p class="text-3xl font-bold inline-block">MANAGE</p>
+            </div>
+            <p class="w-10/12 mx-auto text-4xl mt-0">Gain full auditability and visibility into all your environments to tame complexity and put security first.</p>
+            <p class="text-center w-full p-5 lg:w-1/2 lg:p-0 mx-auto">
+                Pulumi gives you robust policy enforcement  for  your cloud environments so you can
+                prevent mistakes before they occur and respond rapidly to any incidents.
+            </p>
+            <div class="flex flex-col xl:flex-row xl:mt-12">
+                <div class="w-full p-5 lg:p-0 xl:w-1/2">
+                    <div class="carousel-item opacity-1 transition-all-200 text-xs shadow-xl">
+                        {{ partial "home/console" . }}
+                    </div>
+                </div>
+
+                <div class="w-full xl:w-1/2 text-left px-10">
+                    <p class="text-lg font-bold">Secrets management made easy</p>
+                    <p>
+                        Pulumi provides you with any easy way to ensure secrets are kept safe
+                        during the entire software development lifecycle. You can have Pulumi
+                        manage your secrets for you or bring your own secrets management provider.
+                    </p>
+
+                    <p class="text-lg font-bold">Keep your workflows secure</p>
+                    <p>
+                        When you enable Policy as Code within your organization you get the
+                        ability to define guardrails for your infrastructure, ensuring engineers
+                        are following best practices and putting security first.
+                    </p>
+
+                    <p class="text-lg font-bold">Manage your complexity</p>
+                    <p>
+                        The Pulumi Console gives you full auditability of the current state of
+                        your cloud infrastructure. From seeing what resources are being managed
+                        by which stack, to the actions specific team members are performing.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="container mx-auto mb-16">
+            <h3 class="mt-12 mb-8 text-center text-4xl font-bold">
+                Begin Your Pulumi Adventure
+            </h3>
+            <div class="w-full flex flex-wrap">
+                <div class="w-full lg:w-1/2 p-3">
+                    <div class="flex flex-wrap border rounded shadow-xl">
+                        <div class="w-full lg:w-1/2 p-3">
+                            <img class="h-64 mx-auto" src="/images/mascot/babypus.svg" />
+                        </div>
+
+                        <div class="w-full lg:w-1/2 p-3">
+                            <p class="mt-0 font-bold text-2xl">Start from scratch</p>
+                            <p>
+                                If you are new to Pulumi our Getting Started Guides are the place for you. In
+                                these guides you will learn the fundamentals of Pulumi while deploying some
+                                simple cloud infrastructure.
+                            </p>
+                            <p class="text-blue-500">
+                                <a href="{{ relref . "/docs/get-started/aws" }}" class="hover:mr-1 transition-all">Get started</a> &rarr;
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 p-3">
+                    <div class="flex flex-wrap border rounded">
+                        <div class="w-full lg:w-1/2 p-3">
+                            <img class="h-64 mx-auto" src="/images/mascot/gandalfpus.svg" />
+                        </div>
+
+                        <div class="w-full lg:w-1/2 p-3">
+                            <p class="mt-0 font-bold text-2xl">Import an existing resource</p>
+                            <p>
+                                For people who are already managing infrastructure with a different tool
+                                or directly in the cloud's console, we have created adoption guides for
+                                incrementally adopting Pulumi.
+                            </p>
+                            <p class="text-blue-500">
+                                <a href="{{ relref . "/docs/guides/adopting" }}" class="hover:mr-1 transition-all">Read the guide</a> &rarr;
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 p-3">
+                    <div class="flex flex-wrap border rounded">
+                        <div class="w-full lg:w-1/2 p-3">
+                            <img class="h-64 mx-auto" src="/images/mascot/rocketpus.svg" />
+                        </div>
+
+                        <div class="w-full lg:w-1/2 p-3">
+                            <p class="mt-0 font-bold text-2xl">Clone an example</p>
+                            <p>
+                                We have created 150+ examples for you to choose from as a way for
+                                you to quickly get started with Pulumi. You can deploy them as-is or
+                                use an example as a base for your own project.
+                            </p>
+                            <p class="text-blue-500">
+                                <a href="https://github.com/pulumi/examples" target="_blank" rel="noopener noreferrer" class="hover:mr-1 transition-all">View the examples</a> &rarr;
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 p-3">
+                    <div class="flex flex-wrap border rounded">
+                        <div class="w-full lg:w-1/2 p-3">
+                            <img class="h-64 mx-auto" src="/images/mascot/eggpus.svg" />
+                        </div>
+
+                        <div class="w-full lg:w-1/2 p-3">
+                            <p class="mt-0 font-bold text-2xl">Convert Terraform</p>
+                            <p>
+                                If you are already using Terraform to manage your infrastructure, we have
+                                built a tool for you to see what your HCL would look like in TypeScript, Python,
+                                C#, and Go.
+                            </p>
+                            <p class="text-blue-500">
+                                <a href="{{ relref . "/tf2pulumi" }}" class="hover:mr-1 transition-all">Try tf2pulumi</a> &rarr;
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
 
     {{ partial "form-section" (dict "form" .Params.contact_us_form) }}
 {{ end }}

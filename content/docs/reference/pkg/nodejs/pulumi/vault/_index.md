@@ -3,7 +3,7 @@ title: "Package @pulumi/vault"
 title_tag: "Package @pulumi/vault | Node.js SDK"
 linktitle: "@pulumi/vault"
 meta_desc: "Explore members of the @pulumi/vault package."
-git_sha: "2dce476d2b85de30e6b63dd882e5f90000adc81f"
+git_sha: "f4b3208824090a37bb9fc329f6449af5cfb6f228"
 block_external_search_index: true
 ---
 
@@ -39,6 +39,7 @@ import * as vault from "@pulumi/vault";
 
 <h3>Modules</h3>
 <ul class="api">
+    <li><a href="ad/"><span class="symbol module"></span>ad</a></li>
     <li><a href="alicloud/"><span class="symbol module"></span>alicloud</a></li>
     <li><a href="approle/"><span class="symbol module"></span>approle</a></li>
     <li><a href="aws/"><span class="symbol module"></span>aws</a></li>
@@ -124,7 +125,7 @@ import * as vault from "@pulumi/vault";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Audit" data-link-title="Audit">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/audit.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/audit.ts#L47">
         Resource <strong>Audit</strong>
     </a>
 </h3>
@@ -171,7 +172,7 @@ Audit devices can be imported using the `path`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Audit-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/audit.ts#L90"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/audit.ts#L90"> <b>constructor</b></a>
 </h4>
 
 
@@ -185,7 +186,7 @@ Create a Audit resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Audit-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/audit.ts#L57">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/audit.ts#L57">method <b>get</b></a>
 </h4>
 
 
@@ -196,14 +197,14 @@ Get an existing Audit resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Audit-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/audit.ts#L47">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/audit.ts#L47">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Audit-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/audit.ts#L68">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/audit.ts#L68">method <b>isInstance</b></a>
 </h4>
 
 
@@ -214,7 +215,7 @@ Returns true if the given object is an instance of Audit.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Audit-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/audit.ts#L78">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/audit.ts#L78">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -222,7 +223,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Human-friendly description of the audit device.
 
 <h4 class="pdoc-member-header" id="Audit-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/audit.ts#L47">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/audit.ts#L47">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -231,7 +232,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Audit-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/audit.ts#L82">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/audit.ts#L82">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>options: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -239,7 +240,7 @@ deployments and may be missing (undefined) during planning phases.
 Configuration options to pass to the audit device itself.
 
 <h4 class="pdoc-member-header" id="Audit-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/audit.ts#L86">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/audit.ts#L86">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -247,7 +248,7 @@ Configuration options to pass to the audit device itself.
 The path to mount the audit device. This defaults to the type.
 
 <h4 class="pdoc-member-header" id="Audit-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/audit.ts#L90">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/audit.ts#L90">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -255,7 +256,7 @@ The path to mount the audit device. This defaults to the type.
 Type of the audit device, such as 'file'.
 
 <h4 class="pdoc-member-header" id="Audit-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/audit.ts#L47">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/audit.ts#L47">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -264,7 +265,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="AuthBackend" data-link-title="AuthBackend">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L32">
         Resource <strong>AuthBackend</strong>
     </a>
 </h3>
@@ -295,7 +296,7 @@ Auth methods can be imported using the `path`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="AuthBackend-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L102"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L102"> <b>constructor</b></a>
 </h4>
 
 
@@ -309,7 +310,7 @@ Create a AuthBackend resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="AuthBackend-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -320,14 +321,14 @@ Get an existing AuthBackend resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="AuthBackend-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="AuthBackend-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -338,7 +339,7 @@ Returns true if the given object is an instance of AuthBackend.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="AuthBackend-accessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L63">property <b>accessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L63">property <b>accessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -346,7 +347,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The accessor for this auth method
 
 <h4 class="pdoc-member-header" id="AuthBackend-defaultLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L69">property <b>defaultLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L69">property <b>defaultLeaseTtlSeconds</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -358,7 +359,7 @@ Use the tune configuration block to avoid forcing creation of new resource on an
 (Optional; Deprecated, use `tune.default_lease_ttl` if you are using Vault provider version >= 1.8) The default lease duration in seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackend-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L73">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L73">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -366,7 +367,7 @@ Use the tune configuration block to avoid forcing creation of new resource on an
 A description of the auth method
 
 <h4 class="pdoc-member-header" id="AuthBackend-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -375,7 +376,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="AuthBackend-listingVisibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L80">property <b>listingVisibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L80">property <b>listingVisibility</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -388,7 +389,7 @@ Specifies whether to show this mount in
 the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 
 <h4 class="pdoc-member-header" id="AuthBackend-local">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L84">property <b>local</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L84">property <b>local</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>local: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -396,7 +397,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 Specifies if the auth method is local only.
 
 <h4 class="pdoc-member-header" id="AuthBackend-maxLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L90">property <b>maxLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L90">property <b>maxLeaseTtlSeconds</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -408,7 +409,7 @@ Use the tune configuration block to avoid forcing creation of new resource on an
 (Optional; Deprecated, use `tune.max_lease_ttl` if you are using Vault provider version >= 1.8) The maximum lease duration in seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackend-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L94">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L94">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -416,7 +417,7 @@ Use the tune configuration block to avoid forcing creation of new resource on an
 The path to mount the auth method — this defaults to the name of the type
 
 <h4 class="pdoc-member-header" id="AuthBackend-tune">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L98">property <b>tune</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L98">property <b>tune</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tune: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/output/#AuthBackendTune'>AuthBackendTune</a>&gt;;</code></pre>
@@ -424,7 +425,7 @@ The path to mount the auth method — this defaults to the name of the type
 Extra configuration block. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="AuthBackend-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L102">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L102">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -432,7 +433,7 @@ Extra configuration block. Structure is documented below.
 The name of the auth method type
 
 <h4 class="pdoc-member-header" id="AuthBackend-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -441,7 +442,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="CertAuthBackendRole" data-link-title="CertAuthBackendRole">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L34">
         Resource <strong>CertAuthBackendRole</strong>
     </a>
 </h3>
@@ -475,7 +476,7 @@ const certCertAuthBackendRole = new vault.CertAuthBackendRole("certCertAuthBacke
 ```
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L196"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L196"> <b>constructor</b></a>
 </h4>
 
 
@@ -489,7 +490,7 @@ Create a CertAuthBackendRole resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -500,14 +501,14 @@ Get an existing CertAuthBackendRole resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -518,7 +519,7 @@ Returns true if the given object is an instance of CertAuthBackendRole.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-allowedCommonNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L65">property <b>allowedCommonNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L65">property <b>allowedCommonNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowedCommonNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -526,7 +527,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Allowed the common names for authenticated client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-allowedDnsSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L69">property <b>allowedDnsSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L69">property <b>allowedDnsSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowedDnsSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -534,7 +535,7 @@ Allowed the common names for authenticated client certificates
 Allowed alternative dns names for authenticated client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-allowedEmailSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L73">property <b>allowedEmailSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L73">property <b>allowedEmailSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowedEmailSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -542,7 +543,7 @@ Allowed alternative dns names for authenticated client certificates
 Allowed emails for authenticated client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-allowedNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L77">property <b>allowedNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L77">property <b>allowedNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowedNames: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -550,7 +551,7 @@ Allowed emails for authenticated client certificates
 Allowed subject names for authenticated client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-allowedOrganizationUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L81">property <b>allowedOrganizationUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L81">property <b>allowedOrganizationUnits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowedOrganizationUnits: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -558,7 +559,7 @@ Allowed subject names for authenticated client certificates
 Allowed organization units for authenticated client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-allowedUriSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L85">property <b>allowedUriSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L85">property <b>allowedUriSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowedUriSans: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -566,7 +567,7 @@ Allowed organization units for authenticated client certificates
 Allowed URIs for authenticated client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L89">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L89">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -574,7 +575,7 @@ Allowed URIs for authenticated client certificates
 Path to the mounted Cert auth backend
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-boundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L96">property <b>boundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L96">property <b>boundCidrs</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -587,7 +588,7 @@ Restriction usage of the
 certificates to client IPs falling within the range of the specified CIDRs
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L100">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L100">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -595,7 +596,7 @@ certificates to client IPs falling within the range of the specified CIDRs
 CA certificate used to validate client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L104">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L104">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -603,7 +604,7 @@ CA certificate used to validate client certificates
 The name to display on tokens issued under this role.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -612,7 +613,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L111">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L111">property <b>maxTtl</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -625,7 +626,7 @@ The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L115">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L115">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -633,7 +634,7 @@ issued using this role, provided as a number of seconds.
 Name of the role
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L124">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L124">property <b>period</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -648,7 +649,7 @@ duration specified by this value. At each renewal, the token's TTL will be set t
 value of this field. Specified in seconds.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L131">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L131">property <b>policies</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -661,7 +662,7 @@ An array of strings
 specifying the policies to be set on tokens issued using this role.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-requiredExtensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L135">property <b>requiredExtensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L135">property <b>requiredExtensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requiredExtensions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -669,7 +670,7 @@ specifying the policies to be set on tokens issued using this role.
 TLS extensions required on client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-tokenBoundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L141">property <b>tokenBoundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L141">property <b>tokenBoundCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenBoundCidrs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -679,7 +680,7 @@ addresses which can authenticate successfully, and ties the resulting token to t
 as well.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-tokenExplicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L148">property <b>tokenExplicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L148">property <b>tokenExplicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenExplicitMaxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -690,7 +691,7 @@ onto the token in number of seconds. This is a hard cap even if `tokenTtl` and
 `tokenMaxTtl` would otherwise allow a renewal.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-tokenMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L153">property <b>tokenMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L153">property <b>tokenMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenMaxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -699,7 +700,7 @@ The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-tokenNoDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L158">property <b>tokenNoDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L158">property <b>tokenNoDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenNoDefaultPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -708,7 +709,7 @@ If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-tokenNumUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L164">property <b>tokenNumUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L164">property <b>tokenNumUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenNumUses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -718,7 +719,7 @@ The
 if any, in number of seconds to set on the token.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-tokenPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L171">property <b>tokenPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L171">property <b>tokenPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -729,7 +730,7 @@ duration specified by this value. At each renewal, the token's TTL will be set t
 value of this field. Specified in seconds.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-tokenPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L176">property <b>tokenPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L176">property <b>tokenPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -738,7 +739,7 @@ List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-tokenTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L181">property <b>tokenTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L181">property <b>tokenTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -747,7 +748,7 @@ The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L189">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L189">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tokenType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -759,7 +760,7 @@ The type of token that should be generated. Can be `service`,
 requests a different type at generation time.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L196">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L196">property <b>ttl</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -772,7 +773,7 @@ The TTL period of tokens issued
 using this role, provided as a number of seconds.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRole-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -781,7 +782,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EgpPolicy" data-link-title="EgpPolicy">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/egpPolicy.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/egpPolicy.ts#L28">
         Resource <strong>EgpPolicy</strong>
     </a>
 </h3>
@@ -809,7 +810,7 @@ const allow_all = new vault.EgpPolicy("allow-all", {
 ```
 
 <h4 class="pdoc-member-header" id="EgpPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/egpPolicy.ts#L71"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/egpPolicy.ts#L71"> <b>constructor</b></a>
 </h4>
 
 
@@ -823,7 +824,7 @@ Create a EgpPolicy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EgpPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/egpPolicy.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/egpPolicy.ts#L38">method <b>get</b></a>
 </h4>
 
 
@@ -834,14 +835,14 @@ Get an existing EgpPolicy resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EgpPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/egpPolicy.ts#L28">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/egpPolicy.ts#L28">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EgpPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/egpPolicy.ts#L49">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/egpPolicy.ts#L49">method <b>isInstance</b></a>
 </h4>
 
 
@@ -852,7 +853,7 @@ Returns true if the given object is an instance of EgpPolicy.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EgpPolicy-enforcementLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/egpPolicy.ts#L59">property <b>enforcementLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/egpPolicy.ts#L59">property <b>enforcementLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enforcementLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -860,7 +861,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Enforcement level of Sentinel policy. Can be either `advisory` or `soft-mandatory` or `hard-mandatory`
 
 <h4 class="pdoc-member-header" id="EgpPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/egpPolicy.ts#L28">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/egpPolicy.ts#L28">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -869,7 +870,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EgpPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/egpPolicy.ts#L63">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/egpPolicy.ts#L63">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -877,7 +878,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the policy
 
 <h4 class="pdoc-member-header" id="EgpPolicy-paths">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/egpPolicy.ts#L67">property <b>paths</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/egpPolicy.ts#L67">property <b>paths</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>paths: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -885,7 +886,7 @@ The name of the policy
 List of paths to which the policy will be applied to
 
 <h4 class="pdoc-member-header" id="EgpPolicy-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/egpPolicy.ts#L71">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/egpPolicy.ts#L71">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -893,7 +894,7 @@ List of paths to which the policy will be applied to
 String containing a Sentinel policy
 
 <h4 class="pdoc-member-header" id="EgpPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/egpPolicy.ts#L28">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/egpPolicy.ts#L28">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -902,7 +903,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="MfaDuo" data-link-title="MfaDuo">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L38">
         Resource <strong>MfaDuo</strong>
     </a>
 </h3>
@@ -940,7 +941,7 @@ Mounts can be imported using the `path`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="MfaDuo-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L97"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L97"> <b>constructor</b></a>
 </h4>
 
 
@@ -954,7 +955,7 @@ Create a MfaDuo resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="MfaDuo-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -965,14 +966,14 @@ Get an existing MfaDuo resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="MfaDuo-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="MfaDuo-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -983,7 +984,7 @@ Returns true if the given object is an instance of MfaDuo.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="MfaDuo-apiHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L69">property <b>apiHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L69">property <b>apiHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiHostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -991,7 +992,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 `(string: <required>)` - API hostname for Duo.
 
 <h4 class="pdoc-member-header" id="MfaDuo-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1000,7 +1001,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="MfaDuo-integrationKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L73">property <b>integrationKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L73">property <b>integrationKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>integrationKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1008,7 +1009,7 @@ deployments and may be missing (undefined) during planning phases.
 `(string: <required>)` - Integration key for Duo.
 
 <h4 class="pdoc-member-header" id="MfaDuo-mountAccessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L77">property <b>mountAccessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L77">property <b>mountAccessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mountAccessor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1016,7 +1017,7 @@ deployments and may be missing (undefined) during planning phases.
 `(string: <required>)` - The mount to tie this method to for use in automatic mappings. The mapping will use the Name field of Aliases associated with this mount as the username in the mapping.
 
 <h4 class="pdoc-member-header" id="MfaDuo-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L81">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L81">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1024,7 +1025,7 @@ deployments and may be missing (undefined) during planning phases.
 `(string: <required>)` – Name of the MFA method.
 
 <h4 class="pdoc-member-header" id="MfaDuo-pushInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L85">property <b>pushInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L85">property <b>pushInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pushInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1032,7 +1033,7 @@ deployments and may be missing (undefined) during planning phases.
 `(string)` - Push information for Duo.
 
 <h4 class="pdoc-member-header" id="MfaDuo-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L89">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L89">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secretKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1040,7 +1041,7 @@ deployments and may be missing (undefined) during planning phases.
 `(string: <required>)` - Secret key for Duo.
 
 <h4 class="pdoc-member-header" id="MfaDuo-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1049,7 +1050,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="MfaDuo-usernameFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L97">property <b>usernameFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L97">property <b>usernameFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>usernameFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1061,7 +1062,7 @@ deployments.
 - entity.metadata.`<key>`: The value of the Entity's metadata parameter
 
 <h3 class="pdoc-module-header" id="Mount" data-link-title="Mount">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L29">
         Resource <strong>Mount</strong>
     </a>
 </h3>
@@ -1090,7 +1091,7 @@ Mounts can be imported using the `path`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Mount-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L96"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L96"> <b>constructor</b></a>
 </h4>
 
 
@@ -1104,7 +1105,7 @@ Create a Mount resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Mount-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L39">method <b>get</b></a>
 </h4>
 
 
@@ -1115,14 +1116,14 @@ Get an existing Mount resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Mount-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L29">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L29">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Mount-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L50">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1133,7 +1134,7 @@ Returns true if the given object is an instance of Mount.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Mount-accessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L60">property <b>accessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L60">property <b>accessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1141,7 +1142,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The accessor for this mount.
 
 <h4 class="pdoc-member-header" id="Mount-defaultLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L64">property <b>defaultLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L64">property <b>defaultLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultLeaseTtlSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1149,7 +1150,7 @@ The accessor for this mount.
 Default lease duration for tokens and secrets in seconds
 
 <h4 class="pdoc-member-header" id="Mount-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L68">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L68">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1157,7 +1158,7 @@ Default lease duration for tokens and secrets in seconds
 Human-friendly description of the mount
 
 <h4 class="pdoc-member-header" id="Mount-externalEntropyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L72">property <b>externalEntropyAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L72">property <b>externalEntropyAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>externalEntropyAccess: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1165,7 +1166,7 @@ Human-friendly description of the mount
 Boolean flag that can be explicitly set to true to enable the secrets engine to access Vault's external entropy source
 
 <h4 class="pdoc-member-header" id="Mount-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L29">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L29">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1174,7 +1175,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Mount-local">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L76">property <b>local</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L76">property <b>local</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>local: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1182,7 +1183,7 @@ deployments and may be missing (undefined) during planning phases.
 Boolean flag that can be explicitly set to true to enforce local mount in HA environment
 
 <h4 class="pdoc-member-header" id="Mount-maxLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L80">property <b>maxLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L80">property <b>maxLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxLeaseTtlSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1190,7 +1191,7 @@ Boolean flag that can be explicitly set to true to enforce local mount in HA env
 Maximum possible lease duration for tokens and secrets in seconds
 
 <h4 class="pdoc-member-header" id="Mount-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L84">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L84">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>options: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1198,7 +1199,7 @@ Maximum possible lease duration for tokens and secrets in seconds
 Specifies mount type specific options that are passed to the backend
 
 <h4 class="pdoc-member-header" id="Mount-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L88">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L88">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1206,7 +1207,7 @@ Specifies mount type specific options that are passed to the backend
 Where the secret backend will be mounted
 
 <h4 class="pdoc-member-header" id="Mount-sealWrap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L92">property <b>sealWrap</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L92">property <b>sealWrap</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sealWrap: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1214,7 +1215,7 @@ Where the secret backend will be mounted
 Boolean flag that can be explicitly set to true to enable seal wrapping for the mount, causing values stored by the mount to be wrapped by the seal's encryption capability
 
 <h4 class="pdoc-member-header" id="Mount-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L96">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L96">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1222,7 +1223,7 @@ Boolean flag that can be explicitly set to true to enable seal wrapping for the 
 Type of the backend, such as "aws"
 
 <h4 class="pdoc-member-header" id="Mount-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L29">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L29">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1231,7 +1232,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Namespace" data-link-title="Namespace">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/namespace.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/namespace.ts#L23">
         Resource <strong>Namespace</strong>
     </a>
 </h3>
@@ -1254,7 +1255,7 @@ const ns1 = new vault.Namespace("ns1", {
 ```
 
 <h4 class="pdoc-member-header" id="Namespace-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/namespace.ts#L58"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/namespace.ts#L58"> <b>constructor</b></a>
 </h4>
 
 
@@ -1268,7 +1269,7 @@ Create a Namespace resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Namespace-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/namespace.ts#L33">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/namespace.ts#L33">method <b>get</b></a>
 </h4>
 
 
@@ -1279,14 +1280,14 @@ Get an existing Namespace resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Namespace-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/namespace.ts#L23">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/namespace.ts#L23">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Namespace-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/namespace.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/namespace.ts#L44">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1297,7 +1298,7 @@ Returns true if the given object is an instance of Namespace.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Namespace-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/namespace.ts#L23">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/namespace.ts#L23">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1306,7 +1307,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Namespace-namespaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/namespace.ts#L54">property <b>namespaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/namespace.ts#L54">property <b>namespaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namespaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1314,7 +1315,7 @@ deployments and may be missing (undefined) during planning phases.
 ID of the namepsace.
 
 <h4 class="pdoc-member-header" id="Namespace-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/namespace.ts#L58">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/namespace.ts#L58">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1322,7 +1323,7 @@ ID of the namepsace.
 The path of the namespace. Must not have a trailing `/`
 
 <h4 class="pdoc-member-header" id="Namespace-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/namespace.ts#L23">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/namespace.ts#L23">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1331,7 +1332,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Policy" data-link-title="Policy">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/policy.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/policy.ts#L30">
         Resource <strong>Policy</strong>
     </a>
 </h3>
@@ -1361,7 +1362,7 @@ Policies can be imported using the `name`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Policy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/policy.ts#L65"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/policy.ts#L65"> <b>constructor</b></a>
 </h4>
 
 
@@ -1375,7 +1376,7 @@ Create a Policy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Policy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/policy.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/policy.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -1386,14 +1387,14 @@ Get an existing Policy resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Policy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/policy.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/policy.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Policy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/policy.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/policy.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1404,7 +1405,7 @@ Returns true if the given object is an instance of Policy.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Policy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/policy.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/policy.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1413,7 +1414,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Policy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/policy.ts#L61">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/policy.ts#L61">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1421,7 +1422,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the policy
 
 <h4 class="pdoc-member-header" id="Policy-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/policy.ts#L65">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/policy.ts#L65">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1429,7 +1430,7 @@ The name of the policy
 String containing a Vault policy
 
 <h4 class="pdoc-member-header" id="Policy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/policy.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/policy.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1438,7 +1439,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/provider.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/provider.ts#L14">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -1451,7 +1452,7 @@ construction to achieve fine-grained programmatic control over provider settings
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/provider.ts#L27"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/provider.ts#L27"> <b>constructor</b></a>
 </h4>
 
 
@@ -1465,14 +1466,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/provider.ts#L14">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/provider.ts#L14">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/provider.ts#L22">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/provider.ts#L22">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1483,14 +1484,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/provider.ts#L14">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/provider.ts#L14">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/provider.ts#L14">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/provider.ts#L14">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1499,7 +1500,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/provider.ts#L14">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/provider.ts#L14">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1508,7 +1509,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="QuotaRateLimit" data-link-title="QuotaRateLimit">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/quotaRateLimit.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/quotaRateLimit.ts#L35">
         Resource <strong>QuotaRateLimit</strong>
     </a>
 </h3>
@@ -1543,7 +1544,7 @@ Rate limit quotas can be imported using their names
 ```
 
 <h4 class="pdoc-member-header" id="QuotaRateLimit-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/quotaRateLimit.ts#L80"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/quotaRateLimit.ts#L80"> <b>constructor</b></a>
 </h4>
 
 
@@ -1557,7 +1558,7 @@ Create a QuotaRateLimit resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="QuotaRateLimit-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/quotaRateLimit.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/quotaRateLimit.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -1568,14 +1569,14 @@ Get an existing QuotaRateLimit resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="QuotaRateLimit-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/quotaRateLimit.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/quotaRateLimit.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="QuotaRateLimit-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/quotaRateLimit.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/quotaRateLimit.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1586,7 +1587,7 @@ Returns true if the given object is an instance of QuotaRateLimit.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="QuotaRateLimit-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/quotaRateLimit.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/quotaRateLimit.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1595,7 +1596,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="QuotaRateLimit-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/quotaRateLimit.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/quotaRateLimit.ts#L66">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1603,7 +1604,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the rate limit quota
 
 <h4 class="pdoc-member-header" id="QuotaRateLimit-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/quotaRateLimit.ts#L75">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/quotaRateLimit.ts#L75">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1616,7 +1617,7 @@ Updating this field on an existing quota can have "moving" effects. For example,
 a namespace specific mount quota. **Note, namespaces are supported in Enterprise only.**
 
 <h4 class="pdoc-member-header" id="QuotaRateLimit-rate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/quotaRateLimit.ts#L80">property <b>rate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/quotaRateLimit.ts#L80">property <b>rate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1625,7 +1626,7 @@ The maximum number of requests at any given second to be allowed by the quota
 rule. The `rate` must be positive.
 
 <h4 class="pdoc-member-header" id="QuotaRateLimit-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/quotaRateLimit.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/quotaRateLimit.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1634,7 +1635,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RgpPolicy" data-link-title="RgpPolicy">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/rgpPolicy.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/rgpPolicy.ts#L27">
         Resource <strong>RgpPolicy</strong>
     </a>
 </h3>
@@ -1661,7 +1662,7 @@ const allow_all = new vault.RgpPolicy("allow-all", {
 ```
 
 <h4 class="pdoc-member-header" id="RgpPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/rgpPolicy.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/rgpPolicy.ts#L66"> <b>constructor</b></a>
 </h4>
 
 
@@ -1675,7 +1676,7 @@ Create a RgpPolicy resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RgpPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/rgpPolicy.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/rgpPolicy.ts#L37">method <b>get</b></a>
 </h4>
 
 
@@ -1686,14 +1687,14 @@ Get an existing RgpPolicy resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RgpPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/rgpPolicy.ts#L27">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/rgpPolicy.ts#L27">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RgpPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/rgpPolicy.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/rgpPolicy.ts#L48">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1704,7 +1705,7 @@ Returns true if the given object is an instance of RgpPolicy.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RgpPolicy-enforcementLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/rgpPolicy.ts#L58">property <b>enforcementLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/rgpPolicy.ts#L58">property <b>enforcementLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enforcementLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1712,7 +1713,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Enforcement level of Sentinel policy. Can be either `advisory` or `soft-mandatory` or `hard-mandatory`
 
 <h4 class="pdoc-member-header" id="RgpPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/rgpPolicy.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/rgpPolicy.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1721,7 +1722,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RgpPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/rgpPolicy.ts#L62">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/rgpPolicy.ts#L62">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1729,7 +1730,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the policy
 
 <h4 class="pdoc-member-header" id="RgpPolicy-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/rgpPolicy.ts#L66">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/rgpPolicy.ts#L66">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1737,7 +1738,7 @@ The name of the policy
 String containing a Sentinel policy
 
 <h4 class="pdoc-member-header" id="RgpPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/rgpPolicy.ts#L27">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/rgpPolicy.ts#L27">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1746,7 +1747,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Token" data-link-title="Token">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L16">
         Resource <strong>Token</strong>
     </a>
 </h3>
@@ -1762,7 +1763,7 @@ Tokens can be imported using its `id` as accessor id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Token-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L123"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L123"> <b>constructor</b></a>
 </h4>
 
 
@@ -1776,7 +1777,7 @@ Create a Token resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Token-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -1787,14 +1788,14 @@ Get an existing Token resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Token-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Token-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1805,7 +1806,7 @@ Returns true if the given object is an instance of Token.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Token-clientToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L47">property <b>clientToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L47">property <b>clientToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1813,7 +1814,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 String containing the client token if stored in present file
 
 <h4 class="pdoc-member-header" id="Token-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L51">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L51">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1821,7 +1822,7 @@ String containing the client token if stored in present file
 String containing the token display name
 
 <h4 class="pdoc-member-header" id="Token-encryptedClientToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L55">property <b>encryptedClientToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L55">property <b>encryptedClientToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encryptedClientToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1829,7 +1830,7 @@ String containing the token display name
 String containing the client token encrypted with the given `pgpKey` if stored in present file
 
 <h4 class="pdoc-member-header" id="Token-explicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L59">property <b>explicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L59">property <b>explicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>explicitMaxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1837,7 +1838,7 @@ String containing the client token encrypted with the given `pgpKey` if stored i
 The explicit max TTL of this token
 
 <h4 class="pdoc-member-header" id="Token-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1846,7 +1847,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Token-leaseDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L63">property <b>leaseDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L63">property <b>leaseDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>leaseDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1854,7 +1855,7 @@ deployments and may be missing (undefined) during planning phases.
 String containing the token lease duration if present in state file
 
 <h4 class="pdoc-member-header" id="Token-leaseStarted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L67">property <b>leaseStarted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L67">property <b>leaseStarted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>leaseStarted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1862,7 +1863,7 @@ String containing the token lease duration if present in state file
 String containing the token lease started time if present in state file
 
 <h4 class="pdoc-member-header" id="Token-noDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L71">property <b>noDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L71">property <b>noDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>noDefaultPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1870,7 +1871,7 @@ String containing the token lease started time if present in state file
 Flag to not attach the default policy to this token
 
 <h4 class="pdoc-member-header" id="Token-noParent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L75">property <b>noParent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L75">property <b>noParent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>noParent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1878,7 +1879,7 @@ Flag to not attach the default policy to this token
 Flag to create a token without parent
 
 <h4 class="pdoc-member-header" id="Token-numUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L79">property <b>numUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L79">property <b>numUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>numUses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1886,7 +1887,7 @@ Flag to create a token without parent
 The number of allowed uses of this token
 
 <h4 class="pdoc-member-header" id="Token-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L83">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L83">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1894,7 +1895,7 @@ The number of allowed uses of this token
 The period of this token
 
 <h4 class="pdoc-member-header" id="Token-pgpKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L87">property <b>pgpKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L87">property <b>pgpKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pgpKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1902,7 +1903,7 @@ The period of this token
 The PGP key (base64 encoded) to encrypt the token.
 
 <h4 class="pdoc-member-header" id="Token-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L91">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L91">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1910,7 +1911,7 @@ The PGP key (base64 encoded) to encrypt the token.
 List of policies to attach to this token
 
 <h4 class="pdoc-member-header" id="Token-renewIncrement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L95">property <b>renewIncrement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L95">property <b>renewIncrement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>renewIncrement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1918,7 +1919,7 @@ List of policies to attach to this token
 The renew increment
 
 <h4 class="pdoc-member-header" id="Token-renewMinLease">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L99">property <b>renewMinLease</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L99">property <b>renewMinLease</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>renewMinLease: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1926,7 +1927,7 @@ The renew increment
 The minimal lease to renew this token
 
 <h4 class="pdoc-member-header" id="Token-renewable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L103">property <b>renewable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L103">property <b>renewable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>renewable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1934,7 +1935,7 @@ The minimal lease to renew this token
 Flag to allow to renew this token
 
 <h4 class="pdoc-member-header" id="Token-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L107">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L107">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1942,7 +1943,7 @@ Flag to allow to renew this token
 The token role name
 
 <h4 class="pdoc-member-header" id="Token-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L111">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L111">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1950,7 +1951,7 @@ The token role name
 The TTL period of this token
 
 <h4 class="pdoc-member-header" id="Token-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1959,7 +1960,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Token-wrappedToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L115">property <b>wrappedToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L115">property <b>wrappedToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>wrappedToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1967,7 +1968,7 @@ deployments.
 The client wrapped token.
 
 <h4 class="pdoc-member-header" id="Token-wrappingAccessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L119">property <b>wrappingAccessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L119">property <b>wrappingAccessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>wrappingAccessor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1975,7 +1976,7 @@ The client wrapped token.
 The client wrapping accessor.
 
 <h4 class="pdoc-member-header" id="Token-wrappingTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L123">property <b>wrappingTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L123">property <b>wrappingTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>wrappingTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1985,7 +1986,7 @@ The TTL period of the wrapped token.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getAuthBackend" data-link-title="getAuthBackend">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/getAuthBackend.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/getAuthBackend.ts#L20">
         Function <strong>getAuthBackend</strong>
     </a>
 </h3>
@@ -2006,7 +2007,7 @@ const example = pulumi.output(vault.getAuthBackend({
 ```
 
 <h3 class="pdoc-module-header" id="getPolicyDocument" data-link-title="getPolicyDocument">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/getPolicyDocument.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/getPolicyDocument.ts#L35">
         Function <strong>getPolicyDocument</strong>
     </a>
 </h3>
@@ -2044,7 +2045,7 @@ const examplePolicy = new vault.Policy("example", {
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AuditArgs" data-link-title="AuditArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/audit.ts#L157">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/audit.ts#L157">
         interface <strong>AuditArgs</strong>
     </a>
 </h3>
@@ -2054,7 +2055,7 @@ const examplePolicy = new vault.Policy("example", {
 The set of arguments for constructing a Audit resource.
 
 <h4 class="pdoc-member-header" id="AuditArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/audit.ts#L161">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/audit.ts#L161">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2062,7 +2063,7 @@ The set of arguments for constructing a Audit resource.
 Human-friendly description of the audit device.
 
 <h4 class="pdoc-member-header" id="AuditArgs-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/audit.ts#L165">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/audit.ts#L165">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>options: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2070,7 +2071,7 @@ Human-friendly description of the audit device.
 Configuration options to pass to the audit device itself.
 
 <h4 class="pdoc-member-header" id="AuditArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/audit.ts#L169">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/audit.ts#L169">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2078,7 +2079,7 @@ Configuration options to pass to the audit device itself.
 The path to mount the audit device. This defaults to the type.
 
 <h4 class="pdoc-member-header" id="AuditArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/audit.ts#L173">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/audit.ts#L173">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2086,7 +2087,7 @@ The path to mount the audit device. This defaults to the type.
 Type of the audit device, such as 'file'.
 
 <h3 class="pdoc-module-header" id="AuditState" data-link-title="AuditState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/audit.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/audit.ts#L135">
         interface <strong>AuditState</strong>
     </a>
 </h3>
@@ -2096,7 +2097,7 @@ Type of the audit device, such as 'file'.
 Input properties used for looking up and filtering Audit resources.
 
 <h4 class="pdoc-member-header" id="AuditState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/audit.ts#L139">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/audit.ts#L139">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2104,7 +2105,7 @@ Input properties used for looking up and filtering Audit resources.
 Human-friendly description of the audit device.
 
 <h4 class="pdoc-member-header" id="AuditState-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/audit.ts#L143">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/audit.ts#L143">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2112,7 +2113,7 @@ Human-friendly description of the audit device.
 Configuration options to pass to the audit device itself.
 
 <h4 class="pdoc-member-header" id="AuditState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/audit.ts#L147">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/audit.ts#L147">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2120,7 +2121,7 @@ Configuration options to pass to the audit device itself.
 The path to mount the audit device. This defaults to the type.
 
 <h4 class="pdoc-member-header" id="AuditState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/audit.ts#L151">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/audit.ts#L151">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2128,7 +2129,7 @@ The path to mount the audit device. This defaults to the type.
 Type of the audit device, such as 'file'.
 
 <h3 class="pdoc-module-header" id="AuthBackendArgs" data-link-title="AuthBackendArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L203">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L203">
         interface <strong>AuthBackendArgs</strong>
     </a>
 </h3>
@@ -2138,7 +2139,7 @@ Type of the audit device, such as 'file'.
 The set of arguments for constructing a AuthBackend resource.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-defaultLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L209">property <b>defaultLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L209">property <b>defaultLeaseTtlSeconds</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2150,7 +2151,7 @@ Use the tune configuration block to avoid forcing creation of new resource on an
 (Optional; Deprecated, use `tune.default_lease_ttl` if you are using Vault provider version >= 1.8) The default lease duration in seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L213">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L213">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2158,7 +2159,7 @@ Use the tune configuration block to avoid forcing creation of new resource on an
 A description of the auth method
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-listingVisibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L220">property <b>listingVisibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L220">property <b>listingVisibility</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2171,7 +2172,7 @@ Specifies whether to show this mount in
 the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-local">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L224">property <b>local</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L224">property <b>local</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>local?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2179,7 +2180,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 Specifies if the auth method is local only.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-maxLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L230">property <b>maxLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L230">property <b>maxLeaseTtlSeconds</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2191,7 +2192,7 @@ Use the tune configuration block to avoid forcing creation of new resource on an
 (Optional; Deprecated, use `tune.max_lease_ttl` if you are using Vault provider version >= 1.8) The maximum lease duration in seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L234">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L234">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2199,7 +2200,7 @@ Use the tune configuration block to avoid forcing creation of new resource on an
 The path to mount the auth method — this defaults to the name of the type
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-tune">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L238">property <b>tune</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L238">property <b>tune</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tune?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#AuthBackendTune'>AuthBackendTune</a>&gt;;</code></pre>
@@ -2207,7 +2208,7 @@ The path to mount the auth method — this defaults to the name of the type
 Extra configuration block. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="AuthBackendArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L242">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L242">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2215,7 +2216,7 @@ Extra configuration block. Structure is documented below.
 The name of the auth method type
 
 <h3 class="pdoc-module-header" id="AuthBackendState" data-link-title="AuthBackendState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L154">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L154">
         interface <strong>AuthBackendState</strong>
     </a>
 </h3>
@@ -2225,7 +2226,7 @@ The name of the auth method type
 Input properties used for looking up and filtering AuthBackend resources.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-accessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L158">property <b>accessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L158">property <b>accessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2233,7 +2234,7 @@ Input properties used for looking up and filtering AuthBackend resources.
 The accessor for this auth method
 
 <h4 class="pdoc-member-header" id="AuthBackendState-defaultLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L164">property <b>defaultLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L164">property <b>defaultLeaseTtlSeconds</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2245,7 +2246,7 @@ Use the tune configuration block to avoid forcing creation of new resource on an
 (Optional; Deprecated, use `tune.default_lease_ttl` if you are using Vault provider version >= 1.8) The default lease duration in seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L168">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L168">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2253,7 +2254,7 @@ Use the tune configuration block to avoid forcing creation of new resource on an
 A description of the auth method
 
 <h4 class="pdoc-member-header" id="AuthBackendState-listingVisibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L175">property <b>listingVisibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L175">property <b>listingVisibility</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2266,7 +2267,7 @@ Specifies whether to show this mount in
 the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 
 <h4 class="pdoc-member-header" id="AuthBackendState-local">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L179">property <b>local</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L179">property <b>local</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>local?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2274,7 +2275,7 @@ the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 Specifies if the auth method is local only.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-maxLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L185">property <b>maxLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L185">property <b>maxLeaseTtlSeconds</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2286,7 +2287,7 @@ Use the tune configuration block to avoid forcing creation of new resource on an
 (Optional; Deprecated, use `tune.max_lease_ttl` if you are using Vault provider version >= 1.8) The maximum lease duration in seconds.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L189">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L189">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2294,7 +2295,7 @@ Use the tune configuration block to avoid forcing creation of new resource on an
 The path to mount the auth method — this defaults to the name of the type
 
 <h4 class="pdoc-member-header" id="AuthBackendState-tune">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L193">property <b>tune</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L193">property <b>tune</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tune?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#AuthBackendTune'>AuthBackendTune</a>&gt;;</code></pre>
@@ -2302,7 +2303,7 @@ The path to mount the auth method — this defaults to the name of the type
 Extra configuration block. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="AuthBackendState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/authBackend.ts#L197">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/authBackend.ts#L197">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2310,7 +2311,7 @@ Extra configuration block. Structure is documented below.
 The name of the auth method type
 
 <h3 class="pdoc-module-header" id="CertAuthBackendRoleArgs" data-link-title="CertAuthBackendRoleArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L421">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L421">
         interface <strong>CertAuthBackendRoleArgs</strong>
     </a>
 </h3>
@@ -2320,7 +2321,7 @@ The name of the auth method type
 The set of arguments for constructing a CertAuthBackendRole resource.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-allowedCommonNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L425">property <b>allowedCommonNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L425">property <b>allowedCommonNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedCommonNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2328,7 +2329,7 @@ The set of arguments for constructing a CertAuthBackendRole resource.
 Allowed the common names for authenticated client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-allowedDnsSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L429">property <b>allowedDnsSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L429">property <b>allowedDnsSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedDnsSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2336,7 +2337,7 @@ Allowed the common names for authenticated client certificates
 Allowed alternative dns names for authenticated client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-allowedEmailSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L433">property <b>allowedEmailSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L433">property <b>allowedEmailSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedEmailSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2344,7 +2345,7 @@ Allowed alternative dns names for authenticated client certificates
 Allowed emails for authenticated client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-allowedNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L437">property <b>allowedNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L437">property <b>allowedNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2352,7 +2353,7 @@ Allowed emails for authenticated client certificates
 Allowed subject names for authenticated client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-allowedOrganizationUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L441">property <b>allowedOrganizationUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L441">property <b>allowedOrganizationUnits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedOrganizationUnits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2360,7 +2361,7 @@ Allowed subject names for authenticated client certificates
 Allowed organization units for authenticated client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-allowedUriSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L445">property <b>allowedUriSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L445">property <b>allowedUriSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedUriSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2368,7 +2369,7 @@ Allowed organization units for authenticated client certificates
 Allowed URIs for authenticated client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L449">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L449">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2376,7 +2377,7 @@ Allowed URIs for authenticated client certificates
 Path to the mounted Cert auth backend
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-boundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L456">property <b>boundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L456">property <b>boundCidrs</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2389,7 +2390,7 @@ Restriction usage of the
 certificates to client IPs falling within the range of the specified CIDRs
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L460">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L460">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2397,7 +2398,7 @@ certificates to client IPs falling within the range of the specified CIDRs
 CA certificate used to validate client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L464">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L464">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2405,7 +2406,7 @@ CA certificate used to validate client certificates
 The name to display on tokens issued under this role.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L471">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L471">property <b>maxTtl</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2418,7 +2419,7 @@ The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L475">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L475">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2426,7 +2427,7 @@ issued using this role, provided as a number of seconds.
 Name of the role
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L484">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L484">property <b>period</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2441,7 +2442,7 @@ duration specified by this value. At each renewal, the token's TTL will be set t
 value of this field. Specified in seconds.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L491">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L491">property <b>policies</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2454,7 +2455,7 @@ An array of strings
 specifying the policies to be set on tokens issued using this role.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-requiredExtensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L495">property <b>requiredExtensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L495">property <b>requiredExtensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requiredExtensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2462,7 +2463,7 @@ specifying the policies to be set on tokens issued using this role.
 TLS extensions required on client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-tokenBoundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L501">property <b>tokenBoundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L501">property <b>tokenBoundCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenBoundCidrs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2472,7 +2473,7 @@ addresses which can authenticate successfully, and ties the resulting token to t
 as well.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-tokenExplicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L508">property <b>tokenExplicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L508">property <b>tokenExplicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenExplicitMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2483,7 +2484,7 @@ onto the token in number of seconds. This is a hard cap even if `tokenTtl` and
 `tokenMaxTtl` would otherwise allow a renewal.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-tokenMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L513">property <b>tokenMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L513">property <b>tokenMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2492,7 +2493,7 @@ The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-tokenNoDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L518">property <b>tokenNoDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L518">property <b>tokenNoDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNoDefaultPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2501,7 +2502,7 @@ If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-tokenNumUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L524">property <b>tokenNumUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L524">property <b>tokenNumUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNumUses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2511,7 +2512,7 @@ The
 if any, in number of seconds to set on the token.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-tokenPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L531">property <b>tokenPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L531">property <b>tokenPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2522,7 +2523,7 @@ duration specified by this value. At each renewal, the token's TTL will be set t
 value of this field. Specified in seconds.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-tokenPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L536">property <b>tokenPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L536">property <b>tokenPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2531,7 +2532,7 @@ List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-tokenTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L541">property <b>tokenTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L541">property <b>tokenTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2540,7 +2541,7 @@ The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L549">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L549">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2552,7 +2553,7 @@ The type of token that should be generated. Can be `service`,
 requests a different type at generation time.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L556">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L556">property <b>ttl</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2565,7 +2566,7 @@ The TTL period of tokens issued
 using this role, provided as a number of seconds.
 
 <h3 class="pdoc-module-header" id="CertAuthBackendRoleState" data-link-title="CertAuthBackendRoleState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L280">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L280">
         interface <strong>CertAuthBackendRoleState</strong>
     </a>
 </h3>
@@ -2575,7 +2576,7 @@ using this role, provided as a number of seconds.
 Input properties used for looking up and filtering CertAuthBackendRole resources.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-allowedCommonNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L284">property <b>allowedCommonNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L284">property <b>allowedCommonNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedCommonNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2583,7 +2584,7 @@ Input properties used for looking up and filtering CertAuthBackendRole resources
 Allowed the common names for authenticated client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-allowedDnsSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L288">property <b>allowedDnsSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L288">property <b>allowedDnsSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedDnsSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2591,7 +2592,7 @@ Allowed the common names for authenticated client certificates
 Allowed alternative dns names for authenticated client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-allowedEmailSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L292">property <b>allowedEmailSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L292">property <b>allowedEmailSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedEmailSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2599,7 +2600,7 @@ Allowed alternative dns names for authenticated client certificates
 Allowed emails for authenticated client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-allowedNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L296">property <b>allowedNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L296">property <b>allowedNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedNames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2607,7 +2608,7 @@ Allowed emails for authenticated client certificates
 Allowed subject names for authenticated client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-allowedOrganizationUnits">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L300">property <b>allowedOrganizationUnits</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L300">property <b>allowedOrganizationUnits</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedOrganizationUnits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2615,7 +2616,7 @@ Allowed subject names for authenticated client certificates
 Allowed organization units for authenticated client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-allowedUriSans">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L304">property <b>allowedUriSans</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L304">property <b>allowedUriSans</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedUriSans?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2623,7 +2624,7 @@ Allowed organization units for authenticated client certificates
 Allowed URIs for authenticated client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L308">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L308">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2631,7 +2632,7 @@ Allowed URIs for authenticated client certificates
 Path to the mounted Cert auth backend
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-boundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L315">property <b>boundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L315">property <b>boundCidrs</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2644,7 +2645,7 @@ Restriction usage of the
 certificates to client IPs falling within the range of the specified CIDRs
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-certificate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L319">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L319">property <b>certificate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2652,7 +2653,7 @@ certificates to client IPs falling within the range of the specified CIDRs
 CA certificate used to validate client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L323">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L323">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2660,7 +2661,7 @@ CA certificate used to validate client certificates
 The name to display on tokens issued under this role.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L330">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L330">property <b>maxTtl</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2673,7 +2674,7 @@ The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L334">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L334">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2681,7 +2682,7 @@ issued using this role, provided as a number of seconds.
 Name of the role
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L343">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L343">property <b>period</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2696,7 +2697,7 @@ duration specified by this value. At each renewal, the token's TTL will be set t
 value of this field. Specified in seconds.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L350">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L350">property <b>policies</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2709,7 +2710,7 @@ An array of strings
 specifying the policies to be set on tokens issued using this role.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-requiredExtensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L354">property <b>requiredExtensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L354">property <b>requiredExtensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requiredExtensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2717,7 +2718,7 @@ specifying the policies to be set on tokens issued using this role.
 TLS extensions required on client certificates
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-tokenBoundCidrs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L360">property <b>tokenBoundCidrs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L360">property <b>tokenBoundCidrs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenBoundCidrs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2727,7 +2728,7 @@ addresses which can authenticate successfully, and ties the resulting token to t
 as well.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-tokenExplicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L367">property <b>tokenExplicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L367">property <b>tokenExplicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenExplicitMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2738,7 +2739,7 @@ onto the token in number of seconds. This is a hard cap even if `tokenTtl` and
 `tokenMaxTtl` would otherwise allow a renewal.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-tokenMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L372">property <b>tokenMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L372">property <b>tokenMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2747,7 +2748,7 @@ The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-tokenNoDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L377">property <b>tokenNoDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L377">property <b>tokenNoDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNoDefaultPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2756,7 +2757,7 @@ If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-tokenNumUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L383">property <b>tokenNumUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L383">property <b>tokenNumUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenNumUses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2766,7 +2767,7 @@ The
 if any, in number of seconds to set on the token.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-tokenPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L390">property <b>tokenPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L390">property <b>tokenPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2777,7 +2778,7 @@ duration specified by this value. At each renewal, the token's TTL will be set t
 value of this field. Specified in seconds.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-tokenPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L395">property <b>tokenPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L395">property <b>tokenPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2786,7 +2787,7 @@ List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-tokenTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L400">property <b>tokenTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L400">property <b>tokenTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2795,7 +2796,7 @@ The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-tokenType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L408">property <b>tokenType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L408">property <b>tokenType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2807,7 +2808,7 @@ The type of token that should be generated. Can be `service`,
 requests a different type at generation time.
 
 <h4 class="pdoc-member-header" id="CertAuthBackendRoleState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/certAuthBackendRole.ts#L415">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/certAuthBackendRole.ts#L415">property <b>ttl</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -2820,7 +2821,7 @@ The TTL period of tokens issued
 using this role, provided as a number of seconds.
 
 <h3 class="pdoc-module-header" id="EgpPolicyArgs" data-link-title="EgpPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/egpPolicy.ts#L141">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/egpPolicy.ts#L141">
         interface <strong>EgpPolicyArgs</strong>
     </a>
 </h3>
@@ -2830,7 +2831,7 @@ using this role, provided as a number of seconds.
 The set of arguments for constructing a EgpPolicy resource.
 
 <h4 class="pdoc-member-header" id="EgpPolicyArgs-enforcementLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/egpPolicy.ts#L145">property <b>enforcementLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/egpPolicy.ts#L145">property <b>enforcementLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enforcementLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2838,7 +2839,7 @@ The set of arguments for constructing a EgpPolicy resource.
 Enforcement level of Sentinel policy. Can be either `advisory` or `soft-mandatory` or `hard-mandatory`
 
 <h4 class="pdoc-member-header" id="EgpPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/egpPolicy.ts#L149">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/egpPolicy.ts#L149">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2846,7 +2847,7 @@ Enforcement level of Sentinel policy. Can be either `advisory` or `soft-mandator
 The name of the policy
 
 <h4 class="pdoc-member-header" id="EgpPolicyArgs-paths">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/egpPolicy.ts#L153">property <b>paths</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/egpPolicy.ts#L153">property <b>paths</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>paths: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2854,7 +2855,7 @@ The name of the policy
 List of paths to which the policy will be applied to
 
 <h4 class="pdoc-member-header" id="EgpPolicyArgs-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/egpPolicy.ts#L157">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/egpPolicy.ts#L157">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2862,7 +2863,7 @@ List of paths to which the policy will be applied to
 String containing a Sentinel policy
 
 <h3 class="pdoc-module-header" id="EgpPolicyState" data-link-title="EgpPolicyState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/egpPolicy.ts#L119">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/egpPolicy.ts#L119">
         interface <strong>EgpPolicyState</strong>
     </a>
 </h3>
@@ -2872,7 +2873,7 @@ String containing a Sentinel policy
 Input properties used for looking up and filtering EgpPolicy resources.
 
 <h4 class="pdoc-member-header" id="EgpPolicyState-enforcementLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/egpPolicy.ts#L123">property <b>enforcementLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/egpPolicy.ts#L123">property <b>enforcementLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enforcementLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2880,7 +2881,7 @@ Input properties used for looking up and filtering EgpPolicy resources.
 Enforcement level of Sentinel policy. Can be either `advisory` or `soft-mandatory` or `hard-mandatory`
 
 <h4 class="pdoc-member-header" id="EgpPolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/egpPolicy.ts#L127">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/egpPolicy.ts#L127">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2888,7 +2889,7 @@ Enforcement level of Sentinel policy. Can be either `advisory` or `soft-mandator
 The name of the policy
 
 <h4 class="pdoc-member-header" id="EgpPolicyState-paths">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/egpPolicy.ts#L131">property <b>paths</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/egpPolicy.ts#L131">property <b>paths</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>paths?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2896,7 +2897,7 @@ The name of the policy
 List of paths to which the policy will be applied to
 
 <h4 class="pdoc-member-header" id="EgpPolicyState-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/egpPolicy.ts#L135">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/egpPolicy.ts#L135">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2904,7 +2905,7 @@ List of paths to which the policy will be applied to
 String containing a Sentinel policy
 
 <h3 class="pdoc-module-header" id="GetAuthBackendArgs" data-link-title="GetAuthBackendArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/getAuthBackend.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/getAuthBackend.ts#L36">
         interface <strong>GetAuthBackendArgs</strong>
     </a>
 </h3>
@@ -2914,7 +2915,7 @@ String containing a Sentinel policy
 A collection of arguments for invoking getAuthBackend.
 
 <h4 class="pdoc-member-header" id="GetAuthBackendArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/getAuthBackend.ts#L40">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/getAuthBackend.ts#L40">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2922,7 +2923,7 @@ A collection of arguments for invoking getAuthBackend.
 The auth backend mount point.
 
 <h3 class="pdoc-module-header" id="GetAuthBackendResult" data-link-title="GetAuthBackendResult">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/getAuthBackend.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/getAuthBackend.ts#L46">
         interface <strong>GetAuthBackendResult</strong>
     </a>
 </h3>
@@ -2932,7 +2933,7 @@ The auth backend mount point.
 A collection of values returned by getAuthBackend.
 
 <h4 class="pdoc-member-header" id="GetAuthBackendResult-accessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/getAuthBackend.ts#L50">property <b>accessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/getAuthBackend.ts#L50">property <b>accessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessor: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2940,7 +2941,7 @@ A collection of values returned by getAuthBackend.
 The accessor for this auth method
 
 <h4 class="pdoc-member-header" id="GetAuthBackendResult-defaultLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/getAuthBackend.ts#L54">property <b>defaultLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/getAuthBackend.ts#L54">property <b>defaultLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultLeaseTtlSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2948,7 +2949,7 @@ The accessor for this auth method
 The default lease duration in seconds.
 
 <h4 class="pdoc-member-header" id="GetAuthBackendResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/getAuthBackend.ts#L58">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/getAuthBackend.ts#L58">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2956,7 +2957,7 @@ The default lease duration in seconds.
 A description of the auth method.
 
 <h4 class="pdoc-member-header" id="GetAuthBackendResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/getAuthBackend.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/getAuthBackend.ts#L62">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2964,7 +2965,7 @@ A description of the auth method.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAuthBackendResult-listingVisibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/getAuthBackend.ts#L66">property <b>listingVisibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/getAuthBackend.ts#L66">property <b>listingVisibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listingVisibility: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2972,7 +2973,7 @@ The provider-assigned unique ID for this managed resource.
 Speficies whether to show this mount in the UI-specific listing endpoint.
 
 <h4 class="pdoc-member-header" id="GetAuthBackendResult-local">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/getAuthBackend.ts#L70">property <b>local</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/getAuthBackend.ts#L70">property <b>local</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>local: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2980,7 +2981,7 @@ Speficies whether to show this mount in the UI-specific listing endpoint.
 Specifies if the auth method is local only.
 
 <h4 class="pdoc-member-header" id="GetAuthBackendResult-maxLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/getAuthBackend.ts#L74">property <b>maxLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/getAuthBackend.ts#L74">property <b>maxLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLeaseTtlSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2988,12 +2989,12 @@ Specifies if the auth method is local only.
 The maximum lease duration in seconds.
 
 <h4 class="pdoc-member-header" id="GetAuthBackendResult-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/getAuthBackend.ts#L75">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/getAuthBackend.ts#L75">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAuthBackendResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/getAuthBackend.ts#L79">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/getAuthBackend.ts#L79">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3001,7 +3002,7 @@ The maximum lease duration in seconds.
 The name of the auth method type.
 
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -3010,7 +3011,7 @@ The name of the auth method type.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -3019,7 +3020,7 @@ The name of the auth method type.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -3028,7 +3029,7 @@ The name of the auth method type.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="GetPolicyDocumentArgs" data-link-title="GetPolicyDocumentArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/getPolicyDocument.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/getPolicyDocument.ts#L52">
         interface <strong>GetPolicyDocumentArgs</strong>
     </a>
 </h3>
@@ -3038,12 +3039,12 @@ The name of the auth method type.
 A collection of arguments for invoking getPolicyDocument.
 
 <h4 class="pdoc-member-header" id="GetPolicyDocumentArgs-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/getPolicyDocument.ts#L53">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/getPolicyDocument.ts#L53">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#GetPolicyDocumentRule'>GetPolicyDocumentRule</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetPolicyDocumentResult" data-link-title="GetPolicyDocumentResult">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/getPolicyDocument.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/getPolicyDocument.ts#L59">
         interface <strong>GetPolicyDocumentResult</strong>
     </a>
 </h3>
@@ -3053,7 +3054,7 @@ A collection of arguments for invoking getPolicyDocument.
 A collection of values returned by getPolicyDocument.
 
 <h4 class="pdoc-member-header" id="GetPolicyDocumentResult-hcl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/getPolicyDocument.ts#L63">property <b>hcl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/getPolicyDocument.ts#L63">property <b>hcl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hcl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3061,7 +3062,7 @@ A collection of values returned by getPolicyDocument.
 The above arguments serialized as a standard Vault HCL policy document.
 
 <h4 class="pdoc-member-header" id="GetPolicyDocumentResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/getPolicyDocument.ts#L67">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/getPolicyDocument.ts#L67">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3069,12 +3070,12 @@ The above arguments serialized as a standard Vault HCL policy document.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetPolicyDocumentResult-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/getPolicyDocument.ts#L68">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/getPolicyDocument.ts#L68">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/vault/types/output/#GetPolicyDocumentRule'>GetPolicyDocumentRule</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -3083,7 +3084,7 @@ The provider-assigned unique ID for this managed resource.
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="MfaDuoArgs" data-link-title="MfaDuoArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L192">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L192">
         interface <strong>MfaDuoArgs</strong>
     </a>
 </h3>
@@ -3093,7 +3094,7 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a MfaDuo resource.
 
 <h4 class="pdoc-member-header" id="MfaDuoArgs-apiHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L196">property <b>apiHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L196">property <b>apiHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiHostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3101,7 +3102,7 @@ The set of arguments for constructing a MfaDuo resource.
 `(string: <required>)` - API hostname for Duo.
 
 <h4 class="pdoc-member-header" id="MfaDuoArgs-integrationKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L200">property <b>integrationKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L200">property <b>integrationKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3109,7 +3110,7 @@ The set of arguments for constructing a MfaDuo resource.
 `(string: <required>)` - Integration key for Duo.
 
 <h4 class="pdoc-member-header" id="MfaDuoArgs-mountAccessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L204">property <b>mountAccessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L204">property <b>mountAccessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mountAccessor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3117,7 +3118,7 @@ The set of arguments for constructing a MfaDuo resource.
 `(string: <required>)` - The mount to tie this method to for use in automatic mappings. The mapping will use the Name field of Aliases associated with this mount as the username in the mapping.
 
 <h4 class="pdoc-member-header" id="MfaDuoArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L208">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L208">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3125,7 +3126,7 @@ The set of arguments for constructing a MfaDuo resource.
 `(string: <required>)` – Name of the MFA method.
 
 <h4 class="pdoc-member-header" id="MfaDuoArgs-pushInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L212">property <b>pushInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L212">property <b>pushInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pushInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3133,7 +3134,7 @@ The set of arguments for constructing a MfaDuo resource.
 `(string)` - Push information for Duo.
 
 <h4 class="pdoc-member-header" id="MfaDuoArgs-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L216">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L216">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3141,7 +3142,7 @@ The set of arguments for constructing a MfaDuo resource.
 `(string: <required>)` - Secret key for Duo.
 
 <h4 class="pdoc-member-header" id="MfaDuoArgs-usernameFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L224">property <b>usernameFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L224">property <b>usernameFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usernameFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3153,7 +3154,7 @@ The set of arguments for constructing a MfaDuo resource.
 - entity.metadata.`<key>`: The value of the Entity's metadata parameter
 
 <h3 class="pdoc-module-header" id="MfaDuoState" data-link-title="MfaDuoState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L154">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L154">
         interface <strong>MfaDuoState</strong>
     </a>
 </h3>
@@ -3163,7 +3164,7 @@ The set of arguments for constructing a MfaDuo resource.
 Input properties used for looking up and filtering MfaDuo resources.
 
 <h4 class="pdoc-member-header" id="MfaDuoState-apiHostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L158">property <b>apiHostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L158">property <b>apiHostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiHostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3171,7 +3172,7 @@ Input properties used for looking up and filtering MfaDuo resources.
 `(string: <required>)` - API hostname for Duo.
 
 <h4 class="pdoc-member-header" id="MfaDuoState-integrationKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L162">property <b>integrationKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L162">property <b>integrationKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3179,7 +3180,7 @@ Input properties used for looking up and filtering MfaDuo resources.
 `(string: <required>)` - Integration key for Duo.
 
 <h4 class="pdoc-member-header" id="MfaDuoState-mountAccessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L166">property <b>mountAccessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L166">property <b>mountAccessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mountAccessor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3187,7 +3188,7 @@ Input properties used for looking up and filtering MfaDuo resources.
 `(string: <required>)` - The mount to tie this method to for use in automatic mappings. The mapping will use the Name field of Aliases associated with this mount as the username in the mapping.
 
 <h4 class="pdoc-member-header" id="MfaDuoState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L170">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L170">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3195,7 +3196,7 @@ Input properties used for looking up and filtering MfaDuo resources.
 `(string: <required>)` – Name of the MFA method.
 
 <h4 class="pdoc-member-header" id="MfaDuoState-pushInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L174">property <b>pushInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L174">property <b>pushInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pushInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3203,7 +3204,7 @@ Input properties used for looking up and filtering MfaDuo resources.
 `(string)` - Push information for Duo.
 
 <h4 class="pdoc-member-header" id="MfaDuoState-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L178">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L178">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3211,7 +3212,7 @@ Input properties used for looking up and filtering MfaDuo resources.
 `(string: <required>)` - Secret key for Duo.
 
 <h4 class="pdoc-member-header" id="MfaDuoState-usernameFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mfaDuo.ts#L186">property <b>usernameFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mfaDuo.ts#L186">property <b>usernameFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>usernameFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3223,7 +3224,7 @@ Input properties used for looking up and filtering MfaDuo resources.
 - entity.metadata.`<key>`: The value of the Entity's metadata parameter
 
 <h3 class="pdoc-module-header" id="MountArgs" data-link-title="MountArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L199">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L199">
         interface <strong>MountArgs</strong>
     </a>
 </h3>
@@ -3233,7 +3234,7 @@ Input properties used for looking up and filtering MfaDuo resources.
 The set of arguments for constructing a Mount resource.
 
 <h4 class="pdoc-member-header" id="MountArgs-defaultLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L203">property <b>defaultLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L203">property <b>defaultLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultLeaseTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3241,7 +3242,7 @@ The set of arguments for constructing a Mount resource.
 Default lease duration for tokens and secrets in seconds
 
 <h4 class="pdoc-member-header" id="MountArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L207">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L207">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3249,7 +3250,7 @@ Default lease duration for tokens and secrets in seconds
 Human-friendly description of the mount
 
 <h4 class="pdoc-member-header" id="MountArgs-externalEntropyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L211">property <b>externalEntropyAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L211">property <b>externalEntropyAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalEntropyAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3257,7 +3258,7 @@ Human-friendly description of the mount
 Boolean flag that can be explicitly set to true to enable the secrets engine to access Vault's external entropy source
 
 <h4 class="pdoc-member-header" id="MountArgs-local">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L215">property <b>local</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L215">property <b>local</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>local?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3265,7 +3266,7 @@ Boolean flag that can be explicitly set to true to enable the secrets engine to 
 Boolean flag that can be explicitly set to true to enforce local mount in HA environment
 
 <h4 class="pdoc-member-header" id="MountArgs-maxLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L219">property <b>maxLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L219">property <b>maxLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLeaseTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3273,7 +3274,7 @@ Boolean flag that can be explicitly set to true to enforce local mount in HA env
 Maximum possible lease duration for tokens and secrets in seconds
 
 <h4 class="pdoc-member-header" id="MountArgs-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L223">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L223">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -3281,7 +3282,7 @@ Maximum possible lease duration for tokens and secrets in seconds
 Specifies mount type specific options that are passed to the backend
 
 <h4 class="pdoc-member-header" id="MountArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L227">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L227">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3289,7 +3290,7 @@ Specifies mount type specific options that are passed to the backend
 Where the secret backend will be mounted
 
 <h4 class="pdoc-member-header" id="MountArgs-sealWrap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L231">property <b>sealWrap</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L231">property <b>sealWrap</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sealWrap?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3297,7 +3298,7 @@ Where the secret backend will be mounted
 Boolean flag that can be explicitly set to true to enable seal wrapping for the mount, causing values stored by the mount to be wrapped by the seal's encryption capability
 
 <h4 class="pdoc-member-header" id="MountArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L235">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L235">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3305,7 +3306,7 @@ Boolean flag that can be explicitly set to true to enable seal wrapping for the 
 Type of the backend, such as "aws"
 
 <h3 class="pdoc-module-header" id="MountState" data-link-title="MountState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L153">
         interface <strong>MountState</strong>
     </a>
 </h3>
@@ -3315,7 +3316,7 @@ Type of the backend, such as "aws"
 Input properties used for looking up and filtering Mount resources.
 
 <h4 class="pdoc-member-header" id="MountState-accessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L157">property <b>accessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L157">property <b>accessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3323,7 +3324,7 @@ Input properties used for looking up and filtering Mount resources.
 The accessor for this mount.
 
 <h4 class="pdoc-member-header" id="MountState-defaultLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L161">property <b>defaultLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L161">property <b>defaultLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultLeaseTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3331,7 +3332,7 @@ The accessor for this mount.
 Default lease duration for tokens and secrets in seconds
 
 <h4 class="pdoc-member-header" id="MountState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L165">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L165">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3339,7 +3340,7 @@ Default lease duration for tokens and secrets in seconds
 Human-friendly description of the mount
 
 <h4 class="pdoc-member-header" id="MountState-externalEntropyAccess">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L169">property <b>externalEntropyAccess</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L169">property <b>externalEntropyAccess</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>externalEntropyAccess?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3347,7 +3348,7 @@ Human-friendly description of the mount
 Boolean flag that can be explicitly set to true to enable the secrets engine to access Vault's external entropy source
 
 <h4 class="pdoc-member-header" id="MountState-local">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L173">property <b>local</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L173">property <b>local</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>local?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3355,7 +3356,7 @@ Boolean flag that can be explicitly set to true to enable the secrets engine to 
 Boolean flag that can be explicitly set to true to enforce local mount in HA environment
 
 <h4 class="pdoc-member-header" id="MountState-maxLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L177">property <b>maxLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L177">property <b>maxLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLeaseTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3363,7 +3364,7 @@ Boolean flag that can be explicitly set to true to enforce local mount in HA env
 Maximum possible lease duration for tokens and secrets in seconds
 
 <h4 class="pdoc-member-header" id="MountState-options">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L181">property <b>options</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L181">property <b>options</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>options?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -3371,7 +3372,7 @@ Maximum possible lease duration for tokens and secrets in seconds
 Specifies mount type specific options that are passed to the backend
 
 <h4 class="pdoc-member-header" id="MountState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L185">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L185">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3379,7 +3380,7 @@ Specifies mount type specific options that are passed to the backend
 Where the secret backend will be mounted
 
 <h4 class="pdoc-member-header" id="MountState-sealWrap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L189">property <b>sealWrap</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L189">property <b>sealWrap</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sealWrap?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3387,7 +3388,7 @@ Where the secret backend will be mounted
 Boolean flag that can be explicitly set to true to enable seal wrapping for the mount, causing values stored by the mount to be wrapped by the seal's encryption capability
 
 <h4 class="pdoc-member-header" id="MountState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/mount.ts#L193">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/mount.ts#L193">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3395,7 +3396,7 @@ Boolean flag that can be explicitly set to true to enable seal wrapping for the 
 Type of the backend, such as "aws"
 
 <h3 class="pdoc-module-header" id="NamespaceArgs" data-link-title="NamespaceArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/namespace.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/namespace.ts#L110">
         interface <strong>NamespaceArgs</strong>
     </a>
 </h3>
@@ -3405,7 +3406,7 @@ Type of the backend, such as "aws"
 The set of arguments for constructing a Namespace resource.
 
 <h4 class="pdoc-member-header" id="NamespaceArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/namespace.ts#L114">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/namespace.ts#L114">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3413,7 +3414,7 @@ The set of arguments for constructing a Namespace resource.
 The path of the namespace. Must not have a trailing `/`
 
 <h3 class="pdoc-module-header" id="NamespaceState" data-link-title="NamespaceState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/namespace.ts#L96">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/namespace.ts#L96">
         interface <strong>NamespaceState</strong>
     </a>
 </h3>
@@ -3423,7 +3424,7 @@ The path of the namespace. Must not have a trailing `/`
 Input properties used for looking up and filtering Namespace resources.
 
 <h4 class="pdoc-member-header" id="NamespaceState-namespaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/namespace.ts#L100">property <b>namespaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/namespace.ts#L100">property <b>namespaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3431,7 +3432,7 @@ Input properties used for looking up and filtering Namespace resources.
 ID of the namepsace.
 
 <h4 class="pdoc-member-header" id="NamespaceState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/namespace.ts#L104">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/namespace.ts#L104">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3439,7 +3440,7 @@ ID of the namepsace.
 The path of the namespace. Must not have a trailing `/`
 
 <h3 class="pdoc-module-header" id="PolicyArgs" data-link-title="PolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/policy.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/policy.ts#L117">
         interface <strong>PolicyArgs</strong>
     </a>
 </h3>
@@ -3449,7 +3450,7 @@ The path of the namespace. Must not have a trailing `/`
 The set of arguments for constructing a Policy resource.
 
 <h4 class="pdoc-member-header" id="PolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/policy.ts#L121">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/policy.ts#L121">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3457,7 +3458,7 @@ The set of arguments for constructing a Policy resource.
 The name of the policy
 
 <h4 class="pdoc-member-header" id="PolicyArgs-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/policy.ts#L125">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/policy.ts#L125">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3465,7 +3466,7 @@ The name of the policy
 String containing a Vault policy
 
 <h3 class="pdoc-module-header" id="PolicyState" data-link-title="PolicyState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/policy.ts#L103">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/policy.ts#L103">
         interface <strong>PolicyState</strong>
     </a>
 </h3>
@@ -3475,7 +3476,7 @@ String containing a Vault policy
 Input properties used for looking up and filtering Policy resources.
 
 <h4 class="pdoc-member-header" id="PolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/policy.ts#L107">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/policy.ts#L107">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3483,7 +3484,7 @@ Input properties used for looking up and filtering Policy resources.
 The name of the policy
 
 <h4 class="pdoc-member-header" id="PolicyState-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/policy.ts#L111">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/policy.ts#L111">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3491,7 +3492,7 @@ The name of the policy
 String containing a Vault policy
 
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/provider.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/provider.ts#L68">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -3501,7 +3502,7 @@ String containing a Vault policy
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-addAddressToEnv">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/provider.ts#L72">property <b>addAddressToEnv</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/provider.ts#L72">property <b>addAddressToEnv</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addAddressToEnv?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3509,7 +3510,7 @@ The set of arguments for constructing a Provider resource.
 If true, adds the value of the `address` argument to the Terraform process environment.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/provider.ts#L76">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/provider.ts#L76">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3517,7 +3518,7 @@ If true, adds the value of the `address` argument to the Terraform process envir
 URL of the root of the target Vault server.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-authLogins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/provider.ts#L80">property <b>authLogins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/provider.ts#L80">property <b>authLogins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authLogins?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#ProviderAuthLogin'>ProviderAuthLogin</a>&gt;[]&gt;;</code></pre>
@@ -3525,7 +3526,7 @@ URL of the root of the target Vault server.
 Login to vault with an existing auth method using auth/<mount>/login
 
 <h4 class="pdoc-member-header" id="ProviderArgs-caCertDir">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/provider.ts#L84">property <b>caCertDir</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/provider.ts#L84">property <b>caCertDir</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>caCertDir?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3533,7 +3534,7 @@ Login to vault with an existing auth method using auth/<mount>/login
 Path to directory containing CA certificate files to validate the server's certificate.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-caCertFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/provider.ts#L88">property <b>caCertFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/provider.ts#L88">property <b>caCertFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>caCertFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3541,7 +3542,7 @@ Path to directory containing CA certificate files to validate the server's certi
 Path to a CA certificate file to validate the server's certificate.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-clientAuths">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/provider.ts#L92">property <b>clientAuths</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/provider.ts#L92">property <b>clientAuths</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientAuths?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#ProviderClientAuth'>ProviderClientAuth</a>&gt;[]&gt;;</code></pre>
@@ -3549,7 +3550,7 @@ Path to a CA certificate file to validate the server's certificate.
 Client authentication credentials.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-headers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/provider.ts#L96">property <b>headers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/provider.ts#L96">property <b>headers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>headers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#ProviderHeader'>ProviderHeader</a>&gt;[]&gt;;</code></pre>
@@ -3557,7 +3558,7 @@ Client authentication credentials.
 The headers to send with each Vault request.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-maxLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/provider.ts#L100">property <b>maxLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/provider.ts#L100">property <b>maxLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLeaseTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3565,7 +3566,7 @@ The headers to send with each Vault request.
 Maximum TTL for secret leases requested by this provider
 
 <h4 class="pdoc-member-header" id="ProviderArgs-maxRetries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/provider.ts#L104">property <b>maxRetries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/provider.ts#L104">property <b>maxRetries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxRetries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3573,7 +3574,7 @@ Maximum TTL for secret leases requested by this provider
 Maximum number of retries when a 5xx error code is encountered.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/provider.ts#L108">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/provider.ts#L108">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3581,7 +3582,7 @@ Maximum number of retries when a 5xx error code is encountered.
 The namespace to use. Available only for Vault Enterprise
 
 <h4 class="pdoc-member-header" id="ProviderArgs-skipTlsVerify">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/provider.ts#L112">property <b>skipTlsVerify</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/provider.ts#L112">property <b>skipTlsVerify</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipTlsVerify?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3589,7 +3590,7 @@ The namespace to use. Available only for Vault Enterprise
 Set this to true only if the target Vault server is an insecure development instance.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/provider.ts#L116">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/provider.ts#L116">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3597,7 +3598,7 @@ Set this to true only if the target Vault server is an insecure development inst
 Token to use to authenticate to Vault.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-tokenName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/provider.ts#L120">property <b>tokenName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/provider.ts#L120">property <b>tokenName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tokenName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3605,7 +3606,7 @@ Token to use to authenticate to Vault.
 Token name to use for creating the Vault child token.
 
 <h3 class="pdoc-module-header" id="QuotaRateLimitArgs" data-link-title="QuotaRateLimitArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/quotaRateLimit.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/quotaRateLimit.ts#L144">
         interface <strong>QuotaRateLimitArgs</strong>
     </a>
 </h3>
@@ -3615,7 +3616,7 @@ Token name to use for creating the Vault child token.
 The set of arguments for constructing a QuotaRateLimit resource.
 
 <h4 class="pdoc-member-header" id="QuotaRateLimitArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/quotaRateLimit.ts#L148">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/quotaRateLimit.ts#L148">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3623,7 +3624,7 @@ The set of arguments for constructing a QuotaRateLimit resource.
 Name of the rate limit quota
 
 <h4 class="pdoc-member-header" id="QuotaRateLimitArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/quotaRateLimit.ts#L157">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/quotaRateLimit.ts#L157">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3636,7 +3637,7 @@ Updating this field on an existing quota can have "moving" effects. For example,
 a namespace specific mount quota. **Note, namespaces are supported in Enterprise only.**
 
 <h4 class="pdoc-member-header" id="QuotaRateLimitArgs-rate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/quotaRateLimit.ts#L162">property <b>rate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/quotaRateLimit.ts#L162">property <b>rate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3645,7 +3646,7 @@ The maximum number of requests at any given second to be allowed by the quota
 rule. The `rate` must be positive.
 
 <h3 class="pdoc-module-header" id="QuotaRateLimitState" data-link-title="QuotaRateLimitState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/quotaRateLimit.ts#L120">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/quotaRateLimit.ts#L120">
         interface <strong>QuotaRateLimitState</strong>
     </a>
 </h3>
@@ -3655,7 +3656,7 @@ rule. The `rate` must be positive.
 Input properties used for looking up and filtering QuotaRateLimit resources.
 
 <h4 class="pdoc-member-header" id="QuotaRateLimitState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/quotaRateLimit.ts#L124">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/quotaRateLimit.ts#L124">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3663,7 +3664,7 @@ Input properties used for looking up and filtering QuotaRateLimit resources.
 Name of the rate limit quota
 
 <h4 class="pdoc-member-header" id="QuotaRateLimitState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/quotaRateLimit.ts#L133">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/quotaRateLimit.ts#L133">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3676,7 +3677,7 @@ Updating this field on an existing quota can have "moving" effects. For example,
 a namespace specific mount quota. **Note, namespaces are supported in Enterprise only.**
 
 <h4 class="pdoc-member-header" id="QuotaRateLimitState-rate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/quotaRateLimit.ts#L138">property <b>rate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/quotaRateLimit.ts#L138">property <b>rate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3685,7 +3686,7 @@ The maximum number of requests at any given second to be allowed by the quota
 rule. The `rate` must be positive.
 
 <h3 class="pdoc-module-header" id="RgpPolicyArgs" data-link-title="RgpPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/rgpPolicy.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/rgpPolicy.ts#L127">
         interface <strong>RgpPolicyArgs</strong>
     </a>
 </h3>
@@ -3695,7 +3696,7 @@ rule. The `rate` must be positive.
 The set of arguments for constructing a RgpPolicy resource.
 
 <h4 class="pdoc-member-header" id="RgpPolicyArgs-enforcementLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/rgpPolicy.ts#L131">property <b>enforcementLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/rgpPolicy.ts#L131">property <b>enforcementLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enforcementLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3703,7 +3704,7 @@ The set of arguments for constructing a RgpPolicy resource.
 Enforcement level of Sentinel policy. Can be either `advisory` or `soft-mandatory` or `hard-mandatory`
 
 <h4 class="pdoc-member-header" id="RgpPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/rgpPolicy.ts#L135">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/rgpPolicy.ts#L135">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3711,7 +3712,7 @@ Enforcement level of Sentinel policy. Can be either `advisory` or `soft-mandator
 The name of the policy
 
 <h4 class="pdoc-member-header" id="RgpPolicyArgs-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/rgpPolicy.ts#L139">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/rgpPolicy.ts#L139">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3719,7 +3720,7 @@ The name of the policy
 String containing a Sentinel policy
 
 <h3 class="pdoc-module-header" id="RgpPolicyState" data-link-title="RgpPolicyState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/rgpPolicy.ts#L109">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/rgpPolicy.ts#L109">
         interface <strong>RgpPolicyState</strong>
     </a>
 </h3>
@@ -3729,7 +3730,7 @@ String containing a Sentinel policy
 Input properties used for looking up and filtering RgpPolicy resources.
 
 <h4 class="pdoc-member-header" id="RgpPolicyState-enforcementLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/rgpPolicy.ts#L113">property <b>enforcementLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/rgpPolicy.ts#L113">property <b>enforcementLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enforcementLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3737,7 +3738,7 @@ Input properties used for looking up and filtering RgpPolicy resources.
 Enforcement level of Sentinel policy. Can be either `advisory` or `soft-mandatory` or `hard-mandatory`
 
 <h4 class="pdoc-member-header" id="RgpPolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/rgpPolicy.ts#L117">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/rgpPolicy.ts#L117">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3745,7 +3746,7 @@ Enforcement level of Sentinel policy. Can be either `advisory` or `soft-mandator
 The name of the policy
 
 <h4 class="pdoc-member-header" id="RgpPolicyState-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/rgpPolicy.ts#L121">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/rgpPolicy.ts#L121">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3753,7 +3754,7 @@ The name of the policy
 String containing a Sentinel policy
 
 <h3 class="pdoc-module-header" id="TokenArgs" data-link-title="TokenArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L280">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L280">
         interface <strong>TokenArgs</strong>
     </a>
 </h3>
@@ -3763,7 +3764,7 @@ String containing a Sentinel policy
 The set of arguments for constructing a Token resource.
 
 <h4 class="pdoc-member-header" id="TokenArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L284">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L284">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3771,7 +3772,7 @@ The set of arguments for constructing a Token resource.
 String containing the token display name
 
 <h4 class="pdoc-member-header" id="TokenArgs-explicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L288">property <b>explicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L288">property <b>explicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>explicitMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3779,7 +3780,7 @@ String containing the token display name
 The explicit max TTL of this token
 
 <h4 class="pdoc-member-header" id="TokenArgs-noDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L292">property <b>noDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L292">property <b>noDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noDefaultPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3787,7 +3788,7 @@ The explicit max TTL of this token
 Flag to not attach the default policy to this token
 
 <h4 class="pdoc-member-header" id="TokenArgs-noParent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L296">property <b>noParent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L296">property <b>noParent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noParent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3795,7 +3796,7 @@ Flag to not attach the default policy to this token
 Flag to create a token without parent
 
 <h4 class="pdoc-member-header" id="TokenArgs-numUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L300">property <b>numUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L300">property <b>numUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numUses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3803,7 +3804,7 @@ Flag to create a token without parent
 The number of allowed uses of this token
 
 <h4 class="pdoc-member-header" id="TokenArgs-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L304">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L304">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3811,7 +3812,7 @@ The number of allowed uses of this token
 The period of this token
 
 <h4 class="pdoc-member-header" id="TokenArgs-pgpKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L308">property <b>pgpKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L308">property <b>pgpKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pgpKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3819,7 +3820,7 @@ The period of this token
 The PGP key (base64 encoded) to encrypt the token.
 
 <h4 class="pdoc-member-header" id="TokenArgs-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L312">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L312">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3827,7 +3828,7 @@ The PGP key (base64 encoded) to encrypt the token.
 List of policies to attach to this token
 
 <h4 class="pdoc-member-header" id="TokenArgs-renewIncrement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L316">property <b>renewIncrement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L316">property <b>renewIncrement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>renewIncrement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3835,7 +3836,7 @@ List of policies to attach to this token
 The renew increment
 
 <h4 class="pdoc-member-header" id="TokenArgs-renewMinLease">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L320">property <b>renewMinLease</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L320">property <b>renewMinLease</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>renewMinLease?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3843,7 +3844,7 @@ The renew increment
 The minimal lease to renew this token
 
 <h4 class="pdoc-member-header" id="TokenArgs-renewable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L324">property <b>renewable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L324">property <b>renewable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>renewable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3851,7 +3852,7 @@ The minimal lease to renew this token
 Flag to allow to renew this token
 
 <h4 class="pdoc-member-header" id="TokenArgs-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L328">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L328">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3859,7 +3860,7 @@ Flag to allow to renew this token
 The token role name
 
 <h4 class="pdoc-member-header" id="TokenArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L332">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L332">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3867,7 +3868,7 @@ The token role name
 The TTL period of this token
 
 <h4 class="pdoc-member-header" id="TokenArgs-wrappingTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L336">property <b>wrappingTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L336">property <b>wrappingTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>wrappingTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3875,7 +3876,7 @@ The TTL period of this token
 The TTL period of the wrapped token.
 
 <h3 class="pdoc-module-header" id="TokenState" data-link-title="TokenState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L194">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L194">
         interface <strong>TokenState</strong>
     </a>
 </h3>
@@ -3885,7 +3886,7 @@ The TTL period of the wrapped token.
 Input properties used for looking up and filtering Token resources.
 
 <h4 class="pdoc-member-header" id="TokenState-clientToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L198">property <b>clientToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L198">property <b>clientToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3893,7 +3894,7 @@ Input properties used for looking up and filtering Token resources.
 String containing the client token if stored in present file
 
 <h4 class="pdoc-member-header" id="TokenState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L202">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L202">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3901,7 +3902,7 @@ String containing the client token if stored in present file
 String containing the token display name
 
 <h4 class="pdoc-member-header" id="TokenState-encryptedClientToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L206">property <b>encryptedClientToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L206">property <b>encryptedClientToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptedClientToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3909,7 +3910,7 @@ String containing the token display name
 String containing the client token encrypted with the given `pgpKey` if stored in present file
 
 <h4 class="pdoc-member-header" id="TokenState-explicitMaxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L210">property <b>explicitMaxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L210">property <b>explicitMaxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>explicitMaxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3917,7 +3918,7 @@ String containing the client token encrypted with the given `pgpKey` if stored i
 The explicit max TTL of this token
 
 <h4 class="pdoc-member-header" id="TokenState-leaseDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L214">property <b>leaseDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L214">property <b>leaseDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>leaseDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3925,7 +3926,7 @@ The explicit max TTL of this token
 String containing the token lease duration if present in state file
 
 <h4 class="pdoc-member-header" id="TokenState-leaseStarted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L218">property <b>leaseStarted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L218">property <b>leaseStarted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>leaseStarted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3933,7 +3934,7 @@ String containing the token lease duration if present in state file
 String containing the token lease started time if present in state file
 
 <h4 class="pdoc-member-header" id="TokenState-noDefaultPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L222">property <b>noDefaultPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L222">property <b>noDefaultPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noDefaultPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3941,7 +3942,7 @@ String containing the token lease started time if present in state file
 Flag to not attach the default policy to this token
 
 <h4 class="pdoc-member-header" id="TokenState-noParent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L226">property <b>noParent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L226">property <b>noParent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noParent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3949,7 +3950,7 @@ Flag to not attach the default policy to this token
 Flag to create a token without parent
 
 <h4 class="pdoc-member-header" id="TokenState-numUses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L230">property <b>numUses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L230">property <b>numUses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>numUses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3957,7 +3958,7 @@ Flag to create a token without parent
 The number of allowed uses of this token
 
 <h4 class="pdoc-member-header" id="TokenState-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L234">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L234">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3965,7 +3966,7 @@ The number of allowed uses of this token
 The period of this token
 
 <h4 class="pdoc-member-header" id="TokenState-pgpKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L238">property <b>pgpKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L238">property <b>pgpKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pgpKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3973,7 +3974,7 @@ The period of this token
 The PGP key (base64 encoded) to encrypt the token.
 
 <h4 class="pdoc-member-header" id="TokenState-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L242">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L242">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3981,7 +3982,7 @@ The PGP key (base64 encoded) to encrypt the token.
 List of policies to attach to this token
 
 <h4 class="pdoc-member-header" id="TokenState-renewIncrement">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L246">property <b>renewIncrement</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L246">property <b>renewIncrement</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>renewIncrement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3989,7 +3990,7 @@ List of policies to attach to this token
 The renew increment
 
 <h4 class="pdoc-member-header" id="TokenState-renewMinLease">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L250">property <b>renewMinLease</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L250">property <b>renewMinLease</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>renewMinLease?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3997,7 +3998,7 @@ The renew increment
 The minimal lease to renew this token
 
 <h4 class="pdoc-member-header" id="TokenState-renewable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L254">property <b>renewable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L254">property <b>renewable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>renewable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4005,7 +4006,7 @@ The minimal lease to renew this token
 Flag to allow to renew this token
 
 <h4 class="pdoc-member-header" id="TokenState-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L258">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L258">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4013,7 +4014,7 @@ Flag to allow to renew this token
 The token role name
 
 <h4 class="pdoc-member-header" id="TokenState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L262">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L262">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4021,7 +4022,7 @@ The token role name
 The TTL period of this token
 
 <h4 class="pdoc-member-header" id="TokenState-wrappedToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L266">property <b>wrappedToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L266">property <b>wrappedToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>wrappedToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4029,7 +4030,7 @@ The TTL period of this token
 The client wrapped token.
 
 <h4 class="pdoc-member-header" id="TokenState-wrappingAccessor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L270">property <b>wrappingAccessor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L270">property <b>wrappingAccessor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>wrappingAccessor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4037,7 +4038,7 @@ The client wrapped token.
 The client wrapping accessor.
 
 <h4 class="pdoc-member-header" id="TokenState-wrappingTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/2dce476d2b85de30e6b63dd882e5f90000adc81f/sdk/nodejs/token.ts#L274">property <b>wrappingTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/token.ts#L274">property <b>wrappingTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>wrappingTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

@@ -15,6 +15,7 @@ as what role they have within it.
 If the user's membership in the organization is pending their acceptance of an invite,
 the role they would have once they accept will be returned.
 
+
 {{% examples %}}
 ## Example Usage
 

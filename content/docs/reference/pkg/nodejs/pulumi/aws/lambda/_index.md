@@ -3,7 +3,7 @@ title: "Module lambda"
 title_tag: "Module lambda | Package @pulumi/aws | Node.js SDK"
 linktitle: "lambda"
 meta_desc: "Explore members of the lambda module in the @pulumi/aws package."
-git_sha: "8a8be2819c5dd987f03d94fb4fe439ca6be643bb"
+git_sha: "3da96013c0cb291a4fe359589c7d79d5f0a10bf1"
 block_external_search_index: true
 ---
 
@@ -18,6 +18,7 @@ block_external_search_index: true
 <h3>Resources</h3>
 <ul class="api">
     <li><a href="#Alias"><span class="symbol resource"></span>Alias</a></li>
+    <li><a href="#CodeSigningConfig"><span class="symbol resource"></span>CodeSigningConfig</a></li>
     <li><a href="#EventSourceMapping"><span class="symbol resource"></span>EventSourceMapping</a></li>
     <li><a href="#EventSubscription"><span class="symbol resource"></span>EventSubscription</a></li>
     <li><a href="#Function"><span class="symbol resource"></span>Function</a></li>
@@ -30,6 +31,7 @@ block_external_search_index: true
 <h3>Functions</h3>
 <ul class="api">
     <li><a href="#getAlias"><span class="symbol function"></span>getAlias</a></li>
+    <li><a href="#getCodeSigningConfig"><span class="symbol function"></span>getCodeSigningConfig</a></li>
     <li><a href="#getFunction"><span class="symbol function"></span>getFunction</a></li>
     <li><a href="#getInvocation"><span class="symbol function"></span>getInvocation</a></li>
     <li><a href="#getLayerVersion"><span class="symbol function"></span>getLayerVersion</a></li>
@@ -44,6 +46,8 @@ block_external_search_index: true
     <li><a href="#CallbackFactory"><span class="symbol api"></span>CallbackFactory</a></li>
     <li><a href="#CallbackFunction"><span class="symbol api"></span>CallbackFunction</a></li>
     <li><a href="#CallbackFunctionArgs"><span class="symbol api"></span>CallbackFunctionArgs</a></li>
+    <li><a href="#CodeSigningConfigArgs"><span class="symbol api"></span>CodeSigningConfigArgs</a></li>
+    <li><a href="#CodeSigningConfigState"><span class="symbol api"></span>CodeSigningConfigState</a></li>
     <li><a href="#Context"><span class="symbol api"></span>Context</a></li>
     <li><a href="#createFunctionFromEventHandler"><span class="symbol api"></span>createFunctionFromEventHandler</a></li>
     <li><a href="#CustomRuntime"><span class="symbol api"></span>CustomRuntime</a></li>
@@ -60,6 +64,8 @@ block_external_search_index: true
     <li><a href="#FunctionState"><span class="symbol api"></span>FunctionState</a></li>
     <li><a href="#GetAliasArgs"><span class="symbol api"></span>GetAliasArgs</a></li>
     <li><a href="#GetAliasResult"><span class="symbol api"></span>GetAliasResult</a></li>
+    <li><a href="#GetCodeSigningConfigArgs"><span class="symbol api"></span>GetCodeSigningConfigArgs</a></li>
+    <li><a href="#GetCodeSigningConfigResult"><span class="symbol api"></span>GetCodeSigningConfigResult</a></li>
     <li><a href="#GetFunctionArgs"><span class="symbol api"></span>GetFunctionArgs</a></li>
     <li><a href="#GetFunctionResult"><span class="symbol api"></span>GetFunctionResult</a></li>
     <li><a href="#GetInvocationArgs"><span class="symbol api"></span>GetInvocationArgs</a></li>
@@ -94,7 +100,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Alias" data-link-title="Alias">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L40">
         Resource <strong>Alias</strong>
     </a>
 </h3>
@@ -133,7 +139,7 @@ Lambda Function Aliases can be imported using the `function_name/alias`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Alias-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L95"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L95"> <b>constructor</b></a>
 </h4>
 
 
@@ -147,7 +153,7 @@ Create a Alias resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Alias-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -158,14 +164,14 @@ Get an existing Alias resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Alias-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Alias-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -176,7 +182,7 @@ Returns true if the given object is an instance of Alias.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Alias-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L71">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L71">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -184,7 +190,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) identifying your Lambda function alias.
 
 <h4 class="pdoc-member-header" id="Alias-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L75">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L75">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -192,7 +198,7 @@ The Amazon Resource Name (ARN) identifying your Lambda function alias.
 Description of the alias.
 
 <h4 class="pdoc-member-header" id="Alias-functionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L79">property <b>functionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L79">property <b>functionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>functionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -200,7 +206,7 @@ Description of the alias.
 Lambda Function name or ARN.
 
 <h4 class="pdoc-member-header" id="Alias-functionVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L83">property <b>functionVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L83">property <b>functionVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>functionVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -208,7 +214,7 @@ Lambda Function name or ARN.
 Lambda function version for which you are creating the alias. Pattern: `(\$LATEST|[0-9]+)`.
 
 <h4 class="pdoc-member-header" id="Alias-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -217,7 +223,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Alias-invokeArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L87">property <b>invokeArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L87">property <b>invokeArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>invokeArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -225,7 +231,7 @@ deployments and may be missing (undefined) during planning phases.
 The ARN to be used for invoking Lambda Function from API Gateway - to be used in `aws.apigateway.Integration`'s `uri`
 
 <h4 class="pdoc-member-header" id="Alias-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L91">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L91">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -233,7 +239,7 @@ The ARN to be used for invoking Lambda Function from API Gateway - to be used in
 Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
 
 <h4 class="pdoc-member-header" id="Alias-routingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L95">property <b>routingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L95">property <b>routingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>routingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AliasRoutingConfig'>AliasRoutingConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -241,7 +247,156 @@ Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
 The Lambda alias' route configuration settings. Fields documented below
 
 <h4 class="pdoc-member-header" id="Alias-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L40">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-module-header" id="CodeSigningConfig" data-link-title="CodeSigningConfig">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L41">
+        Resource <strong>CodeSigningConfig</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>CodeSigningConfig</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Provides a Lambda Code Signing Config resource. A code signing configuration defines a list of allowed signing profiles and defines the code-signing validation policy (action to be taken if deployment validation checks fail).
+
+For information about Lambda code signing configurations and how to use them, see [configuring code signing for Lambda functions](https://docs.aws.amazon.com/lambda/latest/dg/configuration-codesigning.html)
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const newCsc = new aws.lambda.CodeSigningConfig("newCsc", {
+    allowedPublishers: {
+        signingProfileVersionArns: [
+            aws_signer_signing_profile.example1.arn,
+            aws_signer_signing_profile.example2.arn,
+        ],
+    },
+    policies: {
+        untrustedArtifactOnDeployment: "Warn",
+    },
+    description: "My awesome code signing config.",
+});
+```
+
+#### Import
+
+Code Signing Configs can be imported using their ARN, e.g.
+
+```sh
+ $ pulumi import aws:lambda/codeSigningConfig:CodeSigningConfig imported_csc arn:aws:lambda:us-west-2:123456789012:code-signing-config:csc-0f6c334abcdea4d8b
+```
+
+<h4 class="pdoc-member-header" id="CodeSigningConfig-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L92"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> CodeSigningConfig(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#CodeSigningConfigArgs'>CodeSigningConfigArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a CodeSigningConfig resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="CodeSigningConfig-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L51">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#CodeSigningConfigState'>CodeSigningConfigState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#CodeSigningConfig'>CodeSigningConfig</a></code></pre>
+
+
+Get an existing CodeSigningConfig resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="CodeSigningConfig-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L41">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="CodeSigningConfig-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L62">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is CodeSigningConfig</code></pre>
+
+
+Returns true if the given object is an instance of CodeSigningConfig.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="CodeSigningConfig-allowedPublishers">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L72">property <b>allowedPublishers</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>allowedPublishers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CodeSigningConfigAllowedPublishers'>CodeSigningConfigAllowedPublishers</a>&gt;;</code></pre>
+
+A configuration block of allowed publishers as signing profiles for this code signing configuration. Detailed below.
+
+<h4 class="pdoc-member-header" id="CodeSigningConfig-arn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L76">property <b>arn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Amazon Resource Name (ARN) of the code signing configuration.
+
+<h4 class="pdoc-member-header" id="CodeSigningConfig-configId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L80">property <b>configId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>configId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Unique identifier for the code signing configuration.
+
+<h4 class="pdoc-member-header" id="CodeSigningConfig-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L84">property <b>description</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Descriptive name for this code signing configuration.
+
+<h4 class="pdoc-member-header" id="CodeSigningConfig-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L41">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="CodeSigningConfig-lastModified">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L88">property <b>lastModified</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>lastModified: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The date and time that the code signing configuration was last modified.
+
+<h4 class="pdoc-member-header" id="CodeSigningConfig-policies">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L92">property <b>policies</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CodeSigningConfigPolicies'>CodeSigningConfigPolicies</a>&gt;;</code></pre>
+
+A configuration block of code signing policies that define the actions to take if the validation checks fail. Detailed below.
+
+<h4 class="pdoc-member-header" id="CodeSigningConfig-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L41">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -250,7 +405,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EventSourceMapping" data-link-title="EventSourceMapping">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L61">
         Resource <strong>EventSourceMapping</strong>
     </a>
 </h3>
@@ -310,7 +465,7 @@ Lambda event source mappings can be imported using the `UUID` (event source mapp
  [3]https://docs.aws.amazon.com/lambda/latest/dg/API_GetEventSourceMapping.html
 
 <h4 class="pdoc-member-header" id="EventSourceMapping-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L150"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L150"> <b>constructor</b></a>
 </h4>
 
 
@@ -324,7 +479,7 @@ Create a EventSourceMapping resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EventSourceMapping-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L71">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L71">method <b>get</b></a>
 </h4>
 
 
@@ -335,14 +490,14 @@ Get an existing EventSourceMapping resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EventSourceMapping-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L61">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L61">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EventSourceMapping-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L82">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L82">method <b>isInstance</b></a>
 </h4>
 
 
@@ -353,7 +508,7 @@ Returns true if the given object is an instance of EventSourceMapping.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EventSourceMapping-batchSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L92">property <b>batchSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L92">property <b>batchSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>batchSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -361,17 +516,17 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB and Kinesis, `10` for SQS.
 
 <h4 class="pdoc-member-header" id="EventSourceMapping-bisectBatchOnFunctionError">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L93">property <b>bisectBatchOnFunctionError</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L93">property <b>bisectBatchOnFunctionError</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bisectBatchOnFunctionError: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSourceMapping-destinationConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L94">property <b>destinationConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L94">property <b>destinationConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destinationConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EventSourceMappingDestinationConfig'>EventSourceMappingDestinationConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSourceMapping-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L98">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L98">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -379,7 +534,7 @@ The largest number of records that Lambda will retrieve from your event source a
 Determines if the mapping will be enabled on creation. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="EventSourceMapping-eventSourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L102">property <b>eventSourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L102">property <b>eventSourceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventSourceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -387,7 +542,7 @@ Determines if the mapping will be enabled on creation. Defaults to `true`.
 The event source ARN - can be a Kinesis stream, DynamoDB stream, or SQS queue.
 
 <h4 class="pdoc-member-header" id="EventSourceMapping-functionArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L106">property <b>functionArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L106">property <b>functionArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>functionArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -395,7 +550,7 @@ The event source ARN - can be a Kinesis stream, DynamoDB stream, or SQS queue.
 The the ARN of the Lambda function the event source mapping is sending events to. (Note: this is a computed value that differs from `functionName` above.)
 
 <h4 class="pdoc-member-header" id="EventSourceMapping-functionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L110">property <b>functionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L110">property <b>functionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>functionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -403,7 +558,7 @@ The the ARN of the Lambda function the event source mapping is sending events to
 The name or the ARN of the Lambda function that will be subscribing to events.
 
 <h4 class="pdoc-member-header" id="EventSourceMapping-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L61">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L61">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -412,7 +567,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EventSourceMapping-lastModified">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L114">property <b>lastModified</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L114">property <b>lastModified</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastModified: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -420,7 +575,7 @@ deployments and may be missing (undefined) during planning phases.
 The date this resource was last modified.
 
 <h4 class="pdoc-member-header" id="EventSourceMapping-lastProcessingResult">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L118">property <b>lastProcessingResult</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L118">property <b>lastProcessingResult</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastProcessingResult: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -428,7 +583,7 @@ The date this resource was last modified.
 The result of the last AWS Lambda invocation of your Lambda function.
 
 <h4 class="pdoc-member-header" id="EventSourceMapping-maximumBatchingWindowInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L122">property <b>maximumBatchingWindowInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L122">property <b>maximumBatchingWindowInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maximumBatchingWindowInSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -436,22 +591,22 @@ The result of the last AWS Lambda invocation of your Lambda function.
 The maximum amount of time to gather records before invoking the function, in seconds.  Records will continue to buffer until either `maximumBatchingWindowInSeconds` expires or `batchSize` has been met. Defaults to as soon as records are available in the stream. If the batch it reads from the stream only has one record in it, Lambda only sends one record to the function.
 
 <h4 class="pdoc-member-header" id="EventSourceMapping-maximumRecordAgeInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L123">property <b>maximumRecordAgeInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L123">property <b>maximumRecordAgeInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maximumRecordAgeInSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSourceMapping-maximumRetryAttempts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L124">property <b>maximumRetryAttempts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L124">property <b>maximumRetryAttempts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maximumRetryAttempts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSourceMapping-parallelizationFactor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L125">property <b>parallelizationFactor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L125">property <b>parallelizationFactor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parallelizationFactor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSourceMapping-startingPosition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L129">property <b>startingPosition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L129">property <b>startingPosition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>startingPosition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -459,7 +614,7 @@ The maximum amount of time to gather records before invoking the function, in se
 The position in the stream where AWS Lambda should start reading. Must be one of `AT_TIMESTAMP` (Kinesis only), `LATEST` or `TRIM_HORIZON` if getting events from Kinesis or DynamoDB. Must not be provided if getting events from SQS. More information about these positions can be found in the [AWS DynamoDB Streams API Reference](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_streams_GetShardIterator.html) and [AWS Kinesis API Reference](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#Kinesis-GetShardIterator-request-ShardIteratorType).
 
 <h4 class="pdoc-member-header" id="EventSourceMapping-startingPositionTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L138">property <b>startingPositionTimestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L138">property <b>startingPositionTimestamp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>startingPositionTimestamp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -472,7 +627,7 @@ A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8)
 * `destinationConfig`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
 
 <h4 class="pdoc-member-header" id="EventSourceMapping-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L142">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L142">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -480,7 +635,7 @@ A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8)
 The state of the event source mapping.
 
 <h4 class="pdoc-member-header" id="EventSourceMapping-stateTransitionReason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L146">property <b>stateTransitionReason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L146">property <b>stateTransitionReason</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stateTransitionReason: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -488,7 +643,7 @@ The state of the event source mapping.
 The reason the event source mapping is in its current state.
 
 <h4 class="pdoc-member-header" id="EventSourceMapping-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L61">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L61">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -497,7 +652,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="EventSourceMapping-uuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L150">property <b>uuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L150">property <b>uuid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>uuid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -505,7 +660,7 @@ deployments.
 The UUID of the created event source mapping.
 
 <h3 class="pdoc-module-header" id="EventSubscription" data-link-title="EventSubscription">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L225">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L225">
         Resource <strong>EventSubscription</strong>
     </a>
 </h3>
@@ -516,14 +671,14 @@ Base type for all subscription types.  An event subscription represents a connec
 AWS resource and an AWS lambda that will be triggered when something happens to that resource.
 
 <h4 class="pdoc-member-header" id="EventSubscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L227"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L227"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span><span class='kd'>new</span> EventSubscription(type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="EventSubscription-getData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L225">method <b>getData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L225">method <b>getData</b></a>
 </h4>
 
 
@@ -534,14 +689,14 @@ Retrieves the data produces by [initialize].  The data is immediately available 
 derived class's constructor after the `super(...)` call to `ComponentResource`.
 
 <h4 class="pdoc-member-header" id="EventSubscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L225">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L225">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EventSubscription-initialize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L225">method <b>initialize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L225">method <b>initialize</b></a>
 </h4>
 
 
@@ -553,7 +708,7 @@ automatically when constructed.  The data will be available immediately for subc
 constructors to use.  To access the data use `.getData`.
 
 <h4 class="pdoc-member-header" id="EventSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L225">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L225">method <b>isInstance</b></a>
 </h4>
 
 
@@ -564,7 +719,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EventSubscription-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L225">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L225">method <b>registerOutputs</b></a>
 </h4>
 
 
@@ -579,17 +734,17 @@ done creating child resources.  This is not strictly necessary as this will auto
 called after the `initialize` method completes.
 
 <h4 class="pdoc-member-header" id="EventSubscription-func">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L227">property <b>func</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L227">property <b>func</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>func: LambdaFunction;</code></pre>
 <h4 class="pdoc-member-header" id="EventSubscription-permission">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L226">property <b>permission</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L226">property <b>permission</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>permission: <a href='#Permission'>Permission</a>;</code></pre>
 <h4 class="pdoc-member-header" id="EventSubscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L225">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L225">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -598,135 +753,12 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Function" data-link-title="Function">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L142">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L19">
         Resource <strong>Function</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Function</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
-
-Provides a Lambda Function resource. Lambda allows you to trigger execution of code in response to events in AWS, enabling serverless backend solutions. The Lambda Function itself includes source code and runtime configuration.
-
-For information about Lambda and how to use it, see [What is AWS Lambda?](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
-
-> **NOTE:** Due to [AWS Lambda improved VPC networking changes that began deploying in September 2019](https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/), EC2 subnets and security groups associated with Lambda Functions can take up to 45 minutes to successfully delete.
-
-#### Example Usage
-##### Lambda Layers
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const exampleLayerVersion = new aws.lambda.LayerVersion("exampleLayerVersion", {});
-// ... other configuration ...
-const exampleFunction = new aws.lambda.Function("exampleFunction", {layers: [exampleLayerVersion.arn]});
-```
-##### Lambda File Systems
-
-Lambda File Systems allow you to connect an Amazon Elastic File System (EFS) file system to a Lambda function to share data across function invocations, access existing data including large files, and save function state.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-// EFS file system
-const efsForLambda = new aws.efs.FileSystem("efsForLambda", {tags: {
-    Name: "efs_for_lambda",
-}});
-// Mount target connects the file system to the subnet
-const alpha = new aws.efs.MountTarget("alpha", {
-    fileSystemId: efsForLambda.id,
-    subnetId: aws_subnet.subnet_for_lambda.id,
-    securityGroups: [aws_security_group.sg_for_lambda.id],
-});
-// EFS access point used by lambda file system
-const accessPointForLambda = new aws.efs.AccessPoint("accessPointForLambda", {
-    fileSystemId: efsForLambda.id,
-    rootDirectory: {
-        path: "/lambda",
-        creationInfo: {
-            ownerGid: 1000,
-            ownerUid: 1000,
-            permissions: "777",
-        },
-    },
-    posixUser: {
-        gid: 1000,
-        uid: 1000,
-    },
-});
-// A lambda function connected to an EFS file system
-// ... other configuration ...
-const example = new aws.lambda.Function("example", {
-    fileSystemConfig: {
-        arn: accessPointForLambda.arn,
-        localMountPath: "/mnt/efs",
-    },
-    vpcConfig: {
-        subnetIds: [aws_subnet.subnet_for_lambda.id],
-        securityGroupIds: [aws_security_group.sg_for_lambda.id],
-    },
-}, {
-    dependsOn: [alpha],
-});
-```
-##### CloudWatch Logging and Permissions
-
-For more information about CloudWatch Logs for Lambda, see the [Lambda User Guide](https://docs.aws.amazon.com/lambda/latest/dg/monitoring-functions-logs.html).
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-
-const config = new pulumi.Config();
-const lambdaFunctionName = config.get("lambdaFunctionName") || "lambda_function_name";
-// This is to optionally manage the CloudWatch Log Group for the Lambda Function.
-// If skipping this resource configuration, also add "logs:CreateLogGroup" to the IAM policy below.
-const example = new aws.cloudwatch.LogGroup("example", {retentionInDays: 14});
-// See also the following AWS managed policy: AWSLambdaBasicExecutionRole
-const lambdaLogging = new aws.iam.Policy("lambdaLogging", {
-    path: "/",
-    description: "IAM policy for logging from a lambda",
-    policy: `{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents"
-      ],
-      "Resource": "arn:aws:logs:*:*:*",
-      "Effect": "Allow"
-    }
-  ]
-}
-`,
-});
-const lambdaLogs = new aws.iam.RolePolicyAttachment("lambdaLogs", {
-    role: aws_iam_role.iam_for_lambda.name,
-    policyArn: lambdaLogging.arn,
-});
-const testLambda = new aws.lambda.Function("testLambda", {}, {
-    dependsOn: [
-        lambdaLogs,
-        example,
-    ],
-});
-```
-#### Specifying the Deployment Package
-
-AWS Lambda expects source code to be provided as a deployment package whose structure varies depending on which `runtime` is in use.
-See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for the valid values of `runtime`. The expected structure of the deployment package can be found in
-[the AWS Lambda documentation for each runtime](https://docs.aws.amazon.com/lambda/latest/dg/deployment-package-v2.html).
-
-Once you have created your deployment package you can specify it either directly as a local file (using the `filename` argument) or
-indirectly via Amazon S3 (using the `s3Bucket`, `s3Key` and `s3ObjectVersion` arguments). When providing the deployment
-package via S3 it may be useful to use the `aws.s3.BucketObject` resource to upload it.
-
-For larger deployment packages it is recommended by Amazon to upload via S3, since the S3 API has better support for uploading
-large files efficiently.
 
 #### Import
 
@@ -737,7 +769,7 @@ Lambda Functions can be imported using the `function_name`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Function-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L279"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L168"> <b>constructor</b></a>
 </h4>
 
 
@@ -751,7 +783,7 @@ Create a Function resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Function-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L152">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L29">method <b>get</b></a>
 </h4>
 
 
@@ -762,14 +794,14 @@ Get an existing Function resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Function-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L142">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L19">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Function-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L163">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L40">method <b>isInstance</b></a>
 </h4>
 
 
@@ -780,7 +812,7 @@ Returns true if the given object is an instance of Function.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Function-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L173">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L50">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -788,15 +820,23 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 
 <h4 class="pdoc-member-header" id="Function-code">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L177">property <b>code</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L54">property <b>code</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>code: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
 
+<h4 class="pdoc-member-header" id="Function-codeSigningConfigArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L58">property <b>codeSigningConfigArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>codeSigningConfigArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Amazon Resource Name (ARN) for a Code Signing Configuration.
+
 <h4 class="pdoc-member-header" id="Function-deadLetterConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L181">property <b>deadLetterConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L62">property <b>deadLetterConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deadLetterConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FunctionDeadLetterConfig'>FunctionDeadLetterConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -804,7 +844,7 @@ The path to the function's deployment package within the local filesystem. If de
 Nested block to configure the function's *dead letter queue*. See details below.
 
 <h4 class="pdoc-member-header" id="Function-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L185">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L66">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -812,7 +852,7 @@ Nested block to configure the function's *dead letter queue*. See details below.
 Description of what your Lambda Function does.
 
 <h4 class="pdoc-member-header" id="Function-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L189">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L70">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>environment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FunctionEnvironment'>FunctionEnvironment</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -820,7 +860,7 @@ Description of what your Lambda Function does.
 The Lambda environment's configuration settings. Fields documented below.
 
 <h4 class="pdoc-member-header" id="Function-fileSystemConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L193">property <b>fileSystemConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L74">property <b>fileSystemConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fileSystemConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FunctionFileSystemConfig'>FunctionFileSystemConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -828,7 +868,7 @@ The Lambda environment's configuration settings. Fields documented below.
 The connection settings for an EFS file system. Fields documented below. Before creating or updating Lambda functions with `fileSystemConfig`, EFS mount targets much be in available lifecycle state. Use `dependsOn` to explicitly declare this dependency. See [Using Amazon EFS with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/services-efs.html).
 
 <h4 class="pdoc-member-header" id="Function-handler">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L197">property <b>handler</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L78">property <b>handler</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>handler: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -836,7 +876,7 @@ The connection settings for an EFS file system. Fields documented below. Before 
 The function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
 
 <h4 class="pdoc-member-header" id="Function-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L142">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L19">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -845,23 +885,23 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Function-invokeArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L201">property <b>invokeArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L82">property <b>invokeArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>invokeArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The ARN to be used for invoking Lambda Function from API Gateway - to be used in `aws.apigateway.Integration`'s `uri`
+The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
 
 <h4 class="pdoc-member-header" id="Function-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L205">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L86">property <b>kmsKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key that is used to encrypt environment variables. If this configuration is not provided when environment variables are in use, AWS Lambda uses a default service key. If this configuration is provided when environment variables are not in use, the AWS Lambda API does not save this configuration and this provider will show a perpetual difference of adding the key. To fix the perpetual difference, remove this configuration.
+(Optional) The ARN for the KMS encryption key.
 
 <h4 class="pdoc-member-header" id="Function-lastModified">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L209">property <b>lastModified</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L90">property <b>lastModified</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastModified: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -869,7 +909,7 @@ Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key that is u
 The date this resource was last modified.
 
 <h4 class="pdoc-member-header" id="Function-layers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L213">property <b>layers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L94">property <b>layers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>layers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -877,7 +917,7 @@ The date this resource was last modified.
 List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)
 
 <h4 class="pdoc-member-header" id="Function-memorySize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L217">property <b>memorySize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L98">property <b>memorySize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>memorySize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -885,7 +925,7 @@ List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Functi
 Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
 
 <h4 class="pdoc-member-header" id="Function-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L221">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L102">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -893,7 +933,7 @@ Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128
 A unique name for your Lambda Function.
 
 <h4 class="pdoc-member-header" id="Function-publish">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L225">property <b>publish</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L106">property <b>publish</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publish: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -901,7 +941,7 @@ A unique name for your Lambda Function.
 Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Function-qualifiedArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L230">property <b>qualifiedArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L111">property <b>qualifiedArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>qualifiedArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -910,7 +950,7 @@ The Amazon Resource Name (ARN) identifying your Lambda Function Version
 (if versioning is enabled via `publish = true`).
 
 <h4 class="pdoc-member-header" id="Function-reservedConcurrentExecutions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L234">property <b>reservedConcurrentExecutions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L115">property <b>reservedConcurrentExecutions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>reservedConcurrentExecutions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -918,7 +958,7 @@ The Amazon Resource Name (ARN) identifying your Lambda Function Version
 The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
 
 <h4 class="pdoc-member-header" id="Function-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L238">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L119">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
@@ -926,7 +966,7 @@ The amount of reserved concurrent executions for this lambda function. A value o
 IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html) for more details.
 
 <h4 class="pdoc-member-header" id="Function-roleInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L389">property <b>roleInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L389">property <b>roleInstance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleInstance?: iam.Role;</code></pre>
@@ -935,7 +975,7 @@ Actual Role instance value for this Function.  Will only be set if this function
 created from [createFunction]
 
 <h4 class="pdoc-member-header" id="Function-runtime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L242">property <b>runtime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L123">property <b>runtime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>runtime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -943,7 +983,7 @@ created from [createFunction]
 See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
 
 <h4 class="pdoc-member-header" id="Function-s3Bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L246">property <b>s3Bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L127">property <b>s3Bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3Bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -951,7 +991,7 @@ See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.h
 The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 
 <h4 class="pdoc-member-header" id="Function-s3Key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L250">property <b>s3Key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L131">property <b>s3Key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3Key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -959,23 +999,39 @@ The S3 bucket location containing the function's deployment package. Conflicts w
 The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
 
 <h4 class="pdoc-member-header" id="Function-s3ObjectVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L254">property <b>s3ObjectVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L135">property <b>s3ObjectVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3ObjectVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The object version containing the function's deployment package. Conflicts with `filename`.
 
+<h4 class="pdoc-member-header" id="Function-signingJobArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L139">property <b>signingJobArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>signingJobArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Amazon Resource Name (ARN) of a signing job.
+
+<h4 class="pdoc-member-header" id="Function-signingProfileVersionArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L143">property <b>signingProfileVersionArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>signingProfileVersionArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Amazon Resource Name (ARN) for a signing profile version.
+
 <h4 class="pdoc-member-header" id="Function-sourceCodeHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L258">property <b>sourceCodeHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L147">property <b>sourceCodeHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceCodeHash: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3Key`. The usual way to set this is `filebase64sha256("file.zip")` (this provider 0.11.12 and later) or `base64sha256(file("file.zip"))` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda function source archive.
+Base64-encoded representation of raw SHA-256 sum of the zip file, provided either via `filename` or `s3_*` parameters.
 
 <h4 class="pdoc-member-header" id="Function-sourceCodeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L262">property <b>sourceCodeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L151">property <b>sourceCodeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceCodeSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -983,15 +1039,15 @@ Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the pack
 The size in bytes of the function .zip file.
 
 <h4 class="pdoc-member-header" id="Function-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L266">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L155">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-A mapping of tags to assign to the object.
+A map of tags to assign to the object.
 
 <h4 class="pdoc-member-header" id="Function-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L270">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L159">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -999,12 +1055,12 @@ A mapping of tags to assign to the object.
 The amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
 
 <h4 class="pdoc-member-header" id="Function-tracingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L271">property <b>tracingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L160">property <b>tracingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tracingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FunctionTracingConfig'>FunctionTracingConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Function-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L142">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L19">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1013,7 +1069,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Function-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L275">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L164">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1021,7 +1077,7 @@ deployments.
 Latest published version of your Lambda Function.
 
 <h4 class="pdoc-member-header" id="Function-vpcConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L279">property <b>vpcConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L168">property <b>vpcConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FunctionVpcConfig'>FunctionVpcConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1029,7 +1085,7 @@ Latest published version of your Lambda Function.
 Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC](http://docs.aws.amazon.com/lambda/latest/dg/vpc.html)
 
 <h3 class="pdoc-module-header" id="FunctionEventInvokeConfig" data-link-title="FunctionEventInvokeConfig">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L107">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L107">
         Resource <strong>FunctionEventInvokeConfig</strong>
     </a>
 </h3>
@@ -1135,7 +1191,7 @@ Lambda Function Event Invoke Configs can be imported using the fully qualified F
 ```
 
 <h4 class="pdoc-member-header" id="FunctionEventInvokeConfig-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L154"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L154"> <b>constructor</b></a>
 </h4>
 
 
@@ -1149,7 +1205,7 @@ Create a FunctionEventInvokeConfig resource with the given unique name, argument
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FunctionEventInvokeConfig-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L117">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L117">method <b>get</b></a>
 </h4>
 
 
@@ -1160,14 +1216,14 @@ Get an existing FunctionEventInvokeConfig resource's state with the given name, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FunctionEventInvokeConfig-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L107">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L107">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FunctionEventInvokeConfig-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L128">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L128">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1178,7 +1234,7 @@ Returns true if the given object is an instance of FunctionEventInvokeConfig.  T
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FunctionEventInvokeConfig-destinationConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L138">property <b>destinationConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L138">property <b>destinationConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>destinationConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FunctionEventInvokeConfigDestinationConfig'>FunctionEventInvokeConfigDestinationConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1186,7 +1242,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Configuration block with destination configuration. See below for details.
 
 <h4 class="pdoc-member-header" id="FunctionEventInvokeConfig-functionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L142">property <b>functionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L142">property <b>functionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>functionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1194,7 +1250,7 @@ Configuration block with destination configuration. See below for details.
 Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
 
 <h4 class="pdoc-member-header" id="FunctionEventInvokeConfig-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L107">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L107">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1203,7 +1259,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FunctionEventInvokeConfig-maximumEventAgeInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L146">property <b>maximumEventAgeInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L146">property <b>maximumEventAgeInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maximumEventAgeInSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1211,7 +1267,7 @@ deployments and may be missing (undefined) during planning phases.
 Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
 
 <h4 class="pdoc-member-header" id="FunctionEventInvokeConfig-maximumRetryAttempts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L150">property <b>maximumRetryAttempts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L150">property <b>maximumRetryAttempts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maximumRetryAttempts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1219,7 +1275,7 @@ Maximum age of a request that Lambda sends to a function for processing in secon
 Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
 
 <h4 class="pdoc-member-header" id="FunctionEventInvokeConfig-qualifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L154">property <b>qualifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L154">property <b>qualifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>qualifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1227,7 +1283,7 @@ Maximum number of times to retry when the function returns an error. Valid value
 Lambda Function published version, `$LATEST`, or Lambda Alias name.
 
 <h4 class="pdoc-member-header" id="FunctionEventInvokeConfig-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L107">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L107">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1236,7 +1292,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LayerVersion" data-link-title="LayerVersion">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L48">
         Resource <strong>LayerVersion</strong>
     </a>
 </h3>
@@ -1284,7 +1340,7 @@ Lambda Layers can be imported using `arn`.
  arn:aws:lambda:_REGION_:_ACCOUNT_ID_:layer:_LAYER_NAME_:_LAYER_VERSION_
 
 <h4 class="pdoc-member-header" id="LayerVersion-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L131"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L139"> <b>constructor</b></a>
 </h4>
 
 
@@ -1298,7 +1354,7 @@ Create a LayerVersion resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LayerVersion-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L58">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -1309,14 +1365,14 @@ Get an existing LayerVersion resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LayerVersion-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L48">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L48">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LayerVersion-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L69">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1327,7 +1383,7 @@ Returns true if the given object is an instance of LayerVersion.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LayerVersion-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L79">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L79">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1335,7 +1391,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) of the Lambda Layer with version.
 
 <h4 class="pdoc-member-header" id="LayerVersion-code">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L83">property <b>code</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L83">property <b>code</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>code: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1343,7 +1399,7 @@ The Amazon Resource Name (ARN) of the Lambda Layer with version.
 The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
 
 <h4 class="pdoc-member-header" id="LayerVersion-compatibleRuntimes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L87">property <b>compatibleRuntimes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L87">property <b>compatibleRuntimes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>compatibleRuntimes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1351,7 +1407,7 @@ The path to the function's deployment package within the local filesystem. If de
 A list of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleRuntimes) this layer is compatible with. Up to 5 runtimes can be specified.
 
 <h4 class="pdoc-member-header" id="LayerVersion-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L91">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L91">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1359,7 +1415,7 @@ A list of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLay
 The date this resource was created.
 
 <h4 class="pdoc-member-header" id="LayerVersion-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L95">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L95">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1367,7 +1423,7 @@ The date this resource was created.
 Description of what your Lambda Layer does.
 
 <h4 class="pdoc-member-header" id="LayerVersion-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L48">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1376,7 +1432,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LayerVersion-layerArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L99">property <b>layerArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L99">property <b>layerArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>layerArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1384,7 +1440,7 @@ deployments and may be missing (undefined) during planning phases.
 The Amazon Resource Name (ARN) of the Lambda Layer without version.
 
 <h4 class="pdoc-member-header" id="LayerVersion-layerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L103">property <b>layerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L103">property <b>layerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>layerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1392,7 +1448,7 @@ The Amazon Resource Name (ARN) of the Lambda Layer without version.
 A unique name for your Lambda Layer
 
 <h4 class="pdoc-member-header" id="LayerVersion-licenseInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L107">property <b>licenseInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L107">property <b>licenseInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>licenseInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1400,7 +1456,7 @@ A unique name for your Lambda Layer
 License info for your Lambda Layer. See [License Info](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-LicenseInfo).
 
 <h4 class="pdoc-member-header" id="LayerVersion-s3Bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L111">property <b>s3Bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L111">property <b>s3Bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3Bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1408,7 +1464,7 @@ License info for your Lambda Layer. See [License Info](https://docs.aws.amazon.c
 The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 
 <h4 class="pdoc-member-header" id="LayerVersion-s3Key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L115">property <b>s3Key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L115">property <b>s3Key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3Key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1416,15 +1472,31 @@ The S3 bucket location containing the function's deployment package. Conflicts w
 The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
 
 <h4 class="pdoc-member-header" id="LayerVersion-s3ObjectVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L119">property <b>s3ObjectVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L119">property <b>s3ObjectVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3ObjectVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The object version containing the function's deployment package. Conflicts with `filename`.
 
+<h4 class="pdoc-member-header" id="LayerVersion-signingJobArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L123">property <b>signingJobArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>signingJobArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Amazon Resource Name (ARN) of a signing job.
+
+<h4 class="pdoc-member-header" id="LayerVersion-signingProfileVersionArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L127">property <b>signingProfileVersionArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>signingProfileVersionArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Amazon Resource Name (ARN) for a signing profile version.
+
 <h4 class="pdoc-member-header" id="LayerVersion-sourceCodeHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L123">property <b>sourceCodeHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L131">property <b>sourceCodeHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceCodeHash: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1432,7 +1504,7 @@ The object version containing the function's deployment package. Conflicts with 
 Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3Key`. The usual way to set this is `${filebase64sha256("file.zip")}` (this provider 0.11.12 or later) or `${base64sha256(file("file.zip"))}` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda layer source archive.
 
 <h4 class="pdoc-member-header" id="LayerVersion-sourceCodeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L127">property <b>sourceCodeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L135">property <b>sourceCodeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceCodeSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1440,7 +1512,7 @@ Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the pack
 The size in bytes of the function .zip file.
 
 <h4 class="pdoc-member-header" id="LayerVersion-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L48">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L48">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1449,7 +1521,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="LayerVersion-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L131">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L139">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1457,7 +1529,7 @@ deployments.
 This Lamba Layer version.
 
 <h3 class="pdoc-module-header" id="Permission" data-link-title="Permission">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L120">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L120">
         Resource <strong>Permission</strong>
     </a>
 </h3>
@@ -1575,7 +1647,7 @@ Lambda permission statements can be imported using function_name/statement_id, w
 ```
 
 <h4 class="pdoc-member-header" id="Permission-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L187"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L187"> <b>constructor</b></a>
 </h4>
 
 
@@ -1589,7 +1661,7 @@ Create a Permission resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Permission-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L130">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L130">method <b>get</b></a>
 </h4>
 
 
@@ -1600,14 +1672,14 @@ Get an existing Permission resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Permission-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L120">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L120">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Permission-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L141">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L141">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1618,7 +1690,7 @@ Returns true if the given object is an instance of Permission.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Permission-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L151">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L151">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1626,7 +1698,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
 
 <h4 class="pdoc-member-header" id="Permission-eventSourceToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L155">property <b>eventSourceToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L155">property <b>eventSourceToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventSourceToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1634,7 +1706,7 @@ The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeF
 The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
 
 <h4 class="pdoc-member-header" id="Permission-function">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L159">property <b>function</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L159">property <b>function</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>function: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1642,7 +1714,7 @@ The Event Source Token to validate.  Used with [Alexa Skills](https://developer.
 Name of the Lambda function whose resource policy you are updating
 
 <h4 class="pdoc-member-header" id="Permission-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L120">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L120">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1651,7 +1723,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Permission-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L163">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L163">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>principal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1659,7 +1731,7 @@ deployments and may be missing (undefined) during planning phases.
 The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
 
 <h4 class="pdoc-member-header" id="Permission-qualifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L167">property <b>qualifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L167">property <b>qualifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>qualifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1667,7 +1739,7 @@ The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS ac
 Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
 
 <h4 class="pdoc-member-header" id="Permission-sourceAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L171">property <b>sourceAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L171">property <b>sourceAccount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceAccount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1675,7 +1747,7 @@ Query parameter to specify function version or alias name. The permission will t
 This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
 
 <h4 class="pdoc-member-header" id="Permission-sourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L179">property <b>sourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L179">property <b>sourceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1687,7 +1759,7 @@ For CloudWatch Events, this should be the ARN of the CloudWatch Events Rule.
 For API Gateway, this should be the ARN of the API, as described [here](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
 
 <h4 class="pdoc-member-header" id="Permission-statementId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L183">property <b>statementId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L183">property <b>statementId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>statementId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1695,7 +1767,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
 A unique statement identifier. By default generated by this provider.
 
 <h4 class="pdoc-member-header" id="Permission-statementIdPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L187">property <b>statementIdPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L187">property <b>statementIdPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>statementIdPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1703,7 +1775,7 @@ A unique statement identifier. By default generated by this provider.
 A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statementId`.
 
 <h4 class="pdoc-member-header" id="Permission-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L120">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L120">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1712,7 +1784,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ProvisionedConcurrencyConfig" data-link-title="ProvisionedConcurrencyConfig">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L44">
         Resource <strong>ProvisionedConcurrencyConfig</strong>
     </a>
 </h3>
@@ -1756,7 +1828,7 @@ Lambda Provisioned Concurrency Configs can be imported using the `function_name`
 ```
 
 <h4 class="pdoc-member-header" id="ProvisionedConcurrencyConfig-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L83"> <b>constructor</b></a>
 </h4>
 
 
@@ -1770,7 +1842,7 @@ Create a ProvisionedConcurrencyConfig resource with the given unique name, argum
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ProvisionedConcurrencyConfig-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -1781,14 +1853,14 @@ Get an existing ProvisionedConcurrencyConfig resource's state with the given nam
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ProvisionedConcurrencyConfig-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ProvisionedConcurrencyConfig-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1799,7 +1871,7 @@ Returns true if the given object is an instance of ProvisionedConcurrencyConfig.
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ProvisionedConcurrencyConfig-functionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L75">property <b>functionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L75">property <b>functionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>functionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1807,7 +1879,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Name or Amazon Resource Name (ARN) of the Lambda Function.
 
 <h4 class="pdoc-member-header" id="ProvisionedConcurrencyConfig-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1816,7 +1888,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ProvisionedConcurrencyConfig-provisionedConcurrentExecutions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L79">property <b>provisionedConcurrentExecutions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L79">property <b>provisionedConcurrentExecutions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>provisionedConcurrentExecutions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1824,7 +1896,7 @@ deployments and may be missing (undefined) during planning phases.
 Amount of capacity to allocate. Must be greater than or equal to `1`.
 
 <h4 class="pdoc-member-header" id="ProvisionedConcurrencyConfig-qualifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L83">property <b>qualifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L83">property <b>qualifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>qualifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1832,7 +1904,7 @@ Amount of capacity to allocate. Must be greater than or equal to `1`.
 Lambda Function version or Lambda Alias name.
 
 <h4 class="pdoc-member-header" id="ProvisionedConcurrencyConfig-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1843,7 +1915,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getAlias" data-link-title="getAlias">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getAlias.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getAlias.ts#L23">
         Function <strong>getAlias</strong>
     </a>
 </h3>
@@ -1866,8 +1938,33 @@ const production = pulumi.output(aws.lambda.getAlias({
 }, { async: true }));
 ```
 
+<h3 class="pdoc-module-header" id="getCodeSigningConfig" data-link-title="getCodeSigningConfig">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getCodeSigningConfig.ts#L24">
+        Function <strong>getCodeSigningConfig</strong>
+    </a>
+</h3>
+
+
+<pre class="highlight"><code><span class='kd'></span>getCodeSigningConfig(args: <a href='#GetCodeSigningConfigArgs'>GetCodeSigningConfigArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetCodeSigningConfigResult'>GetCodeSigningConfigResult</a>&gt;</code></pre>
+
+
+Provides information about a Lambda Code Signing Config. A code signing configuration defines a list of allowed signing profiles and defines the code-signing validation policy (action to be taken if deployment validation checks fail).
+
+For information about Lambda code signing configurations and how to use them, see [configuring code signing for Lambda functions](https://docs.aws.amazon.com/lambda/latest/dg/configuration-codesigning.html)
+
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const existingCsc = pulumi.output(aws.lambda.getCodeSigningConfig({
+    arn: `arn:aws:lambda:${var_aws_region}:${var_aws_account}:code-signing-config:csc-0f6c334abcdea4d8b`,
+}, { async: true }));
+```
+
 <h3 class="pdoc-module-header" id="getFunction" data-link-title="getFunction">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L24">
         Function <strong>getFunction</strong>
     </a>
 </h3>
@@ -1892,7 +1989,7 @@ const existing = aws.lambda.getFunction({
 ```
 
 <h3 class="pdoc-module-header" id="getInvocation" data-link-title="getInvocation">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getInvocation.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getInvocation.ts#L13">
         Function <strong>getInvocation</strong>
     </a>
 </h3>
@@ -1906,7 +2003,7 @@ The lambda function is invoked with [RequestResponse](https://docs.aws.amazon.co
 invocation type.
 
 <h3 class="pdoc-module-header" id="getLayerVersion" data-link-title="getLayerVersion">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getLayerVersion.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getLayerVersion.ts#L24">
         Function <strong>getLayerVersion</strong>
     </a>
 </h3>
@@ -1933,7 +2030,7 @@ const existing = aws.lambda.getLayerVersion({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AliasArgs" data-link-title="AliasArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L180">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L180">
         interface <strong>AliasArgs</strong>
     </a>
 </h3>
@@ -1943,7 +2040,7 @@ const existing = aws.lambda.getLayerVersion({
 The set of arguments for constructing a Alias resource.
 
 <h4 class="pdoc-member-header" id="AliasArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L184">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L184">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1951,7 +2048,7 @@ The set of arguments for constructing a Alias resource.
 Description of the alias.
 
 <h4 class="pdoc-member-header" id="AliasArgs-functionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L188">property <b>functionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L188">property <b>functionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1959,7 +2056,7 @@ Description of the alias.
 Lambda Function name or ARN.
 
 <h4 class="pdoc-member-header" id="AliasArgs-functionVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L192">property <b>functionVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L192">property <b>functionVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1967,7 +2064,7 @@ Lambda Function name or ARN.
 Lambda function version for which you are creating the alias. Pattern: `(\$LATEST|[0-9]+)`.
 
 <h4 class="pdoc-member-header" id="AliasArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L196">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L196">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1975,7 +2072,7 @@ Lambda function version for which you are creating the alias. Pattern: `(\$LATES
 Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
 
 <h4 class="pdoc-member-header" id="AliasArgs-routingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L200">property <b>routingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L200">property <b>routingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AliasRoutingConfig'>AliasRoutingConfig</a>&gt;;</code></pre>
@@ -1983,7 +2080,7 @@ Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
 The Lambda alias' route configuration settings. Fields documented below
 
 <h3 class="pdoc-module-header" id="AliasState" data-link-title="AliasState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L146">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L146">
         interface <strong>AliasState</strong>
     </a>
 </h3>
@@ -1993,7 +2090,7 @@ The Lambda alias' route configuration settings. Fields documented below
 Input properties used for looking up and filtering Alias resources.
 
 <h4 class="pdoc-member-header" id="AliasState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L150">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L150">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2001,7 +2098,7 @@ Input properties used for looking up and filtering Alias resources.
 The Amazon Resource Name (ARN) identifying your Lambda function alias.
 
 <h4 class="pdoc-member-header" id="AliasState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L154">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L154">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2009,7 +2106,7 @@ The Amazon Resource Name (ARN) identifying your Lambda function alias.
 Description of the alias.
 
 <h4 class="pdoc-member-header" id="AliasState-functionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L158">property <b>functionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L158">property <b>functionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2017,7 +2114,7 @@ Description of the alias.
 Lambda Function name or ARN.
 
 <h4 class="pdoc-member-header" id="AliasState-functionVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L162">property <b>functionVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L162">property <b>functionVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2025,7 +2122,7 @@ Lambda Function name or ARN.
 Lambda function version for which you are creating the alias. Pattern: `(\$LATEST|[0-9]+)`.
 
 <h4 class="pdoc-member-header" id="AliasState-invokeArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L166">property <b>invokeArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L166">property <b>invokeArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>invokeArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2033,7 +2130,7 @@ Lambda function version for which you are creating the alias. Pattern: `(\$LATES
 The ARN to be used for invoking Lambda Function from API Gateway - to be used in `aws.apigateway.Integration`'s `uri`
 
 <h4 class="pdoc-member-header" id="AliasState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L170">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L170">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2041,7 +2138,7 @@ The ARN to be used for invoking Lambda Function from API Gateway - to be used in
 Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
 
 <h4 class="pdoc-member-header" id="AliasState-routingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/alias.ts#L174">property <b>routingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/alias.ts#L174">property <b>routingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AliasRoutingConfig'>AliasRoutingConfig</a>&gt;;</code></pre>
@@ -2049,7 +2146,7 @@ Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
 The Lambda alias' route configuration settings. Fields documented below
 
 <h3 class="pdoc-module-header" id="BaseCallbackFunctionArgs" data-link-title="BaseCallbackFunctionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L157">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L157">
         type <strong>BaseCallbackFunctionArgs</strong>
     </a>
 </h3>
@@ -2070,7 +2167,7 @@ ARN. Properties like [runtime] are now optional.  And some properties (like [cod
 disallowed.
 
 <h3 class="pdoc-module-header" id="Callback" data-link-title="Callback">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L131">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L131">
         type <strong>Callback</strong>
     </a>
 </h3>
@@ -2096,7 +2193,7 @@ synchronous function must be provided.  The synchronous function should return n
 should instead invoke 'callback' when complete.
 
 <h3 class="pdoc-module-header" id="CallbackFactory" data-link-title="CallbackFactory">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L139">
         type <strong>CallbackFactory</strong>
     </a>
 </h3>
@@ -2109,7 +2206,7 @@ once that can then be used across all invocations of the Lambda (as long as the 
 the same warm node instance).
 
 <h3 class="pdoc-module-header" id="CallbackFunction" data-link-title="CallbackFunction">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L258">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L258">
         class <strong>CallbackFunction</strong>
     </a>
 </h3>
@@ -2123,14 +2220,14 @@ https://www.pulumi.com/docs/tutorials/aws/serializing-functions/ for additional
 details on this process.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L258"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L258"> <b>constructor</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>public </span><span class='kd'>new</span> CallbackFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;E, R&gt;, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="CallbackFunction-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L152">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L29">method <b>get</b></a>
 </h4>
 
 
@@ -2141,14 +2238,14 @@ Get an existing Function resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L258">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L258">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CallbackFunction-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L163">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L40">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2159,7 +2256,7 @@ Returns true if the given object is an instance of Function.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L173">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L50">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2167,15 +2264,23 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-code">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L177">property <b>code</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L54">property <b>code</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>code: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
 
+<h4 class="pdoc-member-header" id="CallbackFunction-codeSigningConfigArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L58">property <b>codeSigningConfigArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>codeSigningConfigArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Amazon Resource Name (ARN) for a Code Signing Configuration.
+
 <h4 class="pdoc-member-header" id="CallbackFunction-deadLetterConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L181">property <b>deadLetterConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L62">property <b>deadLetterConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deadLetterConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FunctionDeadLetterConfig'>FunctionDeadLetterConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2183,7 +2288,7 @@ The path to the function's deployment package within the local filesystem. If de
 Nested block to configure the function's *dead letter queue*. See details below.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L185">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L66">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2191,7 +2296,7 @@ Nested block to configure the function's *dead letter queue*. See details below.
 Description of what your Lambda Function does.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L189">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L70">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>environment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FunctionEnvironment'>FunctionEnvironment</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2199,7 +2304,7 @@ Description of what your Lambda Function does.
 The Lambda environment's configuration settings. Fields documented below.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-fileSystemConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L193">property <b>fileSystemConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L74">property <b>fileSystemConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fileSystemConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FunctionFileSystemConfig'>FunctionFileSystemConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2207,7 +2312,7 @@ The Lambda environment's configuration settings. Fields documented below.
 The connection settings for an EFS file system. Fields documented below. Before creating or updating Lambda functions with `fileSystemConfig`, EFS mount targets much be in available lifecycle state. Use `dependsOn` to explicitly declare this dependency. See [Using Amazon EFS with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/services-efs.html).
 
 <h4 class="pdoc-member-header" id="CallbackFunction-handler">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L197">property <b>handler</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L78">property <b>handler</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>handler: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2215,7 +2320,7 @@ The connection settings for an EFS file system. Fields documented below. Before 
 The function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L258">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L258">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2224,23 +2329,23 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-invokeArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L201">property <b>invokeArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L82">property <b>invokeArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>invokeArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The ARN to be used for invoking Lambda Function from API Gateway - to be used in `aws.apigateway.Integration`'s `uri`
+The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
 
 <h4 class="pdoc-member-header" id="CallbackFunction-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L205">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L86">property <b>kmsKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key that is used to encrypt environment variables. If this configuration is not provided when environment variables are in use, AWS Lambda uses a default service key. If this configuration is provided when environment variables are not in use, the AWS Lambda API does not save this configuration and this provider will show a perpetual difference of adding the key. To fix the perpetual difference, remove this configuration.
+(Optional) The ARN for the KMS encryption key.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-lastModified">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L209">property <b>lastModified</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L90">property <b>lastModified</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastModified: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2248,7 +2353,7 @@ Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key that is u
 The date this resource was last modified.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-layers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L213">property <b>layers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L94">property <b>layers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>layers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2256,7 +2361,7 @@ The date this resource was last modified.
 List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)
 
 <h4 class="pdoc-member-header" id="CallbackFunction-memorySize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L217">property <b>memorySize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L98">property <b>memorySize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>memorySize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2264,7 +2369,7 @@ List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Functi
 Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
 
 <h4 class="pdoc-member-header" id="CallbackFunction-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L221">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L102">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2272,7 +2377,7 @@ Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128
 A unique name for your Lambda Function.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-publish">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L225">property <b>publish</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L106">property <b>publish</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publish: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2280,7 +2385,7 @@ A unique name for your Lambda Function.
 Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-qualifiedArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L230">property <b>qualifiedArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L111">property <b>qualifiedArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>qualifiedArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2289,7 +2394,7 @@ The Amazon Resource Name (ARN) identifying your Lambda Function Version
 (if versioning is enabled via `publish = true`).
 
 <h4 class="pdoc-member-header" id="CallbackFunction-reservedConcurrentExecutions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L234">property <b>reservedConcurrentExecutions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L115">property <b>reservedConcurrentExecutions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>reservedConcurrentExecutions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2297,7 +2402,7 @@ The Amazon Resource Name (ARN) identifying your Lambda Function Version
 The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
 
 <h4 class="pdoc-member-header" id="CallbackFunction-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L238">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L119">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
@@ -2305,7 +2410,7 @@ The amount of reserved concurrent executions for this lambda function. A value o
 IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html) for more details.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-roleInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L389">property <b>roleInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L389">property <b>roleInstance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleInstance?: iam.Role;</code></pre>
@@ -2314,7 +2419,7 @@ Actual Role instance value for this Function.  Will only be set if this function
 created from [createFunction]
 
 <h4 class="pdoc-member-header" id="CallbackFunction-runtime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L242">property <b>runtime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L123">property <b>runtime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>runtime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2322,7 +2427,7 @@ created from [createFunction]
 See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-s3Bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L246">property <b>s3Bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L127">property <b>s3Bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3Bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2330,7 +2435,7 @@ See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.h
 The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-s3Key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L250">property <b>s3Key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L131">property <b>s3Key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3Key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2338,23 +2443,39 @@ The S3 bucket location containing the function's deployment package. Conflicts w
 The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-s3ObjectVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L254">property <b>s3ObjectVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L135">property <b>s3ObjectVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3ObjectVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The object version containing the function's deployment package. Conflicts with `filename`.
 
+<h4 class="pdoc-member-header" id="CallbackFunction-signingJobArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L139">property <b>signingJobArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>signingJobArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Amazon Resource Name (ARN) of a signing job.
+
+<h4 class="pdoc-member-header" id="CallbackFunction-signingProfileVersionArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L143">property <b>signingProfileVersionArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>signingProfileVersionArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Amazon Resource Name (ARN) for a signing profile version.
+
 <h4 class="pdoc-member-header" id="CallbackFunction-sourceCodeHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L258">property <b>sourceCodeHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L147">property <b>sourceCodeHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceCodeHash: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3Key`. The usual way to set this is `filebase64sha256("file.zip")` (this provider 0.11.12 and later) or `base64sha256(file("file.zip"))` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda function source archive.
+Base64-encoded representation of raw SHA-256 sum of the zip file, provided either via `filename` or `s3_*` parameters.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-sourceCodeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L262">property <b>sourceCodeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L151">property <b>sourceCodeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceCodeSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2362,15 +2483,15 @@ Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the pack
 The size in bytes of the function .zip file.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L266">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L155">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-A mapping of tags to assign to the object.
+A map of tags to assign to the object.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L270">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L159">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2378,12 +2499,12 @@ A mapping of tags to assign to the object.
 The amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
 
 <h4 class="pdoc-member-header" id="CallbackFunction-tracingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L271">property <b>tracingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L160">property <b>tracingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tracingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FunctionTracingConfig'>FunctionTracingConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CallbackFunction-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L258">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L258">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2392,7 +2513,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L275">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L164">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2400,7 +2521,7 @@ deployments.
 Latest published version of your Lambda Function.
 
 <h4 class="pdoc-member-header" id="CallbackFunction-vpcConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L279">property <b>vpcConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L168">property <b>vpcConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FunctionVpcConfig'>FunctionVpcConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2408,7 +2529,7 @@ Latest published version of your Lambda Function.
 Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC](http://docs.aws.amazon.com/lambda/latest/dg/vpc.html)
 
 <h3 class="pdoc-module-header" id="CallbackFunctionArgs" data-link-title="CallbackFunctionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L201">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L201">
         interface <strong>CallbackFunctionArgs</strong>
     </a>
 </h3>
@@ -2429,7 +2550,7 @@ ARN. Properties like [runtime] are now optional.  And some properties (like [cod
 disallowed.
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-callback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L206">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L206">property <b>callback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;E, R&gt;;</code></pre>
@@ -2438,7 +2559,7 @@ The Javascript callback to use as the entrypoint for the AWS Lambda out of.  Eit
 [callback] or [callbackFactory] must be provided.
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-callbackFactory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L218">property <b>callbackFactory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L218">property <b>callbackFactory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;E, R&gt;;</code></pre>
@@ -2453,7 +2574,7 @@ It can run whatever code it needs, and will end by returning the actual function
 will call into each time the Lambda is invoked.
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-code">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L162">property <b>code</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L162">property <b>code</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>code?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</code></pre>
@@ -2462,7 +2583,7 @@ Not allowed when creating an aws.serverless.Function.  The [code] will be genera
 passed in JavaScript callback.
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-codePathOptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L191">property <b>codePathOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L191">property <b>codePathOptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>codePathOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#CodePathOptions'>pulumi.runtime.CodePathOptions</a>;</code></pre>
@@ -2471,7 +2592,7 @@ Options to control which paths/packages should be included or excluded in the zi
 the code for the AWS lambda.
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-handler">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L168">property <b>handler</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L168">property <b>handler</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>handler?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</code></pre>
@@ -2480,7 +2601,7 @@ Not allowed when creating an aws.serverless.Function.  The [code] will be genera
 passed in JavaScript callback.
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-policies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L180">property <b>policies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L180">property <b>policies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policies?: arn.ARN[];</code></pre>
@@ -2490,7 +2611,7 @@ If neither [role] nor [policies] is provided, a default policy of [iam.AWSLambda
 will be used instead.
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L173">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L173">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: iam.Role;</code></pre>
@@ -2498,15 +2619,107 @@ will be used instead.
 A pre-created role to use for the Function. If not provided, [policies] will be used.
 
 <h4 class="pdoc-member-header" id="CallbackFunctionArgs-runtime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L185">property <b>runtime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L185">property <b>runtime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtime?: Runtime;</code></pre>
 
 The Lambda runtime to use.  If not provided, will default to [NodeJS8d10Runtime]
 
+<h3 class="pdoc-module-header" id="CodeSigningConfigArgs" data-link-title="CodeSigningConfigArgs">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L168">
+        interface <strong>CodeSigningConfigArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CodeSigningConfigArgs</span></code></pre>
+
+The set of arguments for constructing a CodeSigningConfig resource.
+
+<h4 class="pdoc-member-header" id="CodeSigningConfigArgs-allowedPublishers">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L172">property <b>allowedPublishers</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>allowedPublishers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CodeSigningConfigAllowedPublishers'>CodeSigningConfigAllowedPublishers</a>&gt;;</code></pre>
+
+A configuration block of allowed publishers as signing profiles for this code signing configuration. Detailed below.
+
+<h4 class="pdoc-member-header" id="CodeSigningConfigArgs-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L176">property <b>description</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Descriptive name for this code signing configuration.
+
+<h4 class="pdoc-member-header" id="CodeSigningConfigArgs-policies">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L180">property <b>policies</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CodeSigningConfigPolicies'>CodeSigningConfigPolicies</a>&gt;;</code></pre>
+
+A configuration block of code signing policies that define the actions to take if the validation checks fail. Detailed below.
+
+<h3 class="pdoc-module-header" id="CodeSigningConfigState" data-link-title="CodeSigningConfigState">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L138">
+        interface <strong>CodeSigningConfigState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>CodeSigningConfigState</span></code></pre>
+
+Input properties used for looking up and filtering CodeSigningConfig resources.
+
+<h4 class="pdoc-member-header" id="CodeSigningConfigState-allowedPublishers">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L142">property <b>allowedPublishers</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>allowedPublishers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CodeSigningConfigAllowedPublishers'>CodeSigningConfigAllowedPublishers</a>&gt;;</code></pre>
+
+A configuration block of allowed publishers as signing profiles for this code signing configuration. Detailed below.
+
+<h4 class="pdoc-member-header" id="CodeSigningConfigState-arn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L146">property <b>arn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Amazon Resource Name (ARN) of the code signing configuration.
+
+<h4 class="pdoc-member-header" id="CodeSigningConfigState-configId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L150">property <b>configId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>configId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Unique identifier for the code signing configuration.
+
+<h4 class="pdoc-member-header" id="CodeSigningConfigState-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L154">property <b>description</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Descriptive name for this code signing configuration.
+
+<h4 class="pdoc-member-header" id="CodeSigningConfigState-lastModified">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L158">property <b>lastModified</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>lastModified?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The date and time that the code signing configuration was last modified.
+
+<h4 class="pdoc-member-header" id="CodeSigningConfigState-policies">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/codeSigningConfig.ts#L162">property <b>policies</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CodeSigningConfigPolicies'>CodeSigningConfigPolicies</a>&gt;;</code></pre>
+
+A configuration block of code signing policies that define the actions to take if the validation checks fail. Detailed below.
+
 <h3 class="pdoc-module-header" id="Context" data-link-title="Context">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L29">
         interface <strong>Context</strong>
     </a>
 </h3>
@@ -2517,7 +2730,7 @@ Context is the shape of the context object passed to a Function callback.  For m
 see: https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-context.html
 
 <h4 class="pdoc-member-header" id="Context-getRemainingTimeInMillis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L109">method <b>getRemainingTimeInMillis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L109">method <b>getRemainingTimeInMillis</b></a>
 </h4>
 
 
@@ -2532,7 +2745,7 @@ You can use this method to check the remaining time during your function executi
 appropriate corrective action at run time.
 
 <h4 class="pdoc-member-header" id="Context-awsRequestId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L72">property <b>awsRequestId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L72">property <b>awsRequestId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>awsRequestId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2544,7 +2757,7 @@ If AWS Lambda retries the invocation (for example, in a situation where the Lamb
 that is processing Kinesis records throws an exception), the request ID remains the same.
 
 <h4 class="pdoc-member-header" id="Context-callbackWaitsForEmptyEventLoop">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L39">property <b>callbackWaitsForEmptyEventLoop</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L39">property <b>callbackWaitsForEmptyEventLoop</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>callbackWaitsForEmptyEventLoop: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -2558,7 +2771,7 @@ in the event loop (any remaining events in the event loop processed when the Lam
 is called next and if AWS Lambda chooses to use the frozen process).
 
 <h4 class="pdoc-member-header" id="Context-clientContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L99">property <b>clientContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L99">property <b>clientContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientContext: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>;</code></pre>
@@ -2567,7 +2780,7 @@ Information about the client application and device when invoked through the AWS
 It can be null.
 
 <h4 class="pdoc-member-header" id="Context-functionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L44">property <b>functionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L44">property <b>functionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2575,7 +2788,7 @@ It can be null.
 Name of the Lambda function that is executing.
 
 <h4 class="pdoc-member-header" id="Context-functionVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L50">property <b>functionVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L50">property <b>functionVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2584,7 +2797,7 @@ The Lambda function version that is executing. If an alias is used to invoke the
 then function_version will be the version the alias points to.
 
 <h4 class="pdoc-member-header" id="Context-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L93">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L93">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>;</code></pre>
@@ -2593,7 +2806,7 @@ Information about the Amazon Cognito identity provider when invoked through the 
 SDK. It can be null.
 
 <h4 class="pdoc-member-header" id="Context-invokedFunctionArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L57">property <b>invokedFunctionArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L57">property <b>invokedFunctionArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>invokedFunctionArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2603,7 +2816,7 @@ unqualified ARN executes the $LATEST version and aliases execute the function ve
 pointing to.
 
 <h4 class="pdoc-member-header" id="Context-logGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L77">property <b>logGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L77">property <b>logGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2611,7 +2824,7 @@ pointing to.
 The name of the CloudWatch log group where you can find logs written by your Lambda function.
 
 <h4 class="pdoc-member-header" id="Context-logStreamName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L87">property <b>logStreamName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L87">property <b>logStreamName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logStreamName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2624,7 +2837,7 @@ if the execution role that grants necessary permissions to the Lambda function d
 include permissions for the CloudWatch actions.
 
 <h4 class="pdoc-member-header" id="Context-memoryLimitInMB">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L63">property <b>memoryLimitInMB</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L63">property <b>memoryLimitInMB</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memoryLimitInMB: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2633,7 +2846,7 @@ Memory limit, in MB, you configured for the Lambda function. You set the memory 
 time you create a Lambda function and you can change it later.
 
 <h3 class="pdoc-module-header" id="createFunctionFromEventHandler" data-link-title="createFunctionFromEventHandler">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L240">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L240">
         function <strong>createFunctionFromEventHandler</strong>
     </a>
 </h3>
@@ -2642,7 +2855,7 @@ time you create a Lambda function and you can change it later.
 <pre class="highlight"><code><span class='kd'></span>createFunctionFromEventHandler&lt;E,R&gt;(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#EventHandler'>EventHandler</a>&lt;E, R&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ResourceOptions'>pulumi.ResourceOptions</a>): LambdaFunction</code></pre>
 
 <h3 class="pdoc-module-header" id="CustomRuntime" data-link-title="CustomRuntime">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/runtimes.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/runtimes.ts#L49">
         let <strong>CustomRuntime</strong>
     </a>
 </h3>
@@ -2652,7 +2865,7 @@ time you create a Lambda function and you can change it later.
 The CustomRuntime constant is deprecated, use Runtime.Custom instead.
 
 <h3 class="pdoc-module-header" id="DotnetCore1d0Runtime" data-link-title="DotnetCore1d0Runtime">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/runtimes.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/runtimes.ts#L60">
         let <strong>DotnetCore1d0Runtime</strong>
     </a>
 </h3>
@@ -2663,7 +2876,7 @@ No longer supported. New lambda functions created using this runtime will fail
 </div>
 <pre class="highlight"><code><span class='kd'>let</span> DotnetCore1d0Runtime: <span class='s2'>"dotnetcore2.1"</span> | <span class='s2'>"dotnetcore3.1"</span> | <span class='s2'>"go1.x"</span> | <span class='s2'>"java8"</span> | <span class='s2'>"java8.al2"</span> | <span class='s2'>"java11"</span> | <span class='s2'>"ruby2.5"</span> | <span class='s2'>"ruby2.7"</span> | <span class='s2'>"nodejs10.x"</span> | <span class='s2'>"nodejs12.x"</span> | <span class='s2'>"python2.7"</span> | <span class='s2'>"python3.6"</span> | <span class='s2'>"python3.7"</span> | <span class='s2'>"python3.8"</span> | <span class='s2'>"provided"</span> | <span class='s2'>"provided.al2"</span> = <span class='s2'> &#34;dotnetcore1.0&#34; as Runtime</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DotnetCore2d0Runtime" data-link-title="DotnetCore2d0Runtime">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/runtimes.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/runtimes.ts#L62">
         let <strong>DotnetCore2d0Runtime</strong>
     </a>
 </h3>
@@ -2674,7 +2887,7 @@ No longer supported. New lambda functions created using this runtime will fail
 </div>
 <pre class="highlight"><code><span class='kd'>let</span> DotnetCore2d0Runtime: <span class='s2'>"dotnetcore2.1"</span> | <span class='s2'>"dotnetcore3.1"</span> | <span class='s2'>"go1.x"</span> | <span class='s2'>"java8"</span> | <span class='s2'>"java8.al2"</span> | <span class='s2'>"java11"</span> | <span class='s2'>"ruby2.5"</span> | <span class='s2'>"ruby2.7"</span> | <span class='s2'>"nodejs10.x"</span> | <span class='s2'>"nodejs12.x"</span> | <span class='s2'>"python2.7"</span> | <span class='s2'>"python3.6"</span> | <span class='s2'>"python3.7"</span> | <span class='s2'>"python3.8"</span> | <span class='s2'>"provided"</span> | <span class='s2'>"provided.al2"</span> = <span class='s2'> &#34;dotnetcore2.0&#34; as Runtime</span>;</code></pre>
 <h3 class="pdoc-module-header" id="DotnetCore2d1Runtime" data-link-title="DotnetCore2d1Runtime">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/runtimes.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/runtimes.ts#L23">
         let <strong>DotnetCore2d1Runtime</strong>
     </a>
 </h3>
@@ -2684,7 +2897,7 @@ No longer supported. New lambda functions created using this runtime will fail
 The DotnetCore2d1Runtime constant is deprecated, use Runtime.DotnetCore2d1 instead.
 
 <h3 class="pdoc-module-header" id="DotnetCore3d1Runtime" data-link-title="DotnetCore3d1Runtime">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/runtimes.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/runtimes.ts#L25">
         let <strong>DotnetCore3d1Runtime</strong>
     </a>
 </h3>
@@ -2694,7 +2907,7 @@ The DotnetCore2d1Runtime constant is deprecated, use Runtime.DotnetCore2d1 inste
 The DotnetCore3d1Runtime constant is deprecated, use Runtime.DotnetCore3d1 instead.
 
 <h3 class="pdoc-module-header" id="EventHandler" data-link-title="EventHandler">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L148">
         type <strong>EventHandler</strong>
     </a>
 </h3>
@@ -2708,7 +2921,7 @@ resultant AWS Lambda is required, clients can call [createCallbackFunction] dire
 result of that to any code that needs an EventHandler.
 
 <h3 class="pdoc-module-header" id="EventSourceMappingArgs" data-link-title="EventSourceMappingArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L291">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L291">
         interface <strong>EventSourceMappingArgs</strong>
     </a>
 </h3>
@@ -2718,7 +2931,7 @@ result of that to any code that needs an EventHandler.
 The set of arguments for constructing a EventSourceMapping resource.
 
 <h4 class="pdoc-member-header" id="EventSourceMappingArgs-batchSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L295">property <b>batchSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L295">property <b>batchSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>batchSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2726,17 +2939,17 @@ The set of arguments for constructing a EventSourceMapping resource.
 The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB and Kinesis, `10` for SQS.
 
 <h4 class="pdoc-member-header" id="EventSourceMappingArgs-bisectBatchOnFunctionError">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L296">property <b>bisectBatchOnFunctionError</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L296">property <b>bisectBatchOnFunctionError</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bisectBatchOnFunctionError?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSourceMappingArgs-destinationConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L297">property <b>destinationConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L297">property <b>destinationConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventSourceMappingDestinationConfig'>EventSourceMappingDestinationConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSourceMappingArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L301">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L301">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2744,7 +2957,7 @@ The largest number of records that Lambda will retrieve from your event source a
 Determines if the mapping will be enabled on creation. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="EventSourceMappingArgs-eventSourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L305">property <b>eventSourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L305">property <b>eventSourceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventSourceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2752,7 +2965,7 @@ Determines if the mapping will be enabled on creation. Defaults to `true`.
 The event source ARN - can be a Kinesis stream, DynamoDB stream, or SQS queue.
 
 <h4 class="pdoc-member-header" id="EventSourceMappingArgs-functionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L309">property <b>functionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L309">property <b>functionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2760,7 +2973,7 @@ The event source ARN - can be a Kinesis stream, DynamoDB stream, or SQS queue.
 The name or the ARN of the Lambda function that will be subscribing to events.
 
 <h4 class="pdoc-member-header" id="EventSourceMappingArgs-maximumBatchingWindowInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L313">property <b>maximumBatchingWindowInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L313">property <b>maximumBatchingWindowInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximumBatchingWindowInSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2768,22 +2981,22 @@ The name or the ARN of the Lambda function that will be subscribing to events.
 The maximum amount of time to gather records before invoking the function, in seconds.  Records will continue to buffer until either `maximumBatchingWindowInSeconds` expires or `batchSize` has been met. Defaults to as soon as records are available in the stream. If the batch it reads from the stream only has one record in it, Lambda only sends one record to the function.
 
 <h4 class="pdoc-member-header" id="EventSourceMappingArgs-maximumRecordAgeInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L314">property <b>maximumRecordAgeInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L314">property <b>maximumRecordAgeInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximumRecordAgeInSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSourceMappingArgs-maximumRetryAttempts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L315">property <b>maximumRetryAttempts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L315">property <b>maximumRetryAttempts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximumRetryAttempts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSourceMappingArgs-parallelizationFactor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L316">property <b>parallelizationFactor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L316">property <b>parallelizationFactor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parallelizationFactor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSourceMappingArgs-startingPosition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L320">property <b>startingPosition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L320">property <b>startingPosition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startingPosition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2791,7 +3004,7 @@ The maximum amount of time to gather records before invoking the function, in se
 The position in the stream where AWS Lambda should start reading. Must be one of `AT_TIMESTAMP` (Kinesis only), `LATEST` or `TRIM_HORIZON` if getting events from Kinesis or DynamoDB. Must not be provided if getting events from SQS. More information about these positions can be found in the [AWS DynamoDB Streams API Reference](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_streams_GetShardIterator.html) and [AWS Kinesis API Reference](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#Kinesis-GetShardIterator-request-ShardIteratorType).
 
 <h4 class="pdoc-member-header" id="EventSourceMappingArgs-startingPositionTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L329">property <b>startingPositionTimestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L329">property <b>startingPositionTimestamp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startingPositionTimestamp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2804,7 +3017,7 @@ A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8)
 * `destinationConfig`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
 
 <h3 class="pdoc-module-header" id="EventSourceMappingState" data-link-title="EventSourceMappingState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L223">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L223">
         interface <strong>EventSourceMappingState</strong>
     </a>
 </h3>
@@ -2814,7 +3027,7 @@ A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8)
 Input properties used for looking up and filtering EventSourceMapping resources.
 
 <h4 class="pdoc-member-header" id="EventSourceMappingState-batchSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L227">property <b>batchSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L227">property <b>batchSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>batchSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2822,17 +3035,17 @@ Input properties used for looking up and filtering EventSourceMapping resources.
 The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to `100` for DynamoDB and Kinesis, `10` for SQS.
 
 <h4 class="pdoc-member-header" id="EventSourceMappingState-bisectBatchOnFunctionError">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L228">property <b>bisectBatchOnFunctionError</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L228">property <b>bisectBatchOnFunctionError</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bisectBatchOnFunctionError?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSourceMappingState-destinationConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L229">property <b>destinationConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L229">property <b>destinationConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EventSourceMappingDestinationConfig'>EventSourceMappingDestinationConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSourceMappingState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L233">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L233">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2840,7 +3053,7 @@ The largest number of records that Lambda will retrieve from your event source a
 Determines if the mapping will be enabled on creation. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="EventSourceMappingState-eventSourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L237">property <b>eventSourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L237">property <b>eventSourceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventSourceArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2848,7 +3061,7 @@ Determines if the mapping will be enabled on creation. Defaults to `true`.
 The event source ARN - can be a Kinesis stream, DynamoDB stream, or SQS queue.
 
 <h4 class="pdoc-member-header" id="EventSourceMappingState-functionArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L241">property <b>functionArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L241">property <b>functionArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2856,7 +3069,7 @@ The event source ARN - can be a Kinesis stream, DynamoDB stream, or SQS queue.
 The the ARN of the Lambda function the event source mapping is sending events to. (Note: this is a computed value that differs from `functionName` above.)
 
 <h4 class="pdoc-member-header" id="EventSourceMappingState-functionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L245">property <b>functionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L245">property <b>functionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2864,7 +3077,7 @@ The the ARN of the Lambda function the event source mapping is sending events to
 The name or the ARN of the Lambda function that will be subscribing to events.
 
 <h4 class="pdoc-member-header" id="EventSourceMappingState-lastModified">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L249">property <b>lastModified</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L249">property <b>lastModified</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastModified?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2872,7 +3085,7 @@ The name or the ARN of the Lambda function that will be subscribing to events.
 The date this resource was last modified.
 
 <h4 class="pdoc-member-header" id="EventSourceMappingState-lastProcessingResult">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L253">property <b>lastProcessingResult</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L253">property <b>lastProcessingResult</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastProcessingResult?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2880,7 +3093,7 @@ The date this resource was last modified.
 The result of the last AWS Lambda invocation of your Lambda function.
 
 <h4 class="pdoc-member-header" id="EventSourceMappingState-maximumBatchingWindowInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L257">property <b>maximumBatchingWindowInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L257">property <b>maximumBatchingWindowInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximumBatchingWindowInSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2888,22 +3101,22 @@ The result of the last AWS Lambda invocation of your Lambda function.
 The maximum amount of time to gather records before invoking the function, in seconds.  Records will continue to buffer until either `maximumBatchingWindowInSeconds` expires or `batchSize` has been met. Defaults to as soon as records are available in the stream. If the batch it reads from the stream only has one record in it, Lambda only sends one record to the function.
 
 <h4 class="pdoc-member-header" id="EventSourceMappingState-maximumRecordAgeInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L258">property <b>maximumRecordAgeInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L258">property <b>maximumRecordAgeInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximumRecordAgeInSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSourceMappingState-maximumRetryAttempts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L259">property <b>maximumRetryAttempts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L259">property <b>maximumRetryAttempts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximumRetryAttempts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSourceMappingState-parallelizationFactor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L260">property <b>parallelizationFactor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L260">property <b>parallelizationFactor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parallelizationFactor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSourceMappingState-startingPosition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L264">property <b>startingPosition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L264">property <b>startingPosition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startingPosition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2911,7 +3124,7 @@ The maximum amount of time to gather records before invoking the function, in se
 The position in the stream where AWS Lambda should start reading. Must be one of `AT_TIMESTAMP` (Kinesis only), `LATEST` or `TRIM_HORIZON` if getting events from Kinesis or DynamoDB. Must not be provided if getting events from SQS. More information about these positions can be found in the [AWS DynamoDB Streams API Reference](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_streams_GetShardIterator.html) and [AWS Kinesis API Reference](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#Kinesis-GetShardIterator-request-ShardIteratorType).
 
 <h4 class="pdoc-member-header" id="EventSourceMappingState-startingPositionTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L273">property <b>startingPositionTimestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L273">property <b>startingPositionTimestamp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>startingPositionTimestamp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2924,7 +3137,7 @@ A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8)
 * `destinationConfig`: - (Optional) An Amazon SQS queue or Amazon SNS topic destination for failed records. Only available for stream sources (DynamoDB and Kinesis). Detailed below.
 
 <h4 class="pdoc-member-header" id="EventSourceMappingState-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L277">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L277">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2932,7 +3145,7 @@ A timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8)
 The state of the event source mapping.
 
 <h4 class="pdoc-member-header" id="EventSourceMappingState-stateTransitionReason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L281">property <b>stateTransitionReason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L281">property <b>stateTransitionReason</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stateTransitionReason?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2940,7 +3153,7 @@ The state of the event source mapping.
 The reason the event source mapping is in its current state.
 
 <h4 class="pdoc-member-header" id="EventSourceMappingState-uuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/eventSourceMapping.ts#L285">property <b>uuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/eventSourceMapping.ts#L285">property <b>uuid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uuid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2948,7 +3161,7 @@ The reason the event source mapping is in its current state.
 The UUID of the created event source mapping.
 
 <h3 class="pdoc-module-header" id="FunctionArgs" data-link-title="FunctionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L491">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L398">
         interface <strong>FunctionArgs</strong>
     </a>
 </h3>
@@ -2958,15 +3171,23 @@ The UUID of the created event source mapping.
 The set of arguments for constructing a Function resource.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-code">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L495">property <b>code</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L402">property <b>code</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>code?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a>&gt;;</code></pre>
 
 The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
 
+<h4 class="pdoc-member-header" id="FunctionArgs-codeSigningConfigArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L406">property <b>codeSigningConfigArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>codeSigningConfigArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Amazon Resource Name (ARN) for a Code Signing Configuration.
+
 <h4 class="pdoc-member-header" id="FunctionArgs-deadLetterConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L499">property <b>deadLetterConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L410">property <b>deadLetterConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deadLetterConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FunctionDeadLetterConfig'>FunctionDeadLetterConfig</a>&gt;;</code></pre>
@@ -2974,7 +3195,7 @@ The path to the function's deployment package within the local filesystem. If de
 Nested block to configure the function's *dead letter queue*. See details below.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L503">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L414">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2982,7 +3203,7 @@ Nested block to configure the function's *dead letter queue*. See details below.
 Description of what your Lambda Function does.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L507">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L418">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FunctionEnvironment'>FunctionEnvironment</a>&gt;;</code></pre>
@@ -2990,7 +3211,7 @@ Description of what your Lambda Function does.
 The Lambda environment's configuration settings. Fields documented below.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-fileSystemConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L511">property <b>fileSystemConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L422">property <b>fileSystemConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fileSystemConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FunctionFileSystemConfig'>FunctionFileSystemConfig</a>&gt;;</code></pre>
@@ -2998,7 +3219,7 @@ The Lambda environment's configuration settings. Fields documented below.
 The connection settings for an EFS file system. Fields documented below. Before creating or updating Lambda functions with `fileSystemConfig`, EFS mount targets much be in available lifecycle state. Use `dependsOn` to explicitly declare this dependency. See [Using Amazon EFS with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/services-efs.html).
 
 <h4 class="pdoc-member-header" id="FunctionArgs-handler">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L515">property <b>handler</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L426">property <b>handler</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>handler: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3006,15 +3227,15 @@ The connection settings for an EFS file system. Fields documented below. Before 
 The function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L519">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L430">property <b>kmsKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key that is used to encrypt environment variables. If this configuration is not provided when environment variables are in use, AWS Lambda uses a default service key. If this configuration is provided when environment variables are not in use, the AWS Lambda API does not save this configuration and this provider will show a perpetual difference of adding the key. To fix the perpetual difference, remove this configuration.
+(Optional) The ARN for the KMS encryption key.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-layers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L523">property <b>layers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L434">property <b>layers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>layers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3022,7 +3243,7 @@ Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key that is u
 List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)
 
 <h4 class="pdoc-member-header" id="FunctionArgs-memorySize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L527">property <b>memorySize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L438">property <b>memorySize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memorySize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3030,7 +3251,7 @@ List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Functi
 Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
 
 <h4 class="pdoc-member-header" id="FunctionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L531">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L442">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3038,7 +3259,7 @@ Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128
 A unique name for your Lambda Function.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-publish">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L535">property <b>publish</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L446">property <b>publish</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publish?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3046,7 +3267,7 @@ A unique name for your Lambda Function.
 Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-reservedConcurrentExecutions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L539">property <b>reservedConcurrentExecutions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L450">property <b>reservedConcurrentExecutions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reservedConcurrentExecutions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3054,7 +3275,7 @@ Whether to publish creation/change as new Lambda Function Version. Defaults to `
 The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
 
 <h4 class="pdoc-member-header" id="FunctionArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L543">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L454">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
@@ -3062,7 +3283,7 @@ The amount of reserved concurrent executions for this lambda function. A value o
 IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html) for more details.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-runtime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L547">property <b>runtime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L458">property <b>runtime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3070,7 +3291,7 @@ IAM role attached to the Lambda Function. This governs both who / what can invok
 See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-s3Bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L551">property <b>s3Bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L462">property <b>s3Bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3078,7 +3299,7 @@ See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.h
 The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-s3Key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L555">property <b>s3Key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L466">property <b>s3Key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3086,7 +3307,7 @@ The S3 bucket location containing the function's deployment package. Conflicts w
 The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-s3ObjectVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L559">property <b>s3ObjectVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L470">property <b>s3ObjectVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3ObjectVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3094,23 +3315,23 @@ The S3 key of an object containing the function's deployment package. Conflicts 
 The object version containing the function's deployment package. Conflicts with `filename`.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-sourceCodeHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L563">property <b>sourceCodeHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L474">property <b>sourceCodeHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceCodeHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3Key`. The usual way to set this is `filebase64sha256("file.zip")` (this provider 0.11.12 and later) or `base64sha256(file("file.zip"))` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda function source archive.
+Base64-encoded representation of raw SHA-256 sum of the zip file, provided either via `filename` or `s3_*` parameters.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L567">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L478">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
-A mapping of tags to assign to the object.
+A map of tags to assign to the object.
 
 <h4 class="pdoc-member-header" id="FunctionArgs-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L571">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L482">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3118,12 +3339,12 @@ A mapping of tags to assign to the object.
 The amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
 
 <h4 class="pdoc-member-header" id="FunctionArgs-tracingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L572">property <b>tracingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L483">property <b>tracingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tracingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FunctionTracingConfig'>FunctionTracingConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FunctionArgs-vpcConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L576">property <b>vpcConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L487">property <b>vpcConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FunctionVpcConfig'>FunctionVpcConfig</a>&gt;;</code></pre>
@@ -3131,7 +3352,7 @@ The amount of time your Lambda Function has to run in seconds. Defaults to `3`. 
 Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC](http://docs.aws.amazon.com/lambda/latest/dg/vpc.html)
 
 <h3 class="pdoc-module-header" id="FunctionEventInvokeConfigArgs" data-link-title="FunctionEventInvokeConfigArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L224">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L224">
         interface <strong>FunctionEventInvokeConfigArgs</strong>
     </a>
 </h3>
@@ -3141,7 +3362,7 @@ Provide this to allow your function to access your VPC. Fields documented below.
 The set of arguments for constructing a FunctionEventInvokeConfig resource.
 
 <h4 class="pdoc-member-header" id="FunctionEventInvokeConfigArgs-destinationConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L228">property <b>destinationConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L228">property <b>destinationConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FunctionEventInvokeConfigDestinationConfig'>FunctionEventInvokeConfigDestinationConfig</a>&gt;;</code></pre>
@@ -3149,7 +3370,7 @@ The set of arguments for constructing a FunctionEventInvokeConfig resource.
 Configuration block with destination configuration. See below for details.
 
 <h4 class="pdoc-member-header" id="FunctionEventInvokeConfigArgs-functionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L232">property <b>functionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L232">property <b>functionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3157,7 +3378,7 @@ Configuration block with destination configuration. See below for details.
 Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
 
 <h4 class="pdoc-member-header" id="FunctionEventInvokeConfigArgs-maximumEventAgeInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L236">property <b>maximumEventAgeInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L236">property <b>maximumEventAgeInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximumEventAgeInSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3165,7 +3386,7 @@ Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version 
 Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
 
 <h4 class="pdoc-member-header" id="FunctionEventInvokeConfigArgs-maximumRetryAttempts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L240">property <b>maximumRetryAttempts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L240">property <b>maximumRetryAttempts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximumRetryAttempts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3173,7 +3394,7 @@ Maximum age of a request that Lambda sends to a function for processing in secon
 Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
 
 <h4 class="pdoc-member-header" id="FunctionEventInvokeConfigArgs-qualifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L244">property <b>qualifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L244">property <b>qualifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>qualifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3181,7 +3402,7 @@ Maximum number of times to retry when the function returns an error. Valid value
 Lambda Function published version, `$LATEST`, or Lambda Alias name.
 
 <h3 class="pdoc-module-header" id="FunctionEventInvokeConfigState" data-link-title="FunctionEventInvokeConfigState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L198">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L198">
         interface <strong>FunctionEventInvokeConfigState</strong>
     </a>
 </h3>
@@ -3191,7 +3412,7 @@ Lambda Function published version, `$LATEST`, or Lambda Alias name.
 Input properties used for looking up and filtering FunctionEventInvokeConfig resources.
 
 <h4 class="pdoc-member-header" id="FunctionEventInvokeConfigState-destinationConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L202">property <b>destinationConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L202">property <b>destinationConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FunctionEventInvokeConfigDestinationConfig'>FunctionEventInvokeConfigDestinationConfig</a>&gt;;</code></pre>
@@ -3199,7 +3420,7 @@ Input properties used for looking up and filtering FunctionEventInvokeConfig res
 Configuration block with destination configuration. See below for details.
 
 <h4 class="pdoc-member-header" id="FunctionEventInvokeConfigState-functionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L206">property <b>functionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L206">property <b>functionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3207,7 +3428,7 @@ Configuration block with destination configuration. See below for details.
 Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
 
 <h4 class="pdoc-member-header" id="FunctionEventInvokeConfigState-maximumEventAgeInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L210">property <b>maximumEventAgeInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L210">property <b>maximumEventAgeInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximumEventAgeInSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3215,7 +3436,7 @@ Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version 
 Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
 
 <h4 class="pdoc-member-header" id="FunctionEventInvokeConfigState-maximumRetryAttempts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L214">property <b>maximumRetryAttempts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L214">property <b>maximumRetryAttempts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maximumRetryAttempts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3223,7 +3444,7 @@ Maximum age of a request that Lambda sends to a function for processing in secon
 Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
 
 <h4 class="pdoc-member-header" id="FunctionEventInvokeConfigState-qualifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L218">property <b>qualifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/functionEventInvokeConfig.ts#L218">property <b>qualifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>qualifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3231,7 +3452,7 @@ Maximum number of times to retry when the function returns an error. Valid value
 Lambda Function published version, `$LATEST`, or Lambda Alias name.
 
 <h3 class="pdoc-module-header" id="FunctionState" data-link-title="FunctionState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L375">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L270">
         interface <strong>FunctionState</strong>
     </a>
 </h3>
@@ -3241,7 +3462,7 @@ Lambda Function published version, `$LATEST`, or Lambda Alias name.
 Input properties used for looking up and filtering Function resources.
 
 <h4 class="pdoc-member-header" id="FunctionState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L379">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L274">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3249,15 +3470,23 @@ Input properties used for looking up and filtering Function resources.
 The Amazon Resource Name (ARN) of the Amazon EFS Access Point that provides access to the file system.
 
 <h4 class="pdoc-member-header" id="FunctionState-code">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L383">property <b>code</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L278">property <b>code</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>code?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a>&gt;;</code></pre>
 
 The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
 
+<h4 class="pdoc-member-header" id="FunctionState-codeSigningConfigArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L282">property <b>codeSigningConfigArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>codeSigningConfigArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Amazon Resource Name (ARN) for a Code Signing Configuration.
+
 <h4 class="pdoc-member-header" id="FunctionState-deadLetterConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L387">property <b>deadLetterConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L286">property <b>deadLetterConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deadLetterConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FunctionDeadLetterConfig'>FunctionDeadLetterConfig</a>&gt;;</code></pre>
@@ -3265,7 +3494,7 @@ The path to the function's deployment package within the local filesystem. If de
 Nested block to configure the function's *dead letter queue*. See details below.
 
 <h4 class="pdoc-member-header" id="FunctionState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L391">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L290">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3273,7 +3502,7 @@ Nested block to configure the function's *dead letter queue*. See details below.
 Description of what your Lambda Function does.
 
 <h4 class="pdoc-member-header" id="FunctionState-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L395">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L294">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FunctionEnvironment'>FunctionEnvironment</a>&gt;;</code></pre>
@@ -3281,7 +3510,7 @@ Description of what your Lambda Function does.
 The Lambda environment's configuration settings. Fields documented below.
 
 <h4 class="pdoc-member-header" id="FunctionState-fileSystemConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L399">property <b>fileSystemConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L298">property <b>fileSystemConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fileSystemConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FunctionFileSystemConfig'>FunctionFileSystemConfig</a>&gt;;</code></pre>
@@ -3289,7 +3518,7 @@ The Lambda environment's configuration settings. Fields documented below.
 The connection settings for an EFS file system. Fields documented below. Before creating or updating Lambda functions with `fileSystemConfig`, EFS mount targets much be in available lifecycle state. Use `dependsOn` to explicitly declare this dependency. See [Using Amazon EFS with Lambda](https://docs.aws.amazon.com/lambda/latest/dg/services-efs.html).
 
 <h4 class="pdoc-member-header" id="FunctionState-handler">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L403">property <b>handler</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L302">property <b>handler</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>handler?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3297,23 +3526,23 @@ The connection settings for an EFS file system. Fields documented below. Before 
 The function [entrypoint](https://docs.aws.amazon.com/lambda/latest/dg/walkthrough-custom-events-create-test-function.html) in your code.
 
 <h4 class="pdoc-member-header" id="FunctionState-invokeArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L407">property <b>invokeArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L306">property <b>invokeArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>invokeArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The ARN to be used for invoking Lambda Function from API Gateway - to be used in `aws.apigateway.Integration`'s `uri`
+The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
 
 <h4 class="pdoc-member-header" id="FunctionState-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L411">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L310">property <b>kmsKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key that is used to encrypt environment variables. If this configuration is not provided when environment variables are in use, AWS Lambda uses a default service key. If this configuration is provided when environment variables are not in use, the AWS Lambda API does not save this configuration and this provider will show a perpetual difference of adding the key. To fix the perpetual difference, remove this configuration.
+(Optional) The ARN for the KMS encryption key.
 
 <h4 class="pdoc-member-header" id="FunctionState-lastModified">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L415">property <b>lastModified</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L314">property <b>lastModified</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastModified?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3321,7 +3550,7 @@ Amazon Resource Name (ARN) of the AWS Key Management Service (KMS) key that is u
 The date this resource was last modified.
 
 <h4 class="pdoc-member-header" id="FunctionState-layers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L419">property <b>layers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L318">property <b>layers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>layers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3329,7 +3558,7 @@ The date this resource was last modified.
 List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Function. See [Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html)
 
 <h4 class="pdoc-member-header" id="FunctionState-memorySize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L423">property <b>memorySize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L322">property <b>memorySize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memorySize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3337,7 +3566,7 @@ List of Lambda Layer Version ARNs (maximum of 5) to attach to your Lambda Functi
 Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
 
 <h4 class="pdoc-member-header" id="FunctionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L427">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L326">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3345,7 +3574,7 @@ Amount of memory in MB your Lambda Function can use at runtime. Defaults to `128
 A unique name for your Lambda Function.
 
 <h4 class="pdoc-member-header" id="FunctionState-publish">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L431">property <b>publish</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L330">property <b>publish</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publish?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3353,7 +3582,7 @@ A unique name for your Lambda Function.
 Whether to publish creation/change as new Lambda Function Version. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="FunctionState-qualifiedArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L436">property <b>qualifiedArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L335">property <b>qualifiedArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>qualifiedArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3362,7 +3591,7 @@ The Amazon Resource Name (ARN) identifying your Lambda Function Version
 (if versioning is enabled via `publish = true`).
 
 <h4 class="pdoc-member-header" id="FunctionState-reservedConcurrentExecutions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L440">property <b>reservedConcurrentExecutions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L339">property <b>reservedConcurrentExecutions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reservedConcurrentExecutions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3370,7 +3599,7 @@ The Amazon Resource Name (ARN) identifying your Lambda Function Version
 The amount of reserved concurrent executions for this lambda function. A value of `0` disables lambda from being triggered and `-1` removes any concurrency limitations. Defaults to Unreserved Concurrency Limits `-1`. See [Managing Concurrency](https://docs.aws.amazon.com/lambda/latest/dg/concurrent-executions.html)
 
 <h4 class="pdoc-member-header" id="FunctionState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L444">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L343">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/#ARN'>ARN</a>&gt;;</code></pre>
@@ -3378,7 +3607,7 @@ The amount of reserved concurrent executions for this lambda function. A value o
 IAM role attached to the Lambda Function. This governs both who / what can invoke your Lambda Function, as well as what resources our Lambda Function has access to. See [Lambda Permission Model](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html) for more details.
 
 <h4 class="pdoc-member-header" id="FunctionState-runtime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L448">property <b>runtime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L347">property <b>runtime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3386,7 +3615,7 @@ IAM role attached to the Lambda Function. This governs both who / what can invok
 See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.html#SSS-CreateFunction-request-Runtime) for valid values.
 
 <h4 class="pdoc-member-header" id="FunctionState-s3Bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L452">property <b>s3Bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L351">property <b>s3Bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3394,7 +3623,7 @@ See [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_CreateFunction.h
 The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 
 <h4 class="pdoc-member-header" id="FunctionState-s3Key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L456">property <b>s3Key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L355">property <b>s3Key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3402,23 +3631,39 @@ The S3 bucket location containing the function's deployment package. Conflicts w
 The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
 
 <h4 class="pdoc-member-header" id="FunctionState-s3ObjectVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L460">property <b>s3ObjectVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L359">property <b>s3ObjectVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3ObjectVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The object version containing the function's deployment package. Conflicts with `filename`.
 
+<h4 class="pdoc-member-header" id="FunctionState-signingJobArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L363">property <b>signingJobArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>signingJobArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Amazon Resource Name (ARN) of a signing job.
+
+<h4 class="pdoc-member-header" id="FunctionState-signingProfileVersionArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L367">property <b>signingProfileVersionArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>signingProfileVersionArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Amazon Resource Name (ARN) for a signing profile version.
+
 <h4 class="pdoc-member-header" id="FunctionState-sourceCodeHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L464">property <b>sourceCodeHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L371">property <b>sourceCodeHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceCodeHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3Key`. The usual way to set this is `filebase64sha256("file.zip")` (this provider 0.11.12 and later) or `base64sha256(file("file.zip"))` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda function source archive.
+Base64-encoded representation of raw SHA-256 sum of the zip file, provided either via `filename` or `s3_*` parameters.
 
 <h4 class="pdoc-member-header" id="FunctionState-sourceCodeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L468">property <b>sourceCodeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L375">property <b>sourceCodeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceCodeSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3426,15 +3671,15 @@ Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the pack
 The size in bytes of the function .zip file.
 
 <h4 class="pdoc-member-header" id="FunctionState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L472">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L379">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 
-A mapping of tags to assign to the object.
+A map of tags to assign to the object.
 
 <h4 class="pdoc-member-header" id="FunctionState-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L476">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L383">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3442,12 +3687,12 @@ A mapping of tags to assign to the object.
 The amount of time your Lambda Function has to run in seconds. Defaults to `3`. See [Limits](https://docs.aws.amazon.com/lambda/latest/dg/limits.html)
 
 <h4 class="pdoc-member-header" id="FunctionState-tracingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L477">property <b>tracingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L384">property <b>tracingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tracingConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FunctionTracingConfig'>FunctionTracingConfig</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="FunctionState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L481">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L388">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3455,7 +3700,7 @@ The amount of time your Lambda Function has to run in seconds. Defaults to `3`. 
 Latest published version of your Lambda Function.
 
 <h4 class="pdoc-member-header" id="FunctionState-vpcConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/function.ts#L485">property <b>vpcConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/function.ts#L392">property <b>vpcConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FunctionVpcConfig'>FunctionVpcConfig</a>&gt;;</code></pre>
@@ -3463,7 +3708,7 @@ Latest published version of your Lambda Function.
 Provide this to allow your function to access your VPC. Fields documented below. See [Lambda in VPC](http://docs.aws.amazon.com/lambda/latest/dg/vpc.html)
 
 <h3 class="pdoc-module-header" id="GetAliasArgs" data-link-title="GetAliasArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getAlias.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getAlias.ts#L40">
         interface <strong>GetAliasArgs</strong>
     </a>
 </h3>
@@ -3473,7 +3718,7 @@ Provide this to allow your function to access your VPC. Fields documented below.
 A collection of arguments for invoking getAlias.
 
 <h4 class="pdoc-member-header" id="GetAliasArgs-functionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getAlias.ts#L44">property <b>functionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getAlias.ts#L44">property <b>functionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3481,7 +3726,7 @@ A collection of arguments for invoking getAlias.
 Name of the aliased Lambda function.
 
 <h4 class="pdoc-member-header" id="GetAliasArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getAlias.ts#L48">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getAlias.ts#L48">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3489,7 +3734,7 @@ Name of the aliased Lambda function.
 Name of the Lambda alias.
 
 <h3 class="pdoc-module-header" id="GetAliasResult" data-link-title="GetAliasResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getAlias.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getAlias.ts#L54">
         interface <strong>GetAliasResult</strong>
     </a>
 </h3>
@@ -3499,7 +3744,7 @@ Name of the Lambda alias.
 A collection of values returned by getAlias.
 
 <h4 class="pdoc-member-header" id="GetAliasResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getAlias.ts#L58">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getAlias.ts#L58">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3507,7 +3752,7 @@ A collection of values returned by getAlias.
 The Amazon Resource Name (ARN) identifying the Lambda function alias.
 
 <h4 class="pdoc-member-header" id="GetAliasResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getAlias.ts#L62">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getAlias.ts#L62">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3515,12 +3760,12 @@ The Amazon Resource Name (ARN) identifying the Lambda function alias.
 Description of alias.
 
 <h4 class="pdoc-member-header" id="GetAliasResult-functionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getAlias.ts#L63">property <b>functionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getAlias.ts#L63">property <b>functionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAliasResult-functionVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getAlias.ts#L67">property <b>functionVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getAlias.ts#L67">property <b>functionVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3528,7 +3773,7 @@ Description of alias.
 Lambda function version which the alias uses.
 
 <h4 class="pdoc-member-header" id="GetAliasResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getAlias.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getAlias.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3536,7 +3781,7 @@ Lambda function version which the alias uses.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAliasResult-invokeArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getAlias.ts#L75">property <b>invokeArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getAlias.ts#L75">property <b>invokeArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>invokeArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3544,12 +3789,93 @@ The provider-assigned unique ID for this managed resource.
 The ARN to be used for invoking Lambda Function from API Gateway - to be used in aws_api_gateway_integration's `uri`.
 
 <h4 class="pdoc-member-header" id="GetAliasResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getAlias.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getAlias.ts#L76">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h3 class="pdoc-module-header" id="GetCodeSigningConfigArgs" data-link-title="GetCodeSigningConfigArgs">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getCodeSigningConfig.ts#L40">
+        interface <strong>GetCodeSigningConfigArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetCodeSigningConfigArgs</span></code></pre>
+
+A collection of arguments for invoking getCodeSigningConfig.
+
+<h4 class="pdoc-member-header" id="GetCodeSigningConfigArgs-arn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getCodeSigningConfig.ts#L44">property <b>arn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The Amazon Resource Name (ARN) of the code signing configuration.
+
+<h3 class="pdoc-module-header" id="GetCodeSigningConfigResult" data-link-title="GetCodeSigningConfigResult">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getCodeSigningConfig.ts#L50">
+        interface <strong>GetCodeSigningConfigResult</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetCodeSigningConfigResult</span></code></pre>
+
+A collection of values returned by getCodeSigningConfig.
+
+<h4 class="pdoc-member-header" id="GetCodeSigningConfigResult-allowedPublishers">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getCodeSigningConfig.ts#L54">property <b>allowedPublishers</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>allowedPublishers: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetCodeSigningConfigAllowedPublisher'>GetCodeSigningConfigAllowedPublisher</a>[];</code></pre>
+
+List of allowed publishers as signing profiles for this code signing configuration.
+
+<h4 class="pdoc-member-header" id="GetCodeSigningConfigResult-arn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getCodeSigningConfig.ts#L55">property <b>arn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetCodeSigningConfigResult-configId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getCodeSigningConfig.ts#L59">property <b>configId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>configId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Unique identifier for the code signing configuration.
+
+<h4 class="pdoc-member-header" id="GetCodeSigningConfigResult-description">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getCodeSigningConfig.ts#L63">property <b>description</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Code signing configuration description.
+
+<h4 class="pdoc-member-header" id="GetCodeSigningConfigResult-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getCodeSigningConfig.ts#L67">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The provider-assigned unique ID for this managed resource.
+
+<h4 class="pdoc-member-header" id="GetCodeSigningConfigResult-lastModified">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getCodeSigningConfig.ts#L71">property <b>lastModified</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>lastModified: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The date and time that the code signing configuration was last modified.
+
+<h4 class="pdoc-member-header" id="GetCodeSigningConfigResult-policies">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getCodeSigningConfig.ts#L75">property <b>policies</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetCodeSigningConfigPolicy'>GetCodeSigningConfigPolicy</a>[];</code></pre>
+
+List of code signing policies that control the validation failure action for signature mismatch or expiry.
+
 <h3 class="pdoc-module-header" id="GetFunctionArgs" data-link-title="GetFunctionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L42">
         interface <strong>GetFunctionArgs</strong>
     </a>
 </h3>
@@ -3559,7 +3885,7 @@ The ARN to be used for invoking Lambda Function from API Gateway - to be used in
 A collection of arguments for invoking getFunction.
 
 <h4 class="pdoc-member-header" id="GetFunctionArgs-functionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L46">property <b>functionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L46">property <b>functionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3567,7 +3893,7 @@ A collection of arguments for invoking getFunction.
 Name of the lambda function.
 
 <h4 class="pdoc-member-header" id="GetFunctionArgs-qualifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L50">property <b>qualifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L50">property <b>qualifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>qualifier?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3575,12 +3901,12 @@ Name of the lambda function.
 Alias name or version number of the lambda function. e.g. `$LATEST`, `my-alias`, or `1`
 
 <h4 class="pdoc-member-header" id="GetFunctionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L51">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L51">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h3 class="pdoc-module-header" id="GetFunctionResult" data-link-title="GetFunctionResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L57">
         interface <strong>GetFunctionResult</strong>
     </a>
 </h3>
@@ -3590,15 +3916,23 @@ Alias name or version number of the lambda function. e.g. `$LATEST`, `my-alias`,
 A collection of values returned by getFunction.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L61">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L61">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 
 Unqualified (no `:QUALIFIER` or `:VERSION` suffix) Amazon Resource Name (ARN) identifying your Lambda Function. See also `qualifiedArn`.
 
+<h4 class="pdoc-member-header" id="GetFunctionResult-codeSigningConfigArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L65">property <b>codeSigningConfigArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>codeSigningConfigArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Amazon Resource Name (ARN) for a Code Signing Configuration.
+
 <h4 class="pdoc-member-header" id="GetFunctionResult-deadLetterConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L65">property <b>deadLetterConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L69">property <b>deadLetterConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deadLetterConfig: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetFunctionDeadLetterConfig'>GetFunctionDeadLetterConfig</a>;</code></pre>
@@ -3606,7 +3940,7 @@ Unqualified (no `:QUALIFIER` or `:VERSION` suffix) Amazon Resource Name (ARN) id
 Configure the function's *dead letter queue*.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L69">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L73">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3614,7 +3948,7 @@ Configure the function's *dead letter queue*.
 Description of what your Lambda Function does.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L73">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L77">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environment: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetFunctionEnvironment'>GetFunctionEnvironment</a>;</code></pre>
@@ -3622,7 +3956,7 @@ Description of what your Lambda Function does.
 The Lambda environment's configuration settings.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-fileSystemConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L77">property <b>fileSystemConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L81">property <b>fileSystemConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fileSystemConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetFunctionFileSystemConfig'>GetFunctionFileSystemConfig</a>[];</code></pre>
@@ -3630,12 +3964,12 @@ The Lambda environment's configuration settings.
 The connection settings for an Amazon EFS file system.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-functionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L78">property <b>functionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L82">property <b>functionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFunctionResult-handler">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L82">property <b>handler</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L86">property <b>handler</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>handler: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3643,7 +3977,7 @@ The connection settings for an Amazon EFS file system.
 The function entrypoint in your code.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L90">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3651,7 +3985,7 @@ The function entrypoint in your code.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-invokeArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L90">property <b>invokeArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L94">property <b>invokeArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>invokeArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3659,7 +3993,7 @@ The provider-assigned unique ID for this managed resource.
 The ARN to be used for invoking Lambda Function from API Gateway.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L94">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L98">property <b>kmsKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3667,7 +4001,7 @@ The ARN to be used for invoking Lambda Function from API Gateway.
 The ARN for the KMS encryption key.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-lastModified">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L98">property <b>lastModified</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L102">property <b>lastModified</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastModified: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3675,7 +4009,7 @@ The ARN for the KMS encryption key.
 The date this resource was last modified.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-layers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L102">property <b>layers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L106">property <b>layers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>layers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3683,7 +4017,7 @@ The date this resource was last modified.
 A list of Lambda Layer ARNs attached to your Lambda Function.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-memorySize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L106">property <b>memorySize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L110">property <b>memorySize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memorySize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3691,7 +4025,7 @@ A list of Lambda Layer ARNs attached to your Lambda Function.
 Amount of memory in MB your Lambda Function can use at runtime.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-qualifiedArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L110">property <b>qualifiedArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L114">property <b>qualifiedArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>qualifiedArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3699,12 +4033,12 @@ Amount of memory in MB your Lambda Function can use at runtime.
 Qualified (`:QUALIFIER` or `:VERSION` suffix) Amazon Resource Name (ARN) identifying your Lambda Function. See also `arn`.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-qualifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L111">property <b>qualifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L115">property <b>qualifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>qualifier?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetFunctionResult-reservedConcurrentExecutions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L115">property <b>reservedConcurrentExecutions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L119">property <b>reservedConcurrentExecutions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reservedConcurrentExecutions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3712,7 +4046,7 @@ Qualified (`:QUALIFIER` or `:VERSION` suffix) Amazon Resource Name (ARN) identif
 The amount of reserved concurrent executions for this lambda function or `-1` if unreserved.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L119">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L123">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3720,15 +4054,31 @@ The amount of reserved concurrent executions for this lambda function or `-1` if
 IAM role attached to the Lambda Function.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-runtime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L123">property <b>runtime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L127">property <b>runtime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>runtime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 
-The runtime environment for the Lambda function..
+The runtime environment for the Lambda function.
+
+<h4 class="pdoc-member-header" id="GetFunctionResult-signingJobArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L131">property <b>signingJobArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>signingJobArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The Amazon Resource Name (ARN) of a signing job.
+
+<h4 class="pdoc-member-header" id="GetFunctionResult-signingProfileVersionArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L135">property <b>signingProfileVersionArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>signingProfileVersionArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The Amazon Resource Name (ARN) for a signing profile version.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-sourceCodeHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L127">property <b>sourceCodeHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L139">property <b>sourceCodeHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceCodeHash: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3736,7 +4086,7 @@ The runtime environment for the Lambda function..
 Base64-encoded representation of raw SHA-256 sum of the zip file.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-sourceCodeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L131">property <b>sourceCodeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L143">property <b>sourceCodeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceCodeSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3744,12 +4094,12 @@ Base64-encoded representation of raw SHA-256 sum of the zip file.
 The size in bytes of the function .zip file.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L132">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L144">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetFunctionResult-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L136">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L148">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3757,7 +4107,7 @@ The size in bytes of the function .zip file.
 The function execution time at which Lambda should terminate the function.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-tracingConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L140">property <b>tracingConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L152">property <b>tracingConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tracingConfig: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetFunctionTracingConfig'>GetFunctionTracingConfig</a>;</code></pre>
@@ -3765,7 +4115,7 @@ The function execution time at which Lambda should terminate the function.
 Tracing settings of the function.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L144">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L156">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3773,7 +4123,7 @@ Tracing settings of the function.
 The version of the Lambda function.
 
 <h4 class="pdoc-member-header" id="GetFunctionResult-vpcConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getFunction.ts#L148">property <b>vpcConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getFunction.ts#L160">property <b>vpcConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcConfig: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetFunctionVpcConfig'>GetFunctionVpcConfig</a>;</code></pre>
@@ -3781,7 +4131,7 @@ The version of the Lambda function.
 VPC configuration associated with your Lambda function.
 
 <h3 class="pdoc-module-header" id="GetInvocationArgs" data-link-title="GetInvocationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getInvocation.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getInvocation.ts#L31">
         interface <strong>GetInvocationArgs</strong>
     </a>
 </h3>
@@ -3791,7 +4141,7 @@ VPC configuration associated with your Lambda function.
 A collection of arguments for invoking getInvocation.
 
 <h4 class="pdoc-member-header" id="GetInvocationArgs-functionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getInvocation.ts#L35">property <b>functionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getInvocation.ts#L35">property <b>functionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3799,7 +4149,7 @@ A collection of arguments for invoking getInvocation.
 The name of the lambda function.
 
 <h4 class="pdoc-member-header" id="GetInvocationArgs-input">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getInvocation.ts#L39">property <b>input</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getInvocation.ts#L39">property <b>input</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>input: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3807,7 +4157,7 @@ The name of the lambda function.
 A string in JSON format that is passed as payload to the lambda function.
 
 <h4 class="pdoc-member-header" id="GetInvocationArgs-qualifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getInvocation.ts#L44">property <b>qualifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getInvocation.ts#L44">property <b>qualifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>qualifier?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3816,7 +4166,7 @@ The qualifier (a.k.a version) of the lambda function. Defaults
 to `$LATEST`.
 
 <h3 class="pdoc-module-header" id="GetInvocationResult" data-link-title="GetInvocationResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getInvocation.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getInvocation.ts#L50">
         interface <strong>GetInvocationResult</strong>
     </a>
 </h3>
@@ -3826,12 +4176,12 @@ to `$LATEST`.
 A collection of values returned by getInvocation.
 
 <h4 class="pdoc-member-header" id="GetInvocationResult-functionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getInvocation.ts#L51">property <b>functionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getInvocation.ts#L51">property <b>functionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInvocationResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getInvocation.ts#L55">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getInvocation.ts#L55">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3839,17 +4189,17 @@ A collection of values returned by getInvocation.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetInvocationResult-input">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getInvocation.ts#L56">property <b>input</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getInvocation.ts#L56">property <b>input</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>input: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInvocationResult-qualifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getInvocation.ts#L57">property <b>qualifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getInvocation.ts#L57">property <b>qualifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>qualifier?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInvocationResult-result">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getInvocation.ts#L61">property <b>result</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getInvocation.ts#L61">property <b>result</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>result: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3857,7 +4207,7 @@ The provider-assigned unique ID for this managed resource.
 String result of the lambda function invocation.
 
 <h3 class="pdoc-module-header" id="GetLayerVersionArgs" data-link-title="GetLayerVersionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getLayerVersion.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getLayerVersion.ts#L42">
         interface <strong>GetLayerVersionArgs</strong>
     </a>
 </h3>
@@ -3867,7 +4217,7 @@ String result of the lambda function invocation.
 A collection of arguments for invoking getLayerVersion.
 
 <h4 class="pdoc-member-header" id="GetLayerVersionArgs-compatibleRuntime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getLayerVersion.ts#L46">property <b>compatibleRuntime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getLayerVersion.ts#L46">property <b>compatibleRuntime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>compatibleRuntime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3875,7 +4225,7 @@ A collection of arguments for invoking getLayerVersion.
 Specific runtime the layer version must support. Conflicts with `version`. If specified, the latest available layer version supporting the provided runtime will be used.
 
 <h4 class="pdoc-member-header" id="GetLayerVersionArgs-layerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getLayerVersion.ts#L50">property <b>layerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getLayerVersion.ts#L50">property <b>layerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>layerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3883,7 +4233,7 @@ Specific runtime the layer version must support. Conflicts with `version`. If sp
 Name of the lambda layer.
 
 <h4 class="pdoc-member-header" id="GetLayerVersionArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getLayerVersion.ts#L54">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getLayerVersion.ts#L54">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3891,7 +4241,7 @@ Name of the lambda layer.
 Specific layer version. Conflicts with `compatibleRuntime`. If omitted, the latest available layer version will be used.
 
 <h3 class="pdoc-module-header" id="GetLayerVersionResult" data-link-title="GetLayerVersionResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getLayerVersion.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getLayerVersion.ts#L60">
         interface <strong>GetLayerVersionResult</strong>
     </a>
 </h3>
@@ -3901,7 +4251,7 @@ Specific layer version. Conflicts with `compatibleRuntime`. If omitted, the late
 A collection of values returned by getLayerVersion.
 
 <h4 class="pdoc-member-header" id="GetLayerVersionResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getLayerVersion.ts#L64">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getLayerVersion.ts#L64">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3909,12 +4259,12 @@ A collection of values returned by getLayerVersion.
 The Amazon Resource Name (ARN) of the Lambda Layer with version.
 
 <h4 class="pdoc-member-header" id="GetLayerVersionResult-compatibleRuntime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getLayerVersion.ts#L65">property <b>compatibleRuntime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getLayerVersion.ts#L65">property <b>compatibleRuntime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>compatibleRuntime?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLayerVersionResult-compatibleRuntimes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getLayerVersion.ts#L69">property <b>compatibleRuntimes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getLayerVersion.ts#L69">property <b>compatibleRuntimes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>compatibleRuntimes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3922,7 +4272,7 @@ The Amazon Resource Name (ARN) of the Lambda Layer with version.
 A list of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_GetLayerVersion.html#SSS-GetLayerVersion-response-CompatibleRuntimes) the specific Lambda Layer version is compatible with.
 
 <h4 class="pdoc-member-header" id="GetLayerVersionResult-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getLayerVersion.ts#L73">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getLayerVersion.ts#L73">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3930,7 +4280,7 @@ A list of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_GetLayerVe
 The date this resource was created.
 
 <h4 class="pdoc-member-header" id="GetLayerVersionResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getLayerVersion.ts#L77">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getLayerVersion.ts#L77">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3938,7 +4288,7 @@ The date this resource was created.
 Description of the specific Lambda Layer version.
 
 <h4 class="pdoc-member-header" id="GetLayerVersionResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getLayerVersion.ts#L81">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getLayerVersion.ts#L81">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3946,7 +4296,7 @@ Description of the specific Lambda Layer version.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetLayerVersionResult-layerArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getLayerVersion.ts#L85">property <b>layerArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getLayerVersion.ts#L85">property <b>layerArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>layerArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3954,20 +4304,36 @@ The provider-assigned unique ID for this managed resource.
 The Amazon Resource Name (ARN) of the Lambda Layer without version.
 
 <h4 class="pdoc-member-header" id="GetLayerVersionResult-layerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getLayerVersion.ts#L86">property <b>layerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getLayerVersion.ts#L86">property <b>layerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>layerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLayerVersionResult-licenseInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getLayerVersion.ts#L90">property <b>licenseInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getLayerVersion.ts#L90">property <b>licenseInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseInfo: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 
 License info associated with the specific Lambda Layer version.
 
+<h4 class="pdoc-member-header" id="GetLayerVersionResult-signingJobArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getLayerVersion.ts#L94">property <b>signingJobArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>signingJobArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The Amazon Resource Name (ARN) of a signing job.
+
+<h4 class="pdoc-member-header" id="GetLayerVersionResult-signingProfileVersionArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getLayerVersion.ts#L98">property <b>signingProfileVersionArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>signingProfileVersionArn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The Amazon Resource Name (ARN) for a signing profile version.
+
 <h4 class="pdoc-member-header" id="GetLayerVersionResult-sourceCodeHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getLayerVersion.ts#L94">property <b>sourceCodeHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getLayerVersion.ts#L102">property <b>sourceCodeHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceCodeHash: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3975,7 +4341,7 @@ License info associated with the specific Lambda Layer version.
 Base64-encoded representation of raw SHA-256 sum of the zip file.
 
 <h4 class="pdoc-member-header" id="GetLayerVersionResult-sourceCodeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getLayerVersion.ts#L98">property <b>sourceCodeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getLayerVersion.ts#L106">property <b>sourceCodeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceCodeSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3983,7 +4349,7 @@ Base64-encoded representation of raw SHA-256 sum of the zip file.
 The size in bytes of the function .zip file.
 
 <h4 class="pdoc-member-header" id="GetLayerVersionResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/getLayerVersion.ts#L102">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/getLayerVersion.ts#L110">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -3991,7 +4357,7 @@ The size in bytes of the function .zip file.
 This Lamba Layer version.
 
 <h3 class="pdoc-module-header" id="Go1dxRuntime" data-link-title="Go1dxRuntime">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/runtimes.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/runtimes.ts#L27">
         let <strong>Go1dxRuntime</strong>
     </a>
 </h3>
@@ -4001,7 +4367,7 @@ This Lamba Layer version.
 The Go1dxRuntime constant is deprecated, use Runtime.Go1dx instead.
 
 <h3 class="pdoc-module-header" id="isEventHandler" data-link-title="isEventHandler">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/lambdaMixins.ts#L236">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/lambdaMixins.ts#L236">
         function <strong>isEventHandler</strong>
     </a>
 </h3>
@@ -4010,7 +4376,7 @@ The Go1dxRuntime constant is deprecated, use Runtime.Go1dx instead.
 <pre class="highlight"><code><span class='kd'></span>isEventHandler(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is EventHandler&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="Java11Runtime" data-link-title="Java11Runtime">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/runtimes.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/runtimes.ts#L31">
         let <strong>Java11Runtime</strong>
     </a>
 </h3>
@@ -4020,7 +4386,7 @@ The Go1dxRuntime constant is deprecated, use Runtime.Go1dx instead.
 The Java11Runtime constant is deprecated, use Runtime.Java11 instead.
 
 <h3 class="pdoc-module-header" id="Java8Runtime" data-link-title="Java8Runtime">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/runtimes.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/runtimes.ts#L29">
         let <strong>Java8Runtime</strong>
     </a>
 </h3>
@@ -4030,7 +4396,7 @@ The Java11Runtime constant is deprecated, use Runtime.Java11 instead.
 The Java8Runtime constant is deprecated, use Runtime.Java8 instead.
 
 <h3 class="pdoc-module-header" id="LayerVersionArgs" data-link-title="LayerVersionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L255">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L275">
         interface <strong>LayerVersionArgs</strong>
     </a>
 </h3>
@@ -4040,7 +4406,7 @@ The Java8Runtime constant is deprecated, use Runtime.Java8 instead.
 The set of arguments for constructing a LayerVersion resource.
 
 <h4 class="pdoc-member-header" id="LayerVersionArgs-code">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L259">property <b>code</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L279">property <b>code</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>code?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a>&gt;;</code></pre>
@@ -4048,7 +4414,7 @@ The set of arguments for constructing a LayerVersion resource.
 The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
 
 <h4 class="pdoc-member-header" id="LayerVersionArgs-compatibleRuntimes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L263">property <b>compatibleRuntimes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L283">property <b>compatibleRuntimes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>compatibleRuntimes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4056,7 +4422,7 @@ The path to the function's deployment package within the local filesystem. If de
 A list of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleRuntimes) this layer is compatible with. Up to 5 runtimes can be specified.
 
 <h4 class="pdoc-member-header" id="LayerVersionArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L267">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L287">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4064,7 +4430,7 @@ A list of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLay
 Description of what your Lambda Layer does.
 
 <h4 class="pdoc-member-header" id="LayerVersionArgs-layerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L271">property <b>layerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L291">property <b>layerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>layerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4072,7 +4438,7 @@ Description of what your Lambda Layer does.
 A unique name for your Lambda Layer
 
 <h4 class="pdoc-member-header" id="LayerVersionArgs-licenseInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L275">property <b>licenseInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L295">property <b>licenseInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4080,7 +4446,7 @@ A unique name for your Lambda Layer
 License info for your Lambda Layer. See [License Info](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-LicenseInfo).
 
 <h4 class="pdoc-member-header" id="LayerVersionArgs-s3Bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L279">property <b>s3Bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L299">property <b>s3Bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4088,7 +4454,7 @@ License info for your Lambda Layer. See [License Info](https://docs.aws.amazon.c
 The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 
 <h4 class="pdoc-member-header" id="LayerVersionArgs-s3Key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L283">property <b>s3Key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L303">property <b>s3Key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4096,7 +4462,7 @@ The S3 bucket location containing the function's deployment package. Conflicts w
 The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
 
 <h4 class="pdoc-member-header" id="LayerVersionArgs-s3ObjectVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L287">property <b>s3ObjectVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L307">property <b>s3ObjectVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3ObjectVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4104,7 +4470,7 @@ The S3 key of an object containing the function's deployment package. Conflicts 
 The object version containing the function's deployment package. Conflicts with `filename`.
 
 <h4 class="pdoc-member-header" id="LayerVersionArgs-sourceCodeHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L291">property <b>sourceCodeHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L311">property <b>sourceCodeHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceCodeHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4112,7 +4478,7 @@ The object version containing the function's deployment package. Conflicts with 
 Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3Key`. The usual way to set this is `${filebase64sha256("file.zip")}` (this provider 0.11.12 or later) or `${base64sha256(file("file.zip"))}` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda layer source archive.
 
 <h3 class="pdoc-module-header" id="LayerVersionState" data-link-title="LayerVersionState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L193">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L205">
         interface <strong>LayerVersionState</strong>
     </a>
 </h3>
@@ -4122,7 +4488,7 @@ Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the pack
 Input properties used for looking up and filtering LayerVersion resources.
 
 <h4 class="pdoc-member-header" id="LayerVersionState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L197">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L209">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4130,7 +4496,7 @@ Input properties used for looking up and filtering LayerVersion resources.
 The Amazon Resource Name (ARN) of the Lambda Layer with version.
 
 <h4 class="pdoc-member-header" id="LayerVersionState-code">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L201">property <b>code</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L213">property <b>code</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>code?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a>&gt;;</code></pre>
@@ -4138,7 +4504,7 @@ The Amazon Resource Name (ARN) of the Lambda Layer with version.
 The path to the function's deployment package within the local filesystem. If defined, The `s3_`-prefixed options cannot be used.
 
 <h4 class="pdoc-member-header" id="LayerVersionState-compatibleRuntimes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L205">property <b>compatibleRuntimes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L217">property <b>compatibleRuntimes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>compatibleRuntimes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4146,7 +4512,7 @@ The path to the function's deployment package within the local filesystem. If de
 A list of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-CompatibleRuntimes) this layer is compatible with. Up to 5 runtimes can be specified.
 
 <h4 class="pdoc-member-header" id="LayerVersionState-createdDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L209">property <b>createdDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L221">property <b>createdDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4154,7 +4520,7 @@ A list of [Runtimes](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLay
 The date this resource was created.
 
 <h4 class="pdoc-member-header" id="LayerVersionState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L213">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L225">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4162,7 +4528,7 @@ The date this resource was created.
 Description of what your Lambda Layer does.
 
 <h4 class="pdoc-member-header" id="LayerVersionState-layerArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L217">property <b>layerArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L229">property <b>layerArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>layerArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4170,7 +4536,7 @@ Description of what your Lambda Layer does.
 The Amazon Resource Name (ARN) of the Lambda Layer without version.
 
 <h4 class="pdoc-member-header" id="LayerVersionState-layerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L221">property <b>layerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L233">property <b>layerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>layerName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4178,7 +4544,7 @@ The Amazon Resource Name (ARN) of the Lambda Layer without version.
 A unique name for your Lambda Layer
 
 <h4 class="pdoc-member-header" id="LayerVersionState-licenseInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L225">property <b>licenseInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L237">property <b>licenseInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4186,7 +4552,7 @@ A unique name for your Lambda Layer
 License info for your Lambda Layer. See [License Info](https://docs.aws.amazon.com/lambda/latest/dg/API_PublishLayerVersion.html#SSS-PublishLayerVersion-request-LicenseInfo).
 
 <h4 class="pdoc-member-header" id="LayerVersionState-s3Bucket">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L229">property <b>s3Bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L241">property <b>s3Bucket</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4194,7 +4560,7 @@ License info for your Lambda Layer. See [License Info](https://docs.aws.amazon.c
 The S3 bucket location containing the function's deployment package. Conflicts with `filename`. This bucket must reside in the same AWS region where you are creating the Lambda function.
 
 <h4 class="pdoc-member-header" id="LayerVersionState-s3Key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L233">property <b>s3Key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L245">property <b>s3Key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4202,15 +4568,31 @@ The S3 bucket location containing the function's deployment package. Conflicts w
 The S3 key of an object containing the function's deployment package. Conflicts with `filename`.
 
 <h4 class="pdoc-member-header" id="LayerVersionState-s3ObjectVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L237">property <b>s3ObjectVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L249">property <b>s3ObjectVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3ObjectVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The object version containing the function's deployment package. Conflicts with `filename`.
 
+<h4 class="pdoc-member-header" id="LayerVersionState-signingJobArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L253">property <b>signingJobArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>signingJobArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Amazon Resource Name (ARN) of a signing job.
+
+<h4 class="pdoc-member-header" id="LayerVersionState-signingProfileVersionArn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L257">property <b>signingProfileVersionArn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>signingProfileVersionArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The Amazon Resource Name (ARN) for a signing profile version.
+
 <h4 class="pdoc-member-header" id="LayerVersionState-sourceCodeHash">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L241">property <b>sourceCodeHash</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L261">property <b>sourceCodeHash</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceCodeHash?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4218,7 +4600,7 @@ The object version containing the function's deployment package. Conflicts with 
 Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the package file specified with either `filename` or `s3Key`. The usual way to set this is `${filebase64sha256("file.zip")}` (this provider 0.11.12 or later) or `${base64sha256(file("file.zip"))}` (this provider 0.11.11 and earlier), where "file.zip" is the local filename of the lambda layer source archive.
 
 <h4 class="pdoc-member-header" id="LayerVersionState-sourceCodeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L245">property <b>sourceCodeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L265">property <b>sourceCodeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceCodeSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4226,7 +4608,7 @@ Used to trigger updates. Must be set to a base64-encoded SHA256 hash of the pack
 The size in bytes of the function .zip file.
 
 <h4 class="pdoc-member-header" id="LayerVersionState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/layerVersion.ts#L249">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/layerVersion.ts#L269">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4234,7 +4616,7 @@ The size in bytes of the function .zip file.
 This Lamba Layer version.
 
 <h3 class="pdoc-module-header" id="NodeJS10dXRuntime" data-link-title="NodeJS10dXRuntime">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/runtimes.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/runtimes.ts#L37">
         let <strong>NodeJS10dXRuntime</strong>
     </a>
 </h3>
@@ -4244,7 +4626,7 @@ This Lamba Layer version.
 The NodeJS10dXRuntime constant is deprecated, use Runtime.NodeJS10dX instead.
 
 <h3 class="pdoc-module-header" id="NodeJS12dXRuntime" data-link-title="NodeJS12dXRuntime">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/runtimes.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/runtimes.ts#L39">
         let <strong>NodeJS12dXRuntime</strong>
     </a>
 </h3>
@@ -4254,7 +4636,7 @@ The NodeJS10dXRuntime constant is deprecated, use Runtime.NodeJS10dX instead.
 The NodeJS12dXRuntime constant is deprecated, use Runtime.NodeJS12dX instead.
 
 <h3 class="pdoc-module-header" id="NodeJS4d3EdgeRuntime" data-link-title="NodeJS4d3EdgeRuntime">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/runtimes.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/runtimes.ts#L54">
         let <strong>NodeJS4d3EdgeRuntime</strong>
     </a>
 </h3>
@@ -4265,7 +4647,7 @@ No longer supported. New lambda functions created using this runtime will fail
 </div>
 <pre class="highlight"><code><span class='kd'>let</span> NodeJS4d3EdgeRuntime: <span class='s2'>"dotnetcore2.1"</span> | <span class='s2'>"dotnetcore3.1"</span> | <span class='s2'>"go1.x"</span> | <span class='s2'>"java8"</span> | <span class='s2'>"java8.al2"</span> | <span class='s2'>"java11"</span> | <span class='s2'>"ruby2.5"</span> | <span class='s2'>"ruby2.7"</span> | <span class='s2'>"nodejs10.x"</span> | <span class='s2'>"nodejs12.x"</span> | <span class='s2'>"python2.7"</span> | <span class='s2'>"python3.6"</span> | <span class='s2'>"python3.7"</span> | <span class='s2'>"python3.8"</span> | <span class='s2'>"provided"</span> | <span class='s2'>"provided.al2"</span> = <span class='s2'> &#34;nodejs4.3-edge&#34; as Runtime</span>;</code></pre>
 <h3 class="pdoc-module-header" id="NodeJS4d3Runtime" data-link-title="NodeJS4d3Runtime">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/runtimes.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/runtimes.ts#L56">
         let <strong>NodeJS4d3Runtime</strong>
     </a>
 </h3>
@@ -4276,7 +4658,7 @@ No longer supported. New lambda functions created using this runtime will fail
 </div>
 <pre class="highlight"><code><span class='kd'>let</span> NodeJS4d3Runtime: <span class='s2'>"dotnetcore2.1"</span> | <span class='s2'>"dotnetcore3.1"</span> | <span class='s2'>"go1.x"</span> | <span class='s2'>"java8"</span> | <span class='s2'>"java8.al2"</span> | <span class='s2'>"java11"</span> | <span class='s2'>"ruby2.5"</span> | <span class='s2'>"ruby2.7"</span> | <span class='s2'>"nodejs10.x"</span> | <span class='s2'>"nodejs12.x"</span> | <span class='s2'>"python2.7"</span> | <span class='s2'>"python3.6"</span> | <span class='s2'>"python3.7"</span> | <span class='s2'>"python3.8"</span> | <span class='s2'>"provided"</span> | <span class='s2'>"provided.al2"</span> = <span class='s2'> &#34;nodejs4.3&#34; as Runtime</span>;</code></pre>
 <h3 class="pdoc-module-header" id="NodeJS6d10Runtime" data-link-title="NodeJS6d10Runtime">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/runtimes.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/runtimes.ts#L58">
         let <strong>NodeJS6d10Runtime</strong>
     </a>
 </h3>
@@ -4287,7 +4669,7 @@ No longer supported. New lambda functions created using this runtime will fail
 </div>
 <pre class="highlight"><code><span class='kd'>let</span> NodeJS6d10Runtime: <span class='s2'>"dotnetcore2.1"</span> | <span class='s2'>"dotnetcore3.1"</span> | <span class='s2'>"go1.x"</span> | <span class='s2'>"java8"</span> | <span class='s2'>"java8.al2"</span> | <span class='s2'>"java11"</span> | <span class='s2'>"ruby2.5"</span> | <span class='s2'>"ruby2.7"</span> | <span class='s2'>"nodejs10.x"</span> | <span class='s2'>"nodejs12.x"</span> | <span class='s2'>"python2.7"</span> | <span class='s2'>"python3.6"</span> | <span class='s2'>"python3.7"</span> | <span class='s2'>"python3.8"</span> | <span class='s2'>"provided"</span> | <span class='s2'>"provided.al2"</span> = <span class='s2'> &#34;nodejs6.10&#34; as Runtime</span>;</code></pre>
 <h3 class="pdoc-module-header" id="NodeJS8d10Runtime" data-link-title="NodeJS8d10Runtime">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/runtimes.ts#L64">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/runtimes.ts#L64">
         let <strong>NodeJS8d10Runtime</strong>
     </a>
 </h3>
@@ -4298,7 +4680,7 @@ No longer supported. New lambda functions created using this runtime will fail
 </div>
 <pre class="highlight"><code><span class='kd'>let</span> NodeJS8d10Runtime: <span class='s2'>"dotnetcore2.1"</span> | <span class='s2'>"dotnetcore3.1"</span> | <span class='s2'>"go1.x"</span> | <span class='s2'>"java8"</span> | <span class='s2'>"java8.al2"</span> | <span class='s2'>"java11"</span> | <span class='s2'>"ruby2.5"</span> | <span class='s2'>"ruby2.7"</span> | <span class='s2'>"nodejs10.x"</span> | <span class='s2'>"nodejs12.x"</span> | <span class='s2'>"python2.7"</span> | <span class='s2'>"python3.6"</span> | <span class='s2'>"python3.7"</span> | <span class='s2'>"python3.8"</span> | <span class='s2'>"provided"</span> | <span class='s2'>"provided.al2"</span> = <span class='s2'> &#34;nodejs8.10&#34; as Runtime</span>;</code></pre>
 <h3 class="pdoc-module-header" id="NodeJSRuntime" data-link-title="NodeJSRuntime">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/runtimes.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/runtimes.ts#L52">
         let <strong>NodeJSRuntime</strong>
     </a>
 </h3>
@@ -4309,7 +4691,7 @@ No longer supported. New lambda functions created using this runtime will fail
 </div>
 <pre class="highlight"><code><span class='kd'>let</span> NodeJSRuntime: <span class='s2'>"dotnetcore2.1"</span> | <span class='s2'>"dotnetcore3.1"</span> | <span class='s2'>"go1.x"</span> | <span class='s2'>"java8"</span> | <span class='s2'>"java8.al2"</span> | <span class='s2'>"java11"</span> | <span class='s2'>"ruby2.5"</span> | <span class='s2'>"ruby2.7"</span> | <span class='s2'>"nodejs10.x"</span> | <span class='s2'>"nodejs12.x"</span> | <span class='s2'>"python2.7"</span> | <span class='s2'>"python3.6"</span> | <span class='s2'>"python3.7"</span> | <span class='s2'>"python3.8"</span> | <span class='s2'>"provided"</span> | <span class='s2'>"provided.al2"</span> = <span class='s2'> &#34;nodejs&#34; as Runtime</span>;</code></pre>
 <h3 class="pdoc-module-header" id="PermissionArgs" data-link-title="PermissionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L291">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L291">
         interface <strong>PermissionArgs</strong>
     </a>
 </h3>
@@ -4319,7 +4701,7 @@ No longer supported. New lambda functions created using this runtime will fail
 The set of arguments for constructing a Permission resource.
 
 <h4 class="pdoc-member-header" id="PermissionArgs-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L295">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L295">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4327,7 +4709,7 @@ The set of arguments for constructing a Permission resource.
 The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
 
 <h4 class="pdoc-member-header" id="PermissionArgs-eventSourceToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L299">property <b>eventSourceToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L299">property <b>eventSourceToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventSourceToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4335,7 +4717,7 @@ The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeF
 The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
 
 <h4 class="pdoc-member-header" id="PermissionArgs-function">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L303">property <b>function</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L303">property <b>function</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>function: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | Function&gt;;</code></pre>
@@ -4343,7 +4725,7 @@ The Event Source Token to validate.  Used with [Alexa Skills](https://developer.
 Name of the Lambda function whose resource policy you are updating
 
 <h4 class="pdoc-member-header" id="PermissionArgs-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L307">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L307">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4351,7 +4733,7 @@ Name of the Lambda function whose resource policy you are updating
 The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
 
 <h4 class="pdoc-member-header" id="PermissionArgs-qualifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L311">property <b>qualifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L311">property <b>qualifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>qualifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4359,7 +4741,7 @@ The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS ac
 Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
 
 <h4 class="pdoc-member-header" id="PermissionArgs-sourceAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L315">property <b>sourceAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L315">property <b>sourceAccount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4367,7 +4749,7 @@ Query parameter to specify function version or alias name. The permission will t
 This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
 
 <h4 class="pdoc-member-header" id="PermissionArgs-sourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L323">property <b>sourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L323">property <b>sourceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4379,7 +4761,7 @@ For CloudWatch Events, this should be the ARN of the CloudWatch Events Rule.
 For API Gateway, this should be the ARN of the API, as described [here](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
 
 <h4 class="pdoc-member-header" id="PermissionArgs-statementId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L327">property <b>statementId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L327">property <b>statementId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statementId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4387,7 +4769,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
 A unique statement identifier. By default generated by this provider.
 
 <h4 class="pdoc-member-header" id="PermissionArgs-statementIdPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L331">property <b>statementIdPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L331">property <b>statementIdPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statementIdPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4395,7 +4777,7 @@ A unique statement identifier. By default generated by this provider.
 A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statementId`.
 
 <h3 class="pdoc-module-header" id="PermissionState" data-link-title="PermissionState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L245">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L245">
         interface <strong>PermissionState</strong>
     </a>
 </h3>
@@ -4405,7 +4787,7 @@ A statement identifier prefix. This provider will generate a unique suffix. Conf
 Input properties used for looking up and filtering Permission resources.
 
 <h4 class="pdoc-member-header" id="PermissionState-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L249">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L249">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4413,7 +4795,7 @@ Input properties used for looking up and filtering Permission resources.
 The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeFunction`)
 
 <h4 class="pdoc-member-header" id="PermissionState-eventSourceToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L253">property <b>eventSourceToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L253">property <b>eventSourceToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventSourceToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4421,7 +4803,7 @@ The AWS Lambda action you want to allow in this statement. (e.g. `lambda:InvokeF
 The Event Source Token to validate.  Used with [Alexa Skills](https://developer.amazon.com/docs/custom-skills/host-a-custom-skill-as-an-aws-lambda-function.html#use-aws-cli).
 
 <h4 class="pdoc-member-header" id="PermissionState-function">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L257">property <b>function</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L257">property <b>function</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>function?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | Function&gt;;</code></pre>
@@ -4429,7 +4811,7 @@ The Event Source Token to validate.  Used with [Alexa Skills](https://developer.
 Name of the Lambda function whose resource policy you are updating
 
 <h4 class="pdoc-member-header" id="PermissionState-principal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L261">property <b>principal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L261">property <b>principal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4437,7 +4819,7 @@ Name of the Lambda function whose resource policy you are updating
 The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS account ID, or any valid AWS service principal such as `events.amazonaws.com` or `sns.amazonaws.com`.
 
 <h4 class="pdoc-member-header" id="PermissionState-qualifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L265">property <b>qualifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L265">property <b>qualifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>qualifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4445,7 +4827,7 @@ The principal who is getting this permission. e.g. `s3.amazonaws.com`, an AWS ac
 Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN. e.g. `arn:aws:lambda:aws-region:acct-id:function:function-name:2`
 
 <h4 class="pdoc-member-header" id="PermissionState-sourceAccount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L269">property <b>sourceAccount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L269">property <b>sourceAccount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4453,7 +4835,7 @@ Query parameter to specify function version or alias name. The permission will t
 This parameter is used for S3 and SES. The AWS account ID (without a hyphen) of the source owner.
 
 <h4 class="pdoc-member-header" id="PermissionState-sourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L277">property <b>sourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L277">property <b>sourceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4465,7 +4847,7 @@ For CloudWatch Events, this should be the ARN of the CloudWatch Events Rule.
 For API Gateway, this should be the ARN of the API, as described [here](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html).
 
 <h4 class="pdoc-member-header" id="PermissionState-statementId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L281">property <b>statementId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L281">property <b>statementId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statementId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4473,7 +4855,7 @@ For API Gateway, this should be the ARN of the API, as described [here](https://
 A unique statement identifier. By default generated by this provider.
 
 <h4 class="pdoc-member-header" id="PermissionState-statementIdPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/permission.ts#L285">property <b>statementIdPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/permission.ts#L285">property <b>statementIdPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statementIdPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4481,7 +4863,7 @@ A unique statement identifier. By default generated by this provider.
 A statement identifier prefix. This provider will generate a unique suffix. Conflicts with `statementId`.
 
 <h3 class="pdoc-module-header" id="ProvisionedConcurrencyConfigArgs" data-link-title="ProvisionedConcurrencyConfigArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L147">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L147">
         interface <strong>ProvisionedConcurrencyConfigArgs</strong>
     </a>
 </h3>
@@ -4491,7 +4873,7 @@ A statement identifier prefix. This provider will generate a unique suffix. Conf
 The set of arguments for constructing a ProvisionedConcurrencyConfig resource.
 
 <h4 class="pdoc-member-header" id="ProvisionedConcurrencyConfigArgs-functionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L151">property <b>functionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L151">property <b>functionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4499,7 +4881,7 @@ The set of arguments for constructing a ProvisionedConcurrencyConfig resource.
 Name or Amazon Resource Name (ARN) of the Lambda Function.
 
 <h4 class="pdoc-member-header" id="ProvisionedConcurrencyConfigArgs-provisionedConcurrentExecutions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L155">property <b>provisionedConcurrentExecutions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L155">property <b>provisionedConcurrentExecutions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>provisionedConcurrentExecutions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4507,7 +4889,7 @@ Name or Amazon Resource Name (ARN) of the Lambda Function.
 Amount of capacity to allocate. Must be greater than or equal to `1`.
 
 <h4 class="pdoc-member-header" id="ProvisionedConcurrencyConfigArgs-qualifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L159">property <b>qualifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L159">property <b>qualifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>qualifier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4515,7 +4897,7 @@ Amount of capacity to allocate. Must be greater than or equal to `1`.
 Lambda Function version or Lambda Alias name.
 
 <h3 class="pdoc-module-header" id="ProvisionedConcurrencyConfigState" data-link-title="ProvisionedConcurrencyConfigState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L129">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L129">
         interface <strong>ProvisionedConcurrencyConfigState</strong>
     </a>
 </h3>
@@ -4525,7 +4907,7 @@ Lambda Function version or Lambda Alias name.
 Input properties used for looking up and filtering ProvisionedConcurrencyConfig resources.
 
 <h4 class="pdoc-member-header" id="ProvisionedConcurrencyConfigState-functionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L133">property <b>functionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L133">property <b>functionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>functionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4533,7 +4915,7 @@ Input properties used for looking up and filtering ProvisionedConcurrencyConfig 
 Name or Amazon Resource Name (ARN) of the Lambda Function.
 
 <h4 class="pdoc-member-header" id="ProvisionedConcurrencyConfigState-provisionedConcurrentExecutions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L137">property <b>provisionedConcurrentExecutions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L137">property <b>provisionedConcurrentExecutions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>provisionedConcurrentExecutions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4541,7 +4923,7 @@ Name or Amazon Resource Name (ARN) of the Lambda Function.
 Amount of capacity to allocate. Must be greater than or equal to `1`.
 
 <h4 class="pdoc-member-header" id="ProvisionedConcurrencyConfigState-qualifier">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L141">property <b>qualifier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/provisionedConcurrencyConfig.ts#L141">property <b>qualifier</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>qualifier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4549,7 +4931,7 @@ Amount of capacity to allocate. Must be greater than or equal to `1`.
 Lambda Function version or Lambda Alias name.
 
 <h3 class="pdoc-module-header" id="Python2d7Runtime" data-link-title="Python2d7Runtime">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/runtimes.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/runtimes.ts#L41">
         let <strong>Python2d7Runtime</strong>
     </a>
 </h3>
@@ -4559,7 +4941,7 @@ Lambda Function version or Lambda Alias name.
 The Python2d7Runtime constant is deprecated, use Runtime.Python2d7 instead.
 
 <h3 class="pdoc-module-header" id="Python3d6Runtime" data-link-title="Python3d6Runtime">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/runtimes.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/runtimes.ts#L43">
         let <strong>Python3d6Runtime</strong>
     </a>
 </h3>
@@ -4569,7 +4951,7 @@ The Python2d7Runtime constant is deprecated, use Runtime.Python2d7 instead.
 The Python3d6Runtime constant is deprecated, use Runtime.Python3d6 instead.
 
 <h3 class="pdoc-module-header" id="Python3d7Runtime" data-link-title="Python3d7Runtime">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/runtimes.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/runtimes.ts#L45">
         let <strong>Python3d7Runtime</strong>
     </a>
 </h3>
@@ -4579,7 +4961,7 @@ The Python3d6Runtime constant is deprecated, use Runtime.Python3d6 instead.
 The Python3d7Runtime constant is deprecated, use Runtime.Python3d7 instead.
 
 <h3 class="pdoc-module-header" id="Python3d8Runtime" data-link-title="Python3d8Runtime">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/runtimes.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/runtimes.ts#L47">
         let <strong>Python3d8Runtime</strong>
     </a>
 </h3>
@@ -4589,7 +4971,7 @@ The Python3d7Runtime constant is deprecated, use Runtime.Python3d7 instead.
 The Python3d8Runtime constant is deprecated, use Runtime.Python3d8 instead.
 
 <h3 class="pdoc-module-header" id="Ruby2d5Runtime" data-link-title="Ruby2d5Runtime">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/runtimes.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/runtimes.ts#L33">
         let <strong>Ruby2d5Runtime</strong>
     </a>
 </h3>
@@ -4599,7 +4981,7 @@ The Python3d8Runtime constant is deprecated, use Runtime.Python3d8 instead.
 The Ruby2d5Runtime constant is deprecated, use Runtime.Ruby2d5 instead.
 
 <h3 class="pdoc-module-header" id="Ruby2d7Runtime" data-link-title="Ruby2d7Runtime">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/8a8be2819c5dd987f03d94fb4fe439ca6be643bb/sdk/nodejs/lambda/runtimes.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/3da96013c0cb291a4fe359589c7d79d5f0a10bf1/sdk/nodejs/lambda/runtimes.ts#L35">
         let <strong>Ruby2d7Runtime</strong>
     </a>
 </h3>

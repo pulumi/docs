@@ -1,9 +1,17 @@
 ---
-title: Cloud Native AWS Infrastructure as Code
+title: Modern Infrastructure as Code for AWS
 layout: aws
 url: /aws
 
 meta_desc: Pulumi provides huge productivity gains and a unified programming model for Devs and DevOps, through infrastructure as code on the AWS cloud.
+
+hero:
+    title: Cloud Engineering for AWS
+    description: |
+        Pulumi's infrastructure as code SDK helps create, deploy, and manage your
+        AWS infrastructure, including containers, serverless functions, and
+        other infrastructure using modern programming languages.
+
 contact_us_form:
     section_id: contact-us
     hubspot_form_id: 8a0e0f30-b43e-468e-98cc-6b5d481e8660

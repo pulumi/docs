@@ -15,6 +15,7 @@ Provides a GitHub team resource.
 This resource allows you to add/remove teams from your organization. When applied,
 a new team will be created. When destroyed, that team will be removed.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -298,7 +299,7 @@ The Team resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise.
+    <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise Server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -361,7 +362,7 @@ Defaults to `secret`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise.
+    <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise Server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -424,7 +425,7 @@ Defaults to `secret`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise.
+    <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise Server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -487,7 +488,7 @@ Defaults to `secret`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise.
+    <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise Server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -570,7 +571,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Node ID of the created team.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -620,7 +622,8 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Node ID of the created team.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -670,7 +673,8 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Node ID of the created team.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -720,7 +724,8 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Node ID of the created team.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -898,7 +903,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise.
+    <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise Server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -920,7 +925,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Node ID of the created team.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -994,7 +1000,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise.
+    <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise Server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1016,7 +1022,8 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Node ID of the created team.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1090,7 +1097,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise.
+    <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise Server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1112,7 +1119,8 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Node ID of the created team.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1186,7 +1194,7 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise.
+    <dd>{{% md %}}The LDAP Distinguished Name of the group where membership will be synchronized. Only available in GitHub Enterprise Server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1208,7 +1216,8 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Node ID of the created team.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1248,6 +1257,8 @@ Useful when referencing the team in [`github.BranchProtection`](https://www.terr
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

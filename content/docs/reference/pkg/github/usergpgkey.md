@@ -14,6 +14,7 @@ Provides a GitHub user's GPG key resource.
 
 This resource allows you to add/remove GPG keys from your user account.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -801,6 +802,8 @@ See [Generating a new GPG key](https://help.github.com/articles/generating-a-new
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

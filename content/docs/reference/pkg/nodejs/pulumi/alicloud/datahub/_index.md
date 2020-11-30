@@ -3,7 +3,7 @@ title: "Module datahub"
 title_tag: "Module datahub | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "datahub"
 meta_desc: "Explore members of the datahub module in the @pulumi/alicloud package."
-git_sha: "6cf57c2bc1fac537aa1a1744db4b579895c55321"
+git_sha: "4c4dbebbf662f52b648cbfbe09ca1ee944b21850"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Project" data-link-title="Project">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/project.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/project.ts#L33">
         Resource <strong>Project</strong>
     </a>
 </h3>
@@ -69,7 +69,7 @@ Datahub project can be imported using the *name* or ID, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Project-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/project.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/project.ts#L76"> <b>constructor</b></a>
 </h4>
 
 
@@ -83,7 +83,7 @@ Create a Project resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Project-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/project.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/project.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -94,14 +94,14 @@ Get an existing Project resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Project-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/project.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/project.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Project-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/project.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/project.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -112,7 +112,7 @@ Returns true if the given object is an instance of Project.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Project-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/project.ts#L64">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/project.ts#L64">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>comment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -120,7 +120,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Comment of the datahub project. It cannot be longer than 255 characters.
 
 <h4 class="pdoc-member-header" id="Project-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/project.ts#L68">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/project.ts#L68">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -128,7 +128,7 @@ Comment of the datahub project. It cannot be longer than 255 characters.
 Create time of the datahub project. It is a human-readable string rather than 64-bits UTC.
 
 <h4 class="pdoc-member-header" id="Project-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/project.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/project.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -137,7 +137,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Project-lastModifyTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/project.ts#L72">property <b>lastModifyTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/project.ts#L72">property <b>lastModifyTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastModifyTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -145,7 +145,7 @@ deployments and may be missing (undefined) during planning phases.
 Last modify time of the datahub project. It is the same as *create_time* at the beginning. It is also a human-readable string rather than 64-bits UTC.
 
 <h4 class="pdoc-member-header" id="Project-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/project.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/project.ts#L76">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -153,7 +153,7 @@ Last modify time of the datahub project. It is the same as *create_time* at the 
 The name of the datahub project. Its length is limited to 3-32 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
 
 <h4 class="pdoc-member-header" id="Project-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/project.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/project.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -162,7 +162,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Subscription" data-link-title="Subscription">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L33">
         Resource <strong>Subscription</strong>
     </a>
 </h3>
@@ -195,7 +195,7 @@ Datahub subscription can be imported using the ID, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Subscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L84"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -209,7 +209,7 @@ Create a Subscription resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Subscription-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -220,14 +220,14 @@ Get an existing Subscription resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Subscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Subscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -238,7 +238,7 @@ Returns true if the given object is an instance of Subscription.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Subscription-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L64">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L64">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>comment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -246,7 +246,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Comment of the datahub subscription. It cannot be longer than 255 characters.
 
 <h4 class="pdoc-member-header" id="Subscription-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L68">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L68">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -254,7 +254,7 @@ Comment of the datahub subscription. It cannot be longer than 255 characters.
 Create time of the datahub subscription. It is a human-readable string rather than 64-bits UTC.
 
 <h4 class="pdoc-member-header" id="Subscription-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -263,7 +263,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Subscription-lastModifyTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L72">property <b>lastModifyTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L72">property <b>lastModifyTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastModifyTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -271,7 +271,7 @@ deployments and may be missing (undefined) during planning phases.
 Last modify time of the datahub subscription. It is the same as *create_time* at the beginning. It is also a human-readable string rather than 64-bits UTC.
 
 <h4 class="pdoc-member-header" id="Subscription-projectName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L76">property <b>projectName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L76">property <b>projectName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -279,7 +279,7 @@ Last modify time of the datahub subscription. It is the same as *create_time* at
 The name of the datahub project that the subscription belongs to. Its length is limited to 3-32 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
 
 <h4 class="pdoc-member-header" id="Subscription-subId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L80">property <b>subId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L80">property <b>subId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -287,7 +287,7 @@ The name of the datahub project that the subscription belongs to. Its length is 
 The identidy of the subscritpion, generate from server side.
 
 <h4 class="pdoc-member-header" id="Subscription-topicName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L84">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L84">property <b>topicName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>topicName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -295,7 +295,7 @@ The identidy of the subscritpion, generate from server side.
 The name of the datahub topic that the subscription belongs to. Its length is limited to 1-128 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
 
 <h4 class="pdoc-member-header" id="Subscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -304,7 +304,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Topic" data-link-title="Topic">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L58">
         Resource <strong>Topic</strong>
     </a>
 </h3>
@@ -362,7 +362,7 @@ Datahub topic can be imported using the ID, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Topic-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L126"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L126"> <b>constructor</b></a>
 </h4>
 
 
@@ -376,7 +376,7 @@ Create a Topic resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Topic-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L68">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L68">method <b>get</b></a>
 </h4>
 
 
@@ -387,14 +387,14 @@ Get an existing Topic resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Topic-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L58">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L58">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Topic-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L79">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L79">method <b>isInstance</b></a>
 </h4>
 
 
@@ -405,7 +405,7 @@ Returns true if the given object is an instance of Topic.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Topic-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L89">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L89">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>comment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -413,7 +413,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Comment of the datahub topic. It cannot be longer than 255 characters.
 
 <h4 class="pdoc-member-header" id="Topic-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L93">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L93">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -421,7 +421,7 @@ Comment of the datahub topic. It cannot be longer than 255 characters.
 Create time of the datahub topic. It is a human-readable string rather than 64-bits UTC.
 
 <h4 class="pdoc-member-header" id="Topic-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L58">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L58">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -430,7 +430,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Topic-lastModifyTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L97">property <b>lastModifyTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L97">property <b>lastModifyTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastModifyTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -438,7 +438,7 @@ deployments and may be missing (undefined) during planning phases.
 Last modify time of the datahub topic. It is the same as *create_time* at the beginning. It is also a human-readable string rather than 64-bits UTC.
 
 <h4 class="pdoc-member-header" id="Topic-lifeCycle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L101">property <b>lifeCycle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L101">property <b>lifeCycle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lifeCycle: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -446,7 +446,7 @@ Last modify time of the datahub topic. It is the same as *create_time* at the be
 How many days this topic lives. The permitted range of values is [1, 7]. The default value is 3.
 
 <h4 class="pdoc-member-header" id="Topic-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L105">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L105">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -454,7 +454,7 @@ How many days this topic lives. The permitted range of values is [1, 7]. The def
 The name of the datahub topic. Its length is limited to 1-128 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
 
 <h4 class="pdoc-member-header" id="Topic-projectName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L109">property <b>projectName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L109">property <b>projectName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -462,7 +462,7 @@ The name of the datahub topic. Its length is limited to 1-128 and only character
 The name of the datahub project that this topic belongs to. It is case-insensitive.
 
 <h4 class="pdoc-member-header" id="Topic-recordSchema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L118">property <b>recordSchema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L118">property <b>recordSchema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recordSchema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -475,7 +475,7 @@ Schema of this topic, required only for TUPLE topic. Supported data types (case-
 - TIMESTAMP
 
 <h4 class="pdoc-member-header" id="Topic-recordType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L122">property <b>recordType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L122">property <b>recordType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recordType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -483,7 +483,7 @@ Schema of this topic, required only for TUPLE topic. Supported data types (case-
 The type of this topic. Its value must be one of {BLOB, TUPLE}. For BLOB topic, data will be organized as binary and encoded by BASE64. For TUPLE topic, data has fixed schema. The default value is "TUPLE" with a schema {STRING}.
 
 <h4 class="pdoc-member-header" id="Topic-shardCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L126">property <b>shardCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L126">property <b>shardCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>shardCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -491,7 +491,7 @@ The type of this topic. Its value must be one of {BLOB, TUPLE}. For BLOB topic, 
 The number of shards this topic contains. The permitted range of values is [1, 10]. The default value is 1.
 
 <h4 class="pdoc-member-header" id="Topic-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L58">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L58">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -503,7 +503,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ProjectArgs" data-link-title="ProjectArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/project.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/project.ts#L137">
         interface <strong>ProjectArgs</strong>
     </a>
 </h3>
@@ -513,7 +513,7 @@ deployments.
 The set of arguments for constructing a Project resource.
 
 <h4 class="pdoc-member-header" id="ProjectArgs-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/project.ts#L141">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/project.ts#L141">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -521,7 +521,7 @@ The set of arguments for constructing a Project resource.
 Comment of the datahub project. It cannot be longer than 255 characters.
 
 <h4 class="pdoc-member-header" id="ProjectArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/project.ts#L145">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/project.ts#L145">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -529,7 +529,7 @@ Comment of the datahub project. It cannot be longer than 255 characters.
 The name of the datahub project. Its length is limited to 3-32 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
 
 <h3 class="pdoc-module-header" id="ProjectState" data-link-title="ProjectState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/project.ts#L115">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/project.ts#L115">
         interface <strong>ProjectState</strong>
     </a>
 </h3>
@@ -539,7 +539,7 @@ The name of the datahub project. Its length is limited to 3-32 and only characte
 Input properties used for looking up and filtering Project resources.
 
 <h4 class="pdoc-member-header" id="ProjectState-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/project.ts#L119">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/project.ts#L119">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -547,7 +547,7 @@ Input properties used for looking up and filtering Project resources.
 Comment of the datahub project. It cannot be longer than 255 characters.
 
 <h4 class="pdoc-member-header" id="ProjectState-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/project.ts#L123">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/project.ts#L123">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -555,7 +555,7 @@ Comment of the datahub project. It cannot be longer than 255 characters.
 Create time of the datahub project. It is a human-readable string rather than 64-bits UTC.
 
 <h4 class="pdoc-member-header" id="ProjectState-lastModifyTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/project.ts#L127">property <b>lastModifyTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/project.ts#L127">property <b>lastModifyTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastModifyTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -563,7 +563,7 @@ Create time of the datahub project. It is a human-readable string rather than 64
 Last modify time of the datahub project. It is the same as *create_time* at the beginning. It is also a human-readable string rather than 64-bits UTC.
 
 <h4 class="pdoc-member-header" id="ProjectState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/project.ts#L131">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/project.ts#L131">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -571,7 +571,7 @@ Last modify time of the datahub project. It is the same as *create_time* at the 
 The name of the datahub project. Its length is limited to 3-32 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
 
 <h3 class="pdoc-module-header" id="SubscriptionArgs" data-link-title="SubscriptionArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L163">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L163">
         interface <strong>SubscriptionArgs</strong>
     </a>
 </h3>
@@ -581,7 +581,7 @@ The name of the datahub project. Its length is limited to 3-32 and only characte
 The set of arguments for constructing a Subscription resource.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L167">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L167">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -589,7 +589,7 @@ The set of arguments for constructing a Subscription resource.
 Comment of the datahub subscription. It cannot be longer than 255 characters.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-projectName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L171">property <b>projectName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L171">property <b>projectName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -597,7 +597,7 @@ Comment of the datahub subscription. It cannot be longer than 255 characters.
 The name of the datahub project that the subscription belongs to. Its length is limited to 3-32 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
 
 <h4 class="pdoc-member-header" id="SubscriptionArgs-topicName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L175">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L175">property <b>topicName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topicName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -605,7 +605,7 @@ The name of the datahub project that the subscription belongs to. Its length is 
 The name of the datahub topic that the subscription belongs to. Its length is limited to 1-128 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
 
 <h3 class="pdoc-module-header" id="SubscriptionState" data-link-title="SubscriptionState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L133">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L133">
         interface <strong>SubscriptionState</strong>
     </a>
 </h3>
@@ -615,7 +615,7 @@ The name of the datahub topic that the subscription belongs to. Its length is li
 Input properties used for looking up and filtering Subscription resources.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L137">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L137">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -623,7 +623,7 @@ Input properties used for looking up and filtering Subscription resources.
 Comment of the datahub subscription. It cannot be longer than 255 characters.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L141">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L141">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -631,7 +631,7 @@ Comment of the datahub subscription. It cannot be longer than 255 characters.
 Create time of the datahub subscription. It is a human-readable string rather than 64-bits UTC.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-lastModifyTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L145">property <b>lastModifyTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L145">property <b>lastModifyTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastModifyTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -639,7 +639,7 @@ Create time of the datahub subscription. It is a human-readable string rather th
 Last modify time of the datahub subscription. It is the same as *create_time* at the beginning. It is also a human-readable string rather than 64-bits UTC.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-projectName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L149">property <b>projectName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L149">property <b>projectName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -647,7 +647,7 @@ Last modify time of the datahub subscription. It is the same as *create_time* at
 The name of the datahub project that the subscription belongs to. Its length is limited to 3-32 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-subId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L153">property <b>subId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L153">property <b>subId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -655,7 +655,7 @@ The name of the datahub project that the subscription belongs to. Its length is 
 The identidy of the subscritpion, generate from server side.
 
 <h4 class="pdoc-member-header" id="SubscriptionState-topicName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/subscription.ts#L157">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/subscription.ts#L157">property <b>topicName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>topicName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -663,7 +663,7 @@ The identidy of the subscritpion, generate from server side.
 The name of the datahub topic that the subscription belongs to. Its length is limited to 1-128 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
 
 <h3 class="pdoc-module-header" id="TopicArgs" data-link-title="TopicArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L225">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L225">
         interface <strong>TopicArgs</strong>
     </a>
 </h3>
@@ -673,7 +673,7 @@ The name of the datahub topic that the subscription belongs to. Its length is li
 The set of arguments for constructing a Topic resource.
 
 <h4 class="pdoc-member-header" id="TopicArgs-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L229">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L229">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -681,7 +681,7 @@ The set of arguments for constructing a Topic resource.
 Comment of the datahub topic. It cannot be longer than 255 characters.
 
 <h4 class="pdoc-member-header" id="TopicArgs-lifeCycle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L233">property <b>lifeCycle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L233">property <b>lifeCycle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lifeCycle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -689,7 +689,7 @@ Comment of the datahub topic. It cannot be longer than 255 characters.
 How many days this topic lives. The permitted range of values is [1, 7]. The default value is 3.
 
 <h4 class="pdoc-member-header" id="TopicArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L237">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L237">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -697,7 +697,7 @@ How many days this topic lives. The permitted range of values is [1, 7]. The def
 The name of the datahub topic. Its length is limited to 1-128 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
 
 <h4 class="pdoc-member-header" id="TopicArgs-projectName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L241">property <b>projectName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L241">property <b>projectName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -705,7 +705,7 @@ The name of the datahub topic. Its length is limited to 1-128 and only character
 The name of the datahub project that this topic belongs to. It is case-insensitive.
 
 <h4 class="pdoc-member-header" id="TopicArgs-recordSchema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L250">property <b>recordSchema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L250">property <b>recordSchema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recordSchema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -718,7 +718,7 @@ Schema of this topic, required only for TUPLE topic. Supported data types (case-
 - TIMESTAMP
 
 <h4 class="pdoc-member-header" id="TopicArgs-recordType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L254">property <b>recordType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L254">property <b>recordType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recordType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -726,7 +726,7 @@ Schema of this topic, required only for TUPLE topic. Supported data types (case-
 The type of this topic. Its value must be one of {BLOB, TUPLE}. For BLOB topic, data will be organized as binary and encoded by BASE64. For TUPLE topic, data has fixed schema. The default value is "TUPLE" with a schema {STRING}.
 
 <h4 class="pdoc-member-header" id="TopicArgs-shardCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L258">property <b>shardCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L258">property <b>shardCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shardCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -734,7 +734,7 @@ The type of this topic. Its value must be one of {BLOB, TUPLE}. For BLOB topic, 
 The number of shards this topic contains. The permitted range of values is [1, 10]. The default value is 1.
 
 <h3 class="pdoc-module-header" id="TopicState" data-link-title="TopicState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L178">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L178">
         interface <strong>TopicState</strong>
     </a>
 </h3>
@@ -744,7 +744,7 @@ The number of shards this topic contains. The permitted range of values is [1, 1
 Input properties used for looking up and filtering Topic resources.
 
 <h4 class="pdoc-member-header" id="TopicState-comment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L182">property <b>comment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L182">property <b>comment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -752,7 +752,7 @@ Input properties used for looking up and filtering Topic resources.
 Comment of the datahub topic. It cannot be longer than 255 characters.
 
 <h4 class="pdoc-member-header" id="TopicState-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L186">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L186">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -760,7 +760,7 @@ Comment of the datahub topic. It cannot be longer than 255 characters.
 Create time of the datahub topic. It is a human-readable string rather than 64-bits UTC.
 
 <h4 class="pdoc-member-header" id="TopicState-lastModifyTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L190">property <b>lastModifyTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L190">property <b>lastModifyTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastModifyTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -768,7 +768,7 @@ Create time of the datahub topic. It is a human-readable string rather than 64-b
 Last modify time of the datahub topic. It is the same as *create_time* at the beginning. It is also a human-readable string rather than 64-bits UTC.
 
 <h4 class="pdoc-member-header" id="TopicState-lifeCycle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L194">property <b>lifeCycle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L194">property <b>lifeCycle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lifeCycle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -776,7 +776,7 @@ Last modify time of the datahub topic. It is the same as *create_time* at the be
 How many days this topic lives. The permitted range of values is [1, 7]. The default value is 3.
 
 <h4 class="pdoc-member-header" id="TopicState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L198">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L198">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -784,7 +784,7 @@ How many days this topic lives. The permitted range of values is [1, 7]. The def
 The name of the datahub topic. Its length is limited to 1-128 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
 
 <h4 class="pdoc-member-header" id="TopicState-projectName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L202">property <b>projectName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L202">property <b>projectName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -792,7 +792,7 @@ The name of the datahub topic. Its length is limited to 1-128 and only character
 The name of the datahub project that this topic belongs to. It is case-insensitive.
 
 <h4 class="pdoc-member-header" id="TopicState-recordSchema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L211">property <b>recordSchema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L211">property <b>recordSchema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recordSchema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -805,7 +805,7 @@ Schema of this topic, required only for TUPLE topic. Supported data types (case-
 - TIMESTAMP
 
 <h4 class="pdoc-member-header" id="TopicState-recordType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L215">property <b>recordType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L215">property <b>recordType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recordType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -813,7 +813,7 @@ Schema of this topic, required only for TUPLE topic. Supported data types (case-
 The type of this topic. Its value must be one of {BLOB, TUPLE}. For BLOB topic, data will be organized as binary and encoded by BASE64. For TUPLE topic, data has fixed schema. The default value is "TUPLE" with a schema {STRING}.
 
 <h4 class="pdoc-member-header" id="TopicState-shardCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/6cf57c2bc1fac537aa1a1744db4b579895c55321/sdk/nodejs/datahub/topic.ts#L219">property <b>shardCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/4c4dbebbf662f52b648cbfbe09ca1ee944b21850/sdk/nodejs/datahub/topic.ts#L219">property <b>shardCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shardCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>

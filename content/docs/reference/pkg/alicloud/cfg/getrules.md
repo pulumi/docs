@@ -119,7 +119,7 @@ export const firstConfigRuleId = example.then(example => example.rules[0].id);
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_rules(</span><span class="nx">config_rule_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_details</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">member_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">multi_account</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">risk_level</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRulesResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_rules(</span><span class="nx">config_rule_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_details</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">member_id</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">message_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">multi_account</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name_regex</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">output_file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">risk_level</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetRulesResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -186,6 +186,17 @@ The following arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The ID of the member account to which the rule to be queried belongs. The default is empty. When `multi_account` is set to true, this parameter is valid.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="messagetype_csharp">
+<a href="#messagetype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Trigger mechanism of rules. Valid values: `ConfigurationItemChangeNotification`,`OversizedConfigurationItemChangeNotification` and `ScheduledNotification`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -284,6 +295,17 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="messagetype_go">
+<a href="#messagetype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Trigger mechanism of rules. Valid values: `ConfigurationItemChangeNotification`,`OversizedConfigurationItemChangeNotification` and `ScheduledNotification`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="multiaccount_go">
 <a href="#multiaccount_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Account</a>
 </span> 
@@ -378,6 +400,17 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="messagetype_nodejs">
+<a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Trigger mechanism of rules. Valid values: `ConfigurationItemChangeNotification`,`OversizedConfigurationItemChangeNotification` and `ScheduledNotification`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="multiaccount_nodejs">
 <a href="#multiaccount_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Account</a>
 </span> 
@@ -468,6 +501,17 @@ The following arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}The ID of the member account to which the rule to be queried belongs. The default is empty. When `multi_account` is set to true, this parameter is valid.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Trigger mechanism of rules. Valid values: `ConfigurationItemChangeNotification`,`OversizedConfigurationItemChangeNotification` and `ScheduledNotification`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -609,6 +653,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="messagetype_csharp">
+<a href="#messagetype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="multiaccount_csharp">
 <a href="#multiaccount_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Account</a>
 </span> 
@@ -725,6 +779,16 @@ The following output properties are available:
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="messagetype_go">
+<a href="#messagetype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -851,6 +915,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="messagetype_nodejs">
+<a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="multiaccount_nodejs">
 <a href="#multiaccount_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Account</a>
 </span> 
@@ -972,6 +1046,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="message_type_python">
+<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="multi_account_python">
 <a href="#multi_account_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>account</a>
 </span> 
@@ -1053,6 +1137,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="compliances_csharp">
+<a href="#compliances_csharp" style="color: inherit; text-decoration: inherit;">Compliances</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getrulesrulecompliance">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cfg.<wbr>Inputs.<wbr>Get<wbr>Rules<wbr>Rule<wbr>Compliance<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The information about the compliance evaluations based on the rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="configrulearn_csharp">
 <a href="#configrulearn_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Rule<wbr>Arn</a>
 </span> 
@@ -1104,6 +1199,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="eventsource_csharp">
+<a href="#eventsource_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Event source of the Config Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -1121,7 +1227,6 @@ The following output properties are available:
 * `modified_timestamp`- the timestamp of the Config Rule modified.
 * `risk_level`- The risk level of the Config Rule.
 * `rule_name`- The name of the Config Rule.
-* `source_details`- The source details of the Config Rule.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1167,13 +1272,36 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcedetails_csharp">
-<a href="#sourcedetails_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Details</a>
+        <span id="scopecomplianceresourceid_csharp">
+<a href="#scopecomplianceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Scope<wbr>Compliance<wbr>Resource<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrulesrulesourcedetail">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cfg.<wbr>Inputs.<wbr>Get<wbr>Rules<wbr>Rule<wbr>Source<wbr>Detail<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the resource to be evaluated.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scopecomplianceresourcetypes_csharp">
+<a href="#scopecomplianceresourcetypes_csharp" style="color: inherit; text-decoration: inherit;">Scope<wbr>Compliance<wbr>Resource<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The types of the resources to be evaluated against the rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcedetailmessagetype_csharp">
+<a href="#sourcedetailmessagetype_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Detail<wbr>Message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Rule trigger mechanism.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1184,6 +1312,19 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcemaximumexecutionfrequency_csharp">
+<a href="#sourcemaximumexecutionfrequency_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Maximum<wbr>Execution<wbr>Frequency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Rule execution cycle. 
+* `source_identifier`- The name of the custom rule or managed rule.
+* `source_owner`- The source owner of the Config Rule.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1211,6 +1352,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="compliances_go">
+<a href="#compliances_go" style="color: inherit; text-decoration: inherit;">Compliances</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getrulesrulecompliance">[]Get<wbr>Rules<wbr>Rule<wbr>Compliance</a></span>
+    </dt>
+    <dd>{{% md %}}The information about the compliance evaluations based on the rule.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1265,6 +1417,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="eventsource_go">
+<a href="#eventsource_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Event source of the Config Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span> 
@@ -1282,7 +1445,6 @@ The following output properties are available:
 * `modified_timestamp`- the timestamp of the Config Rule modified.
 * `risk_level`- The risk level of the Config Rule.
 * `rule_name`- The name of the Config Rule.
-* `source_details`- The source details of the Config Rule.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1328,13 +1490,36 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcedetails_go">
-<a href="#sourcedetails_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Details</a>
+        <span id="scopecomplianceresourceid_go">
+<a href="#scopecomplianceresourceid_go" style="color: inherit; text-decoration: inherit;">Scope<wbr>Compliance<wbr>Resource<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrulesrulesourcedetail">[]Get<wbr>Rules<wbr>Rule<wbr>Source<wbr>Detail</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the resource to be evaluated.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scopecomplianceresourcetypes_go">
+<a href="#scopecomplianceresourcetypes_go" style="color: inherit; text-decoration: inherit;">Scope<wbr>Compliance<wbr>Resource<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The types of the resources to be evaluated against the rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcedetailmessagetype_go">
+<a href="#sourcedetailmessagetype_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Detail<wbr>Message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Rule trigger mechanism.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1345,6 +1530,19 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcemaximumexecutionfrequency_go">
+<a href="#sourcemaximumexecutionfrequency_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Maximum<wbr>Execution<wbr>Frequency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Rule execution cycle. 
+* `source_identifier`- The name of the custom rule or managed rule.
+* `source_owner`- The source owner of the Config Rule.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1372,6 +1570,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="compliances_nodejs">
+<a href="#compliances_nodejs" style="color: inherit; text-decoration: inherit;">compliances</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getrulesrulecompliance">Get<wbr>Rules<wbr>Rule<wbr>Compliance[]</a></span>
+    </dt>
+    <dd>{{% md %}}The information about the compliance evaluations based on the rule.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1426,6 +1635,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="eventsource_nodejs">
+<a href="#eventsource_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Event source of the Config Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -1443,7 +1663,6 @@ The following output properties are available:
 * `modified_timestamp`- the timestamp of the Config Rule modified.
 * `risk_level`- The risk level of the Config Rule.
 * `rule_name`- The name of the Config Rule.
-* `source_details`- The source details of the Config Rule.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1489,13 +1708,36 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="sourcedetails_nodejs">
-<a href="#sourcedetails_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Details</a>
+        <span id="scopecomplianceresourceid_nodejs">
+<a href="#scopecomplianceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">scope<wbr>Compliance<wbr>Resource<wbr>Id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrulesrulesourcedetail">Get<wbr>Rules<wbr>Rule<wbr>Source<wbr>Detail[]</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the resource to be evaluated.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scopecomplianceresourcetypes_nodejs">
+<a href="#scopecomplianceresourcetypes_nodejs" style="color: inherit; text-decoration: inherit;">scope<wbr>Compliance<wbr>Resource<wbr>Types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The types of the resources to be evaluated against the rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcedetailmessagetype_nodejs">
+<a href="#sourcedetailmessagetype_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Detail<wbr>Message<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Rule trigger mechanism.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1506,6 +1748,19 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcemaximumexecutionfrequency_nodejs">
+<a href="#sourcemaximumexecutionfrequency_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Maximum<wbr>Execution<wbr>Frequency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Rule execution cycle. 
+* `source_identifier`- The name of the custom rule or managed rule.
+* `source_owner`- The source owner of the Config Rule.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1533,6 +1788,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="compliances_python">
+<a href="#compliances_python" style="color: inherit; text-decoration: inherit;">compliances</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getrulesrulecompliance">Sequence[Get<wbr>Rules<wbr>Rule<wbr>Compliance<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The information about the compliance evaluations based on the rule.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1587,6 +1853,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span id="event_source_python">
+<a href="#event_source_python" style="color: inherit; text-decoration: inherit;">event_<wbr>source</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Event source of the Config Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span> 
@@ -1604,7 +1881,6 @@ The following output properties are available:
 * `modified_timestamp`- the timestamp of the Config Rule modified.
 * `risk_level`- The risk level of the Config Rule.
 * `rule_name`- The name of the Config Rule.
-* `source_details`- The source details of the Config Rule.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1650,13 +1926,36 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="source_details_python">
-<a href="#source_details_python" style="color: inherit; text-decoration: inherit;">source_<wbr>details</a>
+        <span id="scope_compliance_resource_id_python">
+<a href="#scope_compliance_resource_id_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>compliance_<wbr>resource_<wbr>id</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrulesrulesourcedetail">Sequence[Get<wbr>Rules<wbr>Rule<wbr>Source<wbr>Detail<wbr>Args]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of the resource to be evaluated.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="scope_compliance_resource_types_python">
+<a href="#scope_compliance_resource_types_python" style="color: inherit; text-decoration: inherit;">scope_<wbr>compliance_<wbr>resource_<wbr>types</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The types of the resources to be evaluated against the rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="source_detail_message_type_python">
+<a href="#source_detail_message_type_python" style="color: inherit; text-decoration: inherit;">source_<wbr>detail_<wbr>message_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Rule trigger mechanism.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1667,6 +1966,19 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="source_maximum_execution_frequency_python">
+<a href="#source_maximum_execution_frequency_python" style="color: inherit; text-decoration: inherit;">source_<wbr>maximum_<wbr>execution_<wbr>frequency</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Rule execution cycle. 
+* `source_identifier`- The name of the custom rule or managed rule.
+* `source_owner`- The source owner of the Config Rule.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1685,16 +1997,16 @@ The following output properties are available:
 
 
 
-<h4 id="getrulesrulesourcedetail">Get<wbr>Rules<wbr>Rule<wbr>Source<wbr>Detail</h4>
+<h4 id="getrulesrulecompliance">Get<wbr>Rules<wbr>Rule<wbr>Compliance</h4>
 {{% choosable language nodejs %}}
-> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRulesRuleSourceDetail">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRulesRuleCompliance">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cfg?tab=doc#GetRulesRuleSourceDetail">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/cfg?tab=doc#GetRulesRuleCompliance">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cfg.Outputs.GetRulesRuleSourceDetail.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.AliCloud/Pulumi.AliCloud.Cfg.Outputs.GetRulesRuleCompliance.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1705,37 +2017,24 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="eventsource_csharp">
-<a href="#eventsource_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Source</a>
+        <span id="compliancetype_csharp">
+<a href="#compliancetype_csharp" style="color: inherit; text-decoration: inherit;">Compliance<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Event source of the Config Rule.
+    <dd>{{% md %}}The compliance evaluation result of the target resources.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="maximumexecutionfrequency_csharp">
-<a href="#maximumexecutionfrequency_csharp" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Execution<wbr>Frequency</a>
+        <span id="count_csharp">
+<a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Rule execution cycle.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="messagetype_csharp">
-<a href="#messagetype_csharp" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Rule trigger mechanism.
-* `source_identifier`- The name of the custom rule or managed rule.
-* `source_owner`- The source owner of the Config Rule.
+    <dd>{{% md %}}The number of resources with the specified compliance evaluation result.
 {{% /md %}}</dd>
 
 </dl>
@@ -1747,37 +2046,24 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="eventsource_go">
-<a href="#eventsource_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Source</a>
+        <span id="compliancetype_go">
+<a href="#compliancetype_go" style="color: inherit; text-decoration: inherit;">Compliance<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Event source of the Config Rule.
+    <dd>{{% md %}}The compliance evaluation result of the target resources.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="maximumexecutionfrequency_go">
-<a href="#maximumexecutionfrequency_go" style="color: inherit; text-decoration: inherit;">Maximum<wbr>Execution<wbr>Frequency</a>
+        <span id="count_go">
+<a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Rule execution cycle.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="messagetype_go">
-<a href="#messagetype_go" style="color: inherit; text-decoration: inherit;">Message<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Rule trigger mechanism.
-* `source_identifier`- The name of the custom rule or managed rule.
-* `source_owner`- The source owner of the Config Rule.
+    <dd>{{% md %}}The number of resources with the specified compliance evaluation result.
 {{% /md %}}</dd>
 
 </dl>
@@ -1789,37 +2075,24 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="eventsource_nodejs">
-<a href="#eventsource_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Source</a>
+        <span id="compliancetype_nodejs">
+<a href="#compliancetype_nodejs" style="color: inherit; text-decoration: inherit;">compliance<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Event source of the Config Rule.
+    <dd>{{% md %}}The compliance evaluation result of the target resources.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="maximumexecutionfrequency_nodejs">
-<a href="#maximumexecutionfrequency_nodejs" style="color: inherit; text-decoration: inherit;">maximum<wbr>Execution<wbr>Frequency</a>
+        <span id="count_nodejs">
+<a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Rule execution cycle.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="messagetype_nodejs">
-<a href="#messagetype_nodejs" style="color: inherit; text-decoration: inherit;">message<wbr>Type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Rule trigger mechanism.
-* `source_identifier`- The name of the custom rule or managed rule.
-* `source_owner`- The source owner of the Config Rule.
+    <dd>{{% md %}}The number of resources with the specified compliance evaluation result.
 {{% /md %}}</dd>
 
 </dl>
@@ -1831,37 +2104,24 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="event_source_python">
-<a href="#event_source_python" style="color: inherit; text-decoration: inherit;">event_<wbr>source</a>
+        <span id="compliance_type_python">
+<a href="#compliance_type_python" style="color: inherit; text-decoration: inherit;">compliance_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Event source of the Config Rule.
+    <dd>{{% md %}}The compliance evaluation result of the target resources.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="maximum_execution_frequency_python">
-<a href="#maximum_execution_frequency_python" style="color: inherit; text-decoration: inherit;">maximum_<wbr>execution_<wbr>frequency</a>
+        <span id="count_python">
+<a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}Rule execution cycle.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span id="message_type_python">
-<a href="#message_type_python" style="color: inherit; text-decoration: inherit;">message_<wbr>type</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Rule trigger mechanism.
-* `source_identifier`- The name of the custom rule or managed rule.
-* `source_owner`- The source owner of the Config Rule.
+    <dd>{{% md %}}The number of resources with the specified compliance evaluation result.
 {{% /md %}}</dd>
 
 </dl>
