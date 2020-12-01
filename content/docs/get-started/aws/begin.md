@@ -10,8 +10,6 @@ menu:
     identifier: aws-begin
 
 aliases: [
-  "/docs/quickstart/aws/",
-  "/docs/get-started/aws/",
   "/docs/quickstart/aws/begin/",
   "/docs/quickstart/aws/install-pulumi/",
   "/docs/quickstart/aws/install-language-runtime/",
@@ -52,7 +50,7 @@ Next, install the required language runtime, if you have not already.
 {{< install-dotnet >}}
 {{% /choosable %}}
 
-Finally, you'll configure Pulumi with AWS.
+Finally, configure Pulumi with AWS.
 
 ### Configure Pulumi to access your AWS account
 
@@ -62,24 +60,39 @@ If you have previously <a href="https://docs.aws.amazon.com/cli/latest/userguide
 
 If you do not have the AWS CLI installed or plan on using Pulumi from within a CI/CD pipeline, <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys" target="_blank">retrieve your access key ID and secret access key</a> and then set the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` environment variables on your workstation.
 
-#### Linux/macOS
+{{< chooser os "linux,macos,windows" >}}
+{{% choosable os linux %}}
 
 ```bash
 $ export AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_ID>
 $ export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>
 ```
 
-#### Windows
+{{% /choosable %}}
+
+{{% choosable os macos %}}
+
+```bash
+$ export AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_ID>
+$ export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>
+```
+
+{{% /choosable %}}
+
+{{% choosable os windows %}}
 
 ```bat
 > set AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_ID>
 > set AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>
 ```
 
+{{% /choosable %}}
+{{< /chooser >}}
+
 As an optional step, if you have multiple AWS profiles set up, you can specify a different profile using one of the following methods:
 
-* Set `AWS_PROFILE`as an <a href="{{< relref "/docs/intro/cloud-providers/aws/setup#environment-variables" >}}" target="_blank">environment variable</a>, or
-* After creating your project in the next step, run `pulumi config set aws:profile <profilename>`. See <a href="{{< relref "/docs/intro/cloud-providers/aws#configuration" >}}" target="_blank">AWS Configuration</a> for more configuration options.
+* Set `AWS_PROFILE`as an [environment variable]({{< relref "/docs/intro/cloud-providers/aws/setup#environment-variables" >}}).
+* After creating your project in the next step, run `pulumi config set aws:profile <profilename>`. For more configuration options, see [AWS Configuration]({{< relref "/docs/intro/cloud-providers/aws#configuration" >}}).
 
 For additional information on how to setup Pulumi to work with AWS, see [AWS Setup]({{< relref "/docs/intro/cloud-providers/aws/setup" >}}).
 

@@ -29,7 +29,7 @@ aliases:
 
 <div class="tiles flex-wrap mt-4">
     <div class="pb-4 md:pr-4 md:w-1/2">
-        <a class="tile p-8" href="{{< relref "/docs/get-started/aws/begin" >}}">
+        <a class="tile p-8" href="{{< relref "/docs/get-started/aws" >}}">
             <img class="h-10 mx-auto" src="/logos/tech/aws.svg" alt="AWS">
         </a>
     </div>

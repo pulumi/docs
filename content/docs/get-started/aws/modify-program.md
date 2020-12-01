@@ -15,17 +15,17 @@ aliases: ["/docs/quickstart/aws/modify-program/"]
 Now that your S3 bucket is provisioned, let's add an object to it. First, create a new directory called `site`.
 
 ```bash
-$ mkdir site
+mkdir site
 ```
 
-Next, create a new `index.html` file with some content you will upload to your bucket.
+Next, create a new `index.html` file with some content in it.
 
 {{< chooser os "macos,linux,windows" / >}}
 
 {{% choosable os macos %}}
 
 ```bash
-$ cat <<EOT > site/index.html
+cat <<EOT > site/index.html
 <html>
     <body>
         <h1>Hello, Pulumi!</h1>
@@ -39,7 +39,7 @@ EOT
 {{% choosable os linux %}}
 
 ```bash
-$ cat <<EOT > site/index.html
+cat <<EOT > site/index.html
 <html>
     <body>
         <h1>Hello, Pulumi!</h1>
@@ -52,18 +52,21 @@ EOT
 
 {{% choosable os windows %}}
 
-```bat
-> site/index.html (
-    @echo.^<html^>
-    @echo.  ^<body^>
-    @echo.      ^<h1^>Hello, Pulumi!^</h1^>
-    @echo.  ^</body^>
-    @echo.^</html^>)
+```batch
+(
+@echo.^<html^>
+@echo.  ^<body^>
+@echo.      ^<h1^>Hello, Pulumi!^</h1^>
+@echo.  ^</body^>
+@echo.^</html^>
+) > site/index.html
 ```
 
 {{% /choosable %}}
 
-Now that you have your new `index.html` with some content, modify your program to add the contents of your `index.html` file to your S3 bucket. To accomplish this, we will take advantage of your chosen programming language's native libraries to read the content of the file and assign it as an input to a new  `BucketObject`.
+Now that you have your new `index.html` with some content, open your IDE or text editor and modify your program to add the contents of your `index.html` file to your S3 bucket.
+
+To accomplish this, we will take advantage of your chosen programming language's native libraries to read the content of the file and assign it as an input to a new  `BucketObject`.
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
