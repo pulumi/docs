@@ -159,18 +159,31 @@ export class Convert {
     }
 
     // The CLI tool that corresponds with the language we're converting from.
-    private get conversionTool(): { name: string; githubURL?: string } {
+    private get conversionTool(): { name: string; githubURL?: string, issueURL?: string } {
         switch (this.from) {
             case "tf":
+                return {
+                    name: "tf2pulumi",
+                    githubURL: "https://github.com/pulumi/tf2pulumi",
+                    issueURL: "https://github.com/pulumi/tf2pulumi/issues",
+                };
             case "kube":
                 return {
+                    name: "kube2pulumi",
+                    githubURL: "https://github.com/pulumi/kube2pulumi",
+                    issueURL: "https://github.com/pulumi/kube2pulumi/issues",
+                };
+            case "arm":
+                return {
+                    name: "arm2pulumi",
+                    githubURL: "https://github.com/pulumi/arm2pulumi",
+                    issueURL: "https://github.com/pulumi/pulumi-azure-nextgen/issues?q=is%3Aissue+is%3Aopen+label%3Aarm2pulumi",
+                };
+            default:
+                return {
                     name: `${this.from}2pulumi`,
-                    githubURL: `https://github.com/pulumi/${this.from}2pulumi`,
                 };
         }
-        return {
-            name: `${this.from}2pulumi`,
-        };
     }
 
     // Ensure the supporting libaries scripts we expect have been loaded and their globals are usable.
@@ -481,10 +494,14 @@ export class Convert {
                         </p>
                         <p>
                             There could be a problem with the code you submitted, or it might use a
-                            feature { this.conversionTool.name } doesn't yet support. For help converting
-                            this or another { this.sourceLanguageName } project to Pulumi,
-                            please <a href="https://pulumi.com/about#contact">contact us</a> or join us in
-                            our <a href="https://slack.pulumi.com/">Community Slack</a>. We're here to help!
+                            feature { this.conversionTool.name } doesn't yet support. See below for details.
+                            Please also check the <a href={this.conversionTool.issueURL}>known issues</a> or 
+                            report a <a href={this.conversionTool.issueURL}>new issue</a> if you believe this 
+                            might be a bug or missing feature in { this.conversionTool.name }.
+
+                            For help converting this or another { this.sourceLanguageName } project to Pulumi,
+                            please join us in the <a href="https://slack.pulumi.com/">Pulumi Community Slack</a>.
+                            We're here to help!
                         </p>
                     </div>
                     <div class="alert alert-warn">
@@ -493,10 +510,14 @@ export class Convert {
                         </p>
                         <p>
                             The code you submitted was valid, but { this.conversionTool.name } was unable to
-                            convert it completely, so a partial conversion has been provided for you. See below for details.
+                            convert it completely, so a partial conversion has been provided for you. See below
+                            for details. Please also check the <a href={this.conversionTool.issueURL}>known issues</a>
+                            or report a <a href={this.conversionTool.issueURL}>new issue</a> if you believe this 
+                            might be a bug or missing feature in { this.conversionTool.name }.
+
                             For help converting this or another { this.sourceLanguageName } project to Pulumi,
-                            please <a href="https://pulumi.com/about#contact">contact us</a>, or join us in
-                            the <a href="https://slack.pulumi.com/">Community Slack</a>. We're here to help!
+                            please join us in the <a href="https://slack.pulumi.com/">Pulumi Community Slack</a>.
+                            We're here to help!
                         </p>
                     </div>
                 </div>;
