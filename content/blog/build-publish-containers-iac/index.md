@@ -8,7 +8,7 @@ date: "2020-11-30"
 meta_image: "containers.png"
 ---
 
-Going from a containerized application to a service running in the cloud requires a few steps beyond an application's normal build-and-test cycle. Namely it means building and publishing a container image in a registry and then consuming that image from your target environment, whether that's Kubernetes, Amazon ECS, or another container orchestrator. It's not enough to just write a `Dockerfile` &mdash; you will need to pick a container registry, decide whether that registry should be public or private, authenticate against it, and ideally automate deploying subsequent updates. Infrastructure as code to the rescue! In this article, we'll see how to build, publish, and consume a simple container image, across any cloud, using just a few lines of code.
+Going from a containerized application to a service running in the cloud requires a few steps beyond an application's normal build-and-test cycle. Namely, it means building and publishing a container image in a registry and then consuming that image from your target environment, whether that's Kubernetes, Amazon ECS, or another container orchestrator. It's not enough to just write a `Dockerfile` &mdash; you will need to pick a container registry, decide whether that registry should be public or private, authenticate against it, and ideally automate deploying subsequent updates. Infrastructure as code to the rescue! In this article, we'll see how to build, publish, and consume a simple container image across any cloud, using just a few lines of code.
 
 <!--more-->
 
@@ -34,7 +34,7 @@ Now, let's dive in!
 
 ## Prepare a Container Registry
 
-The first step is to simply prepare a new container _registry_. A registry holds one or more _repositories_, each of which can store and serve many different container images with different tags and versions. Afterwards, we'll show how to build and publish to this registry.
+The first step is to prepare a new container _registry_. A registry holds one or more _repositories_, each of which can store and serve many different container images with different tags and versions. Afterward we'll show how to build and publish to this registry.
 
 The specific details of how to prepare your registry differ by cloud provider, often significantly, particularly when it comes to authenticating. Pick your cloud provider to see the details:
 
@@ -211,7 +211,7 @@ var repo = new Repository("my-repo");
 
 #### Authenticate with Temporary ECR Access Token
 
-Next, we will need to generate authentication information to access the repository, in preparation for building and publishing our image. ECR supports doing this multiple different ways, however, here we will demonstrate generating a temporary access token:
+Next, we will need to generate authentication information to access the repository to build and publish our image. ECR supports this in multiple different ways; however, here, we will demonstrate generating a temporary access token:
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -335,7 +335,7 @@ var registryInfo = repo.RegistryId.Apply(async (id) =>
 
 #### Alternatively, Authenticate with ECR Credential Helper
 
-An alternative approach ECR supports is to [use the Docker credential helper from Amazon](https://aws.amazon.com/blogs/compute/authenticating-amazon-ecr-repositories-for-docker-cli-with-credential-helper/), which integrates with local IAM settings, adds smart caching, and removes the need for Docker to login. If you elect to go this route, simply leave out the username/password parts of the `docker.ImageRegistry`:
+An alternative approach ECR supports is to [use the Docker credential helper from Amazon](https://aws.amazon.com/blogs/compute/authenticating-amazon-ecr-repositories-for-docker-cli-with-credential-helper/), which integrates with local IAM settings, adds smart caching, and removes the need for Docker to login. If you elect to go this route, leave out the username/password parts of the `docker.ImageRegistry`:
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -391,7 +391,7 @@ var imageName = repo.RepositoryUrl;
 
 #### Learn More About ECR
 
-ECR offers many additional options not shown here. This includes configuring advanced IAM permissions, enabling image vulnerability scanning, managing the lifetime of images so that older, unused images are deleted based on configured policies, encrypting images, and more. For details on these advanced capabilities and more, refer to [Pulumi's ECR user guide](https://www.pulumi.com/docs/guides/crosswalk/aws/ecr/), [Pulumi's ECR API reference](https://www.pulumi.com/docs/reference/pkg/aws/ecr/repository/), or [Amazon's own product documentation](https://aws.amazon.com/ecr/).
+ECR offers many additional options not shown here. This includes configuring advanced IAM permissions, enabling image vulnerability scanning, managing the lifetime of images so that older, unused images are deleted based on configured policies, encrypting images, and more. For details on these advanced capabilities and more, refer to [Pulumi's ECR user guide](https://www.pulumi.com/docs/guides/crosswalk/aws/ecr/), [Pulumi's ECR API reference](https://www.pulumi.com/docs/reference/pkg/aws/ecr/repository/), or [Amazon's product documentation](https://aws.amazon.com/ecr/).
 
 > To view another cloud provider's registry details, [select a new cloud in the switcher above](#prepare-a-container-registry).
 
@@ -510,7 +510,7 @@ class Program
 
 #### Provision a New ACR Registry
 
-Next, declare a new ACR registry resource. To create a new registry, we need an Azure resource group; here we will create a new one, but feel free to use an existing one by simply passing its name in the resource group's place:
+Next, declare a new ACR registry resource. To create a new registry, we need an Azure resource group; here we will create a new one, but feel free to use an existing one by passing its name in the resource group's place:
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -882,7 +882,7 @@ var registryInfo = new Docker.ImageRegistry
 
 #### Learn More About ACR
 
-ACR offers advanced functionality not shown here, including configuring retention policies, storage account details, and geo-replication options. For more details on these and more, see Pulumi's [Azure NextGen](https://www.pulumi.com/docs/reference/pkg/azure-nextgen/containerregistry/registry/) or [Azure](https://www.pulumi.com/docs/reference/pkg/azure/containerservice/registry/) API documentation, or [Azure's own product page](https://azure.microsoft.com/en-us/services/container-registry/).
+ACR offers advanced functionality not shown here, including configuring retention policies, storage account details, and geo-replication options. For more details on these and more, see Pulumi's [Azure NextGen](https://www.pulumi.com/docs/reference/pkg/azure-nextgen/containerregistry/registry/) or [Azure](https://www.pulumi.com/docs/reference/pkg/azure/containerservice/registry/) API documentation, or [Azure's product page](https://azure.microsoft.com/en-us/services/container-registry/).
 
 > To view another cloud provider's registry details, [select a new cloud in the switcher above](#prepare-a-container-registry).
 
@@ -898,7 +898,7 @@ Google Container Registry (GCR) enables you to store, manage, and secure your Do
 
 #### Create a New Project
 
-To start, create a new project and [ensure it is configured to use your GCP account]({{< relref "/docs/intro/cloud-providers/gcp/setup" >}}), and then scaffold your project with the imports and overall program structure that we will fill in one piece at a time:
+To start, create a new project and [ensure it is configured to use your GCP account]({{< relref "/docs/intro/cloud-providers/gcp/setup" >}}), then scaffold your project with the imports and overall program structure that we will fill in one piece at a time:
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -1003,7 +1003,7 @@ class Program
 
 #### Ensure Your GCR Registry is Ready
 
-Google Cloud automatically provisions a managed project-wide registry as we need it. To ensure our GCP registry is ready, we simply allocate a registry object, and then fetch the autogenerated repository URL that we can use for images:
+Google Cloud automatically provisions a managed project-wide registry as needed. To ensure our GCP registry is ready, we allocate a registry object, and then fetch the autogenerated repository URL that we can use for images:
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -1074,7 +1074,7 @@ Below we will append the container repository name to this registry URL.
 
 #### Authenticate with the Google Cloud SDK
 
-GCP offers [several mechanisms](https://cloud.google.com/container-registry/docs/advanced-authentication) to authenticate with your registry, however, the most secure and preferred option is to use the Google Cloud CLI, `gcloud`, as a Docker credential helper. After [setting up gcloud on your client](https://cloud.google.com/container-registry/docs/advanced-authentication#gcloud-helper), no explicit authentication is required in your code &mdash; instead, the ambient `gcloud` authentication settings will be used instead. As a result, we can leave the authentication information blank:
+GCP offers [several mechanisms](https://cloud.google.com/container-registry/docs/advanced-authentication) to authenticate to your registry; however, the most secure and preferred option is to use the Google Cloud CLI, `gcloud`, as a Docker credential helper. After [setting up gcloud on your client](https://cloud.google.com/container-registry/docs/advanced-authentication#gcloud-helper), no explicit authentication is required in your code &mdash; instead, the ambient `gcloud` authentication settings will be used instead. As a result, we can leave the authentication information blank:
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -1142,11 +1142,11 @@ GCR uses Google Cloud Storage to store images, which may be configured separatel
 
 ### DigitalOcean Container Registry
 
-DigitalOcean's Container Registry is an easy way to store and manage private container images for your applications for easy use with DigitalOcean's managed Kubernetes service.
+DigitalOcean's Container Registry is an easy way to store and manage private container images for your applications for use with DigitalOcean's managed Kubernetes service.
 
 #### Create a New Project
 
-To start, create a new project and [ensure it is configured to use your DigitalOcean account]({{< relref "/docs/intro/cloud-providers/digitalocean/setup" >}}), and then scaffold your project with the imports and overall program structure that we will fill in one piece at a time:
+To start, create a new project and [ensure it is configured to use your DigitalOcean account]({{< relref "/docs/intro/cloud-providers/digitalocean/setup" >}}) and then scaffold your project with the imports and overall program structure that we will fill in one piece at a time:
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -1321,7 +1321,7 @@ var registry = new ContainerRegistry("my-reg", new ContainerRegistryArgs
 
 #### Authenticate with Temporary Credentials
 
-DigitalOcean supports generating temporary read or read/write credentials that Docker can use to authenticate with your new private container registry, which we'll now use. This resource returns a new credentials file similar to what the `docker login` command generates, and we can parse it and base64 decode its contents to discover the temporary username and password. Here we gather that plus the registry's URL endpoint in preparation for building and publishing the container image to the newly provisioned registry:
+DigitalOcean supports generating temporary read or read/write credentials that Docker can use to authenticate with your new private container registry, which we'll now use. This resource returns a new credentials file similar to what the `docker login` command generates, and we can parse it and base64 decode its contents to discover the temporary username and password. Here, we gather the username and password plus the registry's URL endpoint in preparation for building and publishing the container image to the newly provisioned registry:
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -1719,7 +1719,7 @@ At this stage, we can run `pulumi up` to check that the program works and to pro
 
 ## Build and Publish Your Container
 
-Now we are ready to build and publish your container image to the chosen registry. [The Docker provider's `Image` component]({{< relref "/docs/reference/pkg/docker" >}}) internally uses the Docker engine to perform the necessary steps to carry this out, including building, tagging, capturing and streaming container build logs as progress is made, and pushing the final result.
+Now we are ready to build and publish your container image to the chosen registry. [The Docker provider's `Image` component]({{< relref "/docs/reference/pkg/docker" >}}) internally uses the Docker engine to perform the necessary steps to carry this out, including building, tagging, capturing, and streaming container build logs as progress is made and pushing the final result.
 
 Simply pass the path to your application's `Dockerfile` as the build context, the registry's URL as the image's name, and the registry configuration object built up earlier to facilitate authentication:
 
@@ -1869,11 +1869,11 @@ Outputs:
     fullImageName: "...cloud-specific url.../my-repo-dc811b0:78d0fce7c2450c15a6153b6b11208fcb6b9edea7bb7ef3b7b6194f3fc101a170"
 ```
 
-Note also the base and versioned image URLs are exported as stack outputs. These are optional but have three benefits:
+Also note the base and versioned image URLs are exported as stack outputs. These are optional but have three benefits:
 
 1. As we see here, the CLI will print them after each deployment.
-2. The CLI can fetch them on-demand, e.g., 'pulumi stack output fullImageName', making it easy to script actress to these container images.
-3. The [Pulumi `StackReference` component]({{< relref "/docs/intro/concepts/organizing-stacks-projects#inter-stack-dependencies" >}}) can be used to depend on this stack from another, allowing up to build higher levels of infrastructure that consume these images.
+2. The CLI can fetch them on-demand, e.g., 'pulumi stack output fullImageName', making it easy to script access to these container images.
+3. The [Pulumi `StackReference` component]({{< relref "/docs/intro/concepts/organizing-stacks-projects#inter-stack-dependencies" >}}) can be used to depend on this stack from another, allowing us to build higher levels of infrastructure that consume these images.
 
 As an example of (2) in action, let's run the image locally using the exported image name:
 
@@ -1884,7 +1884,7 @@ $ pulumi stack output fullImageName
 
 > Note that this requires that our client can pull from our provisioned registry, which may require cloud-specific authentication first.
 
-To redeploy changes to the `Dockerfile` or anything that image depends on, including application code, just rerun `pulumi up`. It will detect the differences, rebuild and repush the minimal layer changes necessary to update and retag the repository image, and then export the resulting image name.
+To redeploy changes to the `Dockerfile` or anything that image depends on, including application code, rerun `pulumi up`. It will detect the differences, rebuild and re-push the minimal layer changes necessary to update and retag the repository image, and then export the resulting image name.
 
 To see this in action, change the `Dockerfile`'s contents to:
 
@@ -1915,9 +1915,15 @@ The Pulumi Docker `Image` component supports a number of additional options to c
 
 The same container image URLs exported above can be used as inputs to other resources, including infrastructure that will run your container inside of a container orchestration system such as Kubernetes, Amazon ECS, and so on.
 
-> This article assumes you already have a containerized environment to deploy to, like a Kubernetes cluster, and have [configured your project accordingly]({{< relref "/docs/intro/cloud-providers/kubernetes/setup" >}}). If not, you can provision one using Pulumi first. Pulumi supports many clouds and infrastructure resources, but here are a few starting points to get up and running with: [AWS Elastic Container Service ECS]({{< relref "/docs/guides/crosswalk/aws/ecs" >}}), [AWS Elastic Kubernetes Service (EKS)]({{< relref "/docs/guides/crosswalk/aws/eks" >}}), [Azure Kubernetes Service (AKS)]({{< relref "/docs/tutorials/kubernetes/aks" >}}), [Google Cloud Kubernetes Engine (GKE)]({{< relref "/docs/tutorials/kubernetes/gke" >}}), [DigitalOcean Kubernetes](https://www.digitalocean.com/community/tutorials/how-to-manage-digitalocean-and-kubernetes-infrastructure-with-pulumi).
+> This article assumes you already have a containerized environment to deploy to, like a Kubernetes cluster, and have [configured your project accordingly]({{< relref "/docs/intro/cloud-providers/kubernetes/setup" >}}). If not, you can provision one using Pulumi first. Pulumi supports many clouds and infrastructure resources, but here are a few starting points to get up and running with: 
 
-In this example, we will demonstrate deploying our Nginx web server as a load balanced service within Kubernetes. To do so, we'll declare our Kubernetes configuration, right inside of our existing program defined above, and export its resulting IP address:
+- [AWS Elastic Container Service ECS]({{< relref "/docs/guides/crosswalk/aws/ecs" >}}), 
+- [AWS Elastic Kubernetes Service (EKS)]({{< relref "/docs/guides/crosswalk/aws/eks" >}}), 
+- [Azure Kubernetes Service (AKS)]({{< relref "/docs/tutorials/kubernetes/aks" >}}), 
+- [Google Cloud Kubernetes Engine (GKE)]({{< relref "/docs/tutorials/kubernetes/gke" >}}), 
+- [DigitalOcean Kubernetes](https://www.digitalocean.com/community/tutorials/how-to-manage-digitalocean-and-kubernetes-infrastructure-with-pulumi).
+
+This example demonstrates deploying our Nginx web server as a load balanced service within Kubernetes. To do so, we'll declare our Kubernetes configuration, right inside of our existing program defined above, and export its resulting IP address:
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -1927,7 +1933,7 @@ In this example, we will demonstrate deploying our Nginx web server as a load ba
 // [Previous imports...]
 var k8s = require("@pulumi/kubernetes");
 
-// [Registry, build, etc, code from above...]
+// [Registry, build, etc., code from above...]
 
 // Create a load balanced Kubernetes service using this image, and export its IP.
 var appLabels = { app: "myapp" };
@@ -2243,10 +2249,10 @@ And there we go: we have gone from a `Dockerfile` to a published container image
 
 ## Wrapping Up
 
-In this article, we've seen how easy it is to build, publish, and use container images in many popular public and private container registry options. We have seen how to provision new registries using infrastructure as code and how easy it is to trigger deployments of application updates by simply running a single `pulumi up` command.
+In this article, we've seen how easy it is to build, publish, and use container images in many popular public and private container registry options. We have seen how to provision new registries using infrastructure as code and how easy it is to trigger deployments of application updates by running a single `pulumi up` command.
 
-All of these steps were manually run from a CLI, however, a natural next step is to [wire the entire process up to a CI/CD system]({{< relref "/docs/guides/continuous-delivery" >}}) such as [GitHub Actions]({{< relref "/docs/guides/continuous-delivery/github-actions" >}}), [GitLab Pipelines]({{< relref "/docs/guides/continuous-delivery/gitlab-ci" >}}), [Jenkins]({{< relref "/docs/guides/continuous-delivery/jenkins" >}}), [Spinnaker]({{< relref "/docs/guides/continuous-delivery/spinnaker" >}}), or [one of the many available options]({{< relref "/docs/guides/continuous-delivery" >}}, so that you can deploy continuously as you merge code. For even more advanced scenarios, we might want to build a custom program such as a CLI that uses the [Automation API]({{< relref "/blog/automation-api" >}}) to perform these actions behind a simpler, purpose-built interface.
+All of these steps were manually run from a CLI; however, a natural next step is to [wire the entire process up to a CI/CD system]({{< relref "/docs/guides/continuous-delivery" >}}) such as [GitHub Actions]({{< relref "/docs/guides/continuous-delivery/github-actions" >}}), [GitLab Pipelines]({{< relref "/docs/guides/continuous-delivery/gitlab-ci" >}}), [Jenkins]({{< relref "/docs/guides/continuous-delivery/jenkins" >}}), [Spinnaker]({{< relref "/docs/guides/continuous-delivery/spinnaker" >}}), or [one of the many available options]({{< relref "/docs/guides/continuous-delivery" >}}, so that you can deploy continuously as you merge code. For even more advanced scenarios, we might want to build a custom program such as a CLI that uses the [Automation API]({{< relref "/blog/automation-api" >}}) to perform these actions behind a simpler, purpose-built interface.
 
-Although we've shown a very simple set of infrastructure resources, it would be natural to extend these examples by provisioning other ancillary services that your application needs, including databases, pub/sub topics, queues, metrics and dashboards, and more. Using an infrastructure as code approach to building, publishing, and consuming your container images means you can incrementally add on such infrastructure to the base code shown above, and reference them from your containers easily with automatic dependency tracking.
+Although we've shown a very simple set of infrastructure resources, it would be natural to extend these examples by provisioning other ancillary services that your application needs, including databases, pub/sub topics, queues, metrics and dashboards, and more. Using an infrastructure as code approach to building, publishing, and consuming your container images means you can incrementally add on such infrastructure to the base code shown above and reference them from your containers easily with automatic dependency tracking.
 
 The complete examples in this article are [available on GitHub here](https://github.com/pulumi/pulumi-docker/tree/master/examples/container-registries). Pulumi is open source and free to get started with &mdash; [give it a try, and get up and running with infrastructure as code for your containers today]({{< relref "/docs/get-started" >}})!
