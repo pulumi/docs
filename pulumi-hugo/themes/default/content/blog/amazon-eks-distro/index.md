@@ -1,6 +1,6 @@
 ---
 title: "Getting Started with Amazon EKS Distro & Pulumi"
-date: 2020-12-03T11:30:00-08:00
+date: 2020-12-01T11:30:00-08:00
 draft: false
 meta_desc: Use Pulumi to provision an Amazon EKS Distro cluster.
 meta_image: meta.png
