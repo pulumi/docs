@@ -511,8 +511,8 @@ export class Convert {
                         <p>
                             The code you submitted was valid, but { this.conversionTool.name } was unable to
                             convert it completely, so a partial conversion has been provided for you. See below
-                            for details. Please also check the <a href={this.conversionTool.issueURL}>known issues</a>
-                            or report a <a href={this.conversionTool.issueURL}>new issue</a> if you believe this 
+                            for details. Please also check the <a href={this.conversionTool.issueURL}>known issues</a> or
+                            report a <a href={this.conversionTool.issueURL}>new issue</a> if you believe this 
                             might be a bug or missing feature in { this.conversionTool.name }.
 
                             For help converting this or another { this.sourceLanguageName } project to Pulumi,
