@@ -2,7 +2,7 @@
 title: "Announcing CI/CD Integration Assistant for teams"
 authors: ["praneet-loke"]
 tags: ["CI/CD"]
-date: "2020-11-18"
+date: "2020-12-08"
 meta_desc: "We are excited to announce the launch of the integration assistant to make integration with CI/CD easy."
 meta_image: integration-assistant.png
 ---
