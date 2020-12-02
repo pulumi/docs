@@ -159,29 +159,27 @@ export class Convert {
     }
 
     // The CLI tool that corresponds with the language we're converting from.
-    private get conversionTool(): { name: string; issueURL: string; githubURL?: string } {
+    private get conversionTool(): { name: string; githubURL: string } {
         switch (this.from) {
             case "tf":
                 return {
                     name: "tf2pulumi",
                     githubURL: "https://github.com/pulumi/tf2pulumi",
-                    issueURL: "https://github.com/pulumi/tf2pulumi/issues",
                 };
             case "kube":
                 return {
                     name: "kube2pulumi",
                     githubURL: "https://github.com/pulumi/kube2pulumi",
-                    issueURL: "https://github.com/pulumi/kube2pulumi/issues",
                 };
             case "arm":
                 return {
                     name: "arm2pulumi",
-                    issueURL: "https://github.com/pulumi/pulumi-azure-nextgen/issues?q=is%3Aissue+is%3Aopen+label%3Aarm2pulumi",
+                    githubURL: "https://github.com/pulumi/arm2pulumi",
                 };
             default:
                 return {
                     name: `${this.from}2pulumi`,
-                    issueURL: "https://github.com/pulumi/pulumi/issues",
+                    githubURL: "https://github.com/pulumi/pulumi",
                 };
         }
     }
@@ -485,6 +483,7 @@ export class Convert {
                     </span>
                 </div>;
             case "output":
+                const issueURL = this.conversionTool.githubURL + "/issues"
                 return <div class={ this.statusBarClasses }>
                     <span class="icon"></span>
                     <span class="message">{ this.outputResult?.status?.message }</span>
@@ -495,8 +494,8 @@ export class Convert {
                         <p>
                             There could be a problem with the code you submitted, or it might use a
                             feature { this.conversionTool.name } doesn't yet support. See below for details.
-                            Please also check the <a href={this.conversionTool.issueURL}>known issues</a> or 
-                            report a <a href={this.conversionTool.issueURL}>new issue</a> if you believe this 
+                            Please also check the <a href={issueURL}>known issues</a> or 
+                            report a <a href={issueURL}>new issue</a> if you believe this 
                             might be a bug or missing feature in { this.conversionTool.name }.
 
                             For help converting this or another { this.sourceLanguageName } project to Pulumi,
@@ -511,8 +510,8 @@ export class Convert {
                         <p>
                             The code you submitted was valid, but { this.conversionTool.name } was unable to
                             convert it completely, so a partial conversion has been provided for you. See below
-                            for details. Please also check the <a href={this.conversionTool.issueURL}>known issues</a> or
-                            report a <a href={this.conversionTool.issueURL}>new issue</a> if you believe this 
+                            for details. Please also check the <a href={issueURL}>known issues</a> or
+                            report a <a href={issueURL}>new issue</a> if you believe this 
                             might be a bug or missing feature in { this.conversionTool.name }.
 
                             For help converting this or another { this.sourceLanguageName } project to Pulumi,
