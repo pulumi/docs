@@ -159,7 +159,7 @@ export class Convert {
     }
 
     // The CLI tool that corresponds with the language we're converting from.
-    private get conversionTool(): { name: string; githubURL?: string, issueURL?: string } {
+    private get conversionTool(): { name: string; issueURL: string; githubURL?: string } {
         switch (this.from) {
             case "tf":
                 return {
@@ -176,12 +176,12 @@ export class Convert {
             case "arm":
                 return {
                     name: "arm2pulumi",
-                    githubURL: "https://github.com/pulumi/arm2pulumi",
                     issueURL: "https://github.com/pulumi/pulumi-azure-nextgen/issues?q=is%3Aissue+is%3Aopen+label%3Aarm2pulumi",
                 };
             default:
                 return {
                     name: `${this.from}2pulumi`,
+                    issueURL: "https://github.com/pulumi/pulumi/issues",
                 };
         }
     }
