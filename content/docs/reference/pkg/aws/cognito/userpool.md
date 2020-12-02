@@ -185,6 +185,122 @@ const example = new aws.cognito.UserPool("example", {
 
 {{% /example %}}
 
+### Using Account Recovery Setting
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Aws = Pulumi.Aws;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test = new Aws.Cognito.UserPool("test", new Aws.Cognito.UserPoolArgs
+        {
+            AccountRecoverySetting = new Aws.Cognito.Inputs.UserPoolAccountRecoverySettingArgs
+            {
+                RecoveryMechanisms = 
+                {
+                    new Aws.Cognito.Inputs.UserPoolAccountRecoverySettingRecoveryMechanismArgs
+                    {
+                        Name = "verified_email",
+                        Priority = 1,
+                    },
+                    new Aws.Cognito.Inputs.UserPoolAccountRecoverySettingRecoveryMechanismArgs
+                    {
+                        Name = "verified_phone_number",
+                        Priority = 2,
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cognito.NewUserPool(ctx, "test", &cognito.UserPoolArgs{
+			AccountRecoverySetting: &cognito.UserPoolAccountRecoverySettingArgs{
+				RecoveryMechanisms: cognito.UserPoolAccountRecoverySettingRecoveryMechanismArray{
+					&cognito.UserPoolAccountRecoverySettingRecoveryMechanismArgs{
+						Name:     pulumi.String("verified_email"),
+						Priority: pulumi.Int(1),
+					},
+					&cognito.UserPoolAccountRecoverySettingRecoveryMechanismArgs{
+						Name:     pulumi.String("verified_phone_number"),
+						Priority: pulumi.Int(2),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_aws as aws
+
+test = aws.cognito.UserPool("test", account_recovery_setting=aws.cognito.UserPoolAccountRecoverySettingArgs(
+    recovery_mechanisms=[
+        aws.cognito.UserPoolAccountRecoverySettingRecoveryMechanismArgs(
+            name="verified_email",
+            priority=1,
+        ),
+        aws.cognito.UserPoolAccountRecoverySettingRecoveryMechanismArgs(
+            name="verified_phone_number",
+            priority=2,
+        ),
+    ],
+))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as aws from "@pulumi/aws";
+
+const test = new aws.cognito.UserPool("test", {
+    accountRecoverySetting: {
+        recoveryMechanisms: [
+            {
+                name: "verified_email",
+                priority: 1,
+            },
+            {
+                name: "verified_phone_number",
+                priority: 2,
+            },
+        ],
+    },
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -197,7 +313,7 @@ const example = new aws.cognito.UserPool("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cognito/#pulumi_aws.cognito.UserPool">UserPool</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_create_user_config</span><span class="p">:</span> <span class="nx">Optional[UserPoolAdminCreateUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">alias_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">auto_verified_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">device_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolDeviceConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">email_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolEmailConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">email_verification_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_verification_subject</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lambda_config</span><span class="p">:</span> <span class="nx">Optional[UserPoolLambdaConfigArgs]</span> = None<span class="p">, </span><span class="nx">mfa_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password_policy</span><span class="p">:</span> <span class="nx">Optional[UserPoolPasswordPolicyArgs]</span> = None<span class="p">, </span><span class="nx">schemas</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserPoolSchemaArgs]]</span> = None<span class="p">, </span><span class="nx">sms_authentication_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sms_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolSmsConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">sms_verification_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">software_token_mfa_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolSoftwareTokenMfaConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_pool_add_ons</span><span class="p">:</span> <span class="nx">Optional[UserPoolUserPoolAddOnsArgs]</span> = None<span class="p">, </span><span class="nx">username_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">username_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolUsernameConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">verification_message_template</span><span class="p">:</span> <span class="nx">Optional[UserPoolVerificationMessageTemplateArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/cognito/#pulumi_aws.cognito.UserPool">UserPool</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_recovery_setting</span><span class="p">:</span> <span class="nx">Optional[UserPoolAccountRecoverySettingArgs]</span> = None<span class="p">, </span><span class="nx">admin_create_user_config</span><span class="p">:</span> <span class="nx">Optional[UserPoolAdminCreateUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">alias_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">auto_verified_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">device_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolDeviceConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">email_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolEmailConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">email_verification_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_verification_subject</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lambda_config</span><span class="p">:</span> <span class="nx">Optional[UserPoolLambdaConfigArgs]</span> = None<span class="p">, </span><span class="nx">mfa_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password_policy</span><span class="p">:</span> <span class="nx">Optional[UserPoolPasswordPolicyArgs]</span> = None<span class="p">, </span><span class="nx">schemas</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserPoolSchemaArgs]]</span> = None<span class="p">, </span><span class="nx">sms_authentication_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sms_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolSmsConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">sms_verification_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">software_token_mfa_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolSoftwareTokenMfaConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_pool_add_ons</span><span class="p">:</span> <span class="nx">Optional[UserPoolUserPoolAddOnsArgs]</span> = None<span class="p">, </span><span class="nx">username_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">username_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolUsernameConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">verification_message_template</span><span class="p">:</span> <span class="nx">Optional[UserPoolVerificationMessageTemplateArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -371,6 +487,17 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="accountrecoverysetting_csharp">
+<a href="#accountrecoverysetting_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Recovery<wbr>Setting</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The account_recovery_setting configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="admincreateuserconfig_csharp">
 <a href="#admincreateuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>Create<wbr>User<wbr>Config</a>
 </span> 
@@ -476,7 +603,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the attribute.
+    <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -609,6 +736,17 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="accountrecoverysetting_go">
+<a href="#accountrecoverysetting_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Recovery<wbr>Setting</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting</a></span>
+    </dt>
+    <dd>{{% md %}}The account_recovery_setting configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="admincreateuserconfig_go">
 <a href="#admincreateuserconfig_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>Create<wbr>User<wbr>Config</a>
 </span> 
@@ -714,7 +852,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the attribute.
+    <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -847,6 +985,17 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="accountrecoverysetting_nodejs">
+<a href="#accountrecoverysetting_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Recovery<wbr>Setting</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting</a></span>
+    </dt>
+    <dd>{{% md %}}The account_recovery_setting configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="admincreateuserconfig_nodejs">
 <a href="#admincreateuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>Create<wbr>User<wbr>Config</a>
 </span> 
@@ -952,7 +1101,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the attribute.
+    <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1085,6 +1234,17 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 
     <dt class="property-optional"
             title="Optional">
+        <span id="account_recovery_setting_python">
+<a href="#account_recovery_setting_python" style="color: inherit; text-decoration: inherit;">account_<wbr>recovery_<wbr>setting</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The account_recovery_setting configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="admin_create_user_config_python">
 <a href="#admin_create_user_config_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>create_<wbr>user_<wbr>config</a>
 </span> 
@@ -1190,7 +1350,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the attribute.
+    <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1589,7 +1749,7 @@ Get an existing UserPool resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">admin_create_user_config</span><span class="p">:</span> <span class="nx">Optional[UserPoolAdminCreateUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">alias_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_verified_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">creation_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolDeviceConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">email_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolEmailConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">email_verification_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_verification_subject</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lambda_config</span><span class="p">:</span> <span class="nx">Optional[UserPoolLambdaConfigArgs]</span> = None<span class="p">, </span><span class="nx">last_modified_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mfa_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password_policy</span><span class="p">:</span> <span class="nx">Optional[UserPoolPasswordPolicyArgs]</span> = None<span class="p">, </span><span class="nx">schemas</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserPoolSchemaArgs]]</span> = None<span class="p">, </span><span class="nx">sms_authentication_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sms_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolSmsConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">sms_verification_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">software_token_mfa_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolSoftwareTokenMfaConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_pool_add_ons</span><span class="p">:</span> <span class="nx">Optional[UserPoolUserPoolAddOnsArgs]</span> = None<span class="p">, </span><span class="nx">username_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">username_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolUsernameConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">verification_message_template</span><span class="p">:</span> <span class="nx">Optional[UserPoolVerificationMessageTemplateArgs]</span> = None<span class="p">) -&gt;</span> UserPool</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_recovery_setting</span><span class="p">:</span> <span class="nx">Optional[UserPoolAccountRecoverySettingArgs]</span> = None<span class="p">, </span><span class="nx">admin_create_user_config</span><span class="p">:</span> <span class="nx">Optional[UserPoolAdminCreateUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">alias_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_verified_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">creation_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">device_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolDeviceConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">email_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolEmailConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">email_verification_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">email_verification_subject</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">lambda_config</span><span class="p">:</span> <span class="nx">Optional[UserPoolLambdaConfigArgs]</span> = None<span class="p">, </span><span class="nx">last_modified_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">mfa_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password_policy</span><span class="p">:</span> <span class="nx">Optional[UserPoolPasswordPolicyArgs]</span> = None<span class="p">, </span><span class="nx">schemas</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserPoolSchemaArgs]]</span> = None<span class="p">, </span><span class="nx">sms_authentication_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sms_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolSmsConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">sms_verification_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">software_token_mfa_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolSoftwareTokenMfaConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_pool_add_ons</span><span class="p">:</span> <span class="nx">Optional[UserPoolUserPoolAddOnsArgs]</span> = None<span class="p">, </span><span class="nx">username_attributes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">username_configuration</span><span class="p">:</span> <span class="nx">Optional[UserPoolUsernameConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">verification_message_template</span><span class="p">:</span> <span class="nx">Optional[UserPoolVerificationMessageTemplateArgs]</span> = None<span class="p">) -&gt;</span> UserPool</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1702,6 +1862,17 @@ The following state arguments are supported:
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_accountrecoverysetting_csharp">
+<a href="#state_accountrecoverysetting_csharp" style="color: inherit; text-decoration: inherit;">Account<wbr>Recovery<wbr>Setting</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The account_recovery_setting configuration.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1854,7 +2025,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the attribute.
+    <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1984,6 +2155,17 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_accountrecoverysetting_go">
+<a href="#state_accountrecoverysetting_go" style="color: inherit; text-decoration: inherit;">Account<wbr>Recovery<wbr>Setting</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting</a></span>
+    </dt>
+    <dd>{{% md %}}The account_recovery_setting configuration.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2136,7 +2318,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the attribute.
+    <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2266,6 +2448,17 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_accountrecoverysetting_nodejs">
+<a href="#state_accountrecoverysetting_nodejs" style="color: inherit; text-decoration: inherit;">account<wbr>Recovery<wbr>Setting</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting</a></span>
+    </dt>
+    <dd>{{% md %}}The account_recovery_setting configuration.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2418,7 +2611,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the attribute.
+    <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2548,6 +2741,17 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_account_recovery_setting_python">
+<a href="#state_account_recovery_setting_python" style="color: inherit; text-decoration: inherit;">account_<wbr>recovery_<wbr>setting</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The account_recovery_setting configuration.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2700,7 +2904,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the attribute.
+    <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2837,6 +3041,230 @@ The following state arguments are supported:
 
 
 ## Supporting Types
+
+
+<h4 id="userpoolaccountrecoverysetting">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolAccountRecoverySetting">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolAccountRecoverySetting">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito?tab=doc#UserPoolAccountRecoverySettingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito?tab=doc#UserPoolAccountRecoverySettingOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.UserPoolAccountRecoverySettingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.UserPoolAccountRecoverySetting.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recoverymechanisms_csharp">
+<a href="#recoverymechanisms_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Mechanisms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoolaccountrecoverysettingrecoverymechanism">List&lt;User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Recovery<wbr>Mechanism<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Account Recovery Options of the following structure:
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recoverymechanisms_go">
+<a href="#recoverymechanisms_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Mechanisms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoolaccountrecoverysettingrecoverymechanism">[]User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Recovery<wbr>Mechanism</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Account Recovery Options of the following structure:
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recoverymechanisms_nodejs">
+<a href="#recoverymechanisms_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Mechanisms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoolaccountrecoverysettingrecoverymechanism">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Recovery<wbr>Mechanism[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Account Recovery Options of the following structure:
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recovery_mechanisms_python">
+<a href="#recovery_mechanisms_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>mechanisms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoolaccountrecoverysettingrecoverymechanism">Sequence[User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Recovery<wbr>Mechanism<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of Account Recovery Options of the following structure:
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="userpoolaccountrecoverysettingrecoverymechanism">User<wbr>Pool<wbr>Account<wbr>Recovery<wbr>Setting<wbr>Recovery<wbr>Mechanism</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolAccountRecoverySettingRecoveryMechanism">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolAccountRecoverySettingRecoveryMechanism">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito?tab=doc#UserPoolAccountRecoverySettingRecoveryMechanismArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/cognito?tab=doc#UserPoolAccountRecoverySettingRecoveryMechanismOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Inputs.UserPoolAccountRecoverySettingRecoveryMechanismArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Cognito.Outputs.UserPoolAccountRecoverySettingRecoveryMechanism.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="priority_csharp">
+<a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}A positive integer specifying priority of a method with 1 being the highest priority.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="priority_go">
+<a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}A positive integer specifying priority of a method with 1 being the highest priority.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="priority_nodejs">
+<a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}A positive integer specifying priority of a method with 1 being the highest priority.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="priority_python">
+<a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}A positive integer specifying priority of a method with 1 being the highest priority.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 <h4 id="userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config</h4>
@@ -4340,7 +4768,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the attribute.
+    <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4424,7 +4852,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the attribute.
+    <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4508,7 +4936,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of the attribute.
+    <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4592,7 +5020,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of the attribute.
+    <dd>{{% md %}}Specifies the recovery method for a user. Can be of the following: `verified_email`, `verified_phone_number`, and `admin_only`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
