@@ -29,7 +29,7 @@ official container images will be available on Amazon ECR Public.
 
 We've published our Pulumi container images in this new repository, and we plan to publish to both the Docker Hub and Amazon
 ECR Public repositories for all new Pulumi releases. You can browse Pulumi images in the Amazon ECR gallery here:
-[https://gallery.ecr.aws/pulumi](https://gallery.ecr.aws/pulumi).
+[https://gallery.ecr.aws/?searchTerm=pulumi](https://gallery.ecr.aws/?searchTerm=pulumi).
 
 ## Try it out!
 
