@@ -2516,6 +2516,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="connectionpool_csharp">
+<a href="#connectionpool_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Pool</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpool">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The connection pool information for the listener.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="healthcheck_csharp">
 <a href="#healthcheck_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
 </span> 
@@ -2552,6 +2563,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenerportmapping">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping</a></span>
     </dt>
     <dd>{{% md %}}The port mapping information for the listener.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connectionpool_go">
+<a href="#connectionpool_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Pool</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpool">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool</a></span>
+    </dt>
+    <dd>{{% md %}}The connection pool information for the listener.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2596,6 +2618,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="connectionpool_nodejs">
+<a href="#connectionpool_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Pool</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpool">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool</a></span>
+    </dt>
+    <dd>{{% md %}}The connection pool information for the listener.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="healthcheck_nodejs">
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check</a>
 </span> 
@@ -2636,6 +2669,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="connection_pool_python">
+<a href="#connection_pool_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>pool</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpool">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The connection pool information for the listener.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="health_check_python">
 <a href="#health_check_python" style="color: inherit; text-decoration: inherit;">health_<wbr>check</a>
 </span> 
@@ -2654,6 +2698,498 @@ The following state arguments are supported:
         <span class="property-type"><a href="#virtualgatewayspeclistenertls">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Tls<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Transport Layer Security (TLS) properties for the listener
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualgatewayspeclistenerconnectionpool">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecListenerConnectionPool">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecListenerConnectionPool">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerConnectionPoolArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerConnectionPoolOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecListenerConnectionPoolArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecListenerConnectionPool.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grpc_csharp">
+<a href="#grpc_csharp" style="color: inherit; text-decoration: inherit;">Grpc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolgrpc">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Connection pool information for gRPC listeners.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http_csharp">
+<a href="#http_csharp" style="color: inherit; text-decoration: inherit;">Http</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Connection pool information for HTTP listeners.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http2_csharp">
+<a href="#http2_csharp" style="color: inherit; text-decoration: inherit;">Http2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp2">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2Args</a></span>
+    </dt>
+    <dd>{{% md %}}Connection pool information for HTTP2 listeners.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grpc_go">
+<a href="#grpc_go" style="color: inherit; text-decoration: inherit;">Grpc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolgrpc">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc</a></span>
+    </dt>
+    <dd>{{% md %}}Connection pool information for gRPC listeners.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http_go">
+<a href="#http_go" style="color: inherit; text-decoration: inherit;">Http</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http</a></span>
+    </dt>
+    <dd>{{% md %}}Connection pool information for HTTP listeners.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http2_go">
+<a href="#http2_go" style="color: inherit; text-decoration: inherit;">Http2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp2">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2</a></span>
+    </dt>
+    <dd>{{% md %}}Connection pool information for HTTP2 listeners.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grpc_nodejs">
+<a href="#grpc_nodejs" style="color: inherit; text-decoration: inherit;">grpc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolgrpc">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc</a></span>
+    </dt>
+    <dd>{{% md %}}Connection pool information for gRPC listeners.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http_nodejs">
+<a href="#http_nodejs" style="color: inherit; text-decoration: inherit;">http</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http</a></span>
+    </dt>
+    <dd>{{% md %}}Connection pool information for HTTP listeners.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http2_nodejs">
+<a href="#http2_nodejs" style="color: inherit; text-decoration: inherit;">http2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp2">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2</a></span>
+    </dt>
+    <dd>{{% md %}}Connection pool information for HTTP2 listeners.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="grpc_python">
+<a href="#grpc_python" style="color: inherit; text-decoration: inherit;">grpc</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolgrpc">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Connection pool information for gRPC listeners.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http_python">
+<a href="#http_python" style="color: inherit; text-decoration: inherit;">http</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Connection pool information for HTTP listeners.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http2_python">
+<a href="#http2_python" style="color: inherit; text-decoration: inherit;">http2</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualgatewayspeclistenerconnectionpoolhttp2">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2Args</a></span>
+    </dt>
+    <dd>{{% md %}}Connection pool information for HTTP2 listeners.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualgatewayspeclistenerconnectionpoolgrpc">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Grpc</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecListenerConnectionPoolGrpc">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecListenerConnectionPoolGrpc">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerConnectionPoolGrpcArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerConnectionPoolGrpcOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecListenerConnectionPoolGrpcArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecListenerConnectionPoolGrpc.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxrequests_csharp">
+<a href="#maxrequests_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Requests</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxrequests_go">
+<a href="#maxrequests_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Requests</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxrequests_nodejs">
+<a href="#maxrequests_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Requests</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="max_requests_python">
+<a href="#max_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualgatewayspeclistenerconnectionpoolhttp">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecListenerConnectionPoolHttp">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecListenerConnectionPoolHttp">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerConnectionPoolHttpArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerConnectionPoolHttpOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecListenerConnectionPoolHttpArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecListenerConnectionPoolHttp.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxconnections_csharp">
+<a href="#maxconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of `1`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxpendingrequests_csharp">
+<a href="#maxpendingrequests_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Pending<wbr>Requests</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of overflowing requests after `max_connections` Envoy will queue to upstream cluster. Minimum value of `1`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxconnections_go">
+<a href="#maxconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of `1`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxpendingrequests_go">
+<a href="#maxpendingrequests_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Pending<wbr>Requests</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of overflowing requests after `max_connections` Envoy will queue to upstream cluster. Minimum value of `1`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxconnections_nodejs">
+<a href="#maxconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of `1`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxpendingrequests_nodejs">
+<a href="#maxpendingrequests_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pending<wbr>Requests</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Number of overflowing requests after `max_connections` Envoy will queue to upstream cluster. Minimum value of `1`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="max_connections_python">
+<a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of outbound TCP connections Envoy can establish concurrently with all hosts in upstream cluster. Minimum value of `1`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_pending_requests_python">
+<a href="#max_pending_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pending_<wbr>requests</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Number of overflowing requests after `max_connections` Envoy will queue to upstream cluster. Minimum value of `1`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="virtualgatewayspeclistenerconnectionpoolhttp2">Virtual<wbr>Gateway<wbr>Spec<wbr>Listener<wbr>Connection<wbr>Pool<wbr>Http2</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualGatewaySpecListenerConnectionPoolHttp2">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualGatewaySpecListenerConnectionPoolHttp2">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerConnectionPoolHttp2Args">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/appmesh?tab=doc#VirtualGatewaySpecListenerConnectionPoolHttp2Output">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Inputs.VirtualGatewaySpecListenerConnectionPoolHttp2Args.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Outputs.VirtualGatewaySpecListenerConnectionPoolHttp2.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxrequests_csharp">
+<a href="#maxrequests_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Requests</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxrequests_go">
+<a href="#maxrequests_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Requests</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="maxrequests_nodejs">
+<a href="#maxrequests_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Requests</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="max_requests_python">
+<a href="#max_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
 {{% /md %}}</dd>
 
 </dl>

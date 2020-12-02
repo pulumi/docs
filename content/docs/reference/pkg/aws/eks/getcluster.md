@@ -261,6 +261,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="kubernetesnetworkconfigs_csharp">
+<a href="#kubernetesnetworkconfigs_csharp" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Network<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterkubernetesnetworkconfig">List&lt;Get<wbr>Cluster<wbr>Kubernetes<wbr>Network<wbr>Config&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Nested list containing Kubernetes Network Configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span> 
@@ -417,6 +428,17 @@ The following output properties are available:
         <span class="property-type"><a href="#getclusteridentity">[]Get<wbr>Cluster<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. For an example using this information to enable IAM Roles for Service Accounts, see the `aws.eks.Cluster` resource documentation.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="kubernetesnetworkconfigs_go">
+<a href="#kubernetesnetworkconfigs_go" style="color: inherit; text-decoration: inherit;">Kubernetes<wbr>Network<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterkubernetesnetworkconfig">[]Get<wbr>Cluster<wbr>Kubernetes<wbr>Network<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Nested list containing Kubernetes Network Configuration.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -581,6 +603,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="kubernetesnetworkconfigs_nodejs">
+<a href="#kubernetesnetworkconfigs_nodejs" style="color: inherit; text-decoration: inherit;">kubernetes<wbr>Network<wbr>Configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterkubernetesnetworkconfig">Get<wbr>Cluster<wbr>Kubernetes<wbr>Network<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}Nested list containing Kubernetes Network Configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span> 
@@ -737,6 +770,17 @@ The following output properties are available:
         <span class="property-type"><a href="#getclusteridentity">Sequence[Get<wbr>Cluster<wbr>Identity]</a></span>
     </dt>
     <dd>{{% md %}}Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. For an example using this information to enable IAM Roles for Service Accounts, see the `aws.eks.Cluster` resource documentation.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="kubernetes_network_configs_python">
+<a href="#kubernetes_network_configs_python" style="color: inherit; text-decoration: inherit;">kubernetes_<wbr>network_<wbr>configs</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclusterkubernetesnetworkconfig">Sequence[Get<wbr>Cluster<wbr>Kubernetes<wbr>Network<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}Nested list containing Kubernetes Network Configuration.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1089,6 +1133,96 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Issuer URL for the OpenID Connect identity provider.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getclusterkubernetesnetworkconfig">Get<wbr>Cluster<wbr>Kubernetes<wbr>Network<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterKubernetesNetworkConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/eks?tab=doc#GetClusterKubernetesNetworkConfig">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Eks.Outputs.GetClusterKubernetesNetworkConfig.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serviceipv4cidr_csharp">
+<a href="#serviceipv4cidr_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Ipv4Cidr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CIDR block to assign Kubernetes service IP addresses from.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serviceipv4cidr_go">
+<a href="#serviceipv4cidr_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Ipv4Cidr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CIDR block to assign Kubernetes service IP addresses from.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="serviceipv4cidr_nodejs">
+<a href="#serviceipv4cidr_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Ipv4Cidr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CIDR block to assign Kubernetes service IP addresses from.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="service_ipv4_cidr_python">
+<a href="#service_ipv4_cidr_python" style="color: inherit; text-decoration: inherit;">service_<wbr>ipv4_<wbr>cidr</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CIDR block to assign Kubernetes service IP addresses from.
 {{% /md %}}</dd>
 
 </dl>
