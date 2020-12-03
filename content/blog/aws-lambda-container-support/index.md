@@ -79,7 +79,7 @@ Lambda Container image support further blurs the lines between Lambda and Fargat
 - **Burst workloads**. Lambda scales on a per-request basis and can go from zero to a thousand instances in seconds. It’s a great fit for applications with bursty workloads that need to switch from idle to full capacity and back.
 - **Performance**. Fargate runs on more dedicated resources, so overall performance will likely be better than on Lambda. For time-sensitive and critical APIs, Fargate may offer a fast and consistent experience superior to Lambda, especially on high percentiles.
 - **Integration with AWS services**. Lambda comes with native integration with 100+ AWS services. It’s straightforward to trigger a function for incoming SQS messages or new files in an S3 bucket, which requires more wiring for Fargate tasks.
-- **Resource limits**. Lambda executions are limited to 15 minutes and may only consume up to 3 GB of RAM. Fargate may be the only option for long-running resource-demanding jobs.
+- **Resource limits**. Lambda executions are limited to 15 minutes and may only consume up to 10 GB of RAM. Fargate may be the only option for long-running resource-demanding jobs.
 
 Overall, Lambda shines for unpredictable or inconsistent workloads and applications easily expressed as isolated functions triggered by events in other AWS services.
 
