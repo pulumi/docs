@@ -7,11 +7,11 @@ aliases:
   - /webinars/workshop-gitops-with-pulumi-and-gitlab
 
 featured: false
-pre_recorded: false
+pre_recorded: true
 pulumi_tv: false
 preview_image: /images/webinar/gitlab-demo.png
-unlisted: true
-gated: true
+unlisted: false
+gated: false
 type: webinars
 external: false
 url_slug: workshop-gitops-with-pulumi-and-gitlab
@@ -20,6 +20,7 @@ hero:
   image: /images/webinar/gitlab-demo.png
 main:
   sortable_date: 2020-11-16T14:00:00.000-05:00
+  youtube_url: "https://www.youtube.com/embed/NkMUn2jnHe8"
   datetime: Mon Nov 16, 2020 AT 11:00AM PT
   presenters:
     - name: Praneet Loke
@@ -41,7 +42,4 @@ main:
     Learn how Pulumi’s modern infrastructure as code platform helps your team
     deliver features faster by helping you to define resources on any cloud
     using your favorite languages."
-form:
-  gotowebinar_key: "6999643165114589707"
-  hubspot_form_id: 018aec45-eca9-4699-bfbb-698377c67457
 ---
