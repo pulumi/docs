@@ -104,7 +104,7 @@ class Program
 
 ## Libraries
 
-The following packages are available in packager managers:
+The following packages are available in package managers:
 
 * JavaScript/TypeScript: [`@pulumi/alicloud`](https://www.npmjs.com/package/@pulumi/alicloud)
 * Python: [`pulumi-alicloud`](https://pypi.org/project/pulumi-alicloud/)
