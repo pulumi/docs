@@ -7,7 +7,7 @@ meta_desc: "In this workshop, we’ll examine how Pulumi can accelerate provisio
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -54,7 +54,7 @@ main:
     # Webinar title.
     title: "Cloud Engineering Concepts: Deploying Microservices with Pulumi and AWS Lambda"
     # URL for embedding a URL for ungated webinars.
-    youtube_url: ""
+    youtube_url: "https://www.youtube.com/embed/bGZON8dRqVY"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2020-12-03T09:00:00-08:00
     # Duration of the webinar.
@@ -88,13 +88,4 @@ main:
         - How-to provision a Lambda function in AWS
         - How to provision infrastructure such as DynamoDB & API Gateway to support your microservice applications
         - Learn how to take advantage of some of the newest Lambda features
-
-# The right hand side form section.
-form:
-    # GoToWebinar webinar key. This key allows us to register people for webinars via the
-    # HubSpot form.
-    gotowebinar_key: ""
-
-    # HubSpot form id.
-    hubspot_form_id: "d3246080-7e01-47e7-8ce0-6e1e6a866bb3"
 ---

@@ -7,7 +7,7 @@ meta_desc: In this workshop, you will learn the fundamentals of Infrastructure a
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -43,20 +43,14 @@ hero:
     # The image the appears on the right hand side of the hero.
     image: "/icons/containers.svg"
 
-# Webinar pages support multiple session via the 'multiple' property.
-multiple:
-    - datetime: 2020-12-01T17:00:00-08:00
-      hubspot_form_id: 062d9849-0deb-4c26-a578-5d8f3c4fa8e6
-      gotowebinar_key: ""
-
 # Content for the left hand side section of the page.
 main:
     # Webinar title.
     title: "Introduction to Pulumi"
     # URL for embedding a URL for ungated webinars.
-    youtube_url: ""
+    youtube_url: "https://www.youtube.com/embed/YfdFxae8Bxc"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
-    sortable_date: 2020-02-05T10:00:00-07:00
+    sortable_date: 2020-12-01T17:00:00-08:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.
