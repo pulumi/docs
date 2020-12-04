@@ -161,7 +161,7 @@ rule = aws.cfg.Rule("rule", source=aws.cfg.RuleSourceArgs(
     owner="AWS",
     source_identifier="S3_BUCKET_VERSIONING_ENABLED",
 ),
-opts=ResourceOptions(depends_on=[foo]))
+opts=pulumi.ResourceOptions(depends_on=[foo]))
 role_policy = aws.iam.RolePolicy("rolePolicy",
     role=role.id,
     policy="""{
@@ -338,7 +338,7 @@ example_rule = aws.cfg.Rule("exampleRule", source=aws.cfg.RuleSourceArgs(
     owner="CUSTOM_LAMBDA",
     source_identifier=example_function.arn,
 ),
-opts=ResourceOptions(depends_on=[
+opts=pulumi.ResourceOptions(depends_on=[
         example_recorder,
         example_permission,
     ]))

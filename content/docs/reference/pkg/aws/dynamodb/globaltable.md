@@ -202,7 +202,7 @@ us_east_1_table = aws.dynamodb.Table("us-east-1Table",
         name="myAttribute",
         type="S",
     )],
-    opts=ResourceOptions(provider=aws["us-east-1"]))
+    opts=pulumi.ResourceOptions(provider=aws["us-east-1"]))
 us_west_2_table = aws.dynamodb.Table("us-west-2Table",
     hash_key="myAttribute",
     stream_enabled=True,
@@ -213,7 +213,7 @@ us_west_2_table = aws.dynamodb.Table("us-west-2Table",
         name="myAttribute",
         type="S",
     )],
-    opts=ResourceOptions(provider=aws["us-west-2"]))
+    opts=pulumi.ResourceOptions(provider=aws["us-west-2"]))
 my_table = aws.dynamodb.GlobalTable("myTable", replicas=[
     aws.dynamodb.GlobalTableReplicaArgs(
         region_name="us-east-1",
@@ -222,7 +222,7 @@ my_table = aws.dynamodb.GlobalTable("myTable", replicas=[
         region_name="us-west-2",
     ),
 ],
-opts=ResourceOptions(provider=aws["us-east-1"],
+opts=pulumi.ResourceOptions(provider=aws["us-east-1"],
     depends_on=[
         us_east_1_table,
         us_west_2_table,

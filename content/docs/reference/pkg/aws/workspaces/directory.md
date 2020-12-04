@@ -347,7 +347,7 @@ example_directory = aws.workspaces.Directory("exampleDirectory",
         enable_maintenance_mode=True,
         user_enabled_as_local_administrator=True,
     ),
-    opts=ResourceOptions(depends_on=[
+    opts=pulumi.ResourceOptions(depends_on=[
             workspaces_default_service_access,
             workspaces_default_self_service_access,
         ]))

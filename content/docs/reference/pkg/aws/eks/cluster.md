@@ -260,7 +260,7 @@ example_cluster = aws.eks.Cluster("exampleCluster", enabled_cluster_log_types=[
     "api",
     "audit",
 ],
-opts=ResourceOptions(depends_on=[example_log_group]))
+opts=pulumi.ResourceOptions(depends_on=[example_log_group]))
 # ... other configuration ...
 ```
 

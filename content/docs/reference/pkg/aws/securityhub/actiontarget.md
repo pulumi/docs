@@ -87,7 +87,7 @@ example_account = aws.securityhub.Account("exampleAccount")
 example_action_target = aws.securityhub.ActionTarget("exampleActionTarget",
     identifier="SendToChat",
     description="This is custom action sends selected findings to chat",
-    opts=ResourceOptions(depends_on=[example_account]))
+    opts=pulumi.ResourceOptions(depends_on=[example_account]))
 ```
 
 {{% /example %}}

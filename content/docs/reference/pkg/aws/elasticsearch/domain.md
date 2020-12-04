@@ -617,7 +617,7 @@ es_domain = aws.elasticsearch.Domain("esDomain",
     tags={
         "Domain": "TestDomain",
     },
-    opts=ResourceOptions(depends_on=[es_service_linked_role]))
+    opts=pulumi.ResourceOptions(depends_on=[es_service_linked_role]))
 ```
 
 {{% /example %}}

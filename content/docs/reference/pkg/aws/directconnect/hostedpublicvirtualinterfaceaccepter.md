@@ -148,7 +148,7 @@ accepter_hosted_public_virtual_interface_accepter = aws.directconnect.HostedPubl
     tags={
         "Side": "Accepter",
     },
-    opts=ResourceOptions(provider=aws["accepter"]))
+    opts=pulumi.ResourceOptions(provider=aws["accepter"]))
 ```
 
 {{% /example %}}

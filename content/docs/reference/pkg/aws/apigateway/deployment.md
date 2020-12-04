@@ -166,7 +166,7 @@ my_demo_deployment = aws.apigateway.Deployment("myDemoDeployment",
     variables={
         "answer": "42",
     },
-    opts=ResourceOptions(depends_on=[my_demo_integration]))
+    opts=pulumi.ResourceOptions(depends_on=[my_demo_integration]))
 ```
 
 {{% /example %}}

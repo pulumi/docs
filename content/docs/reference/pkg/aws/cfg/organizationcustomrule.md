@@ -130,7 +130,7 @@ example_organization = aws.organizations.Organization("exampleOrganization",
 example_organization_custom_rule = aws.cfg.OrganizationCustomRule("exampleOrganizationCustomRule",
     lambda_function_arn=aws_lambda_function["example"]["arn"],
     trigger_types=["ConfigurationItemChangeNotification"],
-    opts=ResourceOptions(depends_on=[
+    opts=pulumi.ResourceOptions(depends_on=[
             example_permission,
             example_organization,
         ]))

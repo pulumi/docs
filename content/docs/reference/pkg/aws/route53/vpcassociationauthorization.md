@@ -156,14 +156,14 @@ alternate_vpc = aws.ec2.Vpc("alternateVpc",
     cidr_block="10.7.0.0/16",
     enable_dns_hostnames=True,
     enable_dns_support=True,
-    opts=ResourceOptions(provider="aws.alternate"))
+    opts=pulumi.ResourceOptions(provider="aws.alternate"))
 example_vpc_association_authorization = aws.route53.VpcAssociationAuthorization("exampleVpcAssociationAuthorization",
     vpc_id=alternate_vpc.id,
     zone_id=example_zone.id)
 example_zone_association = aws.route53.ZoneAssociation("exampleZoneAssociation",
     vpc_id=example_vpc_association_authorization.vpc_id,
     zone_id=example_vpc_association_authorization.zone_id,
-    opts=ResourceOptions(provider="aws.alternate"))
+    opts=pulumi.ResourceOptions(provider="aws.alternate"))
 ```
 
 {{% /example %}}

@@ -127,7 +127,7 @@ example_amazonses_verification_record = aws.route53.Record("exampleAmazonsesVeri
     ttl=600,
     records=[example.verification_token])
 example_verification = aws.ses.DomainIdentityVerification("exampleVerification", domain=example.id,
-opts=ResourceOptions(depends_on=[example_amazonses_verification_record]))
+opts=pulumi.ResourceOptions(depends_on=[example_amazonses_verification_record]))
 ```
 
 {{% /example %}}

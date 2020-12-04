@@ -331,7 +331,7 @@ foo_spot_fleet_request = aws.ec2.SpotFleetRequest("fooSpotFleetRequest",
             version=foo_launch_template.latest_version,
         ),
     )],
-    opts=ResourceOptions(depends_on=[aws_iam_policy_attachment["test-attach"]]))
+    opts=pulumi.ResourceOptions(depends_on=[aws_iam_policy_attachment["test-attach"]]))
 ```
 
 {{% /example %}}
@@ -665,7 +665,7 @@ foo_spot_fleet_request = aws.ec2.SpotFleetRequest("fooSpotFleetRequest",
             ),
         ],
     )],
-    opts=ResourceOptions(depends_on=[aws_iam_policy_attachment["test-attach"]]))
+    opts=pulumi.ResourceOptions(depends_on=[aws_iam_policy_attachment["test-attach"]]))
 ```
 
 {{% /example %}}

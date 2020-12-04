@@ -3,7 +3,7 @@ title: "Module types/enums"
 title_tag: "Module types/enums | Package @pulumi/aws | Node.js SDK"
 linktitle: "enums"
 meta_desc: "Explore members of the enums module in the @pulumi/aws package."
-git_sha: "f0267a7203da7ee233e5bba00767543a007d0a61"
+git_sha: "dc8d336caa9186ced9520f4546c42ba956bd195e"
 block_external_search_index: true
 ---
 
@@ -27,7 +27,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="Region" data-link-title="Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/types/enums/index.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/dc8d336caa9186ced9520f4546c42ba956bd195e/sdk/nodejs/types/enums/index.ts#L59">
         type <strong>Region</strong>
     </a>
 </h3>

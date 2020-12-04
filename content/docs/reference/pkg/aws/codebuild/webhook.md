@@ -232,12 +232,12 @@ example_repository_webhook = github.RepositoryWebhook("exampleRepositoryWebhook"
     active=True,
     events=["push"],
     repository=github_repository["example"]["name"],
-    configuration={
-        "url": example_webhook.payload_url,
-        "secret": example_webhook.secret,
-        "contentType": "json",
-        "insecureSsl": False,
-    })
+    configuration=github.RepositoryWebhookConfigurationArgs(
+        url=example_webhook.payload_url,
+        secret=example_webhook.secret,
+        content_type="json",
+        insecure_ssl=False,
+    ))
 ```
 
 {{% /example %}}
