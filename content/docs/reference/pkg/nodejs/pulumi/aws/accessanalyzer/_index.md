@@ -3,7 +3,7 @@ title: "Module accessanalyzer"
 title_tag: "Module accessanalyzer | Package @pulumi/aws | Node.js SDK"
 linktitle: "accessanalyzer"
 meta_desc: "Explore members of the accessanalyzer module in the @pulumi/aws package."
-git_sha: "f0267a7203da7ee233e5bba00767543a007d0a61"
+git_sha: "fbc6ab50703a2a173ec5f3800d282dc130df7d38"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Analyzer" data-link-title="Analyzer">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/accessanalyzer/analyzer.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/accessanalyzer/analyzer.ts#L44">
         Resource <strong>Analyzer</strong>
     </a>
 </h3>
@@ -74,7 +74,7 @@ Access Analyzer Analyzers can be imported using the `analyzer_name`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Analyzer-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/accessanalyzer/analyzer.ts#L84"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/accessanalyzer/analyzer.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -88,7 +88,7 @@ Create a Analyzer resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Analyzer-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/accessanalyzer/analyzer.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/accessanalyzer/analyzer.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -99,14 +99,14 @@ Get an existing Analyzer resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Analyzer-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/accessanalyzer/analyzer.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/accessanalyzer/analyzer.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Analyzer-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/accessanalyzer/analyzer.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/accessanalyzer/analyzer.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -117,7 +117,7 @@ Returns true if the given object is an instance of Analyzer.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Analyzer-analyzerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/accessanalyzer/analyzer.ts#L75">property <b>analyzerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/accessanalyzer/analyzer.ts#L75">property <b>analyzerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>analyzerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -125,12 +125,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Name of the Analyzer.
 
 <h4 class="pdoc-member-header" id="Analyzer-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/accessanalyzer/analyzer.ts#L76">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/accessanalyzer/analyzer.ts#L76">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Analyzer-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/accessanalyzer/analyzer.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/accessanalyzer/analyzer.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -139,7 +139,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Analyzer-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/accessanalyzer/analyzer.ts#L80">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/accessanalyzer/analyzer.ts#L80">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -147,7 +147,7 @@ deployments and may be missing (undefined) during planning phases.
 Key-value map of resource tags.
 
 <h4 class="pdoc-member-header" id="Analyzer-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/accessanalyzer/analyzer.ts#L84">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/accessanalyzer/analyzer.ts#L84">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -155,7 +155,7 @@ Key-value map of resource tags.
 Type of Analyzer. Valid values are `ACCOUNT` or `ORGANIZATION`. Defaults to `ACCOUNT`.
 
 <h4 class="pdoc-member-header" id="Analyzer-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/accessanalyzer/analyzer.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/accessanalyzer/analyzer.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -167,7 +167,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AnalyzerArgs" data-link-title="AnalyzerArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/accessanalyzer/analyzer.ts#L145">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/accessanalyzer/analyzer.ts#L145">
         interface <strong>AnalyzerArgs</strong>
     </a>
 </h3>
@@ -177,7 +177,7 @@ deployments.
 The set of arguments for constructing a Analyzer resource.
 
 <h4 class="pdoc-member-header" id="AnalyzerArgs-analyzerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/accessanalyzer/analyzer.ts#L149">property <b>analyzerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/accessanalyzer/analyzer.ts#L149">property <b>analyzerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>analyzerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -185,7 +185,7 @@ The set of arguments for constructing a Analyzer resource.
 Name of the Analyzer.
 
 <h4 class="pdoc-member-header" id="AnalyzerArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/accessanalyzer/analyzer.ts#L153">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/accessanalyzer/analyzer.ts#L153">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -193,7 +193,7 @@ Name of the Analyzer.
 Key-value map of resource tags.
 
 <h4 class="pdoc-member-header" id="AnalyzerArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/accessanalyzer/analyzer.ts#L157">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/accessanalyzer/analyzer.ts#L157">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -201,7 +201,7 @@ Key-value map of resource tags.
 Type of Analyzer. Valid values are `ACCOUNT` or `ORGANIZATION`. Defaults to `ACCOUNT`.
 
 <h3 class="pdoc-module-header" id="AnalyzerState" data-link-title="AnalyzerState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/accessanalyzer/analyzer.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/accessanalyzer/analyzer.ts#L126">
         interface <strong>AnalyzerState</strong>
     </a>
 </h3>
@@ -211,7 +211,7 @@ Type of Analyzer. Valid values are `ACCOUNT` or `ORGANIZATION`. Defaults to `ACC
 Input properties used for looking up and filtering Analyzer resources.
 
 <h4 class="pdoc-member-header" id="AnalyzerState-analyzerName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/accessanalyzer/analyzer.ts#L130">property <b>analyzerName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/accessanalyzer/analyzer.ts#L130">property <b>analyzerName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>analyzerName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -219,12 +219,12 @@ Input properties used for looking up and filtering Analyzer resources.
 Name of the Analyzer.
 
 <h4 class="pdoc-member-header" id="AnalyzerState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/accessanalyzer/analyzer.ts#L131">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/accessanalyzer/analyzer.ts#L131">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="AnalyzerState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/accessanalyzer/analyzer.ts#L135">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/accessanalyzer/analyzer.ts#L135">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -232,7 +232,7 @@ Name of the Analyzer.
 Key-value map of resource tags.
 
 <h4 class="pdoc-member-header" id="AnalyzerState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/accessanalyzer/analyzer.ts#L139">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/accessanalyzer/analyzer.ts#L139">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

@@ -3,7 +3,7 @@ title: "Module apigatewayv2"
 title_tag: "Module apigatewayv2 | Package @pulumi/aws | Node.js SDK"
 linktitle: "apigatewayv2"
 meta_desc: "Explore members of the apigatewayv2 module in the @pulumi/aws package."
-git_sha: "f0267a7203da7ee233e5bba00767543a007d0a61"
+git_sha: "fbc6ab50703a2a173ec5f3800d282dc130df7d38"
 block_external_search_index: true
 ---
 
@@ -63,7 +63,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Api" data-link-title="Api">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L44">
         Resource <strong>Api</strong>
     </a>
 </h3>
@@ -106,7 +106,7 @@ const example = new aws.apigatewayv2.Api("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Api-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L144"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L144"> <b>constructor</b></a>
 </h4>
 
 
@@ -120,7 +120,7 @@ Create a Api resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Api-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -131,14 +131,14 @@ Get an existing Api resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Api-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Api-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -149,7 +149,7 @@ Returns true if the given object is an instance of Api.  This is designed to wor
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Api-apiEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L75">property <b>apiEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L75">property <b>apiEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -157,7 +157,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The URI of the API, of the form `{api-id}.execute-api.{region}.amazonaws.com`.
 
 <h4 class="pdoc-member-header" id="Api-apiKeySelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L81">property <b>apiKeySelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L81">property <b>apiKeySelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiKeySelectionExpression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -167,7 +167,7 @@ Valid values: `$context.authorizer.usageIdentifierKey`, `$request.header.x-api-k
 Applicable for WebSocket APIs.
 
 <h4 class="pdoc-member-header" id="Api-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L85">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L85">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -175,7 +175,7 @@ Applicable for WebSocket APIs.
 The ARN of the API.
 
 <h4 class="pdoc-member-header" id="Api-body">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L89">property <b>body</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L89">property <b>body</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>body: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -183,7 +183,7 @@ The ARN of the API.
 An OpenAPI specification that defines the set of routes and integrations to create as part of the HTTP APIs. Supported only for HTTP APIs.
 
 <h4 class="pdoc-member-header" id="Api-corsConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L93">property <b>corsConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L93">property <b>corsConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>corsConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApiCorsConfiguration'>ApiCorsConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -191,7 +191,7 @@ An OpenAPI specification that defines the set of routes and integrations to crea
 The cross-origin resource sharing (CORS) [configuration](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-cors.html). Applicable for HTTP APIs.
 
 <h4 class="pdoc-member-header" id="Api-credentialsArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L97">property <b>credentialsArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L97">property <b>credentialsArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>credentialsArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -199,7 +199,7 @@ The cross-origin resource sharing (CORS) [configuration](https://docs.aws.amazon
 Part of _quick create_. Specifies any credentials required for the integration. Applicable for HTTP APIs.
 
 <h4 class="pdoc-member-header" id="Api-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L101">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L101">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -207,7 +207,7 @@ Part of _quick create_. Specifies any credentials required for the integration. 
 The description of the API. Must be less than or equal to 1024 characters in length.
 
 <h4 class="pdoc-member-header" id="Api-disableExecuteApiEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L107">property <b>disableExecuteApiEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L107">property <b>disableExecuteApiEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disableExecuteApiEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -217,7 +217,7 @@ By default, clients can invoke the API with the default `{api_id}.execute-api.{r
 To require that clients use a custom domain name to invoke the API, disable the default endpoint.
 
 <h4 class="pdoc-member-header" id="Api-executionArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L113">property <b>executionArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L113">property <b>executionArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>executionArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -227,7 +227,7 @@ or in an `aws.iam.Policy` to authorize access to the [`@connections` API](https:
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
 
 <h4 class="pdoc-member-header" id="Api-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -236,7 +236,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Api-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L117">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L117">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -244,7 +244,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the API. Must be less than or equal to 128 characters in length.
 
 <h4 class="pdoc-member-header" id="Api-protocolType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L121">property <b>protocolType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L121">property <b>protocolType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>protocolType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -252,7 +252,7 @@ The name of the API. Must be less than or equal to 128 characters in length.
 The API protocol. Valid values: `HTTP`, `WEBSOCKET`.
 
 <h4 class="pdoc-member-header" id="Api-routeKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L125">property <b>routeKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L125">property <b>routeKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>routeKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -260,7 +260,7 @@ The API protocol. Valid values: `HTTP`, `WEBSOCKET`.
 Part of _quick create_. Specifies any [route key](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-routes.html). Applicable for HTTP APIs.
 
 <h4 class="pdoc-member-header" id="Api-routeSelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L130">property <b>routeSelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L130">property <b>routeSelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>routeSelectionExpression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -269,7 +269,7 @@ The [route selection expression](https://docs.aws.amazon.com/apigateway/latest/d
 Defaults to `$request.method $request.path`.
 
 <h4 class="pdoc-member-header" id="Api-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L134">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L134">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -277,7 +277,7 @@ Defaults to `$request.method $request.path`.
 A map of tags to assign to the API.
 
 <h4 class="pdoc-member-header" id="Api-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L140">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L140">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>target: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -287,7 +287,7 @@ For HTTP integrations, specify a fully qualified URL. For Lambda integrations, s
 The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. Applicable for HTTP APIs.
 
 <h4 class="pdoc-member-header" id="Api-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -296,7 +296,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Api-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L144">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L144">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -304,7 +304,7 @@ deployments.
 A version identifier for the API. Must be between 1 and 64 characters in length.
 
 <h3 class="pdoc-module-header" id="ApiMapping" data-link-title="ApiMapping">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/apiMapping.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/apiMapping.ts#L33">
         Resource <strong>ApiMapping</strong>
     </a>
 </h3>
@@ -337,7 +337,7 @@ const example = new aws.apigatewayv2.ApiMapping("example", {
 ```
 
 <h4 class="pdoc-member-header" id="ApiMapping-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/apiMapping.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/apiMapping.ts#L76"> <b>constructor</b></a>
 </h4>
 
 
@@ -351,7 +351,7 @@ Create a ApiMapping resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ApiMapping-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/apiMapping.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/apiMapping.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -362,14 +362,14 @@ Get an existing ApiMapping resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ApiMapping-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/apiMapping.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/apiMapping.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ApiMapping-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/apiMapping.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/apiMapping.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -380,7 +380,7 @@ Returns true if the given object is an instance of ApiMapping.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ApiMapping-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/apiMapping.ts#L64">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/apiMapping.ts#L64">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -388,7 +388,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The API identifier.
 
 <h4 class="pdoc-member-header" id="ApiMapping-apiMappingKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/apiMapping.ts#L68">property <b>apiMappingKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/apiMapping.ts#L68">property <b>apiMappingKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiMappingKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -396,7 +396,7 @@ The API identifier.
 The [API mapping key](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-mapping-template-reference.html).
 
 <h4 class="pdoc-member-header" id="ApiMapping-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/apiMapping.ts#L72">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/apiMapping.ts#L72">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -404,7 +404,7 @@ The [API mapping key](https://docs.aws.amazon.com/apigateway/latest/developergui
 The domain name. Use the `aws.apigatewayv2.DomainName` resource to configure a domain name.
 
 <h4 class="pdoc-member-header" id="ApiMapping-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/apiMapping.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/apiMapping.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -413,7 +413,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ApiMapping-stage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/apiMapping.ts#L76">property <b>stage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/apiMapping.ts#L76">property <b>stage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -421,7 +421,7 @@ deployments and may be missing (undefined) during planning phases.
 The API stage. Use the `aws.apigatewayv2.Stage` resource to configure an API stage.
 
 <h4 class="pdoc-member-header" id="ApiMapping-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/apiMapping.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/apiMapping.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -430,7 +430,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Authorizer" data-link-title="Authorizer">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L51">
         Resource <strong>Authorizer</strong>
     </a>
 </h3>
@@ -480,7 +480,7 @@ const example = new aws.apigatewayv2.Authorizer("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Authorizer-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L130"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L130"> <b>constructor</b></a>
 </h4>
 
 
@@ -494,7 +494,7 @@ Create a Authorizer resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Authorizer-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L61">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L61">method <b>get</b></a>
 </h4>
 
 
@@ -505,14 +505,14 @@ Get an existing Authorizer resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Authorizer-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L51">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L51">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Authorizer-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L72">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L72">method <b>isInstance</b></a>
 </h4>
 
 
@@ -523,7 +523,7 @@ Returns true if the given object is an instance of Authorizer.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Authorizer-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L82">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L82">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -531,7 +531,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The API identifier.
 
 <h4 class="pdoc-member-header" id="Authorizer-authorizerCredentialsArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L87">property <b>authorizerCredentialsArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L87">property <b>authorizerCredentialsArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizerCredentialsArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -540,7 +540,7 @@ The required credentials as an IAM role for API Gateway to invoke the authorizer
 Supported only for `REQUEST` authorizers.
 
 <h4 class="pdoc-member-header" id="Authorizer-authorizerPayloadFormatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L92">property <b>authorizerPayloadFormatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L92">property <b>authorizerPayloadFormatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizerPayloadFormatVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -549,7 +549,7 @@ The format of the payload sent to an HTTP API Lambda authorizer. Required for HT
 Valid values: `1.0`, `2.0`.
 
 <h4 class="pdoc-member-header" id="Authorizer-authorizerResultTtlInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L98">property <b>authorizerResultTtlInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L98">property <b>authorizerResultTtlInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizerResultTtlInSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -559,7 +559,7 @@ If it is greater than 0, API Gateway caches authorizer responses. The maximum va
 Supported only for HTTP API Lambda authorizers.
 
 <h4 class="pdoc-member-header" id="Authorizer-authorizerType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L104">property <b>authorizerType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L104">property <b>authorizerType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizerType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -569,7 +569,7 @@ Specify `REQUEST` for a Lambda function using incoming request parameters.
 For HTTP APIs, specify `JWT` to use JSON Web Tokens.
 
 <h4 class="pdoc-member-header" id="Authorizer-authorizerUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L110">property <b>authorizerUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L110">property <b>authorizerUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizerUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -579,7 +579,7 @@ For `REQUEST` authorizers this must be a well-formed Lambda function URI, such a
 Supported only for `REQUEST` authorizers. Must be between 1 and 2048 characters in length.
 
 <h4 class="pdoc-member-header" id="Authorizer-enableSimpleResponses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L115">property <b>enableSimpleResponses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L115">property <b>enableSimpleResponses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enableSimpleResponses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -588,7 +588,7 @@ Whether a Lambda authorizer returns a response in a simple format. If enabled, t
 Supported only for HTTP APIs.
 
 <h4 class="pdoc-member-header" id="Authorizer-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L51">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L51">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -597,7 +597,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Authorizer-identitySources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L121">property <b>identitySources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L121">property <b>identitySources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identitySources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -607,7 +607,7 @@ For `REQUEST` authorizers the value is a list of one or more mapping expressions
 For `JWT` authorizers the single entry specifies where to extract the JSON Web Token (JWT) from inbound requests.
 
 <h4 class="pdoc-member-header" id="Authorizer-jwtConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L126">property <b>jwtConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L126">property <b>jwtConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>jwtConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AuthorizerJwtConfiguration'>AuthorizerJwtConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -616,7 +616,7 @@ The configuration of a JWT authorizer. Required for the `JWT` authorizer type.
 Supported only for HTTP APIs.
 
 <h4 class="pdoc-member-header" id="Authorizer-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L130">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L130">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -624,7 +624,7 @@ Supported only for HTTP APIs.
 The name of the authorizer. Must be between 1 and 128 characters in length.
 
 <h4 class="pdoc-member-header" id="Authorizer-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L51">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L51">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -633,7 +633,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Deployment" data-link-title="Deployment">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/deployment.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/deployment.ts#L36">
         Resource <strong>Deployment</strong>
     </a>
 </h3>
@@ -669,7 +669,7 @@ const example = new aws.apigatewayv2.Deployment("example", {
  The `triggers` argument cannot be imported.
 
 <h4 class="pdoc-member-header" id="Deployment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/deployment.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/deployment.ts#L79"> <b>constructor</b></a>
 </h4>
 
 
@@ -683,7 +683,7 @@ Create a Deployment resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Deployment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/deployment.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/deployment.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -694,14 +694,14 @@ Get an existing Deployment resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Deployment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/deployment.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/deployment.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Deployment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/deployment.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/deployment.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -712,7 +712,7 @@ Returns true if the given object is an instance of Deployment.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Deployment-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/deployment.ts#L67">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/deployment.ts#L67">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -720,7 +720,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The API identifier.
 
 <h4 class="pdoc-member-header" id="Deployment-autoDeployed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/deployment.ts#L71">property <b>autoDeployed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/deployment.ts#L71">property <b>autoDeployed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoDeployed: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -728,7 +728,7 @@ The API identifier.
 Whether the deployment was automatically released.
 
 <h4 class="pdoc-member-header" id="Deployment-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/deployment.ts#L75">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/deployment.ts#L75">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -736,7 +736,7 @@ Whether the deployment was automatically released.
 The description for the deployment resource. Must be less than or equal to 1024 characters in length.
 
 <h4 class="pdoc-member-header" id="Deployment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/deployment.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/deployment.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -745,7 +745,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Deployment-triggers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/deployment.ts#L79">property <b>triggers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/deployment.ts#L79">property <b>triggers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>triggers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -753,7 +753,7 @@ deployments and may be missing (undefined) during planning phases.
 A map of arbitrary keys and values that, when changed, will trigger a redeployment.
 
 <h4 class="pdoc-member-header" id="Deployment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/deployment.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/deployment.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -762,7 +762,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DomainName" data-link-title="DomainName">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L40">
         Resource <strong>DomainName</strong>
     </a>
 </h3>
@@ -801,7 +801,7 @@ const example = new aws.apigatewayv2.DomainName("example", {
 ```
 
 <h4 class="pdoc-member-header" id="DomainName-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L91"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L91"> <b>constructor</b></a>
 </h4>
 
 
@@ -815,7 +815,7 @@ Create a DomainName resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DomainName-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -826,14 +826,14 @@ Get an existing DomainName resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DomainName-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DomainName-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -844,7 +844,7 @@ Returns true if the given object is an instance of DomainName.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DomainName-apiMappingSelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L71">property <b>apiMappingSelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L71">property <b>apiMappingSelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiMappingSelectionExpression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -852,7 +852,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
 
 <h4 class="pdoc-member-header" id="DomainName-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L75">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L75">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -860,7 +860,7 @@ The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/la
 The ARN of the domain name.
 
 <h4 class="pdoc-member-header" id="DomainName-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L79">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L79">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -868,7 +868,7 @@ The ARN of the domain name.
 The domain name. Must be between 1 and 512 characters in length.
 
 <h4 class="pdoc-member-header" id="DomainName-domainNameConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L83">property <b>domainNameConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L83">property <b>domainNameConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainNameConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainNameDomainNameConfiguration'>DomainNameDomainNameConfiguration</a>&gt;;</code></pre>
@@ -876,7 +876,7 @@ The domain name. Must be between 1 and 512 characters in length.
 The domain name configuration.
 
 <h4 class="pdoc-member-header" id="DomainName-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -885,7 +885,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DomainName-mutualTlsAuthentication">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L87">property <b>mutualTlsAuthentication</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L87">property <b>mutualTlsAuthentication</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mutualTlsAuthentication: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainNameMutualTlsAuthentication'>DomainNameMutualTlsAuthentication</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -893,7 +893,7 @@ deployments and may be missing (undefined) during planning phases.
 The mutual TLS authentication configuration for the domain name.
 
 <h4 class="pdoc-member-header" id="DomainName-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L91">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L91">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -901,7 +901,7 @@ The mutual TLS authentication configuration for the domain name.
 A map of tags to assign to the domain name.
 
 <h4 class="pdoc-member-header" id="DomainName-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -910,7 +910,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Integration" data-link-title="Integration">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L74">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L74">
         Resource <strong>Integration</strong>
     </a>
 </h3>
@@ -983,7 +983,7 @@ const example = new aws.apigatewayv2.Integration("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Integration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L174"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L174"> <b>constructor</b></a>
 </h4>
 
 
@@ -997,7 +997,7 @@ Create a Integration resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Integration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L84">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L84">method <b>get</b></a>
 </h4>
 
 
@@ -1008,14 +1008,14 @@ Get an existing Integration resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Integration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L74">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L74">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Integration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L95">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L95">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1026,7 +1026,7 @@ Returns true if the given object is an instance of Integration.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Integration-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L105">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L105">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1034,7 +1034,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The API identifier.
 
 <h4 class="pdoc-member-header" id="Integration-connectionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L109">property <b>connectionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L109">property <b>connectionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1042,7 +1042,7 @@ The API identifier.
 The ID of the VPC link for a private integration. Supported only for HTTP APIs. Must be between 1 and 1024 characters in length.
 
 <h4 class="pdoc-member-header" id="Integration-connectionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L113">property <b>connectionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L113">property <b>connectionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectionType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1050,7 +1050,7 @@ The ID of the VPC link for a private integration. Supported only for HTTP APIs. 
 The type of the network connection to the integration endpoint. Valid values: `INTERNET`, `VPC_LINK`. Default is `INTERNET`.
 
 <h4 class="pdoc-member-header" id="Integration-contentHandlingStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L117">property <b>contentHandlingStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L117">property <b>contentHandlingStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentHandlingStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1058,7 +1058,7 @@ The type of the network connection to the integration endpoint. Valid values: `I
 How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`. Supported only for WebSocket APIs.
 
 <h4 class="pdoc-member-header" id="Integration-credentialsArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L121">property <b>credentialsArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L121">property <b>credentialsArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>credentialsArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1066,7 +1066,7 @@ How to handle response payload content type conversions. Valid values: `CONVERT_
 The credentials required for the integration, if any.
 
 <h4 class="pdoc-member-header" id="Integration-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L125">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L125">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1074,7 +1074,7 @@ The credentials required for the integration, if any.
 The description of the integration.
 
 <h4 class="pdoc-member-header" id="Integration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L74">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L74">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1083,7 +1083,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Integration-integrationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L129">property <b>integrationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L129">property <b>integrationMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>integrationMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1091,7 +1091,7 @@ deployments and may be missing (undefined) during planning phases.
 The integration's HTTP method. Must be specified if `integrationType` is not `MOCK`.
 
 <h4 class="pdoc-member-header" id="Integration-integrationResponseSelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L133">property <b>integrationResponseSelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L133">property <b>integrationResponseSelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>integrationResponseSelectionExpression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1099,7 +1099,7 @@ The integration's HTTP method. Must be specified if `integrationType` is not `MO
 The [integration response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-integration-response-selection-expressions) for the integration.
 
 <h4 class="pdoc-member-header" id="Integration-integrationSubtype">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L137">property <b>integrationSubtype</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L137">property <b>integrationSubtype</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>integrationSubtype: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1107,7 +1107,7 @@ The [integration response selection expression](https://docs.aws.amazon.com/apig
 Specifies the AWS service action to invoke. Supported only for HTTP APIs when `integrationType` is `AWS_PROXY`. See the [AWS service integration reference](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services-reference.html) documentation for supported values. Must be between 1 and 128 characters in length.
 
 <h4 class="pdoc-member-header" id="Integration-integrationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L142">property <b>integrationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L142">property <b>integrationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>integrationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1116,7 +1116,7 @@ The integration type of an integration.
 Valid values: `AWS`, `AWS_PROXY`, `HTTP`, `HTTP_PROXY`, `MOCK`.
 
 <h4 class="pdoc-member-header" id="Integration-integrationUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L147">property <b>integrationUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L147">property <b>integrationUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>integrationUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1125,7 +1125,7 @@ The URI of the Lambda function for a Lambda proxy integration, when `integration
 For an `HTTP` integration, specify a fully-qualified URL. For an HTTP API private integration, specify the ARN of an Application Load Balancer listener, Network Load Balancer listener, or AWS Cloud Map service.
 
 <h4 class="pdoc-member-header" id="Integration-passthroughBehavior">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L152">property <b>passthroughBehavior</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L152">property <b>passthroughBehavior</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passthroughBehavior: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1134,7 +1134,7 @@ The pass-through behavior for incoming requests based on the Content-Type header
 Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO_MATCH`. Supported only for WebSocket APIs.
 
 <h4 class="pdoc-member-header" id="Integration-payloadFormatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L156">property <b>payloadFormatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L156">property <b>payloadFormatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>payloadFormatVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1142,7 +1142,7 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
 The [format of the payload](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html#http-api-develop-integrations-lambda.proxy-format) sent to an integration. Valid values: `1.0`, `2.0`. Default is `1.0`.
 
 <h4 class="pdoc-member-header" id="Integration-requestParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L161">property <b>requestParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L161">property <b>requestParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1151,7 +1151,7 @@ A key-value map specifying request parameters that are passed from the method re
 Supported only for WebSocket APIs.
 
 <h4 class="pdoc-member-header" id="Integration-requestTemplates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L165">property <b>requestTemplates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L165">property <b>requestTemplates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestTemplates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1159,7 +1159,7 @@ Supported only for WebSocket APIs.
 A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client. Supported only for WebSocket APIs.
 
 <h4 class="pdoc-member-header" id="Integration-templateSelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L169">property <b>templateSelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L169">property <b>templateSelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateSelectionExpression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1167,12 +1167,12 @@ A map of Velocity templates that are applied on the request payload based on the
 The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration.
 
 <h4 class="pdoc-member-header" id="Integration-timeoutMilliseconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L170">property <b>timeoutMilliseconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L170">property <b>timeoutMilliseconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeoutMilliseconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Integration-tlsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L174">property <b>tlsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L174">property <b>tlsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tlsConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#IntegrationTlsConfig'>IntegrationTlsConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1180,7 +1180,7 @@ The [template selection expression](https://docs.aws.amazon.com/apigateway/lates
 The TLS configuration for a private integration. Supported only for HTTP APIs.
 
 <h4 class="pdoc-member-header" id="Integration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L74">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L74">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1189,7 +1189,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="IntegrationResponse" data-link-title="IntegrationResponse">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L33">
         Resource <strong>IntegrationResponse</strong>
     </a>
 </h3>
@@ -1222,7 +1222,7 @@ const example = new aws.apigatewayv2.IntegrationResponse("example", {
 ```
 
 <h4 class="pdoc-member-header" id="IntegrationResponse-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L84"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -1236,7 +1236,7 @@ Create a IntegrationResponse resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="IntegrationResponse-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -1247,14 +1247,14 @@ Get an existing IntegrationResponse resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="IntegrationResponse-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="IntegrationResponse-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1265,7 +1265,7 @@ Returns true if the given object is an instance of IntegrationResponse.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="IntegrationResponse-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L64">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L64">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1273,7 +1273,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The API identifier.
 
 <h4 class="pdoc-member-header" id="IntegrationResponse-contentHandlingStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L68">property <b>contentHandlingStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L68">property <b>contentHandlingStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentHandlingStrategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1281,7 +1281,7 @@ The API identifier.
 How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`.
 
 <h4 class="pdoc-member-header" id="IntegrationResponse-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1290,7 +1290,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="IntegrationResponse-integrationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L72">property <b>integrationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L72">property <b>integrationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>integrationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1298,7 +1298,7 @@ deployments and may be missing (undefined) during planning phases.
 The identifier of the `aws.apigatewayv2.Integration`.
 
 <h4 class="pdoc-member-header" id="IntegrationResponse-integrationResponseKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L76">property <b>integrationResponseKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L76">property <b>integrationResponseKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>integrationResponseKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1306,7 +1306,7 @@ The identifier of the `aws.apigatewayv2.Integration`.
 The integration response key.
 
 <h4 class="pdoc-member-header" id="IntegrationResponse-responseTemplates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L80">property <b>responseTemplates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L80">property <b>responseTemplates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>responseTemplates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1314,7 +1314,7 @@ The integration response key.
 A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client.
 
 <h4 class="pdoc-member-header" id="IntegrationResponse-templateSelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L84">property <b>templateSelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L84">property <b>templateSelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateSelectionExpression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1322,7 +1322,7 @@ A map of Velocity templates that are applied on the request payload based on the
 The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration response.
 
 <h4 class="pdoc-member-header" id="IntegrationResponse-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1331,7 +1331,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Model" data-link-title="Model">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L40">
         Resource <strong>Model</strong>
     </a>
 </h3>
@@ -1371,7 +1371,7 @@ const example = new aws.apigatewayv2.Model("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Model-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L87"> <b>constructor</b></a>
 </h4>
 
 
@@ -1385,7 +1385,7 @@ Create a Model resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Model-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -1396,14 +1396,14 @@ Get an existing Model resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Model-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Model-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1414,7 +1414,7 @@ Returns true if the given object is an instance of Model.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Model-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L71">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L71">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1422,7 +1422,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The API identifier.
 
 <h4 class="pdoc-member-header" id="Model-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L75">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L75">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1430,7 +1430,7 @@ The API identifier.
 The content-type for the model, for example, `application/json`. Must be between 1 and 256 characters in length.
 
 <h4 class="pdoc-member-header" id="Model-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L79">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L79">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1438,7 +1438,7 @@ The content-type for the model, for example, `application/json`. Must be between
 The description of the model. Must be between 1 and 128 characters in length.
 
 <h4 class="pdoc-member-header" id="Model-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1447,7 +1447,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Model-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L83">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L83">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1455,7 +1455,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the model. Must be alphanumeric. Must be between 1 and 128 characters in length.
 
 <h4 class="pdoc-member-header" id="Model-schema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L87">property <b>schema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L87">property <b>schema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>schema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1463,7 +1463,7 @@ The name of the model. Must be alphanumeric. Must be between 1 and 128 character
 The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model. Must be less than or equal to 32768 characters in length.
 
 <h4 class="pdoc-member-header" id="Model-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1472,7 +1472,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Route" data-link-title="Route">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L32">
         Resource <strong>Route</strong>
     </a>
 </h3>
@@ -1504,7 +1504,7 @@ const example = new aws.apigatewayv2.Route("example", {
 ```
 
 <h4 class="pdoc-member-header" id="Route-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L106"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L106"> <b>constructor</b></a>
 </h4>
 
 
@@ -1518,7 +1518,7 @@ Create a Route resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Route-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -1529,14 +1529,14 @@ Get an existing Route resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Route-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Route-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1547,7 +1547,7 @@ Returns true if the given object is an instance of Route.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Route-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L63">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L63">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1555,7 +1555,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The API identifier.
 
 <h4 class="pdoc-member-header" id="Route-apiKeyRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L67">property <b>apiKeyRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L67">property <b>apiKeyRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiKeyRequired: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1563,7 +1563,7 @@ The API identifier.
 Boolean whether an API key is required for the route. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Route-authorizationScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L71">property <b>authorizationScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L71">property <b>authorizationScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizationScopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1571,7 +1571,7 @@ Boolean whether an API key is required for the route. Defaults to `false`.
 The authorization scopes supported by this route. The scopes are used with a JWT authorizer to authorize the method invocation.
 
 <h4 class="pdoc-member-header" id="Route-authorizationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L78">property <b>authorizationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L78">property <b>authorizationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1582,7 +1582,7 @@ For HTTP APIs, valid values are `NONE` for open access, or `JWT` for using JSON 
 Defaults to `NONE`.
 
 <h4 class="pdoc-member-header" id="Route-authorizerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L82">property <b>authorizerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L82">property <b>authorizerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1590,7 +1590,7 @@ Defaults to `NONE`.
 The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route, if the authorizationType is `CUSTOM`.
 
 <h4 class="pdoc-member-header" id="Route-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1599,7 +1599,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Route-modelSelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L86">property <b>modelSelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L86">property <b>modelSelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>modelSelectionExpression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1607,7 +1607,7 @@ deployments and may be missing (undefined) during planning phases.
 The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route.
 
 <h4 class="pdoc-member-header" id="Route-operationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L90">property <b>operationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L90">property <b>operationName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>operationName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1615,7 +1615,7 @@ The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/d
 The operation name for the route. Must be between 1 and 64 characters in length.
 
 <h4 class="pdoc-member-header" id="Route-requestModels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L94">property <b>requestModels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L94">property <b>requestModels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestModels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1623,7 +1623,7 @@ The operation name for the route. Must be between 1 and 64 characters in length.
 The request models for the route.
 
 <h4 class="pdoc-member-header" id="Route-routeKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L98">property <b>routeKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L98">property <b>routeKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>routeKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1631,7 +1631,7 @@ The request models for the route.
 The route key for the route. For HTTP APIs, the route key can be either `$default`, or a combination of an HTTP method and resource path, for example, `GET /pets`.
 
 <h4 class="pdoc-member-header" id="Route-routeResponseSelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L102">property <b>routeResponseSelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L102">property <b>routeResponseSelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>routeResponseSelectionExpression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1639,7 +1639,7 @@ The route key for the route. For HTTP APIs, the route key can be either `$defaul
 The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route.
 
 <h4 class="pdoc-member-header" id="Route-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L106">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L106">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>target: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1647,7 +1647,7 @@ The [route response selection expression](https://docs.aws.amazon.com/apigateway
 The target for the route. Must be between 1 and 128 characters in length.
 
 <h4 class="pdoc-member-header" id="Route-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1656,7 +1656,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RouteResponse" data-link-title="RouteResponse">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L33">
         Resource <strong>RouteResponse</strong>
     </a>
 </h3>
@@ -1689,7 +1689,7 @@ const example = new aws.apigatewayv2.RouteResponse("example", {
 ```
 
 <h4 class="pdoc-member-header" id="RouteResponse-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L80"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L80"> <b>constructor</b></a>
 </h4>
 
 
@@ -1703,7 +1703,7 @@ Create a RouteResponse resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RouteResponse-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -1714,14 +1714,14 @@ Get an existing RouteResponse resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RouteResponse-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RouteResponse-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1732,7 +1732,7 @@ Returns true if the given object is an instance of RouteResponse.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RouteResponse-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L64">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L64">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1740,7 +1740,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The API identifier.
 
 <h4 class="pdoc-member-header" id="RouteResponse-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1749,7 +1749,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RouteResponse-modelSelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L68">property <b>modelSelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L68">property <b>modelSelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>modelSelectionExpression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1757,7 +1757,7 @@ deployments and may be missing (undefined) during planning phases.
 The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route response.
 
 <h4 class="pdoc-member-header" id="RouteResponse-responseModels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L72">property <b>responseModels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L72">property <b>responseModels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>responseModels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1765,7 +1765,7 @@ The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/d
 The response models for the route response.
 
 <h4 class="pdoc-member-header" id="RouteResponse-routeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L76">property <b>routeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L76">property <b>routeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>routeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1773,7 +1773,7 @@ The response models for the route response.
 The identifier of the `aws.apigatewayv2.Route`.
 
 <h4 class="pdoc-member-header" id="RouteResponse-routeResponseKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L80">property <b>routeResponseKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L80">property <b>routeResponseKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>routeResponseKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1781,7 +1781,7 @@ The identifier of the `aws.apigatewayv2.Route`.
 The route response key.
 
 <h4 class="pdoc-member-header" id="RouteResponse-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1790,7 +1790,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Stage" data-link-title="Stage">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L30">
         Resource <strong>Stage</strong>
     </a>
 </h3>
@@ -1819,7 +1819,7 @@ const example = new aws.apigatewayv2.Stage("example", {apiId: aws_apigatewayv2_a
 ```
 
 <h4 class="pdoc-member-header" id="Stage-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L118"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L118"> <b>constructor</b></a>
 </h4>
 
 
@@ -1833,7 +1833,7 @@ Create a Stage resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Stage-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -1844,14 +1844,14 @@ Get an existing Stage resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Stage-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Stage-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1862,7 +1862,7 @@ Returns true if the given object is an instance of Stage.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Stage-accessLogSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L62">property <b>accessLogSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L62">property <b>accessLogSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessLogSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#StageAccessLogSettings'>StageAccessLogSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1871,7 +1871,7 @@ Settings for logging access in this stage.
 Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
 
 <h4 class="pdoc-member-header" id="Stage-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L66">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L66">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1879,7 +1879,7 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
 The API identifier.
 
 <h4 class="pdoc-member-header" id="Stage-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L70">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L70">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1887,7 +1887,7 @@ The API identifier.
 The ARN of the stage.
 
 <h4 class="pdoc-member-header" id="Stage-autoDeploy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L74">property <b>autoDeploy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L74">property <b>autoDeploy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoDeploy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1895,7 +1895,7 @@ The ARN of the stage.
 Whether updates to an API automatically trigger a new deployment. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Stage-clientCertificateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L79">property <b>clientCertificateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L79">property <b>clientCertificateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientCertificateId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1904,7 +1904,7 @@ The identifier of a client certificate for the stage. Use the `aws.apigateway.Cl
 Supported only for WebSocket APIs.
 
 <h4 class="pdoc-member-header" id="Stage-defaultRouteSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L83">property <b>defaultRouteSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L83">property <b>defaultRouteSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultRouteSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#StageDefaultRouteSettings'>StageDefaultRouteSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1912,7 +1912,7 @@ Supported only for WebSocket APIs.
 The default route settings for the stage.
 
 <h4 class="pdoc-member-header" id="Stage-deploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L87">property <b>deploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L87">property <b>deploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deploymentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1920,7 +1920,7 @@ The default route settings for the stage.
 The deployment identifier of the stage. Use the [`aws.apigatewayv2.Deployment`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_deployment.html) resource to configure a deployment.
 
 <h4 class="pdoc-member-header" id="Stage-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L91">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L91">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1928,7 +1928,7 @@ The deployment identifier of the stage. Use the [`aws.apigatewayv2.Deployment`](
 The description for the stage. Must be less than or equal to 1024 characters in length.
 
 <h4 class="pdoc-member-header" id="Stage-executionArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L97">property <b>executionArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L97">property <b>executionArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>executionArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1938,7 +1938,7 @@ For WebSocket APIs this attribute can additionally be used in an `aws.iam.Policy
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
 
 <h4 class="pdoc-member-header" id="Stage-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1947,7 +1947,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Stage-invokeUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L102">property <b>invokeUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L102">property <b>invokeUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>invokeUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1956,7 +1956,7 @@ The URL to invoke the API pointing to the stage,
 e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/`
 
 <h4 class="pdoc-member-header" id="Stage-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L106">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L106">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1964,7 +1964,7 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
 The name of the stage. Must be between 1 and 128 characters in length.
 
 <h4 class="pdoc-member-header" id="Stage-routeSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L110">property <b>routeSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L110">property <b>routeSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>routeSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#StageRouteSetting'>StageRouteSetting</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1972,7 +1972,7 @@ The name of the stage. Must be between 1 and 128 characters in length.
 Route settings for the stage.
 
 <h4 class="pdoc-member-header" id="Stage-stageVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L114">property <b>stageVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L114">property <b>stageVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stageVariables: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1980,7 +1980,7 @@ Route settings for the stage.
 A map that defines the stage variables for the stage.
 
 <h4 class="pdoc-member-header" id="Stage-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L118">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L118">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1988,7 +1988,7 @@ A map that defines the stage variables for the stage.
 A map of tags to assign to the stage.
 
 <h4 class="pdoc-member-header" id="Stage-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1997,7 +1997,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="VpcLink" data-link-title="VpcLink">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/vpcLink.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/vpcLink.ts#L36">
         Resource <strong>VpcLink</strong>
     </a>
 </h3>
@@ -2033,7 +2033,7 @@ const example = new aws.apigatewayv2.VpcLink("example", {
 ```
 
 <h4 class="pdoc-member-header" id="VpcLink-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/vpcLink.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/vpcLink.ts#L83"> <b>constructor</b></a>
 </h4>
 
 
@@ -2047,7 +2047,7 @@ Create a VpcLink resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VpcLink-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/vpcLink.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/vpcLink.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -2058,14 +2058,14 @@ Get an existing VpcLink resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VpcLink-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/vpcLink.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/vpcLink.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VpcLink-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/vpcLink.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/vpcLink.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2076,7 +2076,7 @@ Returns true if the given object is an instance of VpcLink.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VpcLink-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/vpcLink.ts#L67">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/vpcLink.ts#L67">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2084,7 +2084,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The VPC Link ARN.
 
 <h4 class="pdoc-member-header" id="VpcLink-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/vpcLink.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/vpcLink.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2093,7 +2093,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VpcLink-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/vpcLink.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/vpcLink.ts#L71">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2101,7 +2101,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the VPC Link. Must be between 1 and 128 characters in length.
 
 <h4 class="pdoc-member-header" id="VpcLink-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/vpcLink.ts#L75">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/vpcLink.ts#L75">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -2109,7 +2109,7 @@ The name of the VPC Link. Must be between 1 and 128 characters in length.
 Security group IDs for the VPC Link.
 
 <h4 class="pdoc-member-header" id="VpcLink-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/vpcLink.ts#L79">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/vpcLink.ts#L79">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -2117,7 +2117,7 @@ Security group IDs for the VPC Link.
 Subnet IDs for the VPC Link.
 
 <h4 class="pdoc-member-header" id="VpcLink-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/vpcLink.ts#L83">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/vpcLink.ts#L83">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2125,7 +2125,7 @@ Subnet IDs for the VPC Link.
 A map of tags to assign to the VPC Link.
 
 <h4 class="pdoc-member-header" id="VpcLink-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/vpcLink.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/vpcLink.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2137,7 +2137,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ApiArgs" data-link-title="ApiArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L289">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L289">
         interface <strong>ApiArgs</strong>
     </a>
 </h3>
@@ -2147,7 +2147,7 @@ deployments.
 The set of arguments for constructing a Api resource.
 
 <h4 class="pdoc-member-header" id="ApiArgs-apiKeySelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L295">property <b>apiKeySelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L295">property <b>apiKeySelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKeySelectionExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2157,7 +2157,7 @@ Valid values: `$context.authorizer.usageIdentifierKey`, `$request.header.x-api-k
 Applicable for WebSocket APIs.
 
 <h4 class="pdoc-member-header" id="ApiArgs-body">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L299">property <b>body</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L299">property <b>body</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>body?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2165,7 +2165,7 @@ Applicable for WebSocket APIs.
 An OpenAPI specification that defines the set of routes and integrations to create as part of the HTTP APIs. Supported only for HTTP APIs.
 
 <h4 class="pdoc-member-header" id="ApiArgs-corsConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L303">property <b>corsConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L303">property <b>corsConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>corsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApiCorsConfiguration'>ApiCorsConfiguration</a>&gt;;</code></pre>
@@ -2173,7 +2173,7 @@ An OpenAPI specification that defines the set of routes and integrations to crea
 The cross-origin resource sharing (CORS) [configuration](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-cors.html). Applicable for HTTP APIs.
 
 <h4 class="pdoc-member-header" id="ApiArgs-credentialsArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L307">property <b>credentialsArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L307">property <b>credentialsArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentialsArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2181,7 +2181,7 @@ The cross-origin resource sharing (CORS) [configuration](https://docs.aws.amazon
 Part of _quick create_. Specifies any credentials required for the integration. Applicable for HTTP APIs.
 
 <h4 class="pdoc-member-header" id="ApiArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L311">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L311">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2189,7 +2189,7 @@ Part of _quick create_. Specifies any credentials required for the integration. 
 The description of the API. Must be less than or equal to 1024 characters in length.
 
 <h4 class="pdoc-member-header" id="ApiArgs-disableExecuteApiEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L317">property <b>disableExecuteApiEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L317">property <b>disableExecuteApiEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableExecuteApiEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2199,7 +2199,7 @@ By default, clients can invoke the API with the default `{api_id}.execute-api.{r
 To require that clients use a custom domain name to invoke the API, disable the default endpoint.
 
 <h4 class="pdoc-member-header" id="ApiArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L321">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L321">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2207,7 +2207,7 @@ To require that clients use a custom domain name to invoke the API, disable the 
 The name of the API. Must be less than or equal to 128 characters in length.
 
 <h4 class="pdoc-member-header" id="ApiArgs-protocolType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L325">property <b>protocolType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L325">property <b>protocolType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocolType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2215,7 +2215,7 @@ The name of the API. Must be less than or equal to 128 characters in length.
 The API protocol. Valid values: `HTTP`, `WEBSOCKET`.
 
 <h4 class="pdoc-member-header" id="ApiArgs-routeKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L329">property <b>routeKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L329">property <b>routeKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2223,7 +2223,7 @@ The API protocol. Valid values: `HTTP`, `WEBSOCKET`.
 Part of _quick create_. Specifies any [route key](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-routes.html). Applicable for HTTP APIs.
 
 <h4 class="pdoc-member-header" id="ApiArgs-routeSelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L334">property <b>routeSelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L334">property <b>routeSelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeSelectionExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2232,7 +2232,7 @@ The [route selection expression](https://docs.aws.amazon.com/apigateway/latest/d
 Defaults to `$request.method $request.path`.
 
 <h4 class="pdoc-member-header" id="ApiArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L338">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L338">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2240,7 +2240,7 @@ Defaults to `$request.method $request.path`.
 A map of tags to assign to the API.
 
 <h4 class="pdoc-member-header" id="ApiArgs-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L344">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L344">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2250,7 +2250,7 @@ For HTTP integrations, specify a fully qualified URL. For Lambda integrations, s
 The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. Applicable for HTTP APIs.
 
 <h4 class="pdoc-member-header" id="ApiArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L348">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L348">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2258,7 +2258,7 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 A version identifier for the API. Must be between 1 and 64 characters in length.
 
 <h3 class="pdoc-module-header" id="ApiMappingArgs" data-link-title="ApiMappingArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/apiMapping.ts#L146">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/apiMapping.ts#L146">
         interface <strong>ApiMappingArgs</strong>
     </a>
 </h3>
@@ -2268,7 +2268,7 @@ A version identifier for the API. Must be between 1 and 64 characters in length.
 The set of arguments for constructing a ApiMapping resource.
 
 <h4 class="pdoc-member-header" id="ApiMappingArgs-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/apiMapping.ts#L150">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/apiMapping.ts#L150">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2276,7 +2276,7 @@ The set of arguments for constructing a ApiMapping resource.
 The API identifier.
 
 <h4 class="pdoc-member-header" id="ApiMappingArgs-apiMappingKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/apiMapping.ts#L154">property <b>apiMappingKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/apiMapping.ts#L154">property <b>apiMappingKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiMappingKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2284,7 +2284,7 @@ The API identifier.
 The [API mapping key](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-mapping-template-reference.html).
 
 <h4 class="pdoc-member-header" id="ApiMappingArgs-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/apiMapping.ts#L158">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/apiMapping.ts#L158">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2292,7 +2292,7 @@ The [API mapping key](https://docs.aws.amazon.com/apigateway/latest/developergui
 The domain name. Use the `aws.apigatewayv2.DomainName` resource to configure a domain name.
 
 <h4 class="pdoc-member-header" id="ApiMappingArgs-stage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/apiMapping.ts#L162">property <b>stage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/apiMapping.ts#L162">property <b>stage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2300,7 +2300,7 @@ The domain name. Use the `aws.apigatewayv2.DomainName` resource to configure a d
 The API stage. Use the `aws.apigatewayv2.Stage` resource to configure an API stage.
 
 <h3 class="pdoc-module-header" id="ApiMappingState" data-link-title="ApiMappingState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/apiMapping.ts#L124">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/apiMapping.ts#L124">
         interface <strong>ApiMappingState</strong>
     </a>
 </h3>
@@ -2310,7 +2310,7 @@ The API stage. Use the `aws.apigatewayv2.Stage` resource to configure an API sta
 Input properties used for looking up and filtering ApiMapping resources.
 
 <h4 class="pdoc-member-header" id="ApiMappingState-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/apiMapping.ts#L128">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/apiMapping.ts#L128">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2318,7 +2318,7 @@ Input properties used for looking up and filtering ApiMapping resources.
 The API identifier.
 
 <h4 class="pdoc-member-header" id="ApiMappingState-apiMappingKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/apiMapping.ts#L132">property <b>apiMappingKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/apiMapping.ts#L132">property <b>apiMappingKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiMappingKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2326,7 +2326,7 @@ The API identifier.
 The [API mapping key](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-mapping-template-reference.html).
 
 <h4 class="pdoc-member-header" id="ApiMappingState-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/apiMapping.ts#L136">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/apiMapping.ts#L136">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2334,7 +2334,7 @@ The [API mapping key](https://docs.aws.amazon.com/apigateway/latest/developergui
 The domain name. Use the `aws.apigatewayv2.DomainName` resource to configure a domain name.
 
 <h4 class="pdoc-member-header" id="ApiMappingState-stage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/apiMapping.ts#L140">property <b>stage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/apiMapping.ts#L140">property <b>stage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2342,7 +2342,7 @@ The domain name. Use the `aws.apigatewayv2.DomainName` resource to configure a d
 The API stage. Use the `aws.apigatewayv2.Stage` resource to configure an API stage.
 
 <h3 class="pdoc-module-header" id="ApiState" data-link-title="ApiState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L210">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L210">
         interface <strong>ApiState</strong>
     </a>
 </h3>
@@ -2352,7 +2352,7 @@ The API stage. Use the `aws.apigatewayv2.Stage` resource to configure an API sta
 Input properties used for looking up and filtering Api resources.
 
 <h4 class="pdoc-member-header" id="ApiState-apiEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L214">property <b>apiEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L214">property <b>apiEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2360,7 +2360,7 @@ Input properties used for looking up and filtering Api resources.
 The URI of the API, of the form `{api-id}.execute-api.{region}.amazonaws.com`.
 
 <h4 class="pdoc-member-header" id="ApiState-apiKeySelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L220">property <b>apiKeySelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L220">property <b>apiKeySelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKeySelectionExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2370,7 +2370,7 @@ Valid values: `$context.authorizer.usageIdentifierKey`, `$request.header.x-api-k
 Applicable for WebSocket APIs.
 
 <h4 class="pdoc-member-header" id="ApiState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L224">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L224">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2378,7 +2378,7 @@ Applicable for WebSocket APIs.
 The ARN of the API.
 
 <h4 class="pdoc-member-header" id="ApiState-body">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L228">property <b>body</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L228">property <b>body</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>body?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2386,7 +2386,7 @@ The ARN of the API.
 An OpenAPI specification that defines the set of routes and integrations to create as part of the HTTP APIs. Supported only for HTTP APIs.
 
 <h4 class="pdoc-member-header" id="ApiState-corsConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L232">property <b>corsConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L232">property <b>corsConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>corsConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApiCorsConfiguration'>ApiCorsConfiguration</a>&gt;;</code></pre>
@@ -2394,7 +2394,7 @@ An OpenAPI specification that defines the set of routes and integrations to crea
 The cross-origin resource sharing (CORS) [configuration](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-cors.html). Applicable for HTTP APIs.
 
 <h4 class="pdoc-member-header" id="ApiState-credentialsArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L236">property <b>credentialsArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L236">property <b>credentialsArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentialsArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2402,7 +2402,7 @@ The cross-origin resource sharing (CORS) [configuration](https://docs.aws.amazon
 Part of _quick create_. Specifies any credentials required for the integration. Applicable for HTTP APIs.
 
 <h4 class="pdoc-member-header" id="ApiState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L240">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L240">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2410,7 +2410,7 @@ Part of _quick create_. Specifies any credentials required for the integration. 
 The description of the API. Must be less than or equal to 1024 characters in length.
 
 <h4 class="pdoc-member-header" id="ApiState-disableExecuteApiEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L246">property <b>disableExecuteApiEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L246">property <b>disableExecuteApiEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableExecuteApiEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2420,7 +2420,7 @@ By default, clients can invoke the API with the default `{api_id}.execute-api.{r
 To require that clients use a custom domain name to invoke the API, disable the default endpoint.
 
 <h4 class="pdoc-member-header" id="ApiState-executionArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L252">property <b>executionArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L252">property <b>executionArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>executionArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2430,7 +2430,7 @@ or in an `aws.iam.Policy` to authorize access to the [`@connections` API](https:
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
 
 <h4 class="pdoc-member-header" id="ApiState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L256">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L256">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2438,7 +2438,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 The name of the API. Must be less than or equal to 128 characters in length.
 
 <h4 class="pdoc-member-header" id="ApiState-protocolType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L260">property <b>protocolType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L260">property <b>protocolType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocolType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2446,7 +2446,7 @@ The name of the API. Must be less than or equal to 128 characters in length.
 The API protocol. Valid values: `HTTP`, `WEBSOCKET`.
 
 <h4 class="pdoc-member-header" id="ApiState-routeKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L264">property <b>routeKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L264">property <b>routeKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2454,7 +2454,7 @@ The API protocol. Valid values: `HTTP`, `WEBSOCKET`.
 Part of _quick create_. Specifies any [route key](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-routes.html). Applicable for HTTP APIs.
 
 <h4 class="pdoc-member-header" id="ApiState-routeSelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L269">property <b>routeSelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L269">property <b>routeSelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeSelectionExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2463,7 +2463,7 @@ The [route selection expression](https://docs.aws.amazon.com/apigateway/latest/d
 Defaults to `$request.method $request.path`.
 
 <h4 class="pdoc-member-header" id="ApiState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L273">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L273">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2471,7 +2471,7 @@ Defaults to `$request.method $request.path`.
 A map of tags to assign to the API.
 
 <h4 class="pdoc-member-header" id="ApiState-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L279">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L279">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2481,7 +2481,7 @@ For HTTP integrations, specify a fully qualified URL. For Lambda integrations, s
 The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. Applicable for HTTP APIs.
 
 <h4 class="pdoc-member-header" id="ApiState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/api.ts#L283">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/api.ts#L283">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2489,7 +2489,7 @@ The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. A
 A version identifier for the API. Must be between 1 and 64 characters in length.
 
 <h3 class="pdoc-module-header" id="AuthorizerArgs" data-link-title="AuthorizerArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L245">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L245">
         interface <strong>AuthorizerArgs</strong>
     </a>
 </h3>
@@ -2499,7 +2499,7 @@ A version identifier for the API. Must be between 1 and 64 characters in length.
 The set of arguments for constructing a Authorizer resource.
 
 <h4 class="pdoc-member-header" id="AuthorizerArgs-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L249">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L249">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2507,7 +2507,7 @@ The set of arguments for constructing a Authorizer resource.
 The API identifier.
 
 <h4 class="pdoc-member-header" id="AuthorizerArgs-authorizerCredentialsArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L254">property <b>authorizerCredentialsArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L254">property <b>authorizerCredentialsArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizerCredentialsArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2516,7 +2516,7 @@ The required credentials as an IAM role for API Gateway to invoke the authorizer
 Supported only for `REQUEST` authorizers.
 
 <h4 class="pdoc-member-header" id="AuthorizerArgs-authorizerPayloadFormatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L259">property <b>authorizerPayloadFormatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L259">property <b>authorizerPayloadFormatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizerPayloadFormatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2525,7 +2525,7 @@ The format of the payload sent to an HTTP API Lambda authorizer. Required for HT
 Valid values: `1.0`, `2.0`.
 
 <h4 class="pdoc-member-header" id="AuthorizerArgs-authorizerResultTtlInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L265">property <b>authorizerResultTtlInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L265">property <b>authorizerResultTtlInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizerResultTtlInSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2535,7 +2535,7 @@ If it is greater than 0, API Gateway caches authorizer responses. The maximum va
 Supported only for HTTP API Lambda authorizers.
 
 <h4 class="pdoc-member-header" id="AuthorizerArgs-authorizerType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L271">property <b>authorizerType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L271">property <b>authorizerType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizerType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2545,7 +2545,7 @@ Specify `REQUEST` for a Lambda function using incoming request parameters.
 For HTTP APIs, specify `JWT` to use JSON Web Tokens.
 
 <h4 class="pdoc-member-header" id="AuthorizerArgs-authorizerUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L277">property <b>authorizerUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L277">property <b>authorizerUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizerUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2555,7 +2555,7 @@ For `REQUEST` authorizers this must be a well-formed Lambda function URI, such a
 Supported only for `REQUEST` authorizers. Must be between 1 and 2048 characters in length.
 
 <h4 class="pdoc-member-header" id="AuthorizerArgs-enableSimpleResponses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L282">property <b>enableSimpleResponses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L282">property <b>enableSimpleResponses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableSimpleResponses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2564,7 +2564,7 @@ Whether a Lambda authorizer returns a response in a simple format. If enabled, t
 Supported only for HTTP APIs.
 
 <h4 class="pdoc-member-header" id="AuthorizerArgs-identitySources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L288">property <b>identitySources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L288">property <b>identitySources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identitySources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2574,7 +2574,7 @@ For `REQUEST` authorizers the value is a list of one or more mapping expressions
 For `JWT` authorizers the single entry specifies where to extract the JSON Web Token (JWT) from inbound requests.
 
 <h4 class="pdoc-member-header" id="AuthorizerArgs-jwtConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L293">property <b>jwtConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L293">property <b>jwtConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jwtConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AuthorizerJwtConfiguration'>AuthorizerJwtConfiguration</a>&gt;;</code></pre>
@@ -2583,7 +2583,7 @@ The configuration of a JWT authorizer. Required for the `JWT` authorizer type.
 Supported only for HTTP APIs.
 
 <h4 class="pdoc-member-header" id="AuthorizerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L297">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L297">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2591,7 +2591,7 @@ Supported only for HTTP APIs.
 The name of the authorizer. Must be between 1 and 128 characters in length.
 
 <h3 class="pdoc-module-header" id="AuthorizerState" data-link-title="AuthorizerState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L187">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L187">
         interface <strong>AuthorizerState</strong>
     </a>
 </h3>
@@ -2601,7 +2601,7 @@ The name of the authorizer. Must be between 1 and 128 characters in length.
 Input properties used for looking up and filtering Authorizer resources.
 
 <h4 class="pdoc-member-header" id="AuthorizerState-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L191">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L191">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2609,7 +2609,7 @@ Input properties used for looking up and filtering Authorizer resources.
 The API identifier.
 
 <h4 class="pdoc-member-header" id="AuthorizerState-authorizerCredentialsArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L196">property <b>authorizerCredentialsArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L196">property <b>authorizerCredentialsArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizerCredentialsArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2618,7 +2618,7 @@ The required credentials as an IAM role for API Gateway to invoke the authorizer
 Supported only for `REQUEST` authorizers.
 
 <h4 class="pdoc-member-header" id="AuthorizerState-authorizerPayloadFormatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L201">property <b>authorizerPayloadFormatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L201">property <b>authorizerPayloadFormatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizerPayloadFormatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2627,7 +2627,7 @@ The format of the payload sent to an HTTP API Lambda authorizer. Required for HT
 Valid values: `1.0`, `2.0`.
 
 <h4 class="pdoc-member-header" id="AuthorizerState-authorizerResultTtlInSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L207">property <b>authorizerResultTtlInSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L207">property <b>authorizerResultTtlInSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizerResultTtlInSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2637,7 +2637,7 @@ If it is greater than 0, API Gateway caches authorizer responses. The maximum va
 Supported only for HTTP API Lambda authorizers.
 
 <h4 class="pdoc-member-header" id="AuthorizerState-authorizerType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L213">property <b>authorizerType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L213">property <b>authorizerType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizerType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2647,7 +2647,7 @@ Specify `REQUEST` for a Lambda function using incoming request parameters.
 For HTTP APIs, specify `JWT` to use JSON Web Tokens.
 
 <h4 class="pdoc-member-header" id="AuthorizerState-authorizerUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L219">property <b>authorizerUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L219">property <b>authorizerUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizerUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2657,7 +2657,7 @@ For `REQUEST` authorizers this must be a well-formed Lambda function URI, such a
 Supported only for `REQUEST` authorizers. Must be between 1 and 2048 characters in length.
 
 <h4 class="pdoc-member-header" id="AuthorizerState-enableSimpleResponses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L224">property <b>enableSimpleResponses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L224">property <b>enableSimpleResponses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableSimpleResponses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2666,7 +2666,7 @@ Whether a Lambda authorizer returns a response in a simple format. If enabled, t
 Supported only for HTTP APIs.
 
 <h4 class="pdoc-member-header" id="AuthorizerState-identitySources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L230">property <b>identitySources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L230">property <b>identitySources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identitySources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2676,7 +2676,7 @@ For `REQUEST` authorizers the value is a list of one or more mapping expressions
 For `JWT` authorizers the single entry specifies where to extract the JSON Web Token (JWT) from inbound requests.
 
 <h4 class="pdoc-member-header" id="AuthorizerState-jwtConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L235">property <b>jwtConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L235">property <b>jwtConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jwtConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AuthorizerJwtConfiguration'>AuthorizerJwtConfiguration</a>&gt;;</code></pre>
@@ -2685,7 +2685,7 @@ The configuration of a JWT authorizer. Required for the `JWT` authorizer type.
 Supported only for HTTP APIs.
 
 <h4 class="pdoc-member-header" id="AuthorizerState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/authorizer.ts#L239">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/authorizer.ts#L239">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2693,7 +2693,7 @@ Supported only for HTTP APIs.
 The name of the authorizer. Must be between 1 and 128 characters in length.
 
 <h3 class="pdoc-module-header" id="DeploymentArgs" data-link-title="DeploymentArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/deployment.ts#L143">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/deployment.ts#L143">
         interface <strong>DeploymentArgs</strong>
     </a>
 </h3>
@@ -2703,7 +2703,7 @@ The name of the authorizer. Must be between 1 and 128 characters in length.
 The set of arguments for constructing a Deployment resource.
 
 <h4 class="pdoc-member-header" id="DeploymentArgs-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/deployment.ts#L147">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/deployment.ts#L147">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2711,7 +2711,7 @@ The set of arguments for constructing a Deployment resource.
 The API identifier.
 
 <h4 class="pdoc-member-header" id="DeploymentArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/deployment.ts#L151">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/deployment.ts#L151">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2719,7 +2719,7 @@ The API identifier.
 The description for the deployment resource. Must be less than or equal to 1024 characters in length.
 
 <h4 class="pdoc-member-header" id="DeploymentArgs-triggers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/deployment.ts#L155">property <b>triggers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/deployment.ts#L155">property <b>triggers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2727,7 +2727,7 @@ The description for the deployment resource. Must be less than or equal to 1024 
 A map of arbitrary keys and values that, when changed, will trigger a redeployment.
 
 <h3 class="pdoc-module-header" id="DeploymentState" data-link-title="DeploymentState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/deployment.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/deployment.ts#L121">
         interface <strong>DeploymentState</strong>
     </a>
 </h3>
@@ -2737,7 +2737,7 @@ A map of arbitrary keys and values that, when changed, will trigger a redeployme
 Input properties used for looking up and filtering Deployment resources.
 
 <h4 class="pdoc-member-header" id="DeploymentState-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/deployment.ts#L125">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/deployment.ts#L125">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2745,7 +2745,7 @@ Input properties used for looking up and filtering Deployment resources.
 The API identifier.
 
 <h4 class="pdoc-member-header" id="DeploymentState-autoDeployed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/deployment.ts#L129">property <b>autoDeployed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/deployment.ts#L129">property <b>autoDeployed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoDeployed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2753,7 +2753,7 @@ The API identifier.
 Whether the deployment was automatically released.
 
 <h4 class="pdoc-member-header" id="DeploymentState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/deployment.ts#L133">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/deployment.ts#L133">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2761,7 +2761,7 @@ Whether the deployment was automatically released.
 The description for the deployment resource. Must be less than or equal to 1024 characters in length.
 
 <h4 class="pdoc-member-header" id="DeploymentState-triggers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/deployment.ts#L137">property <b>triggers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/deployment.ts#L137">property <b>triggers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>triggers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2769,7 +2769,7 @@ The description for the deployment resource. Must be less than or equal to 1024 
 A map of arbitrary keys and values that, when changed, will trigger a redeployment.
 
 <h3 class="pdoc-module-header" id="DomainNameArgs" data-link-title="DomainNameArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L170">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L170">
         interface <strong>DomainNameArgs</strong>
     </a>
 </h3>
@@ -2779,7 +2779,7 @@ A map of arbitrary keys and values that, when changed, will trigger a redeployme
 The set of arguments for constructing a DomainName resource.
 
 <h4 class="pdoc-member-header" id="DomainNameArgs-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L174">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L174">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2787,7 +2787,7 @@ The set of arguments for constructing a DomainName resource.
 The domain name. Must be between 1 and 512 characters in length.
 
 <h4 class="pdoc-member-header" id="DomainNameArgs-domainNameConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L178">property <b>domainNameConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L178">property <b>domainNameConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainNameConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainNameDomainNameConfiguration'>DomainNameDomainNameConfiguration</a>&gt;;</code></pre>
@@ -2795,7 +2795,7 @@ The domain name. Must be between 1 and 512 characters in length.
 The domain name configuration.
 
 <h4 class="pdoc-member-header" id="DomainNameArgs-mutualTlsAuthentication">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L182">property <b>mutualTlsAuthentication</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L182">property <b>mutualTlsAuthentication</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mutualTlsAuthentication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainNameMutualTlsAuthentication'>DomainNameMutualTlsAuthentication</a>&gt;;</code></pre>
@@ -2803,7 +2803,7 @@ The domain name configuration.
 The mutual TLS authentication configuration for the domain name.
 
 <h4 class="pdoc-member-header" id="DomainNameArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L186">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L186">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2811,7 +2811,7 @@ The mutual TLS authentication configuration for the domain name.
 A map of tags to assign to the domain name.
 
 <h3 class="pdoc-module-header" id="DomainNameState" data-link-title="DomainNameState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L140">
         interface <strong>DomainNameState</strong>
     </a>
 </h3>
@@ -2821,7 +2821,7 @@ A map of tags to assign to the domain name.
 Input properties used for looking up and filtering DomainName resources.
 
 <h4 class="pdoc-member-header" id="DomainNameState-apiMappingSelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L144">property <b>apiMappingSelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L144">property <b>apiMappingSelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiMappingSelectionExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2829,7 +2829,7 @@ Input properties used for looking up and filtering DomainName resources.
 The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
 
 <h4 class="pdoc-member-header" id="DomainNameState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L148">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L148">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2837,7 +2837,7 @@ The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/la
 The ARN of the domain name.
 
 <h4 class="pdoc-member-header" id="DomainNameState-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L152">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L152">property <b>domainName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2845,7 +2845,7 @@ The ARN of the domain name.
 The domain name. Must be between 1 and 512 characters in length.
 
 <h4 class="pdoc-member-header" id="DomainNameState-domainNameConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L156">property <b>domainNameConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L156">property <b>domainNameConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainNameConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainNameDomainNameConfiguration'>DomainNameDomainNameConfiguration</a>&gt;;</code></pre>
@@ -2853,7 +2853,7 @@ The domain name. Must be between 1 and 512 characters in length.
 The domain name configuration.
 
 <h4 class="pdoc-member-header" id="DomainNameState-mutualTlsAuthentication">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L160">property <b>mutualTlsAuthentication</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L160">property <b>mutualTlsAuthentication</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mutualTlsAuthentication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainNameMutualTlsAuthentication'>DomainNameMutualTlsAuthentication</a>&gt;;</code></pre>
@@ -2861,7 +2861,7 @@ The domain name configuration.
 The mutual TLS authentication configuration for the domain name.
 
 <h4 class="pdoc-member-header" id="DomainNameState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/domainName.ts#L164">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/domainName.ts#L164">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2869,7 +2869,7 @@ The mutual TLS authentication configuration for the domain name.
 A map of tags to assign to the domain name.
 
 <h3 class="pdoc-module-header" id="IntegrationArgs" data-link-title="IntegrationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L326">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L326">
         interface <strong>IntegrationArgs</strong>
     </a>
 </h3>
@@ -2879,7 +2879,7 @@ A map of tags to assign to the domain name.
 The set of arguments for constructing a Integration resource.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L330">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L330">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2887,7 +2887,7 @@ The set of arguments for constructing a Integration resource.
 The API identifier.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-connectionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L334">property <b>connectionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L334">property <b>connectionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2895,7 +2895,7 @@ The API identifier.
 The ID of the VPC link for a private integration. Supported only for HTTP APIs. Must be between 1 and 1024 characters in length.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-connectionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L338">property <b>connectionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L338">property <b>connectionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2903,7 +2903,7 @@ The ID of the VPC link for a private integration. Supported only for HTTP APIs. 
 The type of the network connection to the integration endpoint. Valid values: `INTERNET`, `VPC_LINK`. Default is `INTERNET`.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-contentHandlingStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L342">property <b>contentHandlingStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L342">property <b>contentHandlingStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentHandlingStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2911,7 +2911,7 @@ The type of the network connection to the integration endpoint. Valid values: `I
 How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`. Supported only for WebSocket APIs.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-credentialsArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L346">property <b>credentialsArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L346">property <b>credentialsArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentialsArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2919,7 +2919,7 @@ How to handle response payload content type conversions. Valid values: `CONVERT_
 The credentials required for the integration, if any.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L350">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L350">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2927,7 +2927,7 @@ The credentials required for the integration, if any.
 The description of the integration.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-integrationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L354">property <b>integrationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L354">property <b>integrationMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2935,7 +2935,7 @@ The description of the integration.
 The integration's HTTP method. Must be specified if `integrationType` is not `MOCK`.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-integrationSubtype">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L358">property <b>integrationSubtype</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L358">property <b>integrationSubtype</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationSubtype?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2943,7 +2943,7 @@ The integration's HTTP method. Must be specified if `integrationType` is not `MO
 Specifies the AWS service action to invoke. Supported only for HTTP APIs when `integrationType` is `AWS_PROXY`. See the [AWS service integration reference](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services-reference.html) documentation for supported values. Must be between 1 and 128 characters in length.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-integrationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L363">property <b>integrationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L363">property <b>integrationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2952,7 +2952,7 @@ The integration type of an integration.
 Valid values: `AWS`, `AWS_PROXY`, `HTTP`, `HTTP_PROXY`, `MOCK`.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-integrationUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L368">property <b>integrationUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L368">property <b>integrationUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2961,7 +2961,7 @@ The URI of the Lambda function for a Lambda proxy integration, when `integration
 For an `HTTP` integration, specify a fully-qualified URL. For an HTTP API private integration, specify the ARN of an Application Load Balancer listener, Network Load Balancer listener, or AWS Cloud Map service.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-passthroughBehavior">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L373">property <b>passthroughBehavior</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L373">property <b>passthroughBehavior</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passthroughBehavior?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2970,7 +2970,7 @@ The pass-through behavior for incoming requests based on the Content-Type header
 Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO_MATCH`. Supported only for WebSocket APIs.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-payloadFormatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L377">property <b>payloadFormatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L377">property <b>payloadFormatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payloadFormatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2978,7 +2978,7 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
 The [format of the payload](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html#http-api-develop-integrations-lambda.proxy-format) sent to an integration. Valid values: `1.0`, `2.0`. Default is `1.0`.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-requestParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L382">property <b>requestParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L382">property <b>requestParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2987,7 +2987,7 @@ A key-value map specifying request parameters that are passed from the method re
 Supported only for WebSocket APIs.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-requestTemplates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L386">property <b>requestTemplates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L386">property <b>requestTemplates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestTemplates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2995,7 +2995,7 @@ Supported only for WebSocket APIs.
 A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client. Supported only for WebSocket APIs.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-templateSelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L390">property <b>templateSelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L390">property <b>templateSelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateSelectionExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3003,12 +3003,12 @@ A map of Velocity templates that are applied on the request payload based on the
 The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-timeoutMilliseconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L391">property <b>timeoutMilliseconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L391">property <b>timeoutMilliseconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeoutMilliseconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IntegrationArgs-tlsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L395">property <b>tlsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L395">property <b>tlsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntegrationTlsConfig'>IntegrationTlsConfig</a>&gt;;</code></pre>
@@ -3016,7 +3016,7 @@ The [template selection expression](https://docs.aws.amazon.com/apigateway/lates
 The TLS configuration for a private integration. Supported only for HTTP APIs.
 
 <h3 class="pdoc-module-header" id="IntegrationResponseArgs" data-link-title="IntegrationResponseArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L166">
         interface <strong>IntegrationResponseArgs</strong>
     </a>
 </h3>
@@ -3026,7 +3026,7 @@ The TLS configuration for a private integration. Supported only for HTTP APIs.
 The set of arguments for constructing a IntegrationResponse resource.
 
 <h4 class="pdoc-member-header" id="IntegrationResponseArgs-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L170">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L170">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3034,7 +3034,7 @@ The set of arguments for constructing a IntegrationResponse resource.
 The API identifier.
 
 <h4 class="pdoc-member-header" id="IntegrationResponseArgs-contentHandlingStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L174">property <b>contentHandlingStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L174">property <b>contentHandlingStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentHandlingStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3042,7 +3042,7 @@ The API identifier.
 How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`.
 
 <h4 class="pdoc-member-header" id="IntegrationResponseArgs-integrationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L178">property <b>integrationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L178">property <b>integrationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3050,7 +3050,7 @@ How to handle response payload content type conversions. Valid values: `CONVERT_
 The identifier of the `aws.apigatewayv2.Integration`.
 
 <h4 class="pdoc-member-header" id="IntegrationResponseArgs-integrationResponseKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L182">property <b>integrationResponseKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L182">property <b>integrationResponseKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationResponseKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3058,7 +3058,7 @@ The identifier of the `aws.apigatewayv2.Integration`.
 The integration response key.
 
 <h4 class="pdoc-member-header" id="IntegrationResponseArgs-responseTemplates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L186">property <b>responseTemplates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L186">property <b>responseTemplates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseTemplates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3066,7 +3066,7 @@ The integration response key.
 A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client.
 
 <h4 class="pdoc-member-header" id="IntegrationResponseArgs-templateSelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L190">property <b>templateSelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L190">property <b>templateSelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateSelectionExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3074,7 +3074,7 @@ A map of Velocity templates that are applied on the request payload based on the
 The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration response.
 
 <h3 class="pdoc-module-header" id="IntegrationResponseState" data-link-title="IntegrationResponseState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L136">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L136">
         interface <strong>IntegrationResponseState</strong>
     </a>
 </h3>
@@ -3084,7 +3084,7 @@ The [template selection expression](https://docs.aws.amazon.com/apigateway/lates
 Input properties used for looking up and filtering IntegrationResponse resources.
 
 <h4 class="pdoc-member-header" id="IntegrationResponseState-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L140">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L140">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3092,7 +3092,7 @@ Input properties used for looking up and filtering IntegrationResponse resources
 The API identifier.
 
 <h4 class="pdoc-member-header" id="IntegrationResponseState-contentHandlingStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L144">property <b>contentHandlingStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L144">property <b>contentHandlingStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentHandlingStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3100,7 +3100,7 @@ The API identifier.
 How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`.
 
 <h4 class="pdoc-member-header" id="IntegrationResponseState-integrationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L148">property <b>integrationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L148">property <b>integrationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3108,7 +3108,7 @@ How to handle response payload content type conversions. Valid values: `CONVERT_
 The identifier of the `aws.apigatewayv2.Integration`.
 
 <h4 class="pdoc-member-header" id="IntegrationResponseState-integrationResponseKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L152">property <b>integrationResponseKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L152">property <b>integrationResponseKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationResponseKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3116,7 +3116,7 @@ The identifier of the `aws.apigatewayv2.Integration`.
 The integration response key.
 
 <h4 class="pdoc-member-header" id="IntegrationResponseState-responseTemplates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L156">property <b>responseTemplates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L156">property <b>responseTemplates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseTemplates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3124,7 +3124,7 @@ The integration response key.
 A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client.
 
 <h4 class="pdoc-member-header" id="IntegrationResponseState-templateSelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integrationResponse.ts#L160">property <b>templateSelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integrationResponse.ts#L160">property <b>templateSelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateSelectionExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3132,7 +3132,7 @@ A map of Velocity templates that are applied on the request payload based on the
 The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration response.
 
 <h3 class="pdoc-module-header" id="IntegrationState" data-link-title="IntegrationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L247">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L247">
         interface <strong>IntegrationState</strong>
     </a>
 </h3>
@@ -3142,7 +3142,7 @@ The [template selection expression](https://docs.aws.amazon.com/apigateway/lates
 Input properties used for looking up and filtering Integration resources.
 
 <h4 class="pdoc-member-header" id="IntegrationState-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L251">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L251">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3150,7 +3150,7 @@ Input properties used for looking up and filtering Integration resources.
 The API identifier.
 
 <h4 class="pdoc-member-header" id="IntegrationState-connectionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L255">property <b>connectionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L255">property <b>connectionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3158,7 +3158,7 @@ The API identifier.
 The ID of the VPC link for a private integration. Supported only for HTTP APIs. Must be between 1 and 1024 characters in length.
 
 <h4 class="pdoc-member-header" id="IntegrationState-connectionType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L259">property <b>connectionType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L259">property <b>connectionType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3166,7 +3166,7 @@ The ID of the VPC link for a private integration. Supported only for HTTP APIs. 
 The type of the network connection to the integration endpoint. Valid values: `INTERNET`, `VPC_LINK`. Default is `INTERNET`.
 
 <h4 class="pdoc-member-header" id="IntegrationState-contentHandlingStrategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L263">property <b>contentHandlingStrategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L263">property <b>contentHandlingStrategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentHandlingStrategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3174,7 +3174,7 @@ The type of the network connection to the integration endpoint. Valid values: `I
 How to handle response payload content type conversions. Valid values: `CONVERT_TO_BINARY`, `CONVERT_TO_TEXT`. Supported only for WebSocket APIs.
 
 <h4 class="pdoc-member-header" id="IntegrationState-credentialsArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L267">property <b>credentialsArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L267">property <b>credentialsArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentialsArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3182,7 +3182,7 @@ How to handle response payload content type conversions. Valid values: `CONVERT_
 The credentials required for the integration, if any.
 
 <h4 class="pdoc-member-header" id="IntegrationState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L271">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L271">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3190,7 +3190,7 @@ The credentials required for the integration, if any.
 The description of the integration.
 
 <h4 class="pdoc-member-header" id="IntegrationState-integrationMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L275">property <b>integrationMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L275">property <b>integrationMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3198,7 +3198,7 @@ The description of the integration.
 The integration's HTTP method. Must be specified if `integrationType` is not `MOCK`.
 
 <h4 class="pdoc-member-header" id="IntegrationState-integrationResponseSelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L279">property <b>integrationResponseSelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L279">property <b>integrationResponseSelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationResponseSelectionExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3206,7 +3206,7 @@ The integration's HTTP method. Must be specified if `integrationType` is not `MO
 The [integration response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-integration-response-selection-expressions) for the integration.
 
 <h4 class="pdoc-member-header" id="IntegrationState-integrationSubtype">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L283">property <b>integrationSubtype</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L283">property <b>integrationSubtype</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationSubtype?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3214,7 +3214,7 @@ The [integration response selection expression](https://docs.aws.amazon.com/apig
 Specifies the AWS service action to invoke. Supported only for HTTP APIs when `integrationType` is `AWS_PROXY`. See the [AWS service integration reference](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-aws-services-reference.html) documentation for supported values. Must be between 1 and 128 characters in length.
 
 <h4 class="pdoc-member-header" id="IntegrationState-integrationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L288">property <b>integrationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L288">property <b>integrationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3223,7 +3223,7 @@ The integration type of an integration.
 Valid values: `AWS`, `AWS_PROXY`, `HTTP`, `HTTP_PROXY`, `MOCK`.
 
 <h4 class="pdoc-member-header" id="IntegrationState-integrationUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L293">property <b>integrationUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L293">property <b>integrationUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3232,7 +3232,7 @@ The URI of the Lambda function for a Lambda proxy integration, when `integration
 For an `HTTP` integration, specify a fully-qualified URL. For an HTTP API private integration, specify the ARN of an Application Load Balancer listener, Network Load Balancer listener, or AWS Cloud Map service.
 
 <h4 class="pdoc-member-header" id="IntegrationState-passthroughBehavior">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L298">property <b>passthroughBehavior</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L298">property <b>passthroughBehavior</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passthroughBehavior?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3241,7 +3241,7 @@ The pass-through behavior for incoming requests based on the Content-Type header
 Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO_MATCH`. Supported only for WebSocket APIs.
 
 <h4 class="pdoc-member-header" id="IntegrationState-payloadFormatVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L302">property <b>payloadFormatVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L302">property <b>payloadFormatVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>payloadFormatVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3249,7 +3249,7 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
 The [format of the payload](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html#http-api-develop-integrations-lambda.proxy-format) sent to an integration. Valid values: `1.0`, `2.0`. Default is `1.0`.
 
 <h4 class="pdoc-member-header" id="IntegrationState-requestParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L307">property <b>requestParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L307">property <b>requestParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3258,7 +3258,7 @@ A key-value map specifying request parameters that are passed from the method re
 Supported only for WebSocket APIs.
 
 <h4 class="pdoc-member-header" id="IntegrationState-requestTemplates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L311">property <b>requestTemplates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L311">property <b>requestTemplates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestTemplates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3266,7 +3266,7 @@ Supported only for WebSocket APIs.
 A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client. Supported only for WebSocket APIs.
 
 <h4 class="pdoc-member-header" id="IntegrationState-templateSelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L315">property <b>templateSelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L315">property <b>templateSelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateSelectionExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3274,12 +3274,12 @@ A map of Velocity templates that are applied on the request payload based on the
 The [template selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions) for the integration.
 
 <h4 class="pdoc-member-header" id="IntegrationState-timeoutMilliseconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L316">property <b>timeoutMilliseconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L316">property <b>timeoutMilliseconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeoutMilliseconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="IntegrationState-tlsConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/integration.ts#L320">property <b>tlsConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/integration.ts#L320">property <b>tlsConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tlsConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#IntegrationTlsConfig'>IntegrationTlsConfig</a>&gt;;</code></pre>
@@ -3287,7 +3287,7 @@ The [template selection expression](https://docs.aws.amazon.com/apigateway/lates
 The TLS configuration for a private integration. Supported only for HTTP APIs.
 
 <h3 class="pdoc-module-header" id="ModelArgs" data-link-title="ModelArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L163">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L163">
         interface <strong>ModelArgs</strong>
     </a>
 </h3>
@@ -3297,7 +3297,7 @@ The TLS configuration for a private integration. Supported only for HTTP APIs.
 The set of arguments for constructing a Model resource.
 
 <h4 class="pdoc-member-header" id="ModelArgs-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L167">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L167">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3305,7 +3305,7 @@ The set of arguments for constructing a Model resource.
 The API identifier.
 
 <h4 class="pdoc-member-header" id="ModelArgs-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L171">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L171">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3313,7 +3313,7 @@ The API identifier.
 The content-type for the model, for example, `application/json`. Must be between 1 and 256 characters in length.
 
 <h4 class="pdoc-member-header" id="ModelArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L175">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L175">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3321,7 +3321,7 @@ The content-type for the model, for example, `application/json`. Must be between
 The description of the model. Must be between 1 and 128 characters in length.
 
 <h4 class="pdoc-member-header" id="ModelArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L179">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L179">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3329,7 +3329,7 @@ The description of the model. Must be between 1 and 128 characters in length.
 The name of the model. Must be alphanumeric. Must be between 1 and 128 characters in length.
 
 <h4 class="pdoc-member-header" id="ModelArgs-schema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L183">property <b>schema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L183">property <b>schema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3337,7 +3337,7 @@ The name of the model. Must be alphanumeric. Must be between 1 and 128 character
 The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model. Must be less than or equal to 32768 characters in length.
 
 <h3 class="pdoc-module-header" id="ModelState" data-link-title="ModelState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L137">
         interface <strong>ModelState</strong>
     </a>
 </h3>
@@ -3347,7 +3347,7 @@ The schema for the model. This should be a [JSON schema draft 4](https://tools.i
 Input properties used for looking up and filtering Model resources.
 
 <h4 class="pdoc-member-header" id="ModelState-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L141">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L141">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3355,7 +3355,7 @@ Input properties used for looking up and filtering Model resources.
 The API identifier.
 
 <h4 class="pdoc-member-header" id="ModelState-contentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L145">property <b>contentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L145">property <b>contentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>contentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3363,7 +3363,7 @@ The API identifier.
 The content-type for the model, for example, `application/json`. Must be between 1 and 256 characters in length.
 
 <h4 class="pdoc-member-header" id="ModelState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L149">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L149">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3371,7 +3371,7 @@ The content-type for the model, for example, `application/json`. Must be between
 The description of the model. Must be between 1 and 128 characters in length.
 
 <h4 class="pdoc-member-header" id="ModelState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L153">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L153">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3379,7 +3379,7 @@ The description of the model. Must be between 1 and 128 characters in length.
 The name of the model. Must be alphanumeric. Must be between 1 and 128 characters in length.
 
 <h4 class="pdoc-member-header" id="ModelState-schema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/model.ts#L157">property <b>schema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/model.ts#L157">property <b>schema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3387,7 +3387,7 @@ The name of the model. Must be alphanumeric. Must be between 1 and 128 character
 The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model. Must be less than or equal to 32768 characters in length.
 
 <h3 class="pdoc-module-header" id="RouteArgs" data-link-title="RouteArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L218">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L218">
         interface <strong>RouteArgs</strong>
     </a>
 </h3>
@@ -3397,7 +3397,7 @@ The schema for the model. This should be a [JSON schema draft 4](https://tools.i
 The set of arguments for constructing a Route resource.
 
 <h4 class="pdoc-member-header" id="RouteArgs-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L222">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L222">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3405,7 +3405,7 @@ The set of arguments for constructing a Route resource.
 The API identifier.
 
 <h4 class="pdoc-member-header" id="RouteArgs-apiKeyRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L226">property <b>apiKeyRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L226">property <b>apiKeyRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKeyRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3413,7 +3413,7 @@ The API identifier.
 Boolean whether an API key is required for the route. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="RouteArgs-authorizationScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L230">property <b>authorizationScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L230">property <b>authorizationScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizationScopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3421,7 +3421,7 @@ Boolean whether an API key is required for the route. Defaults to `false`.
 The authorization scopes supported by this route. The scopes are used with a JWT authorizer to authorize the method invocation.
 
 <h4 class="pdoc-member-header" id="RouteArgs-authorizationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L237">property <b>authorizationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L237">property <b>authorizationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3432,7 +3432,7 @@ For HTTP APIs, valid values are `NONE` for open access, or `JWT` for using JSON 
 Defaults to `NONE`.
 
 <h4 class="pdoc-member-header" id="RouteArgs-authorizerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L241">property <b>authorizerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L241">property <b>authorizerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3440,7 +3440,7 @@ Defaults to `NONE`.
 The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route, if the authorizationType is `CUSTOM`.
 
 <h4 class="pdoc-member-header" id="RouteArgs-modelSelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L245">property <b>modelSelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L245">property <b>modelSelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>modelSelectionExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3448,7 +3448,7 @@ The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated wi
 The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route.
 
 <h4 class="pdoc-member-header" id="RouteArgs-operationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L249">property <b>operationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L249">property <b>operationName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operationName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3456,7 +3456,7 @@ The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/d
 The operation name for the route. Must be between 1 and 64 characters in length.
 
 <h4 class="pdoc-member-header" id="RouteArgs-requestModels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L253">property <b>requestModels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L253">property <b>requestModels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestModels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3464,7 +3464,7 @@ The operation name for the route. Must be between 1 and 64 characters in length.
 The request models for the route.
 
 <h4 class="pdoc-member-header" id="RouteArgs-routeKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L257">property <b>routeKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L257">property <b>routeKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3472,7 +3472,7 @@ The request models for the route.
 The route key for the route. For HTTP APIs, the route key can be either `$default`, or a combination of an HTTP method and resource path, for example, `GET /pets`.
 
 <h4 class="pdoc-member-header" id="RouteArgs-routeResponseSelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L261">property <b>routeResponseSelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L261">property <b>routeResponseSelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeResponseSelectionExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3480,7 +3480,7 @@ The route key for the route. For HTTP APIs, the route key can be either `$defaul
 The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route.
 
 <h4 class="pdoc-member-header" id="RouteArgs-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L265">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L265">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3488,7 +3488,7 @@ The [route response selection expression](https://docs.aws.amazon.com/apigateway
 The target for the route. Must be between 1 and 128 characters in length.
 
 <h3 class="pdoc-module-header" id="RouteResponseArgs" data-link-title="RouteResponseArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L156">
         interface <strong>RouteResponseArgs</strong>
     </a>
 </h3>
@@ -3498,7 +3498,7 @@ The target for the route. Must be between 1 and 128 characters in length.
 The set of arguments for constructing a RouteResponse resource.
 
 <h4 class="pdoc-member-header" id="RouteResponseArgs-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L160">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L160">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3506,7 +3506,7 @@ The set of arguments for constructing a RouteResponse resource.
 The API identifier.
 
 <h4 class="pdoc-member-header" id="RouteResponseArgs-modelSelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L164">property <b>modelSelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L164">property <b>modelSelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>modelSelectionExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3514,7 +3514,7 @@ The API identifier.
 The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route response.
 
 <h4 class="pdoc-member-header" id="RouteResponseArgs-responseModels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L168">property <b>responseModels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L168">property <b>responseModels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseModels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3522,7 +3522,7 @@ The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/d
 The response models for the route response.
 
 <h4 class="pdoc-member-header" id="RouteResponseArgs-routeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L172">property <b>routeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L172">property <b>routeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3530,7 +3530,7 @@ The response models for the route response.
 The identifier of the `aws.apigatewayv2.Route`.
 
 <h4 class="pdoc-member-header" id="RouteResponseArgs-routeResponseKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L176">property <b>routeResponseKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L176">property <b>routeResponseKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeResponseKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3538,7 +3538,7 @@ The identifier of the `aws.apigatewayv2.Route`.
 The route response key.
 
 <h3 class="pdoc-module-header" id="RouteResponseState" data-link-title="RouteResponseState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L130">
         interface <strong>RouteResponseState</strong>
     </a>
 </h3>
@@ -3548,7 +3548,7 @@ The route response key.
 Input properties used for looking up and filtering RouteResponse resources.
 
 <h4 class="pdoc-member-header" id="RouteResponseState-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L134">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L134">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3556,7 +3556,7 @@ Input properties used for looking up and filtering RouteResponse resources.
 The API identifier.
 
 <h4 class="pdoc-member-header" id="RouteResponseState-modelSelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L138">property <b>modelSelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L138">property <b>modelSelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>modelSelectionExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3564,7 +3564,7 @@ The API identifier.
 The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route response.
 
 <h4 class="pdoc-member-header" id="RouteResponseState-responseModels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L142">property <b>responseModels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L142">property <b>responseModels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>responseModels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3572,7 +3572,7 @@ The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/d
 The response models for the route response.
 
 <h4 class="pdoc-member-header" id="RouteResponseState-routeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L146">property <b>routeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L146">property <b>routeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3580,7 +3580,7 @@ The response models for the route response.
 The identifier of the `aws.apigatewayv2.Route`.
 
 <h4 class="pdoc-member-header" id="RouteResponseState-routeResponseKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/routeResponse.ts#L150">property <b>routeResponseKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/routeResponse.ts#L150">property <b>routeResponseKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeResponseKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3588,7 +3588,7 @@ The identifier of the `aws.apigatewayv2.Route`.
 The route response key.
 
 <h3 class="pdoc-module-header" id="RouteState" data-link-title="RouteState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L165">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L165">
         interface <strong>RouteState</strong>
     </a>
 </h3>
@@ -3598,7 +3598,7 @@ The route response key.
 Input properties used for looking up and filtering Route resources.
 
 <h4 class="pdoc-member-header" id="RouteState-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L169">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L169">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3606,7 +3606,7 @@ Input properties used for looking up and filtering Route resources.
 The API identifier.
 
 <h4 class="pdoc-member-header" id="RouteState-apiKeyRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L173">property <b>apiKeyRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L173">property <b>apiKeyRequired</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKeyRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3614,7 +3614,7 @@ The API identifier.
 Boolean whether an API key is required for the route. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="RouteState-authorizationScopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L177">property <b>authorizationScopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L177">property <b>authorizationScopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizationScopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3622,7 +3622,7 @@ Boolean whether an API key is required for the route. Defaults to `false`.
 The authorization scopes supported by this route. The scopes are used with a JWT authorizer to authorize the method invocation.
 
 <h4 class="pdoc-member-header" id="RouteState-authorizationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L184">property <b>authorizationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L184">property <b>authorizationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3633,7 +3633,7 @@ For HTTP APIs, valid values are `NONE` for open access, or `JWT` for using JSON 
 Defaults to `NONE`.
 
 <h4 class="pdoc-member-header" id="RouteState-authorizerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L188">property <b>authorizerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L188">property <b>authorizerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3641,7 +3641,7 @@ Defaults to `NONE`.
 The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated with this route, if the authorizationType is `CUSTOM`.
 
 <h4 class="pdoc-member-header" id="RouteState-modelSelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L192">property <b>modelSelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L192">property <b>modelSelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>modelSelectionExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3649,7 +3649,7 @@ The identifier of the `aws.apigatewayv2.Authorizer` resource to be associated wi
 The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route.
 
 <h4 class="pdoc-member-header" id="RouteState-operationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L196">property <b>operationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L196">property <b>operationName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>operationName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3657,7 +3657,7 @@ The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/d
 The operation name for the route. Must be between 1 and 64 characters in length.
 
 <h4 class="pdoc-member-header" id="RouteState-requestModels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L200">property <b>requestModels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L200">property <b>requestModels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestModels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3665,7 +3665,7 @@ The operation name for the route. Must be between 1 and 64 characters in length.
 The request models for the route.
 
 <h4 class="pdoc-member-header" id="RouteState-routeKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L204">property <b>routeKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L204">property <b>routeKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3673,7 +3673,7 @@ The request models for the route.
 The route key for the route. For HTTP APIs, the route key can be either `$default`, or a combination of an HTTP method and resource path, for example, `GET /pets`.
 
 <h4 class="pdoc-member-header" id="RouteState-routeResponseSelectionExpression">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L208">property <b>routeResponseSelectionExpression</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L208">property <b>routeResponseSelectionExpression</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeResponseSelectionExpression?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3681,7 +3681,7 @@ The route key for the route. For HTTP APIs, the route key can be either `$defaul
 The [route response selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions) for the route.
 
 <h4 class="pdoc-member-header" id="RouteState-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/route.ts#L212">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/route.ts#L212">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3689,7 +3689,7 @@ The [route response selection expression](https://docs.aws.amazon.com/apigateway
 The target for the route. Must be between 1 and 128 characters in length.
 
 <h3 class="pdoc-module-header" id="StageArgs" data-link-title="StageArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L247">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L247">
         interface <strong>StageArgs</strong>
     </a>
 </h3>
@@ -3699,7 +3699,7 @@ The target for the route. Must be between 1 and 128 characters in length.
 The set of arguments for constructing a Stage resource.
 
 <h4 class="pdoc-member-header" id="StageArgs-accessLogSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L252">property <b>accessLogSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L252">property <b>accessLogSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessLogSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#StageAccessLogSettings'>StageAccessLogSettings</a>&gt;;</code></pre>
@@ -3708,7 +3708,7 @@ Settings for logging access in this stage.
 Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
 
 <h4 class="pdoc-member-header" id="StageArgs-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L256">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L256">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3716,7 +3716,7 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
 The API identifier.
 
 <h4 class="pdoc-member-header" id="StageArgs-autoDeploy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L260">property <b>autoDeploy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L260">property <b>autoDeploy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoDeploy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3724,7 +3724,7 @@ The API identifier.
 Whether updates to an API automatically trigger a new deployment. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="StageArgs-clientCertificateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L265">property <b>clientCertificateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L265">property <b>clientCertificateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientCertificateId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3733,7 +3733,7 @@ The identifier of a client certificate for the stage. Use the `aws.apigateway.Cl
 Supported only for WebSocket APIs.
 
 <h4 class="pdoc-member-header" id="StageArgs-defaultRouteSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L269">property <b>defaultRouteSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L269">property <b>defaultRouteSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultRouteSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#StageDefaultRouteSettings'>StageDefaultRouteSettings</a>&gt;;</code></pre>
@@ -3741,7 +3741,7 @@ Supported only for WebSocket APIs.
 The default route settings for the stage.
 
 <h4 class="pdoc-member-header" id="StageArgs-deploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L273">property <b>deploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L273">property <b>deploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3749,7 +3749,7 @@ The default route settings for the stage.
 The deployment identifier of the stage. Use the [`aws.apigatewayv2.Deployment`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_deployment.html) resource to configure a deployment.
 
 <h4 class="pdoc-member-header" id="StageArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L277">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L277">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3757,7 +3757,7 @@ The deployment identifier of the stage. Use the [`aws.apigatewayv2.Deployment`](
 The description for the stage. Must be less than or equal to 1024 characters in length.
 
 <h4 class="pdoc-member-header" id="StageArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L281">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L281">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3765,7 +3765,7 @@ The description for the stage. Must be less than or equal to 1024 characters in 
 The name of the stage. Must be between 1 and 128 characters in length.
 
 <h4 class="pdoc-member-header" id="StageArgs-routeSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L285">property <b>routeSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L285">property <b>routeSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#StageRouteSetting'>StageRouteSetting</a>&gt;[]&gt;;</code></pre>
@@ -3773,7 +3773,7 @@ The name of the stage. Must be between 1 and 128 characters in length.
 Route settings for the stage.
 
 <h4 class="pdoc-member-header" id="StageArgs-stageVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L289">property <b>stageVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L289">property <b>stageVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stageVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3781,7 +3781,7 @@ Route settings for the stage.
 A map that defines the stage variables for the stage.
 
 <h4 class="pdoc-member-header" id="StageArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L293">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L293">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3789,7 +3789,7 @@ A map that defines the stage variables for the stage.
 A map of tags to assign to the stage.
 
 <h3 class="pdoc-module-header" id="StageState" data-link-title="StageState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L180">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L180">
         interface <strong>StageState</strong>
     </a>
 </h3>
@@ -3799,7 +3799,7 @@ A map of tags to assign to the stage.
 Input properties used for looking up and filtering Stage resources.
 
 <h4 class="pdoc-member-header" id="StageState-accessLogSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L185">property <b>accessLogSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L185">property <b>accessLogSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessLogSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#StageAccessLogSettings'>StageAccessLogSettings</a>&gt;;</code></pre>
@@ -3808,7 +3808,7 @@ Settings for logging access in this stage.
 Use the `aws.apigateway.Account` resource to configure [permissions for CloudWatch Logging](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions).
 
 <h4 class="pdoc-member-header" id="StageState-apiId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L189">property <b>apiId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L189">property <b>apiId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3816,7 +3816,7 @@ Use the `aws.apigateway.Account` resource to configure [permissions for CloudWat
 The API identifier.
 
 <h4 class="pdoc-member-header" id="StageState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L193">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L193">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3824,7 +3824,7 @@ The API identifier.
 The ARN of the stage.
 
 <h4 class="pdoc-member-header" id="StageState-autoDeploy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L197">property <b>autoDeploy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L197">property <b>autoDeploy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoDeploy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3832,7 +3832,7 @@ The ARN of the stage.
 Whether updates to an API automatically trigger a new deployment. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="StageState-clientCertificateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L202">property <b>clientCertificateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L202">property <b>clientCertificateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientCertificateId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3841,7 +3841,7 @@ The identifier of a client certificate for the stage. Use the `aws.apigateway.Cl
 Supported only for WebSocket APIs.
 
 <h4 class="pdoc-member-header" id="StageState-defaultRouteSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L206">property <b>defaultRouteSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L206">property <b>defaultRouteSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultRouteSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#StageDefaultRouteSettings'>StageDefaultRouteSettings</a>&gt;;</code></pre>
@@ -3849,7 +3849,7 @@ Supported only for WebSocket APIs.
 The default route settings for the stage.
 
 <h4 class="pdoc-member-header" id="StageState-deploymentId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L210">property <b>deploymentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L210">property <b>deploymentId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3857,7 +3857,7 @@ The default route settings for the stage.
 The deployment identifier of the stage. Use the [`aws.apigatewayv2.Deployment`](https://www.terraform.io/docs/providers/aws/r/apigatewayv2_deployment.html) resource to configure a deployment.
 
 <h4 class="pdoc-member-header" id="StageState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L214">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L214">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3865,7 +3865,7 @@ The deployment identifier of the stage. Use the [`aws.apigatewayv2.Deployment`](
 The description for the stage. Must be less than or equal to 1024 characters in length.
 
 <h4 class="pdoc-member-header" id="StageState-executionArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L220">property <b>executionArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L220">property <b>executionArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>executionArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3875,7 +3875,7 @@ For WebSocket APIs this attribute can additionally be used in an `aws.iam.Policy
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
 
 <h4 class="pdoc-member-header" id="StageState-invokeUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L225">property <b>invokeUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L225">property <b>invokeUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>invokeUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3884,7 +3884,7 @@ The URL to invoke the API pointing to the stage,
 e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/`
 
 <h4 class="pdoc-member-header" id="StageState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L229">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L229">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3892,7 +3892,7 @@ e.g. `wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage`, or `h
 The name of the stage. Must be between 1 and 128 characters in length.
 
 <h4 class="pdoc-member-header" id="StageState-routeSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L233">property <b>routeSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L233">property <b>routeSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>routeSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#StageRouteSetting'>StageRouteSetting</a>&gt;[]&gt;;</code></pre>
@@ -3900,7 +3900,7 @@ The name of the stage. Must be between 1 and 128 characters in length.
 Route settings for the stage.
 
 <h4 class="pdoc-member-header" id="StageState-stageVariables">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L237">property <b>stageVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L237">property <b>stageVariables</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stageVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3908,7 +3908,7 @@ Route settings for the stage.
 A map that defines the stage variables for the stage.
 
 <h4 class="pdoc-member-header" id="StageState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/stage.ts#L241">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/stage.ts#L241">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3916,7 +3916,7 @@ A map that defines the stage variables for the stage.
 A map of tags to assign to the stage.
 
 <h3 class="pdoc-module-header" id="VpcLinkArgs" data-link-title="VpcLinkArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/vpcLink.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/vpcLink.ts#L156">
         interface <strong>VpcLinkArgs</strong>
     </a>
 </h3>
@@ -3926,7 +3926,7 @@ A map of tags to assign to the stage.
 The set of arguments for constructing a VpcLink resource.
 
 <h4 class="pdoc-member-header" id="VpcLinkArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/vpcLink.ts#L160">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/vpcLink.ts#L160">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3934,7 +3934,7 @@ The set of arguments for constructing a VpcLink resource.
 The name of the VPC Link. Must be between 1 and 128 characters in length.
 
 <h4 class="pdoc-member-header" id="VpcLinkArgs-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/vpcLink.ts#L164">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/vpcLink.ts#L164">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3942,7 +3942,7 @@ The name of the VPC Link. Must be between 1 and 128 characters in length.
 Security group IDs for the VPC Link.
 
 <h4 class="pdoc-member-header" id="VpcLinkArgs-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/vpcLink.ts#L168">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/vpcLink.ts#L168">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3950,7 +3950,7 @@ Security group IDs for the VPC Link.
 Subnet IDs for the VPC Link.
 
 <h4 class="pdoc-member-header" id="VpcLinkArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/vpcLink.ts#L172">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/vpcLink.ts#L172">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -3958,7 +3958,7 @@ Subnet IDs for the VPC Link.
 A map of tags to assign to the VPC Link.
 
 <h3 class="pdoc-module-header" id="VpcLinkState" data-link-title="VpcLinkState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/vpcLink.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/vpcLink.ts#L130">
         interface <strong>VpcLinkState</strong>
     </a>
 </h3>
@@ -3968,7 +3968,7 @@ A map of tags to assign to the VPC Link.
 Input properties used for looking up and filtering VpcLink resources.
 
 <h4 class="pdoc-member-header" id="VpcLinkState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/vpcLink.ts#L134">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/vpcLink.ts#L134">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3976,7 +3976,7 @@ Input properties used for looking up and filtering VpcLink resources.
 The VPC Link ARN.
 
 <h4 class="pdoc-member-header" id="VpcLinkState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/vpcLink.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/vpcLink.ts#L138">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3984,7 +3984,7 @@ The VPC Link ARN.
 The name of the VPC Link. Must be between 1 and 128 characters in length.
 
 <h4 class="pdoc-member-header" id="VpcLinkState-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/vpcLink.ts#L142">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/vpcLink.ts#L142">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3992,7 +3992,7 @@ The name of the VPC Link. Must be between 1 and 128 characters in length.
 Security group IDs for the VPC Link.
 
 <h4 class="pdoc-member-header" id="VpcLinkState-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/vpcLink.ts#L146">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/vpcLink.ts#L146">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4000,7 +4000,7 @@ Security group IDs for the VPC Link.
 Subnet IDs for the VPC Link.
 
 <h4 class="pdoc-member-header" id="VpcLinkState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/f0267a7203da7ee233e5bba00767543a007d0a61/sdk/nodejs/apigatewayv2/vpcLink.ts#L150">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/fbc6ab50703a2a173ec5f3800d282dc130df7d38/sdk/nodejs/apigatewayv2/vpcLink.ts#L150">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>

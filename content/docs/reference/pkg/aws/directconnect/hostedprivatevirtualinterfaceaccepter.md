@@ -138,7 +138,7 @@ accepter = pulumi.providers.Aws("accepter")
 # Accepter's credentials.
 accepter_caller_identity = aws.get_caller_identity()
 # Accepter's side of the VIF.
-vpn_gw = aws.ec2.VpnGateway("vpnGw", opts=ResourceOptions(provider=aws["accepter"]))
+vpn_gw = aws.ec2.VpnGateway("vpnGw", opts=pulumi.ResourceOptions(provider=aws["accepter"]))
 # Creator's side of the VIF
 creator = aws.directconnect.HostedPrivateVirtualInterface("creator",
     connection_id="dxcon-zzzzzzzz",
@@ -146,14 +146,14 @@ creator = aws.directconnect.HostedPrivateVirtualInterface("creator",
     vlan=4094,
     address_family="ipv4",
     bgp_asn=65352,
-    opts=ResourceOptions(depends_on=[vpn_gw]))
+    opts=pulumi.ResourceOptions(depends_on=[vpn_gw]))
 accepter_hosted_private_virtual_interface_accepter = aws.directconnect.HostedPrivateVirtualInterfaceAccepter("accepterHostedPrivateVirtualInterfaceAccepter",
     virtual_interface_id=creator.id,
     vpn_gateway_id=vpn_gw.id,
     tags={
         "Side": "Accepter",
     },
-    opts=ResourceOptions(provider=aws["accepter"]))
+    opts=pulumi.ResourceOptions(provider=aws["accepter"]))
 ```
 
 {{% /example %}}

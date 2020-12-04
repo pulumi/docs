@@ -173,7 +173,7 @@ wafrule = aws.waf.Rule("wafrule",
         negated=False,
         type="IPMatch",
     )],
-    opts=ResourceOptions(depends_on=[ipset]))
+    opts=pulumi.ResourceOptions(depends_on=[ipset]))
 waf_acl = aws.waf.WebAcl("wafAcl",
     metric_name="tfWebACL",
     default_action=aws.waf.WebAclDefaultActionArgs(
@@ -187,7 +187,7 @@ waf_acl = aws.waf.WebAcl("wafAcl",
         rule_id=wafrule.id,
         type="REGULAR",
     )],
-    opts=ResourceOptions(depends_on=[
+    opts=pulumi.ResourceOptions(depends_on=[
             ipset,
             wafrule,
         ]))

@@ -359,7 +359,7 @@ test = aws.guardduty.PublishingDestination("test",
     detector_id=test_gd.id,
     destination_arn=gd_bucket.arn,
     kms_key_arn=gd_key.arn,
-    opts=ResourceOptions(depends_on=[gd_bucket_policy]))
+    opts=pulumi.ResourceOptions(depends_on=[gd_bucket_policy]))
 ```
 
 {{% /example %}}

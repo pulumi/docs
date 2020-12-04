@@ -437,7 +437,7 @@ test_integration_response = aws.apigateway.IntegrationResponse("testIntegrationR
     http_method=test_integration.http_method,
     status_code=test_method_response.status_code)
 test_deployment = aws.apigateway.Deployment("testDeployment", rest_api=test_rest_api.id,
-opts=ResourceOptions(depends_on=[test_integration_response]))
+opts=pulumi.ResourceOptions(depends_on=[test_integration_response]))
 test_stage = aws.apigateway.Stage("testStage",
     deployment=test_deployment.id,
     rest_api=test_rest_api.id,

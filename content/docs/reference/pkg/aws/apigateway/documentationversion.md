@@ -115,7 +115,7 @@ example_documentation_version = aws.apigateway.DocumentationVersion("exampleDocu
     version="example_version",
     rest_api_id=example_rest_api.id,
     description="Example description",
-    opts=ResourceOptions(depends_on=[example_documentation_part]))
+    opts=pulumi.ResourceOptions(depends_on=[example_documentation_part]))
 ```
 
 {{% /example %}}

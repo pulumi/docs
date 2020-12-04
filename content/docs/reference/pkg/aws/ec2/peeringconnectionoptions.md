@@ -227,12 +227,12 @@ main = aws.ec2.Vpc("main",
     cidr_block="10.0.0.0/16",
     enable_dns_support=True,
     enable_dns_hostnames=True,
-    opts=ResourceOptions(provider=aws["requester"]))
+    opts=pulumi.ResourceOptions(provider=aws["requester"]))
 peer_vpc = aws.ec2.Vpc("peerVpc",
     cidr_block="10.1.0.0/16",
     enable_dns_support=True,
     enable_dns_hostnames=True,
-    opts=ResourceOptions(provider=aws["accepter"]))
+    opts=pulumi.ResourceOptions(provider=aws["accepter"]))
 peer_caller_identity = aws.get_caller_identity()
 peer_vpc_peering_connection = aws.ec2.VpcPeeringConnection("peerVpcPeeringConnection",
     vpc_id=main.id,
@@ -242,26 +242,26 @@ peer_vpc_peering_connection = aws.ec2.VpcPeeringConnection("peerVpcPeeringConnec
     tags={
         "Side": "Requester",
     },
-    opts=ResourceOptions(provider=aws["requester"]))
+    opts=pulumi.ResourceOptions(provider=aws["requester"]))
 peer_vpc_peering_connection_accepter = aws.ec2.VpcPeeringConnectionAccepter("peerVpcPeeringConnectionAccepter",
     vpc_peering_connection_id=peer_vpc_peering_connection.id,
     auto_accept=True,
     tags={
         "Side": "Accepter",
     },
-    opts=ResourceOptions(provider=aws["accepter"]))
+    opts=pulumi.ResourceOptions(provider=aws["accepter"]))
 requester_peering_connection_options = aws.ec2.PeeringConnectionOptions("requesterPeeringConnectionOptions",
     vpc_peering_connection_id=peer_vpc_peering_connection_accepter.id,
     requester=aws.ec2.PeeringConnectionOptionsRequesterArgs(
         allow_remote_vpc_dns_resolution=True,
     ),
-    opts=ResourceOptions(provider=aws["requester"]))
+    opts=pulumi.ResourceOptions(provider=aws["requester"]))
 accepter_peering_connection_options = aws.ec2.PeeringConnectionOptions("accepterPeeringConnectionOptions",
     vpc_peering_connection_id=peer_vpc_peering_connection_accepter.id,
     accepter=aws.ec2.PeeringConnectionOptionsAccepterArgs(
         allow_remote_vpc_dns_resolution=True,
     ),
-    opts=ResourceOptions(provider=aws["accepter"]))
+    opts=pulumi.ResourceOptions(provider=aws["accepter"]))
 ```
 ```csharp
 using Pulumi;

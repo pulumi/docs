@@ -231,7 +231,7 @@ organization_configuration_aggregator = aws.cfg.ConfigurationAggregator("organiz
     all_regions=True,
     role_arn=organization_role.arn,
 ),
-opts=ResourceOptions(depends_on=[organization_role_policy_attachment]))
+opts=pulumi.ResourceOptions(depends_on=[organization_role_policy_attachment]))
 ```
 
 {{% /example %}}

@@ -641,7 +641,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`.
+    <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -813,7 +813,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`.
+    <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -985,7 +985,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`.
+    <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1157,7 +1157,7 @@ The Gateway resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`.
+    <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1246,6 +1246,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="ec2instanceid_csharp">
+<a href="#ec2instanceid_csharp" style="color: inherit; text-decoration: inherit;">Ec2Instance<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Amazon EC2 instance that was used to launch the gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="endpointtype_csharp">
+<a href="#endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of endpoint for your gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="gatewayid_csharp">
 <a href="#gatewayid_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Id</a>
 </span> 
@@ -1253,6 +1275,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="gatewaynetworkinterfaces_csharp">
+<a href="#gatewaynetworkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Network<wbr>Interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gatewaygatewaynetworkinterface">List&lt;Gateway<wbr>Gateway<wbr>Network<wbr>Interface&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="hostenvironment_csharp">
+<a href="#hostenvironment_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Environment</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of hypervisor environment used by the host.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1285,6 +1329,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="ec2instanceid_go">
+<a href="#ec2instanceid_go" style="color: inherit; text-decoration: inherit;">Ec2Instance<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Amazon EC2 instance that was used to launch the gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="endpointtype_go">
+<a href="#endpointtype_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of endpoint for your gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="gatewayid_go">
 <a href="#gatewayid_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Id</a>
 </span> 
@@ -1292,6 +1358,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="gatewaynetworkinterfaces_go">
+<a href="#gatewaynetworkinterfaces_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Network<wbr>Interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gatewaygatewaynetworkinterface">[]Gateway<wbr>Gateway<wbr>Network<wbr>Interface</a></span>
+    </dt>
+    <dd>{{% md %}}An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="hostenvironment_go">
+<a href="#hostenvironment_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Environment</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of hypervisor environment used by the host.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1324,6 +1412,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="ec2instanceid_nodejs">
+<a href="#ec2instanceid_nodejs" style="color: inherit; text-decoration: inherit;">ec2Instance<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Amazon EC2 instance that was used to launch the gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="endpointtype_nodejs">
+<a href="#endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of endpoint for your gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="gatewayid_nodejs">
 <a href="#gatewayid_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Id</a>
 </span> 
@@ -1331,6 +1441,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="gatewaynetworkinterfaces_nodejs">
+<a href="#gatewaynetworkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Network<wbr>Interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gatewaygatewaynetworkinterface">Gateway<wbr>Gateway<wbr>Network<wbr>Interface[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="hostenvironment_nodejs">
+<a href="#hostenvironment_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Environment</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of hypervisor environment used by the host.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1363,6 +1495,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="ec2_instance_id_python">
+<a href="#ec2_instance_id_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>instance_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Amazon EC2 instance that was used to launch the gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="endpoint_type_python">
+<a href="#endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of endpoint for your gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="gateway_id_python">
 <a href="#gateway_id_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>id</a>
 </span> 
@@ -1370,6 +1524,28 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Identifier of the gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="gateway_network_interfaces_python">
+<a href="#gateway_network_interfaces_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>network_<wbr>interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gatewaygatewaynetworkinterface">Sequence[Gateway<wbr>Gateway<wbr>Network<wbr>Interface]</a></span>
+    </dt>
+    <dd>{{% md %}}An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="host_environment_python">
+<a href="#host_environment_python" style="color: inherit; text-decoration: inherit;">host_<wbr>environment</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of hypervisor environment used by the host.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1402,7 +1578,7 @@ Get an existing Gateway resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activation_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">average_download_rate_limit_in_bits_per_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">average_upload_rate_limit_in_bits_per_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cloudwatch_log_group_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_vpc_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">medium_changer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">smb_active_directory_settings</span><span class="p">:</span> <span class="nx">Optional[GatewaySmbActiveDirectorySettingsArgs]</span> = None<span class="p">, </span><span class="nx">smb_guest_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">smb_security_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tape_drive_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Gateway</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">activation_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">average_download_rate_limit_in_bits_per_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">average_upload_rate_limit_in_bits_per_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cloudwatch_log_group_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ec2_instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[GatewayGatewayNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">gateway_timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_vpc_endpoint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_environment</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">medium_changer_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">smb_active_directory_settings</span><span class="p">:</span> <span class="nx">Optional[GatewaySmbActiveDirectorySettingsArgs]</span> = None<span class="p">, </span><span class="nx">smb_guest_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">smb_security_strategy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tape_drive_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Gateway</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1573,6 +1749,28 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_ec2instanceid_csharp">
+<a href="#state_ec2instanceid_csharp" style="color: inherit; text-decoration: inherit;">Ec2Instance<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Amazon EC2 instance that was used to launch the gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_endpointtype_csharp">
+<a href="#state_endpointtype_csharp" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of endpoint for your gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_gatewayid_csharp">
 <a href="#state_gatewayid_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Id</a>
 </span> 
@@ -1602,6 +1800,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_gatewaynetworkinterfaces_csharp">
+<a href="#state_gatewaynetworkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Network<wbr>Interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gatewaygatewaynetworkinterface">List&lt;Gateway<wbr>Gateway<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1639,13 +1848,24 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_hostenvironment_csharp">
+<a href="#state_hostenvironment_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Environment</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of hypervisor environment used by the host.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_mediumchangertype_csharp">
 <a href="#state_mediumchangertype_csharp" style="color: inherit; text-decoration: inherit;">Medium<wbr>Changer<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`.
+    <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1767,6 +1987,28 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_ec2instanceid_go">
+<a href="#state_ec2instanceid_go" style="color: inherit; text-decoration: inherit;">Ec2Instance<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Amazon EC2 instance that was used to launch the gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_endpointtype_go">
+<a href="#state_endpointtype_go" style="color: inherit; text-decoration: inherit;">Endpoint<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of endpoint for your gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_gatewayid_go">
 <a href="#state_gatewayid_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Id</a>
 </span> 
@@ -1796,6 +2038,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_gatewaynetworkinterfaces_go">
+<a href="#state_gatewaynetworkinterfaces_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Network<wbr>Interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gatewaygatewaynetworkinterface">[]Gateway<wbr>Gateway<wbr>Network<wbr>Interface</a></span>
+    </dt>
+    <dd>{{% md %}}An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1833,13 +2086,24 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_hostenvironment_go">
+<a href="#state_hostenvironment_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Environment</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of hypervisor environment used by the host.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_mediumchangertype_go">
 <a href="#state_mediumchangertype_go" style="color: inherit; text-decoration: inherit;">Medium<wbr>Changer<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`.
+    <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1961,6 +2225,28 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_ec2instanceid_nodejs">
+<a href="#state_ec2instanceid_nodejs" style="color: inherit; text-decoration: inherit;">ec2Instance<wbr>Id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Amazon EC2 instance that was used to launch the gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_endpointtype_nodejs">
+<a href="#state_endpointtype_nodejs" style="color: inherit; text-decoration: inherit;">endpoint<wbr>Type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of endpoint for your gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_gatewayid_nodejs">
 <a href="#state_gatewayid_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Id</a>
 </span> 
@@ -1990,6 +2276,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_gatewaynetworkinterfaces_nodejs">
+<a href="#state_gatewaynetworkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Network<wbr>Interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gatewaygatewaynetworkinterface">Gateway<wbr>Gateway<wbr>Network<wbr>Interface[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2027,13 +2324,24 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_hostenvironment_nodejs">
+<a href="#state_hostenvironment_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Environment</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of hypervisor environment used by the host.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_mediumchangertype_nodejs">
 <a href="#state_mediumchangertype_nodejs" style="color: inherit; text-decoration: inherit;">medium<wbr>Changer<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`.
+    <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2155,6 +2463,28 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_ec2_instance_id_python">
+<a href="#state_ec2_instance_id_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>instance_<wbr>id</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the Amazon EC2 instance that was used to launch the gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_endpoint_type_python">
+<a href="#state_endpoint_type_python" style="color: inherit; text-decoration: inherit;">endpoint_<wbr>type</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of endpoint for your gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_gateway_id_python">
 <a href="#state_gateway_id_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>id</a>
 </span> 
@@ -2184,6 +2514,17 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_gateway_network_interfaces_python">
+<a href="#state_gateway_network_interfaces_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>network_<wbr>interfaces</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gatewaygatewaynetworkinterface">Sequence[Gateway<wbr>Gateway<wbr>Network<wbr>Interface<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2221,13 +2562,24 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_host_environment_python">
+<a href="#state_host_environment_python" style="color: inherit; text-decoration: inherit;">host_<wbr>environment</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of hypervisor environment used by the host.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_medium_changer_type_python">
 <a href="#state_medium_changer_type_python" style="color: inherit; text-decoration: inherit;">medium_<wbr>changer_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`.
+    <dd>{{% md %}}Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2300,6 +2652,96 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+<h4 id="gatewaygatewaynetworkinterface">Gateway<wbr>Gateway<wbr>Network<wbr>Interface</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GatewayGatewayNetworkInterface">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway?tab=doc#GatewayGatewayNetworkInterfaceOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.StorageGateway.Outputs.GatewayGatewayNetworkInterface.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipv4address_csharp">
+<a href="#ipv4address_csharp" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Internet Protocol version 4 (IPv4) address of the interface.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipv4address_go">
+<a href="#ipv4address_go" style="color: inherit; text-decoration: inherit;">Ipv4Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Internet Protocol version 4 (IPv4) address of the interface.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipv4address_nodejs">
+<a href="#ipv4address_nodejs" style="color: inherit; text-decoration: inherit;">ipv4Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Internet Protocol version 4 (IPv4) address of the interface.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipv4_address_python">
+<a href="#ipv4_address_python" style="color: inherit; text-decoration: inherit;">ipv4_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Internet Protocol version 4 (IPv4) address of the interface.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="gatewaysmbactivedirectorysettings">Gateway<wbr>Smb<wbr>Active<wbr>Directory<wbr>Settings</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GatewaySmbActiveDirectorySettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GatewaySmbActiveDirectorySettings">output</a> API doc for this type.
@@ -2351,6 +2793,51 @@ The following state arguments are supported:
     <dd>{{% md %}}The user name of user who has permission to add the gateway to the Active Directory domain.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="activedirectorystatus_csharp">
+<a href="#activedirectorystatus_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domaincontrollers_csharp">
+<a href="#domaincontrollers_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Controllers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of IPv4 addresses, NetBIOS names, or host names of your domain server.
+If you need to specify the port number include it after the colon (“:”). For example, `mydc.mydomain.com:389`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="organizationalunit_csharp">
+<a href="#organizationalunit_csharp" style="color: inherit; text-decoration: inherit;">Organizational<wbr>Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The organizational unit (OU) is a container in an Active Directory that can hold users, groups,
+computers, and other OUs and this parameter specifies the OU that the gateway will join within the AD domain.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeoutinseconds_csharp">
+<a href="#timeoutinseconds_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the time in seconds, in which the JoinDomain operation must complete. The default is `20` seconds.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2389,6 +2876,51 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The user name of user who has permission to add the gateway to the Active Directory domain.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="activedirectorystatus_go">
+<a href="#activedirectorystatus_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Directory<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domaincontrollers_go">
+<a href="#domaincontrollers_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Controllers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of IPv4 addresses, NetBIOS names, or host names of your domain server.
+If you need to specify the port number include it after the colon (“:”). For example, `mydc.mydomain.com:389`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="organizationalunit_go">
+<a href="#organizationalunit_go" style="color: inherit; text-decoration: inherit;">Organizational<wbr>Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The organizational unit (OU) is a container in an Active Directory that can hold users, groups,
+computers, and other OUs and this parameter specifies the OU that the gateway will join within the AD domain.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeoutinseconds_go">
+<a href="#timeoutinseconds_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>In<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the time in seconds, in which the JoinDomain operation must complete. The default is `20` seconds.
 {{% /md %}}</dd>
 
 </dl>
@@ -2431,6 +2963,51 @@ The following state arguments are supported:
     <dd>{{% md %}}The user name of user who has permission to add the gateway to the Active Directory domain.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="activedirectorystatus_nodejs">
+<a href="#activedirectorystatus_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Directory<wbr>Status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domaincontrollers_nodejs">
+<a href="#domaincontrollers_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Controllers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of IPv4 addresses, NetBIOS names, or host names of your domain server.
+If you need to specify the port number include it after the colon (“:”). For example, `mydc.mydomain.com:389`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="organizationalunit_nodejs">
+<a href="#organizationalunit_nodejs" style="color: inherit; text-decoration: inherit;">organizational<wbr>Unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The organizational unit (OU) is a container in an Active Directory that can hold users, groups,
+computers, and other OUs and this parameter specifies the OU that the gateway will join within the AD domain.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeoutinseconds_nodejs">
+<a href="#timeoutinseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>In<wbr>Seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the time in seconds, in which the JoinDomain operation must complete. The default is `20` seconds.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2471,6 +3048,51 @@ The following state arguments are supported:
     <dd>{{% md %}}The user name of user who has permission to add the gateway to the Active Directory domain.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="active_directory_status_python">
+<a href="#active_directory_status_python" style="color: inherit; text-decoration: inherit;">active_<wbr>directory_<wbr>status</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="domain_controllers_python">
+<a href="#domain_controllers_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>controllers</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of IPv4 addresses, NetBIOS names, or host names of your domain server.
+If you need to specify the port number include it after the colon (“:”). For example, `mydc.mydomain.com:389`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="organizational_unit_python">
+<a href="#organizational_unit_python" style="color: inherit; text-decoration: inherit;">organizational_<wbr>unit</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The organizational unit (OU) is a container in an Active Directory that can hold users, groups,
+computers, and other OUs and this parameter specifies the OU that the gateway will join within the AD domain.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_in_seconds_python">
+<a href="#timeout_in_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>in_<wbr>seconds</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the time in seconds, in which the JoinDomain operation must complete. The default is `20` seconds.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2491,19 +3113,7 @@ The following state arguments are supported:
  $ pulumi import aws:storagegateway/gateway:Gateway example arn:aws:storagegateway:us-east-1:123456789012:gateway/sgw-12345678
 ```
 
- Certain resource arguments, like `gateway_ip_address` do not have a Storage Gateway API method for reading the information after creation, either omit the argument from the Terraform configuration or use [`ignore_changes`](/docs/configuration/resources.html#ignore_changes) to hide the difference, e.g. hcl resource "aws_storagegateway_gateway" "example" {
-
-# ... other configuration ...
-
- gateway_ip_address = aws_instance.sgw.private_ip
-
-# There is no Storage Gateway API for reading gateway_ip_address
-
- lifecycle {
-
- ignore_changes = ["gateway_ip_address"]
-
- } }
+ Certain resource arguments, like `gateway_ip_address` do not have a Storage Gateway API method for reading the information after creation, either omit the argument from the provider configuration or use `ignoreChanges` to hide the difference.
 
 
 

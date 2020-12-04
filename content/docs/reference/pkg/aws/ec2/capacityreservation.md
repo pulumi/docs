@@ -109,7 +109,7 @@ const defaultCapacityReservation = new aws.ec2.CapacityReservation("default", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.CapacityReservation">CapacityReservation</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">end_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">end_date_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ephemeral_storage</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">instance_match_criteria</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.CapacityReservation">CapacityReservation</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">end_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">end_date_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ephemeral_storage</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">instance_match_criteria</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_platform</span><span class="p">:</span> <span class="nx">Optional[Union[str, InstancePlatform]]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, InstanceType]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenancy</span><span class="p">:</span> <span class="nx">Optional[Union[str, Tenancy]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -309,7 +309,7 @@ The CapacityReservation resource accepts the following [input]({{< relref "/docs
 <a href="#instanceplatform_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">Union&lt;string, Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Platform&gt;</span>
     </dt>
     <dd>{{% md %}}The type of operating system for which to reserve capacity. Valid options are `Linux/UNIX`, `Red Hat Enterprise Linux`, `SUSE Linux`, `Windows`, `Windows with SQL Server`, `Windows with SQL Server Enterprise`, `Windows with SQL Server Standard` or `Windows with SQL Server Web`.
 {{% /md %}}</dd>
@@ -320,7 +320,7 @@ The CapacityReservation resource accepts the following [input]({{< relref "/docs
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">Union&lt;string, Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Type&gt;</span>
     </dt>
     <dd>{{% md %}}The instance type for which to reserve capacity.
 {{% /md %}}</dd>
@@ -397,7 +397,7 @@ The CapacityReservation resource accepts the following [input]({{< relref "/docs
 <a href="#tenancy_csharp" style="color: inherit; text-decoration: inherit;">Tenancy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">Union&lt;string, Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Tenancy&gt;</span>
     </dt>
     <dd>{{% md %}}Indicates the tenancy of the Capacity Reservation. Specify either `default` or `dedicated`.
 {{% /md %}}</dd>
@@ -565,7 +565,7 @@ The CapacityReservation resource accepts the following [input]({{< relref "/docs
 <a href="#instanceplatform_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Instance<wbr>Platform</span>
+        <span class="property-type">string | enums.<wbr>Instance<wbr>Platform</span>
     </dt>
     <dd>{{% md %}}The type of operating system for which to reserve capacity. Valid options are `Linux/UNIX`, `Red Hat Enterprise Linux`, `SUSE Linux`, `Windows`, `Windows with SQL Server`, `Windows with SQL Server Enterprise`, `Windows with SQL Server Standard` or `Windows with SQL Server Web`.
 {{% /md %}}</dd>
@@ -576,7 +576,7 @@ The CapacityReservation resource accepts the following [input]({{< relref "/docs
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Instance<wbr>Type</span>
+        <span class="property-type">string | enums.<wbr>Instance<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The instance type for which to reserve capacity.
 {{% /md %}}</dd>
@@ -653,7 +653,7 @@ The CapacityReservation resource accepts the following [input]({{< relref "/docs
 <a href="#tenancy_nodejs" style="color: inherit; text-decoration: inherit;">tenancy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Tenancy</span>
+        <span class="property-type">string | enums.<wbr>Tenancy</span>
     </dt>
     <dd>{{% md %}}Indicates the tenancy of the Capacity Reservation. Specify either `default` or `dedicated`.
 {{% /md %}}</dd>
@@ -693,7 +693,7 @@ The CapacityReservation resource accepts the following [input]({{< relref "/docs
 <a href="#instance_platform_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Union[str, Instance<wbr>Platform]</span>
     </dt>
     <dd>{{% md %}}The type of operating system for which to reserve capacity. Valid options are `Linux/UNIX`, `Red Hat Enterprise Linux`, `SUSE Linux`, `Windows`, `Windows with SQL Server`, `Windows with SQL Server Enterprise`, `Windows with SQL Server Standard` or `Windows with SQL Server Web`.
 {{% /md %}}</dd>
@@ -704,7 +704,7 @@ The CapacityReservation resource accepts the following [input]({{< relref "/docs
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Union[str, Instance<wbr>Type]</span>
     </dt>
     <dd>{{% md %}}The instance type for which to reserve capacity.
 {{% /md %}}</dd>
@@ -781,7 +781,7 @@ The CapacityReservation resource accepts the following [input]({{< relref "/docs
 <a href="#tenancy_python" style="color: inherit; text-decoration: inherit;">tenancy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Union[str, Tenancy]</span>
     </dt>
     <dd>{{% md %}}Indicates the tenancy of the Capacity Reservation. Specify either `default` or `dedicated`.
 {{% /md %}}</dd>
@@ -929,7 +929,7 @@ Get an existing CapacityReservation resource's state with the given name, ID, an
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">end_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">end_date_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ephemeral_storage</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">instance_match_criteria</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_platform</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> CapacityReservation</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">end_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">end_date_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ephemeral_storage</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">instance_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">instance_match_criteria</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_platform</span><span class="p">:</span> <span class="nx">Optional[Union[str, InstancePlatform]]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, InstanceType]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenancy</span><span class="p">:</span> <span class="nx">Optional[Union[str, Tenancy]]</span> = None<span class="p">) -&gt;</span> CapacityReservation</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1137,7 +1137,7 @@ The following state arguments are supported:
 <a href="#state_instanceplatform_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">Union&lt;string, Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Platform&gt;</span>
     </dt>
     <dd>{{% md %}}The type of operating system for which to reserve capacity. Valid options are `Linux/UNIX`, `Red Hat Enterprise Linux`, `SUSE Linux`, `Windows`, `Windows with SQL Server`, `Windows with SQL Server Enterprise`, `Windows with SQL Server Standard` or `Windows with SQL Server Web`.
 {{% /md %}}</dd>
@@ -1148,7 +1148,7 @@ The following state arguments are supported:
 <a href="#state_instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">Union&lt;string, Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Instance<wbr>Type&gt;</span>
     </dt>
     <dd>{{% md %}}The instance type for which to reserve capacity.
 {{% /md %}}</dd>
@@ -1170,7 +1170,7 @@ The following state arguments are supported:
 <a href="#state_tenancy_csharp" style="color: inherit; text-decoration: inherit;">Tenancy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">Union&lt;string, Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Tenancy&gt;</span>
     </dt>
     <dd>{{% md %}}Indicates the tenancy of the Capacity Reservation. Specify either `default` or `dedicated`.
 {{% /md %}}</dd>
@@ -1415,7 +1415,7 @@ The following state arguments are supported:
 <a href="#state_instanceplatform_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Instance<wbr>Platform</span>
+        <span class="property-type">string | enums.<wbr>Instance<wbr>Platform</span>
     </dt>
     <dd>{{% md %}}The type of operating system for which to reserve capacity. Valid options are `Linux/UNIX`, `Red Hat Enterprise Linux`, `SUSE Linux`, `Windows`, `Windows with SQL Server`, `Windows with SQL Server Enterprise`, `Windows with SQL Server Standard` or `Windows with SQL Server Web`.
 {{% /md %}}</dd>
@@ -1426,7 +1426,7 @@ The following state arguments are supported:
 <a href="#state_instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Instance<wbr>Type</span>
+        <span class="property-type">string | enums.<wbr>Instance<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The instance type for which to reserve capacity.
 {{% /md %}}</dd>
@@ -1448,7 +1448,7 @@ The following state arguments are supported:
 <a href="#state_tenancy_nodejs" style="color: inherit; text-decoration: inherit;">tenancy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">Tenancy</span>
+        <span class="property-type">string | enums.<wbr>Tenancy</span>
     </dt>
     <dd>{{% md %}}Indicates the tenancy of the Capacity Reservation. Specify either `default` or `dedicated`.
 {{% /md %}}</dd>
@@ -1554,7 +1554,7 @@ The following state arguments are supported:
 <a href="#state_instance_platform_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>platform</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Union[str, Instance<wbr>Platform]</span>
     </dt>
     <dd>{{% md %}}The type of operating system for which to reserve capacity. Valid options are `Linux/UNIX`, `Red Hat Enterprise Linux`, `SUSE Linux`, `Windows`, `Windows with SQL Server`, `Windows with SQL Server Enterprise`, `Windows with SQL Server Standard` or `Windows with SQL Server Web`.
 {{% /md %}}</dd>
@@ -1565,7 +1565,7 @@ The following state arguments are supported:
 <a href="#state_instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Union[str, Instance<wbr>Type]</span>
     </dt>
     <dd>{{% md %}}The instance type for which to reserve capacity.
 {{% /md %}}</dd>
@@ -1587,7 +1587,7 @@ The following state arguments are supported:
 <a href="#state_tenancy_python" style="color: inherit; text-decoration: inherit;">tenancy</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">Union[str, Tenancy]</span>
     </dt>
     <dd>{{% md %}}Indicates the tenancy of the Capacity Reservation. Specify either `default` or `dedicated`.
 {{% /md %}}</dd>

@@ -181,7 +181,7 @@ import pulumi_aws as aws
 bucket = aws.s3.Bucket("bucket")
 foo_delivery_channel = aws.cfg.DeliveryChannel("fooDeliveryChannel", s3_bucket_name=bucket.bucket)
 foo_recorder_status = aws.cfg.RecorderStatus("fooRecorderStatus", is_enabled=True,
-opts=ResourceOptions(depends_on=[foo_delivery_channel]))
+opts=pulumi.ResourceOptions(depends_on=[foo_delivery_channel]))
 role = aws.iam.Role("role", assume_role_policy="""{
   "Version": "2012-10-17",
   "Statement": [
