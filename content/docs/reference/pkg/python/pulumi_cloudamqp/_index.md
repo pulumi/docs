@@ -788,146 +788,29 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_cloudamqp.IntegrationMetric">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudamqp.</code><code class="sig-name descname">IntegrationMetric</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_key_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_email</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">queue_whitelist</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_access_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vhost_whitelist</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.IntegrationMetric" title="Permalink to this definition">¶</a></dt>
-<dd><p>This resource allows you to create and manage, forwarding metrics to third party integrations for a CloudAMQP instance. Once configured, the metrics produced will be forward to corresponding integration.</p>
-<p>Only available for dedicated subscription plans.</p>
-<p>The following arguments are supported:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>              - (Required) The name of the third party log integration. See <code class="docutils literal notranslate"><span class="pre">Integration</span> <span class="pre">service</span> <span class="pre">reference</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">region</span></code>            - (Optional) Region hosting the integration service.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">access_key_id</span></code>     - (Optional) AWS access key identifier.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">secret_access_key</span></code> - (Optional) AWS secret access key.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">api_key</span></code>           - (Optional) The API key for the integration service.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">email</span></code>             - (Optional) The email address registred for the integration service.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code>        - (Optional) The project identifier.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">private_key</span></code>       - (Optional) The private access key.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">client_email</span></code>      - (Optional) The client email registered for the integration service.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code>              - (Optional) Tags. e.g. env=prod, region=europe.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">queue_whitelist</span></code>   - (Optional) Whitelist queues using regular expression. Leave empty to include all queues.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">vhost_whitelist</span></code>   - (Optional) Whitelist vhost using regular expression. Leave empty to include all vhosts.</p></li>
-</ul>
-<p>This is the full list of all arguments. Only a subset of arguments are used based on which type of integration used. See Integration type reference below for more information.</p>
-<p>Valid names for third party log integration.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>cloudwatch</p></td>
-<td><p>Create an IAM with programmatic access.</p></td>
-</tr>
-<tr class="row-odd"><td><p>cloudwatch_v2</p></td>
-<td><p>Create an IAM with programmatic access.</p></td>
-</tr>
-<tr class="row-even"><td><p>datadog</p></td>
-<td><p>Create a Datadog API key at app.datadoghq.com</p></td>
-</tr>
-<tr class="row-odd"><td><p>datadog_v2</p></td>
-<td><p>Create a Datadog API key at app.datadoghq.com</p></td>
-</tr>
-<tr class="row-even"><td><p>librato</p></td>
-<td><p>Create a new API token (with record only permissions) here: <a class="reference external" href="https://metrics.librato.com/tokens">https://metrics.librato.com/tokens</a></p></td>
-</tr>
-<tr class="row-odd"><td><p>newrelic</p></td>
-<td><p>Deprecated!</p></td>
-</tr>
-<tr class="row-even"><td><p>newrelic_v2</p></td>
-<td><p>Find or register an Insert API key for your account: Go to insights.newrelic.com &gt; Manage data &gt; API keys.</p></td>
-</tr>
-<tr class="row-odd"><td><p>stackdriver</p></td>
-<td><p>Create a service account and add ‘monitor metrics writer’ role, then download credentials.</p></td>
-</tr>
-</tbody>
-</table>
-<p>Valid arguments for third party log integrations.</p>
-<p>Required arguments for all integrations: <em>name</em><span class="raw-html-m2r"><br></span>
-Optional arguments for all integrations: <em>tags</em>, <em>queue_whitelist</em>, <em>vhost_whitelist</em></p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>Required arguments</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Cloudwatch</p></td>
-<td><p>cloudwatch</p></td>
-<td><p>region, access_key_id, secret_access_key</p></td>
-</tr>
-<tr class="row-odd"><td><p>Cloudwatch v2</p></td>
-<td><p>cloudwatch_v2</p></td>
-<td><p>region, access_key_id, secret_access_key</p></td>
-</tr>
-<tr class="row-even"><td><p>Datadog</p></td>
-<td><p>datadog</p></td>
-<td><p>api_key, region</p></td>
-</tr>
-<tr class="row-odd"><td><p>Datadog v2</p></td>
-<td><p>datadog_v2</p></td>
-<td><p>api_key, region</p></td>
-</tr>
-<tr class="row-even"><td><p>Librato</p></td>
-<td><p>librato</p></td>
-<td><p>email, api_key</p></td>
-</tr>
-<tr class="row-odd"><td><p>New relic (deprecated)</p></td>
-<td><p>newrelic</p></td>
-<td><ul class="simple">
-<li></li>
-</ul>
-</td>
-</tr>
-<tr class="row-even"><td><p>New relic v2</p></td>
-<td><p>newrelic_v2</p></td>
-<td><p>api_key, region</p></td>
-</tr>
-<tr class="row-odd"><td><p>Stackdriver</p></td>
-<td><p>stackdriver</p></td>
-<td><p>project_id, private_key, client_email</p></td>
-</tr>
-</tbody>
-</table>
-<p>This resource depends on CloudAMQP instance identifier, <code class="docutils literal notranslate"><span class="pre">cloudamqp_instance.instance.id</span></code>.</p>
-<p><code class="docutils literal notranslate"><span class="pre">cloudamqp_integration_metric</span></code>can be imported using the name argument of the resource together with CloudAMQP instance identifier. The name and identifier are CSV separated, see example below.</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudamqp:index/integrationMetric:IntegrationMetric &lt;resource_name&gt; &lt;name&gt;,&lt;instance_id&gt;<span class="sb">`</span>
-</pre></div>
-</div>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
-<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>access_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS access key identifier. (Cloudwatch)</p></li>
-<li><p><strong>api_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API key for the integration service. (Librato)</p></li>
-<li><p><strong>client_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The client email. (Stackdriver)</p></li>
-<li><p><strong>email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The email address registred for the integration service. (Librato)</p></li>
-<li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Instance identifier</p></li>
-<li><p><strong>license_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The license key registred for the integration service. (New Relic)</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of metrics integration</p></li>
-<li><p><strong>private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The private key. (Stackdriver)</p></li>
-<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Project ID. (Stackdriver)</p></li>
-<li><p><strong>queue_whitelist</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (optional) whitelist using regular expression</p></li>
-<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS region for Cloudwatch and [US/EU] for Data dog/New relic. (Cloudwatch, Data Dog, New Relic)</p></li>
-<li><p><strong>secret_access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS secret key. (Cloudwatch)</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (optional) tags. E.g. env=prod,region=europe</p></li>
-<li><p><strong>vhost_whitelist</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (optional) whitelist using regular expression</p></li>
-</ul>
-</dd>
-</dl>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudamqp.</code><code class="sig-name descname">IntegrationMetric</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_key_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_email</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">queue_allowlist</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">queue_whitelist</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_access_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vhost_allowlist</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vhost_whitelist</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.IntegrationMetric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a IntegrationMetric resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] access_key_id: AWS access key identifier. (Cloudwatch)
+:param pulumi.Input[str] api_key: The API key for the integration service. (Librato)
+:param pulumi.Input[str] client_email: The client email. (Stackdriver)
+:param pulumi.Input[str] email: The email address registred for the integration service. (Librato)
+:param pulumi.Input[int] instance_id: Instance identifier
+:param pulumi.Input[str] license_key: The license key registred for the integration service. (New Relic)
+:param pulumi.Input[str] name: The name of metrics integration
+:param pulumi.Input[str] private_key: The private key. (Stackdriver)
+:param pulumi.Input[str] project_id: Project ID. (Stackdriver)
+:param pulumi.Input[str] queue_allowlist: (optional) allowlist using regular expression
+:param pulumi.Input[str] queue_whitelist: <strong>Deprecated</strong>
+:param pulumi.Input[str] region: AWS region for Cloudwatch and [US/EU] for Data dog/New relic. (Cloudwatch, Data Dog, New Relic)
+:param pulumi.Input[str] secret_access_key: AWS secret key. (Cloudwatch)
+:param pulumi.Input[str] tags: (optional) tags. E.g. env=prod,region=europe
+:param pulumi.Input[str] vhost_allowlist: (optional) allowlist using regular expression
+:param pulumi.Input[str] vhost_whitelist: <strong>Deprecated</strong></p>
 <dl class="py method">
 <dt id="pulumi_cloudamqp.IntegrationMetric.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_key_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_email</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">queue_whitelist</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_access_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vhost_whitelist</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_cloudamqp.integration_metric.IntegrationMetric<a class="headerlink" href="#pulumi_cloudamqp.IntegrationMetric.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">access_key_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_email</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">license_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">private_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">queue_allowlist</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">queue_whitelist</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_access_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vhost_allowlist</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vhost_whitelist</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_cloudamqp.integration_metric.IntegrationMetric<a class="headerlink" href="#pulumi_cloudamqp.IntegrationMetric.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing IntegrationMetric resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -945,11 +828,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of metrics integration</p></li>
 <li><p><strong>private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The private key. (Stackdriver)</p></li>
 <li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Project ID. (Stackdriver)</p></li>
-<li><p><strong>queue_whitelist</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (optional) whitelist using regular expression</p></li>
+<li><p><strong>queue_allowlist</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (optional) allowlist using regular expression</p></li>
+<li><p><strong>queue_whitelist</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <strong>Deprecated</strong></p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS region for Cloudwatch and [US/EU] for Data dog/New relic. (Cloudwatch, Data Dog, New Relic)</p></li>
 <li><p><strong>secret_access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS secret key. (Cloudwatch)</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (optional) tags. E.g. env=prod,region=europe</p></li>
-<li><p><strong>vhost_whitelist</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (optional) whitelist using regular expression</p></li>
+<li><p><strong>vhost_allowlist</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (optional) allowlist using regular expression</p></li>
+<li><p><strong>vhost_whitelist</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <strong>Deprecated</strong></p></li>
 </ul>
 </dd>
 </dl>
@@ -1010,9 +895,15 @@ properties used to qualify the lookup.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi_cloudamqp.IntegrationMetric.queue_allowlist">
+<em class="property">property </em><code class="sig-name descname">queue_allowlist</code><a class="headerlink" href="#pulumi_cloudamqp.IntegrationMetric.queue_allowlist" title="Permalink to this definition">¶</a></dt>
+<dd><p>(optional) allowlist using regular expression</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_cloudamqp.IntegrationMetric.queue_whitelist">
 <em class="property">property </em><code class="sig-name descname">queue_whitelist</code><a class="headerlink" href="#pulumi_cloudamqp.IntegrationMetric.queue_whitelist" title="Permalink to this definition">¶</a></dt>
-<dd><p>(optional) whitelist using regular expression</p>
+<dd><p><strong>Deprecated</strong></p>
 </dd></dl>
 
 <dl class="py method">
@@ -1034,9 +925,15 @@ properties used to qualify the lookup.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi_cloudamqp.IntegrationMetric.vhost_allowlist">
+<em class="property">property </em><code class="sig-name descname">vhost_allowlist</code><a class="headerlink" href="#pulumi_cloudamqp.IntegrationMetric.vhost_allowlist" title="Permalink to this definition">¶</a></dt>
+<dd><p>(optional) allowlist using regular expression</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_cloudamqp.IntegrationMetric.vhost_whitelist">
 <em class="property">property </em><code class="sig-name descname">vhost_whitelist</code><a class="headerlink" href="#pulumi_cloudamqp.IntegrationMetric.vhost_whitelist" title="Permalink to this definition">¶</a></dt>
-<dd><p>(optional) whitelist using regular expression</p>
+<dd><p><strong>Deprecated</strong></p>
 </dd></dl>
 
 <dl class="py method">
