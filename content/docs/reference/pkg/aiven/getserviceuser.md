@@ -14,6 +14,7 @@ meta_desc: "Explore the GetServiceUser function of the Aiven package, including 
 
 The Service User data source provides information about the existing Aiven Service User.
 
+
 {{% examples %}}
 ## Example Usage
 

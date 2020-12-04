@@ -14,6 +14,7 @@ meta_desc: "Explore the GetKafka function of the Aiven package, including exampl
 
 The Kafka data source provides information about the existing Aiven Kafka services.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -167,7 +168,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -226,7 +227,7 @@ configuration options available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -371,7 +372,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -419,7 +420,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -478,7 +479,7 @@ configuration options available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -623,7 +624,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -671,7 +672,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -730,7 +731,7 @@ configuration options available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -875,7 +876,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -923,7 +924,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -982,7 +983,7 @@ configuration options available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1127,7 +1128,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -1290,7 +1291,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -1328,7 +1329,7 @@ configuration options available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1397,7 +1398,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -1547,7 +1548,7 @@ deletion is done.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -1585,7 +1586,7 @@ configuration options available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1654,7 +1655,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -1804,7 +1805,7 @@ deletion is done.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -1842,7 +1843,7 @@ configuration options available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1911,7 +1912,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -2061,7 +2062,7 @@ deletion is done.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -2099,7 +2100,7 @@ configuration options available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -2168,7 +2169,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -3851,6 +3852,32 @@ still be returned to ensure that progress can be made. As such, this is not an a
 (defaults to 104857600).
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transactionremoveexpiredtransactioncleanupintervalms_csharp">
+<a href="#transactionremoveexpiredtransactioncleanupintervalms_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Remove<wbr>Expired<wbr>Transaction<wbr>Cleanup<wbr>Interval<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The interval at which 
+to remove transactions that have expired due to transactional.id.expiration.ms passing (defaults
+to 3600000 (1 hour)).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transactionstatelogsegmentbytes_csharp">
+<a href="#transactionstatelogsegmentbytes_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>State<wbr>Log<wbr>Segment<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The transaction topic segment bytes should 
+be kept relatively small in order to facilitate faster log compaction and cache loads (defaults
+to 104857600 (100 mebibytes)).
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -4285,6 +4312,32 @@ still be returned to ensure that progress can be made. As such, this is not an a
     </dt>
     <dd>{{% md %}}The maximum number of bytes in a socket request 
 (defaults to 104857600).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transactionremoveexpiredtransactioncleanupintervalms_go">
+<a href="#transactionremoveexpiredtransactioncleanupintervalms_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Remove<wbr>Expired<wbr>Transaction<wbr>Cleanup<wbr>Interval<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The interval at which 
+to remove transactions that have expired due to transactional.id.expiration.ms passing (defaults
+to 3600000 (1 hour)).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transactionstatelogsegmentbytes_go">
+<a href="#transactionstatelogsegmentbytes_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>State<wbr>Log<wbr>Segment<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The transaction topic segment bytes should 
+be kept relatively small in order to facilitate faster log compaction and cache loads (defaults
+to 104857600 (100 mebibytes)).
 {{% /md %}}</dd>
 
 </dl>
@@ -4723,6 +4776,32 @@ still be returned to ensure that progress can be made. As such, this is not an a
 (defaults to 104857600).
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transactionremoveexpiredtransactioncleanupintervalms_nodejs">
+<a href="#transactionremoveexpiredtransactioncleanupintervalms_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Remove<wbr>Expired<wbr>Transaction<wbr>Cleanup<wbr>Interval<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The interval at which 
+to remove transactions that have expired due to transactional.id.expiration.ms passing (defaults
+to 3600000 (1 hour)).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transactionstatelogsegmentbytes_nodejs">
+<a href="#transactionstatelogsegmentbytes_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>State<wbr>Log<wbr>Segment<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The transaction topic segment bytes should 
+be kept relatively small in order to facilitate faster log compaction and cache loads (defaults
+to 104857600 (100 mebibytes)).
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -5157,6 +5236,32 @@ still be returned to ensure that progress can be made. As such, this is not an a
     </dt>
     <dd>{{% md %}}The maximum number of bytes in a socket request 
 (defaults to 104857600).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transaction_remove_expired_transaction_cleanup_interval_ms_python">
+<a href="#transaction_remove_expired_transaction_cleanup_interval_ms_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>remove_<wbr>expired_<wbr>transaction_<wbr>cleanup_<wbr>interval_<wbr>ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The interval at which 
+to remove transactions that have expired due to transactional.id.expiration.ms passing (defaults
+to 3600000 (1 hour)).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transaction_state_log_segment_bytes_python">
+<a href="#transaction_state_log_segment_bytes_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>state_<wbr>log_<wbr>segment_<wbr>bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The transaction topic segment bytes should 
+be kept relatively small in order to facilitate faster log compaction and cache loads (defaults
+to 104857600 (100 mebibytes)).
 {{% /md %}}</dd>
 
 </dl>

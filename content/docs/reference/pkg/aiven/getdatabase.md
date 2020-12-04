@@ -14,6 +14,7 @@ meta_desc: "Explore the GetDatabase function of the Aiven package, including exa
 
 The Database data source provides information about the existing Aiven Database.
 
+
 {{% examples %}}
 ## Example Usage
 

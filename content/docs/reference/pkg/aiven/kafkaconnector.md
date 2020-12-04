@@ -12,7 +12,8 @@ meta_desc: "Explore the KafkaConnector resource of the Aiven package, including 
 
 ## # Kafka connectors Resource
 
-The Kafka connectors resource allows the creation and management of an Aiven Kafka connectors.
+The Kafka connectors resource allows the creation and management of Aiven Kafka connectors.
+
 
 {{% examples %}}
 ## Example Usage
@@ -1683,6 +1684,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

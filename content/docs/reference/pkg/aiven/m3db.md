@@ -12,7 +12,8 @@ meta_desc: "Explore the M3Db resource of the Aiven package, including examples, 
 
 ## # M3 DB Resource
 
-The M3 DB resource allows the creation and management of an Aiven M3 services.
+The M3 DB resource allows the creation and management of Aiven M3 services.
+
 
 {{% examples %}}
 ## Example Usage
@@ -362,7 +363,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -401,7 +402,7 @@ configuration options available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -471,7 +472,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -519,7 +520,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -558,7 +559,7 @@ configuration options available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -628,7 +629,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -676,7 +677,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -715,7 +716,7 @@ configuration options available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -785,7 +786,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -833,7 +834,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -872,7 +873,7 @@ configuration options available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -942,7 +943,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -1522,7 +1523,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -1572,7 +1573,7 @@ configuration options available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1745,7 +1746,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -1767,7 +1768,7 @@ deletion is done.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -1817,7 +1818,7 @@ configuration options available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1990,7 +1991,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -2012,7 +2013,7 @@ deletion is done.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -2062,7 +2063,7 @@ configuration options available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2235,7 +2236,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -2257,7 +2258,7 @@ deletion is done.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -2307,7 +2308,7 @@ configuration options available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2480,7 +2481,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -4405,6 +4406,8 @@ for service nodes that are in a project VPC or another type of private network.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

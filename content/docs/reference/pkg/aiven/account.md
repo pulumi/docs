@@ -12,7 +12,8 @@ meta_desc: "Explore the Account resource of the Aiven package, including example
 
 ## # Account Resource
 
-The Account resource allows the creation and management of an Aiven Accounts.
+The Account resource allows the creation and management of an Aiven Account.
+
 
 {{% examples %}}
 ## Example Usage
@@ -1050,6 +1051,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

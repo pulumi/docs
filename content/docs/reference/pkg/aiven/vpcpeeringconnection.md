@@ -12,7 +12,8 @@ meta_desc: "Explore the VpcPeeringConnection resource of the Aiven package, incl
 
 ## # VPC Peering Connection Resource
 
-The VPC Peering Connection resource allows the creation and management of an Aiven VPC Peering Connections.
+The VPC Peering Connection resource allows the creation and management of Aiven VPC Peering Connections.
+
 
 {{% examples %}}
 ## Example Usage
@@ -1454,6 +1455,8 @@ therefore cannot be set, only read. Where state can be one of: `APPROVED`,
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

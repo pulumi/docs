@@ -15,6 +15,7 @@ meta_desc: "Explore the GetElasticSearchAcl function of the Aiven package, inclu
 The Elasticsearch ACL data source provides information about the existing Aiven Elasticsearch ACL
 for Elasticsearch service.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -172,7 +173,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}enables of disables Elasticsearch ACL's.
+    <dd>{{% md %}}enables or disables Elasticsearch ACLs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -235,7 +236,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}enables of disables Elasticsearch ACL's.
+    <dd>{{% md %}}enables or disables Elasticsearch ACLs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -298,7 +299,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}enables of disables Elasticsearch ACL's.
+    <dd>{{% md %}}enables or disables Elasticsearch ACLs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -361,7 +362,7 @@ They should be defined using reference as shown above to set up dependencies cor
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}enables of disables Elasticsearch ACL's.
+    <dd>{{% md %}}enables or disables Elasticsearch ACLs.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -446,7 +447,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}enables of disables Elasticsearch ACL's.
+    <dd>{{% md %}}enables or disables Elasticsearch ACLs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -518,7 +519,7 @@ these APIs as long as all operations only target indexes they have been granted 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}enables of disables Elasticsearch ACL's.
+    <dd>{{% md %}}enables or disables Elasticsearch ACLs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -590,7 +591,7 @@ these APIs as long as all operations only target indexes they have been granted 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}enables of disables Elasticsearch ACL's.
+    <dd>{{% md %}}enables or disables Elasticsearch ACLs.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -662,7 +663,7 @@ these APIs as long as all operations only target indexes they have been granted 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}enables of disables Elasticsearch ACL's.
+    <dd>{{% md %}}enables or disables Elasticsearch ACLs.
 {{% /md %}}</dd>
 
     <dt class="property-"

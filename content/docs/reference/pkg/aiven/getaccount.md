@@ -14,6 +14,7 @@ meta_desc: "Explore the GetAccount function of the Aiven package, including exam
 
 The Account data source provides information about the existing Aiven Account.
 
+
 {{% examples %}}
 ## Example Usage
 

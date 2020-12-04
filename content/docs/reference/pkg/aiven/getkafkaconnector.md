@@ -14,6 +14,7 @@ meta_desc: "Explore the GetKafkaConnector function of the Aiven package, includi
 
 The Kafka connector data source provides information about the existing Aiven Kafka connector.
 
+
 {{% examples %}}
 ## Example Usage
 

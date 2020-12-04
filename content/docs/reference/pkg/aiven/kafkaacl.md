@@ -12,7 +12,8 @@ meta_desc: "Explore the KafkaAcl resource of the Aiven package, including exampl
 
 ## # Resource Kafka ACL Resource
 
-The Resource Kafka ACL resource allows the creation and management of an Aiven Kafka ACL`s for a Kafka service.
+The Resource Kafka ACL resource allows the creation and management of ACLs for an Aiven Kafka service.
+
 
 {{% examples %}}
 ## Example Usage
@@ -1016,6 +1017,8 @@ the topic being deleted and new one created instead.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

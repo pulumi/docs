@@ -12,7 +12,8 @@ meta_desc: "Explore the AccountTeam resource of the Aiven package, including exa
 
 ## # Account Team Resource
 
-The Account Team resource allows the creation and management of an Account Teams.
+The Account Team resource allows the creation and management of an Account Team.
+
 
 
 
@@ -894,6 +895,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

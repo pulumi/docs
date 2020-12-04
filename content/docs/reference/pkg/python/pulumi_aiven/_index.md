@@ -13,7 +13,7 @@ block_external_search_index: true
 <dl class="py class">
 <dt id="pulumi_aiven.Account">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">Account</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_time</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">owner_team_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tenant_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_time</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Account" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Account resource allows the creation and management of an Aiven Accounts.</p>
+<dd><p>The Account resource allows the creation and management of an Aiven Account.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -294,7 +294,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.AccountTeam">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AccountTeam</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_time</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">update_time</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AccountTeam" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Account Team resource allows the creation and management of an Account Teams.</p>
+<dd><p>The Account Team resource allows the creation and management of an Account Team.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -399,10 +399,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.AccountTeamMember">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AccountTeamMember</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">accepted</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_time</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">invited_by_user_email</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_email</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AccountTeamMember" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Account Team Member resource allows the creation and management of an Aiven Account Team Members.</p>
+<dd><p>The Account Team Member resource allows the creation and management of an Aiven Account Team Member.</p>
 <p>During the creation of <code class="docutils literal notranslate"><span class="pre">AccountTeamMember</span></code> resource, an email invitation will be sent        to a user using <code class="docutils literal notranslate"><span class="pre">user_email</span></code> address. If the user accepts an invitation, he or she will become
 a member of the account team. The deletion of <code class="docutils literal notranslate"><span class="pre">AccountTeamMember</span></code> will not only
-delete invitation if one was sent but not yet accepted by the user, and it will also
+delete the invitation if one was sent but not yet accepted by the user, it will also
 eliminate an account team member if one has accepted an invitation previously.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -526,10 +526,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.AccountTeamProject">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AccountTeamProject</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AccountTeamProject" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Account Team Project resource allows the creation and management of an Account Team Projects.</p>
-<p>It is intended to link and existing project to the existing account team.
-It is important to note that the project should have an <code class="docutils literal notranslate"><span class="pre">account_id</span></code> property set and equal to
-account team you are trying to link this project.</p>
+<dd><p>The Account Team Project resource allows the creation and management of an Account Team Project.</p>
+<p>It is intended to link an existing project to the existing account team.
+It is important to note that the project should have an <code class="docutils literal notranslate"><span class="pre">account_id</span></code> property set equal to the
+account team you are trying to link to this project.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -754,7 +754,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aiven.AwaitableGetProjectResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetProjectResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_emails</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ca_cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">card_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">copy_from_project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">technical_emails</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetProjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">AwaitableGetProjectResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">available_credits</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_currency</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_emails</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_extra_text</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ca_cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">card_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">copy_from_project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_cloud</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">estimated_balance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">payment_method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">technical_emails</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vat_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.AwaitableGetProjectResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -810,7 +810,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.Cassandra">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">Cassandra</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra</span><span class="p">:</span> <span class="n">Union[CassandraCassandraArgs, Mapping[str, Any], Awaitable[Union[CassandraCassandraArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cassandra_user_config</span><span class="p">:</span> <span class="n">Union[CassandraCassandraUserConfigArgs, Mapping[str, Any], Awaitable[Union[CassandraCassandraUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="p">:</span> <span class="n">Union[Sequence[Union[CassandraServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[CassandraServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[CassandraServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[CassandraServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Cassandra" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Cassandra resource allows the creation and management of an Aiven Cassandra services.</p>
+<dd><p>The Cassandra resource allows the creation and management of Aiven Cassandra services.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -839,13 +839,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 The following configuration options available:</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
 <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html">here for AWS</a>.</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -871,7 +871,7 @@ later without destroying and re-creating the service so name should be picked ba
 intended service usage rather than current attributes.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -893,7 +893,7 @@ properties used to qualify the lookup.</p>
 The following configuration options available:</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -901,7 +901,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 </p></li>
 <li><p><strong>components</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'CassandraComponentArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Service component information objects</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -934,7 +934,7 @@ intended service usage rather than current attributes.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -960,7 +960,7 @@ The following configuration options available:</p>
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.Cassandra.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -977,7 +977,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 <dt id="pulumi_aiven.Cassandra.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.Cassandra.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1080,7 +1080,7 @@ intended service usage rather than current attributes.</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.Cassandra.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -1126,7 +1126,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.ConnectionPool">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">ConnectionPool</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_mode</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pool_size</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.ConnectionPool" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Connection Pool resource allows the creation and management of an Aiven Connection Pool`s.</p>
+<dd><p>The Connection Pool resource allows the creation and management of Aiven Connection Pools.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -1291,7 +1291,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.Database">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">Database</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">database_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lc_collate</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lc_ctype</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Database" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Database resource allows the creation and management of an Aiven Databases.</p>
+<dd><p>The Database resource allows the creation and management of Aiven Databases.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -1420,7 +1420,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.ElasticSearch">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">ElasticSearch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch</span><span class="p">:</span> <span class="n">Union[ElasticSearchElasticsearchArgs, Mapping[str, Any], Awaitable[Union[ElasticSearchElasticsearchArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">elasticsearch_user_config</span><span class="p">:</span> <span class="n">Union[ElasticSearchElasticsearchUserConfigArgs, Mapping[str, Any], Awaitable[Union[ElasticSearchElasticsearchUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="p">:</span> <span class="n">Union[Sequence[Union[ElasticSearchServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[ElasticSearchServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[ElasticSearchServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[ElasticSearchServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.ElasticSearch" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Elasticsearch resource allows the creation and management of an Aiven Elasticsearch services.</p>
+<dd><p>The Elasticsearch resource allows the creation and management of Aiven Elasticsearch services.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -1451,7 +1451,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -1462,7 +1462,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <li><p><strong>elasticsearch_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ElasticSearchElasticsearchUserConfigArgs'</em><em>]</em><em>]</em>) – defines Elasticsearch specific additional configuration options. 
 The following configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -1488,7 +1488,7 @@ later without destroying and re-creating the service so name should be picked ba
 intended service usage rather than current attributes.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -1507,7 +1507,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -1519,7 +1519,7 @@ internet for service nodes that are in a project VPC or another type of private 
 <li><p><strong>elasticsearch_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ElasticSearchElasticsearchUserConfigArgs'</em><em>]</em><em>]</em>) – defines Elasticsearch specific additional configuration options. 
 The following configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -1552,7 +1552,7 @@ intended service usage rather than current attributes.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -1565,7 +1565,7 @@ deletion is done.</p></li>
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.ElasticSearch.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -1596,7 +1596,7 @@ The following configuration options available:</p>
 <dt id="pulumi_aiven.ElasticSearch.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.ElasticSearch.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1699,7 +1699,7 @@ intended service usage rather than current attributes.</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.ElasticSearch.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -1745,8 +1745,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.ElasticSearchAcl">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">ElasticSearchAcl</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">acls</span><span class="p">:</span> <span class="n">Union[Sequence[Union[ElasticSearchAclAclArgs, Mapping[str, Any], Awaitable[Union[ElasticSearchAclAclArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[ElasticSearchAclAclArgs, Mapping[str, Any], Awaitable[Union[ElasticSearchAclAclArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enabled</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">extended_acl</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.ElasticSearchAcl" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Elasticsearch ACL resource allows the creation and management of an Aiven Elasticsearch ACLs
-for Elasticsearch service.</p>
+<dd><p>The Elasticsearch ACL resource allows the creation and management of ACLs
+for an Aiven Elasticsearch service.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -2031,7 +2031,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">property </em><code class="sig-name descname">accepted</code><a class="headerlink" href="#pulumi_aiven.GetAccountTeamMemberResult.accepted" title="Permalink to this definition">¶</a></dt>
 <dd><p>is a boolean flag that determines whether an invitation was accepted or not by the user. 
 <code class="docutils literal notranslate"><span class="pre">false</span></code> value means that the invitation was sent to the user but not yet accepted.
-<code class="docutils literal notranslate"><span class="pre">true</span></code> means that the user accepted the invitation and now a member of an account team.</p>
+<code class="docutils literal notranslate"><span class="pre">true</span></code> means that the user accepted the invitation and is now a member of an account team.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2123,9 +2123,9 @@ The following configuration options available:</p>
 <dl class="py method">
 <dt id="pulumi_aiven.GetCassandaResult.cloud_name">
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.GetCassandaResult.cloud_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>defines where the cloud provider and region where the service is hosted
-in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+<dd><p>defines the cloud provider and region where the service is hosted. 
+This can be changed freely after service is created. Changing the value will trigger
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -2142,7 +2142,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 <dt id="pulumi_aiven.GetCassandaResult.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.GetCassandaResult.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2217,7 +2217,7 @@ significant amount of time to complete if the service has a lot of data.</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.GetCassandaResult.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -2302,7 +2302,7 @@ be defined using reference as shown above to set up dependencies correctly.</p>
 <dl class="py method">
 <dt id="pulumi_aiven.GetElasticSearchAclResult.enabled">
 <em class="property">property </em><code class="sig-name descname">enabled</code><a class="headerlink" href="#pulumi_aiven.GetElasticSearchAclResult.enabled" title="Permalink to this definition">¶</a></dt>
-<dd><p>enables of disables Elasticsearch ACL’s.</p>
+<dd><p>enables or disables Elasticsearch ACLs.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2330,7 +2330,7 @@ these APIs as long as all operations only target indexes they have been granted 
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.GetElasticSearchResult.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -2360,7 +2360,7 @@ The following configuration options available:</p>
 <dt id="pulumi_aiven.GetElasticSearchResult.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.GetElasticSearchResult.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2435,7 +2435,7 @@ significant amount of time to complete if the service has a lot of data.</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.GetElasticSearchResult.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -2451,7 +2451,7 @@ deletion is done.</p>
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.GetGrafanaResult.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -2481,7 +2481,7 @@ configuration options available:</p>
 <dt id="pulumi_aiven.GetGrafanaResult.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.GetGrafanaResult.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2556,7 +2556,7 @@ significant amount of time to complete if the service has a lot of data.</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.GetGrafanaResult.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -2572,7 +2572,7 @@ deletion is done.</p>
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.GetInfluxDbResult.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -2602,7 +2602,7 @@ configuration options available:</p>
 <dt id="pulumi_aiven.GetInfluxDbResult.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.GetInfluxDbResult.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2677,7 +2677,7 @@ significant amount of time to complete if the service has a lot of data.</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.GetInfluxDbResult.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -2705,7 +2705,7 @@ deletion is done.</p>
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.GetKafkaConnectResult.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -2727,7 +2727,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 <dl class="py method">
 <dt id="pulumi_aiven.GetKafkaConnectResult.kafka_connect_user_config">
 <em class="property">property </em><code class="sig-name descname">kafka_connect_user_config</code><a class="headerlink" href="#pulumi_aiven.GetKafkaConnectResult.kafka_connect_user_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>defines kafka Connect specific additional configuration options. 
+<dd><p>defines Kafka Connect specific additional configuration options. 
 The following configuration options available:</p>
 </dd></dl>
 
@@ -2735,7 +2735,7 @@ The following configuration options available:</p>
 <dt id="pulumi_aiven.GetKafkaConnectResult.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.GetKafkaConnectResult.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2810,7 +2810,7 @@ significant amount of time to complete if the service has a lot of data.</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.GetKafkaConnectResult.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -2881,7 +2881,7 @@ deletion is done.</p>
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.GetKafkaMirrorMakerResult.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -2897,13 +2897,13 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 <dl class="py method">
 <dt id="pulumi_aiven.GetKafkaMirrorMakerResult.kafka_mirrormaker">
 <em class="property">property </em><code class="sig-name descname">kafka_mirrormaker</code><a class="headerlink" href="#pulumi_aiven.GetKafkaMirrorMakerResult.kafka_mirrormaker" title="Permalink to this definition">¶</a></dt>
-<dd><p>Kafka Mirror Maker 2 specific server provided values.</p>
+<dd><p>Kafka MirrorMaker 2 specific server provided values.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_aiven.GetKafkaMirrorMakerResult.kafka_mirrormaker_user_config">
 <em class="property">property </em><code class="sig-name descname">kafka_mirrormaker_user_config</code><a class="headerlink" href="#pulumi_aiven.GetKafkaMirrorMakerResult.kafka_mirrormaker_user_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>defines Kafka Mirror Maker 2 specific additional configuration options. 
+<dd><p>defines Kafka MirrorMaker 2 specific additional configuration options. 
 The following configuration options available:</p>
 </dd></dl>
 
@@ -2911,7 +2911,7 @@ The following configuration options available:</p>
 <dt id="pulumi_aiven.GetKafkaMirrorMakerResult.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.GetKafkaMirrorMakerResult.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2948,31 +2948,31 @@ significant amount of time to complete if the service has a lot of data.</p>
 <dl class="py method">
 <dt id="pulumi_aiven.GetKafkaMirrorMakerResult.service_host">
 <em class="property">property </em><code class="sig-name descname">service_host</code><a class="headerlink" href="#pulumi_aiven.GetKafkaMirrorMakerResult.service_host" title="Permalink to this definition">¶</a></dt>
-<dd><p>Kafka Mirror Maker 2 hostname.</p>
+<dd><p>Kafka MirrorMaker 2 hostname.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_aiven.GetKafkaMirrorMakerResult.service_password">
 <em class="property">property </em><code class="sig-name descname">service_password</code><a class="headerlink" href="#pulumi_aiven.GetKafkaMirrorMakerResult.service_password" title="Permalink to this definition">¶</a></dt>
-<dd><p>Password used for connecting to the Kafka Mirror Maker 2 service, if applicable.</p>
+<dd><p>Password used for connecting to the Kafka MirrorMaker 2 service, if applicable.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_aiven.GetKafkaMirrorMakerResult.service_port">
 <em class="property">property </em><code class="sig-name descname">service_port</code><a class="headerlink" href="#pulumi_aiven.GetKafkaMirrorMakerResult.service_port" title="Permalink to this definition">¶</a></dt>
-<dd><p>Kafka Mirror Maker 2 port.</p>
+<dd><p>Kafka MirrorMaker 2 port.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_aiven.GetKafkaMirrorMakerResult.service_uri">
 <em class="property">property </em><code class="sig-name descname">service_uri</code><a class="headerlink" href="#pulumi_aiven.GetKafkaMirrorMakerResult.service_uri" title="Permalink to this definition">¶</a></dt>
-<dd><p>URI for connecting to the Kafka Mirror Maker 2 service.</p>
+<dd><p>URI for connecting to the Kafka MirrorMaker 2 service.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_aiven.GetKafkaMirrorMakerResult.service_username">
 <em class="property">property </em><code class="sig-name descname">service_username</code><a class="headerlink" href="#pulumi_aiven.GetKafkaMirrorMakerResult.service_username" title="Permalink to this definition">¶</a></dt>
-<dd><p>Username used for connecting to the Kafka Mirror Maker 2 service, if applicable.</p>
+<dd><p>Username used for connecting to the Kafka MirrorMaker 2 service, if applicable.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2986,7 +2986,7 @@ significant amount of time to complete if the service has a lot of data.</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.GetKafkaMirrorMakerResult.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -3002,7 +3002,7 @@ deletion is done.</p>
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.GetKafkaResult.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -3032,7 +3032,7 @@ configuration options available:</p>
 <dt id="pulumi_aiven.GetKafkaResult.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.GetKafkaResult.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3107,7 +3107,7 @@ significant amount of time to complete if the service has a lot of data.</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.GetKafkaResult.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -3171,7 +3171,7 @@ it takes a global value. Allowed values: <code class="docutils literal notransla
 <dl class="py method">
 <dt id="pulumi_aiven.GetKafkaTopicResult.cleanup_policy">
 <em class="property">property </em><code class="sig-name descname">cleanup_policy</code><a class="headerlink" href="#pulumi_aiven.GetKafkaTopicResult.cleanup_policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>cleanup.policy value</p>
+<dd><p>cleanup.policy value, can be <code class="docutils literal notranslate"><span class="pre">create</span></code>, <code class="docutils literal notranslate"><span class="pre">delete</span></code> or <code class="docutils literal notranslate"><span class="pre">compact,delete</span></code></p>
 </dd></dl>
 
 <dl class="py method">
@@ -3227,7 +3227,7 @@ it takes a global value. Allowed values: <code class="docutils literal notransla
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.GetM3AggregatorResult.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -3257,7 +3257,7 @@ The following configuration options available:</p>
 <dt id="pulumi_aiven.GetM3AggregatorResult.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.GetM3AggregatorResult.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3332,7 +3332,7 @@ significant amount of time to complete if the service has a lot of data.</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.GetM3AggregatorResult.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -3348,7 +3348,7 @@ deletion is done.</p>
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.GetM3DbResult.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -3378,7 +3378,7 @@ configuration options available:</p>
 <dt id="pulumi_aiven.GetM3DbResult.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.GetM3DbResult.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3453,7 +3453,7 @@ significant amount of time to complete if the service has a lot of data.</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.GetM3DbResult.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -3467,7 +3467,7 @@ deletion is done.</p>
 <dl class="py method">
 <dt id="pulumi_aiven.GetMirrorMakerReplicationFlowResult.enable">
 <em class="property">property </em><code class="sig-name descname">enable</code><a class="headerlink" href="#pulumi_aiven.GetMirrorMakerReplicationFlowResult.enable" title="Permalink to this definition">¶</a></dt>
-<dd><p>enable of disable replication flows for a mirror maker service</p>
+<dd><p>enable of disable replication flows for a MirrorMaker service</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3499,7 +3499,7 @@ deletion is done.</p>
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.GetMySqlResult.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -3516,7 +3516,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 <dt id="pulumi_aiven.GetMySqlResult.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.GetMySqlResult.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3604,7 +3604,7 @@ significant amount of time to complete if the service has a lot of data.</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.GetMySqlResult.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -3620,7 +3620,7 @@ deletion is done.</p>
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.GetPgResult.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -3637,7 +3637,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 <dt id="pulumi_aiven.GetPgResult.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.GetPgResult.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3725,7 +3725,7 @@ significant amount of time to complete if the service has a lot of data.</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.GetPgResult.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -3734,7 +3734,7 @@ deletion is done.</p>
 
 <dl class="py class">
 <dt id="pulumi_aiven.GetProjectResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetProjectResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_emails</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ca_cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">card_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">copy_from_project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">technical_emails</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetProjectResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">GetProjectResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">account_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">available_credits</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_currency</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_emails</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_extra_text</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ca_cert</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">card_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">copy_from_project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country_code</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_cloud</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">estimated_balance</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">payment_method</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">technical_emails</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vat_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.GetProjectResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getProject.</p>
 <dl class="py method">
 <dt id="pulumi_aiven.GetProjectResult.account_id">
@@ -3839,7 +3839,7 @@ set, only read.</p>
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.GetRedisResult.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -3856,7 +3856,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 <dt id="pulumi_aiven.GetRedisResult.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.GetRedisResult.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -3944,7 +3944,7 @@ configuration options available:</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.GetRedisResult.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -4158,7 +4158,7 @@ therefore cannot be set, only read. Where state can be one of: <code class="docu
 <dl class="py class">
 <dt id="pulumi_aiven.Grafana">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">Grafana</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana</span><span class="p">:</span> <span class="n">Union[GrafanaGrafanaArgs, Mapping[str, Any], Awaitable[Union[GrafanaGrafanaArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">grafana_user_config</span><span class="p">:</span> <span class="n">Union[GrafanaGrafanaUserConfigArgs, Mapping[str, Any], Awaitable[Union[GrafanaGrafanaUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="p">:</span> <span class="n">Union[Sequence[Union[GrafanaServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[GrafanaServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[GrafanaServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[GrafanaServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Grafana" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Grafana resource allows the creation and management of an Aiven Grafana services.</p>
+<dd><p>The Grafana resource allows the creation and management of Aiven Grafana services.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -4184,7 +4184,7 @@ therefore cannot be set, only read. Where state can be one of: <code class="docu
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -4195,7 +4195,7 @@ are in a project VPC or another type of private network.</p></li>
 <li><p><strong>grafana_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'GrafanaGrafanaUserConfigArgs'</em><em>]</em><em>]</em>) – defines Grafana specific additional configuration options. The following 
 configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -4221,7 +4221,7 @@ later without destroying and re-creating the service so name should be picked ba
 intended service usage rather than current attributes.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -4240,7 +4240,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -4252,7 +4252,7 @@ are in a project VPC or another type of private network.</p></li>
 <li><p><strong>grafana_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'GrafanaGrafanaUserConfigArgs'</em><em>]</em><em>]</em>) – defines Grafana specific additional configuration options. The following 
 configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -4285,7 +4285,7 @@ intended service usage rather than current attributes.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -4298,7 +4298,7 @@ deletion is done.</p></li>
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.Grafana.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -4329,7 +4329,7 @@ configuration options available:</p>
 <dt id="pulumi_aiven.Grafana.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.Grafana.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -4432,7 +4432,7 @@ intended service usage rather than current attributes.</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.Grafana.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -4478,7 +4478,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.InfluxDb">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">InfluxDb</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb</span><span class="p">:</span> <span class="n">Union[InfluxDbInfluxdbArgs, Mapping[str, Any], Awaitable[Union[InfluxDbInfluxdbArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">influxdb_user_config</span><span class="p">:</span> <span class="n">Union[InfluxDbInfluxdbUserConfigArgs, Mapping[str, Any], Awaitable[Union[InfluxDbInfluxdbUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="p">:</span> <span class="n">Union[Sequence[Union[InfluxDbServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[InfluxDbServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[InfluxDbServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[InfluxDbServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.InfluxDb" title="Permalink to this definition">¶</a></dt>
-<dd><p>The InfluxDB resource allows the creation and management of an Aiven InfluxDB services.</p>
+<dd><p>The InfluxDB resource allows the creation and management of Aiven InfluxDB services.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -4503,7 +4503,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -4513,7 +4513,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 <li><p><strong>influxdb_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'InfluxDbInfluxdbUserConfigArgs'</em><em>]</em><em>]</em>) – defines InfluxDB specific additional configuration options. The following 
 configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -4539,7 +4539,7 @@ later without destroying and re-creating the service so name should be picked ba
 intended service usage rather than current attributes.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -4558,7 +4558,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -4569,7 +4569,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 <li><p><strong>influxdb_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'InfluxDbInfluxdbUserConfigArgs'</em><em>]</em><em>]</em>) – defines InfluxDB specific additional configuration options. The following 
 configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -4602,7 +4602,7 @@ intended service usage rather than current attributes.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -4615,7 +4615,7 @@ deletion is done.</p></li>
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.InfluxDb.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -4645,7 +4645,7 @@ configuration options available:</p>
 <dt id="pulumi_aiven.InfluxDb.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.InfluxDb.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -4748,7 +4748,7 @@ intended service usage rather than current attributes.</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.InfluxDb.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -4794,7 +4794,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.Kafka">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">Kafka</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_acl</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka</span><span class="p">:</span> <span class="n">Union[KafkaKafkaArgs, Mapping[str, Any], Awaitable[Union[KafkaKafkaArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_user_config</span><span class="p">:</span> <span class="n">Union[KafkaKafkaUserConfigArgs, Mapping[str, Any], Awaitable[Union[KafkaKafkaUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="p">:</span> <span class="n">Union[Sequence[Union[KafkaServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[KafkaServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[KafkaServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[KafkaServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Kafka" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Kafka resource allows the creation and management of an Aiven Kafka services.</p>
+<dd><p>The Kafka resource allows the creation and management of Aiven Kafka services.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -4828,7 +4828,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -4840,7 +4840,7 @@ nodes that are in a project VPC or another type of private network</p></li>
 <li><p><strong>kafka_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'KafkaKafkaUserConfigArgs'</em><em>]</em><em>]</em>) – defines Kafka specific additional configuration options. The following 
 configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -4866,7 +4866,7 @@ later without destroying and re-creating the service so name should be picked ba
 intended service usage rather than current attributes.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -4885,7 +4885,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -4898,7 +4898,7 @@ nodes that are in a project VPC or another type of private network</p></li>
 <li><p><strong>kafka_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'KafkaKafkaUserConfigArgs'</em><em>]</em><em>]</em>) – defines Kafka specific additional configuration options. The following 
 configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -4931,7 +4931,7 @@ intended service usage rather than current attributes.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -4944,7 +4944,7 @@ deletion is done.</p></li>
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.Kafka.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -4981,7 +4981,7 @@ configuration options available:</p>
 <dt id="pulumi_aiven.Kafka.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.Kafka.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5084,7 +5084,7 @@ intended service usage rather than current attributes.</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.Kafka.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -5130,7 +5130,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.KafkaAcl">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">KafkaAcl</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permission</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.KafkaAcl" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Resource Kafka ACL resource allows the creation and management of an Aiven Kafka ACL`s for a Kafka service.</p>
+<dd><p>The Resource Kafka ACL resource allows the creation and management of ACLs for an Aiven Kafka service.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -5259,7 +5259,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.KafkaConnect">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">KafkaConnect</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect</span><span class="p">:</span> <span class="n">Union[KafkaConnectKafkaConnectArgs, Mapping[str, Any], Awaitable[Union[KafkaConnectKafkaConnectArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect_user_config</span><span class="p">:</span> <span class="n">Union[KafkaConnectKafkaConnectUserConfigArgs, Mapping[str, Any], Awaitable[Union[KafkaConnectKafkaConnectUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="p">:</span> <span class="n">Union[Sequence[Union[KafkaConnectServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[KafkaConnectServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[KafkaConnectServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[KafkaConnectServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.KafkaConnect" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Kafka Connect resource allows the creation and management of an Aiven Kafka Connect services.</p>
+<dd><p>The Kafka Connect resource allows the creation and management of Aiven Kafka Connect services.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -5287,7 +5287,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -5298,7 +5298,7 @@ service nodes that are in a project VPC or another type of private network.</p><
 <li><p><strong>kafka_connect_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'KafkaConnectKafkaConnectUserConfigArgs'</em><em>]</em><em>]</em>) – defines kafka Connect specific additional configuration options. 
 The following configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -5324,7 +5324,7 @@ later without destroying and re-creating the service so name should be picked ba
 intended service usage rather than current attributes.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -5343,7 +5343,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -5355,7 +5355,7 @@ service nodes that are in a project VPC or another type of private network.</p><
 <li><p><strong>kafka_connect_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'KafkaConnectKafkaConnectUserConfigArgs'</em><em>]</em><em>]</em>) – defines kafka Connect specific additional configuration options. 
 The following configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -5388,7 +5388,7 @@ intended service usage rather than current attributes.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -5401,7 +5401,7 @@ deletion is done.</p></li>
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.KafkaConnect.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -5432,7 +5432,7 @@ The following configuration options available:</p>
 <dt id="pulumi_aiven.KafkaConnect.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.KafkaConnect.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5535,7 +5535,7 @@ intended service usage rather than current attributes.</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.KafkaConnect.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -5581,7 +5581,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.KafkaConnector">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">KafkaConnector</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Union[Mapping[str, Union[str, Awaitable[str], Output[T]]], Awaitable[Mapping[str, Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">connector_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.KafkaConnector" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Kafka connectors resource allows the creation and management of an Aiven Kafka connectors.</p>
+<dd><p>The Kafka connectors resource allows the creation and management of Aiven Kafka connectors.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -5753,7 +5753,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.KafkaMirrorMaker">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">KafkaMirrorMaker</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker</span><span class="p">:</span> <span class="n">Union[KafkaMirrorMakerKafkaMirrormakerArgs, Mapping[str, Any], Awaitable[Union[KafkaMirrorMakerKafkaMirrormakerArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="n">Union[KafkaMirrorMakerKafkaMirrormakerUserConfigArgs, Mapping[str, Any], Awaitable[Union[KafkaMirrorMakerKafkaMirrormakerUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="p">:</span> <span class="n">Union[Sequence[Union[KafkaMirrorMakerServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[KafkaMirrorMakerServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[KafkaMirrorMakerServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[KafkaMirrorMakerServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Kafka Mirror Maker resource allows the creation and management of an Aiven Kafka Mirror Maker 2 services.</p>
+<dd><p>The Kafka MirrorMaker resource allows the creation and management of Aiven Kafka MirrorMaker 2 services.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -5779,17 +5779,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
 <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html">here for AWS</a>.</p>
 </p></li>
 <li><p><strong>kafka_mirrormaker</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'KafkaMirrorMakerKafkaMirrormakerArgs'</em><em>]</em><em>]</em>) – Kafka MirrorMaker configuration values</p></li>
-<li><p><strong>kafka_mirrormaker_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'KafkaMirrorMakerKafkaMirrormakerUserConfigArgs'</em><em>]</em><em>]</em>) – defines Kafka Mirror Maker 2 specific additional configuration options. 
+<li><p><strong>kafka_mirrormaker_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'KafkaMirrorMakerKafkaMirrormakerUserConfigArgs'</em><em>]</em><em>]</em>) – defines Kafka MirrorMaker 2 specific additional configuration options. 
 The following configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -5815,7 +5815,7 @@ later without destroying and re-creating the service so name should be picked ba
 intended service usage rather than current attributes.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -5834,7 +5834,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -5842,10 +5842,10 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 </p></li>
 <li><p><strong>components</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'KafkaMirrorMakerComponentArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Service component information objects</p></li>
 <li><p><strong>kafka_mirrormaker</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'KafkaMirrorMakerKafkaMirrormakerArgs'</em><em>]</em><em>]</em>) – Kafka MirrorMaker configuration values</p></li>
-<li><p><strong>kafka_mirrormaker_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'KafkaMirrorMakerKafkaMirrormakerUserConfigArgs'</em><em>]</em><em>]</em>) – defines Kafka Mirror Maker 2 specific additional configuration options. 
+<li><p><strong>kafka_mirrormaker_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'KafkaMirrorMakerKafkaMirrormakerUserConfigArgs'</em><em>]</em><em>]</em>) – defines Kafka MirrorMaker 2 specific additional configuration options. 
 The following configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -5865,20 +5865,20 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.</p></li>
-<li><p><strong>service_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Kafka Mirror Maker 2 hostname.</p></li>
+<li><p><strong>service_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Kafka MirrorMaker 2 hostname.</p></li>
 <li><p><strong>service_integrations</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'KafkaMirrorMakerServiceIntegrationArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Service integrations to specify when creating a service. Not applied after initial service creation</p></li>
 <li><p><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.</p></li>
-<li><p><strong>service_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password used for connecting to the Kafka Mirror Maker 2 service, if applicable.</p></li>
-<li><p><strong>service_port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Kafka Mirror Maker 2 port.</p></li>
+<li><p><strong>service_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password used for connecting to the Kafka MirrorMaker 2 service, if applicable.</p></li>
+<li><p><strong>service_port</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Kafka MirrorMaker 2 port.</p></li>
 <li><p><strong>service_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Aiven internal service type code</p></li>
-<li><p><strong>service_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URI for connecting to the Kafka Mirror Maker 2 service.</p></li>
-<li><p><strong>service_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username used for connecting to the Kafka Mirror Maker 2 service, if applicable.</p></li>
+<li><p><strong>service_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – URI for connecting to the Kafka MirrorMaker 2 service.</p></li>
+<li><p><strong>service_username</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Username used for connecting to the Kafka MirrorMaker 2 service, if applicable.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -5891,7 +5891,7 @@ deletion is done.</p></li>
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -5913,7 +5913,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 <dl class="py method">
 <dt id="pulumi_aiven.KafkaMirrorMaker.kafka_mirrormaker_user_config">
 <em class="property">property </em><code class="sig-name descname">kafka_mirrormaker_user_config</code><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.kafka_mirrormaker_user_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>defines Kafka Mirror Maker 2 specific additional configuration options. 
+<dd><p>defines Kafka MirrorMaker 2 specific additional configuration options. 
 The following configuration options available:</p>
 </dd></dl>
 
@@ -5921,7 +5921,7 @@ The following configuration options available:</p>
 <dt id="pulumi_aiven.KafkaMirrorMaker.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5966,7 +5966,7 @@ significant amount of time to complete if the service has a lot of data.</p>
 <dl class="py method">
 <dt id="pulumi_aiven.KafkaMirrorMaker.service_host">
 <em class="property">property </em><code class="sig-name descname">service_host</code><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.service_host" title="Permalink to this definition">¶</a></dt>
-<dd><p>Kafka Mirror Maker 2 hostname.</p>
+<dd><p>Kafka MirrorMaker 2 hostname.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -5986,13 +5986,13 @@ intended service usage rather than current attributes.</p>
 <dl class="py method">
 <dt id="pulumi_aiven.KafkaMirrorMaker.service_password">
 <em class="property">property </em><code class="sig-name descname">service_password</code><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.service_password" title="Permalink to this definition">¶</a></dt>
-<dd><p>Password used for connecting to the Kafka Mirror Maker 2 service, if applicable.</p>
+<dd><p>Password used for connecting to the Kafka MirrorMaker 2 service, if applicable.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_aiven.KafkaMirrorMaker.service_port">
 <em class="property">property </em><code class="sig-name descname">service_port</code><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.service_port" title="Permalink to this definition">¶</a></dt>
-<dd><p>Kafka Mirror Maker 2 port.</p>
+<dd><p>Kafka MirrorMaker 2 port.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -6004,13 +6004,13 @@ intended service usage rather than current attributes.</p>
 <dl class="py method">
 <dt id="pulumi_aiven.KafkaMirrorMaker.service_uri">
 <em class="property">property </em><code class="sig-name descname">service_uri</code><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.service_uri" title="Permalink to this definition">¶</a></dt>
-<dd><p>URI for connecting to the Kafka Mirror Maker 2 service.</p>
+<dd><p>URI for connecting to the Kafka MirrorMaker 2 service.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_aiven.KafkaMirrorMaker.service_username">
 <em class="property">property </em><code class="sig-name descname">service_username</code><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.service_username" title="Permalink to this definition">¶</a></dt>
-<dd><p>Username used for connecting to the Kafka Mirror Maker 2 service, if applicable.</p>
+<dd><p>Username used for connecting to the Kafka MirrorMaker 2 service, if applicable.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -6024,7 +6024,7 @@ intended service usage rather than current attributes.</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.KafkaMirrorMaker.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -6070,7 +6070,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.KafkaSchema">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">KafkaSchema</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compatibility_level</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">schema</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subject_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.KafkaSchema" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Kafka Schema resource allows the creation and management of an Aiven Kafka Schemas.</p>
+<dd><p>The Kafka Schema resource allows the creation and management of Aiven Kafka Schemas.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -6219,7 +6219,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.KafkaSchemaConfiguration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">KafkaSchemaConfiguration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compatibility_level</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.KafkaSchemaConfiguration" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Kafka Schema Configuration resource allows the creation and management of an Aiven Kafka Schema Configurations.</p>
+<dd><p>The Kafka Schema Configuration resource allows the creation and management of Aiven Kafka Schema Configurations.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -6336,18 +6336,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.KafkaTopic">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">KafkaTopic</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cleanup_policy</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n">Union[KafkaTopicConfigArgs, Mapping[str, Any], Awaitable[Union[KafkaTopicConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimum_in_sync_replicas</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partitions</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">replication</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_bytes</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retention_hours</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topic_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.KafkaTopic" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Kafka Topic resource allows the creation and management of an Aiven Kafka Topic`s.</p>
+<dd><p>The Kafka Topic resource allows the creation and management of Aiven Kafka Topics.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
 <span class="n">mytesttopic</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">KafkaTopic</span><span class="p">(</span><span class="s2">&quot;mytesttopic&quot;</span><span class="p">,</span>
-    <span class="n">cleanup_policy</span><span class="o">=</span><span class="s2">&quot;delete&quot;</span><span class="p">,</span>
-    <span class="n">minimum_in_sync_replicas</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">config</span><span class="o">=</span><span class="n">aiven</span><span class="o">.</span><span class="n">KafkaTopicConfigArgs</span><span class="p">(</span>
+        <span class="n">cleanup_policy</span><span class="o">=</span><span class="s2">&quot;compact,delete&quot;</span><span class="p">,</span>
+        <span class="n">flush_ms</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">,</span>
+        <span class="n">unclean_leader_election_enable</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+    <span class="p">),</span>
     <span class="n">partitions</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
     <span class="n">project</span><span class="o">=</span><span class="n">aiven_project</span><span class="p">[</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
     <span class="n">replication</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
-    <span class="n">retention_bytes</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
-    <span class="n">retention_hours</span><span class="o">=</span><span class="mi">72</span><span class="p">,</span>
     <span class="n">service_name</span><span class="o">=</span><span class="n">aiven_service</span><span class="p">[</span><span class="s2">&quot;myservice&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">],</span>
     <span class="n">termination_protection</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">topic_name</span><span class="o">=</span><span class="s2">&quot;&lt;TOPIC_NAME&gt;&quot;</span><span class="p">)</span>
@@ -6358,7 +6359,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>cleanup_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – cleanup.policy value</p></li>
+<li><p><strong>cleanup_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – cleanup.policy value, can be <code class="docutils literal notranslate"><span class="pre">create</span></code>, <code class="docutils literal notranslate"><span class="pre">delete</span></code> or <code class="docutils literal notranslate"><span class="pre">compact,delete</span></code></p></li>
 <li><p><strong>config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'KafkaTopicConfigArgs'</em><em>]</em><em>]</em>) – Kafka topic configuration</p></li>
 <li><p><strong>minimum_in_sync_replicas</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Minimum required nodes in-sync replicas 
 (ISR) to produce to a partition.</p></li>
@@ -6390,7 +6391,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>cleanup_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – cleanup.policy value</p></li>
+<li><p><strong>cleanup_policy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – cleanup.policy value, can be <code class="docutils literal notranslate"><span class="pre">create</span></code>, <code class="docutils literal notranslate"><span class="pre">delete</span></code> or <code class="docutils literal notranslate"><span class="pre">compact,delete</span></code></p></li>
 <li><p><strong>config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'KafkaTopicConfigArgs'</em><em>]</em><em>]</em>) – Kafka topic configuration</p></li>
 <li><p><strong>minimum_in_sync_replicas</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Minimum required nodes in-sync replicas 
 (ISR) to produce to a partition.</p></li>
@@ -6416,7 +6417,7 @@ created instead.</p></li>
 <dl class="py method">
 <dt id="pulumi_aiven.KafkaTopic.cleanup_policy">
 <em class="property">property </em><code class="sig-name descname">cleanup_policy</code><a class="headerlink" href="#pulumi_aiven.KafkaTopic.cleanup_policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>cleanup.policy value</p>
+<dd><p>cleanup.policy value, can be <code class="docutils literal notranslate"><span class="pre">create</span></code>, <code class="docutils literal notranslate"><span class="pre">delete</span></code> or <code class="docutils literal notranslate"><span class="pre">compact,delete</span></code></p>
 </dd></dl>
 
 <dl class="py method">
@@ -6527,7 +6528,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.M3Aggregator">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">M3Aggregator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">m3aggregator</span><span class="p">:</span> <span class="n">Union[M3AggregatorM3aggregatorArgs, Mapping[str, Any], Awaitable[Union[M3AggregatorM3aggregatorArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">m3aggregator_user_config</span><span class="p">:</span> <span class="n">Union[M3AggregatorM3aggregatorUserConfigArgs, Mapping[str, Any], Awaitable[Union[M3AggregatorM3aggregatorUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="p">:</span> <span class="n">Union[Sequence[Union[M3AggregatorServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[M3AggregatorServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[M3AggregatorServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[M3AggregatorServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.M3Aggregator" title="Permalink to this definition">¶</a></dt>
-<dd><p>The M3 Aggregator resource allows the creation and management of an Aiven Aggregator services.</p>
+<dd><p>The M3 Aggregator resource allows the creation and management of Aiven M3 Aggregator services.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -6550,7 +6551,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -6560,7 +6561,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 <li><p><strong>m3aggregator_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'M3AggregatorM3aggregatorUserConfigArgs'</em><em>]</em><em>]</em>) – defines M3 Aggregator specific additional configuration options. 
 The following configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -6586,7 +6587,7 @@ later without destroying and re-creating the service so name should be picked ba
 intended service usage rather than current attributes.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -6605,7 +6606,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -6616,7 +6617,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 <li><p><strong>m3aggregator_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'M3AggregatorM3aggregatorUserConfigArgs'</em><em>]</em><em>]</em>) – defines M3 Aggregator specific additional configuration options. 
 The following configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -6649,7 +6650,7 @@ intended service usage rather than current attributes.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -6662,7 +6663,7 @@ deletion is done.</p></li>
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.M3Aggregator.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -6692,7 +6693,7 @@ The following configuration options available:</p>
 <dt id="pulumi_aiven.M3Aggregator.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.M3Aggregator.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -6795,7 +6796,7 @@ intended service usage rather than current attributes.</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.M3Aggregator.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -6841,7 +6842,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.M3Db">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">M3Db</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">m3db</span><span class="p">:</span> <span class="n">Union[M3DbM3dbArgs, Mapping[str, Any], Awaitable[Union[M3DbM3dbArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">m3db_user_config</span><span class="p">:</span> <span class="n">Union[M3DbM3dbUserConfigArgs, Mapping[str, Any], Awaitable[Union[M3DbM3dbUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="p">:</span> <span class="n">Union[Sequence[Union[M3DbServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[M3DbServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[M3DbServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[M3DbServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.M3Db" title="Permalink to this definition">¶</a></dt>
-<dd><p>The M3 DB resource allows the creation and management of an Aiven M3 services.</p>
+<dd><p>The M3 DB resource allows the creation and management of Aiven M3 services.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -6868,7 +6869,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -6878,7 +6879,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 <li><p><strong>m3db_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'M3DbM3dbUserConfigArgs'</em><em>]</em><em>]</em>) – defines M3 specific additional configuration options. The following 
 configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -6904,7 +6905,7 @@ later without destroying and re-creating the service so name should be picked ba
 intended service usage rather than current attributes.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -6923,7 +6924,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -6934,7 +6935,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 <li><p><strong>m3db_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'M3DbM3dbUserConfigArgs'</em><em>]</em><em>]</em>) – defines M3 specific additional configuration options. The following 
 configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -6967,7 +6968,7 @@ intended service usage rather than current attributes.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -6980,7 +6981,7 @@ deletion is done.</p></li>
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.M3Db.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -7010,7 +7011,7 @@ configuration options available:</p>
 <dt id="pulumi_aiven.M3Db.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.M3Db.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -7113,7 +7114,7 @@ intended service usage rather than current attributes.</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.M3Db.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -7160,7 +7161,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aiven.MirrorMakerReplicationFlow">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">MirrorMakerReplicationFlow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_cluster</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_cluster</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topics</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">topics_blacklists</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.MirrorMakerReplicationFlow" title="Permalink to this definition">¶</a></dt>
 <dd><p>The MirrorMaker 2 Replication Flow resource allows the creation and management of MirrorMaker 2
-Replication Flow on Aiven Cloud.</p>
+Replication Flows on Aiven Cloud.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -7183,7 +7184,7 @@ Replication Flow on Aiven Cloud.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>enable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – enable of disable replication flows for a mirror maker service</p></li>
+<li><p><strong>enable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – enable of disable replication flows for a MirrorMaker service</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – and <code class="docutils literal notranslate"><span class="pre">service_name</span></code> - (Required) define the project and service the Kafka MirrorMaker Replication 
 Flow belongs to. They should be defined using reference as shown above to set up dependencies correctly.</p></li>
 <li><p><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service to link the kafka topic to</p></li>
@@ -7205,7 +7206,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>enable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – enable of disable replication flows for a mirror maker service</p></li>
+<li><p><strong>enable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – enable of disable replication flows for a MirrorMaker service</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – and <code class="docutils literal notranslate"><span class="pre">service_name</span></code> - (Required) define the project and service the Kafka MirrorMaker Replication 
 Flow belongs to. They should be defined using reference as shown above to set up dependencies correctly.</p></li>
 <li><p><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service to link the kafka topic to</p></li>
@@ -7221,7 +7222,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
 <dl class="py method">
 <dt id="pulumi_aiven.MirrorMakerReplicationFlow.enable">
 <em class="property">property </em><code class="sig-name descname">enable</code><a class="headerlink" href="#pulumi_aiven.MirrorMakerReplicationFlow.enable" title="Permalink to this definition">¶</a></dt>
-<dd><p>enable of disable replication flows for a mirror maker service</p>
+<dd><p>enable of disable replication flows for a MirrorMaker service</p>
 </dd></dl>
 
 <dl class="py method">
@@ -7302,7 +7303,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.MySql">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">MySql</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql</span><span class="p">:</span> <span class="n">Union[MySqlMysqlArgs, Mapping[str, Any], Awaitable[Union[MySqlMysqlArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mysql_user_config</span><span class="p">:</span> <span class="n">Union[MySqlMysqlUserConfigArgs, Mapping[str, Any], Awaitable[Union[MySqlMysqlUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="p">:</span> <span class="n">Union[Sequence[Union[MySqlServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[MySqlServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[MySqlServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[MySqlServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.MySql" title="Permalink to this definition">¶</a></dt>
-<dd><p>The MySQL resource allows the creation and management of an Aiven MySQL services.</p>
+<dd><p>The MySQL resource allows the creation and management of Aiven MySQL services.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -7332,14 +7333,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
 <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html">here for AWS</a>.</p>
 </p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>mysql</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'MySqlMysqlArgs'</em><em>]</em><em>]</em>) – Allow clients to connect to mysql from the public internet for service 
@@ -7372,7 +7373,7 @@ later without destroying and re-creating the service so name should be picked ba
 intended service usage rather than current attributes.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -7391,7 +7392,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -7399,7 +7400,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 </p></li>
 <li><p><strong>components</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'MySqlComponentArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Service component information objects</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>mysql</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'MySqlMysqlArgs'</em><em>]</em><em>]</em>) – Allow clients to connect to mysql from the public internet for service 
@@ -7439,7 +7440,7 @@ intended service usage rather than current attributes.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -7452,7 +7453,7 @@ deletion is done.</p></li>
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.MySql.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -7469,7 +7470,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 <dt id="pulumi_aiven.MySql.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.MySql.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -7589,7 +7590,7 @@ intended service usage rather than current attributes.</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.MySql.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -7635,7 +7636,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.Pg">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">Pg</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg</span><span class="p">:</span> <span class="n">Union[PgPgArgs, Mapping[str, Any], Awaitable[Union[PgPgArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pg_user_config</span><span class="p">:</span> <span class="n">Union[PgPgUserConfigArgs, Mapping[str, Any], Awaitable[Union[PgPgUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="p">:</span> <span class="n">Union[Sequence[Union[PgServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[PgServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[PgServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[PgServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Pg" title="Permalink to this definition">¶</a></dt>
-<dd><p>The PG resource allows the creation and management of an Aiven PostgreSQL services.</p>
+<dd><p>The PG resource allows the creation and management of Aiven PostgreSQL services.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7643,14 +7644,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
 <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html">here for AWS</a>.</p>
 </p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>pg</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'PgPgArgs'</em><em>]</em><em>]</em>) – Allow clients to connect to pg from the public internet for service nodes
@@ -7680,7 +7681,7 @@ later without destroying and re-creating the service so name should be picked ba
 intended service usage rather than current attributes.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -7699,7 +7700,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -7707,7 +7708,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 </p></li>
 <li><p><strong>components</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'PgComponentArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Service component information objects</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>pg</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'PgPgArgs'</em><em>]</em><em>]</em>) – Allow clients to connect to pg from the public internet for service nodes
@@ -7744,7 +7745,7 @@ intended service usage rather than current attributes.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -7757,7 +7758,7 @@ deletion is done.</p></li>
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.Pg.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -7774,7 +7775,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 <dt id="pulumi_aiven.Pg.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.Pg.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -7891,7 +7892,7 @@ intended service usage rather than current attributes.</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.Pg.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -7936,8 +7937,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_aiven.Project">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_address</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_emails</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ca_cert</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">card_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">copy_from_project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country_code</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">technical_emails</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Project" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Project resource allows the creation and management of an Aiven Projects.</p>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">available_credits</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_address</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_currency</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_emails</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_extra_text</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ca_cert</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">card_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">copy_from_project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country_code</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_cloud</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">technical_emails</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vat_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Project resource allows the creation and management of Aiven Projects.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -7945,8 +7946,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – is an optional property to link a project to already an existing account by 
 using account ID.</p></li>
+<li><p><strong>available_credits</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Available credits</p></li>
 <li><p><strong>billing_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Billing name and address of the project</p></li>
+<li><p><strong>billing_currency</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Billing currency</p></li>
 <li><p><strong>billing_emails</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – Billing contact emails of the project</p></li>
+<li><p><strong>billing_extra_text</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Extra text to be included in all project invoices, e.g. purchase order or cost center number</p></li>
 <li><p><strong>ca_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – is a computed property that can be used to read the CA certificate of the
 project. This is required for configuring clients that connect to certain services like
 Kafka. This value cannot be set, only read.</p></li>
@@ -7960,16 +7964,18 @@ an existing project has billing type set to invoice and that needs to be copied 
 new project. (Setting billing is otherwise not allowed over the API.) This only has
 effect when the project is created.</p></li>
 <li><p><strong>country_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Billing country code of the project</p></li>
+<li><p><strong>default_cloud</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Default cloud for new services</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines the name of the project. Name must be globally unique (between all
 Aiven customers) and cannot be changed later without destroying and re-creating the
 project, including all sub-resources.</p></li>
 <li><p><strong>technical_emails</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – Technical contact emails of the project</p></li>
+<li><p><strong>vat_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – EU VAT Identification Number</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py method">
 <dt id="pulumi_aiven.Project.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_address</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_emails</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ca_cert</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">card_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">copy_from_project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country_code</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">technical_emails</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_aiven.project.Project<a class="headerlink" href="#pulumi_aiven.Project.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">available_credits</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_address</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_currency</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_emails</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_extra_text</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ca_cert</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">card_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">copy_from_project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country_code</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_cloud</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">estimated_balance</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">payment_method</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">technical_emails</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vat_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_aiven.project.Project<a class="headerlink" href="#pulumi_aiven.Project.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Project resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -7980,8 +7986,11 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – is an optional property to link a project to already an existing account by 
 using account ID.</p></li>
+<li><p><strong>available_credits</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Available credits</p></li>
 <li><p><strong>billing_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Billing name and address of the project</p></li>
+<li><p><strong>billing_currency</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Billing currency</p></li>
 <li><p><strong>billing_emails</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – Billing contact emails of the project</p></li>
+<li><p><strong>billing_extra_text</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Extra text to be included in all project invoices, e.g. purchase order or cost center number</p></li>
 <li><p><strong>ca_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – is a computed property that can be used to read the CA certificate of the
 project. This is required for configuring clients that connect to certain services like
 Kafka. This value cannot be set, only read.</p></li>
@@ -7994,11 +8003,16 @@ some other project attributes like technical contacts from. This is mostly relev
 an existing project has billing type set to invoice and that needs to be copied over to a
 new project. (Setting billing is otherwise not allowed over the API.) This only has
 effect when the project is created.</p></li>
+<li><p><strong>country</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Billing country</p></li>
 <li><p><strong>country_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Billing country code of the project</p></li>
+<li><p><strong>default_cloud</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Default cloud for new services</p></li>
+<li><p><strong>estimated_balance</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Estimated balance</p></li>
+<li><p><strong>payment_method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Payment method</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines the name of the project. Name must be globally unique (between all
 Aiven customers) and cannot be changed later without destroying and re-creating the
 project, including all sub-resources.</p></li>
 <li><p><strong>technical_emails</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – Technical contact emails of the project</p></li>
+<li><p><strong>vat_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – EU VAT Identification Number</p></li>
 </ul>
 </dd>
 </dl>
@@ -8012,15 +8026,33 @@ using account ID.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi_aiven.Project.available_credits">
+<em class="property">property </em><code class="sig-name descname">available_credits</code><a class="headerlink" href="#pulumi_aiven.Project.available_credits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Available credits</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_aiven.Project.billing_address">
 <em class="property">property </em><code class="sig-name descname">billing_address</code><a class="headerlink" href="#pulumi_aiven.Project.billing_address" title="Permalink to this definition">¶</a></dt>
 <dd><p>Billing name and address of the project</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi_aiven.Project.billing_currency">
+<em class="property">property </em><code class="sig-name descname">billing_currency</code><a class="headerlink" href="#pulumi_aiven.Project.billing_currency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Billing currency</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_aiven.Project.billing_emails">
 <em class="property">property </em><code class="sig-name descname">billing_emails</code><a class="headerlink" href="#pulumi_aiven.Project.billing_emails" title="Permalink to this definition">¶</a></dt>
 <dd><p>Billing contact emails of the project</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.Project.billing_extra_text">
+<em class="property">property </em><code class="sig-name descname">billing_extra_text</code><a class="headerlink" href="#pulumi_aiven.Project.billing_extra_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extra text to be included in all project invoices, e.g. purchase order or cost center number</p>
 </dd></dl>
 
 <dl class="py method">
@@ -8051,9 +8083,33 @@ effect when the project is created.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi_aiven.Project.country">
+<em class="property">property </em><code class="sig-name descname">country</code><a class="headerlink" href="#pulumi_aiven.Project.country" title="Permalink to this definition">¶</a></dt>
+<dd><p>Billing country</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_aiven.Project.country_code">
 <em class="property">property </em><code class="sig-name descname">country_code</code><a class="headerlink" href="#pulumi_aiven.Project.country_code" title="Permalink to this definition">¶</a></dt>
 <dd><p>Billing country code of the project</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.Project.default_cloud">
+<em class="property">property </em><code class="sig-name descname">default_cloud</code><a class="headerlink" href="#pulumi_aiven.Project.default_cloud" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default cloud for new services</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.Project.estimated_balance">
+<em class="property">property </em><code class="sig-name descname">estimated_balance</code><a class="headerlink" href="#pulumi_aiven.Project.estimated_balance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimated balance</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.Project.payment_method">
+<em class="property">property </em><code class="sig-name descname">payment_method</code><a class="headerlink" href="#pulumi_aiven.Project.payment_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Payment method</p>
 </dd></dl>
 
 <dl class="py method">
@@ -8068,6 +8124,12 @@ project, including all sub-resources.</p>
 <dt id="pulumi_aiven.Project.technical_emails">
 <em class="property">property </em><code class="sig-name descname">technical_emails</code><a class="headerlink" href="#pulumi_aiven.Project.technical_emails" title="Permalink to this definition">¶</a></dt>
 <dd><p>Technical contact emails of the project</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aiven.Project.vat_id">
+<em class="property">property </em><code class="sig-name descname">vat_id</code><a class="headerlink" href="#pulumi_aiven.Project.vat_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>EU VAT Identification Number</p>
 </dd></dl>
 
 <dl class="py method">
@@ -8111,7 +8173,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.ProjectUser">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">ProjectUser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">email</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">member_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.ProjectUser" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Project User resource allows the creation and management of an Aiven Project Users.</p>
+<dd><p>The Project User resource allows the creation and management of Aiven Project Users.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -8223,7 +8285,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.ProjectVpc">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">ProjectVpc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">network_cidr</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.ProjectVpc" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Project VPC resource allows the creation and management of an Aiven Project VPCs.</p>
+<dd><p>The Project VPC resource allows the creation and management of Aiven Project VPCs.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -8388,7 +8450,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.Redis">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">Redis</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cloud_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis</span><span class="p">:</span> <span class="n">Union[RedisRedisArgs, Mapping[str, Any], Awaitable[Union[RedisRedisArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">redis_user_config</span><span class="p">:</span> <span class="n">Union[RedisRedisUserConfigArgs, Mapping[str, Any], Awaitable[Union[RedisRedisUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="p">:</span> <span class="n">Union[Sequence[Union[RedisServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[RedisServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[RedisServiceIntegrationArgs, Mapping[str, Any], Awaitable[Union[RedisServiceIntegrationArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.Redis" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Redis resource allows the creation and management of an Aiven Redis services.</p>
+<dd><p>The Redis resource allows the creation and management of Aiven Redis services.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -8414,14 +8476,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
 <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html">here for AWS</a>.</p>
 </p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -8451,7 +8513,7 @@ later without destroying and re-creating the service so name should be picked ba
 intended service usage rather than current attributes.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -8470,7 +8532,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>cloud_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -8478,7 +8540,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 </p></li>
 <li><p><strong>components</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'RedisComponentArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – Service component information objects</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -8515,7 +8577,7 @@ intended service usage rather than current attributes.</p></li>
 <li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -8528,7 +8590,7 @@ deletion is done.</p></li>
 <em class="property">property </em><code class="sig-name descname">cloud_name</code><a class="headerlink" href="#pulumi_aiven.Redis.cloud_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -8545,7 +8607,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 <dt id="pulumi_aiven.Redis.maintenance_window_dow">
 <em class="property">property </em><code class="sig-name descname">maintenance_window_dow</code><a class="headerlink" href="#pulumi_aiven.Redis.maintenance_window_dow" title="Permalink to this definition">¶</a></dt>
 <dd><p>day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p>
+On monday, tuesday, wednesday, etc.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -8662,7 +8724,7 @@ intended service usage rather than current attributes.</p>
 <em class="property">property </em><code class="sig-name descname">termination_protection</code><a class="headerlink" href="#pulumi_aiven.Redis.termination_protection" title="Permalink to this definition">¶</a></dt>
 <dd><p>prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p>
 </dd></dl>
@@ -9057,7 +9119,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.ServiceIntegration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">ServiceIntegration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_endpoint_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">destination_service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integration_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_connect_user_config</span><span class="p">:</span> <span class="n">Union[ServiceIntegrationKafkaConnectUserConfigArgs, Mapping[str, Any], Awaitable[Union[ServiceIntegrationKafkaConnectUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="n">Union[ServiceIntegrationKafkaMirrormakerUserConfigArgs, Mapping[str, Any], Awaitable[Union[ServiceIntegrationKafkaMirrormakerUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">logs_user_config</span><span class="p">:</span> <span class="n">Union[ServiceIntegrationLogsUserConfigArgs, Mapping[str, Any], Awaitable[Union[ServiceIntegrationLogsUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">mirrormaker_user_config</span><span class="p">:</span> <span class="n">Union[ServiceIntegrationMirrormakerUserConfigArgs, Mapping[str, Any], Awaitable[Union[ServiceIntegrationMirrormakerUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_endpoint_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">source_service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.ServiceIntegration" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Service Integration resource allows the creation and management of an Aiven Service Integration`s.</p>
+<dd><p>The Service Integration resource allows the creation and management of Aiven Service Integrations.</p>
 <p>Service Integration defines an integration between two Aiven services or between Aiven
 service and an external integration endpoint. Integration could be for example sending
 metrics from Kafka service to an InfluxDB service, getting metrics from an InfluxDB
@@ -9067,12 +9129,10 @@ Elasticsearch, etc.</p>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
 <span class="n">myintegration</span> <span class="o">=</span> <span class="n">aiven</span><span class="o">.</span><span class="n">ServiceIntegration</span><span class="p">(</span><span class="s2">&quot;myintegration&quot;</span><span class="p">,</span>
-    <span class="n">destination_endpoint_id</span><span class="o">=</span><span class="n">aiven_service_integration_endpoint</span><span class="p">[</span><span class="s2">&quot;myendpoint&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
-    <span class="n">destination_service_name</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="n">integration_type</span><span class="o">=</span><span class="s2">&quot;datadog&quot;</span><span class="p">,</span>
     <span class="n">project</span><span class="o">=</span><span class="n">aiven_project</span><span class="p">[</span><span class="s2">&quot;myproject&quot;</span><span class="p">][</span><span class="s2">&quot;project&quot;</span><span class="p">],</span>
-    <span class="n">source_endpoint_id</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-    <span class="n">source_service_name</span><span class="o">=</span><span class="n">aiven_service</span><span class="p">[</span><span class="s2">&quot;testkafka&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">])</span>
+    <span class="n">destination_endpoint_id</span><span class="o">=</span><span class="n">aiven_service_integration_endpoint</span><span class="p">[</span><span class="s2">&quot;XX&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">integration_type</span><span class="o">=</span><span class="s2">&quot;datadog&quot;</span><span class="p">,</span>
+    <span class="n">source_service_name</span><span class="o">=</span><span class="n">aiven_kafka</span><span class="p">[</span><span class="s2">&quot;XXX&quot;</span><span class="p">][</span><span class="s2">&quot;service_name&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 <dl class="field-list simple">
@@ -9081,9 +9141,9 @@ Elasticsearch, etc.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>destination_endpoint_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – or <code class="docutils literal notranslate"><span class="pre">destination_service_name</span></code> - (Required) identifies the target side of
-the integration. Only either endpoint identifier or service name must be specified. In
-either case the target needs to be defined using the reference syntax described above to
-set up the dependency correctly.</p></li>
+the integration. Only either endpoint identifier (e.g. <code class="docutils literal notranslate"><span class="pre">aiven_service_integration_endpoint.XXX.id</span></code>) or
+service name (e.g. <code class="docutils literal notranslate"><span class="pre">aiven_kafka.XXX.service_name</span></code>) must be specified. In either case the target needs
+to be defined using the reference syntax described above to set up the dependency correctly.</p></li>
 <li><p><strong>destination_service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Destination service for the integration (if any)</p></li>
 <li><p><strong>integration_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – identifies the type of integration that is set up. Possible values
 include <code class="docutils literal notranslate"><span class="pre">dashboard</span></code>, <code class="docutils literal notranslate"><span class="pre">datadog</span></code>, <code class="docutils literal notranslate"><span class="pre">logs</span></code>, <code class="docutils literal notranslate"><span class="pre">metrics</span></code> and <code class="docutils literal notranslate"><span class="pre">mirrormaker</span></code>.</p></li>
@@ -9093,9 +9153,9 @@ include <code class="docutils literal notranslate"><span class="pre">dashboard</
 <li><p><strong>mirrormaker_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceIntegrationMirrormakerUserConfigArgs'</em><em>]</em><em>]</em>) – Mirrormaker 1 integration specific user configurable settings</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines the project the integration belongs to.</p></li>
 <li><p><strong>source_endpoint_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – or <code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> - (Optional) identifies the source side of the
-integration. Only either endpoint identifier or service name must be specified. In either
-case the source needs to be defined using the reference syntax described above to set up
-the dependency correctly.</p></li>
+integration. Only either endpoint identifier (e.g. <code class="docutils literal notranslate"><span class="pre">aiven_service_integration_endpoint.XXX.id</span></code>) or
+service name (e.g. <code class="docutils literal notranslate"><span class="pre">aiven_kafka.XXX.service_name</span></code>) must be specified. In either case the source
+needs to be defined using the reference syntax described above to set up the dependency correctly.</p></li>
 <li><p><strong>source_service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Source service for the integration (if any)</p></li>
 </ul>
 </dd>
@@ -9112,9 +9172,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>destination_endpoint_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – or <code class="docutils literal notranslate"><span class="pre">destination_service_name</span></code> - (Required) identifies the target side of
-the integration. Only either endpoint identifier or service name must be specified. In
-either case the target needs to be defined using the reference syntax described above to
-set up the dependency correctly.</p></li>
+the integration. Only either endpoint identifier (e.g. <code class="docutils literal notranslate"><span class="pre">aiven_service_integration_endpoint.XXX.id</span></code>) or
+service name (e.g. <code class="docutils literal notranslate"><span class="pre">aiven_kafka.XXX.service_name</span></code>) must be specified. In either case the target needs
+to be defined using the reference syntax described above to set up the dependency correctly.</p></li>
 <li><p><strong>destination_service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Destination service for the integration (if any)</p></li>
 <li><p><strong>integration_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – identifies the type of integration that is set up. Possible values
 include <code class="docutils literal notranslate"><span class="pre">dashboard</span></code>, <code class="docutils literal notranslate"><span class="pre">datadog</span></code>, <code class="docutils literal notranslate"><span class="pre">logs</span></code>, <code class="docutils literal notranslate"><span class="pre">metrics</span></code> and <code class="docutils literal notranslate"><span class="pre">mirrormaker</span></code>.</p></li>
@@ -9124,9 +9184,9 @@ include <code class="docutils literal notranslate"><span class="pre">dashboard</
 <li><p><strong>mirrormaker_user_config</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'ServiceIntegrationMirrormakerUserConfigArgs'</em><em>]</em><em>]</em>) – Mirrormaker 1 integration specific user configurable settings</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – defines the project the integration belongs to.</p></li>
 <li><p><strong>source_endpoint_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – or <code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> - (Optional) identifies the source side of the
-integration. Only either endpoint identifier or service name must be specified. In either
-case the source needs to be defined using the reference syntax described above to set up
-the dependency correctly.</p></li>
+integration. Only either endpoint identifier (e.g. <code class="docutils literal notranslate"><span class="pre">aiven_service_integration_endpoint.XXX.id</span></code>) or
+service name (e.g. <code class="docutils literal notranslate"><span class="pre">aiven_kafka.XXX.service_name</span></code>) must be specified. In either case the source
+needs to be defined using the reference syntax described above to set up the dependency correctly.</p></li>
 <li><p><strong>source_service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Source service for the integration (if any)</p></li>
 </ul>
 </dd>
@@ -9137,9 +9197,9 @@ the dependency correctly.</p></li>
 <dt id="pulumi_aiven.ServiceIntegration.destination_endpoint_id">
 <em class="property">property </em><code class="sig-name descname">destination_endpoint_id</code><a class="headerlink" href="#pulumi_aiven.ServiceIntegration.destination_endpoint_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>or <code class="docutils literal notranslate"><span class="pre">destination_service_name</span></code> - (Required) identifies the target side of
-the integration. Only either endpoint identifier or service name must be specified. In
-either case the target needs to be defined using the reference syntax described above to
-set up the dependency correctly.</p>
+the integration. Only either endpoint identifier (e.g. <code class="docutils literal notranslate"><span class="pre">aiven_service_integration_endpoint.XXX.id</span></code>) or
+service name (e.g. <code class="docutils literal notranslate"><span class="pre">aiven_kafka.XXX.service_name</span></code>) must be specified. In either case the target needs
+to be defined using the reference syntax described above to set up the dependency correctly.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -9189,9 +9249,9 @@ include <code class="docutils literal notranslate"><span class="pre">dashboard</
 <dt id="pulumi_aiven.ServiceIntegration.source_endpoint_id">
 <em class="property">property </em><code class="sig-name descname">source_endpoint_id</code><a class="headerlink" href="#pulumi_aiven.ServiceIntegration.source_endpoint_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>or <code class="docutils literal notranslate"><span class="pre">source_service_name</span></code> - (Optional) identifies the source side of the
-integration. Only either endpoint identifier or service name must be specified. In either
-case the source needs to be defined using the reference syntax described above to set up
-the dependency correctly.</p>
+integration. Only either endpoint identifier (e.g. <code class="docutils literal notranslate"><span class="pre">aiven_service_integration_endpoint.XXX.id</span></code>) or
+service name (e.g. <code class="docutils literal notranslate"><span class="pre">aiven_kafka.XXX.service_name</span></code>) must be specified. In either case the source
+needs to be defined using the reference syntax described above to set up the dependency correctly.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -9241,7 +9301,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.ServiceIntegrationEndpoint">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">ServiceIntegrationEndpoint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">datadog_user_config</span><span class="p">:</span> <span class="n">Union[ServiceIntegrationEndpointDatadogUserConfigArgs, Mapping[str, Any], Awaitable[Union[ServiceIntegrationEndpointDatadogUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">endpoint_type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="n">Union[ServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfigArgs, Mapping[str, Any], Awaitable[Union[ServiceIntegrationEndpointExternalAwsCloudwatchLogsUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="n">Union[ServiceIntegrationEndpointExternalElasticsearchLogsUserConfigArgs, Mapping[str, Any], Awaitable[Union[ServiceIntegrationEndpointExternalElasticsearchLogsUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="n">Union[ServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfigArgs, Mapping[str, Any], Awaitable[Union[ServiceIntegrationEndpointExternalGoogleCloudLoggingUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">external_kafka_user_config</span><span class="p">:</span> <span class="n">Union[ServiceIntegrationEndpointExternalKafkaUserConfigArgs, Mapping[str, Any], Awaitable[Union[ServiceIntegrationEndpointExternalKafkaUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">jolokia_user_config</span><span class="p">:</span> <span class="n">Union[ServiceIntegrationEndpointJolokiaUserConfigArgs, Mapping[str, Any], Awaitable[Union[ServiceIntegrationEndpointJolokiaUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">prometheus_user_config</span><span class="p">:</span> <span class="n">Union[ServiceIntegrationEndpointPrometheusUserConfigArgs, Mapping[str, Any], Awaitable[Union[ServiceIntegrationEndpointPrometheusUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rsyslog_user_config</span><span class="p">:</span> <span class="n">Union[ServiceIntegrationEndpointRsyslogUserConfigArgs, Mapping[str, Any], Awaitable[Union[ServiceIntegrationEndpointRsyslogUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">signalfx_user_config</span><span class="p">:</span> <span class="n">Union[ServiceIntegrationEndpointSignalfxUserConfigArgs, Mapping[str, Any], Awaitable[Union[ServiceIntegrationEndpointSignalfxUserConfigArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.ServiceIntegrationEndpoint" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Service Integration Endpoint resource allows the creation and management of an Aiven Service Integration Endpoint`s.</p>
+<dd><p>The Service Integration Endpoint resource allows the creation and management of Aiven Service Integration Endpoints.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -9428,7 +9488,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.ServiceUser">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">ServiceUser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">username</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.ServiceUser" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Service User resource allows the creation and management of an Aiven Service Users.</p>
+<dd><p>The Service User resource allows the creation and management of Aiven Service Users.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -9697,7 +9757,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_aiven.VpcPeeringConnection">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">VpcPeeringConnection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_azure_app_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_azure_tenant_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_cloud_account</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_region</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_resource_group</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">peer_vpc</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vpc_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aiven.VpcPeeringConnection" title="Permalink to this definition">¶</a></dt>
-<dd><p>The VPC Peering Connection resource allows the creation and management of an Aiven VPC Peering Connections.</p>
+<dd><p>The VPC Peering Connection resource allows the creation and management of Aiven VPC Peering Connections.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -9924,13 +9984,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py function">
 <dt id="pulumi_aiven.get_account_team_member">
 <code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_account_team_member</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">accepted</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">create_time</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">invited_by_user_email</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">team_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user_email</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_aiven.get_account_team_member.AwaitableGetAccountTeamMemberResult<a class="headerlink" href="#pulumi_aiven.get_account_team_member" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Account Team Member  data source provides information about the existing Aiven Account Team Member.</p>
+<dd><p>The Account Team Member data source provides information about the existing Aiven Account Team Member.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>accepted</strong> (<em>bool</em>) – is a boolean flag that determines whether an invitation was accepted or not by the user. 
 <code class="docutils literal notranslate"><span class="pre">false</span></code> value means that the invitation was sent to the user but not yet accepted.
-<code class="docutils literal notranslate"><span class="pre">true</span></code> means that the user accepted the invitation and now a member of an account team.</p></li>
+<code class="docutils literal notranslate"><span class="pre">true</span></code> means that the user accepted the invitation and is now a member of an account team.</p></li>
 <li><p><strong>account_id</strong> (<em>str</em>) – is a unique account id.</p></li>
 <li><p><strong>create_time</strong> (<em>str</em>) – time of creation.</p></li>
 <li><p><strong>invited_by_user_email</strong> (<em>str</em>) – team invited by user email.</p></li>
@@ -9976,16 +10036,16 @@ he or she becomes a member of a team.</p></li>
 <li><p><strong>cassandra</strong> (<em>pulumi.InputType</em><em>[</em><em>'GetCassandaCassandraArgs'</em><em>]</em>) – Cassandra specific server provided values.</p></li>
 <li><p><strong>cassandra_user_config</strong> (<em>pulumi.InputType</em><em>[</em><em>'GetCassandaCassandraUserConfigArgs'</em><em>]</em>) – defines Cassandra specific additional configuration options. 
 The following configuration options available:</p></li>
-<li><p><strong>cloud_name</strong> (<em>str</em>) – <p>defines where the cloud provider and region where the service is hosted
-in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+<li><p><strong>cloud_name</strong> (<em>str</em>) – <p>defines the cloud provider and region where the service is hosted. 
+This can be changed freely after service is created. Changing the value will trigger
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
 <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html">here for AWS</a>.</p>
 </p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>str</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>str</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>str</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -10016,7 +10076,7 @@ intended service usage rather than current attributes.</p></li>
 <li><p><strong>state</strong> (<em>str</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>bool</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -10100,7 +10160,7 @@ They should be defined using reference as shown above to set up dependencies cor
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cloud_name</strong> (<em>str</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -10110,7 +10170,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 <li><p><strong>elasticsearch_user_config</strong> (<em>pulumi.InputType</em><em>[</em><em>'GetElasticSearchElasticsearchUserConfigArgs'</em><em>]</em>) – defines Elasticsearch specific additional configuration options. 
 The following configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>str</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>str</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>str</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -10141,7 +10201,7 @@ intended service usage rather than current attributes.</p></li>
 <li><p><strong>state</strong> (<em>str</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>bool</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -10164,7 +10224,7 @@ for Elasticsearch service.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>enabled</strong> (<em>bool</em>) – enables of disables Elasticsearch ACL’s.</p></li>
+<li><p><strong>enabled</strong> (<em>bool</em>) – enables or disables Elasticsearch ACLs.</p></li>
 <li><p><strong>extended_acl</strong> (<em>bool</em>) – Index rules can be applied in a limited fashion to the _mget, _msearch and _bulk APIs 
 (and only those) by enabling the ExtendedAcl option for the service. When it is enabled, users can use
 these APIs as long as all operations only target indexes they have been granted access to.</p></li>
@@ -10191,7 +10251,7 @@ They should be defined using reference as shown above to set up dependencies cor
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cloud_name</strong> (<em>str</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -10201,7 +10261,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 <li><p><strong>grafana_user_config</strong> (<em>pulumi.InputType</em><em>[</em><em>'GetGrafanaGrafanaUserConfigArgs'</em><em>]</em>) – defines Grafana specific additional configuration options. The following 
 configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>str</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>str</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>str</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -10232,7 +10292,7 @@ intended service usage rather than current attributes.</p></li>
 <li><p><strong>state</strong> (<em>str</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>bool</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -10256,7 +10316,7 @@ deletion is done.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cloud_name</strong> (<em>str</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -10266,7 +10326,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 <li><p><strong>influxdb_user_config</strong> (<em>pulumi.InputType</em><em>[</em><em>'GetInfluxDbInfluxdbUserConfigArgs'</em><em>]</em>) – defines InfluxDB specific additional configuration options. The following 
 configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>str</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>str</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>str</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -10297,7 +10357,7 @@ intended service usage rather than current attributes.</p></li>
 <li><p><strong>state</strong> (<em>str</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>bool</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -10321,7 +10381,7 @@ deletion is done.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cloud_name</strong> (<em>str</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -10331,7 +10391,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 <li><p><strong>kafka_user_config</strong> (<em>pulumi.InputType</em><em>[</em><em>'GetKafkaKafkaUserConfigArgs'</em><em>]</em>) – defines Kafka specific additional configuration options. The following 
 configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>str</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>str</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>str</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -10362,7 +10422,7 @@ intended service usage rather than current attributes.</p></li>
 <li><p><strong>state</strong> (<em>str</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>bool</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -10417,17 +10477,17 @@ the topic being deleted and new one created instead.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cloud_name</strong> (<em>str</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
 <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html">here for AWS</a>.</p>
 </p></li>
 <li><p><strong>kafka_connect</strong> (<em>pulumi.InputType</em><em>[</em><em>'GetKafkaConnectKafkaConnectArgs'</em><em>]</em>) – Kafka Connect specific server provided values.</p></li>
-<li><p><strong>kafka_connect_user_config</strong> (<em>pulumi.InputType</em><em>[</em><em>'GetKafkaConnectKafkaConnectUserConfigArgs'</em><em>]</em>) – defines kafka Connect specific additional configuration options. 
+<li><p><strong>kafka_connect_user_config</strong> (<em>pulumi.InputType</em><em>[</em><em>'GetKafkaConnectKafkaConnectUserConfigArgs'</em><em>]</em>) – defines Kafka Connect specific additional configuration options. 
 The following configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>str</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>str</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>str</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -10458,7 +10518,7 @@ intended service usage rather than current attributes.</p></li>
 <li><p><strong>state</strong> (<em>str</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>bool</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -10502,7 +10562,7 @@ They should be defined using reference as shown above to set up dependencies cor
 <dl class="py function">
 <dt id="pulumi_aiven.get_kafka_mirror_maker">
 <code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_kafka_mirror_maker</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cloud_name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">components</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Sequence<span class="p">[</span>Union<span class="p">[</span>GetKafkaMirrorMakerComponentArgs<span class="p">, </span>Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker</span><span class="p">:</span> <span class="n">Union[GetKafkaMirrorMakerKafkaMirrormakerArgs, Mapping[str, Any], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="n">Union[GetKafkaMirrorMakerKafkaMirrormakerUserConfigArgs, Mapping[str, Any], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_dow</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maintenance_window_time</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plan</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project_vpc_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_host</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_integrations</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Sequence<span class="p">[</span>Union<span class="p">[</span>GetKafkaMirrorMakerServiceIntegrationArgs<span class="p">, </span>Mapping<span class="p">[</span>str<span class="p">, </span>Any<span class="p">]</span><span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_password</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_port</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_type</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_uri</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">service_username</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">state</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">termination_protection</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_aiven.get_kafka_mirror_maker.AwaitableGetKafkaMirrorMakerResult<a class="headerlink" href="#pulumi_aiven.get_kafka_mirror_maker" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Kafka Mirror Maker data source provides information about the existing Aiven Kafka Mirror Maker 2 service.</p>
+<dd><p>The Kafka MirrorMaker data source provides information about the existing Aiven Kafka MirrorMaker 2 service.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
 
@@ -10515,17 +10575,17 @@ They should be defined using reference as shown above to set up dependencies cor
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cloud_name</strong> (<em>str</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
 <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html">here for AWS</a>.</p>
 </p></li>
-<li><p><strong>kafka_mirrormaker</strong> (<em>pulumi.InputType</em><em>[</em><em>'GetKafkaMirrorMakerKafkaMirrormakerArgs'</em><em>]</em>) – Kafka Mirror Maker 2 specific server provided values.</p></li>
-<li><p><strong>kafka_mirrormaker_user_config</strong> (<em>pulumi.InputType</em><em>[</em><em>'GetKafkaMirrorMakerKafkaMirrormakerUserConfigArgs'</em><em>]</em>) – defines Kafka Mirror Maker 2 specific additional configuration options. 
+<li><p><strong>kafka_mirrormaker</strong> (<em>pulumi.InputType</em><em>[</em><em>'GetKafkaMirrorMakerKafkaMirrormakerArgs'</em><em>]</em>) – Kafka MirrorMaker 2 specific server provided values.</p></li>
+<li><p><strong>kafka_mirrormaker_user_config</strong> (<em>pulumi.InputType</em><em>[</em><em>'GetKafkaMirrorMakerKafkaMirrormakerUserConfigArgs'</em><em>]</em>) – defines Kafka MirrorMaker 2 specific additional configuration options. 
 The following configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>str</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>str</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>str</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -10545,18 +10605,18 @@ reference as shown above to set up dependencies correctly and the VPC must be in
 cloud and region as the service itself. Project can be freely moved to and from VPC after
 creation but doing so triggers migration to new servers so the operation can take
 significant amount of time to complete if the service has a lot of data.</p></li>
-<li><p><strong>service_host</strong> (<em>str</em>) – Kafka Mirror Maker 2 hostname.</p></li>
+<li><p><strong>service_host</strong> (<em>str</em>) – Kafka MirrorMaker 2 hostname.</p></li>
 <li><p><strong>service_name</strong> (<em>str</em>) – specifies the actual name of the service. The name cannot be changed
 later without destroying and re-creating the service so name should be picked based on
 intended service usage rather than current attributes.</p></li>
-<li><p><strong>service_password</strong> (<em>str</em>) – Password used for connecting to the Kafka Mirror Maker 2 service, if applicable.</p></li>
-<li><p><strong>service_port</strong> (<em>int</em>) – Kafka Mirror Maker 2 port.</p></li>
-<li><p><strong>service_uri</strong> (<em>str</em>) – URI for connecting to the Kafka Mirror Maker 2 service.</p></li>
-<li><p><strong>service_username</strong> (<em>str</em>) – Username used for connecting to the Kafka Mirror Maker 2 service, if applicable.</p></li>
+<li><p><strong>service_password</strong> (<em>str</em>) – Password used for connecting to the Kafka MirrorMaker 2 service, if applicable.</p></li>
+<li><p><strong>service_port</strong> (<em>int</em>) – Kafka MirrorMaker 2 port.</p></li>
+<li><p><strong>service_uri</strong> (<em>str</em>) – URI for connecting to the Kafka MirrorMaker 2 service.</p></li>
+<li><p><strong>service_username</strong> (<em>str</em>) – Username used for connecting to the Kafka MirrorMaker 2 service, if applicable.</p></li>
 <li><p><strong>state</strong> (<em>str</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>bool</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -10642,7 +10702,7 @@ They should be defined using reference as shown above to set up dependencies cor
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>cleanup_policy</strong> (<em>str</em>) – cleanup.policy value</p></li>
+<li><p><strong>cleanup_policy</strong> (<em>str</em>) – cleanup.policy value, can be <code class="docutils literal notranslate"><span class="pre">create</span></code>, <code class="docutils literal notranslate"><span class="pre">delete</span></code> or <code class="docutils literal notranslate"><span class="pre">compact,delete</span></code></p></li>
 <li><p><strong>config</strong> (<em>pulumi.InputType</em><em>[</em><em>'GetKafkaTopicConfigArgs'</em><em>]</em>) – Kafka topic configuration</p></li>
 <li><p><strong>minimum_in_sync_replicas</strong> (<em>int</em>) – Minimum required nodes in-sync replicas (ISR) to produce to a partition.</p></li>
 <li><p><strong>partitions</strong> (<em>int</em>) – Number of partitions to create in the topic.</p></li>
@@ -10677,7 +10737,7 @@ created instead.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cloud_name</strong> (<em>str</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -10687,7 +10747,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 <li><p><strong>m3aggregator_user_config</strong> (<em>pulumi.InputType</em><em>[</em><em>'GetM3AggregatorM3aggregatorUserConfigArgs'</em><em>]</em>) – defines M3 Aggregator specific additional configuration options. 
 The following configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>str</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>str</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>str</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -10718,7 +10778,7 @@ intended service usage rather than current attributes.</p></li>
 <li><p><strong>state</strong> (<em>str</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>bool</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -10742,7 +10802,7 @@ deletion is done.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cloud_name</strong> (<em>str</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
@@ -10752,7 +10812,7 @@ like <a class="reference external" href="https://cloud.google.com/compute/docs/r
 <li><p><strong>m3db_user_config</strong> (<em>pulumi.InputType</em><em>[</em><em>'GetM3DbM3dbUserConfigArgs'</em><em>]</em>) – defines M3 specific additional configuration options. The following 
 configuration options available:</p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>str</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>str</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>str</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -10783,7 +10843,7 @@ intended service usage rather than current attributes.</p></li>
 <li><p><strong>state</strong> (<em>str</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>bool</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -10808,7 +10868,7 @@ Replication Flow on Aiven Cloud.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>enable</strong> (<em>bool</em>) – enable of disable replication flows for a mirror maker service</p></li>
+<li><p><strong>enable</strong> (<em>bool</em>) – enable of disable replication flows for a MirrorMaker service</p></li>
 <li><p><strong>project</strong> (<em>str</em>) – and <code class="docutils literal notranslate"><span class="pre">service_name</span></code> - (Required) define the project and service the Kafka MirrorMaker Replication 
 Flow belongs to. They should be defined using reference as shown above to set up dependencies correctly.</p></li>
 <li><p><strong>source_cluster</strong> (<em>str</em>) – is a source cluster alias.</p></li>
@@ -10836,14 +10896,14 @@ Flow belongs to. They should be defined using reference as shown above to set up
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cloud_name</strong> (<em>str</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
 <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html">here for AWS</a>.</p>
 </p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>str</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>str</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>mysql</strong> (<em>pulumi.InputType</em><em>[</em><em>'GetMySqlMysqlArgs'</em><em>]</em>) – MySQL specific server provided values.</p></li>
@@ -10877,7 +10937,7 @@ intended service usage rather than current attributes.</p></li>
 <li><p><strong>state</strong> (<em>str</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>bool</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -10901,14 +10961,14 @@ deletion is done.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cloud_name</strong> (<em>str</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
 <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html">here for AWS</a>.</p>
 </p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>str</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>str</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>pg</strong> (<em>pulumi.InputType</em><em>[</em><em>'GetPgPgArgs'</em><em>]</em>) – PostgreSQL specific server provided values.</p></li>
@@ -10942,7 +11002,7 @@ intended service usage rather than current attributes.</p></li>
 <li><p><strong>state</strong> (<em>str</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>bool</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>
@@ -10952,7 +11012,7 @@ deletion is done.</p></li>
 
 <dl class="py function">
 <dt id="pulumi_aiven.get_project">
-<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">account_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_address</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_emails</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Sequence<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ca_cert</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">card_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">copy_from_project</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country_code</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">technical_emails</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Sequence<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_aiven.get_project.AwaitableGetProjectResult<a class="headerlink" href="#pulumi_aiven.get_project" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_aiven.</code><code class="sig-name descname">get_project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">account_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">available_credits</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_address</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_currency</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_emails</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Sequence<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">billing_extra_text</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ca_cert</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">card_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">copy_from_project</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">country_code</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_cloud</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">estimated_balance</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">payment_method</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">project</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">technical_emails</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Sequence<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vat_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_aiven.get_project.AwaitableGetProjectResult<a class="headerlink" href="#pulumi_aiven.get_project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Project data source provides information about the existing Aiven Project.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_aiven</span> <span class="k">as</span> <span class="nn">aiven</span>
@@ -11052,14 +11112,14 @@ set, only read.</p></li>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cloud_name</strong> (<em>str</em>) – <p>defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (<code class="docutils literal notranslate"><span class="pre">aws</span></code>, <code class="docutils literal notranslate"><span class="pre">azure</span></code>, <code class="docutils literal notranslate"><span class="pre">do</span></code> <code class="docutils literal notranslate"><span class="pre">google</span></code>, <code class="docutils literal notranslate"><span class="pre">upcloud</span></code>, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider’s own support articles,
 like <a class="reference external" href="https://cloud.google.com/compute/docs/regions-zones/">here for Google</a> and
 <a class="reference external" href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html">here for AWS</a>.</p>
 </p></li>
 <li><p><strong>maintenance_window_dow</strong> (<em>str</em>) – day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.</p></li>
+On monday, tuesday, wednesday, etc.</p></li>
 <li><p><strong>maintenance_window_time</strong> (<em>str</em>) – time of day when maintenance operations should be performed. 
 UTC time in HH:mm:ss format.</p></li>
 <li><p><strong>plan</strong> (<em>str</em>) – defines what kind of computing resources are allocated for the service. It can
@@ -11093,7 +11153,7 @@ intended service usage rather than current attributes.</p></li>
 <li><p><strong>state</strong> (<em>str</em>) – Service state.</p></li>
 <li><p><strong>termination_protection</strong> (<em>bool</em>) – prevents the service from being deleted. It is recommended to
 set this to <code class="docutils literal notranslate"><span class="pre">true</span></code> for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.</p></li>
 </ul>

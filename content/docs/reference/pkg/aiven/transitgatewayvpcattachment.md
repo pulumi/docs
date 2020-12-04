@@ -15,6 +15,7 @@ meta_desc: "Explore the TransitGatewayVpcAttachment resource of the Aiven packag
 The Transit Gateway VPC Attachment resource allows the creation and management Transit
 Gateway VPC Attachment VPC peering connection between Aiven and AWS.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1254,6 +1255,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

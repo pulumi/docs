@@ -12,7 +12,8 @@ meta_desc: "Explore the ProjectVpc resource of the Aiven package, including exam
 
 ## # Project VPC Resource
 
-The Project VPC resource allows the creation and management of an Aiven Project VPCs.
+The Project VPC resource allows the creation and management of Aiven Project VPCs.
+
 
 {{% examples %}}
 ## Example Usage
@@ -906,6 +907,8 @@ set, only read.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

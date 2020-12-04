@@ -12,8 +12,9 @@ meta_desc: "Explore the ElasticSearchAcl resource of the Aiven package, includin
 
 ## # Elasticsearch ACL Resource
 
-The Elasticsearch ACL resource allows the creation and management of an Aiven Elasticsearch ACLs
-for Elasticsearch service.
+The Elasticsearch ACL resource allows the creation and management of ACLs
+for an Aiven Elasticsearch service.
+
 
 {{% examples %}}
 ## Example Usage
@@ -1386,6 +1387,8 @@ They should be defined using reference as shown above to set up dependencies cor
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

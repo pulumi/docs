@@ -12,7 +12,8 @@ meta_desc: "Explore the KafkaSchema resource of the Aiven package, including exa
 
 ## # Kafka Schema Resource
 
-The Kafka Schema resource allows the creation and management of an Aiven Kafka Schemas.
+The Kafka Schema resource allows the creation and management of Aiven Kafka Schemas.
+
 
 {{% examples %}}
 ## Example Usage
@@ -1145,6 +1146,8 @@ They should be defined using reference as shown above to set up dependencies cor
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

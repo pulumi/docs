@@ -14,6 +14,7 @@ meta_desc: "Explore the GetProjectVpc function of the Aiven package, including e
 
 The Project VPC data source provides information about the existing Aiven Project VPC.
 
+
 {{% examples %}}
 ## Example Usage
 

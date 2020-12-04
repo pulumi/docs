@@ -14,6 +14,7 @@ meta_desc: "Explore the GetProjectUser function of the Aiven package, including 
 
 The Project User data source provides information about the existing Aiven Project User.
 
+
 {{% examples %}}
 ## Example Usage
 
