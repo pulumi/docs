@@ -15,6 +15,7 @@ meta_desc: "Explore the GetServiceIntegrationEndpoint function of the Aiven pack
 The Service Integration Endpoint data source provides information about the existing
 Aiven Service Integration Endpoint.
 
+
 {{% examples %}}
 ## Example Usage
 

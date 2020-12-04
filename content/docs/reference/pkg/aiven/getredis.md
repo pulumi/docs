@@ -14,6 +14,7 @@ meta_desc: "Explore the GetRedis function of the Aiven package, including exampl
 
 The Redis data source provides information about the existing Aiven Redis service.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -167,7 +168,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -193,7 +194,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -361,7 +362,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -409,7 +410,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -435,7 +436,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -603,7 +604,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -651,7 +652,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -677,7 +678,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -845,7 +846,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -893,7 +894,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -919,7 +920,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1087,7 +1088,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -1250,7 +1251,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -1266,7 +1267,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1347,7 +1348,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -1497,7 +1498,7 @@ deletion is done.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -1513,7 +1514,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1594,7 +1595,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -1744,7 +1745,7 @@ deletion is done.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -1760,7 +1761,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1841,7 +1842,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -1991,7 +1992,7 @@ deletion is done.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -2007,7 +2008,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -2088,7 +2089,7 @@ configuration options available:
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -2515,6 +2516,17 @@ deletion is done.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the basebackup to restore in forked service
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="redisiothreads_csharp">
+<a href="#redisiothreads_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Io<wbr>Threads</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Redis IO thread count
 * `redis_lfu_decay_time"` - LFU maxmemory-policy counter decay time in minutes
 {{% /md %}}</dd>
 
@@ -2656,6 +2668,17 @@ when a new service is being created.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the basebackup to restore in forked service
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="redisiothreads_go">
+<a href="#redisiothreads_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Io<wbr>Threads</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Redis IO thread count
 * `redis_lfu_decay_time"` - LFU maxmemory-policy counter decay time in minutes
 {{% /md %}}</dd>
 
@@ -2797,6 +2820,17 @@ when a new service is being created.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the basebackup to restore in forked service
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="redisiothreads_nodejs">
+<a href="#redisiothreads_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Io<wbr>Threads</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Redis IO thread count
 * `redis_lfu_decay_time"` - LFU maxmemory-policy counter decay time in minutes
 {{% /md %}}</dd>
 
@@ -2938,6 +2972,17 @@ when a new service is being created.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the basebackup to restore in forked service
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="redis_io_threads_python">
+<a href="#redis_io_threads_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>io_<wbr>threads</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Redis IO thread count
 * `redis_lfu_decay_time"` - LFU maxmemory-policy counter decay time in minutes
 {{% /md %}}</dd>
 

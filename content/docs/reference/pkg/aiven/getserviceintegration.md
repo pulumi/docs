@@ -20,6 +20,7 @@ metrics from Kafka service to an InfluxDB service, getting metrics from an Influ
 service to a Grafana service to show dashboards, sending logs from any service to
 Elasticsearch, etc.
 
+
 {{% examples %}}
 ## Example Usage
 

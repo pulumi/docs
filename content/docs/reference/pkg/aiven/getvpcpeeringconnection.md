@@ -15,6 +15,7 @@ meta_desc: "Explore the GetVpcPeeringConnection function of the Aiven package, i
 The VPC Peering Connection data source provides information about the existing Aiven
 VPC Peering Connection.
 
+
 {{% examples %}}
 ## Example Usage
 

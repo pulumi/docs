@@ -12586,6 +12586,26 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transactionremoveexpiredtransactioncleanupintervalms_csharp">
+<a href="#transactionremoveexpiredtransactioncleanupintervalms_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Remove<wbr>Expired<wbr>Transaction<wbr>Cleanup<wbr>Interval<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transactionstatelogsegmentbytes_csharp">
+<a href="#transactionstatelogsegmentbytes_csharp" style="color: inherit; text-decoration: inherit;">Transaction<wbr>State<wbr>Log<wbr>Segment<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -12947,6 +12967,26 @@ The following output properties are available:
             title="Optional">
         <span id="socketrequestmaxbytes_go">
 <a href="#socketrequestmaxbytes_go" style="color: inherit; text-decoration: inherit;">Socket<wbr>Request<wbr>Max<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transactionremoveexpiredtransactioncleanupintervalms_go">
+<a href="#transactionremoveexpiredtransactioncleanupintervalms_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>Remove<wbr>Expired<wbr>Transaction<wbr>Cleanup<wbr>Interval<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transactionstatelogsegmentbytes_go">
+<a href="#transactionstatelogsegmentbytes_go" style="color: inherit; text-decoration: inherit;">Transaction<wbr>State<wbr>Log<wbr>Segment<wbr>Bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -13320,6 +13360,26 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transactionremoveexpiredtransactioncleanupintervalms_nodejs">
+<a href="#transactionremoveexpiredtransactioncleanupintervalms_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>Remove<wbr>Expired<wbr>Transaction<wbr>Cleanup<wbr>Interval<wbr>Ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transactionstatelogsegmentbytes_nodejs">
+<a href="#transactionstatelogsegmentbytes_nodejs" style="color: inherit; text-decoration: inherit;">transaction<wbr>State<wbr>Log<wbr>Segment<wbr>Bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -13681,6 +13741,26 @@ The following output properties are available:
             title="Optional">
         <span id="socket_request_max_bytes_python">
 <a href="#socket_request_max_bytes_python" style="color: inherit; text-decoration: inherit;">socket_<wbr>request_<wbr>max_<wbr>bytes</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transaction_remove_expired_transaction_cleanup_interval_ms_python">
+<a href="#transaction_remove_expired_transaction_cleanup_interval_ms_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>remove_<wbr>expired_<wbr>transaction_<wbr>cleanup_<wbr>interval_<wbr>ms</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="transaction_state_log_segment_bytes_python">
+<a href="#transaction_state_log_segment_bytes_python" style="color: inherit; text-decoration: inherit;">transaction_<wbr>state_<wbr>log_<wbr>segment_<wbr>bytes</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -19798,11 +19878,81 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="autodbidletimeout_csharp">
+<a href="#autodbidletimeout_csharp" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Idle<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodbmaxdbconnections_csharp">
+<a href="#autodbmaxdbconnections_csharp" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Max<wbr>Db<wbr>Connections</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodbpoolmode_csharp">
+<a href="#autodbpoolmode_csharp" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Pool<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodbpoolsize_csharp">
+<a href="#autodbpoolsize_csharp" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Pool<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ignorestartupparameters_csharp">
 <a href="#ignorestartupparameters_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Startup<wbr>Parameters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minpoolsize_csharp">
+<a href="#minpoolsize_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Pool<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serveridletimeout_csharp">
+<a href="#serveridletimeout_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Idle<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serverlifetime_csharp">
+<a href="#serverlifetime_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Lifetime</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -19825,11 +19975,81 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="autodbidletimeout_go">
+<a href="#autodbidletimeout_go" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Idle<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodbmaxdbconnections_go">
+<a href="#autodbmaxdbconnections_go" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Max<wbr>Db<wbr>Connections</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodbpoolmode_go">
+<a href="#autodbpoolmode_go" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Pool<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodbpoolsize_go">
+<a href="#autodbpoolsize_go" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Pool<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ignorestartupparameters_go">
 <a href="#ignorestartupparameters_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Startup<wbr>Parameters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minpoolsize_go">
+<a href="#minpoolsize_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Pool<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serveridletimeout_go">
+<a href="#serveridletimeout_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Idle<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serverlifetime_go">
+<a href="#serverlifetime_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Lifetime</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -19852,11 +20072,81 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="autodbidletimeout_nodejs">
+<a href="#autodbidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">autodb<wbr>Idle<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodbmaxdbconnections_nodejs">
+<a href="#autodbmaxdbconnections_nodejs" style="color: inherit; text-decoration: inherit;">autodb<wbr>Max<wbr>Db<wbr>Connections</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodbpoolmode_nodejs">
+<a href="#autodbpoolmode_nodejs" style="color: inherit; text-decoration: inherit;">autodb<wbr>Pool<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodbpoolsize_nodejs">
+<a href="#autodbpoolsize_nodejs" style="color: inherit; text-decoration: inherit;">autodb<wbr>Pool<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ignorestartupparameters_nodejs">
 <a href="#ignorestartupparameters_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Startup<wbr>Parameters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minpoolsize_nodejs">
+<a href="#minpoolsize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Pool<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serveridletimeout_nodejs">
+<a href="#serveridletimeout_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Idle<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serverlifetime_nodejs">
+<a href="#serverlifetime_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Lifetime</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -19879,11 +20169,81 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="autodb_idle_timeout_python">
+<a href="#autodb_idle_timeout_python" style="color: inherit; text-decoration: inherit;">autodb_<wbr>idle_<wbr>timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodb_max_db_connections_python">
+<a href="#autodb_max_db_connections_python" style="color: inherit; text-decoration: inherit;">autodb_<wbr>max_<wbr>db_<wbr>connections</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodb_pool_mode_python">
+<a href="#autodb_pool_mode_python" style="color: inherit; text-decoration: inherit;">autodb_<wbr>pool_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodb_pool_size_python">
+<a href="#autodb_pool_size_python" style="color: inherit; text-decoration: inherit;">autodb_<wbr>pool_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ignore_startup_parameters_python">
 <a href="#ignore_startup_parameters_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>startup_<wbr>parameters</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_pool_size_python">
+<a href="#min_pool_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>pool_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="server_idle_timeout_python">
+<a href="#server_idle_timeout_python" style="color: inherit; text-decoration: inherit;">server_<wbr>idle_<wbr>timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="server_lifetime_python">
+<a href="#server_lifetime_python" style="color: inherit; text-decoration: inherit;">server_<wbr>lifetime</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -20478,6 +20838,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="redisiothreads_csharp">
+<a href="#redisiothreads_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Io<wbr>Threads</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="redislfudecaytime_csharp">
 <a href="#redislfudecaytime_csharp" style="color: inherit; text-decoration: inherit;">Redis<wbr>Lfu<wbr>Decay<wbr>Time</a>
 </span> 
@@ -20597,6 +20967,16 @@ The following output properties are available:
             title="Optional">
         <span id="recoverybasebackupname_go">
 <a href="#recoverybasebackupname_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Basebackup<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="redisiothreads_go">
+<a href="#redisiothreads_go" style="color: inherit; text-decoration: inherit;">Redis<wbr>Io<wbr>Threads</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -20732,6 +21112,16 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="redisiothreads_nodejs">
+<a href="#redisiothreads_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Io<wbr>Threads</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="redislfudecaytime_nodejs">
 <a href="#redislfudecaytime_nodejs" style="color: inherit; text-decoration: inherit;">redis<wbr>Lfu<wbr>Decay<wbr>Time</a>
 </span> 
@@ -20851,6 +21241,16 @@ The following output properties are available:
             title="Optional">
         <span id="recovery_basebackup_name_python">
 <a href="#recovery_basebackup_name_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>basebackup_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="redis_io_threads_python">
+<a href="#redis_io_threads_python" style="color: inherit; text-decoration: inherit;">redis_<wbr>io_<wbr>threads</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -14,6 +14,7 @@ meta_desc: "Explore the GetKafkaSchema function of the Aiven package, including 
 
 The Kafka Schema data source provides information about the existing Aiven Kafka Schema.
 
+
 {{% examples %}}
 ## Example Usage
 

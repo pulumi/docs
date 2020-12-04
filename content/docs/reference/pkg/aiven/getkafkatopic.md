@@ -14,6 +14,7 @@ meta_desc: "Explore the GetKafkaTopic function of the Aiven package, including e
 
 The Kafka Topic data source provides information about the existing Aiven Kafka Topic.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -211,7 +212,7 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -342,7 +343,7 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -473,7 +474,7 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -604,7 +605,7 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -752,7 +753,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -887,7 +888,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1022,7 +1023,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1157,7 +1158,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1275,7 +1276,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1546,7 +1547,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1817,7 +1818,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2088,7 +2089,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}</dd>
 
     <dt class="property-optional"

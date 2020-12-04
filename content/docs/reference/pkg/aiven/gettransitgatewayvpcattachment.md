@@ -15,6 +15,7 @@ meta_desc: "Explore the GetTransitGatewayVpcAttachment function of the Aiven pac
 The Transit Gateway VPC Attachment resource allows the creation and management Transit
 Gateway VPC Attachment VPC peering connection between Aiven and AWS.
 
+
 {{% examples %}}
 ## Example Usage
 

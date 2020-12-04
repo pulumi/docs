@@ -12,7 +12,8 @@ meta_desc: "Explore the Database resource of the Aiven package, including exampl
 
 ## # Database Resource
 
-The Database resource allows the creation and management of an Aiven Databases.
+The Database resource allows the creation and management of Aiven Databases.
+
 
 {{% examples %}}
 ## Example Usage
@@ -1080,6 +1081,8 @@ recommended to enable this for any production databases containing critical data
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

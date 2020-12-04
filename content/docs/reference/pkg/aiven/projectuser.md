@@ -12,7 +12,8 @@ meta_desc: "Explore the ProjectUser resource of the Aiven package, including exa
 
 ## # Project User Resource
 
-The Project User resource allows the creation and management of an Aiven Project Users.
+The Project User resource allows the creation and management of Aiven Project Users.
+
 
 {{% examples %}}
 ## Example Usage
@@ -912,6 +913,8 @@ cannot be set, only read.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -12,7 +12,8 @@ meta_desc: "Explore the KafkaTopic resource of the Aiven package, including exam
 
 ## # Kafka Topic Resource
 
-The Kafka Topic resource allows the creation and management of an Aiven Kafka Topic`s.
+The Kafka Topic resource allows the creation and management of Aiven Kafka Topics.
+
 
 {{% examples %}}
 ## Example Usage
@@ -30,13 +31,15 @@ class MyStack : Stack
     {
         var mytesttopic = new Aiven.KafkaTopic("mytesttopic", new Aiven.KafkaTopicArgs
         {
-            CleanupPolicy = "delete",
-            MinimumInSyncReplicas = 2,
+            Config = new Aiven.Inputs.KafkaTopicConfigArgs
+            {
+                CleanupPolicy = "compact,delete",
+                FlushMs = "10",
+                UncleanLeaderElectionEnable = "true",
+            },
             Partitions = 5,
             Project = aiven_project.Myproject.Project,
             Replication = 3,
-            RetentionBytes = -1,
-            RetentionHours = 72,
             ServiceName = aiven_service.Myservice.Service_name,
             TerminationProtection = true,
             TopicName = "<TOPIC_NAME>",
@@ -60,13 +63,14 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.NewKafkaTopic(ctx, "mytesttopic", &aiven.KafkaTopicArgs{
-			CleanupPolicy:         pulumi.String("delete"),
-			MinimumInSyncReplicas: pulumi.Int(2),
+			Config: &aiven.KafkaTopicConfigArgs{
+				CleanupPolicy:               pulumi.String("compact,delete"),
+				FlushMs:                     pulumi.String("10"),
+				UncleanLeaderElectionEnable: pulumi.String("true"),
+			},
 			Partitions:            pulumi.Int(5),
 			Project:               pulumi.Any(aiven_project.Myproject.Project),
 			Replication:           pulumi.Int(3),
-			RetentionBytes:        pulumi.Int(-1),
-			RetentionHours:        pulumi.Int(72),
 			ServiceName:           pulumi.Any(aiven_service.Myservice.Service_name),
 			TerminationProtection: pulumi.Bool(true),
 			TopicName:             pulumi.String("<TOPIC_NAME>"),
@@ -87,13 +91,14 @@ import pulumi
 import pulumi_aiven as aiven
 
 mytesttopic = aiven.KafkaTopic("mytesttopic",
-    cleanup_policy="delete",
-    minimum_in_sync_replicas=2,
+    config=aiven.KafkaTopicConfigArgs(
+        cleanup_policy="compact,delete",
+        flush_ms="10",
+        unclean_leader_election_enable="true",
+    ),
     partitions=5,
     project=aiven_project["myproject"]["project"],
     replication=3,
-    retention_bytes=-1,
-    retention_hours=72,
     service_name=aiven_service["myservice"]["service_name"],
     termination_protection=True,
     topic_name="<TOPIC_NAME>")
@@ -108,13 +113,14 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
 const mytesttopic = new aiven.KafkaTopic("mytesttopic", {
-    cleanupPolicy: "delete",
-    minimumInSyncReplicas: 2,
+    config: {
+        cleanupPolicy: "compact,delete",
+        flushMs: "10",
+        uncleanLeaderElectionEnable: "true",
+    },
     partitions: 5,
     project: aiven_project_myproject.project,
     replication: 3,
-    retentionBytes: -1,
-    retentionHours: 72,
     serviceName: aiven_service_myservice.serviceName,
     terminationProtection: true,
     topicName: "<TOPIC_NAME>",
@@ -378,7 +384,7 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use config.cleanup_policy instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -513,7 +519,7 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use config.cleanup_policy instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -648,7 +654,7 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use config.cleanup_policy instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -783,7 +789,7 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use config.cleanup_policy instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -1064,7 +1070,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use config.cleanup_policy instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -1199,7 +1205,7 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use config.cleanup_policy instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -1334,7 +1340,7 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use config.cleanup_policy instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -1469,7 +1475,7 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use config.cleanup_policy instead{{% /md %}}</p></dd>
 
     <dt class="property-optional"
@@ -1630,7 +1636,7 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1901,7 +1907,7 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2172,7 +2178,7 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2443,7 +2449,7 @@ created instead.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}cleanup.policy value
+    <dd>{{% md %}}cleanup.policy value, can be `create`, `delete` or `compact,delete`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2701,6 +2707,8 @@ created instead.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

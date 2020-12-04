@@ -12,7 +12,8 @@ meta_desc: "Explore the KafkaSchemaConfiguration resource of the Aiven package, 
 
 ## # Kafka Schema Configuration Resource
 
-The Kafka Schema Configuration resource allows the creation and management of an Aiven Kafka Schema Configurations.
+The Kafka Schema Configuration resource allows the creation and management of Aiven Kafka Schema Configurations.
+
 
 {{% examples %}}
 ## Example Usage
@@ -848,6 +849,8 @@ They should be defined using reference as shown above to set up dependencies cor
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

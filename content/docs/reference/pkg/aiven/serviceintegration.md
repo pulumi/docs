@@ -12,13 +12,14 @@ meta_desc: "Explore the ServiceIntegration resource of the Aiven package, includ
 
 ## # Service Integration Resource
 
-The Service Integration resource allows the creation and management of an Aiven Service Integration`s.
+The Service Integration resource allows the creation and management of Aiven Service Integrations.
 
 Service Integration defines an integration between two Aiven services or between Aiven
 service and an external integration endpoint. Integration could be for example sending
 metrics from Kafka service to an InfluxDB service, getting metrics from an InfluxDB
 service to a Grafana service to show dashboards, sending logs from any service to
 Elasticsearch, etc.
+
 
 {{% examples %}}
 ## Example Usage
@@ -36,12 +37,10 @@ class MyStack : Stack
     {
         var myintegration = new Aiven.ServiceIntegration("myintegration", new Aiven.ServiceIntegrationArgs
         {
-            DestinationEndpointId = aiven_service_integration_endpoint.Myendpoint.Id,
-            DestinationServiceName = "",
-            IntegrationType = "datadog",
             Project = aiven_project.Myproject.Project,
-            SourceEndpointId = "",
-            SourceServiceName = aiven_service.Testkafka.Service_name,
+            DestinationEndpointId = aiven_service_integration_endpoint.XX.Id,
+            IntegrationType = "datadog",
+            SourceServiceName = aiven_kafka.XXX.Service_name,
         });
     }
 
@@ -62,12 +61,10 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aiven.NewServiceIntegration(ctx, "myintegration", &aiven.ServiceIntegrationArgs{
-			DestinationEndpointId:  pulumi.Any(aiven_service_integration_endpoint.Myendpoint.Id),
-			DestinationServiceName: pulumi.String(""),
-			IntegrationType:        pulumi.String("datadog"),
-			Project:                pulumi.Any(aiven_project.Myproject.Project),
-			SourceEndpointId:       pulumi.String(""),
-			SourceServiceName:      pulumi.Any(aiven_service.Testkafka.Service_name),
+			Project:               pulumi.Any(aiven_project.Myproject.Project),
+			DestinationEndpointId: pulumi.Any(aiven_service_integration_endpoint.XX.Id),
+			IntegrationType:       pulumi.String("datadog"),
+			SourceServiceName:     pulumi.Any(aiven_kafka.XXX.Service_name),
 		})
 		if err != nil {
 			return err
@@ -85,12 +82,10 @@ import pulumi
 import pulumi_aiven as aiven
 
 myintegration = aiven.ServiceIntegration("myintegration",
-    destination_endpoint_id=aiven_service_integration_endpoint["myendpoint"]["id"],
-    destination_service_name="",
-    integration_type="datadog",
     project=aiven_project["myproject"]["project"],
-    source_endpoint_id="",
-    source_service_name=aiven_service["testkafka"]["service_name"])
+    destination_endpoint_id=aiven_service_integration_endpoint["XX"]["id"],
+    integration_type="datadog",
+    source_service_name=aiven_kafka["XXX"]["service_name"])
 ```
 
 {{% /example %}}
@@ -102,12 +97,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aiven from "@pulumi/aiven";
 
 const myintegration = new aiven.ServiceIntegration("myintegration", {
-    destinationEndpointId: aiven_service_integration_endpoint_myendpoint.id,
-    destinationServiceName: "",
+    project: aiven_project.myproject.project,
+    destinationEndpointId: aiven_service_integration_endpoint.XX.id,
     integrationType: "datadog",
-    project: aiven_project_myproject.project,
-    sourceEndpointId: "",
-    sourceServiceName: aiven_service_testkafka.serviceName,
+    sourceServiceName: aiven_kafka.XXX.service_name,
 });
 ```
 
@@ -329,9 +322,9 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
-the integration. Only either endpoint identifier or service name must be specified. In
-either case the target needs to be defined using the reference syntax described above to
-set up the dependency correctly.
+the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
+service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
+to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -398,9 +391,9 @@ set up the dependency correctly.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
-integration. Only either endpoint identifier or service name must be specified. In either
-case the source needs to be defined using the reference syntax described above to set up
-the dependency correctly.
+integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
+service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
+needs to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -453,9 +446,9 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
-the integration. Only either endpoint identifier or service name must be specified. In
-either case the target needs to be defined using the reference syntax described above to
-set up the dependency correctly.
+the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
+service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
+to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -522,9 +515,9 @@ set up the dependency correctly.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
-integration. Only either endpoint identifier or service name must be specified. In either
-case the source needs to be defined using the reference syntax described above to set up
-the dependency correctly.
+integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
+service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
+needs to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -577,9 +570,9 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
-the integration. Only either endpoint identifier or service name must be specified. In
-either case the target needs to be defined using the reference syntax described above to
-set up the dependency correctly.
+the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
+service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
+to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -646,9 +639,9 @@ set up the dependency correctly.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
-integration. Only either endpoint identifier or service name must be specified. In either
-case the source needs to be defined using the reference syntax described above to set up
-the dependency correctly.
+integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
+service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
+needs to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -701,9 +694,9 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
-the integration. Only either endpoint identifier or service name must be specified. In
-either case the target needs to be defined using the reference syntax described above to
-set up the dependency correctly.
+the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
+service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
+to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -770,9 +763,9 @@ set up the dependency correctly.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
-integration. Only either endpoint identifier or service name must be specified. In either
-case the source needs to be defined using the reference syntax described above to set up
-the dependency correctly.
+integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
+service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
+needs to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1008,9 +1001,9 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
-the integration. Only either endpoint identifier or service name must be specified. In
-either case the target needs to be defined using the reference syntax described above to
-set up the dependency correctly.
+the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
+service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
+to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1100,9 +1093,9 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
-integration. Only either endpoint identifier or service name must be specified. In either
-case the source needs to be defined using the reference syntax described above to set up
-the dependency correctly.
+integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
+service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
+needs to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1132,9 +1125,9 @@ the dependency correctly.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
-the integration. Only either endpoint identifier or service name must be specified. In
-either case the target needs to be defined using the reference syntax described above to
-set up the dependency correctly.
+the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
+service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
+to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1224,9 +1217,9 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
-integration. Only either endpoint identifier or service name must be specified. In either
-case the source needs to be defined using the reference syntax described above to set up
-the dependency correctly.
+integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
+service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
+needs to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1256,9 +1249,9 @@ the dependency correctly.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
-the integration. Only either endpoint identifier or service name must be specified. In
-either case the target needs to be defined using the reference syntax described above to
-set up the dependency correctly.
+the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
+service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
+to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1348,9 +1341,9 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
-integration. Only either endpoint identifier or service name must be specified. In either
-case the source needs to be defined using the reference syntax described above to set up
-the dependency correctly.
+integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
+service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
+needs to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1380,9 +1373,9 @@ the dependency correctly.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
-the integration. Only either endpoint identifier or service name must be specified. In
-either case the target needs to be defined using the reference syntax described above to
-set up the dependency correctly.
+the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
+service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
+to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1472,9 +1465,9 @@ include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
-integration. Only either endpoint identifier or service name must be specified. In either
-case the source needs to be defined using the reference syntax described above to set up
-the dependency correctly.
+integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
+service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
+needs to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2088,6 +2081,8 @@ the dependency correctly.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

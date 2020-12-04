@@ -16,6 +16,7 @@ The Account Authentication data source provides information about the existing A
 
 
 
+
 ## Using GetAccountAuthentication {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}

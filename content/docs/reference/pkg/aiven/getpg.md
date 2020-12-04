@@ -14,6 +14,7 @@ meta_desc: "Explore the GetPg function of the Aiven package, including examples,
 
 The PG data source provides information about the existing Aiven PostgreSQL service.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -167,7 +168,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -193,7 +194,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -361,7 +362,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -409,7 +410,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -435,7 +436,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -603,7 +604,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -651,7 +652,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -677,7 +678,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -845,7 +846,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -893,7 +894,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -919,7 +920,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1087,7 +1088,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -1250,7 +1251,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -1266,7 +1267,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1347,7 +1348,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -1497,7 +1498,7 @@ deletion is done.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -1513,7 +1514,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1594,7 +1595,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -1744,7 +1745,7 @@ deletion is done.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -1760,7 +1761,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1841,7 +1842,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -1991,7 +1992,7 @@ deletion is done.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -2007,7 +2008,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -2088,7 +2089,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -6044,6 +6045,53 @@ to lower than the default 200ms may negatively impact performance
 
     <dt class="property-optional"
             title="Optional">
+        <span id="autodbidletimeout_csharp">
+<a href="#autodbidletimeout_csharp" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Idle<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}If the automatically created database pools have been unused this 
+many seconds, they are freed. If 0 then timeout is disabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodbmaxdbconnections_csharp">
+<a href="#autodbmaxdbconnections_csharp" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Max<wbr>Db<wbr>Connections</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Do not allow more than this many server connections per database 
+(regardless of user). Setting it to 0 means unlimited.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodbpoolmode_csharp">
+<a href="#autodbpoolmode_csharp" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Pool<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}PGBouncer pool mode
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodbpoolsize_csharp">
+<a href="#autodbpoolsize_csharp" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Pool<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}If non-zero then create automatically a pool of that size per user 
+when a pool doesn't exist.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ignorestartupparameters_csharp">
 <a href="#ignorestartupparameters_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Startup<wbr>Parameters</a>
 </span> 
@@ -6051,6 +6099,43 @@ to lower than the default 200ms may negatively impact performance
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Enum of parameters to ignore when given in startup packet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minpoolsize_csharp">
+<a href="#minpoolsize_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Pool<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Add more server connections to pool if below this number. Improves 
+behavior when usual load comes suddenly back after period of total inactivity. The value is
+effectively capped at the pool size.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serveridletimeout_csharp">
+<a href="#serveridletimeout_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Idle<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}If a server connection has been idle more than this many seconds 
+it will be dropped. If 0 then timeout is disabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serverlifetime_csharp">
+<a href="#serverlifetime_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Lifetime</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The pooler will close an unused server connection that has been connected 
+longer than this.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6073,6 +6158,53 @@ to lower than the default 200ms may negatively impact performance
 
     <dt class="property-optional"
             title="Optional">
+        <span id="autodbidletimeout_go">
+<a href="#autodbidletimeout_go" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Idle<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If the automatically created database pools have been unused this 
+many seconds, they are freed. If 0 then timeout is disabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodbmaxdbconnections_go">
+<a href="#autodbmaxdbconnections_go" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Max<wbr>Db<wbr>Connections</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Do not allow more than this many server connections per database 
+(regardless of user). Setting it to 0 means unlimited.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodbpoolmode_go">
+<a href="#autodbpoolmode_go" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Pool<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}PGBouncer pool mode
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodbpoolsize_go">
+<a href="#autodbpoolsize_go" style="color: inherit; text-decoration: inherit;">Autodb<wbr>Pool<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If non-zero then create automatically a pool of that size per user 
+when a pool doesn't exist.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ignorestartupparameters_go">
 <a href="#ignorestartupparameters_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Startup<wbr>Parameters</a>
 </span> 
@@ -6080,6 +6212,43 @@ to lower than the default 200ms may negatively impact performance
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Enum of parameters to ignore when given in startup packet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minpoolsize_go">
+<a href="#minpoolsize_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Pool<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Add more server connections to pool if below this number. Improves 
+behavior when usual load comes suddenly back after period of total inactivity. The value is
+effectively capped at the pool size.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serveridletimeout_go">
+<a href="#serveridletimeout_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Idle<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If a server connection has been idle more than this many seconds 
+it will be dropped. If 0 then timeout is disabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serverlifetime_go">
+<a href="#serverlifetime_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Lifetime</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The pooler will close an unused server connection that has been connected 
+longer than this.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6102,6 +6271,53 @@ to lower than the default 200ms may negatively impact performance
 
     <dt class="property-optional"
             title="Optional">
+        <span id="autodbidletimeout_nodejs">
+<a href="#autodbidletimeout_nodejs" style="color: inherit; text-decoration: inherit;">autodb<wbr>Idle<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If the automatically created database pools have been unused this 
+many seconds, they are freed. If 0 then timeout is disabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodbmaxdbconnections_nodejs">
+<a href="#autodbmaxdbconnections_nodejs" style="color: inherit; text-decoration: inherit;">autodb<wbr>Max<wbr>Db<wbr>Connections</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Do not allow more than this many server connections per database 
+(regardless of user). Setting it to 0 means unlimited.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodbpoolmode_nodejs">
+<a href="#autodbpoolmode_nodejs" style="color: inherit; text-decoration: inherit;">autodb<wbr>Pool<wbr>Mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}PGBouncer pool mode
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodbpoolsize_nodejs">
+<a href="#autodbpoolsize_nodejs" style="color: inherit; text-decoration: inherit;">autodb<wbr>Pool<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If non-zero then create automatically a pool of that size per user 
+when a pool doesn't exist.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ignorestartupparameters_nodejs">
 <a href="#ignorestartupparameters_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Startup<wbr>Parameters</a>
 </span> 
@@ -6109,6 +6325,43 @@ to lower than the default 200ms may negatively impact performance
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Enum of parameters to ignore when given in startup packet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minpoolsize_nodejs">
+<a href="#minpoolsize_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Pool<wbr>Size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Add more server connections to pool if below this number. Improves 
+behavior when usual load comes suddenly back after period of total inactivity. The value is
+effectively capped at the pool size.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serveridletimeout_nodejs">
+<a href="#serveridletimeout_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Idle<wbr>Timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}If a server connection has been idle more than this many seconds 
+it will be dropped. If 0 then timeout is disabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serverlifetime_nodejs">
+<a href="#serverlifetime_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Lifetime</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The pooler will close an unused server connection that has been connected 
+longer than this.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6131,6 +6384,53 @@ to lower than the default 200ms may negatively impact performance
 
     <dt class="property-optional"
             title="Optional">
+        <span id="autodb_idle_timeout_python">
+<a href="#autodb_idle_timeout_python" style="color: inherit; text-decoration: inherit;">autodb_<wbr>idle_<wbr>timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}If the automatically created database pools have been unused this 
+many seconds, they are freed. If 0 then timeout is disabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodb_max_db_connections_python">
+<a href="#autodb_max_db_connections_python" style="color: inherit; text-decoration: inherit;">autodb_<wbr>max_<wbr>db_<wbr>connections</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Do not allow more than this many server connections per database 
+(regardless of user). Setting it to 0 means unlimited.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodb_pool_mode_python">
+<a href="#autodb_pool_mode_python" style="color: inherit; text-decoration: inherit;">autodb_<wbr>pool_<wbr>mode</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}PGBouncer pool mode
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autodb_pool_size_python">
+<a href="#autodb_pool_size_python" style="color: inherit; text-decoration: inherit;">autodb_<wbr>pool_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}If non-zero then create automatically a pool of that size per user 
+when a pool doesn't exist.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ignore_startup_parameters_python">
 <a href="#ignore_startup_parameters_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>startup_<wbr>parameters</a>
 </span> 
@@ -6138,6 +6438,43 @@ to lower than the default 200ms may negatively impact performance
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
     <dd>{{% md %}}Enum of parameters to ignore when given in startup packet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_pool_size_python">
+<a href="#min_pool_size_python" style="color: inherit; text-decoration: inherit;">min_<wbr>pool_<wbr>size</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Add more server connections to pool if below this number. Improves 
+behavior when usual load comes suddenly back after period of total inactivity. The value is
+effectively capped at the pool size.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="server_idle_timeout_python">
+<a href="#server_idle_timeout_python" style="color: inherit; text-decoration: inherit;">server_<wbr>idle_<wbr>timeout</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}If a server connection has been idle more than this many seconds 
+it will be dropped. If 0 then timeout is disabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="server_lifetime_python">
+<a href="#server_lifetime_python" style="color: inherit; text-decoration: inherit;">server_<wbr>lifetime</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The pooler will close an unused server connection that has been connected 
+longer than this.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

@@ -13,7 +13,8 @@ meta_desc: "Explore the MirrorMakerReplicationFlow resource of the Aiven package
 ## # MirrorMaker 2 Replication Flow Resource
 
 The MirrorMaker 2 Replication Flow resource allows the creation and management of MirrorMaker 2
-Replication Flow on Aiven Cloud.
+Replication Flows on Aiven Cloud.
+
 
 {{% examples %}}
 ## Example Usage
@@ -326,7 +327,7 @@ The MirrorMakerReplicationFlow resource accepts the following [input]({{< relref
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}enable of disable replication flows for a mirror maker service
+    <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -411,7 +412,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}enable of disable replication flows for a mirror maker service
+    <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -496,7 +497,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}enable of disable replication flows for a mirror maker service
+    <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -581,7 +582,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}enable of disable replication flows for a mirror maker service
+    <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -872,7 +873,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}enable of disable replication flows for a mirror maker service
+    <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -957,7 +958,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}enable of disable replication flows for a mirror maker service
+    <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1042,7 +1043,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}enable of disable replication flows for a mirror maker service
+    <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1127,7 +1128,7 @@ Flow belongs to. They should be defined using reference as shown above to set up
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}enable of disable replication flows for a mirror maker service
+    <dd>{{% md %}}enable of disable replication flows for a MirrorMaker service
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1199,6 +1200,8 @@ Flow belongs to. They should be defined using reference as shown above to set up
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

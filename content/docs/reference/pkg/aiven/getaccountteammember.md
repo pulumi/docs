@@ -12,7 +12,8 @@ meta_desc: "Explore the GetAccountTeamMember function of the Aiven package, incl
 
 ## # Account Team Member Data Source
 
-The Account Team Member  data source provides information about the existing Aiven Account Team Member.
+The Account Team Member data source provides information about the existing Aiven Account Team Member.
+
 
 
 
@@ -98,7 +99,7 @@ he or she becomes a member of a team.
     </dt>
     <dd>{{% md %}}is a boolean flag that determines whether an invitation was accepted or not by the user. 
 `false` value means that the invitation was sent to the user but not yet accepted.
-`true` means that the user accepted the invitation and now a member of an account team.
+`true` means that the user accepted the invitation and is now a member of an account team.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -174,7 +175,7 @@ he or she becomes a member of a team.
     </dt>
     <dd>{{% md %}}is a boolean flag that determines whether an invitation was accepted or not by the user. 
 `false` value means that the invitation was sent to the user but not yet accepted.
-`true` means that the user accepted the invitation and now a member of an account team.
+`true` means that the user accepted the invitation and is now a member of an account team.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -250,7 +251,7 @@ he or she becomes a member of a team.
     </dt>
     <dd>{{% md %}}is a boolean flag that determines whether an invitation was accepted or not by the user. 
 `false` value means that the invitation was sent to the user but not yet accepted.
-`true` means that the user accepted the invitation and now a member of an account team.
+`true` means that the user accepted the invitation and is now a member of an account team.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -326,7 +327,7 @@ he or she becomes a member of a team.
     </dt>
     <dd>{{% md %}}is a boolean flag that determines whether an invitation was accepted or not by the user. 
 `false` value means that the invitation was sent to the user but not yet accepted.
-`true` means that the user accepted the invitation and now a member of an account team.
+`true` means that the user accepted the invitation and is now a member of an account team.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -381,7 +382,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}is a boolean flag that determines whether an invitation was accepted or not by the user. 
 `false` value means that the invitation was sent to the user but not yet accepted.
-`true` means that the user accepted the invitation and now a member of an account team.
+`true` means that the user accepted the invitation and is now a member of an account team.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -464,7 +465,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}is a boolean flag that determines whether an invitation was accepted or not by the user. 
 `false` value means that the invitation was sent to the user but not yet accepted.
-`true` means that the user accepted the invitation and now a member of an account team.
+`true` means that the user accepted the invitation and is now a member of an account team.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -547,7 +548,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}is a boolean flag that determines whether an invitation was accepted or not by the user. 
 `false` value means that the invitation was sent to the user but not yet accepted.
-`true` means that the user accepted the invitation and now a member of an account team.
+`true` means that the user accepted the invitation and is now a member of an account team.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -630,7 +631,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}is a boolean flag that determines whether an invitation was accepted or not by the user. 
 `false` value means that the invitation was sent to the user but not yet accepted.
-`true` means that the user accepted the invitation and now a member of an account team.
+`true` means that the user accepted the invitation and is now a member of an account team.
 {{% /md %}}</dd>
 
     <dt class="property-"

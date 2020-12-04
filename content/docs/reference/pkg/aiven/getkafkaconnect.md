@@ -14,6 +14,7 @@ meta_desc: "Explore the GetKafkaConnect function of the Aiven package, including
 
 The Kafka Connect data source provides information about the existing Aiven Kafka Connect service.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -167,7 +168,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -203,7 +204,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkafkaconnectkafkaconnectuserconfig">Get<wbr>Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}defines kafka Connect specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka Connect specific additional configuration options. 
 The following configuration options available:
 {{% /md %}}</dd>
 
@@ -216,7 +217,7 @@ The following configuration options available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -361,7 +362,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -409,7 +410,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -445,7 +446,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkafkaconnectkafkaconnectuserconfig">Get<wbr>Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}defines kafka Connect specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka Connect specific additional configuration options. 
 The following configuration options available:
 {{% /md %}}</dd>
 
@@ -458,7 +459,7 @@ The following configuration options available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -603,7 +604,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -651,7 +652,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -687,7 +688,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkafkaconnectkafkaconnectuserconfig">Get<wbr>Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}defines kafka Connect specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka Connect specific additional configuration options. 
 The following configuration options available:
 {{% /md %}}</dd>
 
@@ -700,7 +701,7 @@ The following configuration options available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -845,7 +846,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -893,7 +894,7 @@ intended service usage rather than current attributes.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -929,7 +930,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkafkaconnectkafkaconnectuserconfig">Get<wbr>Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}defines kafka Connect specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka Connect specific additional configuration options. 
 The following configuration options available:
 {{% /md %}}</dd>
 
@@ -942,7 +943,7 @@ The following configuration options available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1087,7 +1088,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -1250,7 +1251,7 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -1265,7 +1266,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkafkaconnectkafkaconnectuserconfig">Get<wbr>Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}defines kafka Connect specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka Connect specific additional configuration options. 
 The following configuration options available:
 {{% /md %}}</dd>
 
@@ -1278,7 +1279,7 @@ The following configuration options available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1347,7 +1348,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -1497,7 +1498,7 @@ deletion is done.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -1512,7 +1513,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkafkaconnectkafkaconnectuserconfig">Get<wbr>Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}defines kafka Connect specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka Connect specific additional configuration options. 
 The following configuration options available:
 {{% /md %}}</dd>
 
@@ -1525,7 +1526,7 @@ The following configuration options available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1594,7 +1595,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -1744,7 +1745,7 @@ deletion is done.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -1759,7 +1760,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkafkaconnectkafkaconnectuserconfig">Get<wbr>Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}defines kafka Connect specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka Connect specific additional configuration options. 
 The following configuration options available:
 {{% /md %}}</dd>
 
@@ -1772,7 +1773,7 @@ The following configuration options available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1841,7 +1842,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>
@@ -1991,7 +1992,7 @@ deletion is done.
     </dt>
     <dd>{{% md %}}defines where the cloud provider and region where the service is hosted
 in. This can be changed freely after service is created. Changing the value will trigger
-a potentially lenghty migration process for the service. Format is cloud provider name
+a potentially lengthy migration process for the service. Format is cloud provider name
 (`aws`, `azure`, `do` `google`, `upcloud`, etc.), dash, and the cloud provider
 specific region name. These are documented on each Cloud provider's own support articles,
 like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
@@ -2006,7 +2007,7 @@ like [here for Google](https://cloud.google.com/compute/docs/regions-zones/) and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkafkaconnectkafkaconnectuserconfig">Get<wbr>Kafka<wbr>Connect<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}defines kafka Connect specific additional configuration options. 
+    <dd>{{% md %}}defines Kafka Connect specific additional configuration options. 
 The following configuration options available:
 {{% /md %}}</dd>
 
@@ -2019,7 +2020,7 @@ The following configuration options available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}day of week when maintenance operations should be performed. 
-One monday, tuesday, wednesday, etc.
+On monday, tuesday, wednesday, etc.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -2088,7 +2089,7 @@ significant amount of time to complete if the service has a lot of data.
     </dt>
     <dd>{{% md %}}prevents the service from being deleted. It is recommended to
 set this to `true` for all production services to prevent unintentional service
-deletions. This does not shield against deleting databases or topics but for services
+deletion. This does not shield against deleting databases or topics but for services
 with backups much of the content can at least be restored from backup in case accidental
 deletion is done.
 {{% /md %}}</dd>

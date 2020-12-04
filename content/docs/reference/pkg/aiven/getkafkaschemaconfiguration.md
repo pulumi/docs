@@ -15,6 +15,7 @@ meta_desc: "Explore the GetKafkaSchemaConfiguration function of the Aiven packag
 The Kafka Schema Configuration data source provides information about the existing Aiven
 Kafka Schema Configuration.
 
+
 {{% examples %}}
 ## Example Usage
 

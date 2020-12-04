@@ -14,6 +14,7 @@ meta_desc: "Explore the GetConnectionPool function of the Aiven package, includi
 
 The Connection Pool data source provides information about the existing Aiven Connection Pool.
 
+
 {{% examples %}}
 ## Example Usage
 
