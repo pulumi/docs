@@ -12,7 +12,7 @@ meta_desc: "Explore the Origin resource of the trustedorigin module, including e
 
 Creates a Trusted Origin.
 
-This resource allows you to create and configure an Trusted Origin.
+This resource allows you to create and configure a Trusted Origin.
 
 {{% examples %}}
 ## Example Usage
@@ -288,7 +288,7 @@ The Origin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The origin to trust.
+    <dd>{{% md %}}Unique origin URL for this trusted origin.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -310,7 +310,7 @@ The Origin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation.
+    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default it is 'true'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -321,7 +321,7 @@ The Origin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Trusted Origin Resource.
+    <dd>{{% md %}}Unique name for this trusted origin.
 {{% /md %}}</dd>
 
 </dl>
@@ -339,7 +339,7 @@ The Origin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The origin to trust.
+    <dd>{{% md %}}Unique origin URL for this trusted origin.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -361,7 +361,7 @@ The Origin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation.
+    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default it is 'true'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -372,7 +372,7 @@ The Origin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Trusted Origin Resource.
+    <dd>{{% md %}}Unique name for this trusted origin.
 {{% /md %}}</dd>
 
 </dl>
@@ -390,7 +390,7 @@ The Origin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The origin to trust.
+    <dd>{{% md %}}Unique origin URL for this trusted origin.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -412,7 +412,7 @@ The Origin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation.
+    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default it is 'true'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -423,7 +423,7 @@ The Origin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Trusted Origin Resource.
+    <dd>{{% md %}}Unique name for this trusted origin.
 {{% /md %}}</dd>
 
 </dl>
@@ -441,7 +441,7 @@ The Origin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The origin to trust.
+    <dd>{{% md %}}Unique origin URL for this trusted origin.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -463,7 +463,7 @@ The Origin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation.
+    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default it is 'true'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -474,7 +474,7 @@ The Origin resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Trusted Origin Resource.
+    <dd>{{% md %}}Unique name for this trusted origin.
 {{% /md %}}</dd>
 
 </dl>
@@ -698,7 +698,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation.
+    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default it is 'true'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -709,7 +709,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Trusted Origin Resource.
+    <dd>{{% md %}}Unique name for this trusted origin.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -720,7 +720,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The origin to trust.
+    <dd>{{% md %}}Unique origin URL for this trusted origin.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -749,7 +749,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation.
+    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default it is 'true'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -760,7 +760,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Trusted Origin Resource.
+    <dd>{{% md %}}Unique name for this trusted origin.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -771,7 +771,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The origin to trust.
+    <dd>{{% md %}}Unique origin URL for this trusted origin.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -800,7 +800,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation.
+    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default it is 'true'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -811,7 +811,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Trusted Origin Resource.
+    <dd>{{% md %}}Unique name for this trusted origin.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -822,7 +822,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The origin to trust.
+    <dd>{{% md %}}Unique origin URL for this trusted origin.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -851,7 +851,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation.
+    <dd>{{% md %}}Whether the Trusted Origin is active or not - can only be issued post-creation. By default it is 'true'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -862,7 +862,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the Trusted Origin Resource.
+    <dd>{{% md %}}Unique name for this trusted origin.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -873,7 +873,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The origin to trust.
+    <dd>{{% md %}}Unique origin URL for this trusted origin.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
