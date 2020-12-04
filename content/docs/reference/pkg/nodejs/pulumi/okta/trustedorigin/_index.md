@@ -3,7 +3,7 @@ title: "Module trustedorigin"
 title_tag: "Module trustedorigin | Package @pulumi/okta | Node.js SDK"
 linktitle: "trustedorigin"
 meta_desc: "Explore members of the trustedorigin module in the @pulumi/okta package."
-git_sha: "c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a"
+git_sha: "df38f7a628913e798f4a290274f0158737c3e299"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Origin" data-link-title="Origin">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/trustedorigin/origin.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/trustedorigin/origin.ts#L32">
         Resource <strong>Origin</strong>
     </a>
 </h3>
@@ -39,7 +39,7 @@ block_external_search_index: true
 
 Creates a Trusted Origin.
 
-This resource allows you to create and configure an Trusted Origin.
+This resource allows you to create and configure a Trusted Origin.
 
 #### Example Usage
 
@@ -62,7 +62,7 @@ A Trusted Origin can be imported via the Okta ID.
 ```
 
 <h4 class="pdoc-member-header" id="Origin-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/trustedorigin/origin.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/trustedorigin/origin.ts#L75"> <b>constructor</b></a>
 </h4>
 
 
@@ -76,7 +76,7 @@ Create a Origin resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Origin-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/trustedorigin/origin.ts#L42">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/trustedorigin/origin.ts#L42">method <b>get</b></a>
 </h4>
 
 
@@ -87,14 +87,14 @@ Get an existing Origin resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Origin-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/trustedorigin/origin.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/trustedorigin/origin.ts#L32">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Origin-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/trustedorigin/origin.ts#L53">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/trustedorigin/origin.ts#L53">method <b>isInstance</b></a>
 </h4>
 
 
@@ -105,15 +105,15 @@ Returns true if the given object is an instance of Origin.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Origin-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/trustedorigin/origin.ts#L63">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/trustedorigin/origin.ts#L63">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>active: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-Whether the Trusted Origin is active or not - can only be issued post-creation.
+Whether the Trusted Origin is active or not - can only be issued post-creation. By default it is 'true'.
 
 <h4 class="pdoc-member-header" id="Origin-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/trustedorigin/origin.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/trustedorigin/origin.ts#L32">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -122,23 +122,23 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Origin-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/trustedorigin/origin.ts#L67">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/trustedorigin/origin.ts#L67">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Name of the Trusted Origin Resource.
+Unique name for this trusted origin.
 
 <h4 class="pdoc-member-header" id="Origin-origin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/trustedorigin/origin.ts#L71">property <b>origin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/trustedorigin/origin.ts#L71">property <b>origin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>origin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The origin to trust.
+Unique origin URL for this trusted origin.
 
 <h4 class="pdoc-member-header" id="Origin-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/trustedorigin/origin.ts#L75">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/trustedorigin/origin.ts#L75">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -146,7 +146,7 @@ The origin to trust.
 Scopes of the Trusted Origin - can be `"CORS"` and/or `"REDIRECT"`.
 
 <h4 class="pdoc-member-header" id="Origin-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/trustedorigin/origin.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/trustedorigin/origin.ts#L32">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -158,7 +158,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="OriginArgs" data-link-title="OriginArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/trustedorigin/origin.ts#L142">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/trustedorigin/origin.ts#L142">
         interface <strong>OriginArgs</strong>
     </a>
 </h3>
@@ -168,31 +168,31 @@ deployments.
 The set of arguments for constructing a Origin resource.
 
 <h4 class="pdoc-member-header" id="OriginArgs-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/trustedorigin/origin.ts#L146">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/trustedorigin/origin.ts#L146">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>active?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Whether the Trusted Origin is active or not - can only be issued post-creation.
+Whether the Trusted Origin is active or not - can only be issued post-creation. By default it is 'true'.
 
 <h4 class="pdoc-member-header" id="OriginArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/trustedorigin/origin.ts#L150">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/trustedorigin/origin.ts#L150">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Name of the Trusted Origin Resource.
+Unique name for this trusted origin.
 
 <h4 class="pdoc-member-header" id="OriginArgs-origin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/trustedorigin/origin.ts#L154">property <b>origin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/trustedorigin/origin.ts#L154">property <b>origin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>origin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The origin to trust.
+Unique origin URL for this trusted origin.
 
 <h4 class="pdoc-member-header" id="OriginArgs-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/trustedorigin/origin.ts#L158">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/trustedorigin/origin.ts#L158">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -200,7 +200,7 @@ The origin to trust.
 Scopes of the Trusted Origin - can be `"CORS"` and/or `"REDIRECT"`.
 
 <h3 class="pdoc-module-header" id="OriginState" data-link-title="OriginState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/trustedorigin/origin.ts#L120">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/trustedorigin/origin.ts#L120">
         interface <strong>OriginState</strong>
     </a>
 </h3>
@@ -210,31 +210,31 @@ Scopes of the Trusted Origin - can be `"CORS"` and/or `"REDIRECT"`.
 Input properties used for looking up and filtering Origin resources.
 
 <h4 class="pdoc-member-header" id="OriginState-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/trustedorigin/origin.ts#L124">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/trustedorigin/origin.ts#L124">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>active?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 
-Whether the Trusted Origin is active or not - can only be issued post-creation.
+Whether the Trusted Origin is active or not - can only be issued post-creation. By default it is 'true'.
 
 <h4 class="pdoc-member-header" id="OriginState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/trustedorigin/origin.ts#L128">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/trustedorigin/origin.ts#L128">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-Name of the Trusted Origin Resource.
+Unique name for this trusted origin.
 
 <h4 class="pdoc-member-header" id="OriginState-origin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/trustedorigin/origin.ts#L132">property <b>origin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/trustedorigin/origin.ts#L132">property <b>origin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>origin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The origin to trust.
+Unique origin URL for this trusted origin.
 
 <h4 class="pdoc-member-header" id="OriginState-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/c2f9d1b5a0c0b97fc2458b39c9a173f08a65022a/sdk/nodejs/trustedorigin/origin.ts#L136">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/trustedorigin/origin.ts#L136">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>

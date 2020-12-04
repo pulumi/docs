@@ -23,7 +23,7 @@ Explore the resources and functions of the inline module in the Okta package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
 	<dt>Version</dt>
-	<dd>2.6.2</dd>
+	<dd>2.6.3</dd>
 </dl>
 
 

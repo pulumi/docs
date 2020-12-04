@@ -364,7 +364,8 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Groups whose Users are to be excluded
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -374,7 +375,8 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Groups whose Users are to be included
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -461,7 +463,8 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Users to be excluded
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -471,7 +474,8 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Users to be included
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -543,7 +547,8 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Groups whose Users are to be excluded
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -553,7 +558,8 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Groups whose Users are to be included
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -640,7 +646,8 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Users to be excluded
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -650,7 +657,8 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Users to be included
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -722,7 +730,8 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Groups whose Users are to be excluded
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -732,7 +741,8 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Groups whose Users are to be included
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -819,7 +829,8 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Users to be excluded
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -829,7 +840,8 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Users to be included
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -901,7 +913,8 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Groups whose Users are to be excluded
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -911,7 +924,8 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Groups whose Users are to be included
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -998,7 +1012,8 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Users to be excluded
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1008,7 +1023,8 @@ The ServerPolicyRule resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Users to be included
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1264,7 +1280,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Groups whose Users are to be excluded
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1274,7 +1291,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Groups whose Users are to be included
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1383,7 +1401,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Users to be excluded
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1393,7 +1412,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Users to be included
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1443,7 +1463,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Groups whose Users are to be excluded
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1453,7 +1474,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Groups whose Users are to be included
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1562,7 +1584,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Users to be excluded
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1572,7 +1595,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Users to be included
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1622,7 +1646,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Groups whose Users are to be excluded
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1632,7 +1657,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Groups whose Users are to be included
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1741,7 +1767,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Users to be excluded
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1751,7 +1778,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Users to be included
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1801,7 +1829,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Groups whose Users are to be excluded
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1811,7 +1840,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Groups whose Users are to be included
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1920,7 +1950,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Users to be excluded
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1930,7 +1961,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a set of Users to be included
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
