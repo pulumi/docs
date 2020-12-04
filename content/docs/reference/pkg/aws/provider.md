@@ -2013,6 +2013,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="ecrpublic_csharp">
+<a href="#ecrpublic_csharp" style="color: inherit; text-decoration: inherit;">Ecrpublic</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ecs_csharp">
 <a href="#ecs_csharp" style="color: inherit; text-decoration: inherit;">Ecs</a>
 </span> 
@@ -2485,6 +2495,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="mq_csharp">
 <a href="#mq_csharp" style="color: inherit; text-decoration: inherit;">Mq</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mwaa_csharp">
+<a href="#mwaa_csharp" style="color: inherit; text-decoration: inherit;">Mwaa</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -3490,6 +3510,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="ecrpublic_go">
+<a href="#ecrpublic_go" style="color: inherit; text-decoration: inherit;">Ecrpublic</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ecs_go">
 <a href="#ecs_go" style="color: inherit; text-decoration: inherit;">Ecs</a>
 </span> 
@@ -3962,6 +3992,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="mq_go">
 <a href="#mq_go" style="color: inherit; text-decoration: inherit;">Mq</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mwaa_go">
+<a href="#mwaa_go" style="color: inherit; text-decoration: inherit;">Mwaa</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -4967,6 +5007,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="ecrpublic_nodejs">
+<a href="#ecrpublic_nodejs" style="color: inherit; text-decoration: inherit;">ecrpublic</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ecs_nodejs">
 <a href="#ecs_nodejs" style="color: inherit; text-decoration: inherit;">ecs</a>
 </span> 
@@ -5439,6 +5489,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="mq_nodejs">
 <a href="#mq_nodejs" style="color: inherit; text-decoration: inherit;">mq</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mwaa_nodejs">
+<a href="#mwaa_nodejs" style="color: inherit; text-decoration: inherit;">mwaa</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -6444,6 +6504,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="ecrpublic_python">
+<a href="#ecrpublic_python" style="color: inherit; text-decoration: inherit;">ecrpublic</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="ecs_python">
 <a href="#ecs_python" style="color: inherit; text-decoration: inherit;">ecs</a>
 </span> 
@@ -6916,6 +6986,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="mq_python">
 <a href="#mq_python" style="color: inherit; text-decoration: inherit;">mq</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mwaa_python">
+<a href="#mwaa_python" style="color: inherit; text-decoration: inherit;">mwaa</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>

@@ -313,7 +313,7 @@ sample_compute_environment = aws.batch.ComputeEnvironment("sampleComputeEnvironm
     ),
     service_role=aws_batch_service_role_role.arn,
     type="MANAGED",
-    opts=ResourceOptions(depends_on=[aws_batch_service_role_role_policy_attachment]))
+    opts=pulumi.ResourceOptions(depends_on=[aws_batch_service_role_role_policy_attachment]))
 ```
 
 {{% /example %}}

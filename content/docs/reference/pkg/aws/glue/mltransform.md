@@ -360,7 +360,7 @@ test_ml_transform = aws.glue.MLTransform("testMLTransform",
             primary_key_column_name="my_column_1",
         ),
     ),
-    opts=ResourceOptions(depends_on=[aws_iam_role_policy_attachment["test"]]))
+    opts=pulumi.ResourceOptions(depends_on=[aws_iam_role_policy_attachment["test"]]))
 ```
 
 {{% /example %}}

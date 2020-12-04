@@ -214,7 +214,7 @@ test_integration = aws.apigateway.Integration("testIntegration",
 test_deployment = aws.apigateway.Deployment("testDeployment",
     rest_api=test_rest_api.id,
     stage_name="dev",
-    opts=ResourceOptions(depends_on=[test_integration]))
+    opts=pulumi.ResourceOptions(depends_on=[test_integration]))
 test_stage = aws.apigateway.Stage("testStage",
     stage_name="prod",
     rest_api=test_rest_api.id,

@@ -158,7 +158,7 @@ peer = pulumi.providers.Aws("peer", region="us-west-2")
 # Accepter's credentials.
 main = aws.ec2.Vpc("main", cidr_block="10.0.0.0/16")
 peer_vpc = aws.ec2.Vpc("peerVpc", cidr_block="10.1.0.0/16",
-opts=ResourceOptions(provider=aws["peer"]))
+opts=pulumi.ResourceOptions(provider=aws["peer"]))
 peer_caller_identity = aws.get_caller_identity()
 # Requester's side of the connection.
 peer_vpc_peering_connection = aws.ec2.VpcPeeringConnection("peerVpcPeeringConnection",
@@ -177,7 +177,7 @@ peer_vpc_peering_connection_accepter = aws.ec2.VpcPeeringConnectionAccepter("pee
     tags={
         "Side": "Accepter",
     },
-    opts=ResourceOptions(provider=aws["peer"]))
+    opts=pulumi.ResourceOptions(provider=aws["peer"]))
 ```
 
 {{% /example %}}

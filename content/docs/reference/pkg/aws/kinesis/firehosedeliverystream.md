@@ -988,7 +988,7 @@ test = aws.kinesis.FirehoseDeliveryStream("test",
             "role_arn": aws_iam_role["firehose"]["arn"],
         },
     ),
-    opts=ResourceOptions(depends_on=[firehose_elasticsearch]))
+    opts=pulumi.ResourceOptions(depends_on=[firehose_elasticsearch]))
 ```
 
 {{% /example %}}

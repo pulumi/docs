@@ -3319,6 +3319,28 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
+        <span id="destination_csharp">
+<a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The destination IP address or address range to inspect for, in CIDR notation. To match with any address, specify `ANY`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="destinationport_csharp">
+<a href="#destinationport_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The destination port to inspect for. To match with any address, specify `ANY`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span id="direction_csharp">
 <a href="#direction_csharp" style="color: inherit; text-decoration: inherit;">Direction</a>
 </span> 
@@ -3328,60 +3350,37 @@ The following state arguments are supported:
     <dd>{{% md %}}The direction of traffic flow to inspect. Valid values: `ANY` or `FORWARD`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destination_csharp">
-<a href="#destination_csharp" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The destination IP address or address range to inspect for, in CIDR notation. If left empty, this matches with any destination address.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destinationport_csharp">
-<a href="#destinationport_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The destination port to inspect for. If left empty, this matches with any port.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The protocol to inspect. If not specified, this matches with any protocol.
-Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `DCERPC`, `SSH`, `SMTP`, `IMAP`, `MSN`, `KRB5`, `IKEV2`, `TFTP`, `NTP`, `DHCP`.
+    <dd>{{% md %}}The protocol to inspect. Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `DCERPC`, `SSH`, `SMTP`, `IMAP`, `MSN`, `KRB5`, `IKEV2`, `TFTP`, `NTP`, `DHCP`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="source_csharp">
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The source IP address or address range for, in CIDR notation. If left empty, this matches with any source address.
+    <dd>{{% md %}}The source IP address or address range for, in CIDR notation. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="sourceport_csharp">
 <a href="#sourceport_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The source port to inspect for. If left empty, this matches with any port.
+    <dd>{{% md %}}The source port to inspect for. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -3390,6 +3389,28 @@ Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `D
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="destination_go">
+<a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The destination IP address or address range to inspect for, in CIDR notation. To match with any address, specify `ANY`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="destinationport_go">
+<a href="#destinationport_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The destination port to inspect for. To match with any address, specify `ANY`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3402,60 +3423,37 @@ Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `D
     <dd>{{% md %}}The direction of traffic flow to inspect. Valid values: `ANY` or `FORWARD`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destination_go">
-<a href="#destination_go" style="color: inherit; text-decoration: inherit;">Destination</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The destination IP address or address range to inspect for, in CIDR notation. If left empty, this matches with any destination address.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destinationport_go">
-<a href="#destinationport_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Port</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The destination port to inspect for. If left empty, this matches with any port.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The protocol to inspect. If not specified, this matches with any protocol.
-Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `DCERPC`, `SSH`, `SMTP`, `IMAP`, `MSN`, `KRB5`, `IKEV2`, `TFTP`, `NTP`, `DHCP`.
+    <dd>{{% md %}}The protocol to inspect. Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `DCERPC`, `SSH`, `SMTP`, `IMAP`, `MSN`, `KRB5`, `IKEV2`, `TFTP`, `NTP`, `DHCP`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="source_go">
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The source IP address or address range for, in CIDR notation. If left empty, this matches with any source address.
+    <dd>{{% md %}}The source IP address or address range for, in CIDR notation. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="sourceport_go">
 <a href="#sourceport_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The source port to inspect for. If left empty, this matches with any port.
+    <dd>{{% md %}}The source port to inspect for. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -3464,6 +3462,28 @@ Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `D
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="destination_nodejs">
+<a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The destination IP address or address range to inspect for, in CIDR notation. To match with any address, specify `ANY`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="destinationport_nodejs">
+<a href="#destinationport_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The destination port to inspect for. To match with any address, specify `ANY`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3476,60 +3496,37 @@ Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `D
     <dd>{{% md %}}The direction of traffic flow to inspect. Valid values: `ANY` or `FORWARD`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destination_nodejs">
-<a href="#destination_nodejs" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The destination IP address or address range to inspect for, in CIDR notation. If left empty, this matches with any destination address.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destinationport_nodejs">
-<a href="#destinationport_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Port</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}The destination port to inspect for. If left empty, this matches with any port.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The protocol to inspect. If not specified, this matches with any protocol.
-Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `DCERPC`, `SSH`, `SMTP`, `IMAP`, `MSN`, `KRB5`, `IKEV2`, `TFTP`, `NTP`, `DHCP`.
+    <dd>{{% md %}}The protocol to inspect. Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `DCERPC`, `SSH`, `SMTP`, `IMAP`, `MSN`, `KRB5`, `IKEV2`, `TFTP`, `NTP`, `DHCP`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="source_nodejs">
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The source IP address or address range for, in CIDR notation. If left empty, this matches with any source address.
+    <dd>{{% md %}}The source IP address or address range for, in CIDR notation. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="sourceport_nodejs">
 <a href="#sourceport_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The source port to inspect for. If left empty, this matches with any port.
+    <dd>{{% md %}}The source port to inspect for. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -3538,6 +3535,28 @@ Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `D
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="destination_python">
+<a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The destination IP address or address range to inspect for, in CIDR notation. To match with any address, specify `ANY`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span id="destination_port_python">
+<a href="#destination_port_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The destination port to inspect for. To match with any address, specify `ANY`.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3550,60 +3569,37 @@ Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `D
     <dd>{{% md %}}The direction of traffic flow to inspect. Valid values: `ANY` or `FORWARD`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destination_python">
-<a href="#destination_python" style="color: inherit; text-decoration: inherit;">destination</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The destination IP address or address range to inspect for, in CIDR notation. If left empty, this matches with any destination address.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="destination_port_python">
-<a href="#destination_port_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>port</a>
-</span> 
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The destination port to inspect for. If left empty, this matches with any port.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The protocol to inspect. If not specified, this matches with any protocol.
-Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `DCERPC`, `SSH`, `SMTP`, `IMAP`, `MSN`, `KRB5`, `IKEV2`, `TFTP`, `NTP`, `DHCP`.
+    <dd>{{% md %}}The protocol to inspect. Valid values: `IP`, `TCP`, `UDP`, `ICMP`, `HTTP`, `FTP`, `TLS`, `SMB`, `DNS`, `DCERPC`, `SSH`, `SMTP`, `IMAP`, `MSN`, `KRB5`, `IKEV2`, `TFTP`, `NTP`, `DHCP`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="source_python">
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The source IP address or address range for, in CIDR notation. If left empty, this matches with any source address.
+    <dd>{{% md %}}The source IP address or address range for, in CIDR notation. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="source_port_python">
 <a href="#source_port_python" style="color: inherit; text-decoration: inherit;">source_<wbr>port</a>
 </span> 
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The source port to inspect for. If left empty, this matches with any port.
+    <dd>{{% md %}}The source port to inspect for. To match with any address, specify `ANY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -4605,7 +4601,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Set of protocols to inspect for, specified using the protocol's assigned internet protocol number (IANA).
+    <dd>{{% md %}}Set of protocols to inspect for, specified using the protocol's assigned internet protocol number (IANA). If not specified, this matches with any protocol.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4678,7 +4674,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
     </dt>
-    <dd>{{% md %}}Set of protocols to inspect for, specified using the protocol's assigned internet protocol number (IANA).
+    <dd>{{% md %}}Set of protocols to inspect for, specified using the protocol's assigned internet protocol number (IANA). If not specified, this matches with any protocol.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4751,7 +4747,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
     </dt>
-    <dd>{{% md %}}Set of protocols to inspect for, specified using the protocol's assigned internet protocol number (IANA).
+    <dd>{{% md %}}Set of protocols to inspect for, specified using the protocol's assigned internet protocol number (IANA). If not specified, this matches with any protocol.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4824,7 +4820,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
     </dt>
-    <dd>{{% md %}}Set of protocols to inspect for, specified using the protocol's assigned internet protocol number (IANA).
+    <dd>{{% md %}}Set of protocols to inspect for, specified using the protocol's assigned internet protocol number (IANA). If not specified, this matches with any protocol.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4885,8 +4881,8 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="addressdefinition_csharp">
 <a href="#addressdefinition_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Definition</a>
 </span> 
@@ -4903,8 +4899,8 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="addressdefinition_go">
 <a href="#addressdefinition_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Definition</a>
 </span> 
@@ -4921,8 +4917,8 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="addressdefinition_nodejs">
 <a href="#addressdefinition_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Definition</a>
 </span> 
@@ -4939,8 +4935,8 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="address_definition_python">
 <a href="#address_definition_python" style="color: inherit; text-decoration: inherit;">address_<wbr>definition</a>
 </span> 
@@ -5109,8 +5105,8 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="addressdefinition_csharp">
 <a href="#addressdefinition_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Definition</a>
 </span> 
@@ -5127,8 +5123,8 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="addressdefinition_go">
 <a href="#addressdefinition_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Definition</a>
 </span> 
@@ -5145,8 +5141,8 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="addressdefinition_nodejs">
 <a href="#addressdefinition_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Definition</a>
 </span> 
@@ -5163,8 +5159,8 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="address_definition_python">
 <a href="#address_definition_python" style="color: inherit; text-decoration: inherit;">address_<wbr>definition</a>
 </span> 
@@ -5341,7 +5337,7 @@ See [Snort General Rule Options](http://manual-snort-org.s3-website-us-east-1.am
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Set of flags to look for in a packet. AWS Network Firewall checks only the part of the packet specified in `masks`.
+    <dd>{{% md %}}Set of flags to look for in a packet. This setting can only specify values that are also specified in `masks`.
 Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
 {{% /md %}}</dd>
 
@@ -5353,7 +5349,7 @@ Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Set of values describing the part of the packet that you want to check for the flags. To inspect the entire packet, leave this empty.
+    <dd>{{% md %}}Set of flags to consider in the inspection. To inspect all flags, leave this empty.
 Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
 {{% /md %}}</dd>
 
@@ -5372,7 +5368,7 @@ Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Set of flags to look for in a packet. AWS Network Firewall checks only the part of the packet specified in `masks`.
+    <dd>{{% md %}}Set of flags to look for in a packet. This setting can only specify values that are also specified in `masks`.
 Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
 {{% /md %}}</dd>
 
@@ -5384,7 +5380,7 @@ Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Set of values describing the part of the packet that you want to check for the flags. To inspect the entire packet, leave this empty.
+    <dd>{{% md %}}Set of flags to consider in the inspection. To inspect all flags, leave this empty.
 Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
 {{% /md %}}</dd>
 
@@ -5403,7 +5399,7 @@ Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Set of flags to look for in a packet. AWS Network Firewall checks only the part of the packet specified in `masks`.
+    <dd>{{% md %}}Set of flags to look for in a packet. This setting can only specify values that are also specified in `masks`.
 Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
 {{% /md %}}</dd>
 
@@ -5415,7 +5411,7 @@ Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Set of values describing the part of the packet that you want to check for the flags. To inspect the entire packet, leave this empty.
+    <dd>{{% md %}}Set of flags to consider in the inspection. To inspect all flags, leave this empty.
 Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
 {{% /md %}}</dd>
 
@@ -5434,7 +5430,7 @@ Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}Set of flags to look for in a packet. AWS Network Firewall checks only the part of the packet specified in `masks`.
+    <dd>{{% md %}}Set of flags to look for in a packet. This setting can only specify values that are also specified in `masks`.
 Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
 {{% /md %}}</dd>
 
@@ -5446,7 +5442,7 @@ Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
     </dt>
-    <dd>{{% md %}}Set of values describing the part of the packet that you want to check for the flags. To inspect the entire packet, leave this empty.
+    <dd>{{% md %}}Set of flags to consider in the inspection. To inspect all flags, leave this empty.
 Valid values: `FIN`, `SYN`, `RST`, `PSH`, `ACK`, `URG`, `ECE`, `CWR`.
 {{% /md %}}</dd>
 

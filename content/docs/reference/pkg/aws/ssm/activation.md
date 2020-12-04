@@ -127,7 +127,7 @@ foo = aws.ssm.Activation("foo",
     description="Test",
     iam_role=test_role.id,
     registration_limit=5,
-    opts=ResourceOptions(depends_on=[test_attach]))
+    opts=pulumi.ResourceOptions(depends_on=[test_attach]))
 ```
 
 {{% /example %}}

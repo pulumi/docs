@@ -72,7 +72,7 @@ example = aws.eks.NodeGroup("example",
         max_size=1,
         min_size=1,
     ),
-    opts=ResourceOptions(depends_on=[
+    opts=pulumi.ResourceOptions(depends_on=[
             aws_iam_role_policy_attachment["example-AmazonEKSWorkerNodePolicy"],
             aws_iam_role_policy_attachment["example-AmazonEKS_CNI_Policy"],
             aws_iam_role_policy_attachment["example-AmazonEC2ContainerRegistryReadOnly"],
@@ -610,7 +610,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of capacity associated with the EKS Node Group. Defaults to `ON_DEMAND`. Valid values: `ON_DEMAND`, `SPOT`.
+    <dd>{{% md %}}Type of capacity associated with the EKS Node Group. Valid values: `ON_DEMAND`, `SPOT`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -793,7 +793,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of capacity associated with the EKS Node Group. Defaults to `ON_DEMAND`. Valid values: `ON_DEMAND`, `SPOT`.
+    <dd>{{% md %}}Type of capacity associated with the EKS Node Group. Valid values: `ON_DEMAND`, `SPOT`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -976,7 +976,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of capacity associated with the EKS Node Group. Defaults to `ON_DEMAND`. Valid values: `ON_DEMAND`, `SPOT`.
+    <dd>{{% md %}}Type of capacity associated with the EKS Node Group. Valid values: `ON_DEMAND`, `SPOT`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1159,7 +1159,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of capacity associated with the EKS Node Group. Defaults to `ON_DEMAND`. Valid values: `ON_DEMAND`, `SPOT`.
+    <dd>{{% md %}}Type of capacity associated with the EKS Node Group. Valid values: `ON_DEMAND`, `SPOT`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1647,7 +1647,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of capacity associated with the EKS Node Group. Defaults to `ON_DEMAND`. Valid values: `ON_DEMAND`, `SPOT`.
+    <dd>{{% md %}}Type of capacity associated with the EKS Node Group. Valid values: `ON_DEMAND`, `SPOT`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1863,7 +1863,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of capacity associated with the EKS Node Group. Defaults to `ON_DEMAND`. Valid values: `ON_DEMAND`, `SPOT`.
+    <dd>{{% md %}}Type of capacity associated with the EKS Node Group. Valid values: `ON_DEMAND`, `SPOT`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2079,7 +2079,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of capacity associated with the EKS Node Group. Defaults to `ON_DEMAND`. Valid values: `ON_DEMAND`, `SPOT`.
+    <dd>{{% md %}}Type of capacity associated with the EKS Node Group. Valid values: `ON_DEMAND`, `SPOT`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2295,7 +2295,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of capacity associated with the EKS Node Group. Defaults to `ON_DEMAND`. Valid values: `ON_DEMAND`, `SPOT`.
+    <dd>{{% md %}}Type of capacity associated with the EKS Node Group. Valid values: `ON_DEMAND`, `SPOT`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

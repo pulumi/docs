@@ -502,7 +502,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds.  Records will continue to buffer until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. Defaults to as soon as records are available in the stream. If the batch it reads from the stream only has one record in it, Lambda only sends one record to the function.
+    <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -641,7 +641,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds.  Records will continue to buffer until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. Defaults to as soon as records are available in the stream. If the batch it reads from the stream only has one record in it, Lambda only sends one record to the function.
+    <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -780,7 +780,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds.  Records will continue to buffer until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. Defaults to as soon as records are available in the stream. If the batch it reads from the stream only has one record in it, Lambda only sends one record to the function.
+    <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -919,7 +919,7 @@ The EventSourceMapping resource accepts the following [input]({{< relref "/docs/
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds.  Records will continue to buffer until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. Defaults to as soon as records are available in the stream. If the batch it reads from the stream only has one record in it, Lambda only sends one record to the function.
+    <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1561,7 +1561,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds.  Records will continue to buffer until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. Defaults to as soon as records are available in the stream. If the batch it reads from the stream only has one record in it, Lambda only sends one record to the function.
+    <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1766,7 +1766,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds.  Records will continue to buffer until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. Defaults to as soon as records are available in the stream. If the batch it reads from the stream only has one record in it, Lambda only sends one record to the function.
+    <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1971,7 +1971,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds.  Records will continue to buffer until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. Defaults to as soon as records are available in the stream. If the batch it reads from the stream only has one record in it, Lambda only sends one record to the function.
+    <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2176,7 +2176,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds.  Records will continue to buffer until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. Defaults to as soon as records are available in the stream. If the batch it reads from the stream only has one record in it, Lambda only sends one record to the function.
+    <dd>{{% md %}}The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either `maximum_batching_window_in_seconds` expires or `batch_size` has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

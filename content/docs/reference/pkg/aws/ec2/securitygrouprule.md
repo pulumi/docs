@@ -204,7 +204,7 @@ const example = new aws.ec2.SecurityGroupRule("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.SecurityGroupRule">SecurityGroupRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cidr_blocks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">from_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipv6_cidr_blocks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">prefix_list_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">source_security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">to_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.SecurityGroupRule">SecurityGroupRule</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cidr_blocks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">from_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipv6_cidr_blocks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">prefix_list_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProtocolType]]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">source_security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">to_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -393,7 +393,7 @@ The SecurityGroupRule resource accepts the following [input]({{< relref "/docs/i
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Union&lt;string, Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Protocol<wbr>Type&gt;</span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd>
@@ -525,7 +525,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd>
@@ -657,7 +657,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string | enums.<wbr>Protocol<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd>
@@ -789,7 +789,7 @@ depending on the `type`. Cannot be specified with `cidr_blocks` and `self`.
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Union[str, Protocol<wbr>Type]</span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd>
@@ -996,7 +996,7 @@ Get an existing SecurityGroupRule resource's state with the given name, ID, and 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cidr_blocks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">from_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipv6_cidr_blocks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">prefix_list_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">source_security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">to_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SecurityGroupRule</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">cidr_blocks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">from_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipv6_cidr_blocks</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">prefix_list_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[Union[str, ProtocolType]]</span> = None<span class="p">, </span><span class="nx">security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">source_security_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">to_port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> SecurityGroupRule</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1172,7 +1172,7 @@ Only valid with `egress`.
 <a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">Union&lt;string, Pulumi.<wbr>Aws.<wbr>Ec2.<wbr>Protocol<wbr>Type&gt;</span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd>
@@ -1304,7 +1304,7 @@ Only valid with `egress`.
 <a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd>
@@ -1436,7 +1436,7 @@ Only valid with `egress`.
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string | enums.<wbr>Protocol<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd>
@@ -1568,7 +1568,7 @@ Only valid with `egress`.
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span> 
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">Union[str, Protocol<wbr>Type]</span>
     </dt>
     <dd>{{% md %}}The protocol. If not icmp, icmpv6, tcp, udp, or all use the [protocol number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
 {{% /md %}}</dd>

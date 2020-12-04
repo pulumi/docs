@@ -104,7 +104,7 @@ example_organization = aws.organizations.Organization("exampleOrganization",
     feature_set="ALL")
 example_detector = aws.guardduty.Detector("exampleDetector")
 example_organization_admin_account = aws.guardduty.OrganizationAdminAccount("exampleOrganizationAdminAccount", admin_account_id="123456789012",
-opts=ResourceOptions(depends_on=[example_organization]))
+opts=pulumi.ResourceOptions(depends_on=[example_organization]))
 ```
 
 {{% /example %}}
