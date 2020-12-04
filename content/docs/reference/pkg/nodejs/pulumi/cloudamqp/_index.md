@@ -3,7 +3,7 @@ title: "Package @pulumi/cloudamqp"
 title_tag: "Package @pulumi/cloudamqp | Node.js SDK"
 linktitle: "@pulumi/cloudamqp"
 meta_desc: "Explore members of the @pulumi/cloudamqp package."
-git_sha: "8813c8a96835198cee1ae95f15bd24acfa15a0ba"
+git_sha: "9d49e7ca2898fa9b18dceade7a7336e30803d239"
 block_external_search_index: true
 ---
 
@@ -116,7 +116,7 @@ import * as cloudamqp from "@pulumi/cloudamqp";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Alarm" data-link-title="Alarm">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L76">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L76">
         Resource <strong>Alarm</strong>
     </a>
 </h3>
@@ -192,7 +192,7 @@ This resource depends on CloudAMQP instance identifier, `cloudamqp_instance.inst
 ```
 
 <h4 class="pdoc-member-header" id="Alarm-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L139"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L139"> <b>constructor</b></a>
 </h4>
 
 
@@ -206,7 +206,7 @@ Create a Alarm resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Alarm-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L86">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L86">method <b>get</b></a>
 </h4>
 
 
@@ -217,14 +217,14 @@ Get an existing Alarm resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Alarm-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L76">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L76">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Alarm-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L97">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L97">method <b>isInstance</b></a>
 </h4>
 
 
@@ -235,7 +235,7 @@ Returns true if the given object is an instance of Alarm.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Alarm-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L107">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L107">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -243,7 +243,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Enable or disable the alarm to trigger.
 
 <h4 class="pdoc-member-header" id="Alarm-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L76">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L76">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -252,7 +252,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Alarm-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L111">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L111">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -260,7 +260,7 @@ deployments and may be missing (undefined) during planning phases.
 The CloudAMQP instance ID.
 
 <h4 class="pdoc-member-header" id="Alarm-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L115">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L115">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>messageType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -268,7 +268,7 @@ The CloudAMQP instance ID.
 Message type `(total, unacked, ready)` used by queue alarm type.
 
 <h4 class="pdoc-member-header" id="Alarm-queueRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L119">property <b>queueRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L119">property <b>queueRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>queueRegex: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -276,7 +276,7 @@ Message type `(total, unacked, ready)` used by queue alarm type.
 Regex for which queue to check.
 
 <h4 class="pdoc-member-header" id="Alarm-recipients">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L123">property <b>recipients</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L123">property <b>recipients</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recipients: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[]&gt;;</code></pre>
@@ -284,7 +284,7 @@ Regex for which queue to check.
 Identifier for recipient to be notified. Leave empty to notify all recipients.
 
 <h4 class="pdoc-member-header" id="Alarm-timeThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L127">property <b>timeThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L127">property <b>timeThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -292,7 +292,7 @@ Identifier for recipient to be notified. Leave empty to notify all recipients.
 The time interval (in seconds) the `valueThreshold` should be active before triggering an alarm.
 
 <h4 class="pdoc-member-header" id="Alarm-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L131">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L131">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -300,7 +300,7 @@ The time interval (in seconds) the `valueThreshold` should be active before trig
 The alarm type, see valid options below.
 
 <h4 class="pdoc-member-header" id="Alarm-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L76">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L76">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -309,7 +309,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Alarm-valueThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L135">property <b>valueThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L135">property <b>valueThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>valueThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -317,7 +317,7 @@ deployments.
 The value to trigger the alarm for.
 
 <h4 class="pdoc-member-header" id="Alarm-vhostRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L139">property <b>vhostRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L139">property <b>vhostRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vhostRegex: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -325,7 +325,7 @@ The value to trigger the alarm for.
 Regex for which vhost to check
 
 <h3 class="pdoc-module-header" id="Instance" data-link-title="Instance">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L42">
         Resource <strong>Instance</strong>
     </a>
 </h3>
@@ -367,7 +367,7 @@ const instance = new cloudamqp.Instance("instance", {
 ```
 
 <h4 class="pdoc-member-header" id="Instance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L125"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L125"> <b>constructor</b></a>
 </h4>
 
 
@@ -381,7 +381,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Instance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L52">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -392,14 +392,14 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Instance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L42">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Instance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L63">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -410,7 +410,7 @@ Returns true if the given object is an instance of Instance.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Instance-apikey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L73">property <b>apikey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L73">property <b>apikey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apikey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -418,7 +418,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 (Computed) API key needed to communicate to CloudAMQP's second API. The second API is used to manage alarms, integration and more, full description [CloudAMQP API](https://docs.cloudamqp.com/cloudamqp_api.html).
 
 <h4 class="pdoc-member-header" id="Instance-dedicated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L77">property <b>dedicated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L77">property <b>dedicated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dedicated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -426,7 +426,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Is the instance hosted on a dedicated server
 
 <h4 class="pdoc-member-header" id="Instance-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L81">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L81">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -434,7 +434,7 @@ Is the instance hosted on a dedicated server
 (Computed) The host name for the CloudAMQP instance.
 
 <h4 class="pdoc-member-header" id="Instance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L42">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -443,7 +443,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Instance-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L85">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L85">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -451,7 +451,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the CloudAMQP instance.
 
 <h4 class="pdoc-member-header" id="Instance-noDefaultAlarms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L89">property <b>noDefaultAlarms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L89">property <b>noDefaultAlarms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>noDefaultAlarms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -459,7 +459,7 @@ Name of the CloudAMQP instance.
 Set to true to discard creating default alarms when the instance is created.
 
 <h4 class="pdoc-member-header" id="Instance-nodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L93">property <b>nodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L93">property <b>nodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -467,7 +467,7 @@ Set to true to discard creating default alarms when the instance is created.
 Number of nodes, 1 to 3, in the CloudAMQP instance, default set to 1. The plan chosen must support the number of nodes.
 
 <h4 class="pdoc-member-header" id="Instance-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L97">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L97">property <b>plan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>plan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -475,7 +475,7 @@ Number of nodes, 1 to 3, in the CloudAMQP instance, default set to 1. The plan c
 The subscription plan. See available plans
 
 <h4 class="pdoc-member-header" id="Instance-ready">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L101">property <b>ready</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L101">property <b>ready</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ready: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -483,7 +483,7 @@ The subscription plan. See available plans
 Flag describing if the resource is ready
 
 <h4 class="pdoc-member-header" id="Instance-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L105">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L105">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -491,7 +491,7 @@ Flag describing if the resource is ready
 The region to host the instance in. See Instance regions
 
 <h4 class="pdoc-member-header" id="Instance-rmqVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L109">property <b>rmqVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L109">property <b>rmqVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rmqVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -499,7 +499,7 @@ The region to host the instance in. See Instance regions
 The Rabbit MQ version. Default set to current loaded default value in CloudAMQP API.
 
 <h4 class="pdoc-member-header" id="Instance-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L113">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L113">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -507,7 +507,7 @@ The Rabbit MQ version. Default set to current loaded default value in CloudAMQP 
 One or more tags for the CloudAMQP instance, makes it possible to categories multiple instances in console view. Default there is no tags assigned.
 
 <h4 class="pdoc-member-header" id="Instance-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L117">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L117">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -515,7 +515,7 @@ One or more tags for the CloudAMQP instance, makes it possible to categories mul
 (Computed) AMQP server endpoint. `amqps://{username}:{password}@{hostname}/{vhost}`
 
 <h4 class="pdoc-member-header" id="Instance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L42">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -524,7 +524,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Instance-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L121">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L121">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vhost: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -532,7 +532,7 @@ deployments.
 (Computed) The virtual host used by Rabbit MQ.
 
 <h4 class="pdoc-member-header" id="Instance-vpcSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L125">property <b>vpcSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L125">property <b>vpcSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcSubnet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -540,7 +540,7 @@ deployments.
 Creates a dedicated VPC subnet, shouldn't overlap with other VPC subnet, default subnet used 10.56.72.0/24. **NOTE: extra fee will be charged when using VPC, see [CloudAMQP](https://cloudamqp.com) for more information.**
 
 <h3 class="pdoc-module-header" id="IntegrationLog" data-link-title="IntegrationLog">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L106">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L106">
         Resource <strong>IntegrationLog</strong>
     </a>
 </h3>
@@ -646,7 +646,7 @@ This resource depends on CloudAMQP instance identifier, `cloudamqp_instance.inst
 ```
 
 <h4 class="pdoc-member-header" id="IntegrationLog-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L185"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L185"> <b>constructor</b></a>
 </h4>
 
 
@@ -660,7 +660,7 @@ Create a IntegrationLog resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="IntegrationLog-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L116">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L116">method <b>get</b></a>
 </h4>
 
 
@@ -671,14 +671,14 @@ Get an existing IntegrationLog resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="IntegrationLog-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L106">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L106">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="IntegrationLog-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L127">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L127">method <b>isInstance</b></a>
 </h4>
 
 
@@ -689,7 +689,7 @@ Returns true if the given object is an instance of IntegrationLog.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="IntegrationLog-accessKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L137">property <b>accessKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L137">property <b>accessKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -697,7 +697,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 AWS access key identifier.
 
 <h4 class="pdoc-member-header" id="IntegrationLog-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L141">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L141">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -705,7 +705,7 @@ AWS access key identifier.
 The API key.
 
 <h4 class="pdoc-member-header" id="IntegrationLog-clientEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L145">property <b>clientEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L145">property <b>clientEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -713,7 +713,7 @@ The API key.
 The client email registered for the integration service.
 
 <h4 class="pdoc-member-header" id="IntegrationLog-hostPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L149">property <b>hostPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L149">property <b>hostPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -721,7 +721,7 @@ The client email registered for the integration service.
 Destination to send the logs.
 
 <h4 class="pdoc-member-header" id="IntegrationLog-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L106">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L106">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -730,7 +730,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="IntegrationLog-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L153">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L153">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -738,7 +738,7 @@ deployments and may be missing (undefined) during planning phases.
 Instance identifier used to make proxy calls
 
 <h4 class="pdoc-member-header" id="IntegrationLog-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L157">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L157">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -746,7 +746,7 @@ Instance identifier used to make proxy calls
 The name of the third party log integration. See
 
 <h4 class="pdoc-member-header" id="IntegrationLog-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L161">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L161">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -754,7 +754,7 @@ The name of the third party log integration. See
 The private access key.
 
 <h4 class="pdoc-member-header" id="IntegrationLog-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L165">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L165">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -762,7 +762,7 @@ The private access key.
 The project identifier.
 
 <h4 class="pdoc-member-header" id="IntegrationLog-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L169">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L169">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -770,7 +770,7 @@ The project identifier.
 Region hosting the integration service.
 
 <h4 class="pdoc-member-header" id="IntegrationLog-secretAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L173">property <b>secretAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L173">property <b>secretAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secretAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -778,7 +778,7 @@ Region hosting the integration service.
 AWS secret access key.
 
 <h4 class="pdoc-member-header" id="IntegrationLog-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L177">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L177">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -786,7 +786,7 @@ AWS secret access key.
 Tag the integration, e.g. env=prod, region=europe.
 
 <h4 class="pdoc-member-header" id="IntegrationLog-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L181">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L181">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -794,7 +794,7 @@ Tag the integration, e.g. env=prod, region=europe.
 Token used for authentication.
 
 <h4 class="pdoc-member-header" id="IntegrationLog-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L185">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L185">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -802,7 +802,7 @@ Token used for authentication.
 Endpoint to log integration.
 
 <h4 class="pdoc-member-header" id="IntegrationLog-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L106">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L106">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -811,83 +811,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="IntegrationMetric" data-link-title="IntegrationMetric">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L76">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L7">
         Resource <strong>IntegrationMetric</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>IntegrationMetric</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
-
-This resource allows you to create and manage, forwarding metrics to third party integrations for a CloudAMQP instance. Once configured, the metrics produced will be forward to corresponding integration.
-
-Only available for dedicated subscription plans.
-
-#### Argument references
-
-The following arguments are supported:
-
-* `name`              - (Required) The name of the third party log integration. See `Integration service reference`
-* `region`            - (Optional) Region hosting the integration service.
-* `accessKeyId`     - (Optional) AWS access key identifier.
-* `secretAccessKey` - (Optional) AWS secret access key.
-* `apiKey`           - (Optional) The API key for the integration service.
-* `email`             - (Optional) The email address registred for the integration service.
-* `projectId`        - (Optional) The project identifier.
-* `privateKey`       - (Optional) The private access key.
-* `clientEmail`      - (Optional) The client email registered for the integration service.
-* `tags`              - (Optional) Tags. e.g. env=prod, region=europe.
-* `queueWhitelist`   - (Optional) Whitelist queues using regular expression. Leave empty to include all queues.
-* `vhostWhitelist`   - (Optional) Whitelist vhost using regular expression. Leave empty to include all vhosts.
-
-This is the full list of all arguments. Only a subset of arguments are used based on which type of integration used. See Integration type reference below for more information.
-
-#### Integration service references
-
-Valid names for third party log integration.
-
-| Name          | Description |
-|---------------|---------------------------------------------------------------|
-| cloudwatch    | Create an IAM with programmatic access. |
-| cloudwatchV2 | Create an IAM with programmatic access. |
-| datadog       | Create a Datadog API key at app.datadoghq.com |
-| datadogV2    | Create a Datadog API key at app.datadoghq.com
-| librato       | Create a new API token (with record only permissions) here: https://metrics.librato.com/tokens |
-| newrelic      | Deprecated! |
-| newrelicV2   | Find or register an Insert API key for your account: Go to insights.newrelic.com > Manage data > API keys. |
-| stackdriver   | Create a service account and add 'monitor metrics writer' role, then download credentials. |
-
-#### Integration type reference
-
-Valid arguments for third party log integrations.
-
-Required arguments for all integrations: *name*<br>
-Optional arguments for all integrations: *tags*, *queue_whitelist*, *vhost_whitelist*
-
-| Name | Type | Required arguments |
-| ---- | ---- | ---- |
-| Cloudwatch             | cloudwatch     | region, access_key_id, secretAccessKey |
-| Cloudwatch v2          | cloudwatchV2  | region, access_key_id, secretAccessKey |
-| Datadog                | datadog        | api_key, region |
-| Datadog v2             | datadogV2     | api_key, region |
-| Librato                | librato        | email, apiKey |
-| New relic (deprecated) | newrelic       | - |
-| New relic v2           | newrelicV2    | api_key, region |
-| Stackdriver            | stackdriver    | project_id, private_key, clientEmail |
-
-#### Dependency
-
-This resource depends on CloudAMQP instance identifier, `cloudamqp_instance.instance.id`.
-
-#### Import
-
-`cloudamqp_integration_metric`can be imported using the name argument of the resource together with CloudAMQP instance identifier. The name and identifier are CSV separated, see example below.
-
-```sh
- $ pulumi import cloudamqp:index/integrationMetric:IntegrationMetric <resource_name> <name>,<instance_id>`
-```
-
 <h4 class="pdoc-member-header" id="IntegrationMetric-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L159"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L102"> <b>constructor</b></a>
 </h4>
 
 
@@ -901,7 +832,7 @@ Create a IntegrationMetric resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="IntegrationMetric-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L86">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -912,14 +843,14 @@ Get an existing IntegrationMetric resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="IntegrationMetric-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L76">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="IntegrationMetric-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L97">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -930,7 +861,7 @@ Returns true if the given object is an instance of IntegrationMetric.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="IntegrationMetric-accessKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L107">property <b>accessKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L38">property <b>accessKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>accessKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -938,7 +869,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 AWS access key identifier. (Cloudwatch)
 
 <h4 class="pdoc-member-header" id="IntegrationMetric-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L111">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L42">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -946,7 +877,7 @@ AWS access key identifier. (Cloudwatch)
 The API key for the integration service. (Librato)
 
 <h4 class="pdoc-member-header" id="IntegrationMetric-clientEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L115">property <b>clientEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L46">property <b>clientEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -954,7 +885,7 @@ The API key for the integration service. (Librato)
 The client email. (Stackdriver)
 
 <h4 class="pdoc-member-header" id="IntegrationMetric-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L119">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L50">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -962,7 +893,7 @@ The client email. (Stackdriver)
 The email address registred for the integration service. (Librato)
 
 <h4 class="pdoc-member-header" id="IntegrationMetric-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L76">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -971,7 +902,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="IntegrationMetric-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L123">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L54">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -979,7 +910,7 @@ deployments and may be missing (undefined) during planning phases.
 Instance identifier
 
 <h4 class="pdoc-member-header" id="IntegrationMetric-licenseKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L127">property <b>licenseKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L58">property <b>licenseKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>licenseKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -987,7 +918,7 @@ Instance identifier
 The license key registred for the integration service. (New Relic)
 
 <h4 class="pdoc-member-header" id="IntegrationMetric-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L131">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L62">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -995,7 +926,7 @@ The license key registred for the integration service. (New Relic)
 The name of metrics integration
 
 <h4 class="pdoc-member-header" id="IntegrationMetric-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L135">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L66">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1003,23 +934,35 @@ The name of metrics integration
 The private key. (Stackdriver)
 
 <h4 class="pdoc-member-header" id="IntegrationMetric-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L139">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L70">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Project ID. (Stackdriver)
 
-<h4 class="pdoc-member-header" id="IntegrationMetric-queueWhitelist">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L143">property <b>queueWhitelist</b></a>
+<h4 class="pdoc-member-header" id="IntegrationMetric-queueAllowlist">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L74">property <b>queueAllowlist</b></a>
 </h4>
 
+<pre class="highlight"><code><span class='kd'>public </span>queueAllowlist: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+(optional) allowlist using regular expression
+
+<h4 class="pdoc-member-header" id="IntegrationMetric-queueWhitelist">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L80">property <b>queueWhitelist</b></a>
+</h4>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+use queue_allowlist instead
+</div>
 <pre class="highlight"><code><span class='kd'>public </span>queueWhitelist: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-(optional) whitelist using regular expression
+**Deprecated**
 
 <h4 class="pdoc-member-header" id="IntegrationMetric-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L147">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L84">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1027,7 +970,7 @@ Project ID. (Stackdriver)
 AWS region for Cloudwatch and [US/EU] for Data dog/New relic. (Cloudwatch, Data Dog, New Relic)
 
 <h4 class="pdoc-member-header" id="IntegrationMetric-secretAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L151">property <b>secretAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L88">property <b>secretAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secretAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1035,7 +978,7 @@ AWS region for Cloudwatch and [US/EU] for Data dog/New relic. (Cloudwatch, Data 
 AWS secret key. (Cloudwatch)
 
 <h4 class="pdoc-member-header" id="IntegrationMetric-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L155">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L92">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1043,7 +986,7 @@ AWS secret key. (Cloudwatch)
 (optional) tags. E.g. env=prod,region=europe
 
 <h4 class="pdoc-member-header" id="IntegrationMetric-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L76">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1051,16 +994,28 @@ AWS secret key. (Cloudwatch)
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
 
-<h4 class="pdoc-member-header" id="IntegrationMetric-vhostWhitelist">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L159">property <b>vhostWhitelist</b></a>
+<h4 class="pdoc-member-header" id="IntegrationMetric-vhostAllowlist">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L96">property <b>vhostAllowlist</b></a>
 </h4>
 
+<pre class="highlight"><code><span class='kd'>public </span>vhostAllowlist: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+(optional) allowlist using regular expression
+
+<h4 class="pdoc-member-header" id="IntegrationMetric-vhostWhitelist">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L102">property <b>vhostWhitelist</b></a>
+</h4>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+use vhost_allowlist instead
+</div>
 <pre class="highlight"><code><span class='kd'>public </span>vhostWhitelist: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-(optional) whitelist using regular expression
+**Deprecated**
 
 <h3 class="pdoc-module-header" id="Notification" data-link-title="Notification">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/notification.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/notification.ts#L49">
         Resource <strong>Notification</strong>
     </a>
 </h3>
@@ -1109,7 +1064,7 @@ This resource depends on CloudAMQP instance identifier, `cloudamqp_instance.inst
 ```
 
 <h4 class="pdoc-member-header" id="Notification-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/notification.ts#L92"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/notification.ts#L92"> <b>constructor</b></a>
 </h4>
 
 
@@ -1123,7 +1078,7 @@ Create a Notification resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Notification-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/notification.ts#L59">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/notification.ts#L59">method <b>get</b></a>
 </h4>
 
 
@@ -1134,14 +1089,14 @@ Get an existing Notification resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Notification-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/notification.ts#L49">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/notification.ts#L49">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Notification-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/notification.ts#L70">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/notification.ts#L70">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1152,7 +1107,7 @@ Returns true if the given object is an instance of Notification.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Notification-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/notification.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/notification.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1161,7 +1116,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Notification-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/notification.ts#L80">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/notification.ts#L80">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1169,7 +1124,7 @@ deployments and may be missing (undefined) during planning phases.
 The CloudAMQP instance ID.
 
 <h4 class="pdoc-member-header" id="Notification-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/notification.ts#L84">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/notification.ts#L84">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1177,7 +1132,7 @@ The CloudAMQP instance ID.
 Display name of the recipient.
 
 <h4 class="pdoc-member-header" id="Notification-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/notification.ts#L88">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/notification.ts#L88">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1185,7 +1140,7 @@ Display name of the recipient.
 Type of the notification. See valid options below.
 
 <h4 class="pdoc-member-header" id="Notification-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/notification.ts#L49">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/notification.ts#L49">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1194,7 +1149,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Notification-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/notification.ts#L92">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/notification.ts#L92">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1202,7 +1157,7 @@ deployments.
 Endpoint to send the notification.
 
 <h3 class="pdoc-module-header" id="Plugin" data-link-title="Plugin">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/plugin.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/plugin.ts#L35">
         Resource <strong>Plugin</strong>
     </a>
 </h3>
@@ -1237,7 +1192,7 @@ This resource depends on CloudAMQP instance identifier, `cloudamqp_instance.inst
 ```
 
 <h4 class="pdoc-member-header" id="Plugin-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/plugin.ts#L74"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/plugin.ts#L74"> <b>constructor</b></a>
 </h4>
 
 
@@ -1251,7 +1206,7 @@ Create a Plugin resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Plugin-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/plugin.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/plugin.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -1262,14 +1217,14 @@ Get an existing Plugin resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Plugin-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/plugin.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/plugin.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Plugin-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/plugin.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/plugin.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1280,7 +1235,7 @@ Returns true if the given object is an instance of Plugin.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Plugin-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/plugin.ts#L66">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/plugin.ts#L66">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1288,7 +1243,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Enable or disable the plugins.
 
 <h4 class="pdoc-member-header" id="Plugin-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/plugin.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/plugin.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1297,7 +1252,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Plugin-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/plugin.ts#L70">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/plugin.ts#L70">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1305,7 +1260,7 @@ deployments and may be missing (undefined) during planning phases.
 The CloudAMQP instance ID.
 
 <h4 class="pdoc-member-header" id="Plugin-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/plugin.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/plugin.ts#L74">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1313,7 +1268,7 @@ The CloudAMQP instance ID.
 The name of the Rabbit MQ plugin.
 
 <h4 class="pdoc-member-header" id="Plugin-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/plugin.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/plugin.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1322,7 +1277,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="PluginCommunity" data-link-title="PluginCommunity">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/pluginCommunity.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/pluginCommunity.ts#L35">
         Resource <strong>PluginCommunity</strong>
     </a>
 </h3>
@@ -1357,7 +1312,7 @@ This resource depends on CloudAMQP instance identifier, `cloudamqp_instance.inst
 ```
 
 <h4 class="pdoc-member-header" id="PluginCommunity-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/pluginCommunity.ts#L74"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/pluginCommunity.ts#L74"> <b>constructor</b></a>
 </h4>
 
 
@@ -1371,7 +1326,7 @@ Create a PluginCommunity resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="PluginCommunity-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/pluginCommunity.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/pluginCommunity.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -1382,14 +1337,14 @@ Get an existing PluginCommunity resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="PluginCommunity-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/pluginCommunity.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/pluginCommunity.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="PluginCommunity-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/pluginCommunity.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/pluginCommunity.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1400,7 +1355,7 @@ Returns true if the given object is an instance of PluginCommunity.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="PluginCommunity-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/pluginCommunity.ts#L66">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/pluginCommunity.ts#L66">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1408,7 +1363,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Enable or disable the plugins.
 
 <h4 class="pdoc-member-header" id="PluginCommunity-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/pluginCommunity.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/pluginCommunity.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1417,7 +1372,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="PluginCommunity-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/pluginCommunity.ts#L70">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/pluginCommunity.ts#L70">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1425,7 +1380,7 @@ deployments and may be missing (undefined) during planning phases.
 The CloudAMQP instance ID.
 
 <h4 class="pdoc-member-header" id="PluginCommunity-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/pluginCommunity.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/pluginCommunity.ts#L74">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1433,7 +1388,7 @@ The CloudAMQP instance ID.
 The name of the Rabbit MQ plugin.
 
 <h4 class="pdoc-member-header" id="PluginCommunity-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/pluginCommunity.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/pluginCommunity.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1442,7 +1397,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/provider.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/provider.ts#L13">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -1455,7 +1410,7 @@ construction to achieve fine-grained programmatic control over provider settings
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
 </h4>
 
 
@@ -1469,14 +1424,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1487,14 +1442,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1503,7 +1458,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1512,7 +1467,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecurityFirewall" data-link-title="SecurityFirewall">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/securityFirewall.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/securityFirewall.ts#L56">
         Resource <strong>SecurityFirewall</strong>
     </a>
 </h3>
@@ -1567,7 +1522,7 @@ This resource depends on CloudAMQP instance identifier, `cloudamqp_instance.inst
 ```
 
 <h4 class="pdoc-member-header" id="SecurityFirewall-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/securityFirewall.ts#L91"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/securityFirewall.ts#L91"> <b>constructor</b></a>
 </h4>
 
 
@@ -1581,7 +1536,7 @@ Create a SecurityFirewall resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecurityFirewall-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/securityFirewall.ts#L66">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/securityFirewall.ts#L66">method <b>get</b></a>
 </h4>
 
 
@@ -1592,14 +1547,14 @@ Get an existing SecurityFirewall resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecurityFirewall-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/securityFirewall.ts#L56">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/securityFirewall.ts#L56">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecurityFirewall-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/securityFirewall.ts#L77">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/securityFirewall.ts#L77">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1610,7 +1565,7 @@ Returns true if the given object is an instance of SecurityFirewall.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecurityFirewall-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/securityFirewall.ts#L56">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/securityFirewall.ts#L56">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1619,7 +1574,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecurityFirewall-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/securityFirewall.ts#L87">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/securityFirewall.ts#L87">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1627,7 +1582,7 @@ deployments and may be missing (undefined) during planning phases.
 The CloudAMQP instance ID.
 
 <h4 class="pdoc-member-header" id="SecurityFirewall-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/securityFirewall.ts#L91">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/securityFirewall.ts#L91">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/cloudamqp/types/output/#SecurityFirewallRule'>SecurityFirewallRule</a>[]&gt;;</code></pre>
@@ -1635,7 +1590,7 @@ The CloudAMQP instance ID.
 An array of rules, minimum of 1 needs to be configured. Each `rules` block consists of the field documented below.
 
 <h4 class="pdoc-member-header" id="SecurityFirewall-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/securityFirewall.ts#L56">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/securityFirewall.ts#L56">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1644,7 +1599,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="VpcPeering" data-link-title="VpcPeering">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/vpcPeering.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/vpcPeering.ts#L16">
         Resource <strong>VpcPeering</strong>
     </a>
 </h3>
@@ -1660,7 +1615,7 @@ deployments.
 ```
 
 <h4 class="pdoc-member-header" id="VpcPeering-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/vpcPeering.ts#L55"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/vpcPeering.ts#L55"> <b>constructor</b></a>
 </h4>
 
 
@@ -1674,7 +1629,7 @@ Create a VpcPeering resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="VpcPeering-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/vpcPeering.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/vpcPeering.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -1685,14 +1640,14 @@ Get an existing VpcPeering resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="VpcPeering-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/vpcPeering.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/vpcPeering.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="VpcPeering-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/vpcPeering.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/vpcPeering.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1703,7 +1658,7 @@ Returns true if the given object is an instance of VpcPeering.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="VpcPeering-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/vpcPeering.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/vpcPeering.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1712,7 +1667,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="VpcPeering-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/vpcPeering.ts#L47">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/vpcPeering.ts#L47">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1720,7 +1675,7 @@ deployments and may be missing (undefined) during planning phases.
 The CloudAMQP instance ID.
 
 <h4 class="pdoc-member-header" id="VpcPeering-peeringId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/vpcPeering.ts#L51">property <b>peeringId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/vpcPeering.ts#L51">property <b>peeringId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>peeringId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1728,7 +1683,7 @@ The CloudAMQP instance ID.
 Peering identifier created by AW peering request.
 
 <h4 class="pdoc-member-header" id="VpcPeering-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/vpcPeering.ts#L55">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/vpcPeering.ts#L55">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1736,7 +1691,7 @@ Peering identifier created by AW peering request.
 VPC peering status
 
 <h4 class="pdoc-member-header" id="VpcPeering-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/vpcPeering.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/vpcPeering.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1747,7 +1702,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getAlarm" data-link-title="getAlarm">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getAlarm.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getAlarm.ts#L42">
         Function <strong>getAlarm</strong>
     </a>
 </h3>
@@ -1790,7 +1745,7 @@ const defaultCpuAlarm = cloudamqp.getAlarm({
 This data source depends on CloudAMQP instance identifier, `cloudamqp_instance.instance.id`.
 
 <h3 class="pdoc-module-header" id="getCredentials" data-link-title="getCredentials">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getCredentials.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getCredentials.ts#L34">
         Function <strong>getCredentials</strong>
     </a>
 </h3>
@@ -1825,7 +1780,7 @@ const credentials = cloudamqp.getCredentials({
 This data source depends on CloudAMQP instance identifier, `cloudamqp_instance.instance.id`.
 
 <h3 class="pdoc-module-header" id="getInstance" data-link-title="getInstance">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getInstance.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getInstance.ts#L29">
         Function <strong>getInstance</strong>
     </a>
 </h3>
@@ -1855,7 +1810,7 @@ Use this data source to retrieve information about an already created CloudAMQP 
 * `vhost`       - (Computed) The virtual host configured in Rabbit MQ.
 
 <h3 class="pdoc-module-header" id="getNodes" data-link-title="getNodes">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getNodes.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getNodes.ts#L44">
         Function <strong>getNodes</strong>
     </a>
 </h3>
@@ -1900,7 +1855,7 @@ The `nodes` block consist of
 This data source depends on CloudAMQP instance identifier, `cloudamqp_instance.instance.id`.
 
 <h3 class="pdoc-module-header" id="getNotification" data-link-title="getNotification">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getNotification.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getNotification.ts#L37">
         Function <strong>getNotification</strong>
     </a>
 </h3>
@@ -1938,7 +1893,7 @@ const defaultRecipient = cloudamqp.getNotification({
 This data source depends on CloudAMQP instance identifier, `cloudamqp_instance.instance.id`.
 
 <h3 class="pdoc-module-header" id="getPlugins" data-link-title="getPlugins">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getPlugins.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getPlugins.ts#L42">
         Function <strong>getPlugins</strong>
     </a>
 </h3>
@@ -1981,7 +1936,7 @@ The `plugins` block consist of
 This data source depends on CloudAMQP instance identifier, `cloudamqp_instance.instance.id`.
 
 <h3 class="pdoc-module-header" id="getPluginsCommunity" data-link-title="getPluginsCommunity">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getPluginsCommunity.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getPluginsCommunity.ts#L41">
         Function <strong>getPluginsCommunity</strong>
     </a>
 </h3>
@@ -2023,7 +1978,7 @@ The `plugins` block consists of
 This data source depends on CloudAMQP instance identifier, `cloudamqp_instance.instance.id`.
 
 <h3 class="pdoc-module-header" id="getVpcInfo" data-link-title="getVpcInfo">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getVpcInfo.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getVpcInfo.ts#L38">
         Function <strong>getVpcInfo</strong>
     </a>
 </h3>
@@ -2064,7 +2019,7 @@ This data source depends on CloudAMQP instance identifier, `cloudamqp_instance.i
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AlarmArgs" data-link-title="AlarmArgs">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L242">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L242">
         interface <strong>AlarmArgs</strong>
     </a>
 </h3>
@@ -2074,7 +2029,7 @@ This data source depends on CloudAMQP instance identifier, `cloudamqp_instance.i
 The set of arguments for constructing a Alarm resource.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L246">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L246">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2082,7 +2037,7 @@ The set of arguments for constructing a Alarm resource.
 Enable or disable the alarm to trigger.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L250">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L250">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2090,7 +2045,7 @@ Enable or disable the alarm to trigger.
 The CloudAMQP instance ID.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L254">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L254">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2098,7 +2053,7 @@ The CloudAMQP instance ID.
 Message type `(total, unacked, ready)` used by queue alarm type.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-queueRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L258">property <b>queueRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L258">property <b>queueRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queueRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2106,7 +2061,7 @@ Message type `(total, unacked, ready)` used by queue alarm type.
 Regex for which queue to check.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-recipients">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L262">property <b>recipients</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L262">property <b>recipients</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recipients: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -2114,7 +2069,7 @@ Regex for which queue to check.
 Identifier for recipient to be notified. Leave empty to notify all recipients.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-timeThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L266">property <b>timeThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L266">property <b>timeThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2122,7 +2077,7 @@ Identifier for recipient to be notified. Leave empty to notify all recipients.
 The time interval (in seconds) the `valueThreshold` should be active before triggering an alarm.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L270">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L270">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2130,7 +2085,7 @@ The time interval (in seconds) the `valueThreshold` should be active before trig
 The alarm type, see valid options below.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-valueThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L274">property <b>valueThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L274">property <b>valueThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2138,7 +2093,7 @@ The alarm type, see valid options below.
 The value to trigger the alarm for.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-vhostRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L278">property <b>vhostRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L278">property <b>vhostRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vhostRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2146,7 +2101,7 @@ The value to trigger the alarm for.
 Regex for which vhost to check
 
 <h3 class="pdoc-module-header" id="AlarmState" data-link-title="AlarmState">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L200">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L200">
         interface <strong>AlarmState</strong>
     </a>
 </h3>
@@ -2156,7 +2111,7 @@ Regex for which vhost to check
 Input properties used for looking up and filtering Alarm resources.
 
 <h4 class="pdoc-member-header" id="AlarmState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L204">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L204">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2164,7 +2119,7 @@ Input properties used for looking up and filtering Alarm resources.
 Enable or disable the alarm to trigger.
 
 <h4 class="pdoc-member-header" id="AlarmState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L208">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L208">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2172,7 +2127,7 @@ Enable or disable the alarm to trigger.
 The CloudAMQP instance ID.
 
 <h4 class="pdoc-member-header" id="AlarmState-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L212">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L212">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2180,7 +2135,7 @@ The CloudAMQP instance ID.
 Message type `(total, unacked, ready)` used by queue alarm type.
 
 <h4 class="pdoc-member-header" id="AlarmState-queueRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L216">property <b>queueRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L216">property <b>queueRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queueRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2188,7 +2143,7 @@ Message type `(total, unacked, ready)` used by queue alarm type.
 Regex for which queue to check.
 
 <h4 class="pdoc-member-header" id="AlarmState-recipients">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L220">property <b>recipients</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L220">property <b>recipients</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recipients?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -2196,7 +2151,7 @@ Regex for which queue to check.
 Identifier for recipient to be notified. Leave empty to notify all recipients.
 
 <h4 class="pdoc-member-header" id="AlarmState-timeThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L224">property <b>timeThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L224">property <b>timeThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2204,7 +2159,7 @@ Identifier for recipient to be notified. Leave empty to notify all recipients.
 The time interval (in seconds) the `valueThreshold` should be active before triggering an alarm.
 
 <h4 class="pdoc-member-header" id="AlarmState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L228">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L228">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2212,7 +2167,7 @@ The time interval (in seconds) the `valueThreshold` should be active before trig
 The alarm type, see valid options below.
 
 <h4 class="pdoc-member-header" id="AlarmState-valueThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L232">property <b>valueThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L232">property <b>valueThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2220,7 +2175,7 @@ The alarm type, see valid options below.
 The value to trigger the alarm for.
 
 <h4 class="pdoc-member-header" id="AlarmState-vhostRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/alarm.ts#L236">property <b>vhostRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/alarm.ts#L236">property <b>vhostRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vhostRegex?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2228,7 +2183,7 @@ The value to trigger the alarm for.
 Regex for which vhost to check
 
 <h3 class="pdoc-module-header" id="GetAlarmArgs" data-link-title="GetAlarmArgs">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getAlarm.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getAlarm.ts#L60">
         interface <strong>GetAlarmArgs</strong>
     </a>
 </h3>
@@ -2238,22 +2193,22 @@ Regex for which vhost to check
 A collection of arguments for invoking getAlarm.
 
 <h4 class="pdoc-member-header" id="GetAlarmArgs-alarmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getAlarm.ts#L61">property <b>alarmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getAlarm.ts#L61">property <b>alarmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alarmId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlarmArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getAlarm.ts#L62">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getAlarm.ts#L62">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlarmArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getAlarm.ts#L63">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getAlarm.ts#L63">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetAlarmResult" data-link-title="GetAlarmResult">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getAlarm.ts#L69">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getAlarm.ts#L69">
         interface <strong>GetAlarmResult</strong>
     </a>
 </h3>
@@ -2263,17 +2218,17 @@ A collection of arguments for invoking getAlarm.
 A collection of values returned by getAlarm.
 
 <h4 class="pdoc-member-header" id="GetAlarmResult-alarmId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getAlarm.ts#L70">property <b>alarmId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getAlarm.ts#L70">property <b>alarmId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alarmId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlarmResult-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getAlarm.ts#L71">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getAlarm.ts#L71">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlarmResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getAlarm.ts#L75">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getAlarm.ts#L75">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2281,47 +2236,47 @@ A collection of values returned by getAlarm.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAlarmResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getAlarm.ts#L76">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getAlarm.ts#L76">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlarmResult-messageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getAlarm.ts#L77">property <b>messageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getAlarm.ts#L77">property <b>messageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>messageType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlarmResult-queueRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getAlarm.ts#L78">property <b>queueRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getAlarm.ts#L78">property <b>queueRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queueRegex: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlarmResult-recipients">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getAlarm.ts#L79">property <b>recipients</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getAlarm.ts#L79">property <b>recipients</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recipients: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAlarmResult-timeThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getAlarm.ts#L80">property <b>timeThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getAlarm.ts#L80">property <b>timeThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeThreshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlarmResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getAlarm.ts#L81">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getAlarm.ts#L81">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlarmResult-valueThreshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getAlarm.ts#L82">property <b>valueThreshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getAlarm.ts#L82">property <b>valueThreshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>valueThreshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlarmResult-vhostRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getAlarm.ts#L83">property <b>vhostRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getAlarm.ts#L83">property <b>vhostRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vhostRegex: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetCredentialsArgs" data-link-title="GetCredentialsArgs">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getCredentials.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getCredentials.ts#L52">
         interface <strong>GetCredentialsArgs</strong>
     </a>
 </h3>
@@ -2331,22 +2286,22 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getCredentials.
 
 <h4 class="pdoc-member-header" id="GetCredentialsArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getCredentials.ts#L53">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getCredentials.ts#L53">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCredentialsArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getCredentials.ts#L54">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getCredentials.ts#L54">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCredentialsArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getCredentials.ts#L55">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getCredentials.ts#L55">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetCredentialsResult" data-link-title="GetCredentialsResult">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getCredentials.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getCredentials.ts#L61">
         interface <strong>GetCredentialsResult</strong>
     </a>
 </h3>
@@ -2356,7 +2311,7 @@ A collection of arguments for invoking getCredentials.
 A collection of values returned by getCredentials.
 
 <h4 class="pdoc-member-header" id="GetCredentialsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getCredentials.ts#L65">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getCredentials.ts#L65">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2364,22 +2319,22 @@ A collection of values returned by getCredentials.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetCredentialsResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getCredentials.ts#L66">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getCredentials.ts#L66">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCredentialsResult-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getCredentials.ts#L67">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getCredentials.ts#L67">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCredentialsResult-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getCredentials.ts#L68">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getCredentials.ts#L68">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -2388,7 +2343,7 @@ The provider-assigned unique ID for this managed resource.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -2397,7 +2352,7 @@ The provider-assigned unique ID for this managed resource.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -2406,7 +2361,7 @@ The provider-assigned unique ID for this managed resource.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="GetInstanceArgs" data-link-title="GetInstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getInstance.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getInstance.ts#L46">
         interface <strong>GetInstanceArgs</strong>
     </a>
 </h3>
@@ -2416,17 +2371,17 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getInstance.
 
 <h4 class="pdoc-member-header" id="GetInstanceArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getInstance.ts#L47">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getInstance.ts#L47">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceArgs-vpcSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getInstance.ts#L48">property <b>vpcSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getInstance.ts#L48">property <b>vpcSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcSubnet?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetInstanceResult" data-link-title="GetInstanceResult">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getInstance.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getInstance.ts#L54">
         interface <strong>GetInstanceResult</strong>
     </a>
 </h3>
@@ -2436,22 +2391,22 @@ A collection of arguments for invoking getInstance.
 A collection of values returned by getInstance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-apikey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getInstance.ts#L55">property <b>apikey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getInstance.ts#L55">property <b>apikey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apikey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-dedicated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getInstance.ts#L56">property <b>dedicated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getInstance.ts#L56">property <b>dedicated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dedicated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getInstance.ts#L57">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getInstance.ts#L57">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getInstance.ts#L61">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getInstance.ts#L61">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2459,57 +2414,57 @@ A collection of values returned by getInstance.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getInstance.ts#L62">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getInstance.ts#L62">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getInstance.ts#L63">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getInstance.ts#L63">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-nodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getInstance.ts#L64">property <b>nodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getInstance.ts#L64">property <b>nodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getInstance.ts#L65">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getInstance.ts#L65">property <b>plan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plan: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getInstance.ts#L66">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getInstance.ts#L66">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-rmqVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getInstance.ts#L67">property <b>rmqVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getInstance.ts#L67">property <b>rmqVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rmqVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getInstance.ts#L68">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getInstance.ts#L68">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getInstance.ts#L69">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getInstance.ts#L69">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getInstance.ts#L70">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getInstance.ts#L70">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vhost: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-vpcSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getInstance.ts#L71">property <b>vpcSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getInstance.ts#L71">property <b>vpcSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcSubnet?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetNodesArgs" data-link-title="GetNodesArgs">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getNodes.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getNodes.ts#L61">
         interface <strong>GetNodesArgs</strong>
     </a>
 </h3>
@@ -2519,17 +2474,17 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getNodes.
 
 <h4 class="pdoc-member-header" id="GetNodesArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getNodes.ts#L62">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getNodes.ts#L62">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNodesArgs-nodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getNodes.ts#L63">property <b>nodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getNodes.ts#L63">property <b>nodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodes?: <a href='/docs/reference/pkg/nodejs/pulumi/cloudamqp/types/input/#GetNodesNode'>GetNodesNode</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetNodesResult" data-link-title="GetNodesResult">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getNodes.ts#L69">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getNodes.ts#L69">
         interface <strong>GetNodesResult</strong>
     </a>
 </h3>
@@ -2539,7 +2494,7 @@ A collection of arguments for invoking getNodes.
 A collection of values returned by getNodes.
 
 <h4 class="pdoc-member-header" id="GetNodesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getNodes.ts#L73">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getNodes.ts#L73">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2547,17 +2502,17 @@ A collection of values returned by getNodes.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetNodesResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getNodes.ts#L74">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getNodes.ts#L74">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNodesResult-nodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getNodes.ts#L75">property <b>nodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getNodes.ts#L75">property <b>nodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodes: <a href='/docs/reference/pkg/nodejs/pulumi/cloudamqp/types/output/#GetNodesNode'>GetNodesNode</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetNotificationArgs" data-link-title="GetNotificationArgs">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getNotification.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getNotification.ts#L55">
         interface <strong>GetNotificationArgs</strong>
     </a>
 </h3>
@@ -2567,22 +2522,22 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getNotification.
 
 <h4 class="pdoc-member-header" id="GetNotificationArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getNotification.ts#L56">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getNotification.ts#L56">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNotificationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getNotification.ts#L57">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getNotification.ts#L57">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNotificationArgs-recipientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getNotification.ts#L58">property <b>recipientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getNotification.ts#L58">property <b>recipientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recipientId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetNotificationResult" data-link-title="GetNotificationResult">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getNotification.ts#L64">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getNotification.ts#L64">
         interface <strong>GetNotificationResult</strong>
     </a>
 </h3>
@@ -2592,7 +2547,7 @@ A collection of arguments for invoking getNotification.
 A collection of values returned by getNotification.
 
 <h4 class="pdoc-member-header" id="GetNotificationResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getNotification.ts#L68">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getNotification.ts#L68">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2600,32 +2555,32 @@ A collection of values returned by getNotification.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetNotificationResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getNotification.ts#L69">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getNotification.ts#L69">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNotificationResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getNotification.ts#L70">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getNotification.ts#L70">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNotificationResult-recipientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getNotification.ts#L71">property <b>recipientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getNotification.ts#L71">property <b>recipientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recipientId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNotificationResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getNotification.ts#L72">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getNotification.ts#L72">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNotificationResult-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getNotification.ts#L73">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getNotification.ts#L73">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetPluginsArgs" data-link-title="GetPluginsArgs">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getPlugins.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getPlugins.ts#L59">
         interface <strong>GetPluginsArgs</strong>
     </a>
 </h3>
@@ -2635,17 +2590,17 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getPlugins.
 
 <h4 class="pdoc-member-header" id="GetPluginsArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getPlugins.ts#L60">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getPlugins.ts#L60">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPluginsArgs-plugins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getPlugins.ts#L61">property <b>plugins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getPlugins.ts#L61">property <b>plugins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plugins?: <a href='/docs/reference/pkg/nodejs/pulumi/cloudamqp/types/input/#GetPluginsPlugin'>GetPluginsPlugin</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetPluginsCommunityArgs" data-link-title="GetPluginsCommunityArgs">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getPluginsCommunity.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getPluginsCommunity.ts#L58">
         interface <strong>GetPluginsCommunityArgs</strong>
     </a>
 </h3>
@@ -2655,17 +2610,17 @@ A collection of arguments for invoking getPlugins.
 A collection of arguments for invoking getPluginsCommunity.
 
 <h4 class="pdoc-member-header" id="GetPluginsCommunityArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getPluginsCommunity.ts#L59">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getPluginsCommunity.ts#L59">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPluginsCommunityArgs-plugins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getPluginsCommunity.ts#L60">property <b>plugins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getPluginsCommunity.ts#L60">property <b>plugins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plugins?: <a href='/docs/reference/pkg/nodejs/pulumi/cloudamqp/types/input/#GetPluginsCommunityPlugin'>GetPluginsCommunityPlugin</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetPluginsCommunityResult" data-link-title="GetPluginsCommunityResult">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getPluginsCommunity.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getPluginsCommunity.ts#L66">
         interface <strong>GetPluginsCommunityResult</strong>
     </a>
 </h3>
@@ -2675,7 +2630,7 @@ A collection of arguments for invoking getPluginsCommunity.
 A collection of values returned by getPluginsCommunity.
 
 <h4 class="pdoc-member-header" id="GetPluginsCommunityResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getPluginsCommunity.ts#L70">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getPluginsCommunity.ts#L70">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2683,17 +2638,17 @@ A collection of values returned by getPluginsCommunity.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetPluginsCommunityResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getPluginsCommunity.ts#L71">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getPluginsCommunity.ts#L71">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPluginsCommunityResult-plugins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getPluginsCommunity.ts#L72">property <b>plugins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getPluginsCommunity.ts#L72">property <b>plugins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plugins?: <a href='/docs/reference/pkg/nodejs/pulumi/cloudamqp/types/output/#GetPluginsCommunityPlugin'>GetPluginsCommunityPlugin</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetPluginsResult" data-link-title="GetPluginsResult">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getPlugins.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getPlugins.ts#L67">
         interface <strong>GetPluginsResult</strong>
     </a>
 </h3>
@@ -2703,7 +2658,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of values returned by getPlugins.
 
 <h4 class="pdoc-member-header" id="GetPluginsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getPlugins.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getPlugins.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2711,17 +2666,17 @@ A collection of values returned by getPlugins.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetPluginsResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getPlugins.ts#L72">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getPlugins.ts#L72">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetPluginsResult-plugins">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getPlugins.ts#L73">property <b>plugins</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getPlugins.ts#L73">property <b>plugins</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plugins?: <a href='/docs/reference/pkg/nodejs/pulumi/cloudamqp/types/output/#GetPluginsPlugin'>GetPluginsPlugin</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -2730,7 +2685,7 @@ The provider-assigned unique ID for this managed resource.
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="GetVpcInfoArgs" data-link-title="GetVpcInfoArgs">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getVpcInfo.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getVpcInfo.ts#L54">
         interface <strong>GetVpcInfoArgs</strong>
     </a>
 </h3>
@@ -2740,12 +2695,12 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getVpcInfo.
 
 <h4 class="pdoc-member-header" id="GetVpcInfoArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getVpcInfo.ts#L55">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getVpcInfo.ts#L55">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetVpcInfoResult" data-link-title="GetVpcInfoResult">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getVpcInfo.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getVpcInfo.ts#L61">
         interface <strong>GetVpcInfoResult</strong>
     </a>
 </h3>
@@ -2755,7 +2710,7 @@ A collection of arguments for invoking getVpcInfo.
 A collection of values returned by getVpcInfo.
 
 <h4 class="pdoc-member-header" id="GetVpcInfoResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getVpcInfo.ts#L65">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getVpcInfo.ts#L65">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2763,32 +2718,32 @@ A collection of values returned by getVpcInfo.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetVpcInfoResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getVpcInfo.ts#L66">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getVpcInfo.ts#L66">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcInfoResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getVpcInfo.ts#L67">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getVpcInfo.ts#L67">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcInfoResult-ownerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getVpcInfo.ts#L68">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getVpcInfo.ts#L68">property <b>ownerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ownerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcInfoResult-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getVpcInfo.ts#L69">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getVpcInfo.ts#L69">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetVpcInfoResult-vpcSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/getVpcInfo.ts#L70">property <b>vpcSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/getVpcInfo.ts#L70">property <b>vpcSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcSubnet: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="InstanceArgs" data-link-title="InstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L252">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L252">
         interface <strong>InstanceArgs</strong>
     </a>
 </h3>
@@ -2798,7 +2753,7 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a Instance resource.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L256">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L256">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2806,7 +2761,7 @@ The set of arguments for constructing a Instance resource.
 Name of the CloudAMQP instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-noDefaultAlarms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L260">property <b>noDefaultAlarms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L260">property <b>noDefaultAlarms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noDefaultAlarms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2814,7 +2769,7 @@ Name of the CloudAMQP instance.
 Set to true to discard creating default alarms when the instance is created.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-nodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L264">property <b>nodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L264">property <b>nodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2822,7 +2777,7 @@ Set to true to discard creating default alarms when the instance is created.
 Number of nodes, 1 to 3, in the CloudAMQP instance, default set to 1. The plan chosen must support the number of nodes.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L268">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L268">property <b>plan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2830,7 +2785,7 @@ Number of nodes, 1 to 3, in the CloudAMQP instance, default set to 1. The plan c
 The subscription plan. See available plans
 
 <h4 class="pdoc-member-header" id="InstanceArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L272">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L272">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2838,7 +2793,7 @@ The subscription plan. See available plans
 The region to host the instance in. See Instance regions
 
 <h4 class="pdoc-member-header" id="InstanceArgs-rmqVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L276">property <b>rmqVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L276">property <b>rmqVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rmqVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2846,7 +2801,7 @@ The region to host the instance in. See Instance regions
 The Rabbit MQ version. Default set to current loaded default value in CloudAMQP API.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L280">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L280">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2854,7 +2809,7 @@ The Rabbit MQ version. Default set to current loaded default value in CloudAMQP 
 One or more tags for the CloudAMQP instance, makes it possible to categories multiple instances in console view. Default there is no tags assigned.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-vpcSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L284">property <b>vpcSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L284">property <b>vpcSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcSubnet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2862,7 +2817,7 @@ One or more tags for the CloudAMQP instance, makes it possible to categories mul
 Creates a dedicated VPC subnet, shouldn't overlap with other VPC subnet, default subnet used 10.56.72.0/24. **NOTE: extra fee will be charged when using VPC, see [CloudAMQP](https://cloudamqp.com) for more information.**
 
 <h3 class="pdoc-module-header" id="InstanceState" data-link-title="InstanceState">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L190">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L190">
         interface <strong>InstanceState</strong>
     </a>
 </h3>
@@ -2872,7 +2827,7 @@ Creates a dedicated VPC subnet, shouldn't overlap with other VPC subnet, default
 Input properties used for looking up and filtering Instance resources.
 
 <h4 class="pdoc-member-header" id="InstanceState-apikey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L194">property <b>apikey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L194">property <b>apikey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apikey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2880,7 +2835,7 @@ Input properties used for looking up and filtering Instance resources.
 (Computed) API key needed to communicate to CloudAMQP's second API. The second API is used to manage alarms, integration and more, full description [CloudAMQP API](https://docs.cloudamqp.com/cloudamqp_api.html).
 
 <h4 class="pdoc-member-header" id="InstanceState-dedicated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L198">property <b>dedicated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L198">property <b>dedicated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dedicated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2888,7 +2843,7 @@ Input properties used for looking up and filtering Instance resources.
 Is the instance hosted on a dedicated server
 
 <h4 class="pdoc-member-header" id="InstanceState-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L202">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L202">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2896,7 +2851,7 @@ Is the instance hosted on a dedicated server
 (Computed) The host name for the CloudAMQP instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L206">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L206">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2904,7 +2859,7 @@ Is the instance hosted on a dedicated server
 Name of the CloudAMQP instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-noDefaultAlarms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L210">property <b>noDefaultAlarms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L210">property <b>noDefaultAlarms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>noDefaultAlarms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2912,7 +2867,7 @@ Name of the CloudAMQP instance.
 Set to true to discard creating default alarms when the instance is created.
 
 <h4 class="pdoc-member-header" id="InstanceState-nodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L214">property <b>nodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L214">property <b>nodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2920,7 +2875,7 @@ Set to true to discard creating default alarms when the instance is created.
 Number of nodes, 1 to 3, in the CloudAMQP instance, default set to 1. The plan chosen must support the number of nodes.
 
 <h4 class="pdoc-member-header" id="InstanceState-plan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L218">property <b>plan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L218">property <b>plan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2928,7 +2883,7 @@ Number of nodes, 1 to 3, in the CloudAMQP instance, default set to 1. The plan c
 The subscription plan. See available plans
 
 <h4 class="pdoc-member-header" id="InstanceState-ready">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L222">property <b>ready</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L222">property <b>ready</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ready?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2936,7 +2891,7 @@ The subscription plan. See available plans
 Flag describing if the resource is ready
 
 <h4 class="pdoc-member-header" id="InstanceState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L226">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L226">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2944,7 +2899,7 @@ Flag describing if the resource is ready
 The region to host the instance in. See Instance regions
 
 <h4 class="pdoc-member-header" id="InstanceState-rmqVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L230">property <b>rmqVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L230">property <b>rmqVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rmqVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2952,7 +2907,7 @@ The region to host the instance in. See Instance regions
 The Rabbit MQ version. Default set to current loaded default value in CloudAMQP API.
 
 <h4 class="pdoc-member-header" id="InstanceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L234">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L234">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2960,7 +2915,7 @@ The Rabbit MQ version. Default set to current loaded default value in CloudAMQP 
 One or more tags for the CloudAMQP instance, makes it possible to categories multiple instances in console view. Default there is no tags assigned.
 
 <h4 class="pdoc-member-header" id="InstanceState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L238">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L238">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2968,7 +2923,7 @@ One or more tags for the CloudAMQP instance, makes it possible to categories mul
 (Computed) AMQP server endpoint. `amqps://{username}:{password}@{hostname}/{vhost}`
 
 <h4 class="pdoc-member-header" id="InstanceState-vhost">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L242">property <b>vhost</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L242">property <b>vhost</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vhost?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2976,7 +2931,7 @@ One or more tags for the CloudAMQP instance, makes it possible to categories mul
 (Computed) The virtual host used by Rabbit MQ.
 
 <h4 class="pdoc-member-header" id="InstanceState-vpcSubnet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/instance.ts#L246">property <b>vpcSubnet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/instance.ts#L246">property <b>vpcSubnet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcSubnet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2984,7 +2939,7 @@ One or more tags for the CloudAMQP instance, makes it possible to categories mul
 Creates a dedicated VPC subnet, shouldn't overlap with other VPC subnet, default subnet used 10.56.72.0/24. **NOTE: extra fee will be charged when using VPC, see [CloudAMQP](https://cloudamqp.com) for more information.**
 
 <h3 class="pdoc-module-header" id="IntegrationLogArgs" data-link-title="IntegrationLogArgs">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L303">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L303">
         interface <strong>IntegrationLogArgs</strong>
     </a>
 </h3>
@@ -2994,7 +2949,7 @@ Creates a dedicated VPC subnet, shouldn't overlap with other VPC subnet, default
 The set of arguments for constructing a IntegrationLog resource.
 
 <h4 class="pdoc-member-header" id="IntegrationLogArgs-accessKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L307">property <b>accessKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L307">property <b>accessKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3002,7 +2957,7 @@ The set of arguments for constructing a IntegrationLog resource.
 AWS access key identifier.
 
 <h4 class="pdoc-member-header" id="IntegrationLogArgs-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L311">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L311">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3010,7 +2965,7 @@ AWS access key identifier.
 The API key.
 
 <h4 class="pdoc-member-header" id="IntegrationLogArgs-clientEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L315">property <b>clientEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L315">property <b>clientEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3018,7 +2973,7 @@ The API key.
 The client email registered for the integration service.
 
 <h4 class="pdoc-member-header" id="IntegrationLogArgs-hostPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L319">property <b>hostPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L319">property <b>hostPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3026,7 +2981,7 @@ The client email registered for the integration service.
 Destination to send the logs.
 
 <h4 class="pdoc-member-header" id="IntegrationLogArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L323">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L323">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3034,7 +2989,7 @@ Destination to send the logs.
 Instance identifier used to make proxy calls
 
 <h4 class="pdoc-member-header" id="IntegrationLogArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L327">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L327">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3042,7 +2997,7 @@ Instance identifier used to make proxy calls
 The name of the third party log integration. See
 
 <h4 class="pdoc-member-header" id="IntegrationLogArgs-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L331">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L331">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3050,7 +3005,7 @@ The name of the third party log integration. See
 The private access key.
 
 <h4 class="pdoc-member-header" id="IntegrationLogArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L335">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L335">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3058,7 +3013,7 @@ The private access key.
 The project identifier.
 
 <h4 class="pdoc-member-header" id="IntegrationLogArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L339">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L339">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3066,7 +3021,7 @@ The project identifier.
 Region hosting the integration service.
 
 <h4 class="pdoc-member-header" id="IntegrationLogArgs-secretAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L343">property <b>secretAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L343">property <b>secretAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3074,7 +3029,7 @@ Region hosting the integration service.
 AWS secret access key.
 
 <h4 class="pdoc-member-header" id="IntegrationLogArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L347">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L347">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3082,7 +3037,7 @@ AWS secret access key.
 Tag the integration, e.g. env=prod, region=europe.
 
 <h4 class="pdoc-member-header" id="IntegrationLogArgs-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L351">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L351">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3090,7 +3045,7 @@ Tag the integration, e.g. env=prod, region=europe.
 Token used for authentication.
 
 <h4 class="pdoc-member-header" id="IntegrationLogArgs-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L355">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L355">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3098,7 +3053,7 @@ Token used for authentication.
 Endpoint to log integration.
 
 <h3 class="pdoc-module-header" id="IntegrationLogState" data-link-title="IntegrationLogState">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L245">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L245">
         interface <strong>IntegrationLogState</strong>
     </a>
 </h3>
@@ -3108,7 +3063,7 @@ Endpoint to log integration.
 Input properties used for looking up and filtering IntegrationLog resources.
 
 <h4 class="pdoc-member-header" id="IntegrationLogState-accessKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L249">property <b>accessKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L249">property <b>accessKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3116,7 +3071,7 @@ Input properties used for looking up and filtering IntegrationLog resources.
 AWS access key identifier.
 
 <h4 class="pdoc-member-header" id="IntegrationLogState-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L253">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L253">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3124,7 +3079,7 @@ AWS access key identifier.
 The API key.
 
 <h4 class="pdoc-member-header" id="IntegrationLogState-clientEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L257">property <b>clientEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L257">property <b>clientEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3132,7 +3087,7 @@ The API key.
 The client email registered for the integration service.
 
 <h4 class="pdoc-member-header" id="IntegrationLogState-hostPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L261">property <b>hostPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L261">property <b>hostPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3140,7 +3095,7 @@ The client email registered for the integration service.
 Destination to send the logs.
 
 <h4 class="pdoc-member-header" id="IntegrationLogState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L265">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L265">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3148,7 +3103,7 @@ Destination to send the logs.
 Instance identifier used to make proxy calls
 
 <h4 class="pdoc-member-header" id="IntegrationLogState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L269">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L269">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3156,7 +3111,7 @@ Instance identifier used to make proxy calls
 The name of the third party log integration. See
 
 <h4 class="pdoc-member-header" id="IntegrationLogState-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L273">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L273">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3164,7 +3119,7 @@ The name of the third party log integration. See
 The private access key.
 
 <h4 class="pdoc-member-header" id="IntegrationLogState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L277">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L277">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3172,7 +3127,7 @@ The private access key.
 The project identifier.
 
 <h4 class="pdoc-member-header" id="IntegrationLogState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L281">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L281">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3180,7 +3135,7 @@ The project identifier.
 Region hosting the integration service.
 
 <h4 class="pdoc-member-header" id="IntegrationLogState-secretAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L285">property <b>secretAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L285">property <b>secretAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3188,7 +3143,7 @@ Region hosting the integration service.
 AWS secret access key.
 
 <h4 class="pdoc-member-header" id="IntegrationLogState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L289">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L289">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3196,7 +3151,7 @@ AWS secret access key.
 Tag the integration, e.g. env=prod, region=europe.
 
 <h4 class="pdoc-member-header" id="IntegrationLogState-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L293">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L293">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3204,7 +3159,7 @@ Tag the integration, e.g. env=prod, region=europe.
 Token used for authentication.
 
 <h4 class="pdoc-member-header" id="IntegrationLogState-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationLog.ts#L297">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationLog.ts#L297">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3212,7 +3167,7 @@ Token used for authentication.
 Endpoint to log integration.
 
 <h3 class="pdoc-module-header" id="IntegrationMetricArgs" data-link-title="IntegrationMetricArgs">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L283">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L242">
         interface <strong>IntegrationMetricArgs</strong>
     </a>
 </h3>
@@ -3222,7 +3177,7 @@ Endpoint to log integration.
 The set of arguments for constructing a IntegrationMetric resource.
 
 <h4 class="pdoc-member-header" id="IntegrationMetricArgs-accessKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L287">property <b>accessKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L246">property <b>accessKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3230,7 +3185,7 @@ The set of arguments for constructing a IntegrationMetric resource.
 AWS access key identifier. (Cloudwatch)
 
 <h4 class="pdoc-member-header" id="IntegrationMetricArgs-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L291">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L250">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3238,7 +3193,7 @@ AWS access key identifier. (Cloudwatch)
 The API key for the integration service. (Librato)
 
 <h4 class="pdoc-member-header" id="IntegrationMetricArgs-clientEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L295">property <b>clientEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L254">property <b>clientEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3246,7 +3201,7 @@ The API key for the integration service. (Librato)
 The client email. (Stackdriver)
 
 <h4 class="pdoc-member-header" id="IntegrationMetricArgs-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L299">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L258">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3254,7 +3209,7 @@ The client email. (Stackdriver)
 The email address registred for the integration service. (Librato)
 
 <h4 class="pdoc-member-header" id="IntegrationMetricArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L303">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L262">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3262,7 +3217,7 @@ The email address registred for the integration service. (Librato)
 Instance identifier
 
 <h4 class="pdoc-member-header" id="IntegrationMetricArgs-licenseKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L307">property <b>licenseKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L266">property <b>licenseKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3270,7 +3225,7 @@ Instance identifier
 The license key registred for the integration service. (New Relic)
 
 <h4 class="pdoc-member-header" id="IntegrationMetricArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L311">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L270">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3278,7 +3233,7 @@ The license key registred for the integration service. (New Relic)
 The name of metrics integration
 
 <h4 class="pdoc-member-header" id="IntegrationMetricArgs-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L315">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L274">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3286,23 +3241,35 @@ The name of metrics integration
 The private key. (Stackdriver)
 
 <h4 class="pdoc-member-header" id="IntegrationMetricArgs-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L319">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L278">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 Project ID. (Stackdriver)
 
-<h4 class="pdoc-member-header" id="IntegrationMetricArgs-queueWhitelist">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L323">property <b>queueWhitelist</b></a>
+<h4 class="pdoc-member-header" id="IntegrationMetricArgs-queueAllowlist">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L282">property <b>queueAllowlist</b></a>
 </h4>
 
+<pre class="highlight"><code><span class='kd'></span>queueAllowlist?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+(optional) allowlist using regular expression
+
+<h4 class="pdoc-member-header" id="IntegrationMetricArgs-queueWhitelist">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L288">property <b>queueWhitelist</b></a>
+</h4>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+use queue_allowlist instead
+</div>
 <pre class="highlight"><code><span class='kd'></span>queueWhitelist?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-(optional) whitelist using regular expression
+**Deprecated**
 
 <h4 class="pdoc-member-header" id="IntegrationMetricArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L327">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L292">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3310,7 +3277,7 @@ Project ID. (Stackdriver)
 AWS region for Cloudwatch and [US/EU] for Data dog/New relic. (Cloudwatch, Data Dog, New Relic)
 
 <h4 class="pdoc-member-header" id="IntegrationMetricArgs-secretAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L331">property <b>secretAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L296">property <b>secretAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3318,23 +3285,35 @@ AWS region for Cloudwatch and [US/EU] for Data dog/New relic. (Cloudwatch, Data 
 AWS secret key. (Cloudwatch)
 
 <h4 class="pdoc-member-header" id="IntegrationMetricArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L335">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L300">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 (optional) tags. E.g. env=prod,region=europe
 
-<h4 class="pdoc-member-header" id="IntegrationMetricArgs-vhostWhitelist">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L339">property <b>vhostWhitelist</b></a>
+<h4 class="pdoc-member-header" id="IntegrationMetricArgs-vhostAllowlist">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L304">property <b>vhostAllowlist</b></a>
 </h4>
 
+<pre class="highlight"><code><span class='kd'></span>vhostAllowlist?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+(optional) allowlist using regular expression
+
+<h4 class="pdoc-member-header" id="IntegrationMetricArgs-vhostWhitelist">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L310">property <b>vhostWhitelist</b></a>
+</h4>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+use vhost_allowlist instead
+</div>
 <pre class="highlight"><code><span class='kd'></span>vhostWhitelist?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-(optional) whitelist using regular expression
+**Deprecated**
 
 <h3 class="pdoc-module-header" id="IntegrationMetricState" data-link-title="IntegrationMetricState">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L221">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L168">
         interface <strong>IntegrationMetricState</strong>
     </a>
 </h3>
@@ -3344,7 +3323,7 @@ AWS secret key. (Cloudwatch)
 Input properties used for looking up and filtering IntegrationMetric resources.
 
 <h4 class="pdoc-member-header" id="IntegrationMetricState-accessKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L225">property <b>accessKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L172">property <b>accessKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3352,7 +3331,7 @@ Input properties used for looking up and filtering IntegrationMetric resources.
 AWS access key identifier. (Cloudwatch)
 
 <h4 class="pdoc-member-header" id="IntegrationMetricState-apiKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L229">property <b>apiKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L176">property <b>apiKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3360,7 +3339,7 @@ AWS access key identifier. (Cloudwatch)
 The API key for the integration service. (Librato)
 
 <h4 class="pdoc-member-header" id="IntegrationMetricState-clientEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L233">property <b>clientEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L180">property <b>clientEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3368,7 +3347,7 @@ The API key for the integration service. (Librato)
 The client email. (Stackdriver)
 
 <h4 class="pdoc-member-header" id="IntegrationMetricState-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L237">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L184">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3376,7 +3355,7 @@ The client email. (Stackdriver)
 The email address registred for the integration service. (Librato)
 
 <h4 class="pdoc-member-header" id="IntegrationMetricState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L241">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L188">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3384,7 +3363,7 @@ The email address registred for the integration service. (Librato)
 Instance identifier
 
 <h4 class="pdoc-member-header" id="IntegrationMetricState-licenseKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L245">property <b>licenseKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L192">property <b>licenseKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>licenseKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3392,7 +3371,7 @@ Instance identifier
 The license key registred for the integration service. (New Relic)
 
 <h4 class="pdoc-member-header" id="IntegrationMetricState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L249">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L196">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3400,7 +3379,7 @@ The license key registred for the integration service. (New Relic)
 The name of metrics integration
 
 <h4 class="pdoc-member-header" id="IntegrationMetricState-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L253">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L200">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3408,23 +3387,35 @@ The name of metrics integration
 The private key. (Stackdriver)
 
 <h4 class="pdoc-member-header" id="IntegrationMetricState-projectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L257">property <b>projectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L204">property <b>projectId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 Project ID. (Stackdriver)
 
-<h4 class="pdoc-member-header" id="IntegrationMetricState-queueWhitelist">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L261">property <b>queueWhitelist</b></a>
+<h4 class="pdoc-member-header" id="IntegrationMetricState-queueAllowlist">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L208">property <b>queueAllowlist</b></a>
 </h4>
 
+<pre class="highlight"><code><span class='kd'></span>queueAllowlist?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+(optional) allowlist using regular expression
+
+<h4 class="pdoc-member-header" id="IntegrationMetricState-queueWhitelist">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L214">property <b>queueWhitelist</b></a>
+</h4>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+use queue_allowlist instead
+</div>
 <pre class="highlight"><code><span class='kd'></span>queueWhitelist?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-(optional) whitelist using regular expression
+**Deprecated**
 
 <h4 class="pdoc-member-header" id="IntegrationMetricState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L265">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L218">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3432,7 +3423,7 @@ Project ID. (Stackdriver)
 AWS region for Cloudwatch and [US/EU] for Data dog/New relic. (Cloudwatch, Data Dog, New Relic)
 
 <h4 class="pdoc-member-header" id="IntegrationMetricState-secretAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L269">property <b>secretAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L222">property <b>secretAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3440,23 +3431,35 @@ AWS region for Cloudwatch and [US/EU] for Data dog/New relic. (Cloudwatch, Data 
 AWS secret key. (Cloudwatch)
 
 <h4 class="pdoc-member-header" id="IntegrationMetricState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L273">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L226">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 (optional) tags. E.g. env=prod,region=europe
 
-<h4 class="pdoc-member-header" id="IntegrationMetricState-vhostWhitelist">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/integrationMetric.ts#L277">property <b>vhostWhitelist</b></a>
+<h4 class="pdoc-member-header" id="IntegrationMetricState-vhostAllowlist">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L230">property <b>vhostAllowlist</b></a>
 </h4>
 
+<pre class="highlight"><code><span class='kd'></span>vhostAllowlist?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+(optional) allowlist using regular expression
+
+<h4 class="pdoc-member-header" id="IntegrationMetricState-vhostWhitelist">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/integrationMetric.ts#L236">property <b>vhostWhitelist</b></a>
+</h4>
+
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+use vhost_allowlist instead
+</div>
 <pre class="highlight"><code><span class='kd'></span>vhostWhitelist?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-(optional) whitelist using regular expression
+**Deprecated**
 
 <h3 class="pdoc-module-header" id="NotificationArgs" data-link-title="NotificationArgs">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/notification.ts#L162">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/notification.ts#L162">
         interface <strong>NotificationArgs</strong>
     </a>
 </h3>
@@ -3466,7 +3469,7 @@ AWS secret key. (Cloudwatch)
 The set of arguments for constructing a Notification resource.
 
 <h4 class="pdoc-member-header" id="NotificationArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/notification.ts#L166">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/notification.ts#L166">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3474,7 +3477,7 @@ The set of arguments for constructing a Notification resource.
 The CloudAMQP instance ID.
 
 <h4 class="pdoc-member-header" id="NotificationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/notification.ts#L170">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/notification.ts#L170">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3482,7 +3485,7 @@ The CloudAMQP instance ID.
 Display name of the recipient.
 
 <h4 class="pdoc-member-header" id="NotificationArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/notification.ts#L174">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/notification.ts#L174">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3490,7 +3493,7 @@ Display name of the recipient.
 Type of the notification. See valid options below.
 
 <h4 class="pdoc-member-header" id="NotificationArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/notification.ts#L178">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/notification.ts#L178">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3498,7 +3501,7 @@ Type of the notification. See valid options below.
 Endpoint to send the notification.
 
 <h3 class="pdoc-module-header" id="NotificationState" data-link-title="NotificationState">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/notification.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/notification.ts#L140">
         interface <strong>NotificationState</strong>
     </a>
 </h3>
@@ -3508,7 +3511,7 @@ Endpoint to send the notification.
 Input properties used for looking up and filtering Notification resources.
 
 <h4 class="pdoc-member-header" id="NotificationState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/notification.ts#L144">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/notification.ts#L144">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3516,7 +3519,7 @@ Input properties used for looking up and filtering Notification resources.
 The CloudAMQP instance ID.
 
 <h4 class="pdoc-member-header" id="NotificationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/notification.ts#L148">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/notification.ts#L148">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3524,7 +3527,7 @@ The CloudAMQP instance ID.
 Display name of the recipient.
 
 <h4 class="pdoc-member-header" id="NotificationState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/notification.ts#L152">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/notification.ts#L152">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3532,7 +3535,7 @@ Display name of the recipient.
 Type of the notification. See valid options below.
 
 <h4 class="pdoc-member-header" id="NotificationState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/notification.ts#L156">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/notification.ts#L156">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3540,7 +3543,7 @@ Type of the notification. See valid options below.
 Endpoint to send the notification.
 
 <h3 class="pdoc-module-header" id="PluginArgs" data-link-title="PluginArgs">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/plugin.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/plugin.ts#L135">
         interface <strong>PluginArgs</strong>
     </a>
 </h3>
@@ -3550,7 +3553,7 @@ Endpoint to send the notification.
 The set of arguments for constructing a Plugin resource.
 
 <h4 class="pdoc-member-header" id="PluginArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/plugin.ts#L139">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/plugin.ts#L139">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3558,7 +3561,7 @@ The set of arguments for constructing a Plugin resource.
 Enable or disable the plugins.
 
 <h4 class="pdoc-member-header" id="PluginArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/plugin.ts#L143">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/plugin.ts#L143">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3566,7 +3569,7 @@ Enable or disable the plugins.
 The CloudAMQP instance ID.
 
 <h4 class="pdoc-member-header" id="PluginArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/plugin.ts#L147">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/plugin.ts#L147">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3574,7 +3577,7 @@ The CloudAMQP instance ID.
 The name of the Rabbit MQ plugin.
 
 <h3 class="pdoc-module-header" id="PluginCommunityArgs" data-link-title="PluginCommunityArgs">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/pluginCommunity.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/pluginCommunity.ts#L135">
         interface <strong>PluginCommunityArgs</strong>
     </a>
 </h3>
@@ -3584,7 +3587,7 @@ The name of the Rabbit MQ plugin.
 The set of arguments for constructing a PluginCommunity resource.
 
 <h4 class="pdoc-member-header" id="PluginCommunityArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/pluginCommunity.ts#L139">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/pluginCommunity.ts#L139">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3592,7 +3595,7 @@ The set of arguments for constructing a PluginCommunity resource.
 Enable or disable the plugins.
 
 <h4 class="pdoc-member-header" id="PluginCommunityArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/pluginCommunity.ts#L143">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/pluginCommunity.ts#L143">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3600,7 +3603,7 @@ Enable or disable the plugins.
 The CloudAMQP instance ID.
 
 <h4 class="pdoc-member-header" id="PluginCommunityArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/pluginCommunity.ts#L147">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/pluginCommunity.ts#L147">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3608,7 +3611,7 @@ The CloudAMQP instance ID.
 The name of the Rabbit MQ plugin.
 
 <h3 class="pdoc-module-header" id="PluginCommunityState" data-link-title="PluginCommunityState">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/pluginCommunity.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/pluginCommunity.ts#L117">
         interface <strong>PluginCommunityState</strong>
     </a>
 </h3>
@@ -3618,7 +3621,7 @@ The name of the Rabbit MQ plugin.
 Input properties used for looking up and filtering PluginCommunity resources.
 
 <h4 class="pdoc-member-header" id="PluginCommunityState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/pluginCommunity.ts#L121">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/pluginCommunity.ts#L121">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3626,7 +3629,7 @@ Input properties used for looking up and filtering PluginCommunity resources.
 Enable or disable the plugins.
 
 <h4 class="pdoc-member-header" id="PluginCommunityState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/pluginCommunity.ts#L125">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/pluginCommunity.ts#L125">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3634,7 +3637,7 @@ Enable or disable the plugins.
 The CloudAMQP instance ID.
 
 <h4 class="pdoc-member-header" id="PluginCommunityState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/pluginCommunity.ts#L129">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/pluginCommunity.ts#L129">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3642,7 +3645,7 @@ The CloudAMQP instance ID.
 The name of the Rabbit MQ plugin.
 
 <h3 class="pdoc-module-header" id="PluginState" data-link-title="PluginState">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/plugin.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/plugin.ts#L117">
         interface <strong>PluginState</strong>
     </a>
 </h3>
@@ -3652,7 +3655,7 @@ The name of the Rabbit MQ plugin.
 Input properties used for looking up and filtering Plugin resources.
 
 <h4 class="pdoc-member-header" id="PluginState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/plugin.ts#L121">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/plugin.ts#L121">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3660,7 +3663,7 @@ Input properties used for looking up and filtering Plugin resources.
 Enable or disable the plugins.
 
 <h4 class="pdoc-member-header" id="PluginState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/plugin.ts#L125">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/plugin.ts#L125">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3668,7 +3671,7 @@ Enable or disable the plugins.
 The CloudAMQP instance ID.
 
 <h4 class="pdoc-member-header" id="PluginState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/plugin.ts#L129">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/plugin.ts#L129">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3676,7 +3679,7 @@ The CloudAMQP instance ID.
 The name of the Rabbit MQ plugin.
 
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/provider.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/provider.ts#L56">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -3686,7 +3689,7 @@ The name of the Rabbit MQ plugin.
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-apikey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/provider.ts#L60">property <b>apikey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/provider.ts#L60">property <b>apikey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apikey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3694,7 +3697,7 @@ The set of arguments for constructing a Provider resource.
 Key used to authentication to the CloudAMQP Customer API
 
 <h4 class="pdoc-member-header" id="ProviderArgs-baseurl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/provider.ts#L64">property <b>baseurl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/provider.ts#L64">property <b>baseurl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>baseurl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3702,7 +3705,7 @@ Key used to authentication to the CloudAMQP Customer API
 Base URL to CloudAMQP Customer website
 
 <h3 class="pdoc-module-header" id="SecurityFirewallArgs" data-link-title="SecurityFirewallArgs">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/securityFirewall.ts#L146">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/securityFirewall.ts#L146">
         interface <strong>SecurityFirewallArgs</strong>
     </a>
 </h3>
@@ -3712,7 +3715,7 @@ Base URL to CloudAMQP Customer website
 The set of arguments for constructing a SecurityFirewall resource.
 
 <h4 class="pdoc-member-header" id="SecurityFirewallArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/securityFirewall.ts#L150">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/securityFirewall.ts#L150">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3720,7 +3723,7 @@ The set of arguments for constructing a SecurityFirewall resource.
 The CloudAMQP instance ID.
 
 <h4 class="pdoc-member-header" id="SecurityFirewallArgs-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/securityFirewall.ts#L154">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/securityFirewall.ts#L154">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/cloudamqp/types/input/#SecurityFirewallRule'>SecurityFirewallRule</a>&gt;[]&gt;;</code></pre>
@@ -3728,7 +3731,7 @@ The CloudAMQP instance ID.
 An array of rules, minimum of 1 needs to be configured. Each `rules` block consists of the field documented below.
 
 <h3 class="pdoc-module-header" id="SecurityFirewallState" data-link-title="SecurityFirewallState">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/securityFirewall.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/securityFirewall.ts#L132">
         interface <strong>SecurityFirewallState</strong>
     </a>
 </h3>
@@ -3738,7 +3741,7 @@ An array of rules, minimum of 1 needs to be configured. Each `rules` block consi
 Input properties used for looking up and filtering SecurityFirewall resources.
 
 <h4 class="pdoc-member-header" id="SecurityFirewallState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/securityFirewall.ts#L136">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/securityFirewall.ts#L136">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3746,7 +3749,7 @@ Input properties used for looking up and filtering SecurityFirewall resources.
 The CloudAMQP instance ID.
 
 <h4 class="pdoc-member-header" id="SecurityFirewallState-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/securityFirewall.ts#L140">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/securityFirewall.ts#L140">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/cloudamqp/types/input/#SecurityFirewallRule'>SecurityFirewallRule</a>&gt;[]&gt;;</code></pre>
@@ -3754,7 +3757,7 @@ The CloudAMQP instance ID.
 An array of rules, minimum of 1 needs to be configured. Each `rules` block consists of the field documented below.
 
 <h3 class="pdoc-module-header" id="VpcPeeringArgs" data-link-title="VpcPeeringArgs">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/vpcPeering.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/vpcPeering.ts#L116">
         interface <strong>VpcPeeringArgs</strong>
     </a>
 </h3>
@@ -3764,7 +3767,7 @@ An array of rules, minimum of 1 needs to be configured. Each `rules` block consi
 The set of arguments for constructing a VpcPeering resource.
 
 <h4 class="pdoc-member-header" id="VpcPeeringArgs-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/vpcPeering.ts#L120">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/vpcPeering.ts#L120">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3772,7 +3775,7 @@ The set of arguments for constructing a VpcPeering resource.
 The CloudAMQP instance ID.
 
 <h4 class="pdoc-member-header" id="VpcPeeringArgs-peeringId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/vpcPeering.ts#L124">property <b>peeringId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/vpcPeering.ts#L124">property <b>peeringId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peeringId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3780,7 +3783,7 @@ The CloudAMQP instance ID.
 Peering identifier created by AW peering request.
 
 <h3 class="pdoc-module-header" id="VpcPeeringState" data-link-title="VpcPeeringState">
-    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/vpcPeering.ts#L98">
+    <a href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/vpcPeering.ts#L98">
         interface <strong>VpcPeeringState</strong>
     </a>
 </h3>
@@ -3790,7 +3793,7 @@ Peering identifier created by AW peering request.
 Input properties used for looking up and filtering VpcPeering resources.
 
 <h4 class="pdoc-member-header" id="VpcPeeringState-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/vpcPeering.ts#L102">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/vpcPeering.ts#L102">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3798,7 +3801,7 @@ Input properties used for looking up and filtering VpcPeering resources.
 The CloudAMQP instance ID.
 
 <h4 class="pdoc-member-header" id="VpcPeeringState-peeringId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/vpcPeering.ts#L106">property <b>peeringId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/vpcPeering.ts#L106">property <b>peeringId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>peeringId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3806,7 +3809,7 @@ The CloudAMQP instance ID.
 Peering identifier created by AW peering request.
 
 <h4 class="pdoc-member-header" id="VpcPeeringState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/8813c8a96835198cee1ae95f15bd24acfa15a0ba/sdk/nodejs/vpcPeering.ts#L110">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudamqp/blob/9d49e7ca2898fa9b18dceade7a7336e30803d239/sdk/nodejs/vpcPeering.ts#L110">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
