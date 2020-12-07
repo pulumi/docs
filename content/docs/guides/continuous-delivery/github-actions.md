@@ -69,24 +69,18 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1
-      - uses: docker://pulumi/actions
+      - uses: pulumi/actions@v1
         with:
-          args: preview
+          command: preview
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-          PULUMI_CI: pr
+          IS_PR_WORKFLOW: true
 
 ```
 
-Note that by using the `pulumi/actions` Docker image, the workflow will automatically
-download and use the latest version of Pulumi. If you prefer to use a specific version of
-Pulumi, you can replace all occurrences of `uses: "docker://pulumi/actions"` in this and
-other workflow files with a container reference that appends the desired version as a tag ---
-for example, `uses: "docker://pulumi/actions:v1.0.0"`.
-
-Also note that we've set several environment variables, some of which are referenced as [GitHub Actions secrets](https://help.github.com/en/articles/virtual-environments-for-github-actions#creating-and-using-secrets-encrypted-variables) (which we'll provide values for later), to expose to the workflow job at runtime.
+Note that we've set several environment variables, some of which are referenced as [GitHub Actions secrets](https://help.github.com/en/articles/virtual-environments-for-github-actions#creating-and-using-secrets-encrypted-variables) (which we'll provide values for later), to expose to the workflow job at runtime.
 
 #### The push Workflow File
 
@@ -108,14 +102,13 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 1
-      - uses: docker://pulumi/actions
+      - uses: pulumi/actions@v1
         with:
-          args: up --yes
+          command: up
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-          PULUMI_CI: up
 ```
 
 Now that you've got these two common workflows defined, you'll need to configure your
@@ -211,12 +204,12 @@ jobs:
     ...
     steps:
       ...
-      - uses: docker://pulumi/actions
+      - uses: pulumi/actions@v0.0.2
         with:
-          args: preview
+          command: preview
         env:
           ...
-          PULUMI_CI: pr
+          IS_PR_WORKFLOW: pr
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COMMENT_ON_PR: 1
 ```
