@@ -26,10 +26,10 @@ Updated December 2020 to include Python, .NET, and Go support.
 {{% /notes %}}
 
 To get started, download the free and open source
-[Pulumi SDK]({{< relref "/docs/get-started/install" >}}), which includes 
+[Pulumi SDK]({{< relref "/docs/get-started/install" >}}), which includes
 the `pulumi` CLI we'll be using below. If you don't already
 have the AWS CLI installed and configured, [set that up too]({{< relref "/docs/intro/cloud-providers/aws/setup" >}}).
-You'll need AWS credentials to access your AWS account and 
+You'll need AWS credentials to access your AWS account and
 provision resources.
 
 From here, there are two ways to proceed:
