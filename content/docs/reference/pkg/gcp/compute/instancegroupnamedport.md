@@ -21,6 +21,195 @@ To get more information about InstanceGroupNamedPort, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/instance-groups/)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Instance Group Named Port Gke
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var containerNetwork = new Gcp.Compute.Network("containerNetwork", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var containerSubnetwork = new Gcp.Compute.Subnetwork("containerSubnetwork", new Gcp.Compute.SubnetworkArgs
+        {
+            Region = "us-central1",
+            Network = containerNetwork.Name,
+            IpCidrRange = "10.0.36.0/24",
+        });
+        var myCluster = new Gcp.Container.Cluster("myCluster", new Gcp.Container.ClusterArgs
+        {
+            Location = "us-central1-a",
+            InitialNodeCount = 1,
+            Network = containerNetwork.Name,
+            Subnetwork = containerSubnetwork.Name,
+            IpAllocationPolicy = new Gcp.Container.Inputs.ClusterIpAllocationPolicyArgs
+            {
+                ClusterIpv4CidrBlock = "/19",
+                ServicesIpv4CidrBlock = "/22",
+            },
+        });
+        var myPort = new Gcp.Compute.InstanceGroupNamedPort("myPort", new Gcp.Compute.InstanceGroupNamedPortArgs
+        {
+            Group = myCluster.InstanceGroupUrls.Apply(instanceGroupUrls => instanceGroupUrls[0]),
+            Zone = "us-central1-a",
+            Port = 8080,
+        });
+        var myPorts = new Gcp.Compute.InstanceGroupNamedPort("myPorts", new Gcp.Compute.InstanceGroupNamedPortArgs
+        {
+            Group = myCluster.InstanceGroupUrls.Apply(instanceGroupUrls => instanceGroupUrls[0]),
+            Zone = "us-central1-a",
+            Port = 4443,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/container"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		containerNetwork, err := compute.NewNetwork(ctx, "containerNetwork", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		containerSubnetwork, err := compute.NewSubnetwork(ctx, "containerSubnetwork", &compute.SubnetworkArgs{
+			Region:      pulumi.String("us-central1"),
+			Network:     containerNetwork.Name,
+			IpCidrRange: pulumi.String("10.0.36.0/24"),
+		})
+		if err != nil {
+			return err
+		}
+		myCluster, err := container.NewCluster(ctx, "myCluster", &container.ClusterArgs{
+			Location:         pulumi.String("us-central1-a"),
+			InitialNodeCount: pulumi.Int(1),
+			Network:          containerNetwork.Name,
+			Subnetwork:       containerSubnetwork.Name,
+			IpAllocationPolicy: &container.ClusterIpAllocationPolicyArgs{
+				ClusterIpv4CidrBlock:  pulumi.String("/19"),
+				ServicesIpv4CidrBlock: pulumi.String("/22"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewInstanceGroupNamedPort(ctx, "myPort", &compute.InstanceGroupNamedPortArgs{
+			Group: myCluster.InstanceGroupUrls.ApplyT(func(instanceGroupUrls []string) (string, error) {
+				return instanceGroupUrls[0], nil
+			}).(pulumi.StringOutput),
+			Zone: pulumi.String("us-central1-a"),
+			Port: pulumi.Int(8080),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewInstanceGroupNamedPort(ctx, "myPorts", &compute.InstanceGroupNamedPortArgs{
+			Group: myCluster.InstanceGroupUrls.ApplyT(func(instanceGroupUrls []string) (string, error) {
+				return instanceGroupUrls[0], nil
+			}).(pulumi.StringOutput),
+			Zone: pulumi.String("us-central1-a"),
+			Port: pulumi.Int(4443),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+container_network = gcp.compute.Network("containerNetwork", auto_create_subnetworks=False)
+container_subnetwork = gcp.compute.Subnetwork("containerSubnetwork",
+    region="us-central1",
+    network=container_network.name,
+    ip_cidr_range="10.0.36.0/24")
+my_cluster = gcp.container.Cluster("myCluster",
+    location="us-central1-a",
+    initial_node_count=1,
+    network=container_network.name,
+    subnetwork=container_subnetwork.name,
+    ip_allocation_policy=gcp.container.ClusterIpAllocationPolicyArgs(
+        cluster_ipv4_cidr_block="/19",
+        services_ipv4_cidr_block="/22",
+    ))
+my_port = gcp.compute.InstanceGroupNamedPort("myPort",
+    group=my_cluster.instance_group_urls[0],
+    zone="us-central1-a",
+    port=8080)
+my_ports = gcp.compute.InstanceGroupNamedPort("myPorts",
+    group=my_cluster.instance_group_urls[0],
+    zone="us-central1-a",
+    port=4443)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const containerNetwork = new gcp.compute.Network("containerNetwork", {autoCreateSubnetworks: false});
+const containerSubnetwork = new gcp.compute.Subnetwork("containerSubnetwork", {
+    region: "us-central1",
+    network: containerNetwork.name,
+    ipCidrRange: "10.0.36.0/24",
+});
+const myCluster = new gcp.container.Cluster("myCluster", {
+    location: "us-central1-a",
+    initialNodeCount: 1,
+    network: containerNetwork.name,
+    subnetwork: containerSubnetwork.name,
+    ipAllocationPolicy: {
+        clusterIpv4CidrBlock: "/19",
+        servicesIpv4CidrBlock: "/22",
+    },
+});
+const myPort = new gcp.compute.InstanceGroupNamedPort("myPort", {
+    group: myCluster.instanceGroupUrls[0],
+    zone: "us-central1-a",
+    port: 8080,
+});
+const myPorts = new gcp.compute.InstanceGroupNamedPort("myPorts", {
+    group: myCluster.instanceGroupUrls[0],
+    zone: "us-central1-a",
+    port: 4443,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a InstanceGroupNamedPort Resource {#create}
@@ -926,6 +1115,28 @@ If it is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+InstanceGroupNamedPort can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/instanceGroupNamedPort:InstanceGroupNamedPort default projects/{{project}}/zones/{{zone}}/instanceGroups/{{group}}/{{port}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/instanceGroupNamedPort:InstanceGroupNamedPort default {{project}}/{{zone}}/{{group}}/{{port}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/instanceGroupNamedPort:InstanceGroupNamedPort default {{zone}}/{{group}}/{{port}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/instanceGroupNamedPort:InstanceGroupNamedPort default {{group}}/{{port}}/{{name}}
+```
 
 
 

@@ -21,6 +21,99 @@ For more information see
 [the API reference](https://cloud.google.com/bigquery/docs/reference/rest/v2/projects/getServiceAccount).
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var bqSa = Output.Create(Gcp.BigQuery.GetDefaultServiceAccount.InvokeAsync());
+        var keySaUser = new Gcp.Kms.CryptoKeyIAMMember("keySaUser", new Gcp.Kms.CryptoKeyIAMMemberArgs
+        {
+            CryptoKeyId = google_kms_crypto_key.Key.Id,
+            Role = "roles/cloudkms.cryptoKeyEncrypterDecrypter",
+            Member = bqSa.Apply(bqSa => $"serviceAccount:{bqSa.Email}"),
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/kms"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		bqSa, err := bigquery.GetDefaultServiceAccount(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		_, err = kms.NewCryptoKeyIAMMember(ctx, "keySaUser", &kms.CryptoKeyIAMMemberArgs{
+			CryptoKeyId: pulumi.Any(google_kms_crypto_key.Key.Id),
+			Role:        pulumi.String("roles/cloudkms.cryptoKeyEncrypterDecrypter"),
+			Member:      pulumi.String(fmt.Sprintf("%v%v", "serviceAccount:", bqSa.Email)),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+bq_sa = gcp.bigquery.get_default_service_account()
+key_sa_user = gcp.kms.CryptoKeyIAMMember("keySaUser",
+    crypto_key_id=google_kms_crypto_key["key"]["id"],
+    role="roles/cloudkms.cryptoKeyEncrypterDecrypter",
+    member=f"serviceAccount:{bq_sa.email}")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const bqSa = gcp.bigquery.getDefaultServiceAccount({});
+const keySaUser = new gcp.kms.CryptoKeyIAMMember("keySaUser", {
+    cryptoKeyId: google_kms_crypto_key.key.id,
+    role: "roles/cloudkms.cryptoKeyEncrypterDecrypter",
+    member: bqSa.then(bqSa => `serviceAccount:${bqSa.email}`),
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetDefaultServiceAccount {#using}
 

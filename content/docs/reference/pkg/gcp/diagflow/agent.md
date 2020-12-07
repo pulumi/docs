@@ -21,6 +21,137 @@ To get more information about Agent, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/dialogflow/docs/)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Dialogflow Agent Full
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var fullAgent = new Gcp.Diagflow.Agent("fullAgent", new Gcp.Diagflow.AgentArgs
+        {
+            ApiVersion = "API_VERSION_V2_BETA_1",
+            AvatarUri = "https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png",
+            ClassificationThreshold = 0.3,
+            DefaultLanguageCode = "en",
+            Description = "Example description.",
+            DisplayName = "dialogflow-agent",
+            EnableLogging = true,
+            MatchMode = "MATCH_MODE_ML_ONLY",
+            SupportedLanguageCodes = 
+            {
+                "fr",
+                "de",
+                "es",
+            },
+            Tier = "TIER_STANDARD",
+            TimeZone = "America/New_York",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/diagflow"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := diagflow.NewAgent(ctx, "fullAgent", &diagflow.AgentArgs{
+			ApiVersion:              pulumi.String("API_VERSION_V2_BETA_1"),
+			AvatarUri:               pulumi.String("https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png"),
+			ClassificationThreshold: pulumi.Float64(0.3),
+			DefaultLanguageCode:     pulumi.String("en"),
+			Description:             pulumi.String("Example description."),
+			DisplayName:             pulumi.String("dialogflow-agent"),
+			EnableLogging:           pulumi.Bool(true),
+			MatchMode:               pulumi.String("MATCH_MODE_ML_ONLY"),
+			SupportedLanguageCodes: pulumi.StringArray{
+				pulumi.String("fr"),
+				pulumi.String("de"),
+				pulumi.String("es"),
+			},
+			Tier:     pulumi.String("TIER_STANDARD"),
+			TimeZone: pulumi.String("America/New_York"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+full_agent = gcp.diagflow.Agent("fullAgent",
+    api_version="API_VERSION_V2_BETA_1",
+    avatar_uri="https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png",
+    classification_threshold=0.3,
+    default_language_code="en",
+    description="Example description.",
+    display_name="dialogflow-agent",
+    enable_logging=True,
+    match_mode="MATCH_MODE_ML_ONLY",
+    supported_language_codes=[
+        "fr",
+        "de",
+        "es",
+    ],
+    tier="TIER_STANDARD",
+    time_zone="America/New_York")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const fullAgent = new gcp.diagflow.Agent("full_agent", {
+    apiVersion: "API_VERSION_V2_BETA_1",
+    avatarUri: "https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png",
+    classificationThreshold: 0.3,
+    defaultLanguageCode: "en",
+    description: "Example description.",
+    displayName: "dialogflow-agent",
+    enableLogging: true,
+    matchMode: "MATCH_MODE_ML_ONLY",
+    supportedLanguageCodes: [
+        "fr",
+        "de",
+        "es",
+    ],
+    tier: "TIER_STANDARD",
+    timeZone: "America/New_York",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Agent Resource {#create}
@@ -1822,6 +1953,16 @@ Europe/Paris.
 
 
 
+
+
+## Import
+
+
+Agent can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:diagflow/agent:Agent default {{project}}
+```
 
 
 

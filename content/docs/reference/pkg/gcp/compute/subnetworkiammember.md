@@ -20,6 +20,565 @@ Three different resources help you manage your IAM policy for Compute Engine Sub
 
 > **Note:** `gcp.compute.SubnetworkIAMBinding` resources **can be** used in conjunction with `gcp.compute.SubnetworkIAMMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_compute\_subnetwork\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/compute.networkUser",
+        members: ["user:jane@example.com"],
+    }],
+});
+const policy = new gcp.compute.SubnetworkIAMPolicy("policy", {
+    project: google_compute_subnetwork["network-with-private-secondary-ip-ranges"].project,
+    region: google_compute_subnetwork["network-with-private-secondary-ip-ranges"].region,
+    subnetwork: google_compute_subnetwork["network-with-private-secondary-ip-ranges"].name,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+    role="roles/compute.networkUser",
+    members=["user:jane@example.com"],
+)])
+policy = gcp.compute.SubnetworkIAMPolicy("policy",
+    project=google_compute_subnetwork["network-with-private-secondary-ip-ranges"]["project"],
+    region=google_compute_subnetwork["network-with-private-secondary-ip-ranges"]["region"],
+    subnetwork=google_compute_subnetwork["network-with-private-secondary-ip-ranges"]["name"],
+    policy_data=admin.policy_data)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Bindings = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Role = "roles/compute.networkUser",
+                    Members = 
+                    {
+                        "user:jane@example.com",
+                    },
+                },
+            },
+        }));
+        var policy = new Gcp.Compute.SubnetworkIAMPolicy("policy", new Gcp.Compute.SubnetworkIAMPolicyArgs
+        {
+            Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+            Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+            Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Bindings: []organizations.GetIAMPolicyBinding{
+				organizations.GetIAMPolicyBinding{
+					Role: "roles/compute.networkUser",
+					Members: []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewSubnetworkIAMPolicy(ctx, "policy", &compute.SubnetworkIAMPolicyArgs{
+			Project:    pulumi.Any(google_compute_subnetwork.Network - with - private - secondary - ip - ranges.Project),
+			Region:     pulumi.Any(google_compute_subnetwork.Network - with - private - secondary - ip - ranges.Region),
+			Subnetwork: pulumi.Any(google_compute_subnetwork.Network - with - private - secondary - ip - ranges.Name),
+			PolicyData: pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/compute.networkUser",
+        members: ["user:jane@example.com"],
+        condition: {
+            title: "expires_after_2019_12_31",
+            description: "Expiring at midnight of 2019-12-31",
+            expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        },
+    }],
+});
+const policy = new gcp.compute.SubnetworkIAMPolicy("policy", {
+    project: google_compute_subnetwork["network-with-private-secondary-ip-ranges"].project,
+    region: google_compute_subnetwork["network-with-private-secondary-ip-ranges"].region,
+    subnetwork: google_compute_subnetwork["network-with-private-secondary-ip-ranges"].name,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+    role="roles/compute.networkUser",
+    members=["user:jane@example.com"],
+    condition=gcp.organizations.GetIAMPolicyBindingConditionArgs(
+        title="expires_after_2019_12_31",
+        description="Expiring at midnight of 2019-12-31",
+        expression="request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    ),
+)])
+policy = gcp.compute.SubnetworkIAMPolicy("policy",
+    project=google_compute_subnetwork["network-with-private-secondary-ip-ranges"]["project"],
+    region=google_compute_subnetwork["network-with-private-secondary-ip-ranges"]["region"],
+    subnetwork=google_compute_subnetwork["network-with-private-secondary-ip-ranges"]["name"],
+    policy_data=admin.policy_data)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Bindings = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Role = "roles/compute.networkUser",
+                    Members = 
+                    {
+                        "user:jane@example.com",
+                    },
+                    Condition = new Gcp.Organizations.Inputs.GetIAMPolicyBindingConditionArgs
+                    {
+                        Title = "expires_after_2019_12_31",
+                        Description = "Expiring at midnight of 2019-12-31",
+                        Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+                    },
+                },
+            },
+        }));
+        var policy = new Gcp.Compute.SubnetworkIAMPolicy("policy", new Gcp.Compute.SubnetworkIAMPolicyArgs
+        {
+            Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+            Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+            Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Bindings: []organizations.GetIAMPolicyBinding{
+				organizations.GetIAMPolicyBinding{
+					Role: "roles/compute.networkUser",
+					Members: []string{
+						"user:jane@example.com",
+					},
+					Condition: organizations.GetIAMPolicyBindingCondition{
+						Title:       "expires_after_2019_12_31",
+						Description: "Expiring at midnight of 2019-12-31",
+						Expression:  "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewSubnetworkIAMPolicy(ctx, "policy", &compute.SubnetworkIAMPolicyArgs{
+			Project:    pulumi.Any(google_compute_subnetwork.Network - with - private - secondary - ip - ranges.Project),
+			Region:     pulumi.Any(google_compute_subnetwork.Network - with - private - secondary - ip - ranges.Region),
+			Subnetwork: pulumi.Any(google_compute_subnetwork.Network - with - private - secondary - ip - ranges.Name),
+			PolicyData: pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+## google\_compute\_subnetwork\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const binding = new gcp.compute.SubnetworkIAMBinding("binding", {
+    project: google_compute_subnetwork["network-with-private-secondary-ip-ranges"].project,
+    region: google_compute_subnetwork["network-with-private-secondary-ip-ranges"].region,
+    subnetwork: google_compute_subnetwork["network-with-private-secondary-ip-ranges"].name,
+    role: "roles/compute.networkUser",
+    members: ["user:jane@example.com"],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+binding = gcp.compute.SubnetworkIAMBinding("binding",
+    project=google_compute_subnetwork["network-with-private-secondary-ip-ranges"]["project"],
+    region=google_compute_subnetwork["network-with-private-secondary-ip-ranges"]["region"],
+    subnetwork=google_compute_subnetwork["network-with-private-secondary-ip-ranges"]["name"],
+    role="roles/compute.networkUser",
+    members=["user:jane@example.com"])
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.Compute.SubnetworkIAMBinding("binding", new Gcp.Compute.SubnetworkIAMBindingArgs
+        {
+            Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+            Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+            Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+            Role = "roles/compute.networkUser",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewSubnetworkIAMBinding(ctx, "binding", &compute.SubnetworkIAMBindingArgs{
+			Project:    pulumi.Any(google_compute_subnetwork.Network - with - private - secondary - ip - ranges.Project),
+			Region:     pulumi.Any(google_compute_subnetwork.Network - with - private - secondary - ip - ranges.Region),
+			Subnetwork: pulumi.Any(google_compute_subnetwork.Network - with - private - secondary - ip - ranges.Name),
+			Role:       pulumi.String("roles/compute.networkUser"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const binding = new gcp.compute.SubnetworkIAMBinding("binding", {
+    project: google_compute_subnetwork["network-with-private-secondary-ip-ranges"].project,
+    region: google_compute_subnetwork["network-with-private-secondary-ip-ranges"].region,
+    subnetwork: google_compute_subnetwork["network-with-private-secondary-ip-ranges"].name,
+    role: "roles/compute.networkUser",
+    members: ["user:jane@example.com"],
+    condition: {
+        title: "expires_after_2019_12_31",
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+binding = gcp.compute.SubnetworkIAMBinding("binding",
+    project=google_compute_subnetwork["network-with-private-secondary-ip-ranges"]["project"],
+    region=google_compute_subnetwork["network-with-private-secondary-ip-ranges"]["region"],
+    subnetwork=google_compute_subnetwork["network-with-private-secondary-ip-ranges"]["name"],
+    role="roles/compute.networkUser",
+    members=["user:jane@example.com"],
+    condition=gcp.compute.SubnetworkIAMBindingConditionArgs(
+        title="expires_after_2019_12_31",
+        description="Expiring at midnight of 2019-12-31",
+        expression="request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    ))
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.Compute.SubnetworkIAMBinding("binding", new Gcp.Compute.SubnetworkIAMBindingArgs
+        {
+            Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+            Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+            Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+            Role = "roles/compute.networkUser",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Condition = new Gcp.Compute.Inputs.SubnetworkIAMBindingConditionArgs
+            {
+                Title = "expires_after_2019_12_31",
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewSubnetworkIAMBinding(ctx, "binding", &compute.SubnetworkIAMBindingArgs{
+			Project:    pulumi.Any(google_compute_subnetwork.Network - with - private - secondary - ip - ranges.Project),
+			Region:     pulumi.Any(google_compute_subnetwork.Network - with - private - secondary - ip - ranges.Region),
+			Subnetwork: pulumi.Any(google_compute_subnetwork.Network - with - private - secondary - ip - ranges.Name),
+			Role:       pulumi.String("roles/compute.networkUser"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+			Condition: &compute.SubnetworkIAMBindingConditionArgs{
+				Title:       pulumi.String("expires_after_2019_12_31"),
+				Description: pulumi.String("Expiring at midnight of 2019-12-31"),
+				Expression:  pulumi.String("request.time < timestamp(\"2020-01-01T00:00:00Z\")"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+## google\_compute\_subnetwork\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const member = new gcp.compute.SubnetworkIAMMember("member", {
+    project: google_compute_subnetwork["network-with-private-secondary-ip-ranges"].project,
+    region: google_compute_subnetwork["network-with-private-secondary-ip-ranges"].region,
+    subnetwork: google_compute_subnetwork["network-with-private-secondary-ip-ranges"].name,
+    role: "roles/compute.networkUser",
+    member: "user:jane@example.com",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+member = gcp.compute.SubnetworkIAMMember("member",
+    project=google_compute_subnetwork["network-with-private-secondary-ip-ranges"]["project"],
+    region=google_compute_subnetwork["network-with-private-secondary-ip-ranges"]["region"],
+    subnetwork=google_compute_subnetwork["network-with-private-secondary-ip-ranges"]["name"],
+    role="roles/compute.networkUser",
+    member="user:jane@example.com")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.Compute.SubnetworkIAMMember("member", new Gcp.Compute.SubnetworkIAMMemberArgs
+        {
+            Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+            Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+            Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+            Role = "roles/compute.networkUser",
+            Member = "user:jane@example.com",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewSubnetworkIAMMember(ctx, "member", &compute.SubnetworkIAMMemberArgs{
+			Project:    pulumi.Any(google_compute_subnetwork.Network - with - private - secondary - ip - ranges.Project),
+			Region:     pulumi.Any(google_compute_subnetwork.Network - with - private - secondary - ip - ranges.Region),
+			Subnetwork: pulumi.Any(google_compute_subnetwork.Network - with - private - secondary - ip - ranges.Name),
+			Role:       pulumi.String("roles/compute.networkUser"),
+			Member:     pulumi.String("user:jane@example.com"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const member = new gcp.compute.SubnetworkIAMMember("member", {
+    project: google_compute_subnetwork["network-with-private-secondary-ip-ranges"].project,
+    region: google_compute_subnetwork["network-with-private-secondary-ip-ranges"].region,
+    subnetwork: google_compute_subnetwork["network-with-private-secondary-ip-ranges"].name,
+    role: "roles/compute.networkUser",
+    member: "user:jane@example.com",
+    condition: {
+        title: "expires_after_2019_12_31",
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+member = gcp.compute.SubnetworkIAMMember("member",
+    project=google_compute_subnetwork["network-with-private-secondary-ip-ranges"]["project"],
+    region=google_compute_subnetwork["network-with-private-secondary-ip-ranges"]["region"],
+    subnetwork=google_compute_subnetwork["network-with-private-secondary-ip-ranges"]["name"],
+    role="roles/compute.networkUser",
+    member="user:jane@example.com",
+    condition=gcp.compute.SubnetworkIAMMemberConditionArgs(
+        title="expires_after_2019_12_31",
+        description="Expiring at midnight of 2019-12-31",
+        expression="request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    ))
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.Compute.SubnetworkIAMMember("member", new Gcp.Compute.SubnetworkIAMMemberArgs
+        {
+            Project = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Project,
+            Region = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Region,
+            Subnetwork = google_compute_subnetwork.Network_with_private_secondary_ip_ranges.Name,
+            Role = "roles/compute.networkUser",
+            Member = "user:jane@example.com",
+            Condition = new Gcp.Compute.Inputs.SubnetworkIAMMemberConditionArgs
+            {
+                Title = "expires_after_2019_12_31",
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewSubnetworkIAMMember(ctx, "member", &compute.SubnetworkIAMMemberArgs{
+			Project:    pulumi.Any(google_compute_subnetwork.Network - with - private - secondary - ip - ranges.Project),
+			Region:     pulumi.Any(google_compute_subnetwork.Network - with - private - secondary - ip - ranges.Region),
+			Subnetwork: pulumi.Any(google_compute_subnetwork.Network - with - private - secondary - ip - ranges.Name),
+			Role:       pulumi.String("roles/compute.networkUser"),
+			Member:     pulumi.String("user:jane@example.com"),
+			Condition: &compute.SubnetworkIAMMemberConditionArgs{
+				Title:       pulumi.String("expires_after_2019_12_31"),
+				Description: pulumi.String("Expiring at midnight of 2019-12-31"),
+				Expression:  pulumi.String("request.time < timestamp(\"2020-01-01T00:00:00Z\")"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 ## Create a SubnetworkIAMMember Resource {#create}
@@ -1317,6 +1876,32 @@ region is specified, it is taken from the provider configuration.
 
 
 
+
+
+## Import
+
+
+For all import syntaxes, the "resource in question" can take any of the following forms* projects/{{project}}/regions/{{region}}/subnetworks/{{name}} * {{project}}/{{region}}/{{name}} * {{region}}/{{name}} * {{name}} Any variables not passed in the import command will be taken from the provider configuration. Compute Engine subnetwork IAM resources can be imported using the resource identifiers, role, and member. IAM member imports use space-delimited identifiersthe resource in question, the role, and the member identity, e.g.
+
+```sh
+ $ pulumi import gcp:compute/subnetworkIAMMember:SubnetworkIAMMember editor "projects/{{project}}/regions/{{region}}/subnetworks/{{subnetwork}} roles/compute.networkUser user:jane@example.com"
+```
+
+ IAM binding imports use space-delimited identifiersthe resource in question and the role, e.g.
+
+```sh
+ $ pulumi import gcp:compute/subnetworkIAMMember:SubnetworkIAMMember editor "projects/{{project}}/regions/{{region}}/subnetworks/{{subnetwork}} roles/compute.networkUser"
+```
+
+ IAM policy imports use the identifier of the resource in question, e.g.
+
+```sh
+ $ pulumi import gcp:compute/subnetworkIAMMember:SubnetworkIAMMember editor projects/{{project}}/regions/{{region}}/subnetworks/{{subnetwork}}
+```
+
+ -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+
+full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 
 

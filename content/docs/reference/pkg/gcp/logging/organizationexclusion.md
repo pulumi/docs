@@ -17,6 +17,89 @@ Manages an organization-level logging exclusion. For more information see
 Note that you must have the "Logs Configuration Writer" IAM role (`roles/logging.configWriter`)
 granted to the credentials used with this provider.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_exclusion = new Gcp.Logging.OrganizationExclusion("my-exclusion", new Gcp.Logging.OrganizationExclusionArgs
+        {
+            Description = "Exclude GCE instance debug logs",
+            Filter = "resource.type = gce_instance AND severity <= DEBUG",
+            OrgId = "123456789",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/logging"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := logging.NewOrganizationExclusion(ctx, "my_exclusion", &logging.OrganizationExclusionArgs{
+			Description: pulumi.String("Exclude GCE instance debug logs"),
+			Filter:      pulumi.String("resource.type = gce_instance AND severity <= DEBUG"),
+			OrgId:       pulumi.String("123456789"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_exclusion = gcp.logging.OrganizationExclusion("my-exclusion",
+    description="Exclude GCE instance debug logs",
+    filter="resource.type = gce_instance AND severity <= DEBUG",
+    org_id="123456789")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my_exclusion = new gcp.logging.OrganizationExclusion("my-exclusion", {
+    description: "Exclude GCE instance debug logs",
+    // Exclude all DEBUG or lower severity messages relating to instances
+    filter: "resource.type = gce_instance AND severity <= DEBUG",
+    orgId: "123456789",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a OrganizationExclusion Resource {#create}
@@ -930,6 +1013,16 @@ write a filter.
 
 
 
+
+
+## Import
+
+
+Organization-level logging exclusions can be imported using their URI, e.g.
+
+```sh
+ $ pulumi import gcp:logging/organizationExclusion:OrganizationExclusion my_exclusion organizations/{{organization}}/exclusions/{{name}}
+```
 
 
 

@@ -31,6 +31,420 @@ To get more information about Address, see:
     * [Reserving a Static External IP Address](https://cloud.google.com/compute/docs/instances-and-network)
     * [Reserving a Static Internal IP Address](https://cloud.google.com/compute/docs/ip-addresses/reserve-static-internal-ip-address)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Address Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var ipAddress = new Gcp.Compute.Address("ipAddress", new Gcp.Compute.AddressArgs
+        {
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewAddress(ctx, "ipAddress", nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+ip_address = gcp.compute.Address("ipAddress")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const ipAddress = new gcp.compute.Address("ip_address", {});
+```
+
+{{% /example %}}
+
+### Address With Subnetwork
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultNetwork = new Gcp.Compute.Network("defaultNetwork", new Gcp.Compute.NetworkArgs
+        {
+        });
+        var defaultSubnetwork = new Gcp.Compute.Subnetwork("defaultSubnetwork", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.0.0.0/16",
+            Region = "us-central1",
+            Network = defaultNetwork.Id,
+        });
+        var internalWithSubnetAndAddress = new Gcp.Compute.Address("internalWithSubnetAndAddress", new Gcp.Compute.AddressArgs
+        {
+            Subnetwork = defaultSubnetwork.Id,
+            AddressType = "INTERNAL",
+            Address = "10.0.42.42",
+            Region = "us-central1",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultNetwork, err := compute.NewNetwork(ctx, "defaultNetwork", nil)
+		if err != nil {
+			return err
+		}
+		defaultSubnetwork, err := compute.NewSubnetwork(ctx, "defaultSubnetwork", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("10.0.0.0/16"),
+			Region:      pulumi.String("us-central1"),
+			Network:     defaultNetwork.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewAddress(ctx, "internalWithSubnetAndAddress", &compute.AddressArgs{
+			Subnetwork:  defaultSubnetwork.ID(),
+			AddressType: pulumi.String("INTERNAL"),
+			Address:     pulumi.String("10.0.42.42"),
+			Region:      pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_network = gcp.compute.Network("defaultNetwork")
+default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
+    ip_cidr_range="10.0.0.0/16",
+    region="us-central1",
+    network=default_network.id)
+internal_with_subnet_and_address = gcp.compute.Address("internalWithSubnetAndAddress",
+    subnetwork=default_subnetwork.id,
+    address_type="INTERNAL",
+    address="10.0.42.42",
+    region="us-central1")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultNetwork = new gcp.compute.Network("defaultNetwork", {});
+const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
+    ipCidrRange: "10.0.0.0/16",
+    region: "us-central1",
+    network: defaultNetwork.id,
+});
+const internalWithSubnetAndAddress = new gcp.compute.Address("internalWithSubnetAndAddress", {
+    subnetwork: defaultSubnetwork.id,
+    addressType: "INTERNAL",
+    address: "10.0.42.42",
+    region: "us-central1",
+});
+```
+
+{{% /example %}}
+
+### Address With Gce Endpoint
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var internalWithGceEndpoint = new Gcp.Compute.Address("internalWithGceEndpoint", new Gcp.Compute.AddressArgs
+        {
+            AddressType = "INTERNAL",
+            Purpose = "GCE_ENDPOINT",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewAddress(ctx, "internalWithGceEndpoint", &compute.AddressArgs{
+			AddressType: pulumi.String("INTERNAL"),
+			Purpose:     pulumi.String("GCE_ENDPOINT"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+internal_with_gce_endpoint = gcp.compute.Address("internalWithGceEndpoint",
+    address_type="INTERNAL",
+    purpose="GCE_ENDPOINT")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const internalWithGceEndpoint = new gcp.compute.Address("internal_with_gce_endpoint", {
+    addressType: "INTERNAL",
+    purpose: "GCE_ENDPOINT",
+});
+```
+
+{{% /example %}}
+
+### Instance With Ip
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @static = new Gcp.Compute.Address("static", new Gcp.Compute.AddressArgs
+        {
+        });
+        var debianImage = Output.Create(Gcp.Compute.GetImage.InvokeAsync(new Gcp.Compute.GetImageArgs
+        {
+            Family = "debian-9",
+            Project = "debian-cloud",
+        }));
+        var instanceWithIp = new Gcp.Compute.Instance("instanceWithIp", new Gcp.Compute.InstanceArgs
+        {
+            MachineType = "f1-micro",
+            Zone = "us-central1-a",
+            BootDisk = new Gcp.Compute.Inputs.InstanceBootDiskArgs
+            {
+                InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
+                {
+                    Image = debianImage.Apply(debianImage => debianImage.SelfLink),
+                },
+            },
+            NetworkInterfaces = 
+            {
+                new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
+                {
+                    Network = "default",
+                    AccessConfigs = 
+                    {
+                        new Gcp.Compute.Inputs.InstanceNetworkInterfaceAccessConfigArgs
+                        {
+                            NatIp = @static.IPAddress,
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		static, err := compute.NewAddress(ctx, "static", nil)
+		if err != nil {
+			return err
+		}
+		opt0 := "debian-9"
+		opt1 := "debian-cloud"
+		debianImage, err := compute.LookupImage(ctx, &compute.LookupImageArgs{
+			Family:  &opt0,
+			Project: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewInstance(ctx, "instanceWithIp", &compute.InstanceArgs{
+			MachineType: pulumi.String("f1-micro"),
+			Zone:        pulumi.String("us-central1-a"),
+			BootDisk: &compute.InstanceBootDiskArgs{
+				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
+					Image: pulumi.String(debianImage.SelfLink),
+				},
+			},
+			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
+				&compute.InstanceNetworkInterfaceArgs{
+					Network: pulumi.String("default"),
+					AccessConfigs: compute.InstanceNetworkInterfaceAccessConfigArray{
+						&compute.InstanceNetworkInterfaceAccessConfigArgs{
+							NatIp: static.Address,
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+static = gcp.compute.Address("static")
+debian_image = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+instance_with_ip = gcp.compute.Instance("instanceWithIp",
+    machine_type="f1-micro",
+    zone="us-central1-a",
+    boot_disk=gcp.compute.InstanceBootDiskArgs(
+        initialize_params=gcp.compute.InstanceBootDiskInitializeParamsArgs(
+            image=debian_image.self_link,
+        ),
+    ),
+    network_interfaces=[gcp.compute.InstanceNetworkInterfaceArgs(
+        network="default",
+        access_configs=[gcp.compute.InstanceNetworkInterfaceAccessConfigArgs(
+            nat_ip=static.address,
+        )],
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const static = new gcp.compute.Address("static", {});
+const debianImage = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const instanceWithIp = new gcp.compute.Instance("instanceWithIp", {
+    machineType: "f1-micro",
+    zone: "us-central1-a",
+    bootDisk: {
+        initializeParams: {
+            image: debianImage.then(debianImage => debianImage.selfLink),
+        },
+    },
+    networkInterfaces: [{
+        network: "default",
+        accessConfigs: [{
+            natIp: static.address,
+        }],
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Address Resource {#create}
@@ -1880,6 +2294,28 @@ GCE_ENDPOINT/DNS_RESOLVER purposes.
 
 
 
+
+
+## Import
+
+
+Address can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/address:Address default projects/{{project}}/regions/{{region}}/addresses/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/address:Address default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/address:Address default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/address:Address default {{name}}
+```
 
 
 

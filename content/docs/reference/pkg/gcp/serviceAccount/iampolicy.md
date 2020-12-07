@@ -22,6 +22,535 @@ Three different resources help you manage your IAM policy for a service account.
 
 > **Note:** `gcp.serviceAccount.IAMBinding` resources **can be** used in conjunction with `gcp.serviceAccount.IAMMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_service\_account\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/iam.serviceAccountUser",
+        members: ["user:jane@example.com"],
+    }],
+});
+const sa = new gcp.serviceAccount.Account("sa", {
+    accountId: "my-service-account",
+    displayName: "A service account that only Jane can interact with",
+});
+const admin_account_iam = new gcp.serviceAccount.IAMPolicy("admin-account-iam", {
+    serviceAccountId: sa.name,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+    role="roles/iam.serviceAccountUser",
+    members=["user:jane@example.com"],
+)])
+sa = gcp.service_account.Account("sa",
+    account_id="my-service-account",
+    display_name="A service account that only Jane can interact with")
+admin_account_iam = gcp.service_account.IAMPolicy("admin-account-iam",
+    service_account_id=sa.name,
+    policy_data=admin.policy_data)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Bindings = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Role = "roles/iam.serviceAccountUser",
+                    Members = 
+                    {
+                        "user:jane@example.com",
+                    },
+                },
+            },
+        }));
+        var sa = new Gcp.ServiceAccount.Account("sa", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "my-service-account",
+            DisplayName = "A service account that only Jane can interact with",
+        });
+        var admin_account_iam = new Gcp.ServiceAccount.IAMPolicy("admin-account-iam", new Gcp.ServiceAccount.IAMPolicyArgs
+        {
+            ServiceAccountId = sa.Name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/serviceAccount"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Bindings: []organizations.GetIAMPolicyBinding{
+				organizations.GetIAMPolicyBinding{
+					Role: "roles/iam.serviceAccountUser",
+					Members: []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		sa, err := serviceAccount.NewAccount(ctx, "sa", &serviceAccount.AccountArgs{
+			AccountId:   pulumi.String("my-service-account"),
+			DisplayName: pulumi.String("A service account that only Jane can interact with"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = serviceAccount.NewIAMPolicy(ctx, "admin_account_iam", &serviceAccount.IAMPolicyArgs{
+			ServiceAccountId: sa.Name,
+			PolicyData:       pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_service\_account\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const sa = new gcp.serviceAccount.Account("sa", {
+    accountId: "my-service-account",
+    displayName: "A service account that only Jane can use",
+});
+const admin_account_iam = new gcp.serviceAccount.IAMBinding("admin-account-iam", {
+    serviceAccountId: sa.name,
+    role: "roles/iam.serviceAccountUser",
+    members: ["user:jane@example.com"],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+sa = gcp.service_account.Account("sa",
+    account_id="my-service-account",
+    display_name="A service account that only Jane can use")
+admin_account_iam = gcp.service_account.IAMBinding("admin-account-iam",
+    service_account_id=sa.name,
+    role="roles/iam.serviceAccountUser",
+    members=["user:jane@example.com"])
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sa = new Gcp.ServiceAccount.Account("sa", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "my-service-account",
+            DisplayName = "A service account that only Jane can use",
+        });
+        var admin_account_iam = new Gcp.ServiceAccount.IAMBinding("admin-account-iam", new Gcp.ServiceAccount.IAMBindingArgs
+        {
+            ServiceAccountId = sa.Name,
+            Role = "roles/iam.serviceAccountUser",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/serviceAccount"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		sa, err := serviceAccount.NewAccount(ctx, "sa", &serviceAccount.AccountArgs{
+			AccountId:   pulumi.String("my-service-account"),
+			DisplayName: pulumi.String("A service account that only Jane can use"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = serviceAccount.NewIAMBinding(ctx, "admin_account_iam", &serviceAccount.IAMBindingArgs{
+			ServiceAccountId: sa.Name,
+			Role:             pulumi.String("roles/iam.serviceAccountUser"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const sa = new gcp.serviceAccount.Account("sa", {
+    accountId: "my-service-account",
+    displayName: "A service account that only Jane can use",
+});
+const admin_account_iam = new gcp.serviceAccount.IAMBinding("admin-account-iam", {
+    condition: {
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title: "expires_after_2019_12_31",
+    },
+    members: ["user:jane@example.com"],
+    role: "roles/iam.serviceAccountUser",
+    serviceAccountId: sa.name,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+sa = gcp.service_account.Account("sa",
+    account_id="my-service-account",
+    display_name="A service account that only Jane can use")
+admin_account_iam = gcp.service_account.IAMBinding("admin-account-iam",
+    condition=gcp.service.account.IAMBindingConditionArgs(
+        description="Expiring at midnight of 2019-12-31",
+        expression="request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title="expires_after_2019_12_31",
+    ),
+    members=["user:jane@example.com"],
+    role="roles/iam.serviceAccountUser",
+    service_account_id=sa.name)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sa = new Gcp.ServiceAccount.Account("sa", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "my-service-account",
+            DisplayName = "A service account that only Jane can use",
+        });
+        var admin_account_iam = new Gcp.ServiceAccount.IAMBinding("admin-account-iam", new Gcp.ServiceAccount.IAMBindingArgs
+        {
+            Condition = new Gcp.ServiceAccount.Inputs.IAMBindingConditionArgs
+            {
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+                Title = "expires_after_2019_12_31",
+            },
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Role = "roles/iam.serviceAccountUser",
+            ServiceAccountId = sa.Name,
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/serviceAccount"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		sa, err := serviceAccount.NewAccount(ctx, "sa", &serviceAccount.AccountArgs{
+			AccountId:   pulumi.String("my-service-account"),
+			DisplayName: pulumi.String("A service account that only Jane can use"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = serviceAccount.NewIAMBinding(ctx, "admin_account_iam", &serviceAccount.IAMBindingArgs{
+			Condition: &serviceAccount.IAMBindingConditionArgs{
+				Description: pulumi.String("Expiring at midnight of 2019-12-31"),
+				Expression:  pulumi.String("request.time < timestamp(\"2020-01-01T00:00:00Z\")"),
+				Title:       pulumi.String("expires_after_2019_12_31"),
+			},
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+			Role:             pulumi.String("roles/iam.serviceAccountUser"),
+			ServiceAccountId: sa.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_service\_account\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default = gcp.compute.getDefaultServiceAccount({});
+const sa = new gcp.serviceAccount.Account("sa", {
+    accountId: "my-service-account",
+    displayName: "A service account that Jane can use",
+});
+const admin_account_iam = new gcp.serviceAccount.IAMMember("admin-account-iam", {
+    serviceAccountId: sa.name,
+    role: "roles/iam.serviceAccountUser",
+    member: "user:jane@example.com",
+});
+// Allow SA service account use the default GCE account
+const gce_default_account_iam = new gcp.serviceAccount.IAMMember("gce-default-account-iam", {
+    serviceAccountId: _default.then(_default => _default.name),
+    role: "roles/iam.serviceAccountUser",
+    member: pulumi.interpolate`serviceAccount:${sa.email}`,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.get_default_service_account()
+sa = gcp.service_account.Account("sa",
+    account_id="my-service-account",
+    display_name="A service account that Jane can use")
+admin_account_iam = gcp.service_account.IAMMember("admin-account-iam",
+    service_account_id=sa.name,
+    role="roles/iam.serviceAccountUser",
+    member="user:jane@example.com")
+# Allow SA service account use the default GCE account
+gce_default_account_iam = gcp.service_account.IAMMember("gce-default-account-iam",
+    service_account_id=default.name,
+    role="roles/iam.serviceAccountUser",
+    member=sa.email.apply(lambda email: f"serviceAccount:{email}"))
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = Output.Create(Gcp.Compute.GetDefaultServiceAccount.InvokeAsync());
+        var sa = new Gcp.ServiceAccount.Account("sa", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "my-service-account",
+            DisplayName = "A service account that Jane can use",
+        });
+        var admin_account_iam = new Gcp.ServiceAccount.IAMMember("admin-account-iam", new Gcp.ServiceAccount.IAMMemberArgs
+        {
+            ServiceAccountId = sa.Name,
+            Role = "roles/iam.serviceAccountUser",
+            Member = "user:jane@example.com",
+        });
+        // Allow SA service account use the default GCE account
+        var gce_default_account_iam = new Gcp.ServiceAccount.IAMMember("gce-default-account-iam", new Gcp.ServiceAccount.IAMMemberArgs
+        {
+            ServiceAccountId = @default.Apply(@default => @default.Name),
+            Role = "roles/iam.serviceAccountUser",
+            Member = sa.Email.Apply(email => $"serviceAccount:{email}"),
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/serviceAccount"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_default, err := compute.GetDefaultServiceAccount(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		sa, err := serviceAccount.NewAccount(ctx, "sa", &serviceAccount.AccountArgs{
+			AccountId:   pulumi.String("my-service-account"),
+			DisplayName: pulumi.String("A service account that Jane can use"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = serviceAccount.NewIAMMember(ctx, "admin_account_iam", &serviceAccount.IAMMemberArgs{
+			ServiceAccountId: sa.Name,
+			Role:             pulumi.String("roles/iam.serviceAccountUser"),
+			Member:           pulumi.String("user:jane@example.com"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = serviceAccount.NewIAMMember(ctx, "gce_default_account_iam", &serviceAccount.IAMMemberArgs{
+			ServiceAccountId: pulumi.String(_default.Name),
+			Role:             pulumi.String("roles/iam.serviceAccountUser"),
+			Member: sa.Email.ApplyT(func(email string) (string, error) {
+				return fmt.Sprintf("%v%v", "serviceAccount:", email), nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const sa = new gcp.serviceAccount.Account("sa", {
+    accountId: "my-service-account",
+    displayName: "A service account that Jane can use",
+});
+const admin_account_iam = new gcp.serviceAccount.IAMMember("admin-account-iam", {
+    condition: {
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title: "expires_after_2019_12_31",
+    },
+    member: "user:jane@example.com",
+    role: "roles/iam.serviceAccountUser",
+    serviceAccountId: sa.name,
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+sa = gcp.service_account.Account("sa",
+    account_id="my-service-account",
+    display_name="A service account that Jane can use")
+admin_account_iam = gcp.service_account.IAMMember("admin-account-iam",
+    condition=gcp.service.account.IAMMemberConditionArgs(
+        description="Expiring at midnight of 2019-12-31",
+        expression="request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title="expires_after_2019_12_31",
+    ),
+    member="user:jane@example.com",
+    role="roles/iam.serviceAccountUser",
+    service_account_id=sa.name)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var sa = new Gcp.ServiceAccount.Account("sa", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "my-service-account",
+            DisplayName = "A service account that Jane can use",
+        });
+        var admin_account_iam = new Gcp.ServiceAccount.IAMMember("admin-account-iam", new Gcp.ServiceAccount.IAMMemberArgs
+        {
+            Condition = new Gcp.ServiceAccount.Inputs.IAMMemberConditionArgs
+            {
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+                Title = "expires_after_2019_12_31",
+            },
+            Member = "user:jane@example.com",
+            Role = "roles/iam.serviceAccountUser",
+            ServiceAccountId = sa.Name,
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/serviceAccount"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		sa, err := serviceAccount.NewAccount(ctx, "sa", &serviceAccount.AccountArgs{
+			AccountId:   pulumi.String("my-service-account"),
+			DisplayName: pulumi.String("A service account that Jane can use"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = serviceAccount.NewIAMMember(ctx, "admin_account_iam", &serviceAccount.IAMMemberArgs{
+			Condition: &serviceAccount.IAMMemberConditionArgs{
+				Description: pulumi.String("Expiring at midnight of 2019-12-31"),
+				Expression:  pulumi.String("request.time < timestamp(\"2020-01-01T00:00:00Z\")"),
+				Title:       pulumi.String("expires_after_2019_12_31"),
+			},
+			Member:           pulumi.String("user:jane@example.com"),
+			Role:             pulumi.String("roles/iam.serviceAccountUser"),
+			ServiceAccountId: sa.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 ## Create a IAMPolicy Resource {#create}
@@ -743,6 +1272,34 @@ a `gcp.organizations.getIAMPolicy` data source.
 
 
 
+
+
+## Import
+
+
+Service account IAM resources can be imported using the project, service account email, role, member identity, and condition (beta).
+
+```sh
+ $ pulumi import gcp:serviceAccount/iAMPolicy:IAMPolicy admin-account-iam projects/{your-project-id}/serviceAccounts/{your-service-account-email}
+```
+
+```sh
+ $ pulumi import gcp:serviceAccount/iAMPolicy:IAMPolicy admin-account-iam "projects/{your-project-id}/serviceAccounts/{your-service-account-email} iam.serviceAccountUser"
+```
+
+```sh
+ $ pulumi import gcp:serviceAccount/iAMPolicy:IAMPolicy admin-account-iam "projects/{your-project-id}/serviceAccounts/{your-service-account-email} roles/editor user:foo@example.com"
+```
+
+ -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`. With conditions
+
+```sh
+ $ pulumi import gcp:serviceAccount/iAMPolicy:IAMPolicy admin-account-iam "projects/{your-project-id}/serviceAccounts/{your-service-account-email} iam.serviceAccountUser expires_after_2019_12_31"
+```
+
+```sh
+ $ pulumi import gcp:serviceAccount/iAMPolicy:IAMPolicy admin-account-iam "projects/{your-project-id}/serviceAccounts/{your-service-account-email} iam.serviceAccountUser user:foo@example.com expires_after_2019_12_31"
+```
 
 
 

@@ -40,6 +40,341 @@ To get more information about Subnetwork, see:
     * [Private Google Access](https://cloud.google.com/vpc/docs/configure-private-google-access)
     * [Cloud Networking](https://cloud.google.com/vpc/docs/using-vpc)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Subnetwork Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var custom_test = new Gcp.Compute.Network("custom-test", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var network_with_private_secondary_ip_ranges = new Gcp.Compute.Subnetwork("network-with-private-secondary-ip-ranges", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.2.0.0/16",
+            Region = "us-central1",
+            Network = custom_test.Id,
+            SecondaryIpRanges = 
+            {
+                new Gcp.Compute.Inputs.SubnetworkSecondaryIpRangeArgs
+                {
+                    RangeName = "tf-test-secondary-range-update1",
+                    IpCidrRange = "192.168.10.0/24",
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewNetwork(ctx, "custom_test", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewSubnetwork(ctx, "network_with_private_secondary_ip_ranges", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("10.2.0.0/16"),
+			Region:      pulumi.String("us-central1"),
+			Network:     custom_test.ID(),
+			SecondaryIpRanges: compute.SubnetworkSecondaryIpRangeArray{
+				&compute.SubnetworkSecondaryIpRangeArgs{
+					RangeName:   pulumi.String("tf-test-secondary-range-update1"),
+					IpCidrRange: pulumi.String("192.168.10.0/24"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+custom_test = gcp.compute.Network("custom-test", auto_create_subnetworks=False)
+network_with_private_secondary_ip_ranges = gcp.compute.Subnetwork("network-with-private-secondary-ip-ranges",
+    ip_cidr_range="10.2.0.0/16",
+    region="us-central1",
+    network=custom_test.id,
+    secondary_ip_ranges=[gcp.compute.SubnetworkSecondaryIpRangeArgs(
+        range_name="tf-test-secondary-range-update1",
+        ip_cidr_range="192.168.10.0/24",
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const custom_test = new gcp.compute.Network("custom-test", {autoCreateSubnetworks: false});
+const network_with_private_secondary_ip_ranges = new gcp.compute.Subnetwork("network-with-private-secondary-ip-ranges", {
+    ipCidrRange: "10.2.0.0/16",
+    region: "us-central1",
+    network: custom_test.id,
+    secondaryIpRanges: [{
+        rangeName: "tf-test-secondary-range-update1",
+        ipCidrRange: "192.168.10.0/24",
+    }],
+});
+```
+
+{{% /example %}}
+
+### Subnetwork Logging Config
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var custom_test = new Gcp.Compute.Network("custom-test", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var subnet_with_logging = new Gcp.Compute.Subnetwork("subnet-with-logging", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.2.0.0/16",
+            Region = "us-central1",
+            Network = custom_test.Id,
+            LogConfig = new Gcp.Compute.Inputs.SubnetworkLogConfigArgs
+            {
+                AggregationInterval = "INTERVAL_10_MIN",
+                FlowSampling = 0.5,
+                Metadata = "INCLUDE_ALL_METADATA",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewNetwork(ctx, "custom_test", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewSubnetwork(ctx, "subnet_with_logging", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("10.2.0.0/16"),
+			Region:      pulumi.String("us-central1"),
+			Network:     custom_test.ID(),
+			LogConfig: &compute.SubnetworkLogConfigArgs{
+				AggregationInterval: pulumi.String("INTERVAL_10_MIN"),
+				FlowSampling:        pulumi.Float64(0.5),
+				Metadata:            pulumi.String("INCLUDE_ALL_METADATA"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+custom_test = gcp.compute.Network("custom-test", auto_create_subnetworks=False)
+subnet_with_logging = gcp.compute.Subnetwork("subnet-with-logging",
+    ip_cidr_range="10.2.0.0/16",
+    region="us-central1",
+    network=custom_test.id,
+    log_config=gcp.compute.SubnetworkLogConfigArgs(
+        aggregation_interval="INTERVAL_10_MIN",
+        flow_sampling=0.5,
+        metadata="INCLUDE_ALL_METADATA",
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const custom_test = new gcp.compute.Network("custom-test", {autoCreateSubnetworks: false});
+const subnet_with_logging = new gcp.compute.Subnetwork("subnet-with-logging", {
+    ipCidrRange: "10.2.0.0/16",
+    region: "us-central1",
+    network: custom_test.id,
+    logConfig: {
+        aggregationInterval: "INTERVAL_10_MIN",
+        flowSampling: 0.5,
+        metadata: "INCLUDE_ALL_METADATA",
+    },
+});
+```
+
+{{% /example %}}
+
+### Subnetwork Internal L7lb
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var custom_test = new Gcp.Compute.Network("custom-test", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var network_for_l7lb = new Gcp.Compute.Subnetwork("network-for-l7lb", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.0.0.0/22",
+            Region = "us-central1",
+            Purpose = "INTERNAL_HTTPS_LOAD_BALANCER",
+            Role = "ACTIVE",
+            Network = custom_test.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewNetwork(ctx, "custom_test", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewSubnetwork(ctx, "network_for_l7lb", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("10.0.0.0/22"),
+			Region:      pulumi.String("us-central1"),
+			Purpose:     pulumi.String("INTERNAL_HTTPS_LOAD_BALANCER"),
+			Role:        pulumi.String("ACTIVE"),
+			Network:     custom_test.ID(),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+custom_test = gcp.compute.Network("custom-test", auto_create_subnetworks=False,
+opts=ResourceOptions(provider=google_beta))
+network_for_l7lb = gcp.compute.Subnetwork("network-for-l7lb",
+    ip_cidr_range="10.0.0.0/22",
+    region="us-central1",
+    purpose="INTERNAL_HTTPS_LOAD_BALANCER",
+    role="ACTIVE",
+    network=custom_test.id,
+    opts=ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const custom_test = new gcp.compute.Network("custom-test", {autoCreateSubnetworks: false}, {
+    provider: google_beta,
+});
+const network_for_l7lb = new gcp.compute.Subnetwork("network-for-l7lb", {
+    ipCidrRange: "10.0.0.0/22",
+    region: "us-central1",
+    purpose: "INTERNAL_HTTPS_LOAD_BALANCER",
+    role: "ACTIVE",
+    network: custom_test.id,
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Subnetwork Resource {#create}
@@ -2639,6 +2974,28 @@ must be unique within the subnetwork.
 
 
 
+
+
+## Import
+
+
+Subnetwork can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/subnetwork:Subnetwork default projects/{{project}}/regions/{{region}}/subnetworks/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/subnetwork:Subnetwork default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/subnetwork:Subnetwork default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/subnetwork:Subnetwork default {{name}}
+```
 
 
 

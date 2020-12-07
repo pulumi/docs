@@ -19,6 +19,84 @@ For more information, see,
 [the Project API documentation](https://cloud.google.com/compute/docs/reference/latest/projects),
 where the Shared VPC feature is referred to by its former name "XPN".
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var service1 = new Gcp.Compute.SharedVPCServiceProject("service1", new Gcp.Compute.SharedVPCServiceProjectArgs
+        {
+            HostProject = "host-project-id",
+            ServiceProject = "service-project-id-1",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewSharedVPCServiceProject(ctx, "service1", &compute.SharedVPCServiceProjectArgs{
+			HostProject:    pulumi.String("host-project-id"),
+			ServiceProject: pulumi.String("service-project-id-1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+service1 = gcp.compute.SharedVPCServiceProject("service1",
+    host_project="host-project-id",
+    service_project="service-project-id-1")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const service1 = new gcp.compute.SharedVPCServiceProject("service1", {
+    hostProject: "host-project-id",
+    serviceProject: "service-project-id-1",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SharedVPCServiceProject Resource {#create}
@@ -644,6 +722,16 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+Google Compute Engine Shared VPC service project feature can be imported using the `host_project` and `service_project`, e.g.
+
+```sh
+ $ pulumi import gcp:compute/sharedVPCServiceProject:SharedVPCServiceProject service1 host-project-id/service-project-id-1
+```
 
 
 

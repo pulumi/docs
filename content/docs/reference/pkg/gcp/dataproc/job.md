@@ -15,6 +15,255 @@ Manages a job resource within a Dataproc cluster within GCE. For more informatio
 
 !> **Note:** This resource does not support 'update' and changing any attributes will cause the resource to be recreated.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mycluster = new Gcp.Dataproc.Cluster("mycluster", new Gcp.Dataproc.ClusterArgs
+        {
+            Region = "us-central1",
+        });
+        // Submit an example spark job to a dataproc cluster
+        var spark = new Gcp.Dataproc.Job("spark", new Gcp.Dataproc.JobArgs
+        {
+            Region = mycluster.Region,
+            ForceDelete = true,
+            Placement = new Gcp.Dataproc.Inputs.JobPlacementArgs
+            {
+                ClusterName = mycluster.Name,
+            },
+            SparkConfig = new Gcp.Dataproc.Inputs.JobSparkConfigArgs
+            {
+                MainClass = "org.apache.spark.examples.SparkPi",
+                JarFileUris = 
+                {
+                    "file:///usr/lib/spark/examples/jars/spark-examples.jar",
+                },
+                Args = 
+                {
+                    "1000",
+                },
+                Properties = 
+                {
+                    { "spark.logConf", "true" },
+                },
+                LoggingConfig = new Gcp.Dataproc.Inputs.JobSparkConfigLoggingConfigArgs
+                {
+                    DriverLogLevels = 
+                    {
+                        { "root", "INFO" },
+                    },
+                },
+            },
+        });
+        // Submit an example pyspark job to a dataproc cluster
+        var pyspark = new Gcp.Dataproc.Job("pyspark", new Gcp.Dataproc.JobArgs
+        {
+            Region = mycluster.Region,
+            ForceDelete = true,
+            Placement = new Gcp.Dataproc.Inputs.JobPlacementArgs
+            {
+                ClusterName = mycluster.Name,
+            },
+            PysparkConfig = new Gcp.Dataproc.Inputs.JobPysparkConfigArgs
+            {
+                MainPythonFileUri = "gs://dataproc-examples-2f10d78d114f6aaec76462e3c310f31f/src/pyspark/hello-world/hello-world.py",
+                Properties = 
+                {
+                    { "spark.logConf", "true" },
+                },
+            },
+        });
+        this.SparkStatus = spark.Statuses.Apply(statuses => statuses[0].State);
+        this.PysparkStatus = pyspark.Statuses.Apply(statuses => statuses[0].State);
+    }
+
+    [Output("sparkStatus")]
+    public Output<string> SparkStatus { get; set; }
+    [Output("pysparkStatus")]
+    public Output<string> PysparkStatus { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		mycluster, err := dataproc.NewCluster(ctx, "mycluster", &dataproc.ClusterArgs{
+			Region: pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		spark, err := dataproc.NewJob(ctx, "spark", &dataproc.JobArgs{
+			Region:      mycluster.Region,
+			ForceDelete: pulumi.Bool(true),
+			Placement: &dataproc.JobPlacementArgs{
+				ClusterName: mycluster.Name,
+			},
+			SparkConfig: &dataproc.JobSparkConfigArgs{
+				MainClass: pulumi.String("org.apache.spark.examples.SparkPi"),
+				JarFileUris: pulumi.StringArray{
+					pulumi.String("file:///usr/lib/spark/examples/jars/spark-examples.jar"),
+				},
+				Args: pulumi.StringArray{
+					pulumi.String("1000"),
+				},
+				Properties: pulumi.StringMap{
+					"spark.logConf": pulumi.String("true"),
+				},
+				LoggingConfig: &dataproc.JobSparkConfigLoggingConfigArgs{
+					DriverLogLevels: pulumi.StringMap{
+						"root": pulumi.String("INFO"),
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		pyspark, err := dataproc.NewJob(ctx, "pyspark", &dataproc.JobArgs{
+			Region:      mycluster.Region,
+			ForceDelete: pulumi.Bool(true),
+			Placement: &dataproc.JobPlacementArgs{
+				ClusterName: mycluster.Name,
+			},
+			PysparkConfig: &dataproc.JobPysparkConfigArgs{
+				MainPythonFileUri: pulumi.String("gs://dataproc-examples-2f10d78d114f6aaec76462e3c310f31f/src/pyspark/hello-world/hello-world.py"),
+				Properties: pulumi.StringMap{
+					"spark.logConf": pulumi.String("true"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		ctx.Export("sparkStatus", spark.Statuses.ApplyT(func(statuses []dataproc.JobStatus) (string, error) {
+			return statuses[0].State, nil
+		}).(pulumi.StringOutput))
+		ctx.Export("pysparkStatus", pyspark.Statuses.ApplyT(func(statuses []dataproc.JobStatus) (string, error) {
+			return statuses[0].State, nil
+		}).(pulumi.StringOutput))
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+mycluster = gcp.dataproc.Cluster("mycluster", region="us-central1")
+# Submit an example spark job to a dataproc cluster
+spark = gcp.dataproc.Job("spark",
+    region=mycluster.region,
+    force_delete=True,
+    placement=gcp.dataproc.JobPlacementArgs(
+        cluster_name=mycluster.name,
+    ),
+    spark_config=gcp.dataproc.JobSparkConfigArgs(
+        main_class="org.apache.spark.examples.SparkPi",
+        jar_file_uris=["file:///usr/lib/spark/examples/jars/spark-examples.jar"],
+        args=["1000"],
+        properties={
+            "spark.logConf": "true",
+        },
+        logging_config=gcp.dataproc.JobSparkConfigLoggingConfigArgs(
+            driver_log_levels={
+                "root": "INFO",
+            },
+        ),
+    ))
+# Submit an example pyspark job to a dataproc cluster
+pyspark = gcp.dataproc.Job("pyspark",
+    region=mycluster.region,
+    force_delete=True,
+    placement=gcp.dataproc.JobPlacementArgs(
+        cluster_name=mycluster.name,
+    ),
+    pyspark_config=gcp.dataproc.JobPysparkConfigArgs(
+        main_python_file_uri="gs://dataproc-examples-2f10d78d114f6aaec76462e3c310f31f/src/pyspark/hello-world/hello-world.py",
+        properties={
+            "spark.logConf": "true",
+        },
+    ))
+pulumi.export("sparkStatus", spark.statuses[0].state)
+pulumi.export("pysparkStatus", pyspark.statuses[0].state)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const mycluster = new gcp.dataproc.Cluster("mycluster", {region: "us-central1"});
+// Submit an example spark job to a dataproc cluster
+const spark = new gcp.dataproc.Job("spark", {
+    region: mycluster.region,
+    forceDelete: true,
+    placement: {
+        clusterName: mycluster.name,
+    },
+    sparkConfig: {
+        mainClass: "org.apache.spark.examples.SparkPi",
+        jarFileUris: ["file:///usr/lib/spark/examples/jars/spark-examples.jar"],
+        args: ["1000"],
+        properties: {
+            "spark.logConf": "true",
+        },
+        loggingConfig: {
+            driverLogLevels: {
+                root: "INFO",
+            },
+        },
+    },
+});
+// Submit an example pyspark job to a dataproc cluster
+const pyspark = new gcp.dataproc.Job("pyspark", {
+    region: mycluster.region,
+    forceDelete: true,
+    placement: {
+        clusterName: mycluster.name,
+    },
+    pysparkConfig: {
+        mainPythonFileUri: "gs://dataproc-examples-2f10d78d114f6aaec76462e3c310f31f/src/pyspark/hello-world/hello-world.py",
+        properties: {
+            "spark.logConf": "true",
+        },
+    },
+});
+export const sparkStatus = spark.statuses.apply(statuses => statuses[0].state);
+export const pysparkStatus = pyspark.statuses.apply(statuses => statuses[0].state);
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Job Resource {#create}
@@ -5016,6 +5265,12 @@ Conflicts with `query_file_uri`
 
 
 
+
+
+## Import
+
+
+This resource does not support import.
 
 
 

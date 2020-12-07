@@ -16,6 +16,96 @@ You must enable the
 [Google Identity Platform](https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity) in
 the marketplace prior to using this resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Identity Platform Oauth Idp Config Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var oauthIdpConfig = new Gcp.IdentityPlatform.OauthIdpConfig("oauthIdpConfig", new Gcp.IdentityPlatform.OauthIdpConfigArgs
+        {
+            ClientId = "client-id",
+            ClientSecret = "secret",
+            DisplayName = "Display Name",
+            Enabled = true,
+            Issuer = "issuer",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/identityplatform"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := identityplatform.NewOauthIdpConfig(ctx, "oauthIdpConfig", &identityplatform.OauthIdpConfigArgs{
+			ClientId:     pulumi.String("client-id"),
+			ClientSecret: pulumi.String("secret"),
+			DisplayName:  pulumi.String("Display Name"),
+			Enabled:      pulumi.Bool(true),
+			Issuer:       pulumi.String("issuer"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+oauth_idp_config = gcp.identityplatform.OauthIdpConfig("oauthIdpConfig",
+    client_id="client-id",
+    client_secret="secret",
+    display_name="Display Name",
+    enabled=True,
+    issuer="issuer")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const oauthIdpConfig = new gcp.identityplatform.OauthIdpConfig("oauth_idp_config", {
+    clientId: "client-id",
+    clientSecret: "secret",
+    displayName: "Display Name",
+    enabled: true,
+    issuer: "issuer",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a OauthIdpConfig Resource {#create}
@@ -1089,6 +1179,24 @@ If it is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+OauthIdpConfig can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:identityplatform/oauthIdpConfig:OauthIdpConfig default projects/{{project}}/oauthIdpConfigs/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/oauthIdpConfig:OauthIdpConfig default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/oauthIdpConfig:OauthIdpConfig default {{name}}
+```
 
 
 

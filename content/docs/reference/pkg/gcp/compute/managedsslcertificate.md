@@ -36,6 +36,377 @@ certificates may entail some downtime while the certificate provisions.
 
 In conclusion: Be extremely cautious.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Managed Ssl Certificate Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultManagedSslCertificate = new Gcp.Compute.ManagedSslCertificate("defaultManagedSslCertificate", new Gcp.Compute.ManagedSslCertificateArgs
+        {
+            Managed = new Gcp.Compute.Inputs.ManagedSslCertificateManagedArgs
+            {
+                Domains = 
+                {
+                    "sslcert.tf-test.club.",
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var defaultHttpHealthCheck = new Gcp.Compute.HttpHealthCheck("defaultHttpHealthCheck", new Gcp.Compute.HttpHealthCheckArgs
+        {
+            RequestPath = "/",
+            CheckIntervalSec = 1,
+            TimeoutSec = 1,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var defaultBackendService = new Gcp.Compute.BackendService("defaultBackendService", new Gcp.Compute.BackendServiceArgs
+        {
+            PortName = "http",
+            Protocol = "HTTP",
+            TimeoutSec = 10,
+            HealthChecks = 
+            {
+                defaultHttpHealthCheck.Id,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var defaultURLMap = new Gcp.Compute.URLMap("defaultURLMap", new Gcp.Compute.URLMapArgs
+        {
+            Description = "a description",
+            DefaultService = defaultBackendService.Id,
+            HostRules = 
+            {
+                new Gcp.Compute.Inputs.URLMapHostRuleArgs
+                {
+                    Hosts = 
+                    {
+                        "sslcert.tf-test.club",
+                    },
+                    PathMatcher = "allpaths",
+                },
+            },
+            PathMatchers = 
+            {
+                new Gcp.Compute.Inputs.URLMapPathMatcherArgs
+                {
+                    Name = "allpaths",
+                    DefaultService = defaultBackendService.Id,
+                    PathRules = 
+                    {
+                        new Gcp.Compute.Inputs.URLMapPathMatcherPathRuleArgs
+                        {
+                            Paths = 
+                            {
+                                "/*",
+                            },
+                            Service = defaultBackendService.Id,
+                        },
+                    },
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var defaultTargetHttpsProxy = new Gcp.Compute.TargetHttpsProxy("defaultTargetHttpsProxy", new Gcp.Compute.TargetHttpsProxyArgs
+        {
+            UrlMap = defaultURLMap.Id,
+            SslCertificates = 
+            {
+                defaultManagedSslCertificate.Id,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var zone = new Gcp.Dns.ManagedZone("zone", new Gcp.Dns.ManagedZoneArgs
+        {
+            DnsName = "sslcert.tf-test.club.",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var defaultGlobalForwardingRule = new Gcp.Compute.GlobalForwardingRule("defaultGlobalForwardingRule", new Gcp.Compute.GlobalForwardingRuleArgs
+        {
+            Target = defaultTargetHttpsProxy.Id,
+            PortRange = "443",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var @set = new Gcp.Dns.RecordSet("set", new Gcp.Dns.RecordSetArgs
+        {
+            Type = "A",
+            Ttl = 3600,
+            ManagedZone = zone.Name,
+            Rrdatas = 
+            {
+                defaultGlobalForwardingRule.IpAddress,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dns"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultManagedSslCertificate, err := compute.NewManagedSslCertificate(ctx, "defaultManagedSslCertificate", &compute.ManagedSslCertificateArgs{
+			Managed: &compute.ManagedSslCertificateManagedArgs{
+				Domains: pulumi.StringArray{
+					pulumi.String("sslcert.tf-test.club."),
+				},
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		defaultHttpHealthCheck, err := compute.NewHttpHealthCheck(ctx, "defaultHttpHealthCheck", &compute.HttpHealthCheckArgs{
+			RequestPath:      pulumi.String("/"),
+			CheckIntervalSec: pulumi.Int(1),
+			TimeoutSec:       pulumi.Int(1),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		defaultBackendService, err := compute.NewBackendService(ctx, "defaultBackendService", &compute.BackendServiceArgs{
+			PortName:   pulumi.String("http"),
+			Protocol:   pulumi.String("HTTP"),
+			TimeoutSec: pulumi.Int(10),
+			HealthChecks: pulumi.String(pulumi.String{
+				defaultHttpHealthCheck.ID(),
+			}),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		defaultURLMap, err := compute.NewURLMap(ctx, "defaultURLMap", &compute.URLMapArgs{
+			Description:    pulumi.String("a description"),
+			DefaultService: defaultBackendService.ID(),
+			HostRules: compute.URLMapHostRuleArray{
+				&compute.URLMapHostRuleArgs{
+					Hosts: pulumi.StringArray{
+						pulumi.String("sslcert.tf-test.club"),
+					},
+					PathMatcher: pulumi.String("allpaths"),
+				},
+			},
+			PathMatchers: compute.URLMapPathMatcherArray{
+				&compute.URLMapPathMatcherArgs{
+					Name:           pulumi.String("allpaths"),
+					DefaultService: defaultBackendService.ID(),
+					PathRules: compute.URLMapPathMatcherPathRuleArray{
+						&compute.URLMapPathMatcherPathRuleArgs{
+							Paths: pulumi.StringArray{
+								pulumi.String("/*"),
+							},
+							Service: defaultBackendService.ID(),
+						},
+					},
+				},
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		defaultTargetHttpsProxy, err := compute.NewTargetHttpsProxy(ctx, "defaultTargetHttpsProxy", &compute.TargetHttpsProxyArgs{
+			UrlMap: defaultURLMap.ID(),
+			SslCertificates: pulumi.StringArray{
+				defaultManagedSslCertificate.ID(),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		zone, err := dns.NewManagedZone(ctx, "zone", &dns.ManagedZoneArgs{
+			DnsName: pulumi.String("sslcert.tf-test.club."),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		defaultGlobalForwardingRule, err := compute.NewGlobalForwardingRule(ctx, "defaultGlobalForwardingRule", &compute.GlobalForwardingRuleArgs{
+			Target:    defaultTargetHttpsProxy.ID(),
+			PortRange: pulumi.String("443"),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = dns.NewRecordSet(ctx, "set", &dns.RecordSetArgs{
+			Type:        pulumi.String("A"),
+			Ttl:         pulumi.Int(3600),
+			ManagedZone: zone.Name,
+			Rrdatas: pulumi.StringArray{
+				defaultGlobalForwardingRule.IpAddress,
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_managed_ssl_certificate = gcp.compute.ManagedSslCertificate("defaultManagedSslCertificate", managed=gcp.compute.ManagedSslCertificateManagedArgs(
+    domains=["sslcert.tf-test.club."],
+),
+opts=ResourceOptions(provider=google_beta))
+default_http_health_check = gcp.compute.HttpHealthCheck("defaultHttpHealthCheck",
+    request_path="/",
+    check_interval_sec=1,
+    timeout_sec=1,
+    opts=ResourceOptions(provider=google_beta))
+default_backend_service = gcp.compute.BackendService("defaultBackendService",
+    port_name="http",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default_http_health_check.id],
+    opts=ResourceOptions(provider=google_beta))
+default_url_map = gcp.compute.URLMap("defaultURLMap",
+    description="a description",
+    default_service=default_backend_service.id,
+    host_rules=[gcp.compute.URLMapHostRuleArgs(
+        hosts=["sslcert.tf-test.club"],
+        path_matcher="allpaths",
+    )],
+    path_matchers=[gcp.compute.URLMapPathMatcherArgs(
+        name="allpaths",
+        default_service=default_backend_service.id,
+        path_rules=[gcp.compute.URLMapPathMatcherPathRuleArgs(
+            paths=["/*"],
+            service=default_backend_service.id,
+        )],
+    )],
+    opts=ResourceOptions(provider=google_beta))
+default_target_https_proxy = gcp.compute.TargetHttpsProxy("defaultTargetHttpsProxy",
+    url_map=default_url_map.id,
+    ssl_certificates=[default_managed_ssl_certificate.id],
+    opts=ResourceOptions(provider=google_beta))
+zone = gcp.dns.ManagedZone("zone", dns_name="sslcert.tf-test.club.",
+opts=ResourceOptions(provider=google_beta))
+default_global_forwarding_rule = gcp.compute.GlobalForwardingRule("defaultGlobalForwardingRule",
+    target=default_target_https_proxy.id,
+    port_range="443",
+    opts=ResourceOptions(provider=google_beta))
+set = gcp.dns.RecordSet("set",
+    type="A",
+    ttl=3600,
+    managed_zone=zone.name,
+    rrdatas=[default_global_forwarding_rule.ip_address],
+    opts=ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultManagedSslCertificate = new gcp.compute.ManagedSslCertificate("defaultManagedSslCertificate", {managed: {
+    domains: ["sslcert.tf-test.club."],
+}}, {
+    provider: google_beta,
+});
+const defaultHttpHealthCheck = new gcp.compute.HttpHealthCheck("defaultHttpHealthCheck", {
+    requestPath: "/",
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+}, {
+    provider: google_beta,
+});
+const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {
+    portName: "http",
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [defaultHttpHealthCheck.id],
+}, {
+    provider: google_beta,
+});
+const defaultURLMap = new gcp.compute.URLMap("defaultURLMap", {
+    description: "a description",
+    defaultService: defaultBackendService.id,
+    hostRules: [{
+        hosts: ["sslcert.tf-test.club"],
+        pathMatcher: "allpaths",
+    }],
+    pathMatchers: [{
+        name: "allpaths",
+        defaultService: defaultBackendService.id,
+        pathRules: [{
+            paths: ["/*"],
+            service: defaultBackendService.id,
+        }],
+    }],
+}, {
+    provider: google_beta,
+});
+const defaultTargetHttpsProxy = new gcp.compute.TargetHttpsProxy("defaultTargetHttpsProxy", {
+    urlMap: defaultURLMap.id,
+    sslCertificates: [defaultManagedSslCertificate.id],
+}, {
+    provider: google_beta,
+});
+const zone = new gcp.dns.ManagedZone("zone", {dnsName: "sslcert.tf-test.club."}, {
+    provider: google_beta,
+});
+const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaultGlobalForwardingRule", {
+    target: defaultTargetHttpsProxy.id,
+    portRange: 443,
+}, {
+    provider: google_beta,
+});
+const set = new gcp.dns.RecordSet("set", {
+    type: "A",
+    ttl: 3600,
+    managedZone: zone.name,
+    rrdatas: [defaultGlobalForwardingRule.ipAddress],
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ManagedSslCertificate Resource {#create}
@@ -1561,6 +1932,24 @@ there can be up to 100 domains in this list.
 
 
 
+
+
+## Import
+
+
+ManagedSslCertificate can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/managedSslCertificate:ManagedSslCertificate default projects/{{project}}/global/sslCertificates/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/managedSslCertificate:ManagedSslCertificate default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/managedSslCertificate:ManagedSslCertificate default {{name}}
+```
 
 
 

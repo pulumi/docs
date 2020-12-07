@@ -20,6 +20,1510 @@ To get more information about ForwardingRule, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/network/forwarding-rules)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Forwarding Rule Externallb
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var hc = new Gcp.Compute.RegionHealthCheck("hc", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            TimeoutSec = 1,
+            Region = "us-central1",
+            TcpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckTcpHealthCheckArgs
+            {
+                Port = 80,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var backend = new Gcp.Compute.RegionBackendService("backend", new Gcp.Compute.RegionBackendServiceArgs
+        {
+            Region = "us-central1",
+            LoadBalancingScheme = "EXTERNAL",
+            HealthChecks = 
+            {
+                hc.Id,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        // Forwarding rule for External Network Load Balancing using Backend Services
+        var @default = new Gcp.Compute.ForwardingRule("default", new Gcp.Compute.ForwardingRuleArgs
+        {
+            Region = "us-central1",
+            PortRange = "80",
+            BackendService = backend.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		hc, err := compute.NewRegionHealthCheck(ctx, "hc", &compute.RegionHealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			TimeoutSec:       pulumi.Int(1),
+			Region:           pulumi.String("us-central1"),
+			TcpHealthCheck: &compute.RegionHealthCheckTcpHealthCheckArgs{
+				Port: pulumi.Int(80),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		backend, err := compute.NewRegionBackendService(ctx, "backend", &compute.RegionBackendServiceArgs{
+			Region:              pulumi.String("us-central1"),
+			LoadBalancingScheme: pulumi.String("EXTERNAL"),
+			HealthChecks: pulumi.String(pulumi.String{
+				hc.ID(),
+			}),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewForwardingRule(ctx, "_default", &compute.ForwardingRuleArgs{
+			Region:         pulumi.String("us-central1"),
+			PortRange:      pulumi.String("80"),
+			BackendService: backend.ID(),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+hc = gcp.compute.RegionHealthCheck("hc",
+    check_interval_sec=1,
+    timeout_sec=1,
+    region="us-central1",
+    tcp_health_check=gcp.compute.RegionHealthCheckTcpHealthCheckArgs(
+        port=80,
+    ),
+    opts=ResourceOptions(provider=google_beta))
+backend = gcp.compute.RegionBackendService("backend",
+    region="us-central1",
+    load_balancing_scheme="EXTERNAL",
+    health_checks=[hc.id],
+    opts=ResourceOptions(provider=google_beta))
+# Forwarding rule for External Network Load Balancing using Backend Services
+default = gcp.compute.ForwardingRule("default",
+    region="us-central1",
+    port_range="80",
+    backend_service=backend.id,
+    opts=ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const hc = new gcp.compute.RegionHealthCheck("hc", {
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+    region: "us-central1",
+    tcpHealthCheck: {
+        port: "80",
+    },
+}, {
+    provider: google_beta,
+});
+const backend = new gcp.compute.RegionBackendService("backend", {
+    region: "us-central1",
+    loadBalancingScheme: "EXTERNAL",
+    healthChecks: [hc.id],
+}, {
+    provider: google_beta,
+});
+// Forwarding rule for External Network Load Balancing using Backend Services
+const _default = new gcp.compute.ForwardingRule("default", {
+    region: "us-central1",
+    portRange: 80,
+    backendService: backend.id,
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+### Forwarding Rule Global Internallb
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var hc = new Gcp.Compute.HealthCheck("hc", new Gcp.Compute.HealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            TimeoutSec = 1,
+            TcpHealthCheck = new Gcp.Compute.Inputs.HealthCheckTcpHealthCheckArgs
+            {
+                Port = 80,
+            },
+        });
+        var backend = new Gcp.Compute.RegionBackendService("backend", new Gcp.Compute.RegionBackendServiceArgs
+        {
+            Region = "us-central1",
+            HealthChecks = 
+            {
+                hc.Id,
+            },
+        });
+        var defaultNetwork = new Gcp.Compute.Network("defaultNetwork", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var defaultSubnetwork = new Gcp.Compute.Subnetwork("defaultSubnetwork", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.0.0.0/16",
+            Region = "us-central1",
+            Network = defaultNetwork.Id,
+        });
+        // Forwarding rule for Internal Load Balancing
+        var defaultForwardingRule = new Gcp.Compute.ForwardingRule("defaultForwardingRule", new Gcp.Compute.ForwardingRuleArgs
+        {
+            Region = "us-central1",
+            LoadBalancingScheme = "INTERNAL",
+            BackendService = backend.Id,
+            AllPorts = true,
+            AllowGlobalAccess = true,
+            Network = defaultNetwork.Name,
+            Subnetwork = defaultSubnetwork.Name,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		hc, err := compute.NewHealthCheck(ctx, "hc", &compute.HealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			TimeoutSec:       pulumi.Int(1),
+			TcpHealthCheck: &compute.HealthCheckTcpHealthCheckArgs{
+				Port: pulumi.Int(80),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		backend, err := compute.NewRegionBackendService(ctx, "backend", &compute.RegionBackendServiceArgs{
+			Region: pulumi.String("us-central1"),
+			HealthChecks: pulumi.String(pulumi.String{
+				hc.ID(),
+			}),
+		})
+		if err != nil {
+			return err
+		}
+		defaultNetwork, err := compute.NewNetwork(ctx, "defaultNetwork", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		defaultSubnetwork, err := compute.NewSubnetwork(ctx, "defaultSubnetwork", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("10.0.0.0/16"),
+			Region:      pulumi.String("us-central1"),
+			Network:     defaultNetwork.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewForwardingRule(ctx, "defaultForwardingRule", &compute.ForwardingRuleArgs{
+			Region:              pulumi.String("us-central1"),
+			LoadBalancingScheme: pulumi.String("INTERNAL"),
+			BackendService:      backend.ID(),
+			AllPorts:            pulumi.Bool(true),
+			AllowGlobalAccess:   pulumi.Bool(true),
+			Network:             defaultNetwork.Name,
+			Subnetwork:          defaultSubnetwork.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+hc = gcp.compute.HealthCheck("hc",
+    check_interval_sec=1,
+    timeout_sec=1,
+    tcp_health_check=gcp.compute.HealthCheckTcpHealthCheckArgs(
+        port=80,
+    ))
+backend = gcp.compute.RegionBackendService("backend",
+    region="us-central1",
+    health_checks=[hc.id])
+default_network = gcp.compute.Network("defaultNetwork", auto_create_subnetworks=False)
+default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
+    ip_cidr_range="10.0.0.0/16",
+    region="us-central1",
+    network=default_network.id)
+# Forwarding rule for Internal Load Balancing
+default_forwarding_rule = gcp.compute.ForwardingRule("defaultForwardingRule",
+    region="us-central1",
+    load_balancing_scheme="INTERNAL",
+    backend_service=backend.id,
+    all_ports=True,
+    allow_global_access=True,
+    network=default_network.name,
+    subnetwork=default_subnetwork.name)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const hc = new gcp.compute.HealthCheck("hc", {
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+    tcpHealthCheck: {
+        port: "80",
+    },
+});
+const backend = new gcp.compute.RegionBackendService("backend", {
+    region: "us-central1",
+    healthChecks: [hc.id],
+});
+const defaultNetwork = new gcp.compute.Network("defaultNetwork", {autoCreateSubnetworks: false});
+const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
+    ipCidrRange: "10.0.0.0/16",
+    region: "us-central1",
+    network: defaultNetwork.id,
+});
+// Forwarding rule for Internal Load Balancing
+const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingRule", {
+    region: "us-central1",
+    loadBalancingScheme: "INTERNAL",
+    backendService: backend.id,
+    allPorts: true,
+    allowGlobalAccess: true,
+    network: defaultNetwork.name,
+    subnetwork: defaultSubnetwork.name,
+});
+```
+
+{{% /example %}}
+
+### Forwarding Rule Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultTargetPool = new Gcp.Compute.TargetPool("defaultTargetPool", new Gcp.Compute.TargetPoolArgs
+        {
+        });
+        var defaultForwardingRule = new Gcp.Compute.ForwardingRule("defaultForwardingRule", new Gcp.Compute.ForwardingRuleArgs
+        {
+            Target = defaultTargetPool.Id,
+            PortRange = "80",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultTargetPool, err := compute.NewTargetPool(ctx, "defaultTargetPool", nil)
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewForwardingRule(ctx, "defaultForwardingRule", &compute.ForwardingRuleArgs{
+			Target:    defaultTargetPool.ID(),
+			PortRange: pulumi.String("80"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_target_pool = gcp.compute.TargetPool("defaultTargetPool")
+default_forwarding_rule = gcp.compute.ForwardingRule("defaultForwardingRule",
+    target=default_target_pool.id,
+    port_range="80")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {});
+const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingRule", {
+    target: defaultTargetPool.id,
+    portRange: "80",
+});
+```
+
+{{% /example %}}
+
+### Forwarding Rule Internallb
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var hc = new Gcp.Compute.HealthCheck("hc", new Gcp.Compute.HealthCheckArgs
+        {
+            CheckIntervalSec = 1,
+            TimeoutSec = 1,
+            TcpHealthCheck = new Gcp.Compute.Inputs.HealthCheckTcpHealthCheckArgs
+            {
+                Port = 80,
+            },
+        });
+        var backend = new Gcp.Compute.RegionBackendService("backend", new Gcp.Compute.RegionBackendServiceArgs
+        {
+            Region = "us-central1",
+            HealthChecks = 
+            {
+                hc.Id,
+            },
+        });
+        var defaultNetwork = new Gcp.Compute.Network("defaultNetwork", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var defaultSubnetwork = new Gcp.Compute.Subnetwork("defaultSubnetwork", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.0.0.0/16",
+            Region = "us-central1",
+            Network = defaultNetwork.Id,
+        });
+        // Forwarding rule for Internal Load Balancing
+        var defaultForwardingRule = new Gcp.Compute.ForwardingRule("defaultForwardingRule", new Gcp.Compute.ForwardingRuleArgs
+        {
+            Region = "us-central1",
+            LoadBalancingScheme = "INTERNAL",
+            BackendService = backend.Id,
+            AllPorts = true,
+            Network = defaultNetwork.Name,
+            Subnetwork = defaultSubnetwork.Name,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		hc, err := compute.NewHealthCheck(ctx, "hc", &compute.HealthCheckArgs{
+			CheckIntervalSec: pulumi.Int(1),
+			TimeoutSec:       pulumi.Int(1),
+			TcpHealthCheck: &compute.HealthCheckTcpHealthCheckArgs{
+				Port: pulumi.Int(80),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		backend, err := compute.NewRegionBackendService(ctx, "backend", &compute.RegionBackendServiceArgs{
+			Region: pulumi.String("us-central1"),
+			HealthChecks: pulumi.String(pulumi.String{
+				hc.ID(),
+			}),
+		})
+		if err != nil {
+			return err
+		}
+		defaultNetwork, err := compute.NewNetwork(ctx, "defaultNetwork", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		defaultSubnetwork, err := compute.NewSubnetwork(ctx, "defaultSubnetwork", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("10.0.0.0/16"),
+			Region:      pulumi.String("us-central1"),
+			Network:     defaultNetwork.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewForwardingRule(ctx, "defaultForwardingRule", &compute.ForwardingRuleArgs{
+			Region:              pulumi.String("us-central1"),
+			LoadBalancingScheme: pulumi.String("INTERNAL"),
+			BackendService:      backend.ID(),
+			AllPorts:            pulumi.Bool(true),
+			Network:             defaultNetwork.Name,
+			Subnetwork:          defaultSubnetwork.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+hc = gcp.compute.HealthCheck("hc",
+    check_interval_sec=1,
+    timeout_sec=1,
+    tcp_health_check=gcp.compute.HealthCheckTcpHealthCheckArgs(
+        port=80,
+    ))
+backend = gcp.compute.RegionBackendService("backend",
+    region="us-central1",
+    health_checks=[hc.id])
+default_network = gcp.compute.Network("defaultNetwork", auto_create_subnetworks=False)
+default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
+    ip_cidr_range="10.0.0.0/16",
+    region="us-central1",
+    network=default_network.id)
+# Forwarding rule for Internal Load Balancing
+default_forwarding_rule = gcp.compute.ForwardingRule("defaultForwardingRule",
+    region="us-central1",
+    load_balancing_scheme="INTERNAL",
+    backend_service=backend.id,
+    all_ports=True,
+    network=default_network.name,
+    subnetwork=default_subnetwork.name)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const hc = new gcp.compute.HealthCheck("hc", {
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+    tcpHealthCheck: {
+        port: "80",
+    },
+});
+const backend = new gcp.compute.RegionBackendService("backend", {
+    region: "us-central1",
+    healthChecks: [hc.id],
+});
+const defaultNetwork = new gcp.compute.Network("defaultNetwork", {autoCreateSubnetworks: false});
+const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
+    ipCidrRange: "10.0.0.0/16",
+    region: "us-central1",
+    network: defaultNetwork.id,
+});
+// Forwarding rule for Internal Load Balancing
+const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingRule", {
+    region: "us-central1",
+    loadBalancingScheme: "INTERNAL",
+    backendService: backend.id,
+    allPorts: true,
+    network: defaultNetwork.name,
+    subnetwork: defaultSubnetwork.name,
+});
+```
+
+{{% /example %}}
+
+### Forwarding Rule Http Lb
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var debianImage = Output.Create(Gcp.Compute.GetImage.InvokeAsync(new Gcp.Compute.GetImageArgs
+        {
+            Family = "debian-9",
+            Project = "debian-cloud",
+        }));
+        var defaultNetwork = new Gcp.Compute.Network("defaultNetwork", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+            RoutingMode = "REGIONAL",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var defaultSubnetwork = new Gcp.Compute.Subnetwork("defaultSubnetwork", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.1.2.0/24",
+            Region = "us-central1",
+            Network = defaultNetwork.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var instanceTemplate = new Gcp.Compute.InstanceTemplate("instanceTemplate", new Gcp.Compute.InstanceTemplateArgs
+        {
+            MachineType = "e2-medium",
+            NetworkInterfaces = 
+            {
+                new Gcp.Compute.Inputs.InstanceTemplateNetworkInterfaceArgs
+                {
+                    Network = defaultNetwork.Id,
+                    Subnetwork = defaultSubnetwork.Id,
+                },
+            },
+            Disks = 
+            {
+                new Gcp.Compute.Inputs.InstanceTemplateDiskArgs
+                {
+                    SourceImage = debianImage.Apply(debianImage => debianImage.SelfLink),
+                    AutoDelete = true,
+                    Boot = true,
+                },
+            },
+            Tags = 
+            {
+                "allow-ssh",
+                "load-balanced-backend",
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var rigm = new Gcp.Compute.RegionInstanceGroupManager("rigm", new Gcp.Compute.RegionInstanceGroupManagerArgs
+        {
+            Region = "us-central1",
+            Versions = 
+            {
+                new Gcp.Compute.Inputs.RegionInstanceGroupManagerVersionArgs
+                {
+                    InstanceTemplate = instanceTemplate.Id,
+                    Name = "primary",
+                },
+            },
+            BaseInstanceName = "internal-glb",
+            TargetSize = 1,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var fw1 = new Gcp.Compute.Firewall("fw1", new Gcp.Compute.FirewallArgs
+        {
+            Network = defaultNetwork.Id,
+            SourceRanges = 
+            {
+                "10.1.2.0/24",
+            },
+            Allows = 
+            {
+                new Gcp.Compute.Inputs.FirewallAllowArgs
+                {
+                    Protocol = "tcp",
+                },
+                new Gcp.Compute.Inputs.FirewallAllowArgs
+                {
+                    Protocol = "udp",
+                },
+                new Gcp.Compute.Inputs.FirewallAllowArgs
+                {
+                    Protocol = "icmp",
+                },
+            },
+            Direction = "INGRESS",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var fw2 = new Gcp.Compute.Firewall("fw2", new Gcp.Compute.FirewallArgs
+        {
+            Network = defaultNetwork.Id,
+            SourceRanges = 
+            {
+                "0.0.0.0/0",
+            },
+            Allows = 
+            {
+                new Gcp.Compute.Inputs.FirewallAllowArgs
+                {
+                    Protocol = "tcp",
+                    Ports = 
+                    {
+                        "22",
+                    },
+                },
+            },
+            TargetTags = 
+            {
+                "allow-ssh",
+            },
+            Direction = "INGRESS",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+            DependsOn = 
+            {
+                fw1,
+            },
+        });
+        var fw3 = new Gcp.Compute.Firewall("fw3", new Gcp.Compute.FirewallArgs
+        {
+            Network = defaultNetwork.Id,
+            SourceRanges = 
+            {
+                "130.211.0.0/22",
+                "35.191.0.0/16",
+            },
+            Allows = 
+            {
+                new Gcp.Compute.Inputs.FirewallAllowArgs
+                {
+                    Protocol = "tcp",
+                },
+            },
+            TargetTags = 
+            {
+                "load-balanced-backend",
+            },
+            Direction = "INGRESS",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+            DependsOn = 
+            {
+                fw2,
+            },
+        });
+        var fw4 = new Gcp.Compute.Firewall("fw4", new Gcp.Compute.FirewallArgs
+        {
+            Network = defaultNetwork.Id,
+            SourceRanges = 
+            {
+                "10.129.0.0/26",
+            },
+            TargetTags = 
+            {
+                "load-balanced-backend",
+            },
+            Allows = 
+            {
+                new Gcp.Compute.Inputs.FirewallAllowArgs
+                {
+                    Protocol = "tcp",
+                    Ports = 
+                    {
+                        "80",
+                    },
+                },
+                new Gcp.Compute.Inputs.FirewallAllowArgs
+                {
+                    Protocol = "tcp",
+                    Ports = 
+                    {
+                        "443",
+                    },
+                },
+                new Gcp.Compute.Inputs.FirewallAllowArgs
+                {
+                    Protocol = "tcp",
+                    Ports = 
+                    {
+                        "8000",
+                    },
+                },
+            },
+            Direction = "INGRESS",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+            DependsOn = 
+            {
+                fw3,
+            },
+        });
+        var defaultRegionHealthCheck = new Gcp.Compute.RegionHealthCheck("defaultRegionHealthCheck", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            Region = "us-central1",
+            HttpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs
+            {
+                PortSpecification = "USE_SERVING_PORT",
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+            DependsOn = 
+            {
+                fw4,
+            },
+        });
+        var defaultRegionBackendService = new Gcp.Compute.RegionBackendService("defaultRegionBackendService", new Gcp.Compute.RegionBackendServiceArgs
+        {
+            LoadBalancingScheme = "INTERNAL_MANAGED",
+            Backends = 
+            {
+                new Gcp.Compute.Inputs.RegionBackendServiceBackendArgs
+                {
+                    Group = rigm.InstanceGroup,
+                    BalancingMode = "UTILIZATION",
+                    CapacityScaler = 1,
+                },
+            },
+            Region = "us-central1",
+            Protocol = "HTTP",
+            TimeoutSec = 10,
+            HealthChecks = 
+            {
+                defaultRegionHealthCheck.Id,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var defaultRegionUrlMap = new Gcp.Compute.RegionUrlMap("defaultRegionUrlMap", new Gcp.Compute.RegionUrlMapArgs
+        {
+            Region = "us-central1",
+            DefaultService = defaultRegionBackendService.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var defaultRegionTargetHttpProxy = new Gcp.Compute.RegionTargetHttpProxy("defaultRegionTargetHttpProxy", new Gcp.Compute.RegionTargetHttpProxyArgs
+        {
+            Region = "us-central1",
+            UrlMap = defaultRegionUrlMap.Id,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var proxy = new Gcp.Compute.Subnetwork("proxy", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.129.0.0/26",
+            Region = "us-central1",
+            Network = defaultNetwork.Id,
+            Purpose = "INTERNAL_HTTPS_LOAD_BALANCER",
+            Role = "ACTIVE",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        // Forwarding rule for Internal Load Balancing
+        var defaultForwardingRule = new Gcp.Compute.ForwardingRule("defaultForwardingRule", new Gcp.Compute.ForwardingRuleArgs
+        {
+            Region = "us-central1",
+            IpProtocol = "TCP",
+            LoadBalancingScheme = "INTERNAL_MANAGED",
+            PortRange = "80",
+            Target = defaultRegionTargetHttpProxy.Id,
+            Network = defaultNetwork.Id,
+            Subnetwork = defaultSubnetwork.Id,
+            NetworkTier = "PREMIUM",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+            DependsOn = 
+            {
+                proxy,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "debian-9"
+		opt1 := "debian-cloud"
+		debianImage, err := compute.LookupImage(ctx, &compute.LookupImageArgs{
+			Family:  &opt0,
+			Project: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		defaultNetwork, err := compute.NewNetwork(ctx, "defaultNetwork", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+			RoutingMode:           pulumi.String("REGIONAL"),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		defaultSubnetwork, err := compute.NewSubnetwork(ctx, "defaultSubnetwork", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("10.1.2.0/24"),
+			Region:      pulumi.String("us-central1"),
+			Network:     defaultNetwork.ID(),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		instanceTemplate, err := compute.NewInstanceTemplate(ctx, "instanceTemplate", &compute.InstanceTemplateArgs{
+			MachineType: pulumi.String("e2-medium"),
+			NetworkInterfaces: compute.InstanceTemplateNetworkInterfaceArray{
+				&compute.InstanceTemplateNetworkInterfaceArgs{
+					Network:    defaultNetwork.ID(),
+					Subnetwork: defaultSubnetwork.ID(),
+				},
+			},
+			Disks: compute.InstanceTemplateDiskArray{
+				&compute.InstanceTemplateDiskArgs{
+					SourceImage: pulumi.String(debianImage.SelfLink),
+					AutoDelete:  pulumi.Bool(true),
+					Boot:        pulumi.Bool(true),
+				},
+			},
+			Tags: pulumi.StringArray{
+				pulumi.String("allow-ssh"),
+				pulumi.String("load-balanced-backend"),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		rigm, err := compute.NewRegionInstanceGroupManager(ctx, "rigm", &compute.RegionInstanceGroupManagerArgs{
+			Region: pulumi.String("us-central1"),
+			Versions: compute.RegionInstanceGroupManagerVersionArray{
+				&compute.RegionInstanceGroupManagerVersionArgs{
+					InstanceTemplate: instanceTemplate.ID(),
+					Name:             pulumi.String("primary"),
+				},
+			},
+			BaseInstanceName: pulumi.String("internal-glb"),
+			TargetSize:       pulumi.Int(1),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		fw1, err := compute.NewFirewall(ctx, "fw1", &compute.FirewallArgs{
+			Network: defaultNetwork.ID(),
+			SourceRanges: pulumi.StringArray{
+				pulumi.String("10.1.2.0/24"),
+			},
+			Allows: compute.FirewallAllowArray{
+				&compute.FirewallAllowArgs{
+					Protocol: pulumi.String("tcp"),
+				},
+				&compute.FirewallAllowArgs{
+					Protocol: pulumi.String("udp"),
+				},
+				&compute.FirewallAllowArgs{
+					Protocol: pulumi.String("icmp"),
+				},
+			},
+			Direction: pulumi.String("INGRESS"),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		fw2, err := compute.NewFirewall(ctx, "fw2", &compute.FirewallArgs{
+			Network: defaultNetwork.ID(),
+			SourceRanges: pulumi.StringArray{
+				pulumi.String("0.0.0.0/0"),
+			},
+			Allows: compute.FirewallAllowArray{
+				&compute.FirewallAllowArgs{
+					Protocol: pulumi.String("tcp"),
+					Ports: pulumi.StringArray{
+						pulumi.String("22"),
+					},
+				},
+			},
+			TargetTags: pulumi.StringArray{
+				pulumi.String("allow-ssh"),
+			},
+			Direction: pulumi.String("INGRESS"),
+		}, pulumi.Provider(google_beta), pulumi.DependsOn([]pulumi.Resource{
+			fw1,
+		}))
+		if err != nil {
+			return err
+		}
+		fw3, err := compute.NewFirewall(ctx, "fw3", &compute.FirewallArgs{
+			Network: defaultNetwork.ID(),
+			SourceRanges: pulumi.StringArray{
+				pulumi.String("130.211.0.0/22"),
+				pulumi.String("35.191.0.0/16"),
+			},
+			Allows: compute.FirewallAllowArray{
+				&compute.FirewallAllowArgs{
+					Protocol: pulumi.String("tcp"),
+				},
+			},
+			TargetTags: pulumi.StringArray{
+				pulumi.String("load-balanced-backend"),
+			},
+			Direction: pulumi.String("INGRESS"),
+		}, pulumi.Provider(google_beta), pulumi.DependsOn([]pulumi.Resource{
+			fw2,
+		}))
+		if err != nil {
+			return err
+		}
+		fw4, err := compute.NewFirewall(ctx, "fw4", &compute.FirewallArgs{
+			Network: defaultNetwork.ID(),
+			SourceRanges: pulumi.StringArray{
+				pulumi.String("10.129.0.0/26"),
+			},
+			TargetTags: pulumi.StringArray{
+				pulumi.String("load-balanced-backend"),
+			},
+			Allows: compute.FirewallAllowArray{
+				&compute.FirewallAllowArgs{
+					Protocol: pulumi.String("tcp"),
+					Ports: pulumi.StringArray{
+						pulumi.String("80"),
+					},
+				},
+				&compute.FirewallAllowArgs{
+					Protocol: pulumi.String("tcp"),
+					Ports: pulumi.StringArray{
+						pulumi.String("443"),
+					},
+				},
+				&compute.FirewallAllowArgs{
+					Protocol: pulumi.String("tcp"),
+					Ports: pulumi.StringArray{
+						pulumi.String("8000"),
+					},
+				},
+			},
+			Direction: pulumi.String("INGRESS"),
+		}, pulumi.Provider(google_beta), pulumi.DependsOn([]pulumi.Resource{
+			fw3,
+		}))
+		if err != nil {
+			return err
+		}
+		defaultRegionHealthCheck, err := compute.NewRegionHealthCheck(ctx, "defaultRegionHealthCheck", &compute.RegionHealthCheckArgs{
+			Region: pulumi.String("us-central1"),
+			HttpHealthCheck: &compute.RegionHealthCheckHttpHealthCheckArgs{
+				PortSpecification: pulumi.String("USE_SERVING_PORT"),
+			},
+		}, pulumi.Provider(google_beta), pulumi.DependsOn([]pulumi.Resource{
+			fw4,
+		}))
+		if err != nil {
+			return err
+		}
+		defaultRegionBackendService, err := compute.NewRegionBackendService(ctx, "defaultRegionBackendService", &compute.RegionBackendServiceArgs{
+			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
+			Backends: compute.RegionBackendServiceBackendArray{
+				&compute.RegionBackendServiceBackendArgs{
+					Group:          rigm.InstanceGroup,
+					BalancingMode:  pulumi.String("UTILIZATION"),
+					CapacityScaler: pulumi.Float64(1),
+				},
+			},
+			Region:     pulumi.String("us-central1"),
+			Protocol:   pulumi.String("HTTP"),
+			TimeoutSec: pulumi.Int(10),
+			HealthChecks: pulumi.String(pulumi.String{
+				defaultRegionHealthCheck.ID(),
+			}),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		defaultRegionUrlMap, err := compute.NewRegionUrlMap(ctx, "defaultRegionUrlMap", &compute.RegionUrlMapArgs{
+			Region:         pulumi.String("us-central1"),
+			DefaultService: defaultRegionBackendService.ID(),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		defaultRegionTargetHttpProxy, err := compute.NewRegionTargetHttpProxy(ctx, "defaultRegionTargetHttpProxy", &compute.RegionTargetHttpProxyArgs{
+			Region: pulumi.String("us-central1"),
+			UrlMap: defaultRegionUrlMap.ID(),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		proxy, err := compute.NewSubnetwork(ctx, "proxy", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("10.129.0.0/26"),
+			Region:      pulumi.String("us-central1"),
+			Network:     defaultNetwork.ID(),
+			Purpose:     pulumi.String("INTERNAL_HTTPS_LOAD_BALANCER"),
+			Role:        pulumi.String("ACTIVE"),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewForwardingRule(ctx, "defaultForwardingRule", &compute.ForwardingRuleArgs{
+			Region:              pulumi.String("us-central1"),
+			IpProtocol:          pulumi.String("TCP"),
+			LoadBalancingScheme: pulumi.String("INTERNAL_MANAGED"),
+			PortRange:           pulumi.String("80"),
+			Target:              defaultRegionTargetHttpProxy.ID(),
+			Network:             defaultNetwork.ID(),
+			Subnetwork:          defaultSubnetwork.ID(),
+			NetworkTier:         pulumi.String("PREMIUM"),
+		}, pulumi.Provider(google_beta), pulumi.DependsOn([]pulumi.Resource{
+			proxy,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+debian_image = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+default_network = gcp.compute.Network("defaultNetwork",
+    auto_create_subnetworks=False,
+    routing_mode="REGIONAL",
+    opts=ResourceOptions(provider=google_beta))
+default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
+    ip_cidr_range="10.1.2.0/24",
+    region="us-central1",
+    network=default_network.id,
+    opts=ResourceOptions(provider=google_beta))
+instance_template = gcp.compute.InstanceTemplate("instanceTemplate",
+    machine_type="e2-medium",
+    network_interfaces=[gcp.compute.InstanceTemplateNetworkInterfaceArgs(
+        network=default_network.id,
+        subnetwork=default_subnetwork.id,
+    )],
+    disks=[gcp.compute.InstanceTemplateDiskArgs(
+        source_image=debian_image.self_link,
+        auto_delete=True,
+        boot=True,
+    )],
+    tags=[
+        "allow-ssh",
+        "load-balanced-backend",
+    ],
+    opts=ResourceOptions(provider=google_beta))
+rigm = gcp.compute.RegionInstanceGroupManager("rigm",
+    region="us-central1",
+    versions=[gcp.compute.RegionInstanceGroupManagerVersionArgs(
+        instance_template=instance_template.id,
+        name="primary",
+    )],
+    base_instance_name="internal-glb",
+    target_size=1,
+    opts=ResourceOptions(provider=google_beta))
+fw1 = gcp.compute.Firewall("fw1",
+    network=default_network.id,
+    source_ranges=["10.1.2.0/24"],
+    allows=[
+        gcp.compute.FirewallAllowArgs(
+            protocol="tcp",
+        ),
+        gcp.compute.FirewallAllowArgs(
+            protocol="udp",
+        ),
+        gcp.compute.FirewallAllowArgs(
+            protocol="icmp",
+        ),
+    ],
+    direction="INGRESS",
+    opts=ResourceOptions(provider=google_beta))
+fw2 = gcp.compute.Firewall("fw2",
+    network=default_network.id,
+    source_ranges=["0.0.0.0/0"],
+    allows=[gcp.compute.FirewallAllowArgs(
+        protocol="tcp",
+        ports=["22"],
+    )],
+    target_tags=["allow-ssh"],
+    direction="INGRESS",
+    opts=ResourceOptions(provider=google_beta,
+        depends_on=[fw1]))
+fw3 = gcp.compute.Firewall("fw3",
+    network=default_network.id,
+    source_ranges=[
+        "130.211.0.0/22",
+        "35.191.0.0/16",
+    ],
+    allows=[gcp.compute.FirewallAllowArgs(
+        protocol="tcp",
+    )],
+    target_tags=["load-balanced-backend"],
+    direction="INGRESS",
+    opts=ResourceOptions(provider=google_beta,
+        depends_on=[fw2]))
+fw4 = gcp.compute.Firewall("fw4",
+    network=default_network.id,
+    source_ranges=["10.129.0.0/26"],
+    target_tags=["load-balanced-backend"],
+    allows=[
+        gcp.compute.FirewallAllowArgs(
+            protocol="tcp",
+            ports=["80"],
+        ),
+        gcp.compute.FirewallAllowArgs(
+            protocol="tcp",
+            ports=["443"],
+        ),
+        gcp.compute.FirewallAllowArgs(
+            protocol="tcp",
+            ports=["8000"],
+        ),
+    ],
+    direction="INGRESS",
+    opts=ResourceOptions(provider=google_beta,
+        depends_on=[fw3]))
+default_region_health_check = gcp.compute.RegionHealthCheck("defaultRegionHealthCheck",
+    region="us-central1",
+    http_health_check=gcp.compute.RegionHealthCheckHttpHealthCheckArgs(
+        port_specification="USE_SERVING_PORT",
+    ),
+    opts=ResourceOptions(provider=google_beta,
+        depends_on=[fw4]))
+default_region_backend_service = gcp.compute.RegionBackendService("defaultRegionBackendService",
+    load_balancing_scheme="INTERNAL_MANAGED",
+    backends=[gcp.compute.RegionBackendServiceBackendArgs(
+        group=rigm.instance_group,
+        balancing_mode="UTILIZATION",
+        capacity_scaler=1,
+    )],
+    region="us-central1",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default_region_health_check.id],
+    opts=ResourceOptions(provider=google_beta))
+default_region_url_map = gcp.compute.RegionUrlMap("defaultRegionUrlMap",
+    region="us-central1",
+    default_service=default_region_backend_service.id,
+    opts=ResourceOptions(provider=google_beta))
+default_region_target_http_proxy = gcp.compute.RegionTargetHttpProxy("defaultRegionTargetHttpProxy",
+    region="us-central1",
+    url_map=default_region_url_map.id,
+    opts=ResourceOptions(provider=google_beta))
+proxy = gcp.compute.Subnetwork("proxy",
+    ip_cidr_range="10.129.0.0/26",
+    region="us-central1",
+    network=default_network.id,
+    purpose="INTERNAL_HTTPS_LOAD_BALANCER",
+    role="ACTIVE",
+    opts=ResourceOptions(provider=google_beta))
+# Forwarding rule for Internal Load Balancing
+default_forwarding_rule = gcp.compute.ForwardingRule("defaultForwardingRule",
+    region="us-central1",
+    ip_protocol="TCP",
+    load_balancing_scheme="INTERNAL_MANAGED",
+    port_range="80",
+    target=default_region_target_http_proxy.id,
+    network=default_network.id,
+    subnetwork=default_subnetwork.id,
+    network_tier="PREMIUM",
+    opts=ResourceOptions(provider=google_beta,
+        depends_on=[proxy]))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const debianImage = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const defaultNetwork = new gcp.compute.Network("defaultNetwork", {
+    autoCreateSubnetworks: false,
+    routingMode: "REGIONAL",
+}, {
+    provider: google_beta,
+});
+const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
+    ipCidrRange: "10.1.2.0/24",
+    region: "us-central1",
+    network: defaultNetwork.id,
+}, {
+    provider: google_beta,
+});
+const instanceTemplate = new gcp.compute.InstanceTemplate("instanceTemplate", {
+    machineType: "e2-medium",
+    networkInterfaces: [{
+        network: defaultNetwork.id,
+        subnetwork: defaultSubnetwork.id,
+    }],
+    disks: [{
+        sourceImage: debianImage.then(debianImage => debianImage.selfLink),
+        autoDelete: true,
+        boot: true,
+    }],
+    tags: [
+        "allow-ssh",
+        "load-balanced-backend",
+    ],
+}, {
+    provider: google_beta,
+});
+const rigm = new gcp.compute.RegionInstanceGroupManager("rigm", {
+    region: "us-central1",
+    versions: [{
+        instanceTemplate: instanceTemplate.id,
+        name: "primary",
+    }],
+    baseInstanceName: "internal-glb",
+    targetSize: 1,
+}, {
+    provider: google_beta,
+});
+const fw1 = new gcp.compute.Firewall("fw1", {
+    network: defaultNetwork.id,
+    sourceRanges: ["10.1.2.0/24"],
+    allows: [
+        {
+            protocol: "tcp",
+        },
+        {
+            protocol: "udp",
+        },
+        {
+            protocol: "icmp",
+        },
+    ],
+    direction: "INGRESS",
+}, {
+    provider: google_beta,
+});
+const fw2 = new gcp.compute.Firewall("fw2", {
+    network: defaultNetwork.id,
+    sourceRanges: ["0.0.0.0/0"],
+    allows: [{
+        protocol: "tcp",
+        ports: ["22"],
+    }],
+    targetTags: ["allow-ssh"],
+    direction: "INGRESS",
+}, {
+    provider: google_beta,
+    dependsOn: [fw1],
+});
+const fw3 = new gcp.compute.Firewall("fw3", {
+    network: defaultNetwork.id,
+    sourceRanges: [
+        "130.211.0.0/22",
+        "35.191.0.0/16",
+    ],
+    allows: [{
+        protocol: "tcp",
+    }],
+    targetTags: ["load-balanced-backend"],
+    direction: "INGRESS",
+}, {
+    provider: google_beta,
+    dependsOn: [fw2],
+});
+const fw4 = new gcp.compute.Firewall("fw4", {
+    network: defaultNetwork.id,
+    sourceRanges: ["10.129.0.0/26"],
+    targetTags: ["load-balanced-backend"],
+    allows: [
+        {
+            protocol: "tcp",
+            ports: ["80"],
+        },
+        {
+            protocol: "tcp",
+            ports: ["443"],
+        },
+        {
+            protocol: "tcp",
+            ports: ["8000"],
+        },
+    ],
+    direction: "INGRESS",
+}, {
+    provider: google_beta,
+    dependsOn: [fw3],
+});
+const defaultRegionHealthCheck = new gcp.compute.RegionHealthCheck("defaultRegionHealthCheck", {
+    region: "us-central1",
+    httpHealthCheck: {
+        portSpecification: "USE_SERVING_PORT",
+    },
+}, {
+    provider: google_beta,
+    dependsOn: [fw4],
+});
+const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaultRegionBackendService", {
+    loadBalancingScheme: "INTERNAL_MANAGED",
+    backends: [{
+        group: rigm.instanceGroup,
+        balancingMode: "UTILIZATION",
+        capacityScaler: 1,
+    }],
+    region: "us-central1",
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [defaultRegionHealthCheck.id],
+}, {
+    provider: google_beta,
+});
+const defaultRegionUrlMap = new gcp.compute.RegionUrlMap("defaultRegionUrlMap", {
+    region: "us-central1",
+    defaultService: defaultRegionBackendService.id,
+}, {
+    provider: google_beta,
+});
+const defaultRegionTargetHttpProxy = new gcp.compute.RegionTargetHttpProxy("defaultRegionTargetHttpProxy", {
+    region: "us-central1",
+    urlMap: defaultRegionUrlMap.id,
+}, {
+    provider: google_beta,
+});
+const proxy = new gcp.compute.Subnetwork("proxy", {
+    ipCidrRange: "10.129.0.0/26",
+    region: "us-central1",
+    network: defaultNetwork.id,
+    purpose: "INTERNAL_HTTPS_LOAD_BALANCER",
+    role: "ACTIVE",
+}, {
+    provider: google_beta,
+});
+// Forwarding rule for Internal Load Balancing
+const defaultForwardingRule = new gcp.compute.ForwardingRule("defaultForwardingRule", {
+    region: "us-central1",
+    ipProtocol: "TCP",
+    loadBalancingScheme: "INTERNAL_MANAGED",
+    portRange: "80",
+    target: defaultRegionTargetHttpProxy.id,
+    network: defaultNetwork.id,
+    subnetwork: defaultSubnetwork.id,
+    networkTier: "PREMIUM",
+}, {
+    provider: google_beta,
+    dependsOn: [proxy],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ForwardingRule Resource {#create}
@@ -3229,6 +4733,28 @@ object.
 
 
 
+
+
+## Import
+
+
+ForwardingRule can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/forwardingRule:ForwardingRule default projects/{{project}}/regions/{{region}}/forwardingRules/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/forwardingRule:ForwardingRule default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/forwardingRule:ForwardingRule default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/forwardingRule:ForwardingRule default {{name}}
+```
 
 
 

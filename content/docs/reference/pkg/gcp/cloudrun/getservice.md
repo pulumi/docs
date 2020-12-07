@@ -15,6 +15,84 @@ the [official documentation](https://cloud.google.com/run/docs/)
 and [API](https://cloud.google.com/run/docs/apis).
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var run_service = Output.Create(Gcp.CloudRun.GetService.InvokeAsync(new Gcp.CloudRun.GetServiceArgs
+        {
+            Location = "us-central1",
+            Name = "my-service",
+        }));
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudrun.LookupService(ctx, &cloudrun.LookupServiceArgs{
+			Location: "us-central1",
+			Name:     "my-service",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+run_service = gcp.cloudrun.get_service(location="us-central1",
+    name="my-service")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const run_service = pulumi.output(gcp.cloudrun.getService({
+    location: "us-central1",
+    name: "my-service",
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetService {#using}
 

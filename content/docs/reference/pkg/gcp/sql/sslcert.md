@@ -12,6 +12,121 @@ meta_desc: "Explore the SslCert resource of the sql module, including examples, 
 
 Creates a new Google SQL SSL Cert on a Google SQL Instance. For more information, see the [official documentation](https://cloud.google.com/sql/), or the [JSON API](https://cloud.google.com/sql/docs/mysql/admin-api/v1beta4/sslCerts).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dbNameSuffix = new Random.RandomId("dbNameSuffix", new Random.RandomIdArgs
+        {
+            ByteLength = 4,
+        });
+        var master = new Gcp.Sql.DatabaseInstance("master", new Gcp.Sql.DatabaseInstanceArgs
+        {
+            Settings = new Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs
+            {
+                Tier = "db-f1-micro",
+            },
+        });
+        var clientCert = new Gcp.Sql.SslCert("clientCert", new Gcp.Sql.SslCertArgs
+        {
+            CommonName = "client-name",
+            Instance = master.Name,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql"
+	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := random.NewRandomId(ctx, "dbNameSuffix", &random.RandomIdArgs{
+			ByteLength: pulumi.Int(4),
+		})
+		if err != nil {
+			return err
+		}
+		master, err := sql.NewDatabaseInstance(ctx, "master", &sql.DatabaseInstanceArgs{
+			Settings: &sql.DatabaseInstanceSettingsArgs{
+				Tier: pulumi.String("db-f1-micro"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = sql.NewSslCert(ctx, "clientCert", &sql.SslCertArgs{
+			CommonName: pulumi.String("client-name"),
+			Instance:   master.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+import pulumi_random as random
+
+db_name_suffix = random.RandomId("dbNameSuffix", byte_length=4)
+master = gcp.sql.DatabaseInstance("master", settings=gcp.sql.DatabaseInstanceSettingsArgs(
+    tier="db-f1-micro",
+))
+client_cert = gcp.sql.SslCert("clientCert",
+    common_name="client-name",
+    instance=master.name)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * as random from "@pulumi/random";
+
+const dbNameSuffix = new random.RandomId("dbNameSuffix", {byteLength: 4});
+const master = new gcp.sql.DatabaseInstance("master", {settings: {
+    tier: "db-f1-micro",
+}});
+const clientCert = new gcp.sql.SslCert("clientCert", {
+    commonName: "client-name",
+    instance: master.name,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a SslCert Resource {#create}
@@ -1381,6 +1496,12 @@ is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+Since the contents of the certificate cannot be accessed after its creation, this resource cannot be imported.
 
 
 

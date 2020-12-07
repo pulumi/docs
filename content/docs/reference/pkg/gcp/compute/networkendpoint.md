@@ -22,6 +22,240 @@ To get more information about NetworkEndpoint, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/load-balancing/docs/negs/)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Network Endpoint
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var myImage = Output.Create(Gcp.Compute.GetImage.InvokeAsync(new Gcp.Compute.GetImageArgs
+        {
+            Family = "debian-9",
+            Project = "debian-cloud",
+        }));
+        var defaultNetwork = new Gcp.Compute.Network("defaultNetwork", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var defaultSubnetwork = new Gcp.Compute.Subnetwork("defaultSubnetwork", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.0.0.1/16",
+            Region = "us-central1",
+            Network = defaultNetwork.Id,
+        });
+        var endpoint_instance = new Gcp.Compute.Instance("endpoint-instance", new Gcp.Compute.InstanceArgs
+        {
+            MachineType = "e2-medium",
+            BootDisk = new Gcp.Compute.Inputs.InstanceBootDiskArgs
+            {
+                InitializeParams = new Gcp.Compute.Inputs.InstanceBootDiskInitializeParamsArgs
+                {
+                    Image = myImage.Apply(myImage => myImage.SelfLink),
+                },
+            },
+            NetworkInterfaces = 
+            {
+                new Gcp.Compute.Inputs.InstanceNetworkInterfaceArgs
+                {
+                    Subnetwork = defaultSubnetwork.Id,
+                    AccessConfigs = 
+                    {
+                        ,
+                    },
+                },
+            },
+        });
+        var default_endpoint = new Gcp.Compute.NetworkEndpoint("default-endpoint", new Gcp.Compute.NetworkEndpointArgs
+        {
+            NetworkEndpointGroup = google_compute_network_endpoint_group.Neg.Name,
+            Instance = endpoint_instance.Name,
+            Port = google_compute_network_endpoint_group.Neg.Default_port,
+            IpAddress = endpoint_instance.NetworkInterfaces.Apply(networkInterfaces => networkInterfaces[0].NetworkIp),
+        });
+        var @group = new Gcp.Compute.NetworkEndpointGroup("group", new Gcp.Compute.NetworkEndpointGroupArgs
+        {
+            Network = defaultNetwork.Id,
+            Subnetwork = defaultSubnetwork.Id,
+            DefaultPort = 90,
+            Zone = "us-central1-a",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "debian-9"
+		opt1 := "debian-cloud"
+		myImage, err := compute.LookupImage(ctx, &compute.LookupImageArgs{
+			Family:  &opt0,
+			Project: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		defaultNetwork, err := compute.NewNetwork(ctx, "defaultNetwork", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		defaultSubnetwork, err := compute.NewSubnetwork(ctx, "defaultSubnetwork", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("10.0.0.1/16"),
+			Region:      pulumi.String("us-central1"),
+			Network:     defaultNetwork.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewInstance(ctx, "endpoint_instance", &compute.InstanceArgs{
+			MachineType: pulumi.String("e2-medium"),
+			BootDisk: &compute.InstanceBootDiskArgs{
+				InitializeParams: &compute.InstanceBootDiskInitializeParamsArgs{
+					Image: pulumi.String(myImage.SelfLink),
+				},
+			},
+			NetworkInterfaces: compute.InstanceNetworkInterfaceArray{
+				&compute.InstanceNetworkInterfaceArgs{
+					Subnetwork: defaultSubnetwork.ID(),
+					AccessConfigs: compute.InstanceNetworkInterfaceAccessConfigArray{
+						nil,
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewNetworkEndpoint(ctx, "default_endpoint", &compute.NetworkEndpointArgs{
+			NetworkEndpointGroup: pulumi.Any(google_compute_network_endpoint_group.Neg.Name),
+			Instance:             endpoint_instance.Name,
+			Port:                 pulumi.Any(google_compute_network_endpoint_group.Neg.Default_port),
+			IpAddress: pulumi.String(endpoint_instance.NetworkInterfaces.ApplyT(func(networkInterfaces []compute.InstanceNetworkInterface) (string, error) {
+				return networkInterfaces[0].NetworkIp, nil
+			}).(pulumi.StringOutput)),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewNetworkEndpointGroup(ctx, "group", &compute.NetworkEndpointGroupArgs{
+			Network:     defaultNetwork.ID(),
+			Subnetwork:  defaultSubnetwork.ID(),
+			DefaultPort: pulumi.Int(90),
+			Zone:        pulumi.String("us-central1-a"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_image = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+default_network = gcp.compute.Network("defaultNetwork", auto_create_subnetworks=False)
+default_subnetwork = gcp.compute.Subnetwork("defaultSubnetwork",
+    ip_cidr_range="10.0.0.1/16",
+    region="us-central1",
+    network=default_network.id)
+endpoint_instance = gcp.compute.Instance("endpoint-instance",
+    machine_type="e2-medium",
+    boot_disk=gcp.compute.InstanceBootDiskArgs(
+        initialize_params=gcp.compute.InstanceBootDiskInitializeParamsArgs(
+            image=my_image.self_link,
+        ),
+    ),
+    network_interfaces=[gcp.compute.InstanceNetworkInterfaceArgs(
+        subnetwork=default_subnetwork.id,
+        access_configs=[gcp.compute.InstanceNetworkInterfaceAccessConfigArgs()],
+    )])
+default_endpoint = gcp.compute.NetworkEndpoint("default-endpoint",
+    network_endpoint_group=google_compute_network_endpoint_group["neg"]["name"],
+    instance=endpoint_instance.name,
+    port=google_compute_network_endpoint_group["neg"]["default_port"],
+    ip_address=endpoint_instance.network_interfaces[0].network_ip)
+group = gcp.compute.NetworkEndpointGroup("group",
+    network=default_network.id,
+    subnetwork=default_subnetwork.id,
+    default_port=90,
+    zone="us-central1-a")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myImage = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const defaultNetwork = new gcp.compute.Network("defaultNetwork", {autoCreateSubnetworks: false});
+const defaultSubnetwork = new gcp.compute.Subnetwork("defaultSubnetwork", {
+    ipCidrRange: "10.0.0.1/16",
+    region: "us-central1",
+    network: defaultNetwork.id,
+});
+const endpoint_instance = new gcp.compute.Instance("endpoint-instance", {
+    machineType: "e2-medium",
+    bootDisk: {
+        initializeParams: {
+            image: myImage.then(myImage => myImage.selfLink),
+        },
+    },
+    networkInterfaces: [{
+        subnetwork: defaultSubnetwork.id,
+        accessConfigs: [{}],
+    }],
+});
+const default_endpoint = new gcp.compute.NetworkEndpoint("default-endpoint", {
+    networkEndpointGroup: google_compute_network_endpoint_group.neg.name,
+    instance: endpoint_instance.name,
+    port: google_compute_network_endpoint_group.neg.default_port,
+    ipAddress: endpoint_instance.networkInterfaces.apply(networkInterfaces => networkInterfaces[0].networkIp),
+});
+const group = new gcp.compute.NetworkEndpointGroup("group", {
+    network: defaultNetwork.id,
+    subnetwork: defaultSubnetwork.id,
+    defaultPort: "90",
+    zone: "us-central1-a",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NetworkEndpoint Resource {#create}
@@ -1039,6 +1273,28 @@ If it is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+NetworkEndpoint can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/networkEndpoint:NetworkEndpoint default projects/{{project}}/zones/{{zone}}/networkEndpointGroups/{{network_endpoint_group}}/{{instance}}/{{ip_address}}/{{port}}
+```
+
+```sh
+ $ pulumi import gcp:compute/networkEndpoint:NetworkEndpoint default {{project}}/{{zone}}/{{network_endpoint_group}}/{{instance}}/{{ip_address}}/{{port}}
+```
+
+```sh
+ $ pulumi import gcp:compute/networkEndpoint:NetworkEndpoint default {{zone}}/{{network_endpoint_group}}/{{instance}}/{{ip_address}}/{{port}}
+```
+
+```sh
+ $ pulumi import gcp:compute/networkEndpoint:NetworkEndpoint default {{network_endpoint_group}}/{{instance}}/{{ip_address}}/{{port}}
+```
 
 
 

@@ -21,6 +21,471 @@ To get more information about Connection, see:
 > **Warning:** All arguments including `cloud_sql.credential.password` will be stored in the raw
 state as plain-text. [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Bigquery Connection Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = new Gcp.Sql.DatabaseInstance("instance", new Gcp.Sql.DatabaseInstanceArgs
+        {
+            DatabaseVersion = "POSTGRES_11",
+            Region = "us-central1",
+            Settings = new Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs
+            {
+                Tier = "db-f1-micro",
+            },
+            DeletionProtection = true,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var db = new Gcp.Sql.Database("db", new Gcp.Sql.DatabaseArgs
+        {
+            Instance = instance.Name,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var pwd = new Random.RandomPassword("pwd", new Random.RandomPasswordArgs
+        {
+            Length = 16,
+            Special = false,
+        });
+        var user = new Gcp.Sql.User("user", new Gcp.Sql.UserArgs
+        {
+            Instance = instance.Name,
+            Password = pwd.Result,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var connection = new Gcp.BigQuery.Connection("connection", new Gcp.BigQuery.ConnectionArgs
+        {
+            FriendlyName = "👋",
+            Description = "a riveting description",
+            CloudSql = new Gcp.BigQuery.Inputs.ConnectionCloudSqlArgs
+            {
+                InstanceId = instance.ConnectionName,
+                Database = db.Name,
+                Type = "POSTGRES",
+                Credential = new Gcp.BigQuery.Inputs.ConnectionCloudSqlCredentialArgs
+                {
+                    Username = user.Name,
+                    Password = user.Password,
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql"
+	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		instance, err := sql.NewDatabaseInstance(ctx, "instance", &sql.DatabaseInstanceArgs{
+			DatabaseVersion: pulumi.String("POSTGRES_11"),
+			Region:          pulumi.String("us-central1"),
+			Settings: &sql.DatabaseInstanceSettingsArgs{
+				Tier: pulumi.String("db-f1-micro"),
+			},
+			DeletionProtection: pulumi.Bool(true),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		db, err := sql.NewDatabase(ctx, "db", &sql.DatabaseArgs{
+			Instance: instance.Name,
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		pwd, err := random.NewRandomPassword(ctx, "pwd", &random.RandomPasswordArgs{
+			Length:  pulumi.Int(16),
+			Special: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		user, err := sql.NewUser(ctx, "user", &sql.UserArgs{
+			Instance: instance.Name,
+			Password: pwd.Result,
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = bigquery.NewConnection(ctx, "connection", &bigquery.ConnectionArgs{
+			FriendlyName: pulumi.String("👋"),
+			Description:  pulumi.String("a riveting description"),
+			CloudSql: &bigquery.ConnectionCloudSqlArgs{
+				InstanceId: instance.ConnectionName,
+				Database:   db.Name,
+				Type:       pulumi.String("POSTGRES"),
+				Credential: &bigquery.ConnectionCloudSqlCredentialArgs{
+					Username: user.Name,
+					Password: user.Password,
+				},
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+import pulumi_random as random
+
+instance = gcp.sql.DatabaseInstance("instance",
+    database_version="POSTGRES_11",
+    region="us-central1",
+    settings=gcp.sql.DatabaseInstanceSettingsArgs(
+        tier="db-f1-micro",
+    ),
+    deletion_protection=True,
+    opts=ResourceOptions(provider=google_beta))
+db = gcp.sql.Database("db", instance=instance.name,
+opts=ResourceOptions(provider=google_beta))
+pwd = random.RandomPassword("pwd",
+    length=16,
+    special=False)
+user = gcp.sql.User("user",
+    instance=instance.name,
+    password=pwd.result,
+    opts=ResourceOptions(provider=google_beta))
+connection = gcp.bigquery.Connection("connection",
+    friendly_name="👋",
+    description="a riveting description",
+    cloud_sql=gcp.bigquery.ConnectionCloudSqlArgs(
+        instance_id=instance.connection_name,
+        database=db.name,
+        type="POSTGRES",
+        credential=gcp.bigquery.ConnectionCloudSqlCredentialArgs(
+            username=user.name,
+            password=user.password,
+        ),
+    ),
+    opts=ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * as random from "@pulumi/random";
+
+const instance = new gcp.sql.DatabaseInstance("instance", {
+    databaseVersion: "POSTGRES_11",
+    region: "us-central1",
+    settings: {
+        tier: "db-f1-micro",
+    },
+    deletionProtection: "true",
+}, {
+    provider: google_beta,
+});
+const db = new gcp.sql.Database("db", {instance: instance.name}, {
+    provider: google_beta,
+});
+const pwd = new random.RandomPassword("pwd", {
+    length: 16,
+    special: false,
+});
+const user = new gcp.sql.User("user", {
+    instance: instance.name,
+    password: pwd.result,
+}, {
+    provider: google_beta,
+});
+const connection = new gcp.bigquery.Connection("connection", {
+    friendlyName: "👋",
+    description: "a riveting description",
+    cloudSql: {
+        instanceId: instance.connectionName,
+        database: db.name,
+        type: "POSTGRES",
+        credential: {
+            username: user.name,
+            password: user.password,
+        },
+    },
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+### Bigquery Connection Full
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = new Gcp.Sql.DatabaseInstance("instance", new Gcp.Sql.DatabaseInstanceArgs
+        {
+            DatabaseVersion = "POSTGRES_11",
+            Region = "us-central1",
+            Settings = new Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs
+            {
+                Tier = "db-f1-micro",
+            },
+            DeletionProtection = true,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var db = new Gcp.Sql.Database("db", new Gcp.Sql.DatabaseArgs
+        {
+            Instance = instance.Name,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var pwd = new Random.RandomPassword("pwd", new Random.RandomPasswordArgs
+        {
+            Length = 16,
+            Special = false,
+        });
+        var user = new Gcp.Sql.User("user", new Gcp.Sql.UserArgs
+        {
+            Instance = instance.Name,
+            Password = pwd.Result,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var connection = new Gcp.BigQuery.Connection("connection", new Gcp.BigQuery.ConnectionArgs
+        {
+            ConnectionId = "my-connection",
+            Location = "US",
+            FriendlyName = "👋",
+            Description = "a riveting description",
+            CloudSql = new Gcp.BigQuery.Inputs.ConnectionCloudSqlArgs
+            {
+                InstanceId = instance.ConnectionName,
+                Database = db.Name,
+                Type = "POSTGRES",
+                Credential = new Gcp.BigQuery.Inputs.ConnectionCloudSqlCredentialArgs
+                {
+                    Username = user.Name,
+                    Password = user.Password,
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql"
+	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		instance, err := sql.NewDatabaseInstance(ctx, "instance", &sql.DatabaseInstanceArgs{
+			DatabaseVersion: pulumi.String("POSTGRES_11"),
+			Region:          pulumi.String("us-central1"),
+			Settings: &sql.DatabaseInstanceSettingsArgs{
+				Tier: pulumi.String("db-f1-micro"),
+			},
+			DeletionProtection: pulumi.Bool(true),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		db, err := sql.NewDatabase(ctx, "db", &sql.DatabaseArgs{
+			Instance: instance.Name,
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		pwd, err := random.NewRandomPassword(ctx, "pwd", &random.RandomPasswordArgs{
+			Length:  pulumi.Int(16),
+			Special: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		user, err := sql.NewUser(ctx, "user", &sql.UserArgs{
+			Instance: instance.Name,
+			Password: pwd.Result,
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = bigquery.NewConnection(ctx, "connection", &bigquery.ConnectionArgs{
+			ConnectionId: pulumi.String("my-connection"),
+			Location:     pulumi.String("US"),
+			FriendlyName: pulumi.String("👋"),
+			Description:  pulumi.String("a riveting description"),
+			CloudSql: &bigquery.ConnectionCloudSqlArgs{
+				InstanceId: instance.ConnectionName,
+				Database:   db.Name,
+				Type:       pulumi.String("POSTGRES"),
+				Credential: &bigquery.ConnectionCloudSqlCredentialArgs{
+					Username: user.Name,
+					Password: user.Password,
+				},
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+import pulumi_random as random
+
+instance = gcp.sql.DatabaseInstance("instance",
+    database_version="POSTGRES_11",
+    region="us-central1",
+    settings=gcp.sql.DatabaseInstanceSettingsArgs(
+        tier="db-f1-micro",
+    ),
+    deletion_protection=True,
+    opts=ResourceOptions(provider=google_beta))
+db = gcp.sql.Database("db", instance=instance.name,
+opts=ResourceOptions(provider=google_beta))
+pwd = random.RandomPassword("pwd",
+    length=16,
+    special=False)
+user = gcp.sql.User("user",
+    instance=instance.name,
+    password=pwd.result,
+    opts=ResourceOptions(provider=google_beta))
+connection = gcp.bigquery.Connection("connection",
+    connection_id="my-connection",
+    location="US",
+    friendly_name="👋",
+    description="a riveting description",
+    cloud_sql=gcp.bigquery.ConnectionCloudSqlArgs(
+        instance_id=instance.connection_name,
+        database=db.name,
+        type="POSTGRES",
+        credential=gcp.bigquery.ConnectionCloudSqlCredentialArgs(
+            username=user.name,
+            password=user.password,
+        ),
+    ),
+    opts=ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * as random from "@pulumi/random";
+
+const instance = new gcp.sql.DatabaseInstance("instance", {
+    databaseVersion: "POSTGRES_11",
+    region: "us-central1",
+    settings: {
+        tier: "db-f1-micro",
+    },
+    deletionProtection: "true",
+}, {
+    provider: google_beta,
+});
+const db = new gcp.sql.Database("db", {instance: instance.name}, {
+    provider: google_beta,
+});
+const pwd = new random.RandomPassword("pwd", {
+    length: 16,
+    special: false,
+});
+const user = new gcp.sql.User("user", {
+    instance: instance.name,
+    password: pwd.result,
+}, {
+    provider: google_beta,
+});
+const connection = new gcp.bigquery.Connection("connection", {
+    connectionId: "my-connection",
+    location: "US",
+    friendlyName: "👋",
+    description: "a riveting description",
+    cloudSql: {
+        instanceId: instance.connectionName,
+        database: db.name,
+        type: "POSTGRES",
+        credential: {
+            username: user.name,
+            password: user.password,
+        },
+    },
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Connection Resource {#create}
@@ -1596,6 +2061,16 @@ Possible values are `DATABASE_TYPE_UNSPECIFIED`, `POSTGRES`, and `MYSQL`.
 
 
 
+
+
+## Import
+
+
+Connection can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:bigquery/connection:Connection default {{name}}
+```
 
 
 

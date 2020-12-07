@@ -20,6 +20,96 @@ Keys unset in config but set on the server will be removed. If you want to manag
 key/value pairs within the project metadata rather than the entire set, then use
 google_compute_project_metadata_item.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.Compute.ProjectMetadata("default", new Gcp.Compute.ProjectMetadataArgs
+        {
+            Metadata = 
+            {
+                { "13", "42" },
+                { "fizz", "buzz" },
+                { "foo", "bar" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewProjectMetadata(ctx, "_default", &compute.ProjectMetadataArgs{
+			Metadata: pulumi.StringMap{
+				"13":   pulumi.String("42"),
+				"fizz": pulumi.String("buzz"),
+				"foo":  pulumi.String("bar"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.compute.ProjectMetadata("default", metadata={
+    "13": "42",
+    "fizz": "buzz",
+    "foo": "bar",
+})
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultProjectMetadata = new gcp.compute.ProjectMetadata("default", {
+    metadata: {
+        "13": "42",
+        fizz: "buzz",
+        foo: "bar",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ProjectMetadata Resource {#create}
@@ -653,6 +743,16 @@ is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+This resource can be imported using the project ID
+
+```sh
+ $ pulumi import gcp:compute/projectMetadata:ProjectMetadata foo my-project-id`
+```
 
 
 

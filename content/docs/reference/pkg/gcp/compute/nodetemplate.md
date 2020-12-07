@@ -20,6 +20,204 @@ To get more information about NodeTemplate, see:
 * How-to Guides
     * [Sole-Tenant Nodes](https://cloud.google.com/compute/docs/nodes/)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Node Template Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var template = new Gcp.Compute.NodeTemplate("template", new Gcp.Compute.NodeTemplateArgs
+        {
+            NodeType = "n1-node-96-624",
+            Region = "us-central1",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewNodeTemplate(ctx, "template", &compute.NodeTemplateArgs{
+			NodeType: pulumi.String("n1-node-96-624"),
+			Region:   pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+template = gcp.compute.NodeTemplate("template",
+    node_type="n1-node-96-624",
+    region="us-central1")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const template = new gcp.compute.NodeTemplate("template", {
+    nodeType: "n1-node-96-624",
+    region: "us-central1",
+});
+```
+
+{{% /example %}}
+
+### Node Template Server Binding
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var central1a = Output.Create(Gcp.Compute.GetNodeTypes.InvokeAsync(new Gcp.Compute.GetNodeTypesArgs
+        {
+            Zone = "us-central1-a",
+        }));
+        var template = new Gcp.Compute.NodeTemplate("template", new Gcp.Compute.NodeTemplateArgs
+        {
+            Region = "us-central1",
+            NodeType = "n1-node-96-624",
+            NodeAffinityLabels = 
+            {
+                { "foo", "baz" },
+            },
+            ServerBinding = new Gcp.Compute.Inputs.NodeTemplateServerBindingArgs
+            {
+                Type = "RESTART_NODE_ON_MINIMAL_SERVERS",
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "us-central1-a"
+		_, err := compute.GetNodeTypes(ctx, &compute.GetNodeTypesArgs{
+			Zone: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewNodeTemplate(ctx, "template", &compute.NodeTemplateArgs{
+			Region:   pulumi.String("us-central1"),
+			NodeType: pulumi.String("n1-node-96-624"),
+			NodeAffinityLabels: pulumi.StringMap{
+				"foo": pulumi.String("baz"),
+			},
+			ServerBinding: &compute.NodeTemplateServerBindingArgs{
+				Type: pulumi.String("RESTART_NODE_ON_MINIMAL_SERVERS"),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+central1a = gcp.compute.get_node_types(zone="us-central1-a")
+template = gcp.compute.NodeTemplate("template",
+    region="us-central1",
+    node_type="n1-node-96-624",
+    node_affinity_labels={
+        "foo": "baz",
+    },
+    server_binding=gcp.compute.NodeTemplateServerBindingArgs(
+        type="RESTART_NODE_ON_MINIMAL_SERVERS",
+    ),
+    opts=ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const central1a = gcp.compute.getNodeTypes({
+    zone: "us-central1-a",
+});
+const template = new gcp.compute.NodeTemplate("template", {
+    region: "us-central1",
+    nodeType: "n1-node-96-624",
+    nodeAffinityLabels: {
+        foo: "baz",
+    },
+    serverBinding: {
+        type: "RESTART_NODE_ON_MINIMAL_SERVERS",
+    },
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NodeTemplate Resource {#create}
@@ -1855,6 +2053,28 @@ Possible values are `RESTART_NODE_ON_ANY_SERVER` and `RESTART_NODE_ON_MINIMAL_SE
 
 
 
+
+
+## Import
+
+
+NodeTemplate can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/nodeTemplate:NodeTemplate default projects/{{project}}/regions/{{region}}/nodeTemplates/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/nodeTemplate:NodeTemplate default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/nodeTemplate:NodeTemplate default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/nodeTemplate:NodeTemplate default {{name}}
+```
 
 
 

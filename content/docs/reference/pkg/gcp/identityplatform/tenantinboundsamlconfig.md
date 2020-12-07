@@ -16,6 +16,113 @@ You must enable the
 [Google Identity Platform](https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity) in
 the marketplace prior to using this resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Identity Platform Tenant Inbound Saml Config Basic
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var tenant = new Gcp.IdentityPlatform.Tenant("tenant", new Gcp.IdentityPlatform.TenantArgs
+        {
+            DisplayName = "tenant",
+        });
+        var tenantSamlConfig = new Gcp.IdentityPlatform.TenantInboundSamlConfig("tenantSamlConfig", new Gcp.IdentityPlatform.TenantInboundSamlConfigArgs
+        {
+            DisplayName = "Display Name",
+            Tenant = tenant.Name,
+            IdpConfig = new Gcp.IdentityPlatform.Inputs.TenantInboundSamlConfigIdpConfigArgs
+            {
+                IdpEntityId = "tf-idp",
+                SignRequest = true,
+                SsoUrl = "https://example.com",
+                IdpCertificates = 
+                {
+                    new Gcp.IdentityPlatform.Inputs.TenantInboundSamlConfigIdpConfigIdpCertificateArgs
+                    {
+                        X509Certificate = File.ReadAllText("test-fixtures/rsa_cert.pem"),
+                    },
+                },
+            },
+            SpConfig = new Gcp.IdentityPlatform.Inputs.TenantInboundSamlConfigSpConfigArgs
+            {
+                SpEntityId = "tf-sp",
+                CallbackUri = "https://example.com",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+tenant = gcp.identityplatform.Tenant("tenant", display_name="tenant")
+tenant_saml_config = gcp.identityplatform.TenantInboundSamlConfig("tenantSamlConfig",
+    display_name="Display Name",
+    tenant=tenant.name,
+    idp_config=gcp.identityplatform.TenantInboundSamlConfigIdpConfigArgs(
+        idp_entity_id="tf-idp",
+        sign_request=True,
+        sso_url="https://example.com",
+        idp_certificates=[gcp.identityplatform.TenantInboundSamlConfigIdpConfigIdpCertificateArgs(
+            x509_certificate=(lambda path: open(path).read())("test-fixtures/rsa_cert.pem"),
+        )],
+    ),
+    sp_config=gcp.identityplatform.TenantInboundSamlConfigSpConfigArgs(
+        sp_entity_id="tf-sp",
+        callback_uri="https://example.com",
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const tenant = new gcp.identityplatform.Tenant("tenant", {displayName: "tenant"});
+const tenantSamlConfig = new gcp.identityplatform.TenantInboundSamlConfig("tenantSamlConfig", {
+    displayName: "Display Name",
+    tenant: tenant.name,
+    idpConfig: {
+        idpEntityId: "tf-idp",
+        signRequest: true,
+        ssoUrl: "https://example.com",
+        idpCertificates: [{
+            x509Certificate: fs.readFileSync("test-fixtures/rsa_cert.pem"),
+        }],
+    },
+    spConfig: {
+        spEntityId: "tf-sp",
+        callbackUri: "https://example.com",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TenantInboundSamlConfig Resource {#create}
@@ -1735,6 +1842,24 @@ The x509 certificate
 
 
 
+
+
+## Import
+
+
+TenantInboundSamlConfig can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:identityplatform/tenantInboundSamlConfig:TenantInboundSamlConfig default projects/{{project}}/tenants/{{tenant}}/inboundSamlConfigs/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/tenantInboundSamlConfig:TenantInboundSamlConfig default {{project}}/{{tenant}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/tenantInboundSamlConfig:TenantInboundSamlConfig default {{tenant}}/{{name}}
+```
 
 
 

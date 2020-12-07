@@ -20,6 +20,517 @@ Three different resources help you manage your IAM policy for Cloud Storage Buck
 
 > **Note:** `gcp.storage.BucketIAMBinding` resources **can be** used in conjunction with `gcp.storage.BucketIAMMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_storage\_bucket\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/storage.admin",
+        members: ["user:jane@example.com"],
+    }],
+});
+const policy = new gcp.storage.BucketIAMPolicy("policy", {
+    bucket: google_storage_bucket["default"].name,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+    role="roles/storage.admin",
+    members=["user:jane@example.com"],
+)])
+policy = gcp.storage.BucketIAMPolicy("policy",
+    bucket=google_storage_bucket["default"]["name"],
+    policy_data=admin.policy_data)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Bindings = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Role = "roles/storage.admin",
+                    Members = 
+                    {
+                        "user:jane@example.com",
+                    },
+                },
+            },
+        }));
+        var policy = new Gcp.Storage.BucketIAMPolicy("policy", new Gcp.Storage.BucketIAMPolicyArgs
+        {
+            Bucket = google_storage_bucket.Default.Name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Bindings: []organizations.GetIAMPolicyBinding{
+				organizations.GetIAMPolicyBinding{
+					Role: "roles/storage.admin",
+					Members: []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = storage.NewBucketIAMPolicy(ctx, "policy", &storage.BucketIAMPolicyArgs{
+			Bucket:     pulumi.Any(google_storage_bucket.Default.Name),
+			PolicyData: pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/storage.admin",
+        members: ["user:jane@example.com"],
+        condition: {
+            title: "expires_after_2019_12_31",
+            description: "Expiring at midnight of 2019-12-31",
+            expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        },
+    }],
+});
+const policy = new gcp.storage.BucketIAMPolicy("policy", {
+    bucket: google_storage_bucket["default"].name,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+    role="roles/storage.admin",
+    members=["user:jane@example.com"],
+    condition=gcp.organizations.GetIAMPolicyBindingConditionArgs(
+        title="expires_after_2019_12_31",
+        description="Expiring at midnight of 2019-12-31",
+        expression="request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    ),
+)])
+policy = gcp.storage.BucketIAMPolicy("policy",
+    bucket=google_storage_bucket["default"]["name"],
+    policy_data=admin.policy_data)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Bindings = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Role = "roles/storage.admin",
+                    Members = 
+                    {
+                        "user:jane@example.com",
+                    },
+                    Condition = new Gcp.Organizations.Inputs.GetIAMPolicyBindingConditionArgs
+                    {
+                        Title = "expires_after_2019_12_31",
+                        Description = "Expiring at midnight of 2019-12-31",
+                        Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+                    },
+                },
+            },
+        }));
+        var policy = new Gcp.Storage.BucketIAMPolicy("policy", new Gcp.Storage.BucketIAMPolicyArgs
+        {
+            Bucket = google_storage_bucket.Default.Name,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Bindings: []organizations.GetIAMPolicyBinding{
+				organizations.GetIAMPolicyBinding{
+					Role: "roles/storage.admin",
+					Members: []string{
+						"user:jane@example.com",
+					},
+					Condition: organizations.GetIAMPolicyBindingCondition{
+						Title:       "expires_after_2019_12_31",
+						Description: "Expiring at midnight of 2019-12-31",
+						Expression:  "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = storage.NewBucketIAMPolicy(ctx, "policy", &storage.BucketIAMPolicyArgs{
+			Bucket:     pulumi.Any(google_storage_bucket.Default.Name),
+			PolicyData: pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+## google\_storage\_bucket\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const binding = new gcp.storage.BucketIAMBinding("binding", {
+    bucket: google_storage_bucket["default"].name,
+    role: "roles/storage.admin",
+    members: ["user:jane@example.com"],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+binding = gcp.storage.BucketIAMBinding("binding",
+    bucket=google_storage_bucket["default"]["name"],
+    role="roles/storage.admin",
+    members=["user:jane@example.com"])
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.Storage.BucketIAMBinding("binding", new Gcp.Storage.BucketIAMBindingArgs
+        {
+            Bucket = google_storage_bucket.Default.Name,
+            Role = "roles/storage.admin",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := storage.NewBucketIAMBinding(ctx, "binding", &storage.BucketIAMBindingArgs{
+			Bucket: pulumi.Any(google_storage_bucket.Default.Name),
+			Role:   pulumi.String("roles/storage.admin"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const binding = new gcp.storage.BucketIAMBinding("binding", {
+    bucket: google_storage_bucket["default"].name,
+    role: "roles/storage.admin",
+    members: ["user:jane@example.com"],
+    condition: {
+        title: "expires_after_2019_12_31",
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+binding = gcp.storage.BucketIAMBinding("binding",
+    bucket=google_storage_bucket["default"]["name"],
+    role="roles/storage.admin",
+    members=["user:jane@example.com"],
+    condition=gcp.storage.BucketIAMBindingConditionArgs(
+        title="expires_after_2019_12_31",
+        description="Expiring at midnight of 2019-12-31",
+        expression="request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    ))
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.Storage.BucketIAMBinding("binding", new Gcp.Storage.BucketIAMBindingArgs
+        {
+            Bucket = google_storage_bucket.Default.Name,
+            Role = "roles/storage.admin",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Condition = new Gcp.Storage.Inputs.BucketIAMBindingConditionArgs
+            {
+                Title = "expires_after_2019_12_31",
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := storage.NewBucketIAMBinding(ctx, "binding", &storage.BucketIAMBindingArgs{
+			Bucket: pulumi.Any(google_storage_bucket.Default.Name),
+			Role:   pulumi.String("roles/storage.admin"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+			Condition: &storage.BucketIAMBindingConditionArgs{
+				Title:       pulumi.String("expires_after_2019_12_31"),
+				Description: pulumi.String("Expiring at midnight of 2019-12-31"),
+				Expression:  pulumi.String("request.time < timestamp(\"2020-01-01T00:00:00Z\")"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+## google\_storage\_bucket\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const member = new gcp.storage.BucketIAMMember("member", {
+    bucket: google_storage_bucket["default"].name,
+    role: "roles/storage.admin",
+    member: "user:jane@example.com",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+member = gcp.storage.BucketIAMMember("member",
+    bucket=google_storage_bucket["default"]["name"],
+    role="roles/storage.admin",
+    member="user:jane@example.com")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.Storage.BucketIAMMember("member", new Gcp.Storage.BucketIAMMemberArgs
+        {
+            Bucket = google_storage_bucket.Default.Name,
+            Role = "roles/storage.admin",
+            Member = "user:jane@example.com",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := storage.NewBucketIAMMember(ctx, "member", &storage.BucketIAMMemberArgs{
+			Bucket: pulumi.Any(google_storage_bucket.Default.Name),
+			Role:   pulumi.String("roles/storage.admin"),
+			Member: pulumi.String("user:jane@example.com"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const member = new gcp.storage.BucketIAMMember("member", {
+    bucket: google_storage_bucket["default"].name,
+    role: "roles/storage.admin",
+    member: "user:jane@example.com",
+    condition: {
+        title: "expires_after_2019_12_31",
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    },
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+member = gcp.storage.BucketIAMMember("member",
+    bucket=google_storage_bucket["default"]["name"],
+    role="roles/storage.admin",
+    member="user:jane@example.com",
+    condition=gcp.storage.BucketIAMMemberConditionArgs(
+        title="expires_after_2019_12_31",
+        description="Expiring at midnight of 2019-12-31",
+        expression="request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    ))
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.Storage.BucketIAMMember("member", new Gcp.Storage.BucketIAMMemberArgs
+        {
+            Bucket = google_storage_bucket.Default.Name,
+            Role = "roles/storage.admin",
+            Member = "user:jane@example.com",
+            Condition = new Gcp.Storage.Inputs.BucketIAMMemberConditionArgs
+            {
+                Title = "expires_after_2019_12_31",
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := storage.NewBucketIAMMember(ctx, "member", &storage.BucketIAMMemberArgs{
+			Bucket: pulumi.Any(google_storage_bucket.Default.Name),
+			Role:   pulumi.String("roles/storage.admin"),
+			Member: pulumi.String("user:jane@example.com"),
+			Condition: &storage.BucketIAMMemberConditionArgs{
+				Title:       pulumi.String("expires_after_2019_12_31"),
+				Description: pulumi.String("Expiring at midnight of 2019-12-31"),
+				Expression:  pulumi.String("request.time < timestamp(\"2020-01-01T00:00:00Z\")"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 ## Create a BucketIAMPolicy Resource {#create}
@@ -741,6 +1252,32 @@ a `gcp.organizations.getIAMPolicy` data source.
 
 
 
+
+
+## Import
+
+
+For all import syntaxes, the "resource in question" can take any of the following forms* b/{{name}} * {{name}} Any variables not passed in the import command will be taken from the provider configuration. Cloud Storage bucket IAM resources can be imported using the resource identifiers, role, and member. IAM member imports use space-delimited identifiersthe resource in question, the role, and the member identity, e.g.
+
+```sh
+ $ pulumi import gcp:storage/bucketIAMPolicy:BucketIAMPolicy editor "b/{{bucket}} roles/storage.objectViewer user:jane@example.com"
+```
+
+ IAM binding imports use space-delimited identifiersthe resource in question and the role, e.g.
+
+```sh
+ $ pulumi import gcp:storage/bucketIAMPolicy:BucketIAMPolicy editor "b/{{bucket}} roles/storage.objectViewer"
+```
+
+ IAM policy imports use the identifier of the resource in question, e.g.
+
+```sh
+ $ pulumi import gcp:storage/bucketIAMPolicy:BucketIAMPolicy editor b/{{bucket}}
+```
+
+ -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+
+full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 
 

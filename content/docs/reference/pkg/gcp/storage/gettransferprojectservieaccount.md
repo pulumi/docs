@@ -13,6 +13,79 @@ meta_desc: "Explore the GetTransferProjectServieAccount function of the storage 
 Use this data source to retrieve Storage Transfer service account for this project
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = Output.Create(Gcp.Storage.GetTransferProjectServieAccount.InvokeAsync());
+        this.DefaultAccount = @default.Apply(@default => @default.Email);
+    }
+
+    [Output("defaultAccount")]
+    public Output<string> DefaultAccount { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_default, err := storage.GetTransferProjectServieAccount(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("defaultAccount", _default.Email)
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.storage.get_transfer_project_servie_account()
+pulumi.export("defaultAccount", default.email)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default = gcp.storage.getTransferProjectServieAccount({});
+export const defaultAccount = _default.then(_default => _default.email);
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetTransferProjectServieAccount {#using}
 

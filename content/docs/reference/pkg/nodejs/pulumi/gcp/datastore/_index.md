@@ -3,7 +3,7 @@ title: "Module datastore"
 title_tag: "Module datastore | Package @pulumi/gcp | Node.js SDK"
 linktitle: "datastore"
 meta_desc: "Explore members of the datastore module in the @pulumi/gcp package."
-git_sha: "190d8b0982043d566daf0a0e22d4f73afa046cc7"
+git_sha: "412945bd19782bdb51f1477251bede26b0ea0f15"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="DataStoreIndex" data-link-title="DataStoreIndex">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/datastore/dataStoreIndex.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/datastore/dataStoreIndex.ts#L61">
         Resource <strong>DataStoreIndex</strong>
     </a>
 </h3>
@@ -45,10 +45,52 @@ To get more information about Index, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/datastore/docs/concepts/indexes)
 
+> **Warning:** This resource creates a Datastore Index on a project that has already
+enabled a Datastore-compatible database. If you haven't already enabled
+one, you can create a `gcp.appengine.Application` resource with
+`databaseType` set to `"CLOUD_DATASTORE_COMPATIBILITY"` to do so. Your
+Datastore location will be the same as the App Engine location specified.
+
 #### Example Usage
+##### Datastore Index
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultDataStoreIndex = new gcp.datastore.DataStoreIndex("default", {
+    kind: "foo",
+    properties: [
+        {
+            direction: "ASCENDING",
+            name: "property_a",
+        },
+        {
+            direction: "ASCENDING",
+            name: "property_b",
+        },
+    ],
+});
+```
+
+#### Import
+
+Index can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:datastore/dataStoreIndex:DataStoreIndex default projects/{{project}}/indexes/{{index_id}}
+```
+
+```sh
+ $ pulumi import gcp:datastore/dataStoreIndex:DataStoreIndex default {{project}}/{{index_id}}
+```
+
+```sh
+ $ pulumi import gcp:datastore/dataStoreIndex:DataStoreIndex default {{index_id}}
+```
 
 <h4 class="pdoc-member-header" id="DataStoreIndex-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/datastore/dataStoreIndex.ts#L71"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/datastore/dataStoreIndex.ts#L112"> <b>constructor</b></a>
 </h4>
 
 
@@ -62,7 +104,7 @@ Create a DataStoreIndex resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DataStoreIndex-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/datastore/dataStoreIndex.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/datastore/dataStoreIndex.ts#L71">method <b>get</b></a>
 </h4>
 
 
@@ -73,14 +115,14 @@ Get an existing DataStoreIndex resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DataStoreIndex-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/datastore/dataStoreIndex.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/datastore/dataStoreIndex.ts#L61">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DataStoreIndex-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/datastore/dataStoreIndex.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/datastore/dataStoreIndex.ts#L82">method <b>isInstance</b></a>
 </h4>
 
 
@@ -91,7 +133,7 @@ Returns true if the given object is an instance of DataStoreIndex.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DataStoreIndex-ancestor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/datastore/dataStoreIndex.ts#L53">property <b>ancestor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/datastore/dataStoreIndex.ts#L94">property <b>ancestor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ancestor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -101,7 +143,7 @@ Default value is `NONE`.
 Possible values are `NONE` and `ALL_ANCESTORS`.
 
 <h4 class="pdoc-member-header" id="DataStoreIndex-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/datastore/dataStoreIndex.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/datastore/dataStoreIndex.ts#L61">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -110,7 +152,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DataStoreIndex-indexId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/datastore/dataStoreIndex.ts#L57">property <b>indexId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/datastore/dataStoreIndex.ts#L98">property <b>indexId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>indexId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -118,7 +160,7 @@ deployments and may be missing (undefined) during planning phases.
 The index id.
 
 <h4 class="pdoc-member-header" id="DataStoreIndex-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/datastore/dataStoreIndex.ts#L61">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/datastore/dataStoreIndex.ts#L102">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -126,7 +168,7 @@ The index id.
 The entity kind which the index applies to.
 
 <h4 class="pdoc-member-header" id="DataStoreIndex-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/datastore/dataStoreIndex.ts#L66">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/datastore/dataStoreIndex.ts#L107">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -135,7 +177,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="DataStoreIndex-properties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/datastore/dataStoreIndex.ts#L71">property <b>properties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/datastore/dataStoreIndex.ts#L112">property <b>properties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>properties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DataStoreIndexProperty'>DataStoreIndexProperty</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -144,7 +186,7 @@ An ordered list of properties to index on.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="DataStoreIndex-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/datastore/dataStoreIndex.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/datastore/dataStoreIndex.ts#L61">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -156,7 +198,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DataStoreIndexArgs" data-link-title="DataStoreIndexArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/datastore/dataStoreIndex.ts#L145">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/datastore/dataStoreIndex.ts#L186">
         interface <strong>DataStoreIndexArgs</strong>
     </a>
 </h3>
@@ -166,7 +208,7 @@ deployments.
 The set of arguments for constructing a DataStoreIndex resource.
 
 <h4 class="pdoc-member-header" id="DataStoreIndexArgs-ancestor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/datastore/dataStoreIndex.ts#L151">property <b>ancestor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/datastore/dataStoreIndex.ts#L192">property <b>ancestor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ancestor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -176,7 +218,7 @@ Default value is `NONE`.
 Possible values are `NONE` and `ALL_ANCESTORS`.
 
 <h4 class="pdoc-member-header" id="DataStoreIndexArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/datastore/dataStoreIndex.ts#L155">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/datastore/dataStoreIndex.ts#L196">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -184,7 +226,7 @@ Possible values are `NONE` and `ALL_ANCESTORS`.
 The entity kind which the index applies to.
 
 <h4 class="pdoc-member-header" id="DataStoreIndexArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/datastore/dataStoreIndex.ts#L160">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/datastore/dataStoreIndex.ts#L201">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -193,7 +235,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="DataStoreIndexArgs-properties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/datastore/dataStoreIndex.ts#L165">property <b>properties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/datastore/dataStoreIndex.ts#L206">property <b>properties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>properties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DataStoreIndexProperty'>DataStoreIndexProperty</a>&gt;[]&gt;;</code></pre>
@@ -202,7 +244,7 @@ An ordered list of properties to index on.
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="DataStoreIndexState" data-link-title="DataStoreIndexState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/datastore/dataStoreIndex.ts#L115">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/datastore/dataStoreIndex.ts#L156">
         interface <strong>DataStoreIndexState</strong>
     </a>
 </h3>
@@ -212,7 +254,7 @@ Structure is documented below.
 Input properties used for looking up and filtering DataStoreIndex resources.
 
 <h4 class="pdoc-member-header" id="DataStoreIndexState-ancestor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/datastore/dataStoreIndex.ts#L121">property <b>ancestor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/datastore/dataStoreIndex.ts#L162">property <b>ancestor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ancestor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -222,7 +264,7 @@ Default value is `NONE`.
 Possible values are `NONE` and `ALL_ANCESTORS`.
 
 <h4 class="pdoc-member-header" id="DataStoreIndexState-indexId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/datastore/dataStoreIndex.ts#L125">property <b>indexId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/datastore/dataStoreIndex.ts#L166">property <b>indexId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>indexId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -230,7 +272,7 @@ Possible values are `NONE` and `ALL_ANCESTORS`.
 The index id.
 
 <h4 class="pdoc-member-header" id="DataStoreIndexState-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/datastore/dataStoreIndex.ts#L129">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/datastore/dataStoreIndex.ts#L170">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -238,7 +280,7 @@ The index id.
 The entity kind which the index applies to.
 
 <h4 class="pdoc-member-header" id="DataStoreIndexState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/datastore/dataStoreIndex.ts#L134">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/datastore/dataStoreIndex.ts#L175">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -247,7 +289,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="DataStoreIndexState-properties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/datastore/dataStoreIndex.ts#L139">property <b>properties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/datastore/dataStoreIndex.ts#L180">property <b>properties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>properties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DataStoreIndexProperty'>DataStoreIndexProperty</a>&gt;[]&gt;;</code></pre>

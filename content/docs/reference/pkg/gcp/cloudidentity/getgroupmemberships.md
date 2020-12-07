@@ -15,6 +15,80 @@ Use this data source to get list of the Cloud Identity Group Memberships within 
 https://cloud.google.com/identity/docs/concepts/overview#memberships
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var members = Output.Create(Gcp.CloudIdentity.GetGroupMemberships.InvokeAsync(new Gcp.CloudIdentity.GetGroupMembershipsArgs
+        {
+            Group = "groups/123eab45c6defghi",
+        }));
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudidentity"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := cloudidentity.GetGroupMemberships(ctx, &cloudidentity.GetGroupMembershipsArgs{
+			Group: "groups/123eab45c6defghi",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+members = gcp.cloudidentity.get_group_memberships(group="groups/123eab45c6defghi")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const members = pulumi.output(gcp.cloudidentity.getGroupMemberships({
+    group: "groups/123eab45c6defghi",
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetGroupMemberships {#using}
 

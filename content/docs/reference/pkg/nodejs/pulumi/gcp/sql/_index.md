@@ -3,7 +3,7 @@ title: "Module sql"
 title_tag: "Module sql | Package @pulumi/gcp | Node.js SDK"
 linktitle: "sql"
 meta_desc: "Explore members of the sql module in the @pulumi/gcp package."
-git_sha: "190d8b0982043d566daf0a0e22d4f73afa046cc7"
+git_sha: "412945bd19782bdb51f1477251bede26b0ea0f15"
 block_external_search_index: true
 ---
 
@@ -51,7 +51,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Database" data-link-title="Database">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L52">
         Resource <strong>Database</strong>
     </a>
 </h3>
@@ -62,9 +62,48 @@ Represents a SQL database inside the Cloud SQL instance, hosted in
 Google's cloud.
 
 #### Example Usage
+##### Sql Database Basic
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.sql.DatabaseInstance("instance", {
+    region: "us-central1",
+    settings: {
+        tier: "db-f1-micro",
+    },
+    deletionProtection: "true",
+});
+const database = new gcp.sql.Database("database", {instance: instance.name});
+```
+
+#### Import
+
+Database can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:sql/database:Database default projects/{{project}}/instances/{{instance}}/databases/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:sql/database:Database default instances/{{instance}}/databases/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:sql/database:Database default {{project}}/{{instance}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:sql/database:Database default {{instance}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:sql/database:Database default {{name}}
+```
 
 <h4 class="pdoc-member-header" id="Database-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L114"> <b>constructor</b></a>
 </h4>
 
 
@@ -78,7 +117,7 @@ Create a Database resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Database-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L23">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L62">method <b>get</b></a>
 </h4>
 
 
@@ -89,14 +128,14 @@ Get an existing Database resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Database-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L52">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Database-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L34">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L73">method <b>isInstance</b></a>
 </h4>
 
 
@@ -107,7 +146,7 @@ Returns true if the given object is an instance of Database.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Database-charset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L48">property <b>charset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L87">property <b>charset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>charset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -119,7 +158,7 @@ for more details and supported values. Postgres databases only support
 a value of `UTF8` at creation time.
 
 <h4 class="pdoc-member-header" id="Database-collation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L56">property <b>collation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L95">property <b>collation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>collation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -131,7 +170,7 @@ for more details and supported values. Postgres databases only support
 a value of `en_US.UTF8` at creation time.
 
 <h4 class="pdoc-member-header" id="Database-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L52">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -140,7 +179,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Database-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L61">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L100">property <b>instance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -149,7 +188,7 @@ The name of the Cloud SQL instance. This does not include the project
 ID.
 
 <h4 class="pdoc-member-header" id="Database-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L66">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L105">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -158,7 +197,7 @@ The name of the database in the Cloud SQL instance.
 This does not include the project ID or instance name.
 
 <h4 class="pdoc-member-header" id="Database-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L71">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L110">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -167,7 +206,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Database-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L75">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L114">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>selfLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -175,7 +214,7 @@ If it is not provided, the provider project is used.
 The URI of the created resource.
 
 <h4 class="pdoc-member-header" id="Database-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L52">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -184,14 +223,33 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DatabaseInstance" data-link-title="DatabaseInstance">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L27">
         Resource <strong>DatabaseInstance</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>DatabaseInstance</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+#### Import
+
+Database instances can be imported using one of any of these accepted formats
+
+```sh
+ $ pulumi import gcp:sql/databaseInstance:DatabaseInstance master projects/{{project}}/instances/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:sql/databaseInstance:DatabaseInstance master {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:sql/databaseInstance:DatabaseInstance master {{name}}
+```
+
+ config and set on the server. When importing, double-check that your config has all the fields set that you expect- just seeing no diff isn't sufficient to know that your config could reproduce the imported resource.
+
 <h4 class="pdoc-member-header" id="DatabaseInstance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L126"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L144"> <b>constructor</b></a>
 </h4>
 
 
@@ -205,7 +263,7 @@ Create a DatabaseInstance resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DatabaseInstance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L37">method <b>get</b></a>
 </h4>
 
 
@@ -216,14 +274,14 @@ Get an existing DatabaseInstance resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DatabaseInstance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L9">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L27">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DatabaseInstance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L48">method <b>isInstance</b></a>
 </h4>
 
 
@@ -234,7 +292,7 @@ Returns true if the given object is an instance of DatabaseInstance.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DatabaseInstance-connectionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L41">property <b>connectionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L59">property <b>connectionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -243,7 +301,7 @@ The connection name of the instance to be used in
 connection strings. For example, when connecting with [Cloud SQL Proxy](https://cloud.google.com/sql/docs/mysql/connect-admin-proxy).
 
 <h4 class="pdoc-member-header" id="DatabaseInstance-databaseVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L50">property <b>databaseVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L68">property <b>databaseVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>databaseVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -256,7 +314,7 @@ SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
 includes an up-to-date reference of supported versions.
 
 <h4 class="pdoc-member-header" id="DatabaseInstance-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L54">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L72">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deletionProtection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -264,7 +322,7 @@ includes an up-to-date reference of supported versions.
 Used to block Terraform from deleting a SQL Instance.
 
 <h4 class="pdoc-member-header" id="DatabaseInstance-encryptionKeyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L65">property <b>encryptionKeyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L83">property <b>encryptionKeyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>encryptionKeyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -279,7 +337,7 @@ That service account needs the `Cloud KMS > Cloud KMS CryptoKey Encrypter/Decryp
 key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#grantkey).
 
 <h4 class="pdoc-member-header" id="DatabaseInstance-firstIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L69">property <b>firstIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L87">property <b>firstIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>firstIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -287,7 +345,7 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
 The first IPv4 address of any type assigned.
 
 <h4 class="pdoc-member-header" id="DatabaseInstance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L9">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L27">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -296,12 +354,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DatabaseInstance-ipAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L70">property <b>ipAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L88">property <b>ipAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceIpAddress'>DatabaseInstanceIpAddress</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DatabaseInstance-masterInstanceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L76">property <b>masterInstanceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L94">property <b>masterInstanceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterInstanceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -311,7 +369,7 @@ the master in the replication setup. Note, this requires the master to have
 `binaryLogEnabled` set, as well as existing backups.
 
 <h4 class="pdoc-member-header" id="DatabaseInstance-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L80">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L98">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -319,7 +377,7 @@ the master in the replication setup. Note, this requires the master to have
 A name for this whitelist entry.
 
 <h4 class="pdoc-member-header" id="DatabaseInstance-privateIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L84">property <b>privateIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L102">property <b>privateIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -327,7 +385,7 @@ A name for this whitelist entry.
 The first private (`PRIVATE`) IPv4 address assigned.
 
 <h4 class="pdoc-member-header" id="DatabaseInstance-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L89">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L107">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -336,7 +394,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="DatabaseInstance-publicIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L93">property <b>publicIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L111">property <b>publicIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publicIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -344,7 +402,7 @@ is not provided, the provider project is used.
 The first public (`PRIMARY`) IPv4 address assigned.
 
 <h4 class="pdoc-member-header" id="DatabaseInstance-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L102">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L120">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -357,7 +415,7 @@ region is not supported with Cloud SQL. If you choose not to provide the `region
 make sure you understand this.
 
 <h4 class="pdoc-member-header" id="DatabaseInstance-replicaConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L107">property <b>replicaConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L125">property <b>replicaConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicaConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceReplicaConfiguration'>DatabaseInstanceReplicaConfiguration</a>&gt;;</code></pre>
@@ -366,7 +424,7 @@ The configuration for replication. The
 configuration is detailed below.
 
 <h4 class="pdoc-member-header" id="DatabaseInstance-rootPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L111">property <b>rootPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L129">property <b>rootPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rootPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -374,7 +432,7 @@ configuration is detailed below.
 Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
 
 <h4 class="pdoc-member-header" id="DatabaseInstance-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L115">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L133">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>selfLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -382,12 +440,12 @@ Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreS
 The URI of the created resource.
 
 <h4 class="pdoc-member-header" id="DatabaseInstance-serverCaCerts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L116">property <b>serverCaCerts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L134">property <b>serverCaCerts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverCaCerts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceServerCaCert'>DatabaseInstanceServerCaCert</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DatabaseInstance-serviceAccountEmailAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L121">property <b>serviceAccountEmailAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L139">property <b>serviceAccountEmailAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceAccountEmailAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -396,7 +454,7 @@ The service account email address assigned to the
 instance.
 
 <h4 class="pdoc-member-header" id="DatabaseInstance-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L126">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L144">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceSettings'>DatabaseInstanceSettings</a>&gt;;</code></pre>
@@ -405,7 +463,7 @@ The settings to use for the database. The
 configuration is detailed below.
 
 <h4 class="pdoc-member-header" id="DatabaseInstance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L9">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L27">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -414,7 +472,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SourceRepresentationInstance" data-link-title="SourceRepresentationInstance">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L45">
         Resource <strong>SourceRepresentationInstance</strong>
     </a>
 </h3>
@@ -428,9 +486,38 @@ contains no data, requires no configuration or maintenance, and does not
 affect billing. You cannot update the source representation instance.
 
 #### Example Usage
+##### Sql Source Representation Instance Basic
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.sql.SourceRepresentationInstance("instance", {
+    databaseVersion: "MYSQL_5_7",
+    host: "10.20.30.40",
+    port: 3306,
+    region: "us-central1",
+});
+```
+
+#### Import
+
+SourceRepresentationInstance can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:sql/sourceRepresentationInstance:SourceRepresentationInstance default projects/{{project}}/instances/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:sql/sourceRepresentationInstance:SourceRepresentationInstance default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:sql/sourceRepresentationInstance:SourceRepresentationInstance default {{name}}
+```
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L71"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L100"> <b>constructor</b></a>
 </h4>
 
 
@@ -444,7 +531,7 @@ Create a SourceRepresentationInstance resource with the given unique name, argum
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L55">method <b>get</b></a>
 </h4>
 
 
@@ -455,14 +542,14 @@ Get an existing SourceRepresentationInstance resource's state with the given nam
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L45">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L66">method <b>isInstance</b></a>
 </h4>
 
 
@@ -473,7 +560,7 @@ Returns true if the given object is an instance of SourceRepresentationInstance.
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstance-databaseVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L48">property <b>databaseVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L77">property <b>databaseVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>databaseVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -482,7 +569,7 @@ The MySQL version running on your source database server.
 Possible values are `MYSQL_5_6` and `MYSQL_5_7`.
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstance-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L52">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L81">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -490,7 +577,7 @@ Possible values are `MYSQL_5_6` and `MYSQL_5_7`.
 The externally accessible IPv4 address for the source database server.
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -499,7 +586,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstance-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L56">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L85">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -507,7 +594,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the source representation instance. Use any valid Cloud SQL instance name.
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstance-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L61">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L90">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -516,7 +603,7 @@ The externally accessible port for the source database server.
 Defaults to 3306.
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstance-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L66">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L95">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -525,7 +612,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstance-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L71">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L100">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -534,7 +621,7 @@ The Region in which the created instance should reside.
 If it is not provided, the provider region is used.
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L45">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -543,7 +630,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SslCert" data-link-title="SslCert">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L33">
         Resource <strong>SslCert</strong>
     </a>
 </h3>
@@ -552,8 +639,31 @@ deployments.
 
 Creates a new Google SQL SSL Cert on a Google SQL Instance. For more information, see the [official documentation](https://cloud.google.com/sql/), or the [JSON API](https://cloud.google.com/sql/docs/mysql/admin-api/v1beta4/sslCerts).
 
+#### Example Usage
+
+Example creating a SQL Client Certificate.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * as random from "@pulumi/random";
+
+const dbNameSuffix = new random.RandomId("dbNameSuffix", {byteLength: 4});
+const master = new gcp.sql.DatabaseInstance("master", {settings: {
+    tier: "db-f1-micro",
+}});
+const clientCert = new gcp.sql.SslCert("clientCert", {
+    commonName: "client-name",
+    instance: master.name,
+});
+```
+
+#### Import
+
+Since the contents of the certificate cannot be accessed after its creation, this resource cannot be imported.
+
 <h4 class="pdoc-member-header" id="SslCert-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L82"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L105"> <b>constructor</b></a>
 </h4>
 
 
@@ -567,7 +677,7 @@ Create a SslCert resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SslCert-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -578,14 +688,14 @@ Get an existing SslCert resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SslCert-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L10">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SslCert-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L31">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -596,7 +706,7 @@ Returns true if the given object is an instance of SslCert.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SslCert-cert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L41">property <b>cert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L64">property <b>cert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -604,7 +714,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The actual certificate data for this client certificate.
 
 <h4 class="pdoc-member-header" id="SslCert-certSerialNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L45">property <b>certSerialNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L68">property <b>certSerialNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certSerialNumber: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -612,7 +722,7 @@ The actual certificate data for this client certificate.
 The serial number extracted from the certificate data.
 
 <h4 class="pdoc-member-header" id="SslCert-commonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L50">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L73">property <b>commonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>commonName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -621,7 +731,7 @@ The common name to be used in the certificate to identify the
 client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SslCert-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L55">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L78">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -630,7 +740,7 @@ The time when the certificate was created in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.
 
 <h4 class="pdoc-member-header" id="SslCert-expirationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L60">property <b>expirationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L83">property <b>expirationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expirationTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -639,7 +749,7 @@ The time when the certificate expires in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.
 
 <h4 class="pdoc-member-header" id="SslCert-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L10">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -648,7 +758,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SslCert-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L65">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L88">property <b>instance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -657,7 +767,7 @@ The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SslCert-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L69">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L92">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -665,7 +775,7 @@ forces a new resource to be created.
 The private key associated with the client certificate.
 
 <h4 class="pdoc-member-header" id="SslCert-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L74">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L97">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -674,7 +784,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="SslCert-serverCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L78">property <b>serverCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L101">property <b>serverCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverCaCert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -682,7 +792,7 @@ is not provided, the provider project is used.
 The CA cert of the server this client cert was generated from.
 
 <h4 class="pdoc-member-header" id="SslCert-sha1Fingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L82">property <b>sha1Fingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L105">property <b>sha1Fingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sha1Fingerprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -690,7 +800,7 @@ The CA cert of the server this client cert was generated from.
 The SHA1 Fingerprint of the certificate.
 
 <h4 class="pdoc-member-header" id="SslCert-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L10">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -699,7 +809,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="User" data-link-title="User">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L44">
         Resource <strong>User</strong>
     </a>
 </h3>
@@ -708,8 +818,42 @@ deployments.
 
 Creates a new Google SQL User on a Google SQL User Instance. For more information, see the [official documentation](https://cloud.google.com/sql/), or the [JSON API](https://cloud.google.com/sql/docs/admin-api/v1beta4/users).
 
+#### Example Usage
+
+Example creating a SQL User.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * as random from "@pulumi/random";
+
+const dbNameSuffix = new random.RandomId("dbNameSuffix", {byteLength: 4});
+const master = new gcp.sql.DatabaseInstance("master", {settings: {
+    tier: "db-f1-micro",
+}});
+const users = new gcp.sql.User("users", {
+    instance: master.name,
+    host: "me.com",
+    password: "changeme",
+});
+```
+
+#### Import
+
+SQL users for MySQL databases can be imported using the `project`, `instance`, `host` and `name`, e.g.
+
+```sh
+ $ pulumi import gcp:sql/user:User users my-project/master-instance/my-domain.com/me
+```
+
+ SQL users for PostgreSQL databases can be imported using the `project`, `instance` and `name`, e.g.
+
+```sh
+ $ pulumi import gcp:sql/user:User users my-project/master-instance/me
+```
+
 <h4 class="pdoc-member-header" id="User-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L63"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L103"> <b>constructor</b></a>
 </h4>
 
 
@@ -723,7 +867,7 @@ Create a User resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="User-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -734,14 +878,14 @@ Get an existing User resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="User-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L10">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="User-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L31">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -751,8 +895,18 @@ properties used to qualify the lookup.
 Returns true if the given object is an instance of User.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
+<h4 class="pdoc-member-header" id="User-deletionPolicy">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L77">property <b>deletionPolicy</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>deletionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The deletion policy for the user.
+Setting `ABANDON` allows the resource to be abandoned rather than deleted. This is useful
+for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
+
 <h4 class="pdoc-member-header" id="User-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L43">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L83">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -762,7 +916,7 @@ for MySQL instances. Don't set this field for PostgreSQL instances.
 Can be an IP address. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="User-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L10">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -771,7 +925,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="User-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L48">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L88">property <b>instance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -780,7 +934,7 @@ The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="User-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L53">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L93">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -789,7 +943,7 @@ The name of the user. Changing this forces a new resource
 to be created.
 
 <h4 class="pdoc-member-header" id="User-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L58">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L98">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -798,7 +952,7 @@ The password for the user. Can be updated. For Postgres
 instances this is a Required field.
 
 <h4 class="pdoc-member-header" id="User-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L63">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L103">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -807,7 +961,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="User-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L10">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -818,7 +972,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getCaCerts" data-link-title="getCaCerts">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getCaCerts.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getCaCerts.ts#L14">
         Function <strong>getCaCerts</strong>
     </a>
 </h3>
@@ -833,7 +987,7 @@ and
 [API](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/instances/listServerCas).
 
 <h3 class="pdoc-module-header" id="getDatabaseInstance" data-link-title="getDatabaseInstance">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L22">
         Function <strong>getDatabaseInstance</strong>
     </a>
 </h3>
@@ -844,10 +998,21 @@ and
 
 Use this data source to get information about a Cloud SQL instance
 
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const qa = gcp.sql.getDatabaseInstance({
+    name: google_sql_database_instance.master.name,
+});
+```
+
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DatabaseArgs" data-link-title="DatabaseArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L162">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L201">
         interface <strong>DatabaseArgs</strong>
     </a>
 </h3>
@@ -857,7 +1022,7 @@ Use this data source to get information about a Cloud SQL instance
 The set of arguments for constructing a Database resource.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-charset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L170">property <b>charset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L209">property <b>charset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>charset?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -869,7 +1034,7 @@ for more details and supported values. Postgres databases only support
 a value of `UTF8` at creation time.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-collation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L178">property <b>collation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L217">property <b>collation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>collation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -881,7 +1046,7 @@ for more details and supported values. Postgres databases only support
 a value of `en_US.UTF8` at creation time.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L183">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L222">property <b>instance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -890,7 +1055,7 @@ The name of the Cloud SQL instance. This does not include the project
 ID.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L188">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L227">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -899,7 +1064,7 @@ The name of the database in the Cloud SQL instance.
 This does not include the project ID or instance name.
 
 <h4 class="pdoc-member-header" id="DatabaseArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L193">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L232">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -908,7 +1073,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="DatabaseInstanceArgs" data-link-title="DatabaseInstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L292">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L310">
         interface <strong>DatabaseInstanceArgs</strong>
     </a>
 </h3>
@@ -918,7 +1083,7 @@ If it is not provided, the provider project is used.
 The set of arguments for constructing a DatabaseInstance resource.
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceArgs-databaseVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L301">property <b>databaseVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L319">property <b>databaseVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -931,7 +1096,7 @@ SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
 includes an up-to-date reference of supported versions.
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceArgs-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L305">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L323">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -939,7 +1104,7 @@ includes an up-to-date reference of supported versions.
 Used to block Terraform from deleting a SQL Instance.
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceArgs-encryptionKeyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L316">property <b>encryptionKeyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L334">property <b>encryptionKeyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptionKeyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -954,7 +1119,7 @@ That service account needs the `Cloud KMS > Cloud KMS CryptoKey Encrypter/Decryp
 key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#grantkey).
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceArgs-masterInstanceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L322">property <b>masterInstanceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L340">property <b>masterInstanceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterInstanceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -964,7 +1129,7 @@ the master in the replication setup. Note, this requires the master to have
 `binaryLogEnabled` set, as well as existing backups.
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L326">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L344">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -972,7 +1137,7 @@ the master in the replication setup. Note, this requires the master to have
 A name for this whitelist entry.
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L331">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L349">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -981,7 +1146,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L340">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L358">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -994,7 +1159,7 @@ region is not supported with Cloud SQL. If you choose not to provide the `region
 make sure you understand this.
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceArgs-replicaConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L345">property <b>replicaConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L363">property <b>replicaConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicaConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceReplicaConfiguration'>DatabaseInstanceReplicaConfiguration</a>&gt;;</code></pre>
@@ -1003,7 +1168,7 @@ The configuration for replication. The
 configuration is detailed below.
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceArgs-rootPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L349">property <b>rootPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L367">property <b>rootPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1011,7 +1176,7 @@ configuration is detailed below.
 Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceArgs-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L354">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L372">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceSettings'>DatabaseInstanceSettings</a>&gt;;</code></pre>
@@ -1020,7 +1185,7 @@ The settings to use for the database. The
 configuration is detailed below.
 
 <h3 class="pdoc-module-header" id="DatabaseInstanceState" data-link-title="DatabaseInstanceState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L196">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L214">
         interface <strong>DatabaseInstanceState</strong>
     </a>
 </h3>
@@ -1030,7 +1195,7 @@ configuration is detailed below.
 Input properties used for looking up and filtering DatabaseInstance resources.
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceState-connectionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L201">property <b>connectionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L219">property <b>connectionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1039,7 +1204,7 @@ The connection name of the instance to be used in
 connection strings. For example, when connecting with [Cloud SQL Proxy](https://cloud.google.com/sql/docs/mysql/connect-admin-proxy).
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceState-databaseVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L210">property <b>databaseVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L228">property <b>databaseVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1052,7 +1217,7 @@ SQL Server (beta) version to use. Supported values include `MYSQL_5_6`,
 includes an up-to-date reference of supported versions.
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceState-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L214">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L232">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1060,7 +1225,7 @@ includes an up-to-date reference of supported versions.
 Used to block Terraform from deleting a SQL Instance.
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceState-encryptionKeyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L225">property <b>encryptionKeyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L243">property <b>encryptionKeyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptionKeyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1075,7 +1240,7 @@ That service account needs the `Cloud KMS > Cloud KMS CryptoKey Encrypter/Decryp
 key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#grantkey).
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceState-firstIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L229">property <b>firstIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L247">property <b>firstIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firstIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1083,12 +1248,12 @@ key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-c
 The first IPv4 address of any type assigned.
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceState-ipAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L230">property <b>ipAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L248">property <b>ipAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceIpAddress'>DatabaseInstanceIpAddress</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DatabaseInstanceState-masterInstanceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L236">property <b>masterInstanceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L254">property <b>masterInstanceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterInstanceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1098,7 +1263,7 @@ the master in the replication setup. Note, this requires the master to have
 `binaryLogEnabled` set, as well as existing backups.
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L240">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L258">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1106,7 +1271,7 @@ the master in the replication setup. Note, this requires the master to have
 A name for this whitelist entry.
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceState-privateIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L244">property <b>privateIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L262">property <b>privateIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1114,7 +1279,7 @@ A name for this whitelist entry.
 The first private (`PRIVATE`) IPv4 address assigned.
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L249">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L267">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1123,7 +1288,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceState-publicIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L253">property <b>publicIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L271">property <b>publicIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1131,7 +1296,7 @@ is not provided, the provider project is used.
 The first public (`PRIMARY`) IPv4 address assigned.
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L262">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L280">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1144,7 +1309,7 @@ region is not supported with Cloud SQL. If you choose not to provide the `region
 make sure you understand this.
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceState-replicaConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L267">property <b>replicaConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L285">property <b>replicaConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicaConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceReplicaConfiguration'>DatabaseInstanceReplicaConfiguration</a>&gt;;</code></pre>
@@ -1153,7 +1318,7 @@ The configuration for replication. The
 configuration is detailed below.
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceState-rootPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L271">property <b>rootPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L289">property <b>rootPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1161,7 +1326,7 @@ configuration is detailed below.
 Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceState-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L275">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L293">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1169,12 +1334,12 @@ Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreS
 The URI of the created resource.
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceState-serverCaCerts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L276">property <b>serverCaCerts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L294">property <b>serverCaCerts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverCaCerts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceServerCaCert'>DatabaseInstanceServerCaCert</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="DatabaseInstanceState-serviceAccountEmailAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L281">property <b>serviceAccountEmailAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L299">property <b>serviceAccountEmailAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountEmailAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1183,7 +1348,7 @@ The service account email address assigned to the
 instance.
 
 <h4 class="pdoc-member-header" id="DatabaseInstanceState-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/databaseInstance.ts#L286">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/databaseInstance.ts#L304">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceSettings'>DatabaseInstanceSettings</a>&gt;;</code></pre>
@@ -1192,7 +1357,7 @@ The settings to use for the database. The
 configuration is detailed below.
 
 <h3 class="pdoc-module-header" id="DatabaseState" data-link-title="DatabaseState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L121">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L160">
         interface <strong>DatabaseState</strong>
     </a>
 </h3>
@@ -1202,7 +1367,7 @@ configuration is detailed below.
 Input properties used for looking up and filtering Database resources.
 
 <h4 class="pdoc-member-header" id="DatabaseState-charset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L129">property <b>charset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L168">property <b>charset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>charset?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1214,7 +1379,7 @@ for more details and supported values. Postgres databases only support
 a value of `UTF8` at creation time.
 
 <h4 class="pdoc-member-header" id="DatabaseState-collation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L137">property <b>collation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L176">property <b>collation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>collation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1226,7 +1391,7 @@ for more details and supported values. Postgres databases only support
 a value of `en_US.UTF8` at creation time.
 
 <h4 class="pdoc-member-header" id="DatabaseState-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L142">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L181">property <b>instance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1235,7 +1400,7 @@ The name of the Cloud SQL instance. This does not include the project
 ID.
 
 <h4 class="pdoc-member-header" id="DatabaseState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L147">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L186">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1244,7 +1409,7 @@ The name of the database in the Cloud SQL instance.
 This does not include the project ID or instance name.
 
 <h4 class="pdoc-member-header" id="DatabaseState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L152">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L191">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1253,7 +1418,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="DatabaseState-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/database.ts#L156">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/database.ts#L195">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1261,7 +1426,7 @@ If it is not provided, the provider project is used.
 The URI of the created resource.
 
 <h3 class="pdoc-module-header" id="GetCaCertsArgs" data-link-title="GetCaCertsArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getCaCerts.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getCaCerts.ts#L31">
         interface <strong>GetCaCertsArgs</strong>
     </a>
 </h3>
@@ -1271,7 +1436,7 @@ The URI of the created resource.
 A collection of arguments for invoking getCaCerts.
 
 <h4 class="pdoc-member-header" id="GetCaCertsArgs-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getCaCerts.ts#L36">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getCaCerts.ts#L35">property <b>instance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instance: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1279,7 +1444,7 @@ A collection of arguments for invoking getCaCerts.
 The name or self link of the instance.
 
 <h4 class="pdoc-member-header" id="GetCaCertsArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getCaCerts.ts#L40">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getCaCerts.ts#L39">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1287,7 +1452,7 @@ The name or self link of the instance.
 The ID of the project in which the resource belongs. If `project` is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="GetCaCertsResult" data-link-title="GetCaCertsResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getCaCerts.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getCaCerts.ts#L45">
         interface <strong>GetCaCertsResult</strong>
     </a>
 </h3>
@@ -1297,7 +1462,7 @@ The ID of the project in which the resource belongs. If `project` is not provide
 A collection of values returned by getCaCerts.
 
 <h4 class="pdoc-member-header" id="GetCaCertsResult-activeVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getCaCerts.ts#L50">property <b>activeVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getCaCerts.ts#L49">property <b>activeVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activeVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1305,7 +1470,7 @@ A collection of values returned by getCaCerts.
 SHA1 fingerprint of the currently active CA certificate.
 
 <h4 class="pdoc-member-header" id="GetCaCertsResult-certs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getCaCerts.ts#L54">property <b>certs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getCaCerts.ts#L53">property <b>certs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certs: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetCaCertsCert'>GetCaCertsCert</a>[];</code></pre>
@@ -1313,7 +1478,7 @@ SHA1 fingerprint of the currently active CA certificate.
 A list of server CA certificates for the instance. Each contains:
 
 <h4 class="pdoc-member-header" id="GetCaCertsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getCaCerts.ts#L58">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getCaCerts.ts#L57">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1321,17 +1486,17 @@ A list of server CA certificates for the instance. Each contains:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetCaCertsResult-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getCaCerts.ts#L59">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getCaCerts.ts#L58">property <b>instance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instance: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetCaCertsResult-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getCaCerts.ts#L60">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getCaCerts.ts#L59">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetDatabaseInstanceArgs" data-link-title="GetDatabaseInstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L39">
         interface <strong>GetDatabaseInstanceArgs</strong>
     </a>
 </h3>
@@ -1341,7 +1506,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getDatabaseInstance.
 
 <h4 class="pdoc-member-header" id="GetDatabaseInstanceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L33">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L43">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1349,7 +1514,7 @@ A collection of arguments for invoking getDatabaseInstance.
 The name of the instance.
 
 <h4 class="pdoc-member-header" id="GetDatabaseInstanceArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L37">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L47">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1357,7 +1522,7 @@ The name of the instance.
 The ID of the project in which the resource belongs.
 
 <h3 class="pdoc-module-header" id="GetDatabaseInstanceResult" data-link-title="GetDatabaseInstanceResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L53">
         interface <strong>GetDatabaseInstanceResult</strong>
     </a>
 </h3>
@@ -1367,7 +1532,7 @@ The ID of the project in which the resource belongs.
 A collection of values returned by getDatabaseInstance.
 
 <h4 class="pdoc-member-header" id="GetDatabaseInstanceResult-connectionName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L47">property <b>connectionName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L57">property <b>connectionName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1375,7 +1540,7 @@ A collection of values returned by getDatabaseInstance.
 The connection name of the instance to be used in connection strings.
 
 <h4 class="pdoc-member-header" id="GetDatabaseInstanceResult-databaseVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L51">property <b>databaseVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L61">property <b>databaseVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1383,12 +1548,12 @@ The connection name of the instance to be used in connection strings.
 The MySQL, PostgreSQL or SQL Server (beta) version to use.
 
 <h4 class="pdoc-member-header" id="GetDatabaseInstanceResult-deletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L52">property <b>deletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L62">property <b>deletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionProtection: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDatabaseInstanceResult-encryptionKeyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L56">property <b>encryptionKeyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L66">property <b>encryptionKeyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>encryptionKeyName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1396,7 +1561,7 @@ The MySQL, PostgreSQL or SQL Server (beta) version to use.
 The full path to the encryption key used for the CMEK disk encryption.
 
 <h4 class="pdoc-member-header" id="GetDatabaseInstanceResult-firstIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L60">property <b>firstIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L70">property <b>firstIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firstIpAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1404,7 +1569,7 @@ The full path to the encryption key used for the CMEK disk encryption.
 The first IPv4 address of any type assigned.
 
 <h4 class="pdoc-member-header" id="GetDatabaseInstanceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L64">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L74">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1412,12 +1577,12 @@ The first IPv4 address of any type assigned.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDatabaseInstanceResult-ipAddresses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L65">property <b>ipAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L75">property <b>ipAddresses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetDatabaseInstanceIpAddress'>GetDatabaseInstanceIpAddress</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetDatabaseInstanceResult-masterInstanceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L70">property <b>masterInstanceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L80">property <b>masterInstanceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterInstanceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1426,7 +1591,7 @@ The name of the instance that will act as
 the master in the replication setup.
 
 <h4 class="pdoc-member-header" id="GetDatabaseInstanceResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L74">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L84">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1434,7 +1599,7 @@ the master in the replication setup.
 A name for this whitelist entry.
 
 <h4 class="pdoc-member-header" id="GetDatabaseInstanceResult-privateIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L78">property <b>privateIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L88">property <b>privateIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateIpAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1442,12 +1607,12 @@ A name for this whitelist entry.
 The first private (`PRIVATE`) IPv4 address assigned.
 
 <h4 class="pdoc-member-header" id="GetDatabaseInstanceResult-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L79">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L89">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDatabaseInstanceResult-publicIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L83">property <b>publicIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L93">property <b>publicIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicIpAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1455,12 +1620,12 @@ The first private (`PRIVATE`) IPv4 address assigned.
 The first public (`PRIMARY`) IPv4 address assigned.
 
 <h4 class="pdoc-member-header" id="GetDatabaseInstanceResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L84">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L94">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDatabaseInstanceResult-replicaConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L89">property <b>replicaConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L99">property <b>replicaConfigurations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicaConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetDatabaseInstanceReplicaConfiguration'>GetDatabaseInstanceReplicaConfiguration</a>[];</code></pre>
@@ -1469,7 +1634,7 @@ The configuration for replication. The
 configuration is detailed below.
 
 <h4 class="pdoc-member-header" id="GetDatabaseInstanceResult-rootPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L93">property <b>rootPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L103">property <b>rootPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootPassword: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1477,7 +1642,7 @@ configuration is detailed below.
 Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
 
 <h4 class="pdoc-member-header" id="GetDatabaseInstanceResult-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L97">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L107">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfLink: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1485,12 +1650,12 @@ Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreS
 The URI of the created resource.
 
 <h4 class="pdoc-member-header" id="GetDatabaseInstanceResult-serverCaCerts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L98">property <b>serverCaCerts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L108">property <b>serverCaCerts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverCaCerts: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetDatabaseInstanceServerCaCert'>GetDatabaseInstanceServerCaCert</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetDatabaseInstanceResult-serviceAccountEmailAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L102">property <b>serviceAccountEmailAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L112">property <b>serviceAccountEmailAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccountEmailAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1498,7 +1663,7 @@ The URI of the created resource.
 The service account email address assigned to the instance.
 
 <h4 class="pdoc-member-header" id="GetDatabaseInstanceResult-settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/getDatabaseInstance.ts#L107">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/getDatabaseInstance.ts#L117">property <b>settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetDatabaseInstanceSetting'>GetDatabaseInstanceSetting</a>[];</code></pre>
@@ -1507,7 +1672,7 @@ The settings to use for the database. The
 configuration is detailed below.
 
 <h3 class="pdoc-module-header" id="SourceRepresentationInstanceArgs" data-link-title="SourceRepresentationInstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L154">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L183">
         interface <strong>SourceRepresentationInstanceArgs</strong>
     </a>
 </h3>
@@ -1517,7 +1682,7 @@ configuration is detailed below.
 The set of arguments for constructing a SourceRepresentationInstance resource.
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstanceArgs-databaseVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L159">property <b>databaseVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L188">property <b>databaseVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1526,7 +1691,7 @@ The MySQL version running on your source database server.
 Possible values are `MYSQL_5_6` and `MYSQL_5_7`.
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstanceArgs-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L163">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L192">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1534,7 +1699,7 @@ Possible values are `MYSQL_5_6` and `MYSQL_5_7`.
 The externally accessible IPv4 address for the source database server.
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstanceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L167">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L196">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1542,7 +1707,7 @@ The externally accessible IPv4 address for the source database server.
 The name of the source representation instance. Use any valid Cloud SQL instance name.
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstanceArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L172">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L201">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1551,7 +1716,7 @@ The externally accessible port for the source database server.
 Defaults to 3306.
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstanceArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L177">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L206">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1560,7 +1725,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstanceArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L182">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L211">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1569,7 +1734,7 @@ The Region in which the created instance should reside.
 If it is not provided, the provider region is used.
 
 <h3 class="pdoc-module-header" id="SourceRepresentationInstanceState" data-link-title="SourceRepresentationInstanceState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L120">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L149">
         interface <strong>SourceRepresentationInstanceState</strong>
     </a>
 </h3>
@@ -1579,7 +1744,7 @@ If it is not provided, the provider region is used.
 Input properties used for looking up and filtering SourceRepresentationInstance resources.
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstanceState-databaseVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L125">property <b>databaseVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L154">property <b>databaseVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1588,7 +1753,7 @@ The MySQL version running on your source database server.
 Possible values are `MYSQL_5_6` and `MYSQL_5_7`.
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstanceState-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L129">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L158">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1596,7 +1761,7 @@ Possible values are `MYSQL_5_6` and `MYSQL_5_7`.
 The externally accessible IPv4 address for the source database server.
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstanceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L133">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L162">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1604,7 +1769,7 @@ The externally accessible IPv4 address for the source database server.
 The name of the source representation instance. Use any valid Cloud SQL instance name.
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstanceState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L138">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L167">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1613,7 +1778,7 @@ The externally accessible port for the source database server.
 Defaults to 3306.
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstanceState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L143">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L172">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1622,7 +1787,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="SourceRepresentationInstanceState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sourceRepresentationInstance.ts#L148">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sourceRepresentationInstance.ts#L177">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1631,7 +1796,7 @@ The Region in which the created instance should reside.
 If it is not provided, the provider region is used.
 
 <h3 class="pdoc-module-header" id="SslCertArgs" data-link-title="SslCertArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L190">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L213">
         interface <strong>SslCertArgs</strong>
     </a>
 </h3>
@@ -1641,7 +1806,7 @@ If it is not provided, the provider region is used.
 The set of arguments for constructing a SslCert resource.
 
 <h4 class="pdoc-member-header" id="SslCertArgs-commonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L195">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L218">property <b>commonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commonName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1650,7 +1815,7 @@ The common name to be used in the certificate to identify the
 client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SslCertArgs-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L200">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L223">property <b>instance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1659,7 +1824,7 @@ The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SslCertArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L205">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L228">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1668,7 +1833,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="SslCertState" data-link-title="SslCertState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L162">
         interface <strong>SslCertState</strong>
     </a>
 </h3>
@@ -1678,7 +1843,7 @@ is not provided, the provider project is used.
 Input properties used for looking up and filtering SslCert resources.
 
 <h4 class="pdoc-member-header" id="SslCertState-cert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L143">property <b>cert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L166">property <b>cert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1686,7 +1851,7 @@ Input properties used for looking up and filtering SslCert resources.
 The actual certificate data for this client certificate.
 
 <h4 class="pdoc-member-header" id="SslCertState-certSerialNumber">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L147">property <b>certSerialNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L170">property <b>certSerialNumber</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certSerialNumber?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1694,7 +1859,7 @@ The actual certificate data for this client certificate.
 The serial number extracted from the certificate data.
 
 <h4 class="pdoc-member-header" id="SslCertState-commonName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L152">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L175">property <b>commonName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commonName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1703,7 +1868,7 @@ The common name to be used in the certificate to identify the
 client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SslCertState-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L157">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L180">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1712,7 +1877,7 @@ The time when the certificate was created in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.
 
 <h4 class="pdoc-member-header" id="SslCertState-expirationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L162">property <b>expirationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L185">property <b>expirationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expirationTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1721,7 +1886,7 @@ The time when the certificate expires in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.
 
 <h4 class="pdoc-member-header" id="SslCertState-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L167">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L190">property <b>instance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1730,7 +1895,7 @@ The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="SslCertState-privateKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L171">property <b>privateKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L194">property <b>privateKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1738,7 +1903,7 @@ forces a new resource to be created.
 The private key associated with the client certificate.
 
 <h4 class="pdoc-member-header" id="SslCertState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L176">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L199">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1747,7 +1912,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="SslCertState-serverCaCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L180">property <b>serverCaCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L203">property <b>serverCaCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverCaCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1755,7 +1920,7 @@ is not provided, the provider project is used.
 The CA cert of the server this client cert was generated from.
 
 <h4 class="pdoc-member-header" id="SslCertState-sha1Fingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/sslCert.ts#L184">property <b>sha1Fingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/sslCert.ts#L207">property <b>sha1Fingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sha1Fingerprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1763,7 +1928,7 @@ The CA cert of the server this client cert was generated from.
 The SHA1 Fingerprint of the certificate.
 
 <h3 class="pdoc-module-header" id="UserArgs" data-link-title="UserArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L187">
         interface <strong>UserArgs</strong>
     </a>
 </h3>
@@ -1772,8 +1937,18 @@ The SHA1 Fingerprint of the certificate.
 
 The set of arguments for constructing a User resource.
 
+<h4 class="pdoc-member-header" id="UserArgs-deletionPolicy">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L193">property <b>deletionPolicy</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>deletionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The deletion policy for the user.
+Setting `ABANDON` allows the resource to be abandoned rather than deleted. This is useful
+for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
+
 <h4 class="pdoc-member-header" id="UserArgs-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L145">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L199">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1783,7 +1958,7 @@ for MySQL instances. Don't set this field for PostgreSQL instances.
 Can be an IP address. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="UserArgs-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L150">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L204">property <b>instance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1792,7 +1967,7 @@ The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="UserArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L155">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L209">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1801,7 +1976,7 @@ The name of the user. Changing this forces a new resource
 to be created.
 
 <h4 class="pdoc-member-header" id="UserArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L160">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L214">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1810,7 +1985,7 @@ The password for the user. Can be updated. For Postgres
 instances this is a Required field.
 
 <h4 class="pdoc-member-header" id="UserArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L165">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L219">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1819,7 +1994,7 @@ The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="UserState" data-link-title="UserState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L107">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L149">
         interface <strong>UserState</strong>
     </a>
 </h3>
@@ -1828,8 +2003,18 @@ is not provided, the provider project is used.
 
 Input properties used for looking up and filtering User resources.
 
+<h4 class="pdoc-member-header" id="UserState-deletionPolicy">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L155">property <b>deletionPolicy</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>deletionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The deletion policy for the user.
+Setting `ABANDON` allows the resource to be abandoned rather than deleted. This is useful
+for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
+
 <h4 class="pdoc-member-header" id="UserState-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L113">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L161">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1839,7 +2024,7 @@ for MySQL instances. Don't set this field for PostgreSQL instances.
 Can be an IP address. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="UserState-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L118">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L166">property <b>instance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1848,7 +2033,7 @@ The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="UserState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L123">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L171">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1857,7 +2042,7 @@ The name of the user. Changing this forces a new resource
 to be created.
 
 <h4 class="pdoc-member-header" id="UserState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L128">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L176">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1866,7 +2051,7 @@ The password for the user. Can be updated. For Postgres
 instances this is a Required field.
 
 <h4 class="pdoc-member-header" id="UserState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/sql/user.ts#L133">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/sql/user.ts#L181">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

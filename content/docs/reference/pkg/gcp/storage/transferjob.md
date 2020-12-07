@@ -19,6 +19,328 @@ To get more information about Google Cloud Storage Transfer, see:
 * How-to Guides
     * [Configuring Access to Data Sources and Sinks](https://cloud.google.com/storage-transfer/docs/configure-access)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = Output.Create(Gcp.Storage.GetTransferProjectServieAccount.InvokeAsync(new Gcp.Storage.GetTransferProjectServieAccountArgs
+        {
+            Project = @var.Project,
+        }));
+        var s3_backup_bucketBucket = new Gcp.Storage.Bucket("s3-backup-bucketBucket", new Gcp.Storage.BucketArgs
+        {
+            StorageClass = "NEARLINE",
+            Project = @var.Project,
+        });
+        var s3_backup_bucketBucketIAMMember = new Gcp.Storage.BucketIAMMember("s3-backup-bucketBucketIAMMember", new Gcp.Storage.BucketIAMMemberArgs
+        {
+            Bucket = s3_backup_bucketBucket.Name,
+            Role = "roles/storage.admin",
+            Member = @default.Apply(@default => $"serviceAccount:{@default.Email}"),
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                s3_backup_bucketBucket,
+            },
+        });
+        var s3_bucket_nightly_backup = new Gcp.Storage.TransferJob("s3-bucket-nightly-backup", new Gcp.Storage.TransferJobArgs
+        {
+            Description = "Nightly backup of S3 bucket",
+            Project = @var.Project,
+            TransferSpec = new Gcp.Storage.Inputs.TransferJobTransferSpecArgs
+            {
+                ObjectConditions = new Gcp.Storage.Inputs.TransferJobTransferSpecObjectConditionsArgs
+                {
+                    MaxTimeElapsedSinceLastModification = "600s",
+                    ExcludePrefixes = 
+                    {
+                        "requests.gz",
+                    },
+                },
+                TransferOptions = new Gcp.Storage.Inputs.TransferJobTransferSpecTransferOptionsArgs
+                {
+                    DeleteObjectsUniqueInSink = false,
+                },
+                AwsS3DataSource = new Gcp.Storage.Inputs.TransferJobTransferSpecAwsS3DataSourceArgs
+                {
+                    BucketName = @var.Aws_s3_bucket,
+                    AwsAccessKey = new Gcp.Storage.Inputs.TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs
+                    {
+                        AccessKeyId = @var.Aws_access_key,
+                        SecretAccessKey = @var.Aws_secret_key,
+                    },
+                },
+                GcsDataSink = new Gcp.Storage.Inputs.TransferJobTransferSpecGcsDataSinkArgs
+                {
+                    BucketName = s3_backup_bucketBucket.Name,
+                },
+            },
+            Schedule = new Gcp.Storage.Inputs.TransferJobScheduleArgs
+            {
+                ScheduleStartDate = new Gcp.Storage.Inputs.TransferJobScheduleScheduleStartDateArgs
+                {
+                    Year = 2018,
+                    Month = 10,
+                    Day = 1,
+                },
+                ScheduleEndDate = new Gcp.Storage.Inputs.TransferJobScheduleScheduleEndDateArgs
+                {
+                    Year = 2019,
+                    Month = 1,
+                    Day = 15,
+                },
+                StartTimeOfDay = new Gcp.Storage.Inputs.TransferJobScheduleStartTimeOfDayArgs
+                {
+                    Hours = 23,
+                    Minutes = 30,
+                    Seconds = 0,
+                    Nanos = 0,
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            DependsOn = 
+            {
+                s3_backup_bucketBucketIAMMember,
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/storage"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := _var.Project
+		_default, err := storage.GetTransferProjectServieAccount(ctx, &storage.GetTransferProjectServieAccountArgs{
+			Project: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = storage.NewBucket(ctx, "s3_backup_bucketBucket", &storage.BucketArgs{
+			StorageClass: pulumi.String("NEARLINE"),
+			Project:      pulumi.Any(_var.Project),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = storage.NewBucketIAMMember(ctx, "s3_backup_bucketBucketIAMMember", &storage.BucketIAMMemberArgs{
+			Bucket: s3_backup_bucketBucket.Name,
+			Role:   pulumi.String("roles/storage.admin"),
+			Member: pulumi.String(fmt.Sprintf("%v%v", "serviceAccount:", _default.Email)),
+		}, pulumi.DependsOn([]pulumi.Resource{
+			s3_backup_bucketBucket,
+		}))
+		if err != nil {
+			return err
+		}
+		_, err = storage.NewTransferJob(ctx, "s3_bucket_nightly_backup", &storage.TransferJobArgs{
+			Description: pulumi.String("Nightly backup of S3 bucket"),
+			Project:     pulumi.Any(_var.Project),
+			TransferSpec: &storage.TransferJobTransferSpecArgs{
+				ObjectConditions: &storage.TransferJobTransferSpecObjectConditionsArgs{
+					MaxTimeElapsedSinceLastModification: pulumi.String("600s"),
+					ExcludePrefixes: pulumi.StringArray{
+						pulumi.String("requests.gz"),
+					},
+				},
+				TransferOptions: &storage.TransferJobTransferSpecTransferOptionsArgs{
+					DeleteObjectsUniqueInSink: pulumi.Bool(false),
+				},
+				AwsS3DataSource: &storage.TransferJobTransferSpecAwsS3DataSourceArgs{
+					BucketName: pulumi.Any(_var.Aws_s3_bucket),
+					AwsAccessKey: &storage.TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs{
+						AccessKeyId:     pulumi.Any(_var.Aws_access_key),
+						SecretAccessKey: pulumi.Any(_var.Aws_secret_key),
+					},
+				},
+				GcsDataSink: &storage.TransferJobTransferSpecGcsDataSinkArgs{
+					BucketName: s3_backup_bucketBucket.Name,
+				},
+			},
+			Schedule: &storage.TransferJobScheduleArgs{
+				ScheduleStartDate: &storage.TransferJobScheduleScheduleStartDateArgs{
+					Year:  pulumi.Int(2018),
+					Month: pulumi.Int(10),
+					Day:   pulumi.Int(1),
+				},
+				ScheduleEndDate: &storage.TransferJobScheduleScheduleEndDateArgs{
+					Year:  pulumi.Int(2019),
+					Month: pulumi.Int(1),
+					Day:   pulumi.Int(15),
+				},
+				StartTimeOfDay: &storage.TransferJobScheduleStartTimeOfDayArgs{
+					Hours:   pulumi.Int(23),
+					Minutes: pulumi.Int(30),
+					Seconds: pulumi.Int(0),
+					Nanos:   pulumi.Int(0),
+				},
+			},
+		}, pulumi.DependsOn([]pulumi.Resource{
+			s3_backup_bucketBucketIAMMember,
+		}))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.storage.get_transfer_project_servie_account(project=var["project"])
+s3_backup_bucket_bucket = gcp.storage.Bucket("s3-backup-bucketBucket",
+    storage_class="NEARLINE",
+    project=var["project"])
+s3_backup_bucket_bucket_iam_member = gcp.storage.BucketIAMMember("s3-backup-bucketBucketIAMMember",
+    bucket=s3_backup_bucket_bucket.name,
+    role="roles/storage.admin",
+    member=f"serviceAccount:{default.email}",
+    opts=ResourceOptions(depends_on=[s3_backup_bucket_bucket]))
+s3_bucket_nightly_backup = gcp.storage.TransferJob("s3-bucket-nightly-backup",
+    description="Nightly backup of S3 bucket",
+    project=var["project"],
+    transfer_spec=gcp.storage.TransferJobTransferSpecArgs(
+        object_conditions=gcp.storage.TransferJobTransferSpecObjectConditionsArgs(
+            max_time_elapsed_since_last_modification="600s",
+            exclude_prefixes=["requests.gz"],
+        ),
+        transfer_options=gcp.storage.TransferJobTransferSpecTransferOptionsArgs(
+            delete_objects_unique_in_sink=False,
+        ),
+        aws_s3_data_source=gcp.storage.TransferJobTransferSpecAwsS3DataSourceArgs(
+            bucket_name=var["aws_s3_bucket"],
+            aws_access_key=gcp.storage.TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs(
+                access_key_id=var["aws_access_key"],
+                secret_access_key=var["aws_secret_key"],
+            ),
+        ),
+        gcs_data_sink=gcp.storage.TransferJobTransferSpecGcsDataSinkArgs(
+            bucket_name=s3_backup_bucket_bucket.name,
+        ),
+    ),
+    schedule=gcp.storage.TransferJobScheduleArgs(
+        schedule_start_date=gcp.storage.TransferJobScheduleScheduleStartDateArgs(
+            year=2018,
+            month=10,
+            day=1,
+        ),
+        schedule_end_date=gcp.storage.TransferJobScheduleScheduleEndDateArgs(
+            year=2019,
+            month=1,
+            day=15,
+        ),
+        start_time_of_day=gcp.storage.TransferJobScheduleStartTimeOfDayArgs(
+            hours=23,
+            minutes=30,
+            seconds=0,
+            nanos=0,
+        ),
+    ),
+    opts=ResourceOptions(depends_on=[s3_backup_bucket_bucket_iam_member]))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default = gcp.storage.getTransferProjectServieAccount({
+    project: _var.project,
+});
+const s3_backup_bucketBucket = new gcp.storage.Bucket("s3-backup-bucketBucket", {
+    storageClass: "NEARLINE",
+    project: _var.project,
+});
+const s3_backup_bucketBucketIAMMember = new gcp.storage.BucketIAMMember("s3-backup-bucketBucketIAMMember", {
+    bucket: s3_backup_bucketBucket.name,
+    role: "roles/storage.admin",
+    member: _default.then(_default => `serviceAccount:${_default.email}`),
+}, {
+    dependsOn: [s3_backup_bucketBucket],
+});
+const s3_bucket_nightly_backup = new gcp.storage.TransferJob("s3-bucket-nightly-backup", {
+    description: "Nightly backup of S3 bucket",
+    project: _var.project,
+    transferSpec: {
+        objectConditions: {
+            maxTimeElapsedSinceLastModification: "600s",
+            excludePrefixes: ["requests.gz"],
+        },
+        transferOptions: {
+            deleteObjectsUniqueInSink: false,
+        },
+        awsS3DataSource: {
+            bucketName: _var.aws_s3_bucket,
+            awsAccessKey: {
+                accessKeyId: _var.aws_access_key,
+                secretAccessKey: _var.aws_secret_key,
+            },
+        },
+        gcsDataSink: {
+            bucketName: s3_backup_bucketBucket.name,
+        },
+    },
+    schedule: {
+        scheduleStartDate: {
+            year: 2018,
+            month: 10,
+            day: 1,
+        },
+        scheduleEndDate: {
+            year: 2019,
+            month: 1,
+            day: 15,
+        },
+        startTimeOfDay: {
+            hours: 23,
+            minutes: 30,
+            seconds: 0,
+            nanos: 0,
+        },
+    },
+}, {
+    dependsOn: [s3_backup_bucketBucketIAMMember],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a TransferJob Resource {#create}
@@ -3282,6 +3604,16 @@ is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+Storage buckets can be imported using the Transfer Job's `project` and `name` without the `transferJob/` prefix, e.g.
+
+```sh
+ $ pulumi import gcp:storage/transferJob:TransferJob nightly-backup-transfer-job my-project-1asd32/8422144862922355674
+```
 
 
 

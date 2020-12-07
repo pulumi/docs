@@ -18,6 +18,192 @@ To get more information about Repository, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/source-repositories/)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Sourcerepo Repository Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_repo = new Gcp.SourceRepo.Repository("my-repo", new Gcp.SourceRepo.RepositoryArgs
+        {
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sourcerepo"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := sourcerepo.NewRepository(ctx, "my_repo", nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_repo = gcp.sourcerepo.Repository("my-repo")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my_repo = new gcp.sourcerepo.Repository("my-repo", {});
+```
+
+{{% /example %}}
+
+### Sourcerepo Repository Full
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var test_account = new Gcp.ServiceAccount.Account("test-account", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "my-account",
+            DisplayName = "Test Service Account",
+        });
+        var topic = new Gcp.PubSub.Topic("topic", new Gcp.PubSub.TopicArgs
+        {
+        });
+        var my_repo = new Gcp.SourceRepo.Repository("my-repo", new Gcp.SourceRepo.RepositoryArgs
+        {
+            PubsubConfigs = 
+            {
+                new Gcp.SourceRepo.Inputs.RepositoryPubsubConfigArgs
+                {
+                    Topic = topic.Id,
+                    MessageFormat = "JSON",
+                    ServiceAccountEmail = test_account.Email,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/serviceAccount"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sourcerepo"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := serviceAccount.NewAccount(ctx, "test_account", &serviceAccount.AccountArgs{
+			AccountId:   pulumi.String("my-account"),
+			DisplayName: pulumi.String("Test Service Account"),
+		})
+		if err != nil {
+			return err
+		}
+		topic, err := pubsub.NewTopic(ctx, "topic", nil)
+		if err != nil {
+			return err
+		}
+		_, err = sourcerepo.NewRepository(ctx, "my_repo", &sourcerepo.RepositoryArgs{
+			PubsubConfigs: sourcerepo.RepositoryPubsubConfigArray{
+				&sourcerepo.RepositoryPubsubConfigArgs{
+					Topic:               topic.ID(),
+					MessageFormat:       pulumi.String("JSON"),
+					ServiceAccountEmail: test_account.Email,
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+test_account = gcp.service_account.Account("test-account",
+    account_id="my-account",
+    display_name="Test Service Account")
+topic = gcp.pubsub.Topic("topic")
+my_repo = gcp.sourcerepo.Repository("my-repo", pubsub_configs=[gcp.sourcerepo.RepositoryPubsubConfigArgs(
+    topic=topic.id,
+    message_format="JSON",
+    service_account_email=test_account.email,
+)])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const test_account = new gcp.serviceAccount.Account("test-account", {
+    accountId: "my-account",
+    displayName: "Test Service Account",
+});
+const topic = new gcp.pubsub.Topic("topic", {});
+const my_repo = new gcp.sourcerepo.Repository("my-repo", {pubsubConfigs: [{
+    topic: topic.id,
+    messageFormat: "JSON",
+    serviceAccountEmail: test_account.email,
+}]});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Repository Resource {#create}
@@ -1147,6 +1333,20 @@ If unspecified, it defaults to the compute engine default service account.
 
 
 
+
+
+## Import
+
+
+Repository can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:sourcerepo/repository:Repository default projects/{{project}}/repos/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:sourcerepo/repository:Repository default {{name}}
+```
 
 
 

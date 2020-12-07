@@ -23,6 +23,649 @@ To get more information about Autoscaler, see:
 * How-to Guides
     * [Autoscaling Groups of Instances](https://cloud.google.com/compute/docs/autoscaler/)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Autoscaler Single Instance
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var debian9 = Output.Create(Gcp.Compute.GetImage.InvokeAsync(new Gcp.Compute.GetImageArgs
+        {
+            Family = "debian-9",
+            Project = "debian-cloud",
+        }));
+        var defaultInstanceTemplate = new Gcp.Compute.InstanceTemplate("defaultInstanceTemplate", new Gcp.Compute.InstanceTemplateArgs
+        {
+            MachineType = "e2-medium",
+            CanIpForward = false,
+            Tags = 
+            {
+                "foo",
+                "bar",
+            },
+            Disks = 
+            {
+                new Gcp.Compute.Inputs.InstanceTemplateDiskArgs
+                {
+                    SourceImage = debian9.Apply(debian9 => debian9.Id),
+                },
+            },
+            NetworkInterfaces = 
+            {
+                new Gcp.Compute.Inputs.InstanceTemplateNetworkInterfaceArgs
+                {
+                    Network = "default",
+                },
+            },
+            Metadata = 
+            {
+                { "foo", "bar" },
+            },
+            ServiceAccount = new Gcp.Compute.Inputs.InstanceTemplateServiceAccountArgs
+            {
+                Scopes = 
+                {
+                    "userinfo-email",
+                    "compute-ro",
+                    "storage-ro",
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var defaultTargetPool = new Gcp.Compute.TargetPool("defaultTargetPool", new Gcp.Compute.TargetPoolArgs
+        {
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var defaultInstanceGroupManager = new Gcp.Compute.InstanceGroupManager("defaultInstanceGroupManager", new Gcp.Compute.InstanceGroupManagerArgs
+        {
+            Zone = "us-central1-f",
+            Versions = 
+            {
+                new Gcp.Compute.Inputs.InstanceGroupManagerVersionArgs
+                {
+                    InstanceTemplate = defaultInstanceTemplate.Id,
+                    Name = "primary",
+                },
+            },
+            TargetPools = 
+            {
+                defaultTargetPool.Id,
+            },
+            BaseInstanceName = "autoscaler-sample",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var defaultAutoscaler = new Gcp.Compute.Autoscaler("defaultAutoscaler", new Gcp.Compute.AutoscalerArgs
+        {
+            Zone = "us-central1-f",
+            Target = defaultInstanceGroupManager.Id,
+            AutoscalingPolicy = new Gcp.Compute.Inputs.AutoscalerAutoscalingPolicyArgs
+            {
+                MaxReplicas = 5,
+                MinReplicas = 1,
+                CooldownPeriod = 60,
+                Metrics = 
+                {
+                    new Gcp.Compute.Inputs.AutoscalerAutoscalingPolicyMetricArgs
+                    {
+                        Name = "pubsub.googleapis.com/subscription/num_undelivered_messages",
+                        Filter = "resource.type = pubsub_subscription AND resource.label.subscription_id = our-subscription",
+                        SingleInstanceAssignment = 65535,
+                    },
+                },
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "debian-9"
+		opt1 := "debian-cloud"
+		debian9, err := compute.LookupImage(ctx, &compute.LookupImageArgs{
+			Family:  &opt0,
+			Project: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		defaultInstanceTemplate, err := compute.NewInstanceTemplate(ctx, "defaultInstanceTemplate", &compute.InstanceTemplateArgs{
+			MachineType:  pulumi.String("e2-medium"),
+			CanIpForward: pulumi.Bool(false),
+			Tags: pulumi.StringArray{
+				pulumi.String("foo"),
+				pulumi.String("bar"),
+			},
+			Disks: compute.InstanceTemplateDiskArray{
+				&compute.InstanceTemplateDiskArgs{
+					SourceImage: pulumi.String(debian9.Id),
+				},
+			},
+			NetworkInterfaces: compute.InstanceTemplateNetworkInterfaceArray{
+				&compute.InstanceTemplateNetworkInterfaceArgs{
+					Network: pulumi.String("default"),
+				},
+			},
+			Metadata: pulumi.StringMap{
+				"foo": pulumi.String("bar"),
+			},
+			ServiceAccount: &compute.InstanceTemplateServiceAccountArgs{
+				Scopes: pulumi.StringArray{
+					pulumi.String("userinfo-email"),
+					pulumi.String("compute-ro"),
+					pulumi.String("storage-ro"),
+				},
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		defaultTargetPool, err := compute.NewTargetPool(ctx, "defaultTargetPool", nil, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		defaultInstanceGroupManager, err := compute.NewInstanceGroupManager(ctx, "defaultInstanceGroupManager", &compute.InstanceGroupManagerArgs{
+			Zone: pulumi.String("us-central1-f"),
+			Versions: compute.InstanceGroupManagerVersionArray{
+				&compute.InstanceGroupManagerVersionArgs{
+					InstanceTemplate: defaultInstanceTemplate.ID(),
+					Name:             pulumi.String("primary"),
+				},
+			},
+			TargetPools: pulumi.StringArray{
+				defaultTargetPool.ID(),
+			},
+			BaseInstanceName: pulumi.String("autoscaler-sample"),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewAutoscaler(ctx, "defaultAutoscaler", &compute.AutoscalerArgs{
+			Zone:   pulumi.String("us-central1-f"),
+			Target: defaultInstanceGroupManager.ID(),
+			AutoscalingPolicy: &compute.AutoscalerAutoscalingPolicyArgs{
+				MaxReplicas:    pulumi.Int(5),
+				MinReplicas:    pulumi.Int(1),
+				CooldownPeriod: pulumi.Int(60),
+				Metrics: compute.AutoscalerAutoscalingPolicyMetricArray{
+					&compute.AutoscalerAutoscalingPolicyMetricArgs{
+						Name:                     pulumi.String("pubsub.googleapis.com/subscription/num_undelivered_messages"),
+						Filter:                   pulumi.String("resource.type = pubsub_subscription AND resource.label.subscription_id = our-subscription"),
+						SingleInstanceAssignment: pulumi.Float64(65535),
+					},
+				},
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+debian9 = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+default_instance_template = gcp.compute.InstanceTemplate("defaultInstanceTemplate",
+    machine_type="e2-medium",
+    can_ip_forward=False,
+    tags=[
+        "foo",
+        "bar",
+    ],
+    disks=[gcp.compute.InstanceTemplateDiskArgs(
+        source_image=debian9.id,
+    )],
+    network_interfaces=[gcp.compute.InstanceTemplateNetworkInterfaceArgs(
+        network="default",
+    )],
+    metadata={
+        "foo": "bar",
+    },
+    service_account=gcp.compute.InstanceTemplateServiceAccountArgs(
+        scopes=[
+            "userinfo-email",
+            "compute-ro",
+            "storage-ro",
+        ],
+    ),
+    opts=ResourceOptions(provider=google_beta))
+default_target_pool = gcp.compute.TargetPool("defaultTargetPool", opts=ResourceOptions(provider=google_beta))
+default_instance_group_manager = gcp.compute.InstanceGroupManager("defaultInstanceGroupManager",
+    zone="us-central1-f",
+    versions=[gcp.compute.InstanceGroupManagerVersionArgs(
+        instance_template=default_instance_template.id,
+        name="primary",
+    )],
+    target_pools=[default_target_pool.id],
+    base_instance_name="autoscaler-sample",
+    opts=ResourceOptions(provider=google_beta))
+default_autoscaler = gcp.compute.Autoscaler("defaultAutoscaler",
+    zone="us-central1-f",
+    target=default_instance_group_manager.id,
+    autoscaling_policy=gcp.compute.AutoscalerAutoscalingPolicyArgs(
+        max_replicas=5,
+        min_replicas=1,
+        cooldown_period=60,
+        metrics=[gcp.compute.AutoscalerAutoscalingPolicyMetricArgs(
+            name="pubsub.googleapis.com/subscription/num_undelivered_messages",
+            filter="resource.type = pubsub_subscription AND resource.label.subscription_id = our-subscription",
+            single_instance_assignment=65535,
+        )],
+    ),
+    opts=ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const debian9 = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const defaultInstanceTemplate = new gcp.compute.InstanceTemplate("defaultInstanceTemplate", {
+    machineType: "e2-medium",
+    canIpForward: false,
+    tags: [
+        "foo",
+        "bar",
+    ],
+    disks: [{
+        sourceImage: debian9.then(debian9 => debian9.id),
+    }],
+    networkInterfaces: [{
+        network: "default",
+    }],
+    metadata: {
+        foo: "bar",
+    },
+    serviceAccount: {
+        scopes: [
+            "userinfo-email",
+            "compute-ro",
+            "storage-ro",
+        ],
+    },
+}, {
+    provider: google_beta,
+});
+const defaultTargetPool = new gcp.compute.TargetPool("defaultTargetPool", {}, {
+    provider: google_beta,
+});
+const defaultInstanceGroupManager = new gcp.compute.InstanceGroupManager("defaultInstanceGroupManager", {
+    zone: "us-central1-f",
+    versions: [{
+        instanceTemplate: defaultInstanceTemplate.id,
+        name: "primary",
+    }],
+    targetPools: [defaultTargetPool.id],
+    baseInstanceName: "autoscaler-sample",
+}, {
+    provider: google_beta,
+});
+const defaultAutoscaler = new gcp.compute.Autoscaler("defaultAutoscaler", {
+    zone: "us-central1-f",
+    target: defaultInstanceGroupManager.id,
+    autoscalingPolicy: {
+        maxReplicas: 5,
+        minReplicas: 1,
+        cooldownPeriod: 60,
+        metrics: [{
+            name: "pubsub.googleapis.com/subscription/num_undelivered_messages",
+            filter: "resource.type = pubsub_subscription AND resource.label.subscription_id = our-subscription",
+            singleInstanceAssignment: 65535,
+        }],
+    },
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+### Autoscaler Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var debian9 = Output.Create(Gcp.Compute.GetImage.InvokeAsync(new Gcp.Compute.GetImageArgs
+        {
+            Family = "debian-9",
+            Project = "debian-cloud",
+        }));
+        var foobarInstanceTemplate = new Gcp.Compute.InstanceTemplate("foobarInstanceTemplate", new Gcp.Compute.InstanceTemplateArgs
+        {
+            MachineType = "e2-medium",
+            CanIpForward = false,
+            Tags = 
+            {
+                "foo",
+                "bar",
+            },
+            Disks = 
+            {
+                new Gcp.Compute.Inputs.InstanceTemplateDiskArgs
+                {
+                    SourceImage = debian9.Apply(debian9 => debian9.Id),
+                },
+            },
+            NetworkInterfaces = 
+            {
+                new Gcp.Compute.Inputs.InstanceTemplateNetworkInterfaceArgs
+                {
+                    Network = "default",
+                },
+            },
+            Metadata = 
+            {
+                { "foo", "bar" },
+            },
+            ServiceAccount = new Gcp.Compute.Inputs.InstanceTemplateServiceAccountArgs
+            {
+                Scopes = 
+                {
+                    "userinfo-email",
+                    "compute-ro",
+                    "storage-ro",
+                },
+            },
+        });
+        var foobarTargetPool = new Gcp.Compute.TargetPool("foobarTargetPool", new Gcp.Compute.TargetPoolArgs
+        {
+        });
+        var foobarInstanceGroupManager = new Gcp.Compute.InstanceGroupManager("foobarInstanceGroupManager", new Gcp.Compute.InstanceGroupManagerArgs
+        {
+            Zone = "us-central1-f",
+            Versions = 
+            {
+                new Gcp.Compute.Inputs.InstanceGroupManagerVersionArgs
+                {
+                    InstanceTemplate = foobarInstanceTemplate.Id,
+                    Name = "primary",
+                },
+            },
+            TargetPools = 
+            {
+                foobarTargetPool.Id,
+            },
+            BaseInstanceName = "foobar",
+        });
+        var foobarAutoscaler = new Gcp.Compute.Autoscaler("foobarAutoscaler", new Gcp.Compute.AutoscalerArgs
+        {
+            Zone = "us-central1-f",
+            Target = foobarInstanceGroupManager.Id,
+            AutoscalingPolicy = new Gcp.Compute.Inputs.AutoscalerAutoscalingPolicyArgs
+            {
+                MaxReplicas = 5,
+                MinReplicas = 1,
+                CooldownPeriod = 60,
+                CpuUtilization = new Gcp.Compute.Inputs.AutoscalerAutoscalingPolicyCpuUtilizationArgs
+                {
+                    Target = 0.5,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "debian-9"
+		opt1 := "debian-cloud"
+		debian9, err := compute.LookupImage(ctx, &compute.LookupImageArgs{
+			Family:  &opt0,
+			Project: &opt1,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		foobarInstanceTemplate, err := compute.NewInstanceTemplate(ctx, "foobarInstanceTemplate", &compute.InstanceTemplateArgs{
+			MachineType:  pulumi.String("e2-medium"),
+			CanIpForward: pulumi.Bool(false),
+			Tags: pulumi.StringArray{
+				pulumi.String("foo"),
+				pulumi.String("bar"),
+			},
+			Disks: compute.InstanceTemplateDiskArray{
+				&compute.InstanceTemplateDiskArgs{
+					SourceImage: pulumi.String(debian9.Id),
+				},
+			},
+			NetworkInterfaces: compute.InstanceTemplateNetworkInterfaceArray{
+				&compute.InstanceTemplateNetworkInterfaceArgs{
+					Network: pulumi.String("default"),
+				},
+			},
+			Metadata: pulumi.StringMap{
+				"foo": pulumi.String("bar"),
+			},
+			ServiceAccount: &compute.InstanceTemplateServiceAccountArgs{
+				Scopes: pulumi.StringArray{
+					pulumi.String("userinfo-email"),
+					pulumi.String("compute-ro"),
+					pulumi.String("storage-ro"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		foobarTargetPool, err := compute.NewTargetPool(ctx, "foobarTargetPool", nil)
+		if err != nil {
+			return err
+		}
+		foobarInstanceGroupManager, err := compute.NewInstanceGroupManager(ctx, "foobarInstanceGroupManager", &compute.InstanceGroupManagerArgs{
+			Zone: pulumi.String("us-central1-f"),
+			Versions: compute.InstanceGroupManagerVersionArray{
+				&compute.InstanceGroupManagerVersionArgs{
+					InstanceTemplate: foobarInstanceTemplate.ID(),
+					Name:             pulumi.String("primary"),
+				},
+			},
+			TargetPools: pulumi.StringArray{
+				foobarTargetPool.ID(),
+			},
+			BaseInstanceName: pulumi.String("foobar"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewAutoscaler(ctx, "foobarAutoscaler", &compute.AutoscalerArgs{
+			Zone:   pulumi.String("us-central1-f"),
+			Target: foobarInstanceGroupManager.ID(),
+			AutoscalingPolicy: &compute.AutoscalerAutoscalingPolicyArgs{
+				MaxReplicas:    pulumi.Int(5),
+				MinReplicas:    pulumi.Int(1),
+				CooldownPeriod: pulumi.Int(60),
+				CpuUtilization: &compute.AutoscalerAutoscalingPolicyCpuUtilizationArgs{
+					Target: pulumi.Float64(0.5),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+debian9 = gcp.compute.get_image(family="debian-9",
+    project="debian-cloud")
+foobar_instance_template = gcp.compute.InstanceTemplate("foobarInstanceTemplate",
+    machine_type="e2-medium",
+    can_ip_forward=False,
+    tags=[
+        "foo",
+        "bar",
+    ],
+    disks=[gcp.compute.InstanceTemplateDiskArgs(
+        source_image=debian9.id,
+    )],
+    network_interfaces=[gcp.compute.InstanceTemplateNetworkInterfaceArgs(
+        network="default",
+    )],
+    metadata={
+        "foo": "bar",
+    },
+    service_account=gcp.compute.InstanceTemplateServiceAccountArgs(
+        scopes=[
+            "userinfo-email",
+            "compute-ro",
+            "storage-ro",
+        ],
+    ))
+foobar_target_pool = gcp.compute.TargetPool("foobarTargetPool")
+foobar_instance_group_manager = gcp.compute.InstanceGroupManager("foobarInstanceGroupManager",
+    zone="us-central1-f",
+    versions=[gcp.compute.InstanceGroupManagerVersionArgs(
+        instance_template=foobar_instance_template.id,
+        name="primary",
+    )],
+    target_pools=[foobar_target_pool.id],
+    base_instance_name="foobar")
+foobar_autoscaler = gcp.compute.Autoscaler("foobarAutoscaler",
+    zone="us-central1-f",
+    target=foobar_instance_group_manager.id,
+    autoscaling_policy=gcp.compute.AutoscalerAutoscalingPolicyArgs(
+        max_replicas=5,
+        min_replicas=1,
+        cooldown_period=60,
+        cpu_utilization=gcp.compute.AutoscalerAutoscalingPolicyCpuUtilizationArgs(
+            target=0.5,
+        ),
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const debian9 = gcp.compute.getImage({
+    family: "debian-9",
+    project: "debian-cloud",
+});
+const foobarInstanceTemplate = new gcp.compute.InstanceTemplate("foobarInstanceTemplate", {
+    machineType: "e2-medium",
+    canIpForward: false,
+    tags: [
+        "foo",
+        "bar",
+    ],
+    disks: [{
+        sourceImage: debian9.then(debian9 => debian9.id),
+    }],
+    networkInterfaces: [{
+        network: "default",
+    }],
+    metadata: {
+        foo: "bar",
+    },
+    serviceAccount: {
+        scopes: [
+            "userinfo-email",
+            "compute-ro",
+            "storage-ro",
+        ],
+    },
+});
+const foobarTargetPool = new gcp.compute.TargetPool("foobarTargetPool", {});
+const foobarInstanceGroupManager = new gcp.compute.InstanceGroupManager("foobarInstanceGroupManager", {
+    zone: "us-central1-f",
+    versions: [{
+        instanceTemplate: foobarInstanceTemplate.id,
+        name: "primary",
+    }],
+    targetPools: [foobarTargetPool.id],
+    baseInstanceName: "foobar",
+});
+const foobarAutoscaler = new gcp.compute.Autoscaler("foobarAutoscaler", {
+    zone: "us-central1-f",
+    target: foobarInstanceGroupManager.id,
+    autoscalingPolicy: {
+        maxReplicas: 5,
+        minReplicas: 1,
+        cooldownPeriod: 60,
+        cpuUtilization: {
+            target: 0.5,
+        },
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Autoscalar Resource {#create}
@@ -1389,6 +2032,19 @@ and outages due to abrupt scale-in events
 Structure is documented below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaleincontrol_csharp">
+<a href="#scaleincontrol_csharp" style="color: inherit; text-decoration: inherit;">Scale<wbr>In<wbr>Control</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalarautoscalingpolicyscaleincontrol">Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines scale in controls to reduce the risk of response latency
+and outages due to abrupt scale-in events
+Structure is documented below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1503,6 +2159,19 @@ Possible values are `OFF`, `ONLY_UP`, and `ON`.
         <span class="property-type"><a href="#autoscalarautoscalingpolicyscaledowncontrol">Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control</a></span>
     </dt>
     <dd>{{% md %}}Defines scale down controls to reduce the risk of response latency
+and outages due to abrupt scale-in events
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaleincontrol_go">
+<a href="#scaleincontrol_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>In<wbr>Control</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalarautoscalingpolicyscaleincontrol">Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control</a></span>
+    </dt>
+    <dd>{{% md %}}Defines scale in controls to reduce the risk of response latency
 and outages due to abrupt scale-in events
 Structure is documented below.
 {{% /md %}}</dd>
@@ -1625,6 +2294,19 @@ and outages due to abrupt scale-in events
 Structure is documented below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scaleincontrol_nodejs">
+<a href="#scaleincontrol_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>In<wbr>Control</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalarautoscalingpolicyscaleincontrol">Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control</a></span>
+    </dt>
+    <dd>{{% md %}}Defines scale in controls to reduce the risk of response latency
+and outages due to abrupt scale-in events
+Structure is documented below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1739,6 +2421,19 @@ Possible values are `OFF`, `ONLY_UP`, and `ON`.
         <span class="property-type"><a href="#autoscalarautoscalingpolicyscaledowncontrol">Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>Down<wbr>Control<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines scale down controls to reduce the risk of response latency
+and outages due to abrupt scale-in events
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scale_in_control_python">
+<a href="#scale_in_control_python" style="color: inherit; text-decoration: inherit;">scale_<wbr>in_<wbr>control</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalarautoscalingpolicyscaleincontrol">Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines scale in controls to reduce the risk of response latency
 and outages due to abrupt scale-in events
 Structure is documented below.
 {{% /md %}}</dd>
@@ -2676,8 +3371,314 @@ For example, specify 80 for 80%.
 
 
 
+<h4 id="autoscalarautoscalingpolicyscaleincontrol">Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalarAutoscalingPolicyScaleInControl">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalarAutoscalingPolicyScaleInControl">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#AutoscalarAutoscalingPolicyScaleInControlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#AutoscalarAutoscalingPolicyScaleInControlOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.AutoscalarAutoscalingPolicyScaleInControlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.AutoscalarAutoscalingPolicyScaleInControl.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxscaledinreplicas_csharp">
+<a href="#maxscaledinreplicas_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Scaled<wbr>In<wbr>Replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalarautoscalingpolicyscaleincontrolmaxscaledinreplicas">Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Max<wbr>Scaled<wbr>In<wbr>Replicas<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timewindowsec_csharp">
+<a href="#timewindowsec_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>Sec</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}How long back autoscaling should look when computing recommendations
+to include directives regarding slower scale down, as described above.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxscaledinreplicas_go">
+<a href="#maxscaledinreplicas_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Scaled<wbr>In<wbr>Replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalarautoscalingpolicyscaleincontrolmaxscaledinreplicas">Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Max<wbr>Scaled<wbr>In<wbr>Replicas</a></span>
+    </dt>
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timewindowsec_go">
+<a href="#timewindowsec_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Window<wbr>Sec</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}How long back autoscaling should look when computing recommendations
+to include directives regarding slower scale down, as described above.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxscaledinreplicas_nodejs">
+<a href="#maxscaledinreplicas_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Scaled<wbr>In<wbr>Replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalarautoscalingpolicyscaleincontrolmaxscaledinreplicas">Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Max<wbr>Scaled<wbr>In<wbr>Replicas</a></span>
+    </dt>
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timewindowsec_nodejs">
+<a href="#timewindowsec_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Window<wbr>Sec</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}How long back autoscaling should look when computing recommendations
+to include directives regarding slower scale down, as described above.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_scaled_in_replicas_python">
+<a href="#max_scaled_in_replicas_python" style="color: inherit; text-decoration: inherit;">max_<wbr>scaled_<wbr>in_<wbr>replicas</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalarautoscalingpolicyscaleincontrolmaxscaledinreplicas">Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Max<wbr>Scaled<wbr>In<wbr>Replicas<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A nested object resource
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="time_window_sec_python">
+<a href="#time_window_sec_python" style="color: inherit; text-decoration: inherit;">time_<wbr>window_<wbr>sec</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}How long back autoscaling should look when computing recommendations
+to include directives regarding slower scale down, as described above.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="autoscalarautoscalingpolicyscaleincontrolmaxscaledinreplicas">Autoscalar<wbr>Autoscaling<wbr>Policy<wbr>Scale<wbr>In<wbr>Control<wbr>Max<wbr>Scaled<wbr>In<wbr>Replicas</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicas">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicas">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasOutput">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicasArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.AutoscalarAutoscalingPolicyScaleInControlMaxScaledInReplicas.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixed_csharp">
+<a href="#fixed_csharp" style="color: inherit; text-decoration: inherit;">Fixed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive
+integer.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percent_csharp">
+<a href="#percent_csharp" style="color: inherit; text-decoration: inherit;">Percent</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive.
+For example, specify 80 for 80%.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixed_go">
+<a href="#fixed_go" style="color: inherit; text-decoration: inherit;">Fixed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive
+integer.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percent_go">
+<a href="#percent_go" style="color: inherit; text-decoration: inherit;">Percent</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive.
+For example, specify 80 for 80%.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixed_nodejs">
+<a href="#fixed_nodejs" style="color: inherit; text-decoration: inherit;">fixed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive
+integer.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percent_nodejs">
+<a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive.
+For example, specify 80 for 80%.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="fixed_python">
+<a href="#fixed_python" style="color: inherit; text-decoration: inherit;">fixed</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a fixed number of VM instances. This must be a positive
+integer.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="percent_python">
+<a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a percentage of instances between 0 to 100%, inclusive.
+For example, specify 80 for 80%.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
+
+## Import
+
+
+Autoscaler can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/autoscalar:Autoscalar default projects/{{project}}/zones/{{zone}}/autoscalers/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/autoscalar:Autoscalar default {{project}}/{{zone}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/autoscalar:Autoscalar default {{zone}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/autoscalar:Autoscalar default {{name}}
+```
 
 
 

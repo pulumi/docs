@@ -1689,6 +1689,28 @@ Possible values are `READ_ONLY` and `READ_WRITE`.
 
 
 
+## Import
+
+
+RegionPerInstanceConfig can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/regionPerInstanceConfig:RegionPerInstanceConfig default projects/{{project}}/regions/{{region}}/instanceGroupManagers/{{region_instance_group_manager}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionPerInstanceConfig:RegionPerInstanceConfig default {{project}}/{{region}}/{{region_instance_group_manager}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionPerInstanceConfig:RegionPerInstanceConfig default {{region}}/{{region_instance_group_manager}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionPerInstanceConfig:RegionPerInstanceConfig default {{region_instance_group_manager}}/{{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

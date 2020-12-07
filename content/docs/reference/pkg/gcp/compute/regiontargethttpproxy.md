@@ -19,6 +19,344 @@ To get more information about RegionTargetHttpProxy, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/load-balancing/http/target-proxies)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Region Target Http Proxy Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultRegionHealthCheck = new Gcp.Compute.RegionHealthCheck("defaultRegionHealthCheck", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            Region = "us-central1",
+            HttpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs
+            {
+                Port = 80,
+            },
+        });
+        var defaultRegionBackendService = new Gcp.Compute.RegionBackendService("defaultRegionBackendService", new Gcp.Compute.RegionBackendServiceArgs
+        {
+            Region = "us-central1",
+            Protocol = "HTTP",
+            TimeoutSec = 10,
+            HealthChecks = 
+            {
+                defaultRegionHealthCheck.Id,
+            },
+        });
+        var defaultRegionUrlMap = new Gcp.Compute.RegionUrlMap("defaultRegionUrlMap", new Gcp.Compute.RegionUrlMapArgs
+        {
+            Region = "us-central1",
+            DefaultService = defaultRegionBackendService.Id,
+            HostRules = 
+            {
+                new Gcp.Compute.Inputs.RegionUrlMapHostRuleArgs
+                {
+                    Hosts = 
+                    {
+                        "mysite.com",
+                    },
+                    PathMatcher = "allpaths",
+                },
+            },
+            PathMatchers = 
+            {
+                new Gcp.Compute.Inputs.RegionUrlMapPathMatcherArgs
+                {
+                    Name = "allpaths",
+                    DefaultService = defaultRegionBackendService.Id,
+                    PathRules = 
+                    {
+                        new Gcp.Compute.Inputs.RegionUrlMapPathMatcherPathRuleArgs
+                        {
+                            Paths = 
+                            {
+                                "/*",
+                            },
+                            Service = defaultRegionBackendService.Id,
+                        },
+                    },
+                },
+            },
+        });
+        var defaultRegionTargetHttpProxy = new Gcp.Compute.RegionTargetHttpProxy("defaultRegionTargetHttpProxy", new Gcp.Compute.RegionTargetHttpProxyArgs
+        {
+            Region = "us-central1",
+            UrlMap = defaultRegionUrlMap.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultRegionHealthCheck, err := compute.NewRegionHealthCheck(ctx, "defaultRegionHealthCheck", &compute.RegionHealthCheckArgs{
+			Region: pulumi.String("us-central1"),
+			HttpHealthCheck: &compute.RegionHealthCheckHttpHealthCheckArgs{
+				Port: pulumi.Int(80),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		defaultRegionBackendService, err := compute.NewRegionBackendService(ctx, "defaultRegionBackendService", &compute.RegionBackendServiceArgs{
+			Region:     pulumi.String("us-central1"),
+			Protocol:   pulumi.String("HTTP"),
+			TimeoutSec: pulumi.Int(10),
+			HealthChecks: pulumi.String(pulumi.String{
+				defaultRegionHealthCheck.ID(),
+			}),
+		})
+		if err != nil {
+			return err
+		}
+		defaultRegionUrlMap, err := compute.NewRegionUrlMap(ctx, "defaultRegionUrlMap", &compute.RegionUrlMapArgs{
+			Region:         pulumi.String("us-central1"),
+			DefaultService: defaultRegionBackendService.ID(),
+			HostRules: compute.RegionUrlMapHostRuleArray{
+				&compute.RegionUrlMapHostRuleArgs{
+					Hosts: pulumi.StringArray{
+						pulumi.String("mysite.com"),
+					},
+					PathMatcher: pulumi.String("allpaths"),
+				},
+			},
+			PathMatchers: compute.RegionUrlMapPathMatcherArray{
+				&compute.RegionUrlMapPathMatcherArgs{
+					Name:           pulumi.String("allpaths"),
+					DefaultService: defaultRegionBackendService.ID(),
+					PathRules: compute.RegionUrlMapPathMatcherPathRuleArray{
+						&compute.RegionUrlMapPathMatcherPathRuleArgs{
+							Paths: pulumi.StringArray{
+								pulumi.String("/*"),
+							},
+							Service: defaultRegionBackendService.ID(),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewRegionTargetHttpProxy(ctx, "defaultRegionTargetHttpProxy", &compute.RegionTargetHttpProxyArgs{
+			Region: pulumi.String("us-central1"),
+			UrlMap: defaultRegionUrlMap.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_region_health_check = gcp.compute.RegionHealthCheck("defaultRegionHealthCheck",
+    region="us-central1",
+    http_health_check=gcp.compute.RegionHealthCheckHttpHealthCheckArgs(
+        port=80,
+    ))
+default_region_backend_service = gcp.compute.RegionBackendService("defaultRegionBackendService",
+    region="us-central1",
+    protocol="HTTP",
+    timeout_sec=10,
+    health_checks=[default_region_health_check.id])
+default_region_url_map = gcp.compute.RegionUrlMap("defaultRegionUrlMap",
+    region="us-central1",
+    default_service=default_region_backend_service.id,
+    host_rules=[gcp.compute.RegionUrlMapHostRuleArgs(
+        hosts=["mysite.com"],
+        path_matcher="allpaths",
+    )],
+    path_matchers=[gcp.compute.RegionUrlMapPathMatcherArgs(
+        name="allpaths",
+        default_service=default_region_backend_service.id,
+        path_rules=[gcp.compute.RegionUrlMapPathMatcherPathRuleArgs(
+            paths=["/*"],
+            service=default_region_backend_service.id,
+        )],
+    )])
+default_region_target_http_proxy = gcp.compute.RegionTargetHttpProxy("defaultRegionTargetHttpProxy",
+    region="us-central1",
+    url_map=default_region_url_map.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultRegionHealthCheck = new gcp.compute.RegionHealthCheck("defaultRegionHealthCheck", {
+    region: "us-central1",
+    httpHealthCheck: {
+        port: 80,
+    },
+});
+const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaultRegionBackendService", {
+    region: "us-central1",
+    protocol: "HTTP",
+    timeoutSec: 10,
+    healthChecks: [defaultRegionHealthCheck.id],
+});
+const defaultRegionUrlMap = new gcp.compute.RegionUrlMap("defaultRegionUrlMap", {
+    region: "us-central1",
+    defaultService: defaultRegionBackendService.id,
+    hostRules: [{
+        hosts: ["mysite.com"],
+        pathMatcher: "allpaths",
+    }],
+    pathMatchers: [{
+        name: "allpaths",
+        defaultService: defaultRegionBackendService.id,
+        pathRules: [{
+            paths: ["/*"],
+            service: defaultRegionBackendService.id,
+        }],
+    }],
+});
+const defaultRegionTargetHttpProxy = new gcp.compute.RegionTargetHttpProxy("defaultRegionTargetHttpProxy", {
+    region: "us-central1",
+    urlMap: defaultRegionUrlMap.id,
+});
+```
+
+{{% /example %}}
+
+### Region Target Http Proxy Https Redirect
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultRegionUrlMap = new Gcp.Compute.RegionUrlMap("defaultRegionUrlMap", new Gcp.Compute.RegionUrlMapArgs
+        {
+            Region = "us-central1",
+            DefaultUrlRedirect = new Gcp.Compute.Inputs.RegionUrlMapDefaultUrlRedirectArgs
+            {
+                HttpsRedirect = true,
+                StripQuery = false,
+            },
+        });
+        var defaultRegionTargetHttpProxy = new Gcp.Compute.RegionTargetHttpProxy("defaultRegionTargetHttpProxy", new Gcp.Compute.RegionTargetHttpProxyArgs
+        {
+            Region = "us-central1",
+            UrlMap = defaultRegionUrlMap.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultRegionUrlMap, err := compute.NewRegionUrlMap(ctx, "defaultRegionUrlMap", &compute.RegionUrlMapArgs{
+			Region: pulumi.String("us-central1"),
+			DefaultUrlRedirect: &compute.RegionUrlMapDefaultUrlRedirectArgs{
+				HttpsRedirect: pulumi.Bool(true),
+				StripQuery:    pulumi.Bool(false),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewRegionTargetHttpProxy(ctx, "defaultRegionTargetHttpProxy", &compute.RegionTargetHttpProxyArgs{
+			Region: pulumi.String("us-central1"),
+			UrlMap: defaultRegionUrlMap.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_region_url_map = gcp.compute.RegionUrlMap("defaultRegionUrlMap",
+    region="us-central1",
+    default_url_redirect=gcp.compute.RegionUrlMapDefaultUrlRedirectArgs(
+        https_redirect=True,
+        strip_query=False,
+    ))
+default_region_target_http_proxy = gcp.compute.RegionTargetHttpProxy("defaultRegionTargetHttpProxy",
+    region="us-central1",
+    url_map=default_region_url_map.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultRegionUrlMap = new gcp.compute.RegionUrlMap("defaultRegionUrlMap", {
+    region: "us-central1",
+    defaultUrlRedirect: {
+        httpsRedirect: true,
+        stripQuery: false,
+    },
+});
+const defaultRegionTargetHttpProxy = new gcp.compute.RegionTargetHttpProxy("defaultRegionTargetHttpProxy", {
+    region: "us-central1",
+    urlMap: defaultRegionUrlMap.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a RegionTargetHttpProxy Resource {#create}
@@ -1244,6 +1582,28 @@ to the BackendService.
 
 
 
+
+
+## Import
+
+
+RegionTargetHttpProxy can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/regionTargetHttpProxy:RegionTargetHttpProxy default projects/{{project}}/regions/{{region}}/targetHttpProxies/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionTargetHttpProxy:RegionTargetHttpProxy default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionTargetHttpProxy:RegionTargetHttpProxy default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/regionTargetHttpProxy:RegionTargetHttpProxy default {{name}}
+```
 
 
 

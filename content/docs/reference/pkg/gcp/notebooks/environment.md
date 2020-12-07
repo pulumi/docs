@@ -18,6 +18,99 @@ To get more information about Environment, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/ai-platform-notebooks)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Notebook Environment Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var environment = new Gcp.Notebooks.Environment("environment", new Gcp.Notebooks.EnvironmentArgs
+        {
+            Location = "us-west1-a",
+            ContainerImage = new Gcp.Notebooks.Inputs.EnvironmentContainerImageArgs
+            {
+                Repository = "gcr.io/deeplearning-platform-release/base-cpu",
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/notebooks"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := notebooks.NewEnvironment(ctx, "environment", &notebooks.EnvironmentArgs{
+			Location: pulumi.String("us-west1-a"),
+			ContainerImage: &notebooks.EnvironmentContainerImageArgs{
+				Repository: pulumi.String("gcr.io/deeplearning-platform-release/base-cpu"),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+environment = gcp.notebooks.Environment("environment",
+    location="us-west1-a",
+    container_image=gcp.notebooks.EnvironmentContainerImageArgs(
+        repository="gcr.io/deeplearning-platform-release/base-cpu",
+    ),
+    opts=ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const environment = new gcp.notebooks.Environment("environment", {
+    location: "us-west1-a",
+    containerImage: {
+        repository: "gcr.io/deeplearning-platform-release/base-cpu",
+    },
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Environment Resource {#create}
@@ -1625,6 +1718,24 @@ Format: projects/{project_id}
 
 
 
+
+
+## Import
+
+
+Environment can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:notebooks/environment:Environment default projects/{{project}}/locations/{{location}}/environments/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:notebooks/environment:Environment default {{project}}/{{location}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:notebooks/environment:Environment default {{location}}/{{name}}
+```
 
 
 

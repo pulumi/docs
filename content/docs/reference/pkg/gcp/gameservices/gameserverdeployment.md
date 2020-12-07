@@ -18,6 +18,84 @@ To get more information about GameServerDeployment, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/game-servers/docs)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Game Service Deployment Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var @default = new Gcp.GameServices.GameServerDeployment("default", new Gcp.GameServices.GameServerDeploymentArgs
+        {
+            DeploymentId = "tf-test-deployment",
+            Description = "a deployment description",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/gameservices"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := gameservices.NewGameServerDeployment(ctx, "_default", &gameservices.GameServerDeploymentArgs{
+			DeploymentId: pulumi.String("tf-test-deployment"),
+			Description:  pulumi.String("a deployment description"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default = gcp.gameservices.GameServerDeployment("default",
+    deployment_id="tf-test-deployment",
+    description="a deployment description")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultGameServerDeployment = new gcp.gameservices.GameServerDeployment("default", {
+    deploymentId: "tf-test-deployment",
+    description: "a deployment description",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GameServerDeployment Resource {#create}
@@ -1027,6 +1105,24 @@ If it is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+GameServerDeployment can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:gameservices/gameServerDeployment:GameServerDeployment default projects/{{project}}/locations/{{location}}/gameServerDeployments/{{deployment_id}}
+```
+
+```sh
+ $ pulumi import gcp:gameservices/gameServerDeployment:GameServerDeployment default {{project}}/{{location}}/{{deployment_id}}
+```
+
+```sh
+ $ pulumi import gcp:gameservices/gameServerDeployment:GameServerDeployment default {{location}}/{{deployment_id}}
+```
 
 
 

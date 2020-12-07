@@ -20,6 +20,231 @@ Three different resources help you manage your IAM policy for Healthcare DICOM s
 
 > **Note:** `gcp.healthcare.DicomStoreIamBinding` resources **can be** used in conjunction with `gcp.healthcare.DicomStoreIamMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_healthcare\_dicom\_store\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const dicomStore = new gcp.healthcare.DicomStoreIamPolicy("dicomStore", {
+    dicomStoreId: "your-dicom-store-id",
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+    role="roles/editor",
+    members=["user:jane@example.com"],
+)])
+dicom_store = gcp.healthcare.DicomStoreIamPolicy("dicomStore",
+    dicom_store_id="your-dicom-store-id",
+    policy_data=admin.policy_data)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Bindings = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Role = "roles/editor",
+                    Members = 
+                    {
+                        "user:jane@example.com",
+                    },
+                },
+            },
+        }));
+        var dicomStore = new Gcp.Healthcare.DicomStoreIamPolicy("dicomStore", new Gcp.Healthcare.DicomStoreIamPolicyArgs
+        {
+            DicomStoreId = "your-dicom-store-id",
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Bindings: []organizations.GetIAMPolicyBinding{
+				organizations.GetIAMPolicyBinding{
+					Role: "roles/editor",
+					Members: []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = healthcare.NewDicomStoreIamPolicy(ctx, "dicomStore", &healthcare.DicomStoreIamPolicyArgs{
+			DicomStoreId: pulumi.String("your-dicom-store-id"),
+			PolicyData:   pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_healthcare\_dicom\_store\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const dicomStore = new gcp.healthcare.DicomStoreIamBinding("dicom_store", {
+    dicomStoreId: "your-dicom-store-id",
+    members: ["user:jane@example.com"],
+    role: "roles/editor",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+dicom_store = gcp.healthcare.DicomStoreIamBinding("dicomStore",
+    dicom_store_id="your-dicom-store-id",
+    members=["user:jane@example.com"],
+    role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dicomStore = new Gcp.Healthcare.DicomStoreIamBinding("dicomStore", new Gcp.Healthcare.DicomStoreIamBindingArgs
+        {
+            DicomStoreId = "your-dicom-store-id",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := healthcare.NewDicomStoreIamBinding(ctx, "dicomStore", &healthcare.DicomStoreIamBindingArgs{
+			DicomStoreId: pulumi.String("your-dicom-store-id"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+			Role: pulumi.String("roles/editor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_healthcare\_dicom\_store\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const dicomStore = new gcp.healthcare.DicomStoreIamMember("dicom_store", {
+    dicomStoreId: "your-dicom-store-id",
+    member: "user:jane@example.com",
+    role: "roles/editor",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+dicom_store = gcp.healthcare.DicomStoreIamMember("dicomStore",
+    dicom_store_id="your-dicom-store-id",
+    member="user:jane@example.com",
+    role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dicomStore = new Gcp.Healthcare.DicomStoreIamMember("dicomStore", new Gcp.Healthcare.DicomStoreIamMemberArgs
+        {
+            DicomStoreId = "your-dicom-store-id",
+            Member = "user:jane@example.com",
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := healthcare.NewDicomStoreIamMember(ctx, "dicomStore", &healthcare.DicomStoreIamMemberArgs{
+			DicomStoreId: pulumi.String("your-dicom-store-id"),
+			Member:       pulumi.String("user:jane@example.com"),
+			Role:         pulumi.String("roles/editor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 ## Create a DicomStoreIamMember Resource {#create}
@@ -1105,6 +1330,34 @@ project setting will be used as a fallback.
 
 
 
+
+
+## Import
+
+
+IAM member imports use space-delimited identifiers; the resource in question, the role, and the account.
+
+This member resource can be imported using the `dicom_store_id`, role, and account e.g.
+
+```sh
+ $ pulumi import gcp:healthcare/dicomStoreIamMember:DicomStoreIamMember dicom_store_iam "your-project-id/location-name/dataset-name/dicom-store-name roles/viewer user:foo@example.com"
+```
+
+ IAM binding imports use space-delimited identifiers; the resource in question and the role.
+
+This binding resource can be imported using the `dicom_store_id` and role, e.g.
+
+```sh
+ $ pulumi import gcp:healthcare/dicomStoreIamMember:DicomStoreIamMember dicom_store_iam "your-project-id/location-name/dataset-name/dicom-store-name roles/viewer"
+```
+
+ IAM policy imports use the identifier of the resource in question.
+
+This policy resource can be imported using the `dicom_store_id`, role, and account e.g.
+
+```sh
+ $ pulumi import gcp:healthcare/dicomStoreIamMember:DicomStoreIamMember dicom_store_iam your-project-id/location-name/dataset-name/dicom-store-name
+```
 
 
 

@@ -1796,6 +1796,12 @@ Format: "major.minor.patch" such as "10.5.301", "9.2.1".
 
 
 
+## Import
+
+
+This resource does not support import.
+
+
 
 
 <h2 id="package-details">Package Details</h2>

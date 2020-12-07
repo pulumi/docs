@@ -16,6 +16,84 @@ Allows management of a [Google Cloud Platform service account](https://cloud.goo
 errors when you try to apply ACLs to service accounts immediately after
 creation.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serviceAccount = new Gcp.ServiceAccount.Account("serviceAccount", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "service_account_id",
+            DisplayName = "Service Account",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/serviceAccount"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := serviceAccount.NewAccount(ctx, "serviceAccount", &serviceAccount.AccountArgs{
+			AccountId:   pulumi.String("service_account_id"),
+			DisplayName: pulumi.String("Service Account"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+service_account = gcp.service_account.Account("serviceAccount",
+    account_id="service_account_id",
+    display_name="Service Account")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const serviceAccount = new gcp.serviceAccount.Account("service_account", {
+    accountId: "service_account_id",
+    displayName: "Service Account",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Account Resource {#create}
@@ -1145,6 +1223,16 @@ Defaults to the provider project configuration.
 
 
 
+
+
+## Import
+
+
+Service accounts can be imported using their URI, e.g.
+
+```sh
+ $ pulumi import gcp:serviceAccount/account:Account my_sa projects/my-project/serviceAccounts/my-sa@my-project.iam.gserviceaccount.com
+```
 
 
 

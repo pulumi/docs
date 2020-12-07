@@ -15,10 +15,133 @@ Generate service identity for a service.
 > **Note**: Once created, this resource cannot be updated or destroyed. These
 actions are a no-op.
 
+> **Note**: This resource can be used to retrieve the emails of the [Google-managed service accounts](https://cloud.google.com/iam/docs/service-agents)
+of the APIs that Google has configured with a Service Identity. You can run `gcloud beta services identity create --service SERVICE_NAME.googleapis.com` to
+verify if an API supports this.
+
 To get more information about Service Identity, see:
 
 * [API documentation](https://cloud.google.com/service-usage/docs/reference/rest/v1beta1/services/generateServiceIdentity)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Service Identity Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var project = Output.Create(Gcp.Organizations.GetProject.InvokeAsync());
+        var hcSa = new Gcp.Projects.ServiceIdentity("hcSa", new Gcp.Projects.ServiceIdentityArgs
+        {
+            Project = project.Apply(project => project.ProjectId),
+            Service = "healthcare.googleapis.com",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var hcSaBqJobuser = new Gcp.Projects.IAMMember("hcSaBqJobuser", new Gcp.Projects.IAMMemberArgs
+        {
+            Project = project.Apply(project => project.ProjectId),
+            Role = "roles/bigquery.jobUser",
+            Member = hcSa.Email.Apply(email => $"serviceAccount:{email}"),
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		project, err := organizations.LookupProject(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		hcSa, err := projects.NewServiceIdentity(ctx, "hcSa", &projects.ServiceIdentityArgs{
+			Project: pulumi.String(project.ProjectId),
+			Service: pulumi.String("healthcare.googleapis.com"),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = projects.NewIAMMember(ctx, "hcSaBqJobuser", &projects.IAMMemberArgs{
+			Project: pulumi.String(project.ProjectId),
+			Role:    pulumi.String("roles/bigquery.jobUser"),
+			Member: hcSa.Email.ApplyT(func(email string) (string, error) {
+				return fmt.Sprintf("%v%v", "serviceAccount:", email), nil
+			}).(pulumi.StringOutput),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+project = gcp.organizations.get_project()
+hc_sa = gcp.projects.ServiceIdentity("hcSa",
+    project=project.project_id,
+    service="healthcare.googleapis.com",
+    opts=ResourceOptions(provider=google_beta))
+hc_sa_bq_jobuser = gcp.projects.IAMMember("hcSaBqJobuser",
+    project=project.project_id,
+    role="roles/bigquery.jobUser",
+    member=hc_sa.email.apply(lambda email: f"serviceAccount:{email}"))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const project = gcp.organizations.getProject({});
+const hcSa = new gcp.projects.ServiceIdentity("hcSa", {
+    project: project.then(project => project.projectId),
+    service: "healthcare.googleapis.com",
+}, {
+    provider: google_beta,
+});
+const hcSaBqJobuser = new gcp.projects.IAMMember("hcSaBqJobuser", {
+    project: project.then(project => project.projectId),
+    role: "roles/bigquery.jobUser",
+    member: pulumi.interpolate`serviceAccount:${hcSa.email}`,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ServiceIdentity Resource {#create}
@@ -740,6 +863,12 @@ If it is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+This resource does not support import.
 
 
 

@@ -23,6 +23,629 @@ Four different resources help you manage your IAM policy for a project. Each of 
 
 > **Note:** It is not possible to grant the `roles/owner` role using any of these resources due to this being disallowed by the underlying `projects.setIamPolicy` API method. See the method [documentation](https://cloud.google.com/resource-manager/reference/rest/v1/projects/setIamPolicy) for full details. It is, however, possible to remove all owners from the project by passing in an empty `members = []` list to the `gcp.projects.IAMBinding` resource. This is useful for removing the owner role from a project upon creation, however, precautions should be taken to avoid inadvertently locking oneself out of a project such as by granting additional roles to alternate entities.
 
+## google\_project\_iam\_policy
+
+> **Be careful!** You can accidentally lock yourself out of your project
+   using this resource. Deleting a `gcp.projects.IAMPolicy` removes access
+   from anyone without organization-level access to the project. Proceed with caution.
+   It's not recommended to use `gcp.projects.IAMPolicy` with your provider project
+   to avoid locking yourself out, and it should generally only be used with projects
+   fully managed by this provider. If you do use this resource, it is recommended to **import** the policy before
+   applying the change.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const project = new gcp.projects.IAMPolicy("project", {
+    project: "your-project-id",
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+    role="roles/editor",
+    members=["user:jane@example.com"],
+)])
+project = gcp.projects.IAMPolicy("project",
+    project="your-project-id",
+    policy_data=admin.policy_data)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Bindings = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Role = "roles/editor",
+                    Members = 
+                    {
+                        "user:jane@example.com",
+                    },
+                },
+            },
+        }));
+        var project = new Gcp.Projects.IAMPolicy("project", new Gcp.Projects.IAMPolicyArgs
+        {
+            Project = "your-project-id",
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Bindings: []organizations.GetIAMPolicyBinding{
+				organizations.GetIAMPolicyBinding{
+					Role: "roles/editor",
+					Members: []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = projects.NewIAMPolicy(ctx, "project", &projects.IAMPolicyArgs{
+			Project:    pulumi.String("your-project-id"),
+			PolicyData: pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+    bindings: [{
+        condition: {
+            description: "Expiring at midnight of 2019-12-31",
+            expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            title: "expires_after_2019_12_31",
+        },
+        members: ["user:jane@example.com"],
+        role: "roles/editor",
+    }],
+}, { async: true }));
+const project = new gcp.projects.IAMPolicy("project", {
+    policyData: admin.policyData,
+    project: "your-project-id",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+    condition=gcp.organizations.GetIAMPolicyBindingConditionArgs(
+        description="Expiring at midnight of 2019-12-31",
+        expression="request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title="expires_after_2019_12_31",
+    ),
+    members=["user:jane@example.com"],
+    role="roles/editor",
+)])
+project = gcp.projects.IAMPolicy("project",
+    policy_data=admin.policy_data,
+    project="your-project-id")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Bindings = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Condition = new Gcp.Organizations.Inputs.GetIAMPolicyBindingConditionArgs
+                    {
+                        Description = "Expiring at midnight of 2019-12-31",
+                        Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+                        Title = "expires_after_2019_12_31",
+                    },
+                    Members = 
+                    {
+                        "user:jane@example.com",
+                    },
+                    Role = "roles/editor",
+                },
+            },
+        }));
+        var project = new Gcp.Projects.IAMPolicy("project", new Gcp.Projects.IAMPolicyArgs
+        {
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+            Project = "your-project-id",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Bindings: []organizations.GetIAMPolicyBinding{
+				organizations.GetIAMPolicyBinding{
+					Condition: organizations.GetIAMPolicyBindingCondition{
+						Description: "Expiring at midnight of 2019-12-31",
+						Expression:  "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+						Title:       "expires_after_2019_12_31",
+					},
+					Members: []string{
+						"user:jane@example.com",
+					},
+					Role: "roles/editor",
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = projects.NewIAMPolicy(ctx, "project", &projects.IAMPolicyArgs{
+			PolicyData: pulumi.String(admin.PolicyData),
+			Project:    pulumi.String("your-project-id"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_project\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const project = new gcp.projects.IAMBinding("project", {
+    members: ["user:jane@example.com"],
+    project: "your-project-id",
+    role: "roles/editor",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+project = gcp.projects.IAMBinding("project",
+    members=["user:jane@example.com"],
+    project="your-project-id",
+    role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var project = new Gcp.Projects.IAMBinding("project", new Gcp.Projects.IAMBindingArgs
+        {
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Project = "your-project-id",
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := projects.NewIAMBinding(ctx, "project", &projects.IAMBindingArgs{
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+			Project: pulumi.String("your-project-id"),
+			Role:    pulumi.String("roles/editor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const project = new gcp.projects.IAMBinding("project", {
+    condition: {
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title: "expires_after_2019_12_31",
+    },
+    members: ["user:jane@example.com"],
+    project: "your-project-id",
+    role: "roles/editor",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+project = gcp.projects.IAMBinding("project",
+    condition=gcp.projects.IAMBindingConditionArgs(
+        description="Expiring at midnight of 2019-12-31",
+        expression="request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title="expires_after_2019_12_31",
+    ),
+    members=["user:jane@example.com"],
+    project="your-project-id",
+    role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var project = new Gcp.Projects.IAMBinding("project", new Gcp.Projects.IAMBindingArgs
+        {
+            Condition = new Gcp.Projects.Inputs.IAMBindingConditionArgs
+            {
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+                Title = "expires_after_2019_12_31",
+            },
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+            Project = "your-project-id",
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := projects.NewIAMBinding(ctx, "project", &projects.IAMBindingArgs{
+			Condition: &projects.IAMBindingConditionArgs{
+				Description: pulumi.String("Expiring at midnight of 2019-12-31"),
+				Expression:  pulumi.String("request.time < timestamp(\"2020-01-01T00:00:00Z\")"),
+				Title:       pulumi.String("expires_after_2019_12_31"),
+			},
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+			Project: pulumi.String("your-project-id"),
+			Role:    pulumi.String("roles/editor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_project\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const project = new gcp.projects.IAMMember("project", {
+    member: "user:jane@example.com",
+    project: "your-project-id",
+    role: "roles/editor",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+project = gcp.projects.IAMMember("project",
+    member="user:jane@example.com",
+    project="your-project-id",
+    role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var project = new Gcp.Projects.IAMMember("project", new Gcp.Projects.IAMMemberArgs
+        {
+            Member = "user:jane@example.com",
+            Project = "your-project-id",
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := projects.NewIAMMember(ctx, "project", &projects.IAMMemberArgs{
+			Member:  pulumi.String("user:jane@example.com"),
+			Project: pulumi.String("your-project-id"),
+			Role:    pulumi.String("roles/editor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const project = new gcp.projects.IAMMember("project", {
+    condition: {
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title: "expires_after_2019_12_31",
+    },
+    member: "user:jane@example.com",
+    project: "your-project-id",
+    role: "roles/editor",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+project = gcp.projects.IAMMember("project",
+    condition=gcp.projects.IAMMemberConditionArgs(
+        description="Expiring at midnight of 2019-12-31",
+        expression="request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title="expires_after_2019_12_31",
+    ),
+    member="user:jane@example.com",
+    project="your-project-id",
+    role="roles/editor")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var project = new Gcp.Projects.IAMMember("project", new Gcp.Projects.IAMMemberArgs
+        {
+            Condition = new Gcp.Projects.Inputs.IAMMemberConditionArgs
+            {
+                Description = "Expiring at midnight of 2019-12-31",
+                Expression = "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+                Title = "expires_after_2019_12_31",
+            },
+            Member = "user:jane@example.com",
+            Project = "your-project-id",
+            Role = "roles/editor",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := projects.NewIAMMember(ctx, "project", &projects.IAMMemberArgs{
+			Condition: &projects.IAMMemberConditionArgs{
+				Description: pulumi.String("Expiring at midnight of 2019-12-31"),
+				Expression:  pulumi.String("request.time < timestamp(\"2020-01-01T00:00:00Z\")"),
+				Title:       pulumi.String("expires_after_2019_12_31"),
+			},
+			Member:  pulumi.String("user:jane@example.com"),
+			Project: pulumi.String("your-project-id"),
+			Role:    pulumi.String("roles/editor"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_project\_iam\_audit\_config
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const project = new gcp.projects.IAMAuditConfig("project", {
+    auditLogConfigs: [
+        {
+            logType: "ADMIN_READ",
+        },
+        {
+            exemptedMembers: ["user:joebloggs@hashicorp.com"],
+            logType: "DATA_READ",
+        },
+    ],
+    project: "your-project-id",
+    service: "allServices",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+project = gcp.projects.IAMAuditConfig("project",
+    audit_log_configs=[
+        gcp.projects.IAMAuditConfigAuditLogConfigArgs(
+            log_type="ADMIN_READ",
+        ),
+        gcp.projects.IAMAuditConfigAuditLogConfigArgs(
+            exempted_members=["user:joebloggs@hashicorp.com"],
+            log_type="DATA_READ",
+        ),
+    ],
+    project="your-project-id",
+    service="allServices")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var project = new Gcp.Projects.IAMAuditConfig("project", new Gcp.Projects.IAMAuditConfigArgs
+        {
+            AuditLogConfigs = 
+            {
+                new Gcp.Projects.Inputs.IAMAuditConfigAuditLogConfigArgs
+                {
+                    LogType = "ADMIN_READ",
+                },
+                new Gcp.Projects.Inputs.IAMAuditConfigAuditLogConfigArgs
+                {
+                    ExemptedMembers = 
+                    {
+                        "user:joebloggs@hashicorp.com",
+                    },
+                    LogType = "DATA_READ",
+                },
+            },
+            Project = "your-project-id",
+            Service = "allServices",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/projects"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := projects.NewIAMAuditConfig(ctx, "project", &projects.IAMAuditConfigArgs{
+			AuditLogConfigs: projects.IAMAuditConfigAuditLogConfigArray{
+				&projects.IAMAuditConfigAuditLogConfigArgs{
+					LogType: pulumi.String("ADMIN_READ"),
+				},
+				&projects.IAMAuditConfigAuditLogConfigArgs{
+					ExemptedMembers: pulumi.StringArray{
+						pulumi.String("user:joebloggs@hashicorp.com"),
+					},
+					LogType: pulumi.String("DATA_READ"),
+				},
+			},
+			Project: pulumi.String("your-project-id"),
+			Service: pulumi.String("allServices"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 ## Create a IAMMember Resource {#create}
@@ -1128,6 +1751,44 @@ will not be inferred from the provider.
 
 
 
+
+
+## Import
+
+
+IAM member imports use space-delimited identifiers; the resource in question, the role, and the account.
+
+This member resource can be imported using the `project_id`, role, and member e.g.
+
+```sh
+ $ pulumi import gcp:projects/iAMMember:IAMMember my_project "your-project-id roles/viewer user:foo@example.com"
+```
+
+ IAM binding imports use space-delimited identifiers; the resource in question and the role.
+
+This binding resource can be imported using the `project_id` and role, e.g.
+
+```sh
+ $ pulumi import gcp:projects/iAMMember:IAMMember my_project "your-project-id roles/viewer"
+```
+
+ IAM policy imports use the identifier of the resource in question.
+
+This policy resource can be imported using the `project_id`.
+
+```sh
+ $ pulumi import gcp:projects/iAMMember:IAMMember my_project your-project-id
+```
+
+ IAM audit config imports use the identifier of the resource in question and the service, e.g.
+
+```sh
+ $ pulumi import gcp:projects/iAMMember:IAMMember my_project "your-project-id foo.googleapis.com"
+```
+
+ -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+
+full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 
 

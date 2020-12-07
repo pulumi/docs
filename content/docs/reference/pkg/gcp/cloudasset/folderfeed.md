@@ -1901,6 +1901,20 @@ Structure is documented below.
 
 
 
+## Import
+
+
+FolderFeed can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:cloudasset/folderFeed:FolderFeed default folders/{{folder_id}}/feeds/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:cloudasset/folderFeed:FolderFeed default {{folder_id}}/{{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

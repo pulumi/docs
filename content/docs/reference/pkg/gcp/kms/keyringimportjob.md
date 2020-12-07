@@ -1534,6 +1534,16 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 
 
 
+## Import
+
+
+KeyRingImportJob can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:kms/keyRingImportJob:KeyRingImportJob default {{name}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>

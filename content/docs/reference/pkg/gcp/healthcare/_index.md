@@ -11,6 +11,10 @@ Explore the resources and functions of the healthcare module in the GCP package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="consentstore" title="ConsentStore"><span class="symbol resource"></span>ConsentStore</a></li>
+    <li><a href="consentstoreiambinding" title="ConsentStoreIamBinding"><span class="symbol resource"></span>ConsentStoreIamBinding</a></li>
+    <li><a href="consentstoreiammember" title="ConsentStoreIamMember"><span class="symbol resource"></span>ConsentStoreIamMember</a></li>
+    <li><a href="consentstoreiampolicy" title="ConsentStoreIamPolicy"><span class="symbol resource"></span>ConsentStoreIamPolicy</a></li>
     <li><a href="dataset" title="Dataset"><span class="symbol resource"></span>Dataset</a></li>
     <li><a href="datasetiambinding" title="DatasetIamBinding"><span class="symbol resource"></span>DatasetIamBinding</a></li>
     <li><a href="datasetiammember" title="DatasetIamMember"><span class="symbol resource"></span>DatasetIamMember</a></li>
@@ -38,7 +42,7 @@ Explore the resources and functions of the healthcare module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.3.0</dd>
+	<dd>4.5.0</dd>
 </dl>
 
 

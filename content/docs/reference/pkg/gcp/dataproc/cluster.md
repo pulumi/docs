@@ -17,6 +17,486 @@ Manages a Cloud Dataproc cluster resource within GCP. For more information see
 `labels`,`cluster_config.worker_config.num_instances` and `cluster_config.preemptible_worker_config.num_instances` are non-updatable. Changing others will cause recreation of the
 whole cluster!
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var simplecluster = new Gcp.Dataproc.Cluster("simplecluster", new Gcp.Dataproc.ClusterArgs
+        {
+            Region = "us-central1",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dataproc.NewCluster(ctx, "simplecluster", &dataproc.ClusterArgs{
+			Region: pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+simplecluster = gcp.dataproc.Cluster("simplecluster", region="us-central1")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const simplecluster = new gcp.dataproc.Cluster("simplecluster", {
+    region: "us-central1",
+});
+```
+
+{{% /example %}}
+
+### Advanced
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var mycluster = new Gcp.Dataproc.Cluster("mycluster", new Gcp.Dataproc.ClusterArgs
+        {
+            ClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigArgs
+            {
+                GceClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs
+                {
+                    ServiceAccountScopes = 
+                    {
+                        "https://www.googleapis.com/auth/monitoring",
+                        "useraccounts-ro",
+                        "storage-rw",
+                        "logging-write",
+                    },
+                    Tags = 
+                    {
+                        "foo",
+                        "bar",
+                    },
+                },
+                InitializationActions = 
+                {
+                    new Gcp.Dataproc.Inputs.ClusterClusterConfigInitializationActionArgs
+                    {
+                        Script = "gs://dataproc-initialization-actions/stackdriver/stackdriver.sh",
+                        TimeoutSec = 500,
+                    },
+                },
+                MasterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigArgs
+                {
+                    DiskConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigDiskConfigArgs
+                    {
+                        BootDiskSizeGb = 15,
+                        BootDiskType = "pd-ssd",
+                    },
+                    MachineType = "e2-medium",
+                    NumInstances = 1,
+                },
+                PreemptibleWorkerConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigPreemptibleWorkerConfigArgs
+                {
+                    NumInstances = 0,
+                },
+                SoftwareConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigSoftwareConfigArgs
+                {
+                    ImageVersion = "1.3.7-deb9",
+                    OverrideProperties = 
+                    {
+                        { "dataproc:dataproc.allow.zero.workers", "true" },
+                    },
+                },
+                StagingBucket = "dataproc-staging-bucket",
+                WorkerConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigArgs
+                {
+                    DiskConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigWorkerConfigDiskConfigArgs
+                    {
+                        BootDiskSizeGb = 15,
+                        NumLocalSsds = 1,
+                    },
+                    MachineType = "e2-medium",
+                    MinCpuPlatform = "Intel Skylake",
+                    NumInstances = 2,
+                },
+            },
+            GracefulDecommissionTimeout = "120s",
+            Labels = 
+            {
+                { "foo", "bar" },
+            },
+            Region = "us-central1",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dataproc.NewCluster(ctx, "mycluster", &dataproc.ClusterArgs{
+			ClusterConfig: &dataproc.ClusterClusterConfigArgs{
+				GceClusterConfig: &dataproc.ClusterClusterConfigGceClusterConfigArgs{
+					ServiceAccountScopes: pulumi.StringArray{
+						pulumi.String("https://www.googleapis.com/auth/monitoring"),
+						pulumi.String("useraccounts-ro"),
+						pulumi.String("storage-rw"),
+						pulumi.String("logging-write"),
+					},
+					Tags: pulumi.StringArray{
+						pulumi.String("foo"),
+						pulumi.String("bar"),
+					},
+				},
+				InitializationActions: dataproc.ClusterClusterConfigInitializationActionArray{
+					&dataproc.ClusterClusterConfigInitializationActionArgs{
+						Script:     pulumi.String("gs://dataproc-initialization-actions/stackdriver/stackdriver.sh"),
+						TimeoutSec: pulumi.Int(500),
+					},
+				},
+				MasterConfig: &dataproc.ClusterClusterConfigMasterConfigArgs{
+					DiskConfig: &dataproc.ClusterClusterConfigMasterConfigDiskConfigArgs{
+						BootDiskSizeGb: pulumi.Int(15),
+						BootDiskType:   pulumi.String("pd-ssd"),
+					},
+					MachineType:  pulumi.String("e2-medium"),
+					NumInstances: pulumi.Int(1),
+				},
+				PreemptibleWorkerConfig: &dataproc.ClusterClusterConfigPreemptibleWorkerConfigArgs{
+					NumInstances: pulumi.Int(0),
+				},
+				SoftwareConfig: &dataproc.ClusterClusterConfigSoftwareConfigArgs{
+					ImageVersion: pulumi.String("1.3.7-deb9"),
+					OverrideProperties: pulumi.StringMap{
+						"dataproc:dataproc.allow.zero.workers": pulumi.String("true"),
+					},
+				},
+				StagingBucket: pulumi.String("dataproc-staging-bucket"),
+				WorkerConfig: &dataproc.ClusterClusterConfigWorkerConfigArgs{
+					DiskConfig: &dataproc.ClusterClusterConfigWorkerConfigDiskConfigArgs{
+						BootDiskSizeGb: pulumi.Int(15),
+						NumLocalSsds:   pulumi.Int(1),
+					},
+					MachineType:    pulumi.String("e2-medium"),
+					MinCpuPlatform: pulumi.String("Intel Skylake"),
+					NumInstances:   pulumi.Int(2),
+				},
+			},
+			GracefulDecommissionTimeout: pulumi.String("120s"),
+			Labels: pulumi.StringMap{
+				"foo": pulumi.String("bar"),
+			},
+			Region: pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+mycluster = gcp.dataproc.Cluster("mycluster",
+    cluster_config=gcp.dataproc.ClusterClusterConfigArgs(
+        gce_cluster_config=gcp.dataproc.ClusterClusterConfigGceClusterConfigArgs(
+            service_account_scopes=[
+                "https://www.googleapis.com/auth/monitoring",
+                "useraccounts-ro",
+                "storage-rw",
+                "logging-write",
+            ],
+            tags=[
+                "foo",
+                "bar",
+            ],
+        ),
+        initialization_actions=[gcp.dataproc.ClusterClusterConfigInitializationActionArgs(
+            script="gs://dataproc-initialization-actions/stackdriver/stackdriver.sh",
+            timeout_sec=500,
+        )],
+        master_config=gcp.dataproc.ClusterClusterConfigMasterConfigArgs(
+            disk_config=gcp.dataproc.ClusterClusterConfigMasterConfigDiskConfigArgs(
+                boot_disk_size_gb=15,
+                boot_disk_type="pd-ssd",
+            ),
+            machine_type="e2-medium",
+            num_instances=1,
+        ),
+        preemptible_worker_config=gcp.dataproc.ClusterClusterConfigPreemptibleWorkerConfigArgs(
+            num_instances=0,
+        ),
+        software_config=gcp.dataproc.ClusterClusterConfigSoftwareConfigArgs(
+            image_version="1.3.7-deb9",
+            override_properties={
+                "dataproc:dataproc.allow.zero.workers": "true",
+            },
+        ),
+        staging_bucket="dataproc-staging-bucket",
+        worker_config={
+            "diskConfig": {
+                "boot_disk_size_gb": 15,
+                "numLocalSsds": 1,
+            },
+            "machine_type": "e2-medium",
+            "min_cpu_platform": "Intel Skylake",
+            "numInstances": 2,
+        },
+    ),
+    graceful_decommission_timeout="120s",
+    labels={
+        "foo": "bar",
+    },
+    region="us-central1")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const mycluster = new gcp.dataproc.Cluster("mycluster", {
+    clusterConfig: {
+        gceClusterConfig: {
+            serviceAccountScopes: [
+                "https://www.googleapis.com/auth/monitoring",
+                "useraccounts-ro",
+                "storage-rw",
+                "logging-write",
+            ],
+            tags: [
+                "foo",
+                "bar",
+            ],
+        },
+        // You can define multiple initialization_action blocks
+        initializationActions: [{
+            script: "gs://dataproc-initialization-actions/stackdriver/stackdriver.sh",
+            timeoutSec: 500,
+        }],
+        masterConfig: {
+            diskConfig: {
+                bootDiskSizeGb: 15,
+                bootDiskType: "pd-ssd",
+            },
+            machineType: "e2-medium",
+            numInstances: 1,
+        },
+        preemptibleWorkerConfig: {
+            numInstances: 0,
+        },
+        // Override or set some custom properties
+        softwareConfig: {
+            imageVersion: "1.3.7-deb9",
+            overrideProperties: {
+                "dataproc:dataproc.allow.zero.workers": "true",
+            },
+        },
+        stagingBucket: "dataproc-staging-bucket",
+        workerConfig: {
+            diskConfig: {
+                bootDiskSizeGb: 15,
+                numLocalSsds: 1,
+            },
+            machineType: "e2-medium",
+            minCpuPlatform: "Intel Skylake",
+            numInstances: 2,
+        },
+    },
+    gracefulDecommissionTimeout: "120s",
+    labels: {
+        foo: "bar",
+    },
+    region: "us-central1",
+});
+```
+
+{{% /example %}}
+
+### Using A GPU Accelerator
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var acceleratedCluster = new Gcp.Dataproc.Cluster("acceleratedCluster", new Gcp.Dataproc.ClusterArgs
+        {
+            ClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigArgs
+            {
+                GceClusterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigGceClusterConfigArgs
+                {
+                    Zone = "us-central1-a",
+                },
+                MasterConfig = new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigArgs
+                {
+                    Accelerators = 
+                    {
+                        new Gcp.Dataproc.Inputs.ClusterClusterConfigMasterConfigAcceleratorArgs
+                        {
+                            AcceleratorCount = 1,
+                            AcceleratorType = "nvidia-tesla-k80",
+                        },
+                    },
+                },
+            },
+            Region = "us-central1",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataproc"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := dataproc.NewCluster(ctx, "acceleratedCluster", &dataproc.ClusterArgs{
+			ClusterConfig: &dataproc.ClusterClusterConfigArgs{
+				GceClusterConfig: &dataproc.ClusterClusterConfigGceClusterConfigArgs{
+					Zone: pulumi.String("us-central1-a"),
+				},
+				MasterConfig: &dataproc.ClusterClusterConfigMasterConfigArgs{
+					Accelerators: dataproc.ClusterClusterConfigMasterConfigAcceleratorArray{
+						&dataproc.ClusterClusterConfigMasterConfigAcceleratorArgs{
+							AcceleratorCount: pulumi.Int(1),
+							AcceleratorType:  pulumi.String("nvidia-tesla-k80"),
+						},
+					},
+				},
+			},
+			Region: pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+accelerated_cluster = gcp.dataproc.Cluster("acceleratedCluster",
+    cluster_config=gcp.dataproc.ClusterClusterConfigArgs(
+        gce_cluster_config=gcp.dataproc.ClusterClusterConfigGceClusterConfigArgs(
+            zone="us-central1-a",
+        ),
+        master_config=gcp.dataproc.ClusterClusterConfigMasterConfigArgs(
+            accelerators=[gcp.dataproc.ClusterClusterConfigMasterConfigAcceleratorArgs(
+                accelerator_count=1,
+                accelerator_type="nvidia-tesla-k80",
+            )],
+        ),
+    ),
+    region="us-central1")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
+    clusterConfig: {
+        gceClusterConfig: {
+            zone: "us-central1-a",
+        },
+        masterConfig: {
+            accelerators: [{
+                acceleratorCount: 1,
+                acceleratorType: "nvidia-tesla-k80",
+            }],
+        },
+    },
+    region: "us-central1",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Cluster Resource {#create}
@@ -5824,6 +6304,12 @@ attached to each preemptible worker node. Defaults to 0.
 
 
 
+
+
+## Import
+
+
+This resource does not support import.
 
 
 

@@ -21,6 +21,762 @@ To get more information about HaVpnGateway, see:
     * [Choosing a VPN](https://cloud.google.com/vpn/docs/how-to/choosing-a-vpn)
     * [Cloud VPN Overview](https://cloud.google.com/vpn/docs/concepts/overview)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Ha Vpn Gateway Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network1 = new Gcp.Compute.Network("network1", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var haGateway1 = new Gcp.Compute.HaVpnGateway("haGateway1", new Gcp.Compute.HaVpnGatewayArgs
+        {
+            Region = "us-central1",
+            Network = network1.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		network1, err := compute.NewNetwork(ctx, "network1", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewHaVpnGateway(ctx, "haGateway1", &compute.HaVpnGatewayArgs{
+			Region:  pulumi.String("us-central1"),
+			Network: network1.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network1 = gcp.compute.Network("network1", auto_create_subnetworks=False)
+ha_gateway1 = gcp.compute.HaVpnGateway("haGateway1",
+    region="us-central1",
+    network=network1.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const network1 = new gcp.compute.Network("network1", {autoCreateSubnetworks: false});
+const haGateway1 = new gcp.compute.HaVpnGateway("haGateway1", {
+    region: "us-central1",
+    network: network1.id,
+});
+```
+
+{{% /example %}}
+
+### Ha Vpn Gateway Gcp To Gcp
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network1 = new Gcp.Compute.Network("network1", new Gcp.Compute.NetworkArgs
+        {
+            RoutingMode = "GLOBAL",
+            AutoCreateSubnetworks = false,
+        });
+        var haGateway1 = new Gcp.Compute.HaVpnGateway("haGateway1", new Gcp.Compute.HaVpnGatewayArgs
+        {
+            Region = "us-central1",
+            Network = network1.Id,
+        });
+        var network2 = new Gcp.Compute.Network("network2", new Gcp.Compute.NetworkArgs
+        {
+            RoutingMode = "GLOBAL",
+            AutoCreateSubnetworks = false,
+        });
+        var haGateway2 = new Gcp.Compute.HaVpnGateway("haGateway2", new Gcp.Compute.HaVpnGatewayArgs
+        {
+            Region = "us-central1",
+            Network = network2.Id,
+        });
+        var network1Subnet1 = new Gcp.Compute.Subnetwork("network1Subnet1", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.0.1.0/24",
+            Region = "us-central1",
+            Network = network1.Id,
+        });
+        var network1Subnet2 = new Gcp.Compute.Subnetwork("network1Subnet2", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.0.2.0/24",
+            Region = "us-west1",
+            Network = network1.Id,
+        });
+        var network2Subnet1 = new Gcp.Compute.Subnetwork("network2Subnet1", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "192.168.1.0/24",
+            Region = "us-central1",
+            Network = network2.Id,
+        });
+        var network2Subnet2 = new Gcp.Compute.Subnetwork("network2Subnet2", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "192.168.2.0/24",
+            Region = "us-east1",
+            Network = network2.Id,
+        });
+        var router1 = new Gcp.Compute.Router("router1", new Gcp.Compute.RouterArgs
+        {
+            Network = network1.Name,
+            Bgp = new Gcp.Compute.Inputs.RouterBgpArgs
+            {
+                Asn = 64514,
+            },
+        });
+        var router2 = new Gcp.Compute.Router("router2", new Gcp.Compute.RouterArgs
+        {
+            Network = network2.Name,
+            Bgp = new Gcp.Compute.Inputs.RouterBgpArgs
+            {
+                Asn = 64515,
+            },
+        });
+        var tunnel1 = new Gcp.Compute.VPNTunnel("tunnel1", new Gcp.Compute.VPNTunnelArgs
+        {
+            Region = "us-central1",
+            VpnGateway = haGateway1.Id,
+            PeerGcpGateway = haGateway2.Id,
+            SharedSecret = "a secret message",
+            Router = router1.Id,
+            VpnGatewayInterface = 0,
+        });
+        var tunnel2 = new Gcp.Compute.VPNTunnel("tunnel2", new Gcp.Compute.VPNTunnelArgs
+        {
+            Region = "us-central1",
+            VpnGateway = haGateway1.Id,
+            PeerGcpGateway = haGateway2.Id,
+            SharedSecret = "a secret message",
+            Router = router1.Id,
+            VpnGatewayInterface = 1,
+        });
+        var tunnel3 = new Gcp.Compute.VPNTunnel("tunnel3", new Gcp.Compute.VPNTunnelArgs
+        {
+            Region = "us-central1",
+            VpnGateway = haGateway2.Id,
+            PeerGcpGateway = haGateway1.Id,
+            SharedSecret = "a secret message",
+            Router = router2.Id,
+            VpnGatewayInterface = 0,
+        });
+        var tunnel4 = new Gcp.Compute.VPNTunnel("tunnel4", new Gcp.Compute.VPNTunnelArgs
+        {
+            Region = "us-central1",
+            VpnGateway = haGateway2.Id,
+            PeerGcpGateway = haGateway1.Id,
+            SharedSecret = "a secret message",
+            Router = router2.Id,
+            VpnGatewayInterface = 1,
+        });
+        var router1Interface1 = new Gcp.Compute.RouterInterface("router1Interface1", new Gcp.Compute.RouterInterfaceArgs
+        {
+            Router = router1.Name,
+            Region = "us-central1",
+            IpRange = "169.254.0.1/30",
+            VpnTunnel = tunnel1.Name,
+        });
+        var router1Peer1 = new Gcp.Compute.RouterPeer("router1Peer1", new Gcp.Compute.RouterPeerArgs
+        {
+            Router = router1.Name,
+            Region = "us-central1",
+            PeerIpAddress = "169.254.0.2",
+            PeerAsn = 64515,
+            AdvertisedRoutePriority = 100,
+            Interface = router1Interface1.Name,
+        });
+        var router1Interface2 = new Gcp.Compute.RouterInterface("router1Interface2", new Gcp.Compute.RouterInterfaceArgs
+        {
+            Router = router1.Name,
+            Region = "us-central1",
+            IpRange = "169.254.1.1/30",
+            VpnTunnel = tunnel2.Name,
+        });
+        var router1Peer2 = new Gcp.Compute.RouterPeer("router1Peer2", new Gcp.Compute.RouterPeerArgs
+        {
+            Router = router1.Name,
+            Region = "us-central1",
+            PeerIpAddress = "169.254.1.2",
+            PeerAsn = 64515,
+            AdvertisedRoutePriority = 100,
+            Interface = router1Interface2.Name,
+        });
+        var router2Interface1 = new Gcp.Compute.RouterInterface("router2Interface1", new Gcp.Compute.RouterInterfaceArgs
+        {
+            Router = router2.Name,
+            Region = "us-central1",
+            IpRange = "169.254.0.1/30",
+            VpnTunnel = tunnel3.Name,
+        });
+        var router2Peer1 = new Gcp.Compute.RouterPeer("router2Peer1", new Gcp.Compute.RouterPeerArgs
+        {
+            Router = router2.Name,
+            Region = "us-central1",
+            PeerIpAddress = "169.254.0.2",
+            PeerAsn = 64514,
+            AdvertisedRoutePriority = 100,
+            Interface = router2Interface1.Name,
+        });
+        var router2Interface2 = new Gcp.Compute.RouterInterface("router2Interface2", new Gcp.Compute.RouterInterfaceArgs
+        {
+            Router = router2.Name,
+            Region = "us-central1",
+            IpRange = "169.254.1.1/30",
+            VpnTunnel = tunnel4.Name,
+        });
+        var router2Peer2 = new Gcp.Compute.RouterPeer("router2Peer2", new Gcp.Compute.RouterPeerArgs
+        {
+            Router = router2.Name,
+            Region = "us-central1",
+            PeerIpAddress = "169.254.1.2",
+            PeerAsn = 64514,
+            AdvertisedRoutePriority = 100,
+            Interface = router2Interface2.Name,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		network1, err := compute.NewNetwork(ctx, "network1", &compute.NetworkArgs{
+			RoutingMode:           pulumi.String("GLOBAL"),
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		haGateway1, err := compute.NewHaVpnGateway(ctx, "haGateway1", &compute.HaVpnGatewayArgs{
+			Region:  pulumi.String("us-central1"),
+			Network: network1.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		network2, err := compute.NewNetwork(ctx, "network2", &compute.NetworkArgs{
+			RoutingMode:           pulumi.String("GLOBAL"),
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		haGateway2, err := compute.NewHaVpnGateway(ctx, "haGateway2", &compute.HaVpnGatewayArgs{
+			Region:  pulumi.String("us-central1"),
+			Network: network2.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewSubnetwork(ctx, "network1Subnet1", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("10.0.1.0/24"),
+			Region:      pulumi.String("us-central1"),
+			Network:     network1.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewSubnetwork(ctx, "network1Subnet2", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("10.0.2.0/24"),
+			Region:      pulumi.String("us-west1"),
+			Network:     network1.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewSubnetwork(ctx, "network2Subnet1", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("192.168.1.0/24"),
+			Region:      pulumi.String("us-central1"),
+			Network:     network2.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewSubnetwork(ctx, "network2Subnet2", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("192.168.2.0/24"),
+			Region:      pulumi.String("us-east1"),
+			Network:     network2.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		router1, err := compute.NewRouter(ctx, "router1", &compute.RouterArgs{
+			Network: network1.Name,
+			Bgp: &compute.RouterBgpArgs{
+				Asn: pulumi.Int(64514),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		router2, err := compute.NewRouter(ctx, "router2", &compute.RouterArgs{
+			Network: network2.Name,
+			Bgp: &compute.RouterBgpArgs{
+				Asn: pulumi.Int(64515),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		tunnel1, err := compute.NewVPNTunnel(ctx, "tunnel1", &compute.VPNTunnelArgs{
+			Region:              pulumi.String("us-central1"),
+			VpnGateway:          haGateway1.ID(),
+			PeerGcpGateway:      haGateway2.ID(),
+			SharedSecret:        pulumi.String("a secret message"),
+			Router:              router1.ID(),
+			VpnGatewayInterface: pulumi.Int(0),
+		})
+		if err != nil {
+			return err
+		}
+		tunnel2, err := compute.NewVPNTunnel(ctx, "tunnel2", &compute.VPNTunnelArgs{
+			Region:              pulumi.String("us-central1"),
+			VpnGateway:          haGateway1.ID(),
+			PeerGcpGateway:      haGateway2.ID(),
+			SharedSecret:        pulumi.String("a secret message"),
+			Router:              router1.ID(),
+			VpnGatewayInterface: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		tunnel3, err := compute.NewVPNTunnel(ctx, "tunnel3", &compute.VPNTunnelArgs{
+			Region:              pulumi.String("us-central1"),
+			VpnGateway:          haGateway2.ID(),
+			PeerGcpGateway:      haGateway1.ID(),
+			SharedSecret:        pulumi.String("a secret message"),
+			Router:              router2.ID(),
+			VpnGatewayInterface: pulumi.Int(0),
+		})
+		if err != nil {
+			return err
+		}
+		tunnel4, err := compute.NewVPNTunnel(ctx, "tunnel4", &compute.VPNTunnelArgs{
+			Region:              pulumi.String("us-central1"),
+			VpnGateway:          haGateway2.ID(),
+			PeerGcpGateway:      haGateway1.ID(),
+			SharedSecret:        pulumi.String("a secret message"),
+			Router:              router2.ID(),
+			VpnGatewayInterface: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		router1Interface1, err := compute.NewRouterInterface(ctx, "router1Interface1", &compute.RouterInterfaceArgs{
+			Router:    router1.Name,
+			Region:    pulumi.String("us-central1"),
+			IpRange:   pulumi.String("169.254.0.1/30"),
+			VpnTunnel: tunnel1.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewRouterPeer(ctx, "router1Peer1", &compute.RouterPeerArgs{
+			Router:                  router1.Name,
+			Region:                  pulumi.String("us-central1"),
+			PeerIpAddress:           pulumi.String("169.254.0.2"),
+			PeerAsn:                 pulumi.Int(64515),
+			AdvertisedRoutePriority: pulumi.Int(100),
+			Interface:               router1Interface1.Name,
+		})
+		if err != nil {
+			return err
+		}
+		router1Interface2, err := compute.NewRouterInterface(ctx, "router1Interface2", &compute.RouterInterfaceArgs{
+			Router:    router1.Name,
+			Region:    pulumi.String("us-central1"),
+			IpRange:   pulumi.String("169.254.1.1/30"),
+			VpnTunnel: tunnel2.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewRouterPeer(ctx, "router1Peer2", &compute.RouterPeerArgs{
+			Router:                  router1.Name,
+			Region:                  pulumi.String("us-central1"),
+			PeerIpAddress:           pulumi.String("169.254.1.2"),
+			PeerAsn:                 pulumi.Int(64515),
+			AdvertisedRoutePriority: pulumi.Int(100),
+			Interface:               router1Interface2.Name,
+		})
+		if err != nil {
+			return err
+		}
+		router2Interface1, err := compute.NewRouterInterface(ctx, "router2Interface1", &compute.RouterInterfaceArgs{
+			Router:    router2.Name,
+			Region:    pulumi.String("us-central1"),
+			IpRange:   pulumi.String("169.254.0.1/30"),
+			VpnTunnel: tunnel3.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewRouterPeer(ctx, "router2Peer1", &compute.RouterPeerArgs{
+			Router:                  router2.Name,
+			Region:                  pulumi.String("us-central1"),
+			PeerIpAddress:           pulumi.String("169.254.0.2"),
+			PeerAsn:                 pulumi.Int(64514),
+			AdvertisedRoutePriority: pulumi.Int(100),
+			Interface:               router2Interface1.Name,
+		})
+		if err != nil {
+			return err
+		}
+		router2Interface2, err := compute.NewRouterInterface(ctx, "router2Interface2", &compute.RouterInterfaceArgs{
+			Router:    router2.Name,
+			Region:    pulumi.String("us-central1"),
+			IpRange:   pulumi.String("169.254.1.1/30"),
+			VpnTunnel: tunnel4.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewRouterPeer(ctx, "router2Peer2", &compute.RouterPeerArgs{
+			Router:                  router2.Name,
+			Region:                  pulumi.String("us-central1"),
+			PeerIpAddress:           pulumi.String("169.254.1.2"),
+			PeerAsn:                 pulumi.Int(64514),
+			AdvertisedRoutePriority: pulumi.Int(100),
+			Interface:               router2Interface2.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network1 = gcp.compute.Network("network1",
+    routing_mode="GLOBAL",
+    auto_create_subnetworks=False)
+ha_gateway1 = gcp.compute.HaVpnGateway("haGateway1",
+    region="us-central1",
+    network=network1.id)
+network2 = gcp.compute.Network("network2",
+    routing_mode="GLOBAL",
+    auto_create_subnetworks=False)
+ha_gateway2 = gcp.compute.HaVpnGateway("haGateway2",
+    region="us-central1",
+    network=network2.id)
+network1_subnet1 = gcp.compute.Subnetwork("network1Subnet1",
+    ip_cidr_range="10.0.1.0/24",
+    region="us-central1",
+    network=network1.id)
+network1_subnet2 = gcp.compute.Subnetwork("network1Subnet2",
+    ip_cidr_range="10.0.2.0/24",
+    region="us-west1",
+    network=network1.id)
+network2_subnet1 = gcp.compute.Subnetwork("network2Subnet1",
+    ip_cidr_range="192.168.1.0/24",
+    region="us-central1",
+    network=network2.id)
+network2_subnet2 = gcp.compute.Subnetwork("network2Subnet2",
+    ip_cidr_range="192.168.2.0/24",
+    region="us-east1",
+    network=network2.id)
+router1 = gcp.compute.Router("router1",
+    network=network1.name,
+    bgp=gcp.compute.RouterBgpArgs(
+        asn=64514,
+    ))
+router2 = gcp.compute.Router("router2",
+    network=network2.name,
+    bgp=gcp.compute.RouterBgpArgs(
+        asn=64515,
+    ))
+tunnel1 = gcp.compute.VPNTunnel("tunnel1",
+    region="us-central1",
+    vpn_gateway=ha_gateway1.id,
+    peer_gcp_gateway=ha_gateway2.id,
+    shared_secret="a secret message",
+    router=router1.id,
+    vpn_gateway_interface=0)
+tunnel2 = gcp.compute.VPNTunnel("tunnel2",
+    region="us-central1",
+    vpn_gateway=ha_gateway1.id,
+    peer_gcp_gateway=ha_gateway2.id,
+    shared_secret="a secret message",
+    router=router1.id,
+    vpn_gateway_interface=1)
+tunnel3 = gcp.compute.VPNTunnel("tunnel3",
+    region="us-central1",
+    vpn_gateway=ha_gateway2.id,
+    peer_gcp_gateway=ha_gateway1.id,
+    shared_secret="a secret message",
+    router=router2.id,
+    vpn_gateway_interface=0)
+tunnel4 = gcp.compute.VPNTunnel("tunnel4",
+    region="us-central1",
+    vpn_gateway=ha_gateway2.id,
+    peer_gcp_gateway=ha_gateway1.id,
+    shared_secret="a secret message",
+    router=router2.id,
+    vpn_gateway_interface=1)
+router1_interface1 = gcp.compute.RouterInterface("router1Interface1",
+    router=router1.name,
+    region="us-central1",
+    ip_range="169.254.0.1/30",
+    vpn_tunnel=tunnel1.name)
+router1_peer1 = gcp.compute.RouterPeer("router1Peer1",
+    router=router1.name,
+    region="us-central1",
+    peer_ip_address="169.254.0.2",
+    peer_asn=64515,
+    advertised_route_priority=100,
+    interface=router1_interface1.name)
+router1_interface2 = gcp.compute.RouterInterface("router1Interface2",
+    router=router1.name,
+    region="us-central1",
+    ip_range="169.254.1.1/30",
+    vpn_tunnel=tunnel2.name)
+router1_peer2 = gcp.compute.RouterPeer("router1Peer2",
+    router=router1.name,
+    region="us-central1",
+    peer_ip_address="169.254.1.2",
+    peer_asn=64515,
+    advertised_route_priority=100,
+    interface=router1_interface2.name)
+router2_interface1 = gcp.compute.RouterInterface("router2Interface1",
+    router=router2.name,
+    region="us-central1",
+    ip_range="169.254.0.1/30",
+    vpn_tunnel=tunnel3.name)
+router2_peer1 = gcp.compute.RouterPeer("router2Peer1",
+    router=router2.name,
+    region="us-central1",
+    peer_ip_address="169.254.0.2",
+    peer_asn=64514,
+    advertised_route_priority=100,
+    interface=router2_interface1.name)
+router2_interface2 = gcp.compute.RouterInterface("router2Interface2",
+    router=router2.name,
+    region="us-central1",
+    ip_range="169.254.1.1/30",
+    vpn_tunnel=tunnel4.name)
+router2_peer2 = gcp.compute.RouterPeer("router2Peer2",
+    router=router2.name,
+    region="us-central1",
+    peer_ip_address="169.254.1.2",
+    peer_asn=64514,
+    advertised_route_priority=100,
+    interface=router2_interface2.name)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const network1 = new gcp.compute.Network("network1", {
+    routingMode: "GLOBAL",
+    autoCreateSubnetworks: false,
+});
+const haGateway1 = new gcp.compute.HaVpnGateway("haGateway1", {
+    region: "us-central1",
+    network: network1.id,
+});
+const network2 = new gcp.compute.Network("network2", {
+    routingMode: "GLOBAL",
+    autoCreateSubnetworks: false,
+});
+const haGateway2 = new gcp.compute.HaVpnGateway("haGateway2", {
+    region: "us-central1",
+    network: network2.id,
+});
+const network1Subnet1 = new gcp.compute.Subnetwork("network1Subnet1", {
+    ipCidrRange: "10.0.1.0/24",
+    region: "us-central1",
+    network: network1.id,
+});
+const network1Subnet2 = new gcp.compute.Subnetwork("network1Subnet2", {
+    ipCidrRange: "10.0.2.0/24",
+    region: "us-west1",
+    network: network1.id,
+});
+const network2Subnet1 = new gcp.compute.Subnetwork("network2Subnet1", {
+    ipCidrRange: "192.168.1.0/24",
+    region: "us-central1",
+    network: network2.id,
+});
+const network2Subnet2 = new gcp.compute.Subnetwork("network2Subnet2", {
+    ipCidrRange: "192.168.2.0/24",
+    region: "us-east1",
+    network: network2.id,
+});
+const router1 = new gcp.compute.Router("router1", {
+    network: network1.name,
+    bgp: {
+        asn: 64514,
+    },
+});
+const router2 = new gcp.compute.Router("router2", {
+    network: network2.name,
+    bgp: {
+        asn: 64515,
+    },
+});
+const tunnel1 = new gcp.compute.VPNTunnel("tunnel1", {
+    region: "us-central1",
+    vpnGateway: haGateway1.id,
+    peerGcpGateway: haGateway2.id,
+    sharedSecret: "a secret message",
+    router: router1.id,
+    vpnGatewayInterface: 0,
+});
+const tunnel2 = new gcp.compute.VPNTunnel("tunnel2", {
+    region: "us-central1",
+    vpnGateway: haGateway1.id,
+    peerGcpGateway: haGateway2.id,
+    sharedSecret: "a secret message",
+    router: router1.id,
+    vpnGatewayInterface: 1,
+});
+const tunnel3 = new gcp.compute.VPNTunnel("tunnel3", {
+    region: "us-central1",
+    vpnGateway: haGateway2.id,
+    peerGcpGateway: haGateway1.id,
+    sharedSecret: "a secret message",
+    router: router2.id,
+    vpnGatewayInterface: 0,
+});
+const tunnel4 = new gcp.compute.VPNTunnel("tunnel4", {
+    region: "us-central1",
+    vpnGateway: haGateway2.id,
+    peerGcpGateway: haGateway1.id,
+    sharedSecret: "a secret message",
+    router: router2.id,
+    vpnGatewayInterface: 1,
+});
+const router1Interface1 = new gcp.compute.RouterInterface("router1Interface1", {
+    router: router1.name,
+    region: "us-central1",
+    ipRange: "169.254.0.1/30",
+    vpnTunnel: tunnel1.name,
+});
+const router1Peer1 = new gcp.compute.RouterPeer("router1Peer1", {
+    router: router1.name,
+    region: "us-central1",
+    peerIpAddress: "169.254.0.2",
+    peerAsn: 64515,
+    advertisedRoutePriority: 100,
+    "interface": router1Interface1.name,
+});
+const router1Interface2 = new gcp.compute.RouterInterface("router1Interface2", {
+    router: router1.name,
+    region: "us-central1",
+    ipRange: "169.254.1.1/30",
+    vpnTunnel: tunnel2.name,
+});
+const router1Peer2 = new gcp.compute.RouterPeer("router1Peer2", {
+    router: router1.name,
+    region: "us-central1",
+    peerIpAddress: "169.254.1.2",
+    peerAsn: 64515,
+    advertisedRoutePriority: 100,
+    "interface": router1Interface2.name,
+});
+const router2Interface1 = new gcp.compute.RouterInterface("router2Interface1", {
+    router: router2.name,
+    region: "us-central1",
+    ipRange: "169.254.0.1/30",
+    vpnTunnel: tunnel3.name,
+});
+const router2Peer1 = new gcp.compute.RouterPeer("router2Peer1", {
+    router: router2.name,
+    region: "us-central1",
+    peerIpAddress: "169.254.0.2",
+    peerAsn: 64514,
+    advertisedRoutePriority: 100,
+    "interface": router2Interface1.name,
+});
+const router2Interface2 = new gcp.compute.RouterInterface("router2Interface2", {
+    router: router2.name,
+    region: "us-central1",
+    ipRange: "169.254.1.1/30",
+    vpnTunnel: tunnel4.name,
+});
+const router2Peer2 = new gcp.compute.RouterPeer("router2Peer2", {
+    router: router2.name,
+    region: "us-central1",
+    peerIpAddress: "169.254.1.2",
+    peerAsn: 64514,
+    advertisedRoutePriority: 100,
+    "interface": router2Interface2.name,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a HaVpnGateway Resource {#create}
@@ -1278,6 +2034,28 @@ If it is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+HaVpnGateway can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/haVpnGateway:HaVpnGateway default projects/{{project}}/regions/{{region}}/vpnGateways/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/haVpnGateway:HaVpnGateway default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/haVpnGateway:HaVpnGateway default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/haVpnGateway:HaVpnGateway default {{name}}
+```
 
 
 

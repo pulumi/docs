@@ -20,6 +20,243 @@ Three different resources help you manage your IAM policy for Compute Engine Dis
 
 > **Note:** `gcp.compute.DiskIamBinding` resources **can be** used in conjunction with `gcp.compute.DiskIamMember` resources **only if** they do not grant privilege to the same role.
 
+## google\_compute\_disk\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/viewer",
+        members: ["user:jane@example.com"],
+    }],
+});
+const policy = new gcp.compute.DiskIamPolicy("policy", {
+    project: google_compute_disk["default"].project,
+    zone: google_compute_disk["default"].zone,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+admin = gcp.organizations.get_iam_policy(bindings=[gcp.organizations.GetIAMPolicyBindingArgs(
+    role="roles/viewer",
+    members=["user:jane@example.com"],
+)])
+policy = gcp.compute.DiskIamPolicy("policy",
+    project=google_compute_disk["default"]["project"],
+    zone=google_compute_disk["default"]["zone"],
+    policy_data=admin.policy_data)
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var admin = Output.Create(Gcp.Organizations.GetIAMPolicy.InvokeAsync(new Gcp.Organizations.GetIAMPolicyArgs
+        {
+            Bindings = 
+            {
+                new Gcp.Organizations.Inputs.GetIAMPolicyBindingArgs
+                {
+                    Role = "roles/viewer",
+                    Members = 
+                    {
+                        "user:jane@example.com",
+                    },
+                },
+            },
+        }));
+        var policy = new Gcp.Compute.DiskIamPolicy("policy", new Gcp.Compute.DiskIamPolicyArgs
+        {
+            Project = google_compute_disk.Default.Project,
+            Zone = google_compute_disk.Default.Zone,
+            PolicyData = admin.Apply(admin => admin.PolicyData),
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/organizations"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		admin, err := organizations.LookupIAMPolicy(ctx, &organizations.LookupIAMPolicyArgs{
+			Bindings: []organizations.GetIAMPolicyBinding{
+				organizations.GetIAMPolicyBinding{
+					Role: "roles/viewer",
+					Members: []string{
+						"user:jane@example.com",
+					},
+				},
+			},
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewDiskIamPolicy(ctx, "policy", &compute.DiskIamPolicyArgs{
+			Project:    pulumi.Any(google_compute_disk.Default.Project),
+			Zone:       pulumi.Any(google_compute_disk.Default.Zone),
+			PolicyData: pulumi.String(admin.PolicyData),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_compute\_disk\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const binding = new gcp.compute.DiskIamBinding("binding", {
+    project: google_compute_disk["default"].project,
+    zone: google_compute_disk["default"].zone,
+    role: "roles/viewer",
+    members: ["user:jane@example.com"],
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+binding = gcp.compute.DiskIamBinding("binding",
+    project=google_compute_disk["default"]["project"],
+    zone=google_compute_disk["default"]["zone"],
+    role="roles/viewer",
+    members=["user:jane@example.com"])
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var binding = new Gcp.Compute.DiskIamBinding("binding", new Gcp.Compute.DiskIamBindingArgs
+        {
+            Project = google_compute_disk.Default.Project,
+            Zone = google_compute_disk.Default.Zone,
+            Role = "roles/viewer",
+            Members = 
+            {
+                "user:jane@example.com",
+            },
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewDiskIamBinding(ctx, "binding", &compute.DiskIamBindingArgs{
+			Project: pulumi.Any(google_compute_disk.Default.Project),
+			Zone:    pulumi.Any(google_compute_disk.Default.Zone),
+			Role:    pulumi.String("roles/viewer"),
+			Members: pulumi.StringArray{
+				pulumi.String("user:jane@example.com"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+## google\_compute\_disk\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const member = new gcp.compute.DiskIamMember("member", {
+    project: google_compute_disk["default"].project,
+    zone: google_compute_disk["default"].zone,
+    role: "roles/viewer",
+    member: "user:jane@example.com",
+});
+```
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+member = gcp.compute.DiskIamMember("member",
+    project=google_compute_disk["default"]["project"],
+    zone=google_compute_disk["default"]["zone"],
+    role="roles/viewer",
+    member="user:jane@example.com")
+```
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var member = new Gcp.Compute.DiskIamMember("member", new Gcp.Compute.DiskIamMemberArgs
+        {
+            Project = google_compute_disk.Default.Project,
+            Zone = google_compute_disk.Default.Zone,
+            Role = "roles/viewer",
+            Member = "user:jane@example.com",
+        });
+    }
+
+}
+```
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewDiskIamMember(ctx, "member", &compute.DiskIamMemberArgs{
+			Project: pulumi.Any(google_compute_disk.Default.Project),
+			Zone:    pulumi.Any(google_compute_disk.Default.Zone),
+			Role:    pulumi.String("roles/viewer"),
+			Member:  pulumi.String("user:jane@example.com"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
 
 
 ## Create a RegionDiskIamBinding Resource {#create}
@@ -1257,6 +1494,32 @@ If it is not provided, the project will be parsed from the identifier of the par
 
 
 
+
+
+## Import
+
+
+For all import syntaxes, the "resource in question" can take any of the following forms* projects/{{project}}/zones/{{zone}}/disks/{{name}} * {{project}}/{{zone}}/{{name}} * {{zone}}/{{name}} * {{name}} Any variables not passed in the import command will be taken from the provider configuration. Compute Engine disk IAM resources can be imported using the resource identifiers, role, and member. IAM member imports use space-delimited identifiersthe resource in question, the role, and the member identity, e.g.
+
+```sh
+ $ pulumi import gcp:compute/regionDiskIamBinding:RegionDiskIamBinding editor "projects/{{project}}/zones/{{zone}}/disks/{{disk}} roles/viewer user:jane@example.com"
+```
+
+ IAM binding imports use space-delimited identifiersthe resource in question and the role, e.g.
+
+```sh
+ $ pulumi import gcp:compute/regionDiskIamBinding:RegionDiskIamBinding editor "projects/{{project}}/zones/{{zone}}/disks/{{disk}} roles/viewer"
+```
+
+ IAM policy imports use the identifier of the resource in question, e.g.
+
+```sh
+ $ pulumi import gcp:compute/regionDiskIamBinding:RegionDiskIamBinding editor projects/{{project}}/zones/{{zone}}/disks/{{disk}}
+```
+
+ -> **Custom Roles**If you're importing a IAM resource with a custom role, make sure to use the
+
+full name of the custom role, e.g. `[projects/my-project|organizations/my-org]/roles/my-custom-role`.
 
 
 

@@ -14,6 +14,100 @@ Provides available node types for Compute Engine sole-tenant nodes in a zone
 for a given project. For more information, see [the official documentation](https://cloud.google.com/compute/docs/nodes/#types) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/nodeTypes).
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var central1b = Output.Create(Gcp.Compute.GetNodeTypes.InvokeAsync(new Gcp.Compute.GetNodeTypesArgs
+        {
+            Zone = "us-central1-b",
+        }));
+        var tmpl = new Gcp.Compute.NodeTemplate("tmpl", new Gcp.Compute.NodeTemplateArgs
+        {
+            Region = "us-central1",
+            NodeType = data.Google_compute_node_types.Types.Names[0],
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "us-central1-b"
+		_, err := compute.GetNodeTypes(ctx, &compute.GetNodeTypesArgs{
+			Zone: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewNodeTemplate(ctx, "tmpl", &compute.NodeTemplateArgs{
+			Region:   pulumi.String("us-central1"),
+			NodeType: pulumi.Any(data.Google_compute_node_types.Types.Names[0]),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+central1b = gcp.compute.get_node_types(zone="us-central1-b")
+tmpl = gcp.compute.NodeTemplate("tmpl",
+    region="us-central1",
+    node_type=data["google_compute_node_types"]["types"]["names"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const central1b = gcp.compute.getNodeTypes({
+    zone: "us-central1-b",
+});
+const tmpl = new gcp.compute.NodeTemplate("tmpl", {
+    region: "us-central1",
+    nodeType: data.google_compute_node_types.types.names[0],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetNodeTypes {#using}
 

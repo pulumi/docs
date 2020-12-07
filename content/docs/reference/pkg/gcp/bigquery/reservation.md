@@ -18,6 +18,94 @@ To get more information about Reservation, see:
 * How-to Guides
     * [Introduction to Reservations](https://cloud.google.com/bigquery/docs/reservations-intro)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Bigquery Reservation Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var reservation = new Gcp.BigQuery.Reservation("reservation", new Gcp.BigQuery.ReservationArgs
+        {
+            Location = "asia-northeast1",
+            SlotCapacity = 0,
+            IgnoreIdleSlots = false,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := bigquery.NewReservation(ctx, "reservation", &bigquery.ReservationArgs{
+			Location:        pulumi.String("asia-northeast1"),
+			SlotCapacity:    pulumi.Int(0),
+			IgnoreIdleSlots: pulumi.Bool(false),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+reservation = gcp.bigquery.Reservation("reservation",
+    location="asia-northeast1",
+    slot_capacity=0,
+    ignore_idle_slots=False,
+    opts=ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const reservation = new gcp.bigquery.Reservation("reservation", {
+    location: "asia-northeast1",
+    slotCapacity: 0,
+    ignoreIdleSlots: false,
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Reservation Resource {#create}
@@ -947,6 +1035,24 @@ unit of parallelism. Queries using this reservation might use more slots during 
 
 
 
+
+
+## Import
+
+
+Reservation can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:bigquery/reservation:Reservation default projects/{{project}}/locations/{{location}}/reservations/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:bigquery/reservation:Reservation default {{project}}/{{location}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:bigquery/reservation:Reservation default {{location}}/{{name}}
+```
 
 
 

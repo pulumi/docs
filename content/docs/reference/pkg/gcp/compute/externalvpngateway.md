@@ -16,6 +16,424 @@ To get more information about ExternalVpnGateway, see:
 
 * [API documentation](https://cloud.google.com/compute/docs/reference/rest/v1/externalVpnGateways)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### External Vpn Gateway
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var network = new Gcp.Compute.Network("network", new Gcp.Compute.NetworkArgs
+        {
+            RoutingMode = "GLOBAL",
+            AutoCreateSubnetworks = false,
+        });
+        var haGateway = new Gcp.Compute.HaVpnGateway("haGateway", new Gcp.Compute.HaVpnGatewayArgs
+        {
+            Region = "us-central1",
+            Network = network.Id,
+        });
+        var externalGateway = new Gcp.Compute.ExternalVpnGateway("externalGateway", new Gcp.Compute.ExternalVpnGatewayArgs
+        {
+            RedundancyType = "SINGLE_IP_INTERNALLY_REDUNDANT",
+            Description = "An externally managed VPN gateway",
+            Interfaces = 
+            {
+                new Gcp.Compute.Inputs.ExternalVpnGatewayInterfaceArgs
+                {
+                    Id = 0,
+                    IpAddress = "8.8.8.8",
+                },
+            },
+        });
+        var networkSubnet1 = new Gcp.Compute.Subnetwork("networkSubnet1", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.0.1.0/24",
+            Region = "us-central1",
+            Network = network.Id,
+        });
+        var networkSubnet2 = new Gcp.Compute.Subnetwork("networkSubnet2", new Gcp.Compute.SubnetworkArgs
+        {
+            IpCidrRange = "10.0.2.0/24",
+            Region = "us-west1",
+            Network = network.Id,
+        });
+        var router1 = new Gcp.Compute.Router("router1", new Gcp.Compute.RouterArgs
+        {
+            Network = network.Name,
+            Bgp = new Gcp.Compute.Inputs.RouterBgpArgs
+            {
+                Asn = 64514,
+            },
+        });
+        var tunnel1 = new Gcp.Compute.VPNTunnel("tunnel1", new Gcp.Compute.VPNTunnelArgs
+        {
+            Region = "us-central1",
+            VpnGateway = haGateway.Id,
+            PeerExternalGateway = externalGateway.Id,
+            PeerExternalGatewayInterface = 0,
+            SharedSecret = "a secret message",
+            Router = router1.Id,
+            VpnGatewayInterface = 0,
+        });
+        var tunnel2 = new Gcp.Compute.VPNTunnel("tunnel2", new Gcp.Compute.VPNTunnelArgs
+        {
+            Region = "us-central1",
+            VpnGateway = haGateway.Id,
+            PeerExternalGateway = externalGateway.Id,
+            PeerExternalGatewayInterface = 0,
+            SharedSecret = "a secret message",
+            Router = router1.Id.Apply(id => $" {id}"),
+            VpnGatewayInterface = 1,
+        });
+        var router1Interface1 = new Gcp.Compute.RouterInterface("router1Interface1", new Gcp.Compute.RouterInterfaceArgs
+        {
+            Router = router1.Name,
+            Region = "us-central1",
+            IpRange = "169.254.0.1/30",
+            VpnTunnel = tunnel1.Name,
+        });
+        var router1Peer1 = new Gcp.Compute.RouterPeer("router1Peer1", new Gcp.Compute.RouterPeerArgs
+        {
+            Router = router1.Name,
+            Region = "us-central1",
+            PeerIpAddress = "169.254.0.2",
+            PeerAsn = 64515,
+            AdvertisedRoutePriority = 100,
+            Interface = router1Interface1.Name,
+        });
+        var router1Interface2 = new Gcp.Compute.RouterInterface("router1Interface2", new Gcp.Compute.RouterInterfaceArgs
+        {
+            Router = router1.Name,
+            Region = "us-central1",
+            IpRange = "169.254.1.1/30",
+            VpnTunnel = tunnel2.Name,
+        });
+        var router1Peer2 = new Gcp.Compute.RouterPeer("router1Peer2", new Gcp.Compute.RouterPeerArgs
+        {
+            Router = router1.Name,
+            Region = "us-central1",
+            PeerIpAddress = "169.254.1.2",
+            PeerAsn = 64515,
+            AdvertisedRoutePriority = 100,
+            Interface = router1Interface2.Name,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		network, err := compute.NewNetwork(ctx, "network", &compute.NetworkArgs{
+			RoutingMode:           pulumi.String("GLOBAL"),
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		haGateway, err := compute.NewHaVpnGateway(ctx, "haGateway", &compute.HaVpnGatewayArgs{
+			Region:  pulumi.String("us-central1"),
+			Network: network.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		externalGateway, err := compute.NewExternalVpnGateway(ctx, "externalGateway", &compute.ExternalVpnGatewayArgs{
+			RedundancyType: pulumi.String("SINGLE_IP_INTERNALLY_REDUNDANT"),
+			Description:    pulumi.String("An externally managed VPN gateway"),
+			Interfaces: compute.ExternalVpnGatewayInterfaceArray{
+				&compute.ExternalVpnGatewayInterfaceArgs{
+					Id:        pulumi.Int(0),
+					IpAddress: pulumi.String("8.8.8.8"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewSubnetwork(ctx, "networkSubnet1", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("10.0.1.0/24"),
+			Region:      pulumi.String("us-central1"),
+			Network:     network.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewSubnetwork(ctx, "networkSubnet2", &compute.SubnetworkArgs{
+			IpCidrRange: pulumi.String("10.0.2.0/24"),
+			Region:      pulumi.String("us-west1"),
+			Network:     network.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		router1, err := compute.NewRouter(ctx, "router1", &compute.RouterArgs{
+			Network: network.Name,
+			Bgp: &compute.RouterBgpArgs{
+				Asn: pulumi.Int(64514),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		tunnel1, err := compute.NewVPNTunnel(ctx, "tunnel1", &compute.VPNTunnelArgs{
+			Region:                       pulumi.String("us-central1"),
+			VpnGateway:                   haGateway.ID(),
+			PeerExternalGateway:          externalGateway.ID(),
+			PeerExternalGatewayInterface: pulumi.Int(0),
+			SharedSecret:                 pulumi.String("a secret message"),
+			Router:                       router1.ID(),
+			VpnGatewayInterface:          pulumi.Int(0),
+		})
+		if err != nil {
+			return err
+		}
+		tunnel2, err := compute.NewVPNTunnel(ctx, "tunnel2", &compute.VPNTunnelArgs{
+			Region:                       pulumi.String("us-central1"),
+			VpnGateway:                   haGateway.ID(),
+			PeerExternalGateway:          externalGateway.ID(),
+			PeerExternalGatewayInterface: pulumi.Int(0),
+			SharedSecret:                 pulumi.String("a secret message"),
+			Router: router1.ID().ApplyT(func(id string) (string, error) {
+				return fmt.Sprintf("%v%v", " ", id), nil
+			}).(pulumi.StringOutput),
+			VpnGatewayInterface: pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		router1Interface1, err := compute.NewRouterInterface(ctx, "router1Interface1", &compute.RouterInterfaceArgs{
+			Router:    router1.Name,
+			Region:    pulumi.String("us-central1"),
+			IpRange:   pulumi.String("169.254.0.1/30"),
+			VpnTunnel: tunnel1.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewRouterPeer(ctx, "router1Peer1", &compute.RouterPeerArgs{
+			Router:                  router1.Name,
+			Region:                  pulumi.String("us-central1"),
+			PeerIpAddress:           pulumi.String("169.254.0.2"),
+			PeerAsn:                 pulumi.Int(64515),
+			AdvertisedRoutePriority: pulumi.Int(100),
+			Interface:               router1Interface1.Name,
+		})
+		if err != nil {
+			return err
+		}
+		router1Interface2, err := compute.NewRouterInterface(ctx, "router1Interface2", &compute.RouterInterfaceArgs{
+			Router:    router1.Name,
+			Region:    pulumi.String("us-central1"),
+			IpRange:   pulumi.String("169.254.1.1/30"),
+			VpnTunnel: tunnel2.Name,
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewRouterPeer(ctx, "router1Peer2", &compute.RouterPeerArgs{
+			Router:                  router1.Name,
+			Region:                  pulumi.String("us-central1"),
+			PeerIpAddress:           pulumi.String("169.254.1.2"),
+			PeerAsn:                 pulumi.Int(64515),
+			AdvertisedRoutePriority: pulumi.Int(100),
+			Interface:               router1Interface2.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network = gcp.compute.Network("network",
+    routing_mode="GLOBAL",
+    auto_create_subnetworks=False)
+ha_gateway = gcp.compute.HaVpnGateway("haGateway",
+    region="us-central1",
+    network=network.id)
+external_gateway = gcp.compute.ExternalVpnGateway("externalGateway",
+    redundancy_type="SINGLE_IP_INTERNALLY_REDUNDANT",
+    description="An externally managed VPN gateway",
+    interfaces=[gcp.compute.ExternalVpnGatewayInterfaceArgs(
+        id=0,
+        ip_address="8.8.8.8",
+    )])
+network_subnet1 = gcp.compute.Subnetwork("networkSubnet1",
+    ip_cidr_range="10.0.1.0/24",
+    region="us-central1",
+    network=network.id)
+network_subnet2 = gcp.compute.Subnetwork("networkSubnet2",
+    ip_cidr_range="10.0.2.0/24",
+    region="us-west1",
+    network=network.id)
+router1 = gcp.compute.Router("router1",
+    network=network.name,
+    bgp=gcp.compute.RouterBgpArgs(
+        asn=64514,
+    ))
+tunnel1 = gcp.compute.VPNTunnel("tunnel1",
+    region="us-central1",
+    vpn_gateway=ha_gateway.id,
+    peer_external_gateway=external_gateway.id,
+    peer_external_gateway_interface=0,
+    shared_secret="a secret message",
+    router=router1.id,
+    vpn_gateway_interface=0)
+tunnel2 = gcp.compute.VPNTunnel("tunnel2",
+    region="us-central1",
+    vpn_gateway=ha_gateway.id,
+    peer_external_gateway=external_gateway.id,
+    peer_external_gateway_interface=0,
+    shared_secret="a secret message",
+    router=router1.id.apply(lambda id: f" {id}"),
+    vpn_gateway_interface=1)
+router1_interface1 = gcp.compute.RouterInterface("router1Interface1",
+    router=router1.name,
+    region="us-central1",
+    ip_range="169.254.0.1/30",
+    vpn_tunnel=tunnel1.name)
+router1_peer1 = gcp.compute.RouterPeer("router1Peer1",
+    router=router1.name,
+    region="us-central1",
+    peer_ip_address="169.254.0.2",
+    peer_asn=64515,
+    advertised_route_priority=100,
+    interface=router1_interface1.name)
+router1_interface2 = gcp.compute.RouterInterface("router1Interface2",
+    router=router1.name,
+    region="us-central1",
+    ip_range="169.254.1.1/30",
+    vpn_tunnel=tunnel2.name)
+router1_peer2 = gcp.compute.RouterPeer("router1Peer2",
+    router=router1.name,
+    region="us-central1",
+    peer_ip_address="169.254.1.2",
+    peer_asn=64515,
+    advertised_route_priority=100,
+    interface=router1_interface2.name)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const network = new gcp.compute.Network("network", {
+    routingMode: "GLOBAL",
+    autoCreateSubnetworks: false,
+});
+const haGateway = new gcp.compute.HaVpnGateway("haGateway", {
+    region: "us-central1",
+    network: network.id,
+});
+const externalGateway = new gcp.compute.ExternalVpnGateway("externalGateway", {
+    redundancyType: "SINGLE_IP_INTERNALLY_REDUNDANT",
+    description: "An externally managed VPN gateway",
+    interfaces: [{
+        id: 0,
+        ipAddress: "8.8.8.8",
+    }],
+});
+const networkSubnet1 = new gcp.compute.Subnetwork("networkSubnet1", {
+    ipCidrRange: "10.0.1.0/24",
+    region: "us-central1",
+    network: network.id,
+});
+const networkSubnet2 = new gcp.compute.Subnetwork("networkSubnet2", {
+    ipCidrRange: "10.0.2.0/24",
+    region: "us-west1",
+    network: network.id,
+});
+const router1 = new gcp.compute.Router("router1", {
+    network: network.name,
+    bgp: {
+        asn: 64514,
+    },
+});
+const tunnel1 = new gcp.compute.VPNTunnel("tunnel1", {
+    region: "us-central1",
+    vpnGateway: haGateway.id,
+    peerExternalGateway: externalGateway.id,
+    peerExternalGatewayInterface: 0,
+    sharedSecret: "a secret message",
+    router: router1.id,
+    vpnGatewayInterface: 0,
+});
+const tunnel2 = new gcp.compute.VPNTunnel("tunnel2", {
+    region: "us-central1",
+    vpnGateway: haGateway.id,
+    peerExternalGateway: externalGateway.id,
+    peerExternalGatewayInterface: 0,
+    sharedSecret: "a secret message",
+    router: pulumi.interpolate` ${router1.id}`,
+    vpnGatewayInterface: 1,
+});
+const router1Interface1 = new gcp.compute.RouterInterface("router1Interface1", {
+    router: router1.name,
+    region: "us-central1",
+    ipRange: "169.254.0.1/30",
+    vpnTunnel: tunnel1.name,
+});
+const router1Peer1 = new gcp.compute.RouterPeer("router1Peer1", {
+    router: router1.name,
+    region: "us-central1",
+    peerIpAddress: "169.254.0.2",
+    peerAsn: 64515,
+    advertisedRoutePriority: 100,
+    "interface": router1Interface1.name,
+});
+const router1Interface2 = new gcp.compute.RouterInterface("router1Interface2", {
+    router: router1.name,
+    region: "us-central1",
+    ipRange: "169.254.1.1/30",
+    vpnTunnel: tunnel2.name,
+});
+const router1Peer2 = new gcp.compute.RouterPeer("router1Peer2", {
+    router: router1.name,
+    region: "us-central1",
+    peerIpAddress: "169.254.1.2",
+    peerAsn: 64515,
+    advertisedRoutePriority: 100,
+    "interface": router1Interface2.name,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a ExternalVpnGateway Resource {#create}
@@ -1095,7 +1513,7 @@ Possible values are `FOUR_IPS_REDUNDANCY`, `SINGLE_IP_INTERNALLY_REDUNDANT`, and
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The numberic ID for this interface. Allowed values are based on the redundancy type
+    <dd>{{% md %}}The numeric ID for this interface. Allowed values are based on the redundancy type
 of this external VPN gateway
 * `0 - SINGLE_IP_INTERNALLY_REDUNDANT`
 * `0, 1 - TWO_IPS_REDUNDANCY`
@@ -1131,7 +1549,7 @@ it cannot be an IP address from Google Compute Engine.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The numberic ID for this interface. Allowed values are based on the redundancy type
+    <dd>{{% md %}}The numeric ID for this interface. Allowed values are based on the redundancy type
 of this external VPN gateway
 * `0 - SINGLE_IP_INTERNALLY_REDUNDANT`
 * `0, 1 - TWO_IPS_REDUNDANCY`
@@ -1167,7 +1585,7 @@ it cannot be an IP address from Google Compute Engine.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The numberic ID for this interface. Allowed values are based on the redundancy type
+    <dd>{{% md %}}The numeric ID for this interface. Allowed values are based on the redundancy type
 of this external VPN gateway
 * `0 - SINGLE_IP_INTERNALLY_REDUNDANT`
 * `0, 1 - TWO_IPS_REDUNDANCY`
@@ -1203,7 +1621,7 @@ it cannot be an IP address from Google Compute Engine.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
     </dt>
-    <dd>{{% md %}}The numberic ID for this interface. Allowed values are based on the redundancy type
+    <dd>{{% md %}}The numeric ID for this interface. Allowed values are based on the redundancy type
 of this external VPN gateway
 * `0 - SINGLE_IP_INTERNALLY_REDUNDANT`
 * `0, 1 - TWO_IPS_REDUNDANCY`
@@ -1233,6 +1651,24 @@ it cannot be an IP address from Google Compute Engine.
 
 
 
+
+
+## Import
+
+
+ExternalVpnGateway can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/externalVpnGateway:ExternalVpnGateway default projects/{{project}}/global/externalVpnGateways/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/externalVpnGateway:ExternalVpnGateway default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/externalVpnGateway:ExternalVpnGateway default {{name}}
+```
 
 
 

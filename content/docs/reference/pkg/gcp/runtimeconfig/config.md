@@ -15,6 +15,79 @@ Manages a RuntimeConfig resource in Google Cloud. For more information, see the
 or the
 [JSON API](https://cloud.google.com/deployment-manager/runtime-configurator/reference/rest/).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_runtime_config = new Gcp.RuntimeConfig.Config("my-runtime-config", new Gcp.RuntimeConfig.ConfigArgs
+        {
+            Description = "Runtime configuration values for my service",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/runtimeconfig"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := runtimeconfig.NewConfig(ctx, "my_runtime_config", &runtimeconfig.ConfigArgs{
+			Description: pulumi.String("Runtime configuration values for my service"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_runtime_config = gcp.runtimeconfig.Config("my-runtime-config", description="Runtime configuration values for my service")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my_runtime_config = new gcp.runtimeconfig.Config("my-runtime-config", {
+    description: "Runtime configuration values for my service",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Config Resource {#create}
@@ -744,6 +817,22 @@ is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+Runtime Configs can be imported using the `name` or full config name, e.g.
+
+```sh
+ $ pulumi import gcp:runtimeconfig/config:Config myconfig myconfig
+```
+
+```sh
+ $ pulumi import gcp:runtimeconfig/config:Config myconfig projects/my-gcp-project/configs/myconfig
+```
+
+ When importing using only the name, the provider project must be set.
 
 
 

@@ -13,6 +13,84 @@ meta_desc: "Explore the GetRouter function of the compute module, including exam
 Get a router within GCE from its name and VPC.
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_router = Output.Create(Gcp.Compute.GetRouter.InvokeAsync(new Gcp.Compute.GetRouterArgs
+        {
+            Name = "myrouter-us-east1",
+            Network = "my-network",
+        }));
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.LookupRouter(ctx, &compute.LookupRouterArgs{
+			Name:    "myrouter-us-east1",
+			Network: "my-network",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_router = gcp.compute.get_router(name="myrouter-us-east1",
+    network="my-network")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my_router = pulumi.output(gcp.compute.getRouter({
+    name: "myrouter-us-east1",
+    network: "my-network",
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetRouter {#using}
 

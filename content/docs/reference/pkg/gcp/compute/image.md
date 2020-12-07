@@ -33,6 +33,201 @@ To get more information about Image, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/images)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Image Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Gcp.Compute.Image("example", new Gcp.Compute.ImageArgs
+        {
+            RawDisk = new Gcp.Compute.Inputs.ImageRawDiskArgs
+            {
+                Source = "https://storage.googleapis.com/bosh-gce-raw-stemcells/bosh-stemcell-97.98-google-kvm-ubuntu-xenial-go_agent-raw-1557960142.tar.gz",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewImage(ctx, "example", &compute.ImageArgs{
+			RawDisk: &compute.ImageRawDiskArgs{
+				Source: pulumi.String("https://storage.googleapis.com/bosh-gce-raw-stemcells/bosh-stemcell-97.98-google-kvm-ubuntu-xenial-go_agent-raw-1557960142.tar.gz"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example = gcp.compute.Image("example", raw_disk=gcp.compute.ImageRawDiskArgs(
+    source="https://storage.googleapis.com/bosh-gce-raw-stemcells/bosh-stemcell-97.98-google-kvm-ubuntu-xenial-go_agent-raw-1557960142.tar.gz",
+))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example = new gcp.compute.Image("example", {
+    rawDisk: {
+        source: "https://storage.googleapis.com/bosh-gce-raw-stemcells/bosh-stemcell-97.98-google-kvm-ubuntu-xenial-go_agent-raw-1557960142.tar.gz",
+    },
+});
+```
+
+{{% /example %}}
+
+### Image Guest Os
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var example = new Gcp.Compute.Image("example", new Gcp.Compute.ImageArgs
+        {
+            GuestOsFeatures = 
+            {
+                new Gcp.Compute.Inputs.ImageGuestOsFeatureArgs
+                {
+                    Type = "SECURE_BOOT",
+                },
+                new Gcp.Compute.Inputs.ImageGuestOsFeatureArgs
+                {
+                    Type = "MULTI_IP_SUBNET",
+                },
+            },
+            RawDisk = new Gcp.Compute.Inputs.ImageRawDiskArgs
+            {
+                Source = "https://storage.googleapis.com/bosh-gce-raw-stemcells/bosh-stemcell-97.98-google-kvm-ubuntu-xenial-go_agent-raw-1557960142.tar.gz",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewImage(ctx, "example", &compute.ImageArgs{
+			GuestOsFeatures: compute.ImageGuestOsFeatureArray{
+				&compute.ImageGuestOsFeatureArgs{
+					Type: pulumi.String("SECURE_BOOT"),
+				},
+				&compute.ImageGuestOsFeatureArgs{
+					Type: pulumi.String("MULTI_IP_SUBNET"),
+				},
+			},
+			RawDisk: &compute.ImageRawDiskArgs{
+				Source: pulumi.String("https://storage.googleapis.com/bosh-gce-raw-stemcells/bosh-stemcell-97.98-google-kvm-ubuntu-xenial-go_agent-raw-1557960142.tar.gz"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+example = gcp.compute.Image("example",
+    guest_os_features=[
+        gcp.compute.ImageGuestOsFeatureArgs(
+            type="SECURE_BOOT",
+        ),
+        gcp.compute.ImageGuestOsFeatureArgs(
+            type="MULTI_IP_SUBNET",
+        ),
+    ],
+    raw_disk=gcp.compute.ImageRawDiskArgs(
+        source="https://storage.googleapis.com/bosh-gce-raw-stemcells/bosh-stemcell-97.98-google-kvm-ubuntu-xenial-go_agent-raw-1557960142.tar.gz",
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example = new gcp.compute.Image("example", {
+    guestOsFeatures: [
+        {
+            type: "SECURE_BOOT",
+        },
+        {
+            type: "MULTI_IP_SUBNET",
+        },
+    ],
+    rawDisk: {
+        source: "https://storage.googleapis.com/bosh-gce-raw-stemcells/bosh-stemcell-97.98-google-kvm-ubuntu-xenial-go_agent-raw-1557960142.tar.gz",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Image Resource {#create}
@@ -2424,6 +2619,24 @@ This is provided by the client when the disk image is created.
 
 
 
+
+
+## Import
+
+
+Image can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/image:Image default projects/{{project}}/global/images/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/image:Image default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:compute/image:Image default {{name}}
+```
 
 
 

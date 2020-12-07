@@ -18,6 +18,339 @@ To get more information about Repository, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/artifact-registry/docs/overview)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Artifact Registry Repository Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_repo = new Gcp.ArtifactRegistry.Repository("my-repo", new Gcp.ArtifactRegistry.RepositoryArgs
+        {
+            Location = "us-central1",
+            RepositoryId = "my-repository",
+            Description = "example docker repository",
+            Format = "DOCKER",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/artifactregistry"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := artifactregistry.NewRepository(ctx, "my_repo", &artifactregistry.RepositoryArgs{
+			Location:     pulumi.String("us-central1"),
+			RepositoryId: pulumi.String("my-repository"),
+			Description:  pulumi.String("example docker repository"),
+			Format:       pulumi.String("DOCKER"),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_repo = gcp.artifactregistry.Repository("my-repo",
+    location="us-central1",
+    repository_id="my-repository",
+    description="example docker repository",
+    format="DOCKER",
+    opts=ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my_repo = new gcp.artifactregistry.Repository("my-repo", {
+    location: "us-central1",
+    repositoryId: "my-repository",
+    description: "example docker repository",
+    format: "DOCKER",
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+### Artifact Registry Repository Cmek
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_repo = new Gcp.ArtifactRegistry.Repository("my-repo", new Gcp.ArtifactRegistry.RepositoryArgs
+        {
+            Location = "us-central1",
+            RepositoryId = "my-repository",
+            Description = "example docker repository with cmek",
+            Format = "DOCKER",
+            KmsKeyName = "kms-key",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/artifactregistry"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := artifactregistry.NewRepository(ctx, "my_repo", &artifactregistry.RepositoryArgs{
+			Location:     pulumi.String("us-central1"),
+			RepositoryId: pulumi.String("my-repository"),
+			Description:  pulumi.String("example docker repository with cmek"),
+			Format:       pulumi.String("DOCKER"),
+			KmsKeyName:   pulumi.String("kms-key"),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_repo = gcp.artifactregistry.Repository("my-repo",
+    location="us-central1",
+    repository_id="my-repository",
+    description="example docker repository with cmek",
+    format="DOCKER",
+    kms_key_name="kms-key",
+    opts=ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my_repo = new gcp.artifactregistry.Repository("my-repo", {
+    location: "us-central1",
+    repositoryId: "my-repository",
+    description: "example docker repository with cmek",
+    format: "DOCKER",
+    kmsKeyName: "kms-key",
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+### Artifact Registry Repository Iam
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_repo = new Gcp.ArtifactRegistry.Repository("my-repo", new Gcp.ArtifactRegistry.RepositoryArgs
+        {
+            Location = "us-central1",
+            RepositoryId = "my-repository",
+            Description = "example docker repository with iam",
+            Format = "DOCKER",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var test_account = new Gcp.ServiceAccount.Account("test-account", new Gcp.ServiceAccount.AccountArgs
+        {
+            AccountId = "my-account",
+            DisplayName = "Test Service Account",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var test_iam = new Gcp.ArtifactRegistry.RepositoryIamMember("test-iam", new Gcp.ArtifactRegistry.RepositoryIamMemberArgs
+        {
+            Location = my_repo.Location,
+            Repository = my_repo.Name,
+            Role = "roles/artifactregistry.reader",
+            Member = test_account.Email.Apply(email => $"serviceAccount:{email}"),
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/artifactregistry"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/serviceAccount"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := artifactregistry.NewRepository(ctx, "my_repo", &artifactregistry.RepositoryArgs{
+			Location:     pulumi.String("us-central1"),
+			RepositoryId: pulumi.String("my-repository"),
+			Description:  pulumi.String("example docker repository with iam"),
+			Format:       pulumi.String("DOCKER"),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = serviceAccount.NewAccount(ctx, "test_account", &serviceAccount.AccountArgs{
+			AccountId:   pulumi.String("my-account"),
+			DisplayName: pulumi.String("Test Service Account"),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = artifactregistry.NewRepositoryIamMember(ctx, "test_iam", &artifactregistry.RepositoryIamMemberArgs{
+			Location:   my_repo.Location,
+			Repository: my_repo.Name,
+			Role:       pulumi.String("roles/artifactregistry.reader"),
+			Member: test_account.Email.ApplyT(func(email string) (string, error) {
+				return fmt.Sprintf("%v%v", "serviceAccount:", email), nil
+			}).(pulumi.StringOutput),
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_repo = gcp.artifactregistry.Repository("my-repo",
+    location="us-central1",
+    repository_id="my-repository",
+    description="example docker repository with iam",
+    format="DOCKER",
+    opts=ResourceOptions(provider=google_beta))
+test_account = gcp.service_account.Account("test-account",
+    account_id="my-account",
+    display_name="Test Service Account",
+    opts=ResourceOptions(provider=google_beta))
+test_iam = gcp.artifactregistry.RepositoryIamMember("test-iam",
+    location=my_repo.location,
+    repository=my_repo.name,
+    role="roles/artifactregistry.reader",
+    member=test_account.email.apply(lambda email: f"serviceAccount:{email}"),
+    opts=ResourceOptions(provider=google_beta))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my_repo = new gcp.artifactregistry.Repository("my-repo", {
+    location: "us-central1",
+    repositoryId: "my-repository",
+    description: "example docker repository with iam",
+    format: "DOCKER",
+}, {
+    provider: google_beta,
+});
+const test_account = new gcp.serviceAccount.Account("test-account", {
+    accountId: "my-account",
+    displayName: "Test Service Account",
+}, {
+    provider: google_beta,
+});
+const test_iam = new gcp.artifactregistry.RepositoryIamMember("test-iam", {
+    location: my_repo.location,
+    repository: my_repo.name,
+    role: "roles/artifactregistry.reader",
+    member: pulumi.interpolate`serviceAccount:${test_account.email}`,
+}, {
+    provider: google_beta,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a Repository Resource {#create}
@@ -1427,6 +1760,28 @@ If it is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+Repository can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:artifactregistry/repository:Repository default projects/{{project}}/locations/{{location}}/repositories/{{repository_id}}
+```
+
+```sh
+ $ pulumi import gcp:artifactregistry/repository:Repository default {{project}}/{{location}}/{{repository_id}}
+```
+
+```sh
+ $ pulumi import gcp:artifactregistry/repository:Repository default {{location}}/{{repository_id}}
+```
+
+```sh
+ $ pulumi import gcp:artifactregistry/repository:Repository default {{repository_id}}
+```
 
 
 

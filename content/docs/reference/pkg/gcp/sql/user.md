@@ -12,6 +12,125 @@ meta_desc: "Explore the User resource of the sql module, including examples, inp
 
 Creates a new Google SQL User on a Google SQL User Instance. For more information, see the [official documentation](https://cloud.google.com/sql/), or the [JSON API](https://cloud.google.com/sql/docs/admin-api/v1beta4/users).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dbNameSuffix = new Random.RandomId("dbNameSuffix", new Random.RandomIdArgs
+        {
+            ByteLength = 4,
+        });
+        var master = new Gcp.Sql.DatabaseInstance("master", new Gcp.Sql.DatabaseInstanceArgs
+        {
+            Settings = new Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs
+            {
+                Tier = "db-f1-micro",
+            },
+        });
+        var users = new Gcp.Sql.User("users", new Gcp.Sql.UserArgs
+        {
+            Instance = master.Name,
+            Host = "me.com",
+            Password = "changeme",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql"
+	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := random.NewRandomId(ctx, "dbNameSuffix", &random.RandomIdArgs{
+			ByteLength: pulumi.Int(4),
+		})
+		if err != nil {
+			return err
+		}
+		master, err := sql.NewDatabaseInstance(ctx, "master", &sql.DatabaseInstanceArgs{
+			Settings: &sql.DatabaseInstanceSettingsArgs{
+				Tier: pulumi.String("db-f1-micro"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = sql.NewUser(ctx, "users", &sql.UserArgs{
+			Instance: master.Name,
+			Host:     pulumi.String("me.com"),
+			Password: pulumi.String("changeme"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+import pulumi_random as random
+
+db_name_suffix = random.RandomId("dbNameSuffix", byte_length=4)
+master = gcp.sql.DatabaseInstance("master", settings=gcp.sql.DatabaseInstanceSettingsArgs(
+    tier="db-f1-micro",
+))
+users = gcp.sql.User("users",
+    instance=master.name,
+    host="me.com",
+    password="changeme")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * as random from "@pulumi/random";
+
+const dbNameSuffix = new random.RandomId("dbNameSuffix", {byteLength: 4});
+const master = new gcp.sql.DatabaseInstance("master", {settings: {
+    tier: "db-f1-micro",
+}});
+const users = new gcp.sql.User("users", {
+    instance: master.name,
+    host: "me.com",
+    password: "changeme",
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a User Resource {#create}
@@ -23,7 +142,7 @@ Creates a new Google SQL User on a Google SQL User Instance. For more informatio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/sql/#pulumi_gcp.sql.User">User</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/sql/#pulumi_gcp.sql.User">User</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">deletion_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -209,6 +328,19 @@ forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="deletionpolicy_csharp">
+<a href="#deletionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The deletion policy for the user.
+Setting `ABANDON` allows the resource to be abandoned rather than deleted. This is useful
+for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="host_csharp">
 <a href="#host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
 </span> 
@@ -273,6 +405,19 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deletionpolicy_go">
+<a href="#deletionpolicy_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The deletion policy for the user.
+Setting `ABANDON` allows the resource to be abandoned rather than deleted. This is useful
+for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -345,6 +490,19 @@ forces a new resource to be created.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="deletionpolicy_nodejs">
+<a href="#deletionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The deletion policy for the user.
+Setting `ABANDON` allows the resource to be abandoned rather than deleted. This is useful
+for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="host_nodejs">
 <a href="#host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span> 
@@ -409,6 +567,19 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The name of the Cloud SQL instance. Changing this
 forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deletion_policy_python">
+<a href="#deletion_policy_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The deletion policy for the user.
+Setting `ABANDON` allows the resource to be abandoned rather than deleted. This is useful
+for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -559,7 +730,7 @@ Get an existing User resource's state with the given name, ID, and optional extr
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> User</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">deletion_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> User</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -675,6 +846,19 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_deletionpolicy_csharp">
+<a href="#state_deletionpolicy_csharp" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The deletion policy for the user.
+Setting `ABANDON` allows the resource to be abandoned rather than deleted. This is useful
+for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_host_csharp">
 <a href="#state_host_csharp" style="color: inherit; text-decoration: inherit;">Host</a>
 </span> 
@@ -740,6 +924,19 @@ is not provided, the provider project is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_deletionpolicy_go">
+<a href="#state_deletionpolicy_go" style="color: inherit; text-decoration: inherit;">Deletion<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The deletion policy for the user.
+Setting `ABANDON` allows the resource to be abandoned rather than deleted. This is useful
+for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -811,6 +1008,19 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_deletionpolicy_nodejs">
+<a href="#state_deletionpolicy_nodejs" style="color: inherit; text-decoration: inherit;">deletion<wbr>Policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The deletion policy for the user.
+Setting `ABANDON` allows the resource to be abandoned rather than deleted. This is useful
+for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_host_nodejs">
 <a href="#state_host_nodejs" style="color: inherit; text-decoration: inherit;">host</a>
 </span> 
@@ -876,6 +1086,19 @@ is not provided, the provider project is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_deletion_policy_python">
+<a href="#state_deletion_policy_python" style="color: inherit; text-decoration: inherit;">deletion_<wbr>policy</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The deletion policy for the user.
+Setting `ABANDON` allows the resource to be abandoned rather than deleted. This is useful
+for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -949,6 +1172,22 @@ is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+SQL users for MySQL databases can be imported using the `project`, `instance`, `host` and `name`, e.g.
+
+```sh
+ $ pulumi import gcp:sql/user:User users my-project/master-instance/my-domain.com/me
+```
+
+ SQL users for PostgreSQL databases can be imported using the `project`, `instance` and `name`, e.g.
+
+```sh
+ $ pulumi import gcp:sql/user:User users my-project/master-instance/me
+```
 
 
 

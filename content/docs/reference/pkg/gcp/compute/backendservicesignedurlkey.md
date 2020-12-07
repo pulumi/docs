@@ -21,6 +21,285 @@ To get more information about BackendServiceSignedUrlKey, see:
 > **Warning:** All arguments including `key_value` will be stored in the raw
 state as plain-text.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Backend Service Signed Url Key
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+using Random = Pulumi.Random;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var urlSignature = new Random.RandomId("urlSignature", new Random.RandomIdArgs
+        {
+            ByteLength = 16,
+        });
+        var webserver = new Gcp.Compute.InstanceTemplate("webserver", new Gcp.Compute.InstanceTemplateArgs
+        {
+            MachineType = "e2-medium",
+            NetworkInterfaces = 
+            {
+                new Gcp.Compute.Inputs.InstanceTemplateNetworkInterfaceArgs
+                {
+                    Network = "default",
+                },
+            },
+            Disks = 
+            {
+                new Gcp.Compute.Inputs.InstanceTemplateDiskArgs
+                {
+                    SourceImage = "debian-cloud/debian-9",
+                    AutoDelete = true,
+                    Boot = true,
+                },
+            },
+        });
+        var webservers = new Gcp.Compute.InstanceGroupManager("webservers", new Gcp.Compute.InstanceGroupManagerArgs
+        {
+            Versions = 
+            {
+                new Gcp.Compute.Inputs.InstanceGroupManagerVersionArgs
+                {
+                    InstanceTemplate = webserver.Id,
+                    Name = "primary",
+                },
+            },
+            BaseInstanceName = "webserver",
+            Zone = "us-central1-f",
+            TargetSize = 1,
+        });
+        var @default = new Gcp.Compute.HttpHealthCheck("default", new Gcp.Compute.HttpHealthCheckArgs
+        {
+            RequestPath = "/",
+            CheckIntervalSec = 1,
+            TimeoutSec = 1,
+        });
+        var exampleBackend = new Gcp.Compute.BackendService("exampleBackend", new Gcp.Compute.BackendServiceArgs
+        {
+            Description = "Our company website",
+            PortName = "http",
+            Protocol = "HTTP",
+            TimeoutSec = 10,
+            EnableCdn = true,
+            Backends = 
+            {
+                new Gcp.Compute.Inputs.BackendServiceBackendArgs
+                {
+                    Group = webservers.InstanceGroup,
+                },
+            },
+            HealthChecks = 
+            {
+                @default.Id,
+            },
+        });
+        var backendKey = new Gcp.Compute.BackendServiceSignedUrlKey("backendKey", new Gcp.Compute.BackendServiceSignedUrlKeyArgs
+        {
+            KeyValue = urlSignature.B64Url,
+            BackendService = exampleBackend.Name,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		urlSignature, err := random.NewRandomId(ctx, "urlSignature", &random.RandomIdArgs{
+			ByteLength: pulumi.Int(16),
+		})
+		if err != nil {
+			return err
+		}
+		webserver, err := compute.NewInstanceTemplate(ctx, "webserver", &compute.InstanceTemplateArgs{
+			MachineType: pulumi.String("e2-medium"),
+			NetworkInterfaces: compute.InstanceTemplateNetworkInterfaceArray{
+				&compute.InstanceTemplateNetworkInterfaceArgs{
+					Network: pulumi.String("default"),
+				},
+			},
+			Disks: compute.InstanceTemplateDiskArray{
+				&compute.InstanceTemplateDiskArgs{
+					SourceImage: pulumi.String("debian-cloud/debian-9"),
+					AutoDelete:  pulumi.Bool(true),
+					Boot:        pulumi.Bool(true),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		webservers, err := compute.NewInstanceGroupManager(ctx, "webservers", &compute.InstanceGroupManagerArgs{
+			Versions: compute.InstanceGroupManagerVersionArray{
+				&compute.InstanceGroupManagerVersionArgs{
+					InstanceTemplate: webserver.ID(),
+					Name:             pulumi.String("primary"),
+				},
+			},
+			BaseInstanceName: pulumi.String("webserver"),
+			Zone:             pulumi.String("us-central1-f"),
+			TargetSize:       pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewHttpHealthCheck(ctx, "_default", &compute.HttpHealthCheckArgs{
+			RequestPath:      pulumi.String("/"),
+			CheckIntervalSec: pulumi.Int(1),
+			TimeoutSec:       pulumi.Int(1),
+		})
+		if err != nil {
+			return err
+		}
+		exampleBackend, err := compute.NewBackendService(ctx, "exampleBackend", &compute.BackendServiceArgs{
+			Description: pulumi.String("Our company website"),
+			PortName:    pulumi.String("http"),
+			Protocol:    pulumi.String("HTTP"),
+			TimeoutSec:  pulumi.Int(10),
+			EnableCdn:   pulumi.Bool(true),
+			Backends: compute.BackendServiceBackendArray{
+				&compute.BackendServiceBackendArgs{
+					Group: webservers.InstanceGroup,
+				},
+			},
+			HealthChecks: pulumi.String(pulumi.String{
+				_default.ID(),
+			}),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewBackendServiceSignedUrlKey(ctx, "backendKey", &compute.BackendServiceSignedUrlKeyArgs{
+			KeyValue:       urlSignature.B64Url,
+			BackendService: exampleBackend.Name,
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+import pulumi_random as random
+
+url_signature = random.RandomId("urlSignature", byte_length=16)
+webserver = gcp.compute.InstanceTemplate("webserver",
+    machine_type="e2-medium",
+    network_interfaces=[gcp.compute.InstanceTemplateNetworkInterfaceArgs(
+        network="default",
+    )],
+    disks=[gcp.compute.InstanceTemplateDiskArgs(
+        source_image="debian-cloud/debian-9",
+        auto_delete=True,
+        boot=True,
+    )])
+webservers = gcp.compute.InstanceGroupManager("webservers",
+    versions=[gcp.compute.InstanceGroupManagerVersionArgs(
+        instance_template=webserver.id,
+        name="primary",
+    )],
+    base_instance_name="webserver",
+    zone="us-central1-f",
+    target_size=1)
+default = gcp.compute.HttpHealthCheck("default",
+    request_path="/",
+    check_interval_sec=1,
+    timeout_sec=1)
+example_backend = gcp.compute.BackendService("exampleBackend",
+    description="Our company website",
+    port_name="http",
+    protocol="HTTP",
+    timeout_sec=10,
+    enable_cdn=True,
+    backends=[gcp.compute.BackendServiceBackendArgs(
+        group=webservers.instance_group,
+    )],
+    health_checks=[default.id])
+backend_key = gcp.compute.BackendServiceSignedUrlKey("backendKey",
+    key_value=url_signature.b64_url,
+    backend_service=example_backend.name)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * as random from "@pulumi/random";
+
+const urlSignature = new random.RandomId("urlSignature", {byteLength: 16});
+const webserver = new gcp.compute.InstanceTemplate("webserver", {
+    machineType: "e2-medium",
+    networkInterfaces: [{
+        network: "default",
+    }],
+    disks: [{
+        sourceImage: "debian-cloud/debian-9",
+        autoDelete: true,
+        boot: true,
+    }],
+});
+const webservers = new gcp.compute.InstanceGroupManager("webservers", {
+    versions: [{
+        instanceTemplate: webserver.id,
+        name: "primary",
+    }],
+    baseInstanceName: "webserver",
+    zone: "us-central1-f",
+    targetSize: 1,
+});
+const _default = new gcp.compute.HttpHealthCheck("default", {
+    requestPath: "/",
+    checkIntervalSec: 1,
+    timeoutSec: 1,
+});
+const exampleBackend = new gcp.compute.BackendService("exampleBackend", {
+    description: "Our company website",
+    portName: "http",
+    protocol: "HTTP",
+    timeoutSec: 10,
+    enableCdn: true,
+    backends: [{
+        group: webservers.instanceGroup,
+    }],
+    healthChecks: [_default.id],
+});
+const backendKey = new gcp.compute.BackendServiceSignedUrlKey("backendKey", {
+    keyValue: urlSignature.b64Url,
+    backendService: exampleBackend.name,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a BackendServiceSignedUrlKey Resource {#create}
@@ -846,6 +1125,12 @@ If it is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+This resource does not support import.
 
 
 

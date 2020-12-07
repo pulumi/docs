@@ -16,6 +16,104 @@ You must enable the
 [Google Identity Platform](https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity) in
 the marketplace prior to using this resource.
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Identity Platform Inbound Saml Config Basic
+{{% example csharp %}}
+```csharp
+using System.IO;
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var samlConfig = new Gcp.IdentityPlatform.InboundSamlConfig("samlConfig", new Gcp.IdentityPlatform.InboundSamlConfigArgs
+        {
+            DisplayName = "Display Name",
+            IdpConfig = new Gcp.IdentityPlatform.Inputs.InboundSamlConfigIdpConfigArgs
+            {
+                IdpEntityId = "tf-idp",
+                SignRequest = true,
+                SsoUrl = "https://example.com",
+                IdpCertificates = 
+                {
+                    new Gcp.IdentityPlatform.Inputs.InboundSamlConfigIdpConfigIdpCertificateArgs
+                    {
+                        X509Certificate = File.ReadAllText("test-fixtures/rsa_cert.pem"),
+                    },
+                },
+            },
+            SpConfig = new Gcp.IdentityPlatform.Inputs.InboundSamlConfigSpConfigArgs
+            {
+                SpEntityId = "tf-sp",
+                CallbackUri = "https://example.com",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+saml_config = gcp.identityplatform.InboundSamlConfig("samlConfig",
+    display_name="Display Name",
+    idp_config=gcp.identityplatform.InboundSamlConfigIdpConfigArgs(
+        idp_entity_id="tf-idp",
+        sign_request=True,
+        sso_url="https://example.com",
+        idp_certificates=[gcp.identityplatform.InboundSamlConfigIdpConfigIdpCertificateArgs(
+            x509_certificate=(lambda path: open(path).read())("test-fixtures/rsa_cert.pem"),
+        )],
+    ),
+    sp_config=gcp.identityplatform.InboundSamlConfigSpConfigArgs(
+        sp_entity_id="tf-sp",
+        callback_uri="https://example.com",
+    ))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const samlConfig = new gcp.identityplatform.InboundSamlConfig("samlConfig", {
+    displayName: "Display Name",
+    idpConfig: {
+        idpEntityId: "tf-idp",
+        signRequest: true,
+        ssoUrl: "https://example.com",
+        idpCertificates: [{
+            x509Certificate: fs.readFileSync("test-fixtures/rsa_cert.pem"),
+        }],
+    },
+    spConfig: {
+        spEntityId: "tf-sp",
+        callbackUri: "https://example.com",
+    },
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a InboundSamlConfig Resource {#create}
@@ -1647,6 +1745,24 @@ The x509 certificate
 
 
 
+
+
+## Import
+
+
+InboundSamlConfig can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:identityplatform/inboundSamlConfig:InboundSamlConfig default projects/{{project}}/inboundSamlConfigs/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/inboundSamlConfig:InboundSamlConfig default {{project}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:identityplatform/inboundSamlConfig:InboundSamlConfig default {{name}}
+```
 
 
 

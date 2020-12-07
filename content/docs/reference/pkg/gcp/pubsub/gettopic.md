@@ -15,6 +15,80 @@ the [official documentation](https://cloud.google.com/pubsub/docs/)
 and [API](https://cloud.google.com/pubsub/docs/apis).
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var my_pubsub_topic = Output.Create(Gcp.PubSub.GetTopic.InvokeAsync(new Gcp.PubSub.GetTopicArgs
+        {
+            Name = "my-pubsub-topic",
+        }));
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := pubsub.LookupTopic(ctx, &pubsub.LookupTopicArgs{
+			Name: "my-pubsub-topic",
+		}, nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+my_pubsub_topic = gcp.pubsub.get_topic(name="my-pubsub-topic")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my_pubsub_topic = pulumi.output(gcp.pubsub.getTopic({
+    name: "my-pubsub-topic",
+}, { async: true }));
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetTopic {#using}
 

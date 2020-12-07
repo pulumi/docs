@@ -19,6 +19,364 @@ To get more information about FhirStore, see:
 * How-to Guides
     * [Creating a FHIR store](https://cloud.google.com/healthcare/docs/how-tos/fhir)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Healthcare Fhir Store Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var topic = new Gcp.PubSub.Topic("topic", new Gcp.PubSub.TopicArgs
+        {
+        });
+        var dataset = new Gcp.Healthcare.Dataset("dataset", new Gcp.Healthcare.DatasetArgs
+        {
+            Location = "us-central1",
+        });
+        var @default = new Gcp.Healthcare.FhirStore("default", new Gcp.Healthcare.FhirStoreArgs
+        {
+            Dataset = dataset.Id,
+            Version = "R4",
+            EnableUpdateCreate = false,
+            DisableReferentialIntegrity = false,
+            DisableResourceVersioning = false,
+            EnableHistoryImport = false,
+            NotificationConfig = new Gcp.Healthcare.Inputs.FhirStoreNotificationConfigArgs
+            {
+                PubsubTopic = topic.Id,
+            },
+            Labels = 
+            {
+                { "label1", "labelvalue1" },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		topic, err := pubsub.NewTopic(ctx, "topic", nil)
+		if err != nil {
+			return err
+		}
+		dataset, err := healthcare.NewDataset(ctx, "dataset", &healthcare.DatasetArgs{
+			Location: pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = healthcare.NewFhirStore(ctx, "_default", &healthcare.FhirStoreArgs{
+			Dataset:                     dataset.ID(),
+			Version:                     pulumi.String("R4"),
+			EnableUpdateCreate:          pulumi.Bool(false),
+			DisableReferentialIntegrity: pulumi.Bool(false),
+			DisableResourceVersioning:   pulumi.Bool(false),
+			EnableHistoryImport:         pulumi.Bool(false),
+			NotificationConfig: &healthcare.FhirStoreNotificationConfigArgs{
+				PubsubTopic: topic.ID(),
+			},
+			Labels: pulumi.StringMap{
+				"label1": pulumi.String("labelvalue1"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+topic = gcp.pubsub.Topic("topic")
+dataset = gcp.healthcare.Dataset("dataset", location="us-central1")
+default = gcp.healthcare.FhirStore("default",
+    dataset=dataset.id,
+    version="R4",
+    enable_update_create=False,
+    disable_referential_integrity=False,
+    disable_resource_versioning=False,
+    enable_history_import=False,
+    notification_config=gcp.healthcare.FhirStoreNotificationConfigArgs(
+        pubsub_topic=topic.id,
+    ),
+    labels={
+        "label1": "labelvalue1",
+    })
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const topic = new gcp.pubsub.Topic("topic", {});
+const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"});
+const _default = new gcp.healthcare.FhirStore("default", {
+    dataset: dataset.id,
+    version: "R4",
+    enableUpdateCreate: false,
+    disableReferentialIntegrity: false,
+    disableResourceVersioning: false,
+    enableHistoryImport: false,
+    notificationConfig: {
+        pubsubTopic: topic.id,
+    },
+    labels: {
+        label1: "labelvalue1",
+    },
+});
+```
+
+{{% /example %}}
+
+### Healthcare Fhir Store Streaming Config
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var dataset = new Gcp.Healthcare.Dataset("dataset", new Gcp.Healthcare.DatasetArgs
+        {
+            Location = "us-central1",
+        });
+        var bqDataset = new Gcp.BigQuery.Dataset("bqDataset", new Gcp.BigQuery.DatasetArgs
+        {
+            DatasetId = "bq_example_dataset",
+            FriendlyName = "test",
+            Description = "This is a test description",
+            Location = "US",
+            DeleteContentsOnDestroy = true,
+        });
+        var @default = new Gcp.Healthcare.FhirStore("default", new Gcp.Healthcare.FhirStoreArgs
+        {
+            Dataset = dataset.Id,
+            Version = "R4",
+            EnableUpdateCreate = false,
+            DisableReferentialIntegrity = false,
+            DisableResourceVersioning = false,
+            EnableHistoryImport = false,
+            Labels = 
+            {
+                { "label1", "labelvalue1" },
+            },
+            StreamConfigs = 
+            {
+                new Gcp.Healthcare.Inputs.FhirStoreStreamConfigArgs
+                {
+                    ResourceTypes = 
+                    {
+                        "Observation",
+                    },
+                    BigqueryDestination = new Gcp.Healthcare.Inputs.FhirStoreStreamConfigBigqueryDestinationArgs
+                    {
+                        DatasetUri = Output.Tuple(bqDataset.Project, bqDataset.DatasetId).Apply(values =>
+                        {
+                            var project = values.Item1;
+                            var datasetId = values.Item2;
+                            return $"bq://{project}.{datasetId}";
+                        }),
+                        SchemaConfig = new Gcp.Healthcare.Inputs.FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs
+                        {
+                            RecursiveStructureDepth = 3,
+                        },
+                    },
+                },
+            },
+        });
+        var topic = new Gcp.PubSub.Topic("topic", new Gcp.PubSub.TopicArgs
+        {
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"fmt"
+
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigquery"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/healthcare"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/pubsub"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		dataset, err := healthcare.NewDataset(ctx, "dataset", &healthcare.DatasetArgs{
+			Location: pulumi.String("us-central1"),
+		})
+		if err != nil {
+			return err
+		}
+		bqDataset, err := bigquery.NewDataset(ctx, "bqDataset", &bigquery.DatasetArgs{
+			DatasetId:               pulumi.String("bq_example_dataset"),
+			FriendlyName:            pulumi.String("test"),
+			Description:             pulumi.String("This is a test description"),
+			Location:                pulumi.String("US"),
+			DeleteContentsOnDestroy: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = healthcare.NewFhirStore(ctx, "_default", &healthcare.FhirStoreArgs{
+			Dataset:                     dataset.ID(),
+			Version:                     pulumi.String("R4"),
+			EnableUpdateCreate:          pulumi.Bool(false),
+			DisableReferentialIntegrity: pulumi.Bool(false),
+			DisableResourceVersioning:   pulumi.Bool(false),
+			EnableHistoryImport:         pulumi.Bool(false),
+			Labels: pulumi.StringMap{
+				"label1": pulumi.String("labelvalue1"),
+			},
+			StreamConfigs: healthcare.FhirStoreStreamConfigArray{
+				&healthcare.FhirStoreStreamConfigArgs{
+					ResourceTypes: pulumi.StringArray{
+						pulumi.String("Observation"),
+					},
+					BigqueryDestination: &healthcare.FhirStoreStreamConfigBigqueryDestinationArgs{
+						DatasetUri: pulumi.All(bqDataset.Project, bqDataset.DatasetId).ApplyT(func(_args []interface{}) (string, error) {
+							project := _args[0].(string)
+							datasetId := _args[1].(string)
+							return fmt.Sprintf("%v%v%v%v", "bq://", project, ".", datasetId), nil
+						}).(pulumi.StringOutput),
+						SchemaConfig: &healthcare.FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs{
+							RecursiveStructureDepth: pulumi.Int(3),
+						},
+					},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = pubsub.NewTopic(ctx, "topic", nil)
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+dataset = gcp.healthcare.Dataset("dataset", location="us-central1")
+bq_dataset = gcp.bigquery.Dataset("bqDataset",
+    dataset_id="bq_example_dataset",
+    friendly_name="test",
+    description="This is a test description",
+    location="US",
+    delete_contents_on_destroy=True)
+default = gcp.healthcare.FhirStore("default",
+    dataset=dataset.id,
+    version="R4",
+    enable_update_create=False,
+    disable_referential_integrity=False,
+    disable_resource_versioning=False,
+    enable_history_import=False,
+    labels={
+        "label1": "labelvalue1",
+    },
+    stream_configs=[gcp.healthcare.FhirStoreStreamConfigArgs(
+        resource_types=["Observation"],
+        bigquery_destination=gcp.healthcare.FhirStoreStreamConfigBigqueryDestinationArgs(
+            dataset_uri=pulumi.Output.all(bq_dataset.project, bq_dataset.dataset_id).apply(lambda project, dataset_id: f"bq://{project}.{dataset_id}"),
+            schema_config=gcp.healthcare.FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs(
+                recursive_structure_depth=3,
+            ),
+        ),
+    )])
+topic = gcp.pubsub.Topic("topic")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const dataset = new gcp.healthcare.Dataset("dataset", {location: "us-central1"});
+const bqDataset = new gcp.bigquery.Dataset("bqDataset", {
+    datasetId: "bq_example_dataset",
+    friendlyName: "test",
+    description: "This is a test description",
+    location: "US",
+    deleteContentsOnDestroy: true,
+});
+const _default = new gcp.healthcare.FhirStore("default", {
+    dataset: dataset.id,
+    version: "R4",
+    enableUpdateCreate: false,
+    disableReferentialIntegrity: false,
+    disableResourceVersioning: false,
+    enableHistoryImport: false,
+    labels: {
+        label1: "labelvalue1",
+    },
+    streamConfigs: [{
+        resourceTypes: ["Observation"],
+        bigqueryDestination: {
+            datasetUri: pulumi.interpolate`bq://${bqDataset.project}.${bqDataset.datasetId}`,
+            schemaConfig: {
+                recursiveStructureDepth: 3,
+            },
+        },
+    }],
+});
+const topic = new gcp.pubsub.Topic("topic", {});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a FhirStore Resource {#create}
@@ -2318,6 +2676,20 @@ Possible values are `ANALYTICS`.
 
 
 
+
+
+## Import
+
+
+FhirStore can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:healthcare/fhirStore:FhirStore default {{dataset}}/fhirStores/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:healthcare/fhirStore:FhirStore default {{dataset}}/{{name}}
+```
 
 
 

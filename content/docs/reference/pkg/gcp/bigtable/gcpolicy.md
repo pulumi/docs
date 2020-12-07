@@ -14,6 +14,177 @@ Creates a Google Cloud Bigtable GC Policy inside a family. For more information 
 [the official documentation](https://cloud.google.com/bigtable/) and
 [API](https://cloud.google.com/bigtable/docs/go/reference).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = new Gcp.BigTable.Instance("instance", new Gcp.BigTable.InstanceArgs
+        {
+            Clusters = 
+            {
+                new Gcp.BigTable.Inputs.InstanceClusterArgs
+                {
+                    ClusterId = "tf-instance-cluster",
+                    Zone = "us-central1-b",
+                    NumNodes = 3,
+                    StorageType = "HDD",
+                },
+            },
+        });
+        var table = new Gcp.BigTable.Table("table", new Gcp.BigTable.TableArgs
+        {
+            InstanceName = instance.Name,
+            ColumnFamilies = 
+            {
+                new Gcp.BigTable.Inputs.TableColumnFamilyArgs
+                {
+                    Family = "name",
+                },
+            },
+        });
+        var policy = new Gcp.BigTable.GCPolicy("policy", new Gcp.BigTable.GCPolicyArgs
+        {
+            InstanceName = instance.Name,
+            Table = table.Name,
+            ColumnFamily = "name",
+            MaxAges = 
+            {
+                new Gcp.BigTable.Inputs.GCPolicyMaxAgeArgs
+                {
+                    Days = 7,
+                },
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/bigtable"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		instance, err := bigtable.NewInstance(ctx, "instance", &bigtable.InstanceArgs{
+			Clusters: bigtable.InstanceClusterArray{
+				&bigtable.InstanceClusterArgs{
+					ClusterId:   pulumi.String("tf-instance-cluster"),
+					Zone:        pulumi.String("us-central1-b"),
+					NumNodes:    pulumi.Int(3),
+					StorageType: pulumi.String("HDD"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		table, err := bigtable.NewTable(ctx, "table", &bigtable.TableArgs{
+			InstanceName: instance.Name,
+			ColumnFamilies: bigtable.TableColumnFamilyArray{
+				&bigtable.TableColumnFamilyArgs{
+					Family: pulumi.String("name"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		_, err = bigtable.NewGCPolicy(ctx, "policy", &bigtable.GCPolicyArgs{
+			InstanceName: instance.Name,
+			Table:        table.Name,
+			ColumnFamily: pulumi.String("name"),
+			MaxAges: bigtable.GCPolicyMaxAgeArray{
+				&bigtable.GCPolicyMaxAgeArgs{
+					Days: pulumi.Int(7),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.bigtable.Instance("instance", clusters=[gcp.bigtable.InstanceClusterArgs(
+    cluster_id="tf-instance-cluster",
+    zone="us-central1-b",
+    num_nodes=3,
+    storage_type="HDD",
+)])
+table = gcp.bigtable.Table("table",
+    instance_name=instance.name,
+    column_families=[gcp.bigtable.TableColumnFamilyArgs(
+        family="name",
+    )])
+policy = gcp.bigtable.GCPolicy("policy",
+    instance_name=instance.name,
+    table=table.name,
+    column_family="name",
+    max_ages=[gcp.bigtable.GCPolicyMaxAgeArgs(
+        days=7,
+    )])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.bigtable.Instance("instance", {clusters: [{
+    clusterId: "tf-instance-cluster",
+    zone: "us-central1-b",
+    numNodes: 3,
+    storageType: "HDD",
+}]});
+const table = new gcp.bigtable.Table("table", {
+    instanceName: instance.name,
+    columnFamilies: [{
+        family: "name",
+    }],
+});
+const policy = new gcp.bigtable.GCPolicy("policy", {
+    instanceName: instance.name,
+    table: table.name,
+    columnFamily: "name",
+    maxAges: [{
+        days: 7,
+    }],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a GCPolicy Resource {#create}
@@ -1265,6 +1436,12 @@ The following state arguments are supported:
 
 
 
+
+
+## Import
+
+
+This resource does not support import.
 
 
 

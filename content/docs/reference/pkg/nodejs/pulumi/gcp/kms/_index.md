@@ -3,7 +3,7 @@ title: "Module kms"
 title_tag: "Module kms | Package @pulumi/gcp | Node.js SDK"
 linktitle: "kms"
 meta_desc: "Explore members of the kms module in the @pulumi/gcp package."
-git_sha: "190d8b0982043d566daf0a0e22d4f73afa046cc7"
+git_sha: "412945bd19782bdb51f1477251bede26b0ea0f15"
 block_external_search_index: true
 ---
 
@@ -78,7 +78,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="CryptoKey" data-link-title="CryptoKey">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L66">
         Resource <strong>CryptoKey</strong>
     </a>
 </h3>
@@ -102,9 +102,48 @@ To get more information about CryptoKey, see:
     * [Creating a key](https://cloud.google.com/kms/docs/creating-keys#create_a_key)
 
 #### Example Usage
+##### Kms Crypto Key Basic
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const example_key = new gcp.kms.CryptoKey("example-key", {
+    keyRing: keyring.id,
+    rotationPeriod: "100000s",
+});
+```
+##### Kms Crypto Key Asymmetric Sign
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const example_asymmetric_sign_key = new gcp.kms.CryptoKey("example-asymmetric-sign-key", {
+    keyRing: keyring.id,
+    purpose: "ASYMMETRIC_SIGN",
+    versionTemplate: {
+        algorithm: "EC_SIGN_P384_SHA384",
+    },
+});
+```
+
+#### Import
+
+CryptoKey can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:kms/cryptoKey:CryptoKey default {{key_ring}}/cryptoKeys/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:kms/cryptoKey:CryptoKey default {{key_ring}}/{{name}}
+```
 
 <h4 class="pdoc-member-header" id="CryptoKey-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L94"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L132"> <b>constructor</b></a>
 </h4>
 
 
@@ -118,7 +157,7 @@ Create a CryptoKey resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CryptoKey-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L76">method <b>get</b></a>
 </h4>
 
 
@@ -129,14 +168,14 @@ Get an existing CryptoKey resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CryptoKey-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L28">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L66">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CryptoKey-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L49">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L87">method <b>isInstance</b></a>
 </h4>
 
 
@@ -147,7 +186,7 @@ Returns true if the given object is an instance of CryptoKey.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CryptoKey-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L28">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L66">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -156,7 +195,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CryptoKey-keyRing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L60">property <b>keyRing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L98">property <b>keyRing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyRing: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -165,7 +204,7 @@ The KeyRing that this key belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 
 <h4 class="pdoc-member-header" id="CryptoKey-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L64">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L102">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -173,7 +212,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 Labels with user-defined metadata to apply to this resource.
 
 <h4 class="pdoc-member-header" id="CryptoKey-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L68">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L106">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -181,7 +220,7 @@ Labels with user-defined metadata to apply to this resource.
 The resource name for the CryptoKey.
 
 <h4 class="pdoc-member-header" id="CryptoKey-purpose">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L76">property <b>purpose</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L114">property <b>purpose</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>purpose: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -193,7 +232,7 @@ Default value is `ENCRYPT_DECRYPT`.
 Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
 
 <h4 class="pdoc-member-header" id="CryptoKey-rotationPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L83">property <b>rotationPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L121">property <b>rotationPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rotationPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -204,12 +243,12 @@ the format of a decimal number with up to 9 fractional digits, followed by the
 letter `s` (seconds). It must be greater than a day (ie, 86400).
 
 <h4 class="pdoc-member-header" id="CryptoKey-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L84">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L122">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>selfLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CryptoKey-skipInitialVersionCreation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L89">property <b>skipInitialVersionCreation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L127">property <b>skipInitialVersionCreation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skipInitialVersionCreation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -218,7 +257,7 @@ If set to true, the request will create a CryptoKey without any CryptoKeyVersion
 You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
 
 <h4 class="pdoc-member-header" id="CryptoKey-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L28">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L66">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -227,7 +266,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="CryptoKey-versionTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L94">property <b>versionTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L132">property <b>versionTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>versionTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#CryptoKeyVersionTemplate'>CryptoKeyVersionTemplate</a>&gt;;</code></pre>
@@ -236,7 +275,7 @@ A template describing settings for new crypto key versions.
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="CryptoKeyIAMBinding" data-link-title="CryptoKeyIAMBinding">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L143">
         Resource <strong>CryptoKeyIAMBinding</strong>
     </a>
 </h3>
@@ -253,14 +292,132 @@ Three different resources help you manage your IAM policy for KMS crypto key. Ea
 
 > **Note:** `gcp.kms.CryptoKeyIAMBinding` resources **can be** used in conjunction with `gcp.kms.CryptoKeyIAMMember` resources **only if** they do not grant privilege to the same role.
 
-With IAM Conditions:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const key = new gcp.kms.CryptoKey("key", {
+    keyRing: keyring.id,
+    rotationPeriod: "100000s",
+});
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/cloudkms.cryptoKeyEncrypter",
+        members: ["user:jane@example.com"],
+    }],
+});
+const cryptoKey = new gcp.kms.CryptoKeyIAMPolicy("cryptoKey", {
+    cryptoKeyId: key.id,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
 
 With IAM Conditions:
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+    bindings: [{
+        condition: {
+            description: "Expiring at midnight of 2019-12-31",
+            expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            title: "expires_after_2019_12_31",
+        },
+        members: ["user:jane@example.com"],
+        role: "roles/cloudkms.cryptoKeyEncrypter",
+    }],
+}, { async: true }));
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const cryptoKey = new gcp.kms.CryptoKeyIAMBinding("cryptoKey", {
+    cryptoKeyId: google_kms_crypto_key.key.id,
+    role: "roles/cloudkms.cryptoKeyEncrypter",
+    members: ["user:jane@example.com"],
+});
+```
+
 With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const cryptoKey = new gcp.kms.CryptoKeyIAMBinding("cryptoKey", {
+    cryptoKeyId: google_kms_crypto_key.key.id,
+    role: "roles/cloudkms.cryptoKeyEncrypter",
+    members: ["user:jane@example.com"],
+    condition: {
+        title: "expires_after_2019_12_31",
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    },
+});
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const cryptoKey = new gcp.kms.CryptoKeyIAMMember("cryptoKey", {
+    cryptoKeyId: google_kms_crypto_key.key.id,
+    role: "roles/cloudkms.cryptoKeyEncrypter",
+    member: "user:jane@example.com",
+});
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const cryptoKey = new gcp.kms.CryptoKeyIAMMember("cryptoKey", {
+    cryptoKeyId: google_kms_crypto_key.key.id,
+    role: "roles/cloudkms.cryptoKeyEncrypter",
+    member: "user:jane@example.com",
+    condition: {
+        title: "expires_after_2019_12_31",
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    },
+});
+```
+
+#### Import
+
+IAM member imports use space-delimited identifiers; the resource in question, the role, and the account.
+
+This member resource can be imported using the `crypto_key_id`, role, and member identity e.g.
+
+```sh
+ $ pulumi import gcp:kms/cryptoKeyIAMBinding:CryptoKeyIAMBinding crypto_key "your-project-id/location-name/key-ring-name/key-name roles/viewer user:foo@example.com"
+```
+
+ IAM binding imports use space-delimited identifiers; first the resource in question and then the role.
+
+These bindings can be imported using the `crypto_key_id` and role, e.g.
+
+```sh
+ $ pulumi import gcp:kms/cryptoKeyIAMBinding:CryptoKeyIAMBinding crypto_key "your-project-id/location-name/key-ring-name/key-name roles/editor"
+```
+
+ IAM policy imports use the identifier of the resource in question.
+
+This policy resource can be imported using the `crypto_key_id`, e.g.
+
+```sh
+ $ pulumi import gcp:kms/cryptoKeyIAMBinding:CryptoKeyIAMBinding crypto_key your-project-id/location-name/key-ring-name/key-name
+```
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMBinding-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L192"> <b>constructor</b></a>
 </h4>
 
 
@@ -274,7 +431,7 @@ Create a CryptoKeyIAMBinding resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMBinding-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L153">method <b>get</b></a>
 </h4>
 
 
@@ -285,14 +442,14 @@ Get an existing CryptoKeyIAMBinding resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMBinding-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L143">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMBinding-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L164">method <b>isInstance</b></a>
 </h4>
 
 
@@ -303,7 +460,7 @@ Returns true if the given object is an instance of CryptoKeyIAMBinding.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMBinding-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L58">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L175">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#CryptoKeyIAMBindingCondition'>CryptoKeyIAMBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -312,7 +469,7 @@ An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a 
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMBinding-cryptoKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L65">property <b>cryptoKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L182">property <b>cryptoKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cryptoKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -323,7 +480,7 @@ The crypto key ID, in the form
 the provider's project setting will be used as a fallback.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMBinding-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L69">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L186">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -331,7 +488,7 @@ the provider's project setting will be used as a fallback.
 (Computed) The etag of the project's IAM policy.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMBinding-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L143">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -340,12 +497,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMBinding-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L70">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L187">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CryptoKeyIAMBinding-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L75">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L192">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -354,7 +511,7 @@ The role that should be applied. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMBinding-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L143">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -363,7 +520,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="CryptoKeyIAMMember" data-link-title="CryptoKeyIAMMember">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L143">
         Resource <strong>CryptoKeyIAMMember</strong>
     </a>
 </h3>
@@ -380,14 +537,132 @@ Three different resources help you manage your IAM policy for KMS crypto key. Ea
 
 > **Note:** `gcp.kms.CryptoKeyIAMBinding` resources **can be** used in conjunction with `gcp.kms.CryptoKeyIAMMember` resources **only if** they do not grant privilege to the same role.
 
-With IAM Conditions:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const key = new gcp.kms.CryptoKey("key", {
+    keyRing: keyring.id,
+    rotationPeriod: "100000s",
+});
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/cloudkms.cryptoKeyEncrypter",
+        members: ["user:jane@example.com"],
+    }],
+});
+const cryptoKey = new gcp.kms.CryptoKeyIAMPolicy("cryptoKey", {
+    cryptoKeyId: key.id,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
 
 With IAM Conditions:
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+    bindings: [{
+        condition: {
+            description: "Expiring at midnight of 2019-12-31",
+            expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            title: "expires_after_2019_12_31",
+        },
+        members: ["user:jane@example.com"],
+        role: "roles/cloudkms.cryptoKeyEncrypter",
+    }],
+}, { async: true }));
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const cryptoKey = new gcp.kms.CryptoKeyIAMBinding("cryptoKey", {
+    cryptoKeyId: google_kms_crypto_key.key.id,
+    role: "roles/cloudkms.cryptoKeyEncrypter",
+    members: ["user:jane@example.com"],
+});
+```
+
 With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const cryptoKey = new gcp.kms.CryptoKeyIAMBinding("cryptoKey", {
+    cryptoKeyId: google_kms_crypto_key.key.id,
+    role: "roles/cloudkms.cryptoKeyEncrypter",
+    members: ["user:jane@example.com"],
+    condition: {
+        title: "expires_after_2019_12_31",
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    },
+});
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const cryptoKey = new gcp.kms.CryptoKeyIAMMember("cryptoKey", {
+    cryptoKeyId: google_kms_crypto_key.key.id,
+    role: "roles/cloudkms.cryptoKeyEncrypter",
+    member: "user:jane@example.com",
+});
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const cryptoKey = new gcp.kms.CryptoKeyIAMMember("cryptoKey", {
+    cryptoKeyId: google_kms_crypto_key.key.id,
+    role: "roles/cloudkms.cryptoKeyEncrypter",
+    member: "user:jane@example.com",
+    condition: {
+        title: "expires_after_2019_12_31",
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    },
+});
+```
+
+#### Import
+
+IAM member imports use space-delimited identifiers; the resource in question, the role, and the account.
+
+This member resource can be imported using the `crypto_key_id`, role, and member identity e.g.
+
+```sh
+ $ pulumi import gcp:kms/cryptoKeyIAMMember:CryptoKeyIAMMember crypto_key "your-project-id/location-name/key-ring-name/key-name roles/viewer user:foo@example.com"
+```
+
+ IAM binding imports use space-delimited identifiers; first the resource in question and then the role.
+
+These bindings can be imported using the `crypto_key_id` and role, e.g.
+
+```sh
+ $ pulumi import gcp:kms/cryptoKeyIAMMember:CryptoKeyIAMMember crypto_key "your-project-id/location-name/key-ring-name/key-name roles/editor"
+```
+
+ IAM policy imports use the identifier of the resource in question.
+
+This policy resource can be imported using the `crypto_key_id`, e.g.
+
+```sh
+ $ pulumi import gcp:kms/cryptoKeyIAMMember:CryptoKeyIAMMember crypto_key your-project-id/location-name/key-ring-name/key-name
+```
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMMember-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L192"> <b>constructor</b></a>
 </h4>
 
 
@@ -401,7 +676,7 @@ Create a CryptoKeyIAMMember resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMMember-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L153">method <b>get</b></a>
 </h4>
 
 
@@ -412,14 +687,14 @@ Get an existing CryptoKeyIAMMember resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMMember-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L143">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMMember-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L164">method <b>isInstance</b></a>
 </h4>
 
 
@@ -430,7 +705,7 @@ Returns true if the given object is an instance of CryptoKeyIAMMember.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMMember-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L58">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L175">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#CryptoKeyIAMMemberCondition'>CryptoKeyIAMMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -439,7 +714,7 @@ An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a 
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMMember-cryptoKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L65">property <b>cryptoKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L182">property <b>cryptoKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cryptoKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -450,7 +725,7 @@ The crypto key ID, in the form
 the provider's project setting will be used as a fallback.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMMember-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L69">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L186">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -458,7 +733,7 @@ the provider's project setting will be used as a fallback.
 (Computed) The etag of the project's IAM policy.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMMember-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L143">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -467,12 +742,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMMember-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L70">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L187">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CryptoKeyIAMMember-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L75">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L192">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -481,7 +756,7 @@ The role that should be applied. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMMember-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L143">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -490,7 +765,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="CryptoKeyIAMPolicy" data-link-title="CryptoKeyIAMPolicy">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L142">
         Resource <strong>CryptoKeyIAMPolicy</strong>
     </a>
 </h3>
@@ -507,14 +782,132 @@ Three different resources help you manage your IAM policy for KMS crypto key. Ea
 
 > **Note:** `gcp.kms.CryptoKeyIAMBinding` resources **can be** used in conjunction with `gcp.kms.CryptoKeyIAMMember` resources **only if** they do not grant privilege to the same role.
 
-With IAM Conditions:
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const key = new gcp.kms.CryptoKey("key", {
+    keyRing: keyring.id,
+    rotationPeriod: "100000s",
+});
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/cloudkms.cryptoKeyEncrypter",
+        members: ["user:jane@example.com"],
+    }],
+});
+const cryptoKey = new gcp.kms.CryptoKeyIAMPolicy("cryptoKey", {
+    cryptoKeyId: key.id,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
 
 With IAM Conditions:
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+    bindings: [{
+        condition: {
+            description: "Expiring at midnight of 2019-12-31",
+            expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            title: "expires_after_2019_12_31",
+        },
+        members: ["user:jane@example.com"],
+        role: "roles/cloudkms.cryptoKeyEncrypter",
+    }],
+}, { async: true }));
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const cryptoKey = new gcp.kms.CryptoKeyIAMBinding("cryptoKey", {
+    cryptoKeyId: google_kms_crypto_key.key.id,
+    role: "roles/cloudkms.cryptoKeyEncrypter",
+    members: ["user:jane@example.com"],
+});
+```
+
 With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const cryptoKey = new gcp.kms.CryptoKeyIAMBinding("cryptoKey", {
+    cryptoKeyId: google_kms_crypto_key.key.id,
+    role: "roles/cloudkms.cryptoKeyEncrypter",
+    members: ["user:jane@example.com"],
+    condition: {
+        title: "expires_after_2019_12_31",
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    },
+});
+```
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const cryptoKey = new gcp.kms.CryptoKeyIAMMember("cryptoKey", {
+    cryptoKeyId: google_kms_crypto_key.key.id,
+    role: "roles/cloudkms.cryptoKeyEncrypter",
+    member: "user:jane@example.com",
+});
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const cryptoKey = new gcp.kms.CryptoKeyIAMMember("cryptoKey", {
+    cryptoKeyId: google_kms_crypto_key.key.id,
+    role: "roles/cloudkms.cryptoKeyEncrypter",
+    member: "user:jane@example.com",
+    condition: {
+        title: "expires_after_2019_12_31",
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+    },
+});
+```
+
+#### Import
+
+IAM member imports use space-delimited identifiers; the resource in question, the role, and the account.
+
+This member resource can be imported using the `crypto_key_id`, role, and member identity e.g.
+
+```sh
+ $ pulumi import gcp:kms/cryptoKeyIAMPolicy:CryptoKeyIAMPolicy crypto_key "your-project-id/location-name/key-ring-name/key-name roles/viewer user:foo@example.com"
+```
+
+ IAM binding imports use space-delimited identifiers; first the resource in question and then the role.
+
+These bindings can be imported using the `crypto_key_id` and role, e.g.
+
+```sh
+ $ pulumi import gcp:kms/cryptoKeyIAMPolicy:CryptoKeyIAMPolicy crypto_key "your-project-id/location-name/key-ring-name/key-name roles/editor"
+```
+
+ IAM policy imports use the identifier of the resource in question.
+
+This policy resource can be imported using the `crypto_key_id`, e.g.
+
+```sh
+ $ pulumi import gcp:kms/cryptoKeyIAMPolicy:CryptoKeyIAMPolicy crypto_key your-project-id/location-name/key-ring-name/key-name
+```
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L67"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L185"> <b>constructor</b></a>
 </h4>
 
 
@@ -528,7 +921,7 @@ Create a CryptoKeyIAMPolicy resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L152">method <b>get</b></a>
 </h4>
 
 
@@ -539,14 +932,14 @@ Get an existing CryptoKeyIAMPolicy resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L24">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L142">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L163">method <b>isInstance</b></a>
 </h4>
 
 
@@ -557,7 +950,7 @@ Returns true if the given object is an instance of CryptoKeyIAMPolicy.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMPolicy-cryptoKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L58">property <b>cryptoKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L176">property <b>cryptoKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cryptoKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -568,7 +961,7 @@ The crypto key ID, in the form
 the provider's project setting will be used as a fallback.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMPolicy-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L62">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L180">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -576,7 +969,7 @@ the provider's project setting will be used as a fallback.
 (Computed) The etag of the project's IAM policy.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L24">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L142">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -585,7 +978,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMPolicy-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L67">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L185">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -594,7 +987,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L24">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L142">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -603,7 +996,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="KeyRing" data-link-title="KeyRing">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRing.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRing.ts#L48">
         Resource <strong>KeyRing</strong>
     </a>
 </h3>
@@ -623,9 +1016,35 @@ To get more information about KeyRing, see:
     * [Creating a key ring](https://cloud.google.com/kms/docs/creating-keys#create_a_key_ring)
 
 #### Example Usage
+##### Kms Key Ring Basic
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example_keyring = new gcp.kms.KeyRing("example-keyring", {
+    location: "global",
+});
+```
+
+#### Import
+
+KeyRing can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:kms/keyRing:KeyRing default projects/{{project}}/locations/{{location}}/keyRings/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:kms/keyRing:KeyRing default {{project}}/{{location}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:kms/keyRing:KeyRing default {{location}}/{{name}}
+```
 
 <h4 class="pdoc-member-header" id="KeyRing-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRing.ts#L64"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRing.ts#L90"> <b>constructor</b></a>
 </h4>
 
 
@@ -639,7 +1058,7 @@ Create a KeyRing resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="KeyRing-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRing.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRing.ts#L58">method <b>get</b></a>
 </h4>
 
 
@@ -650,14 +1069,14 @@ Get an existing KeyRing resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="KeyRing-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRing.ts#L22">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRing.ts#L48">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="KeyRing-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRing.ts#L43">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRing.ts#L69">method <b>isInstance</b></a>
 </h4>
 
 
@@ -668,7 +1087,7 @@ Returns true if the given object is an instance of KeyRing.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="KeyRing-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRing.ts#L22">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRing.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -677,7 +1096,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="KeyRing-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRing.ts#L54">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRing.ts#L80">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -686,7 +1105,7 @@ The location for the KeyRing.
 A full list of valid locations can be found by running `gcloud kms locations list`.
 
 <h4 class="pdoc-member-header" id="KeyRing-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRing.ts#L58">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRing.ts#L84">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -694,7 +1113,7 @@ A full list of valid locations can be found by running `gcloud kms locations lis
 The resource name for the KeyRing.
 
 <h4 class="pdoc-member-header" id="KeyRing-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRing.ts#L63">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRing.ts#L89">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -703,12 +1122,12 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="KeyRing-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRing.ts#L64">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRing.ts#L90">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>selfLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KeyRing-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRing.ts#L22">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRing.ts#L48">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -717,7 +1136,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="KeyRingIAMBinding" data-link-title="KeyRingIAMBinding">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMBinding.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMBinding.ts#L150">
         Resource <strong>KeyRingIAMBinding</strong>
     </a>
 </h3>
@@ -734,8 +1153,139 @@ Three different resources help you manage your IAM policy for KMS key ring. Each
 
 > **Note:** `gcp.kms.KeyRingIAMBinding` resources **can be** used in conjunction with `gcp.kms.KeyRingIAMMember` resources **only if** they do not grant privilege to the same role.
 
+#### google\_kms\_key\_ring\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const keyRing = new gcp.kms.KeyRingIAMPolicy("keyRing", {
+    keyRingId: keyring.id,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+        condition: {
+            title: "expires_after_2019_12_31",
+            description: "Expiring at midnight of 2019-12-31",
+            expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        },
+    }],
+});
+const keyRing = new gcp.kms.KeyRingIAMPolicy("keyRing", {
+    keyRingId: keyring.id,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+
+#### google\_kms\_key\_ring\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyRing = new gcp.kms.KeyRingIAMBinding("key_ring", {
+    keyRingId: "your-key-ring-id",
+    members: ["user:jane@example.com"],
+    role: "roles/editor",
+});
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyRing = new gcp.kms.KeyRingIAMBinding("key_ring", {
+    condition: {
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title: "expires_after_2019_12_31",
+    },
+    keyRingId: "your-key-ring-id",
+    members: ["user:jane@example.com"],
+    role: "roles/editor",
+});
+```
+
+#### google\_kms\_key\_ring\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyRing = new gcp.kms.KeyRingIAMMember("key_ring", {
+    keyRingId: "your-key-ring-id",
+    member: "user:jane@example.com",
+    role: "roles/editor",
+});
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyRing = new gcp.kms.KeyRingIAMMember("key_ring", {
+    condition: {
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title: "expires_after_2019_12_31",
+    },
+    keyRingId: "your-key-ring-id",
+    member: "user:jane@example.com",
+    role: "roles/editor",
+});
+```
+
+#### Import
+
+IAM member imports use space-delimited identifiers; the resource in question, the role, and the account.
+
+This member resource can be imported using the `key_ring_id`, role, and account e.g.
+
+```sh
+ $ pulumi import gcp:kms/keyRingIAMBinding:KeyRingIAMBinding key_ring_iam "your-project-id/location-name/key-ring-name roles/viewer user:foo@example.com"
+```
+
+ IAM binding imports use space-delimited identifiers; the resource in question and the role.
+
+This binding resource can be imported using the `key_ring_id` and role, e.g.
+
+```sh
+ $ pulumi import gcp:kms/keyRingIAMBinding:KeyRingIAMBinding key_ring_iam "your-project-id/location-name/key-ring-name roles/viewer"
+```
+
+ IAM policy imports use the identifier of the resource in question.
+
+This policy resource can be imported using the `key_ring_id`, e.g.
+
+```sh
+ $ pulumi import gcp:kms/keyRingIAMBinding:KeyRingIAMBinding key_ring_iam your-project-id/location-name/key-ring-name
+```
+
 <h4 class="pdoc-member-header" id="KeyRingIAMBinding-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMBinding.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMBinding.ts#L200"> <b>constructor</b></a>
 </h4>
 
 
@@ -749,7 +1299,7 @@ Create a KeyRingIAMBinding resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMBinding-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMBinding.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMBinding.ts#L160">method <b>get</b></a>
 </h4>
 
 
@@ -760,14 +1310,14 @@ Get an existing KeyRingIAMBinding resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMBinding-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMBinding.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMBinding.ts#L150">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="KeyRingIAMBinding-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMBinding.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMBinding.ts#L171">method <b>isInstance</b></a>
 </h4>
 
 
@@ -778,7 +1328,7 @@ Returns true if the given object is an instance of KeyRingIAMBinding.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMBinding-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMBinding.ts#L52">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMBinding.ts#L182">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#KeyRingIAMBindingCondition'>KeyRingIAMBindingCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -787,7 +1337,7 @@ An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a 
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMBinding-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMBinding.ts#L56">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMBinding.ts#L186">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -795,7 +1345,7 @@ Structure is documented below.
 (Computed) The etag of the key ring's IAM policy.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMBinding-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMBinding.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMBinding.ts#L150">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -804,7 +1354,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMBinding-keyRingId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMBinding.ts#L63">property <b>keyRingId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMBinding.ts#L193">property <b>keyRingId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyRingId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -815,12 +1365,12 @@ The key ring ID, in the form
 project setting will be used as a fallback.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMBinding-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMBinding.ts#L64">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMBinding.ts#L194">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KeyRingIAMBinding-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMBinding.ts#L70">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMBinding.ts#L200">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -830,7 +1380,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMBinding-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMBinding.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMBinding.ts#L150">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -839,7 +1389,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="KeyRingIAMMember" data-link-title="KeyRingIAMMember">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMMember.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMMember.ts#L150">
         Resource <strong>KeyRingIAMMember</strong>
     </a>
 </h3>
@@ -856,8 +1406,139 @@ Three different resources help you manage your IAM policy for KMS key ring. Each
 
 > **Note:** `gcp.kms.KeyRingIAMBinding` resources **can be** used in conjunction with `gcp.kms.KeyRingIAMMember` resources **only if** they do not grant privilege to the same role.
 
+#### google\_kms\_key\_ring\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const keyRing = new gcp.kms.KeyRingIAMPolicy("keyRing", {
+    keyRingId: keyring.id,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+        condition: {
+            title: "expires_after_2019_12_31",
+            description: "Expiring at midnight of 2019-12-31",
+            expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        },
+    }],
+});
+const keyRing = new gcp.kms.KeyRingIAMPolicy("keyRing", {
+    keyRingId: keyring.id,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+
+#### google\_kms\_key\_ring\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyRing = new gcp.kms.KeyRingIAMBinding("key_ring", {
+    keyRingId: "your-key-ring-id",
+    members: ["user:jane@example.com"],
+    role: "roles/editor",
+});
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyRing = new gcp.kms.KeyRingIAMBinding("key_ring", {
+    condition: {
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title: "expires_after_2019_12_31",
+    },
+    keyRingId: "your-key-ring-id",
+    members: ["user:jane@example.com"],
+    role: "roles/editor",
+});
+```
+
+#### google\_kms\_key\_ring\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyRing = new gcp.kms.KeyRingIAMMember("key_ring", {
+    keyRingId: "your-key-ring-id",
+    member: "user:jane@example.com",
+    role: "roles/editor",
+});
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyRing = new gcp.kms.KeyRingIAMMember("key_ring", {
+    condition: {
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title: "expires_after_2019_12_31",
+    },
+    keyRingId: "your-key-ring-id",
+    member: "user:jane@example.com",
+    role: "roles/editor",
+});
+```
+
+#### Import
+
+IAM member imports use space-delimited identifiers; the resource in question, the role, and the account.
+
+This member resource can be imported using the `key_ring_id`, role, and account e.g.
+
+```sh
+ $ pulumi import gcp:kms/keyRingIAMMember:KeyRingIAMMember key_ring_iam "your-project-id/location-name/key-ring-name roles/viewer user:foo@example.com"
+```
+
+ IAM binding imports use space-delimited identifiers; the resource in question and the role.
+
+This binding resource can be imported using the `key_ring_id` and role, e.g.
+
+```sh
+ $ pulumi import gcp:kms/keyRingIAMMember:KeyRingIAMMember key_ring_iam "your-project-id/location-name/key-ring-name roles/viewer"
+```
+
+ IAM policy imports use the identifier of the resource in question.
+
+This policy resource can be imported using the `key_ring_id`, e.g.
+
+```sh
+ $ pulumi import gcp:kms/keyRingIAMMember:KeyRingIAMMember key_ring_iam your-project-id/location-name/key-ring-name
+```
+
 <h4 class="pdoc-member-header" id="KeyRingIAMMember-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMMember.ts#L70"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMMember.ts#L200"> <b>constructor</b></a>
 </h4>
 
 
@@ -871,7 +1552,7 @@ Create a KeyRingIAMMember resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMMember-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMMember.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMMember.ts#L160">method <b>get</b></a>
 </h4>
 
 
@@ -882,14 +1563,14 @@ Get an existing KeyRingIAMMember resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMMember-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMMember.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMMember.ts#L150">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="KeyRingIAMMember-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMMember.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMMember.ts#L171">method <b>isInstance</b></a>
 </h4>
 
 
@@ -900,7 +1581,7 @@ Returns true if the given object is an instance of KeyRingIAMMember.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMMember-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMMember.ts#L52">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMMember.ts#L182">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>condition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#KeyRingIAMMemberCondition'>KeyRingIAMMemberCondition</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -909,7 +1590,7 @@ An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a 
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMMember-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMMember.ts#L56">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMMember.ts#L186">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -917,7 +1598,7 @@ Structure is documented below.
 (Computed) The etag of the key ring's IAM policy.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMMember-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMMember.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMMember.ts#L150">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -926,7 +1607,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMMember-keyRingId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMMember.ts#L63">property <b>keyRingId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMMember.ts#L193">property <b>keyRingId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyRingId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -937,12 +1618,12 @@ The key ring ID, in the form
 project setting will be used as a fallback.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMMember-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMMember.ts#L64">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMMember.ts#L194">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KeyRingIAMMember-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMMember.ts#L70">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMMember.ts#L200">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -952,7 +1633,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMMember-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMMember.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMMember.ts#L150">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -961,7 +1642,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="KeyRingIAMPolicy" data-link-title="KeyRingIAMPolicy">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMPolicy.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMPolicy.ts#L149">
         Resource <strong>KeyRingIAMPolicy</strong>
     </a>
 </h3>
@@ -978,8 +1659,139 @@ Three different resources help you manage your IAM policy for KMS key ring. Each
 
 > **Note:** `gcp.kms.KeyRingIAMBinding` resources **can be** used in conjunction with `gcp.kms.KeyRingIAMMember` resources **only if** they do not grant privilege to the same role.
 
+#### google\_kms\_key\_ring\_iam\_policy
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+    }],
+});
+const keyRing = new gcp.kms.KeyRingIAMPolicy("keyRing", {
+    keyRingId: keyring.id,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const admin = gcp.organizations.getIAMPolicy({
+    bindings: [{
+        role: "roles/editor",
+        members: ["user:jane@example.com"],
+        condition: {
+            title: "expires_after_2019_12_31",
+            description: "Expiring at midnight of 2019-12-31",
+            expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        },
+    }],
+});
+const keyRing = new gcp.kms.KeyRingIAMPolicy("keyRing", {
+    keyRingId: keyring.id,
+    policyData: admin.then(admin => admin.policyData),
+});
+```
+
+#### google\_kms\_key\_ring\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyRing = new gcp.kms.KeyRingIAMBinding("key_ring", {
+    keyRingId: "your-key-ring-id",
+    members: ["user:jane@example.com"],
+    role: "roles/editor",
+});
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyRing = new gcp.kms.KeyRingIAMBinding("key_ring", {
+    condition: {
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title: "expires_after_2019_12_31",
+    },
+    keyRingId: "your-key-ring-id",
+    members: ["user:jane@example.com"],
+    role: "roles/editor",
+});
+```
+
+#### google\_kms\_key\_ring\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyRing = new gcp.kms.KeyRingIAMMember("key_ring", {
+    keyRingId: "your-key-ring-id",
+    member: "user:jane@example.com",
+    role: "roles/editor",
+});
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyRing = new gcp.kms.KeyRingIAMMember("key_ring", {
+    condition: {
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title: "expires_after_2019_12_31",
+    },
+    keyRingId: "your-key-ring-id",
+    member: "user:jane@example.com",
+    role: "roles/editor",
+});
+```
+
+#### Import
+
+IAM member imports use space-delimited identifiers; the resource in question, the role, and the account.
+
+This member resource can be imported using the `key_ring_id`, role, and account e.g.
+
+```sh
+ $ pulumi import gcp:kms/keyRingIAMPolicy:KeyRingIAMPolicy key_ring_iam "your-project-id/location-name/key-ring-name roles/viewer user:foo@example.com"
+```
+
+ IAM binding imports use space-delimited identifiers; the resource in question and the role.
+
+This binding resource can be imported using the `key_ring_id` and role, e.g.
+
+```sh
+ $ pulumi import gcp:kms/keyRingIAMPolicy:KeyRingIAMPolicy key_ring_iam "your-project-id/location-name/key-ring-name roles/viewer"
+```
+
+ IAM policy imports use the identifier of the resource in question.
+
+This policy resource can be imported using the `key_ring_id`, e.g.
+
+```sh
+ $ pulumi import gcp:kms/keyRingIAMPolicy:KeyRingIAMPolicy key_ring_iam your-project-id/location-name/key-ring-name
+```
+
 <h4 class="pdoc-member-header" id="KeyRingIAMPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMPolicy.ts#L61"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMPolicy.ts#L192"> <b>constructor</b></a>
 </h4>
 
 
@@ -993,7 +1805,7 @@ Create a KeyRingIAMPolicy resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMPolicy.ts#L28">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMPolicy.ts#L159">method <b>get</b></a>
 </h4>
 
 
@@ -1004,14 +1816,14 @@ Get an existing KeyRingIAMPolicy resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMPolicy.ts#L18">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMPolicy.ts#L149">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="KeyRingIAMPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMPolicy.ts#L39">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMPolicy.ts#L170">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1022,7 +1834,7 @@ Returns true if the given object is an instance of KeyRingIAMPolicy.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMPolicy-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMPolicy.ts#L49">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMPolicy.ts#L180">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1030,7 +1842,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 (Computed) The etag of the key ring's IAM policy.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMPolicy.ts#L18">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMPolicy.ts#L149">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1039,7 +1851,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMPolicy-keyRingId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMPolicy.ts#L56">property <b>keyRingId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMPolicy.ts#L187">property <b>keyRingId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyRingId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1050,7 +1862,7 @@ The key ring ID, in the form
 project setting will be used as a fallback.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMPolicy-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMPolicy.ts#L61">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMPolicy.ts#L192">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1059,7 +1871,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMPolicy.ts#L18">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMPolicy.ts#L149">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1068,7 +1880,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="KeyRingImportJob" data-link-title="KeyRingImportJob">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L34">
         Resource <strong>KeyRingImportJob</strong>
     </a>
 </h3>
@@ -1092,8 +1904,16 @@ To get more information about KeyRingImportJob, see:
 
 #### Example Usage
 
+#### Import
+
+KeyRingImportJob can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:kms/keyRingImportJob:KeyRingImportJob default {{name}}
+```
+
 <h4 class="pdoc-member-header" id="KeyRingImportJob-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L96"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L103"> <b>constructor</b></a>
 </h4>
 
 
@@ -1107,7 +1927,7 @@ Create a KeyRingImportJob resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="KeyRingImportJob-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L37">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -1118,14 +1938,14 @@ Get an existing KeyRingImportJob resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="KeyRingImportJob-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L27">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="KeyRingImportJob-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L48">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1136,7 +1956,7 @@ Returns true if the given object is an instance of KeyRingImportJob.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="KeyRingImportJob-attestations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L60">property <b>attestations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L67">property <b>attestations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>attestations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#KeyRingImportJobAttestation'>KeyRingImportJobAttestation</a>[]&gt;;</code></pre>
@@ -1146,7 +1966,7 @@ statement to verify attributes of the key as stored on the HSM, independently of
 ImportMethod is one with a protection level of HSM.
 
 <h4 class="pdoc-member-header" id="KeyRingImportJob-expireTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L64">property <b>expireTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L71">property <b>expireTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expireTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1154,7 +1974,7 @@ ImportMethod is one with a protection level of HSM.
 The time at which this resource is scheduled for expiration and can no longer be used. This is in RFC3339 text format.
 
 <h4 class="pdoc-member-header" id="KeyRingImportJob-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L27">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1163,7 +1983,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="KeyRingImportJob-importJobId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L68">property <b>importJobId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L75">property <b>importJobId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>importJobId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1171,7 +1991,7 @@ deployments and may be missing (undefined) during planning phases.
 It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
 
 <h4 class="pdoc-member-header" id="KeyRingImportJob-importMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L73">property <b>importMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L80">property <b>importMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>importMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1180,7 +2000,7 @@ The wrapping method to be used for incoming key material.
 Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256`.
 
 <h4 class="pdoc-member-header" id="KeyRingImportJob-keyRing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L78">property <b>keyRing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L85">property <b>keyRing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyRing: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1189,7 +2009,7 @@ The KeyRing that this import job belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 
 <h4 class="pdoc-member-header" id="KeyRingImportJob-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L82">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L89">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1197,7 +2017,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 The resource name for this ImportJob in the format projects/*&#47;locations/*&#47;keyRings/*&#47;importJobs/*.
 
 <h4 class="pdoc-member-header" id="KeyRingImportJob-protectionLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L88">property <b>protectionLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L95">property <b>protectionLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>protectionLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1207,7 +2027,7 @@ versionTemplate on the CryptoKey you attempt to import into.
 Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 
 <h4 class="pdoc-member-header" id="KeyRingImportJob-publicKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L92">property <b>publicKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L99">property <b>publicKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publicKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#KeyRingImportJobPublicKey'>KeyRingImportJobPublicKey</a>[]&gt;;</code></pre>
@@ -1215,7 +2035,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 The public key with which to wrap key material prior to import. Only returned if state is 'ACTIVE'.
 
 <h4 class="pdoc-member-header" id="KeyRingImportJob-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L96">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L103">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1223,7 +2043,7 @@ The public key with which to wrap key material prior to import. Only returned if
 The current state of the ImportJob, indicating if it can be used.
 
 <h4 class="pdoc-member-header" id="KeyRingImportJob-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L27">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1232,7 +2052,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Registry" data-link-title="Registry">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L100">
         Resource <strong>Registry</strong>
     </a>
 </h3>
@@ -1252,9 +2072,88 @@ To get more information about DeviceRegistry, see:
     * [Official Documentation](https://cloud.google.com/iot/docs/)
 
 #### Example Usage
+##### Cloudiot Device Registry Basic
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const test_registry = new gcp.iot.Registry("test-registry", {});
+```
+##### Cloudiot Device Registry Single Event Notification Configs
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const default_telemetry = new gcp.pubsub.Topic("default-telemetry", {});
+const test_registry = new gcp.iot.Registry("test-registry", {eventNotificationConfigs: [{
+    pubsubTopicName: default_telemetry.id,
+    subfolderMatches: "",
+}]});
+```
+##### Cloudiot Device Registry Full
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+import * from "fs";
+
+const default_devicestatus = new gcp.pubsub.Topic("default-devicestatus", {});
+const default_telemetry = new gcp.pubsub.Topic("default-telemetry", {});
+const additional_telemetry = new gcp.pubsub.Topic("additional-telemetry", {});
+const test_registry = new gcp.iot.Registry("test-registry", {
+    eventNotificationConfigs: [
+        {
+            pubsubTopicName: additional_telemetry.id,
+            subfolderMatches: "test/path",
+        },
+        {
+            pubsubTopicName: default_telemetry.id,
+            subfolderMatches: "",
+        },
+    ],
+    stateNotificationConfig: {
+        pubsub_topic_name: default_devicestatus.id,
+    },
+    mqttConfig: {
+        mqtt_enabled_state: "MQTT_ENABLED",
+    },
+    httpConfig: {
+        http_enabled_state: "HTTP_ENABLED",
+    },
+    logLevel: "INFO",
+    credentials: [{
+        publicKeyCertificate: {
+            format: "X509_CERTIFICATE_PEM",
+            certificate: fs.readFileSync("test-fixtures/rsa_cert.pem"),
+        },
+    }],
+});
+```
+
+#### Import
+
+DeviceRegistry can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:kms/registry:Registry default {{project}}/locations/{{region}}/registries/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:kms/registry:Registry default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:kms/registry:Registry default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:kms/registry:Registry default {{name}}
+```
 
 <h4 class="pdoc-member-header" id="Registry-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L100"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L178"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1269,7 +2168,7 @@ gcp.kms.Registry has been deprecated in favor of gcp.iot.Registry
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Registry(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#RegistryArgs'>RegistryArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="Registry-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L32">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L110">method <b>get</b></a>
 </h4>
 
 
@@ -1280,14 +2179,14 @@ Get an existing Registry resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Registry-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L22">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L100">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Registry-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L44">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L122">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1298,7 +2197,7 @@ Returns true if the given object is an instance of Registry.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Registry-credentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L55">property <b>credentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L133">property <b>credentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>credentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegistryCredential'>RegistryCredential</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1307,7 +2206,7 @@ List of public key certificates to authenticate devices.
 The structure is documented below.
 
 <h4 class="pdoc-member-header" id="Registry-eventNotificationConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L61">property <b>eventNotificationConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L139">property <b>eventNotificationConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventNotificationConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegistryEventNotificationConfigItem'>RegistryEventNotificationConfigItem</a>[]&gt;;</code></pre>
@@ -1317,7 +2216,7 @@ to publish device events to.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Registry-httpConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L66">property <b>httpConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L144">property <b>httpConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1326,7 +2225,7 @@ Activate or deactivate HTTP.
 The structure is documented below.
 
 <h4 class="pdoc-member-header" id="Registry-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L22">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L100">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1335,7 +2234,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Registry-logLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L76">property <b>logLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L154">property <b>logLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1349,7 +2248,7 @@ Default value is `NONE`.
 Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 
 <h4 class="pdoc-member-header" id="Registry-mqttConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L81">property <b>mqttConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L159">property <b>mqttConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mqttConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -1358,7 +2257,7 @@ Activate or deactivate MQTT.
 The structure is documented below.
 
 <h4 class="pdoc-member-header" id="Registry-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L85">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L163">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1366,7 +2265,7 @@ The structure is documented below.
 A unique name for the resource, required by device registry.
 
 <h4 class="pdoc-member-header" id="Registry-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L90">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L168">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1375,7 +2274,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Registry-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L95">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L173">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1384,7 +2283,7 @@ The region in which the created registry should reside.
 If it is not provided, the provider region is used.
 
 <h4 class="pdoc-member-header" id="Registry-stateNotificationConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L100">property <b>stateNotificationConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L178">property <b>stateNotificationConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stateNotificationConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1393,7 +2292,7 @@ A PubSub topic to publish device state updates.
 The structure is documented below.
 
 <h4 class="pdoc-member-header" id="Registry-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L22">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L100">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1402,7 +2301,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecretCiphertext" data-link-title="SecretCiphertext">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/secretCiphertext.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/secretCiphertext.ts#L62">
         Resource <strong>SecretCiphertext</strong>
     </a>
 </h3>
@@ -1426,9 +2325,45 @@ To get more information about SecretCiphertext, see:
 state as plain-text. [Read more about secrets in state](https://www.pulumi.com/docs/intro/concepts/programming-model/#secrets).
 
 #### Example Usage
+##### Kms Secret Ciphertext Basic
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyring = new gcp.kms.KeyRing("keyring", {location: "global"});
+const cryptokey = new gcp.kms.CryptoKey("cryptokey", {
+    keyRing: keyring.id,
+    rotationPeriod: "100000s",
+});
+const myPassword = new gcp.kms.SecretCiphertext("myPassword", {
+    cryptoKey: cryptokey.id,
+    plaintext: "my-secret-password",
+});
+const instance = new gcp.compute.Instance("instance", {
+    machineType: "e2-medium",
+    zone: "us-central1-a",
+    bootDisk: {
+        initializeParams: {
+            image: "debian-cloud/debian-9",
+        },
+    },
+    networkInterfaces: [{
+        network: "default",
+        accessConfigs: [{}],
+    }],
+    metadata: {
+        password: myPassword.ciphertext,
+    },
+});
+```
+
+#### Import
+
+This resource does not support import.
 
 <h4 class="pdoc-member-header" id="SecretCiphertext-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/secretCiphertext.ts#L72"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/secretCiphertext.ts#L108"> <b>constructor</b></a>
 </h4>
 
 
@@ -1442,7 +2377,7 @@ Create a SecretCiphertext resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretCiphertext-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/secretCiphertext.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/secretCiphertext.ts#L72">method <b>get</b></a>
 </h4>
 
 
@@ -1453,14 +2388,14 @@ Get an existing SecretCiphertext resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretCiphertext-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/secretCiphertext.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/secretCiphertext.ts#L62">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretCiphertext-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/secretCiphertext.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/secretCiphertext.ts#L83">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1471,7 +2406,7 @@ Returns true if the given object is an instance of SecretCiphertext.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretCiphertext-additionalAuthenticatedData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/secretCiphertext.ts#L58">property <b>additionalAuthenticatedData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/secretCiphertext.ts#L94">property <b>additionalAuthenticatedData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>additionalAuthenticatedData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1480,7 +2415,7 @@ The additional authenticated data used for integrity checks during encryption an
 **Note**: This property is sensitive and will not be displayed in the plan.
 
 <h4 class="pdoc-member-header" id="SecretCiphertext-ciphertext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/secretCiphertext.ts#L62">property <b>ciphertext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/secretCiphertext.ts#L98">property <b>ciphertext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ciphertext: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1488,7 +2423,7 @@ The additional authenticated data used for integrity checks during encryption an
 Contains the result of encrypting the provided plaintext, encoded in base64.
 
 <h4 class="pdoc-member-header" id="SecretCiphertext-cryptoKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/secretCiphertext.ts#L67">property <b>cryptoKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/secretCiphertext.ts#L103">property <b>cryptoKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cryptoKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1497,7 +2432,7 @@ The full name of the CryptoKey that will be used to encrypt the provided plainte
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'`
 
 <h4 class="pdoc-member-header" id="SecretCiphertext-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/secretCiphertext.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/secretCiphertext.ts#L62">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1506,7 +2441,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretCiphertext-plaintext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/secretCiphertext.ts#L72">property <b>plaintext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/secretCiphertext.ts#L108">property <b>plaintext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>plaintext: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1515,7 +2450,7 @@ The plaintext to be encrypted.
 **Note**: This property is sensitive and will not be displayed in the plan.
 
 <h4 class="pdoc-member-header" id="SecretCiphertext-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/secretCiphertext.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/secretCiphertext.ts#L62">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1526,7 +2461,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getKMSCryptoKey" data-link-title="getKMSCryptoKey">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKey.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKey.ts#L33">
         Function <strong>getKMSCryptoKey</strong>
     </a>
 </h3>
@@ -1543,8 +2478,24 @@ and
 A CryptoKey is an interface to key material which can be used to encrypt and decrypt data. A CryptoKey belongs to a
 Google Cloud KMS KeyRing.
 
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myKeyRing = gcp.kms.getKMSKeyRing({
+    name: "my-key-ring",
+    location: "us-central1",
+});
+const myCryptoKey = myKeyRing.then(myKeyRing => gcp.kms.getKMSCryptoKey({
+    name: "my-crypto-key",
+    keyRing: myKeyRing.selfLink,
+}));
+```
+
 <h3 class="pdoc-module-header" id="getKMSCryptoKeyVersion" data-link-title="getKMSCryptoKeyVersion">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L35">
         Function <strong>getKMSCryptoKeyVersion</strong>
     </a>
 </h3>
@@ -1560,8 +2511,27 @@ and
 
 A CryptoKeyVersion represents an individual cryptographic key, and the associated key material.
 
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myKeyRing = gcp.kms.getKMSKeyRing({
+    name: "my-key-ring",
+    location: "us-central1",
+});
+const myCryptoKey = myKeyRing.then(myKeyRing => gcp.kms.getKMSCryptoKey({
+    name: "my-crypto-key",
+    keyRing: myKeyRing.selfLink,
+}));
+const myCryptoKeyVersion = gcp.kms.getKMSCryptoKeyVersion({
+    cryptoKey: data.google_kms_key.my_key.self_link,
+});
+```
+
 <h3 class="pdoc-module-header" id="getKMSKeyRing" data-link-title="getKMSKeyRing">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSKeyRing.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSKeyRing.ts#L29">
         Function <strong>getKMSKeyRing</strong>
     </a>
 </h3>
@@ -1578,8 +2548,20 @@ and
 A KeyRing is a grouping of CryptoKeys for organizational purposes. A KeyRing belongs to a Google Cloud Platform Project
 and resides in a specific location.
 
+#### Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const myKeyRing = pulumi.output(gcp.kms.getKMSKeyRing({
+    location: "us-central1",
+    name: "my-key-ring",
+}, { async: true }));
+```
+
 <h3 class="pdoc-module-header" id="getKMSSecret" data-link-title="getKMSSecret">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSSecret.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSSecret.ts#L20">
         Function <strong>getKMSSecret</strong>
     </a>
 </h3>
@@ -1600,7 +2582,7 @@ logging output, plan output, or state output.  Please take care to secure your s
 data outside of resource definitions.
 
 <h3 class="pdoc-module-header" id="getKMSSecretCiphertext" data-link-title="getKMSSecretCiphertext">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSSecretCiphertext.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSSecretCiphertext.ts#L22">
         Function <strong>getKMSSecretCiphertext</strong>
     </a>
 </h3>
@@ -1625,7 +2607,7 @@ data outside of resource definitions.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="CryptoKeyArgs" data-link-title="CryptoKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L189">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L227">
         interface <strong>CryptoKeyArgs</strong>
     </a>
 </h3>
@@ -1635,7 +2617,7 @@ data outside of resource definitions.
 The set of arguments for constructing a CryptoKey resource.
 
 <h4 class="pdoc-member-header" id="CryptoKeyArgs-keyRing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L194">property <b>keyRing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L232">property <b>keyRing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyRing: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1644,7 +2626,7 @@ The KeyRing that this key belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 
 <h4 class="pdoc-member-header" id="CryptoKeyArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L198">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L236">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1652,7 +2634,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 Labels with user-defined metadata to apply to this resource.
 
 <h4 class="pdoc-member-header" id="CryptoKeyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L202">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L240">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1660,7 +2642,7 @@ Labels with user-defined metadata to apply to this resource.
 The resource name for the CryptoKey.
 
 <h4 class="pdoc-member-header" id="CryptoKeyArgs-purpose">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L210">property <b>purpose</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L248">property <b>purpose</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>purpose?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1672,7 +2654,7 @@ Default value is `ENCRYPT_DECRYPT`.
 Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
 
 <h4 class="pdoc-member-header" id="CryptoKeyArgs-rotationPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L217">property <b>rotationPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L255">property <b>rotationPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rotationPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1683,7 +2665,7 @@ the format of a decimal number with up to 9 fractional digits, followed by the
 letter `s` (seconds). It must be greater than a day (ie, 86400).
 
 <h4 class="pdoc-member-header" id="CryptoKeyArgs-skipInitialVersionCreation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L222">property <b>skipInitialVersionCreation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L260">property <b>skipInitialVersionCreation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipInitialVersionCreation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1692,7 +2674,7 @@ If set to true, the request will create a CryptoKey without any CryptoKeyVersion
 You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
 
 <h4 class="pdoc-member-header" id="CryptoKeyArgs-versionTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L227">property <b>versionTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L265">property <b>versionTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#CryptoKeyVersionTemplate'>CryptoKeyVersionTemplate</a>&gt;;</code></pre>
@@ -1701,7 +2683,7 @@ A template describing settings for new crypto key versions.
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="CryptoKeyIAMBindingArgs" data-link-title="CryptoKeyIAMBindingArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L270">
         interface <strong>CryptoKeyIAMBindingArgs</strong>
     </a>
 </h3>
@@ -1711,7 +2693,7 @@ Structure is documented below.
 The set of arguments for constructing a CryptoKeyIAMBinding resource.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMBindingArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L158">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L275">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#CryptoKeyIAMBindingCondition'>CryptoKeyIAMBindingCondition</a>&gt;;</code></pre>
@@ -1720,7 +2702,7 @@ An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a 
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMBindingArgs-cryptoKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L165">property <b>cryptoKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L282">property <b>cryptoKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cryptoKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1731,12 +2713,12 @@ The crypto key ID, in the form
 the provider's project setting will be used as a fallback.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMBindingArgs-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L166">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L283">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CryptoKeyIAMBindingArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L171">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L288">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1745,7 +2727,7 @@ The role that should be applied. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="CryptoKeyIAMBindingState" data-link-title="CryptoKeyIAMBindingState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L125">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L242">
         interface <strong>CryptoKeyIAMBindingState</strong>
     </a>
 </h3>
@@ -1755,7 +2737,7 @@ The role that should be applied. Note that custom roles must be of the format
 Input properties used for looking up and filtering CryptoKeyIAMBinding resources.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMBindingState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L130">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L247">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#CryptoKeyIAMBindingCondition'>CryptoKeyIAMBindingCondition</a>&gt;;</code></pre>
@@ -1764,7 +2746,7 @@ An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a 
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMBindingState-cryptoKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L137">property <b>cryptoKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L254">property <b>cryptoKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cryptoKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1775,7 +2757,7 @@ The crypto key ID, in the form
 the provider's project setting will be used as a fallback.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMBindingState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L141">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L258">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1783,12 +2765,12 @@ the provider's project setting will be used as a fallback.
 (Computed) The etag of the project's IAM policy.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMBindingState-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L142">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L259">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CryptoKeyIAMBindingState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L147">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMBinding.ts#L264">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1797,7 +2779,7 @@ The role that should be applied. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="CryptoKeyIAMMemberArgs" data-link-title="CryptoKeyIAMMemberArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L270">
         interface <strong>CryptoKeyIAMMemberArgs</strong>
     </a>
 </h3>
@@ -1807,7 +2789,7 @@ The role that should be applied. Note that custom roles must be of the format
 The set of arguments for constructing a CryptoKeyIAMMember resource.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMMemberArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L158">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L275">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#CryptoKeyIAMMemberCondition'>CryptoKeyIAMMemberCondition</a>&gt;;</code></pre>
@@ -1816,7 +2798,7 @@ An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a 
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMMemberArgs-cryptoKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L165">property <b>cryptoKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L282">property <b>cryptoKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cryptoKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1827,12 +2809,12 @@ The crypto key ID, in the form
 the provider's project setting will be used as a fallback.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMMemberArgs-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L166">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L283">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CryptoKeyIAMMemberArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L171">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L288">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1841,7 +2823,7 @@ The role that should be applied. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="CryptoKeyIAMMemberState" data-link-title="CryptoKeyIAMMemberState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L125">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L242">
         interface <strong>CryptoKeyIAMMemberState</strong>
     </a>
 </h3>
@@ -1851,7 +2833,7 @@ The role that should be applied. Note that custom roles must be of the format
 Input properties used for looking up and filtering CryptoKeyIAMMember resources.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMMemberState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L130">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L247">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#CryptoKeyIAMMemberCondition'>CryptoKeyIAMMemberCondition</a>&gt;;</code></pre>
@@ -1860,7 +2842,7 @@ An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a 
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMMemberState-cryptoKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L137">property <b>cryptoKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L254">property <b>cryptoKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cryptoKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1871,7 +2853,7 @@ The crypto key ID, in the form
 the provider's project setting will be used as a fallback.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMMemberState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L141">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L258">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1879,12 +2861,12 @@ the provider's project setting will be used as a fallback.
 (Computed) The etag of the project's IAM policy.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMMemberState-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L142">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L259">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CryptoKeyIAMMemberState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L147">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMMember.ts#L264">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1893,7 +2875,7 @@ The role that should be applied. Note that custom roles must be of the format
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="CryptoKeyIAMPolicyArgs" data-link-title="CryptoKeyIAMPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L250">
         interface <strong>CryptoKeyIAMPolicyArgs</strong>
     </a>
 </h3>
@@ -1903,7 +2885,7 @@ The role that should be applied. Note that custom roles must be of the format
 The set of arguments for constructing a CryptoKeyIAMPolicy resource.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMPolicyArgs-cryptoKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L139">property <b>cryptoKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L257">property <b>cryptoKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cryptoKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1914,7 +2896,7 @@ The crypto key ID, in the form
 the provider's project setting will be used as a fallback.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMPolicyArgs-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L144">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L262">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1923,7 +2905,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h3 class="pdoc-module-header" id="CryptoKeyIAMPolicyState" data-link-title="CryptoKeyIAMPolicyState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L110">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L228">
         interface <strong>CryptoKeyIAMPolicyState</strong>
     </a>
 </h3>
@@ -1933,7 +2915,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 Input properties used for looking up and filtering CryptoKeyIAMPolicy resources.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMPolicyState-cryptoKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L117">property <b>cryptoKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L235">property <b>cryptoKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cryptoKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1944,7 +2926,7 @@ The crypto key ID, in the form
 the provider's project setting will be used as a fallback.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMPolicyState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L121">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L239">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1952,7 +2934,7 @@ the provider's project setting will be used as a fallback.
 (Computed) The etag of the project's IAM policy.
 
 <h4 class="pdoc-member-header" id="CryptoKeyIAMPolicyState-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L126">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKeyIAMPolicy.ts#L244">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1961,7 +2943,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h3 class="pdoc-module-header" id="CryptoKeyState" data-link-title="CryptoKeyState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L182">
         interface <strong>CryptoKeyState</strong>
     </a>
 </h3>
@@ -1971,7 +2953,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 Input properties used for looking up and filtering CryptoKey resources.
 
 <h4 class="pdoc-member-header" id="CryptoKeyState-keyRing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L149">property <b>keyRing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L187">property <b>keyRing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyRing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1980,7 +2962,7 @@ The KeyRing that this key belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 
 <h4 class="pdoc-member-header" id="CryptoKeyState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L153">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L191">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1988,7 +2970,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 Labels with user-defined metadata to apply to this resource.
 
 <h4 class="pdoc-member-header" id="CryptoKeyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L157">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L195">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1996,7 +2978,7 @@ Labels with user-defined metadata to apply to this resource.
 The resource name for the CryptoKey.
 
 <h4 class="pdoc-member-header" id="CryptoKeyState-purpose">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L165">property <b>purpose</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L203">property <b>purpose</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>purpose?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2008,7 +2990,7 @@ Default value is `ENCRYPT_DECRYPT`.
 Possible values are `ENCRYPT_DECRYPT`, `ASYMMETRIC_SIGN`, and `ASYMMETRIC_DECRYPT`.
 
 <h4 class="pdoc-member-header" id="CryptoKeyState-rotationPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L172">property <b>rotationPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L210">property <b>rotationPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rotationPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2019,12 +3001,12 @@ the format of a decimal number with up to 9 fractional digits, followed by the
 letter `s` (seconds). It must be greater than a day (ie, 86400).
 
 <h4 class="pdoc-member-header" id="CryptoKeyState-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L173">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L211">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="CryptoKeyState-skipInitialVersionCreation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L178">property <b>skipInitialVersionCreation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L216">property <b>skipInitialVersionCreation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipInitialVersionCreation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2033,7 +3015,7 @@ If set to true, the request will create a CryptoKey without any CryptoKeyVersion
 You must use the `gcp.kms.KeyRingImportJob` resource to import the CryptoKeyVersion.
 
 <h4 class="pdoc-member-header" id="CryptoKeyState-versionTemplate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/cryptoKey.ts#L183">property <b>versionTemplate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/cryptoKey.ts#L221">property <b>versionTemplate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#CryptoKeyVersionTemplate'>CryptoKeyVersionTemplate</a>&gt;;</code></pre>
@@ -2042,7 +3024,7 @@ A template describing settings for new crypto key versions.
 Structure is documented below.
 
 <h3 class="pdoc-module-header" id="GetKMSCryptoKeyArgs" data-link-title="GetKMSCryptoKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKey.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKey.ts#L50">
         interface <strong>GetKMSCryptoKeyArgs</strong>
     </a>
 </h3>
@@ -2052,7 +3034,7 @@ Structure is documented below.
 A collection of arguments for invoking getKMSCryptoKey.
 
 <h4 class="pdoc-member-header" id="GetKMSCryptoKeyArgs-keyRing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKey.ts#L39">property <b>keyRing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKey.ts#L54">property <b>keyRing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyRing: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2060,7 +3042,7 @@ A collection of arguments for invoking getKMSCryptoKey.
 The `selfLink` of the Google Cloud Platform KeyRing to which the key belongs.
 
 <h4 class="pdoc-member-header" id="GetKMSCryptoKeyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKey.ts#L44">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKey.ts#L59">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2069,7 +3051,7 @@ The CryptoKey's name.
 A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing and match the regular expression `[a-zA-Z0-9_-]{1,63}`
 
 <h3 class="pdoc-module-header" id="GetKMSCryptoKeyResult" data-link-title="GetKMSCryptoKeyResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKey.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKey.ts#L65">
         interface <strong>GetKMSCryptoKeyResult</strong>
     </a>
 </h3>
@@ -2079,7 +3061,7 @@ A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing an
 A collection of values returned by getKMSCryptoKey.
 
 <h4 class="pdoc-member-header" id="GetKMSCryptoKeyResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKey.ts#L54">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKey.ts#L69">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2087,22 +3069,22 @@ A collection of values returned by getKMSCryptoKey.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetKMSCryptoKeyResult-keyRing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKey.ts#L55">property <b>keyRing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKey.ts#L70">property <b>keyRing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyRing: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKMSCryptoKeyResult-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKey.ts#L56">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKey.ts#L71">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetKMSCryptoKeyResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKey.ts#L57">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKey.ts#L72">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKMSCryptoKeyResult-purpose">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKey.ts#L61">property <b>purpose</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKey.ts#L76">property <b>purpose</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>purpose: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2110,7 +3092,7 @@ The provider-assigned unique ID for this managed resource.
 Defines the cryptographic capabilities of the key.
 
 <h4 class="pdoc-member-header" id="GetKMSCryptoKeyResult-rotationPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKey.ts#L67">property <b>rotationPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKey.ts#L82">property <b>rotationPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rotationPeriod: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2120,7 +3102,7 @@ the primary. The first rotation will take place after the specified period. The 
 of a decimal number with up to 9 fractional digits, followed by the letter s (seconds).
 
 <h4 class="pdoc-member-header" id="GetKMSCryptoKeyResult-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKey.ts#L71">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKey.ts#L86">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfLink: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2128,17 +3110,17 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 The self link of the created CryptoKey. Its format is `projects/{projectId}/locations/{location}/keyRings/{keyRingName}/cryptoKeys/{cryptoKeyName}`.
 
 <h4 class="pdoc-member-header" id="GetKMSCryptoKeyResult-skipInitialVersionCreation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKey.ts#L72">property <b>skipInitialVersionCreation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKey.ts#L87">property <b>skipInitialVersionCreation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipInitialVersionCreation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKMSCryptoKeyResult-versionTemplates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKey.ts#L73">property <b>versionTemplates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKey.ts#L88">property <b>versionTemplates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>versionTemplates: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetKMSCryptoKeyVersionTemplate'>GetKMSCryptoKeyVersionTemplate</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetKMSCryptoKeyVersionArgs" data-link-title="GetKMSCryptoKeyVersionArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L52">
         interface <strong>GetKMSCryptoKeyVersionArgs</strong>
     </a>
 </h3>
@@ -2148,7 +3130,7 @@ The self link of the created CryptoKey. Its format is `projects/{projectId}/loca
 A collection of arguments for invoking getKMSCryptoKeyVersion.
 
 <h4 class="pdoc-member-header" id="GetKMSCryptoKeyVersionArgs-cryptoKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L38">property <b>cryptoKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L56">property <b>cryptoKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cryptoKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2156,7 +3138,7 @@ A collection of arguments for invoking getKMSCryptoKeyVersion.
 The `selfLink` of the Google Cloud Platform CryptoKey to which the key version belongs.
 
 <h4 class="pdoc-member-header" id="GetKMSCryptoKeyVersionArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L42">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L60">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2164,7 +3146,7 @@ The `selfLink` of the Google Cloud Platform CryptoKey to which the key version b
 The version number for this CryptoKeyVersion. Defaults to `1`.
 
 <h3 class="pdoc-module-header" id="GetKMSCryptoKeyVersionResult" data-link-title="GetKMSCryptoKeyVersionResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L66">
         interface <strong>GetKMSCryptoKeyVersionResult</strong>
     </a>
 </h3>
@@ -2174,7 +3156,7 @@ The version number for this CryptoKeyVersion. Defaults to `1`.
 A collection of values returned by getKMSCryptoKeyVersion.
 
 <h4 class="pdoc-member-header" id="GetKMSCryptoKeyVersionResult-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L52">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L70">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>algorithm: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2182,12 +3164,12 @@ A collection of values returned by getKMSCryptoKeyVersion.
 The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
 
 <h4 class="pdoc-member-header" id="GetKMSCryptoKeyVersionResult-cryptoKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L53">property <b>cryptoKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L71">property <b>cryptoKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cryptoKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKMSCryptoKeyVersionResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L75">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2195,7 +3177,7 @@ The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetKMSCryptoKeyVersionResult-protectionLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L61">property <b>protectionLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L79">property <b>protectionLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protectionLevel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2203,7 +3185,7 @@ The provider-assigned unique ID for this managed resource.
 The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion. See the [protectionLevel reference](https://cloud.google.com/kms/docs/reference/rest/v1/ProtectionLevel) for possible outputs.
 
 <h4 class="pdoc-member-header" id="GetKMSCryptoKeyVersionResult-publicKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L65">property <b>publicKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L83">property <b>publicKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKeys: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetKMSCryptoKeyVersionPublicKey'>GetKMSCryptoKeyVersionPublicKey</a>[];</code></pre>
@@ -2211,7 +3193,7 @@ The ProtectionLevel describing how crypto operations are performed with this Cry
 If the enclosing CryptoKey has purpose `ASYMMETRIC_SIGN` or `ASYMMETRIC_DECRYPT`, this block contains details about the public key associated to this CryptoKeyVersion. Structure is documented below.
 
 <h4 class="pdoc-member-header" id="GetKMSCryptoKeyVersionResult-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L69">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L87">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2219,12 +3201,12 @@ If the enclosing CryptoKey has purpose `ASYMMETRIC_SIGN` or `ASYMMETRIC_DECRYPT`
 The current state of the CryptoKeyVersion. See the [state reference](https://cloud.google.com/kms/docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersions#CryptoKeyVersion.CryptoKeyVersionState) for possible outputs.
 
 <h4 class="pdoc-member-header" id="GetKMSCryptoKeyVersionResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L70">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSCryptoKeyVersion.ts#L88">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetKMSKeyRingArgs" data-link-title="GetKMSKeyRingArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSKeyRing.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSKeyRing.ts#L47">
         interface <strong>GetKMSKeyRingArgs</strong>
     </a>
 </h3>
@@ -2234,7 +3216,7 @@ The current state of the CryptoKeyVersion. See the [state reference](https://clo
 A collection of arguments for invoking getKMSKeyRing.
 
 <h4 class="pdoc-member-header" id="GetKMSKeyRingArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSKeyRing.ts#L41">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSKeyRing.ts#L52">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2243,7 +3225,7 @@ The Google Cloud Platform location for the KeyRing.
 A full list of valid locations can be found by running `gcloud kms locations list`.
 
 <h4 class="pdoc-member-header" id="GetKMSKeyRingArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSKeyRing.ts#L46">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSKeyRing.ts#L57">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2252,7 +3234,7 @@ The KeyRing's name.
 A KeyRing name must exist within the provided location and match the regular expression `[a-zA-Z0-9_-]{1,63}`
 
 <h4 class="pdoc-member-header" id="GetKMSKeyRingArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSKeyRing.ts#L51">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSKeyRing.ts#L62">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2261,7 +3243,7 @@ The project in which the resource belongs. If it
 is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="GetKMSKeyRingResult" data-link-title="GetKMSKeyRingResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSKeyRing.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSKeyRing.ts#L68">
         interface <strong>GetKMSKeyRingResult</strong>
     </a>
 </h3>
@@ -2271,7 +3253,7 @@ is not provided, the provider project is used.
 A collection of values returned by getKMSKeyRing.
 
 <h4 class="pdoc-member-header" id="GetKMSKeyRingResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSKeyRing.ts#L61">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSKeyRing.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2279,22 +3261,22 @@ A collection of values returned by getKMSKeyRing.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetKMSKeyRingResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSKeyRing.ts#L62">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSKeyRing.ts#L73">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKMSKeyRingResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSKeyRing.ts#L63">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSKeyRing.ts#L74">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKMSKeyRingResult-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSKeyRing.ts#L64">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSKeyRing.ts#L75">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKMSKeyRingResult-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSKeyRing.ts#L68">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSKeyRing.ts#L79">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfLink: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2302,7 +3284,7 @@ The provider-assigned unique ID for this managed resource.
 The self link of the created KeyRing. Its format is `projects/{projectId}/locations/{location}/keyRings/{keyRingName}`.
 
 <h3 class="pdoc-module-header" id="GetKMSSecretArgs" data-link-title="GetKMSSecretArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSSecret.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSSecret.ts#L38">
         interface <strong>GetKMSSecretArgs</strong>
     </a>
 </h3>
@@ -2312,7 +3294,7 @@ The self link of the created KeyRing. Its format is `projects/{projectId}/locati
 A collection of arguments for invoking getKMSSecret.
 
 <h4 class="pdoc-member-header" id="GetKMSSecretArgs-additionalAuthenticatedData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSSecret.ts#L43">property <b>additionalAuthenticatedData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSSecret.ts#L42">property <b>additionalAuthenticatedData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalAuthenticatedData?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2320,7 +3302,7 @@ A collection of arguments for invoking getKMSSecret.
 The [additional authenticated data](https://cloud.google.com/kms/docs/additional-authenticated-data) used for integrity checks during encryption and decryption.
 
 <h4 class="pdoc-member-header" id="GetKMSSecretArgs-ciphertext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSSecret.ts#L47">property <b>ciphertext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSSecret.ts#L46">property <b>ciphertext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ciphertext: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2328,7 +3310,7 @@ The [additional authenticated data](https://cloud.google.com/kms/docs/additional
 The ciphertext to be decrypted, encoded in base64
 
 <h4 class="pdoc-member-header" id="GetKMSSecretArgs-cryptoKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSSecret.ts#L53">property <b>cryptoKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSSecret.ts#L52">property <b>cryptoKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cryptoKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2338,7 +3320,7 @@ decrypt the provided ciphertext. This is represented by the format
 `{projectId}/{location}/{keyRingName}/{cryptoKeyName}`.
 
 <h3 class="pdoc-module-header" id="GetKMSSecretCiphertextArgs" data-link-title="GetKMSSecretCiphertextArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSSecretCiphertext.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSSecretCiphertext.ts#L39">
         interface <strong>GetKMSSecretCiphertextArgs</strong>
     </a>
 </h3>
@@ -2348,7 +3330,7 @@ decrypt the provided ciphertext. This is represented by the format
 A collection of arguments for invoking getKMSSecretCiphertext.
 
 <h4 class="pdoc-member-header" id="GetKMSSecretCiphertextArgs-cryptoKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSSecretCiphertext.ts#L46">property <b>cryptoKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSSecretCiphertext.ts#L45">property <b>cryptoKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cryptoKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2358,7 +3340,7 @@ encrypt the provided plaintext. This is represented by the format
 `{projectId}/{location}/{keyRingName}/{cryptoKeyName}`.
 
 <h4 class="pdoc-member-header" id="GetKMSSecretCiphertextArgs-plaintext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSSecretCiphertext.ts#L50">property <b>plaintext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSSecretCiphertext.ts#L49">property <b>plaintext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plaintext: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2366,7 +3348,7 @@ encrypt the provided plaintext. This is represented by the format
 The plaintext to be encrypted
 
 <h3 class="pdoc-module-header" id="GetKMSSecretCiphertextResult" data-link-title="GetKMSSecretCiphertextResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSSecretCiphertext.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSSecretCiphertext.ts#L55">
         interface <strong>GetKMSSecretCiphertextResult</strong>
     </a>
 </h3>
@@ -2376,7 +3358,7 @@ The plaintext to be encrypted
 A collection of values returned by getKMSSecretCiphertext.
 
 <h4 class="pdoc-member-header" id="GetKMSSecretCiphertextResult-ciphertext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSSecretCiphertext.ts#L60">property <b>ciphertext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSSecretCiphertext.ts#L59">property <b>ciphertext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ciphertext: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2384,12 +3366,12 @@ A collection of values returned by getKMSSecretCiphertext.
 Contains the result of encrypting the provided plaintext, encoded in base64.
 
 <h4 class="pdoc-member-header" id="GetKMSSecretCiphertextResult-cryptoKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSSecretCiphertext.ts#L61">property <b>cryptoKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSSecretCiphertext.ts#L60">property <b>cryptoKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cryptoKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKMSSecretCiphertextResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSSecretCiphertext.ts#L65">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSSecretCiphertext.ts#L64">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2397,12 +3379,12 @@ Contains the result of encrypting the provided plaintext, encoded in base64.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetKMSSecretCiphertextResult-plaintext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSSecretCiphertext.ts#L66">property <b>plaintext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSSecretCiphertext.ts#L65">property <b>plaintext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plaintext: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetKMSSecretResult" data-link-title="GetKMSSecretResult">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSSecret.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSSecret.ts#L58">
         interface <strong>GetKMSSecretResult</strong>
     </a>
 </h3>
@@ -2412,22 +3394,22 @@ The provider-assigned unique ID for this managed resource.
 A collection of values returned by getKMSSecret.
 
 <h4 class="pdoc-member-header" id="GetKMSSecretResult-additionalAuthenticatedData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSSecret.ts#L60">property <b>additionalAuthenticatedData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSSecret.ts#L59">property <b>additionalAuthenticatedData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalAuthenticatedData?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKMSSecretResult-ciphertext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSSecret.ts#L61">property <b>ciphertext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSSecret.ts#L60">property <b>ciphertext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ciphertext: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKMSSecretResult-cryptoKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSSecret.ts#L62">property <b>cryptoKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSSecret.ts#L61">property <b>cryptoKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cryptoKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetKMSSecretResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSSecret.ts#L66">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSSecret.ts#L65">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2435,7 +3417,7 @@ A collection of values returned by getKMSSecret.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetKMSSecretResult-plaintext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/getKMSSecret.ts#L70">property <b>plaintext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/getKMSSecret.ts#L69">property <b>plaintext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plaintext: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2443,7 +3425,7 @@ The provider-assigned unique ID for this managed resource.
 Contains the result of decrypting the provided ciphertext.
 
 <h3 class="pdoc-module-header" id="KeyRingArgs" data-link-title="KeyRingArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRing.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRing.ts#L153">
         interface <strong>KeyRingArgs</strong>
     </a>
 </h3>
@@ -2453,7 +3435,7 @@ Contains the result of decrypting the provided ciphertext.
 The set of arguments for constructing a KeyRing resource.
 
 <h4 class="pdoc-member-header" id="KeyRingArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRing.ts#L132">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRing.ts#L158">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2462,7 +3444,7 @@ The location for the KeyRing.
 A full list of valid locations can be found by running `gcloud kms locations list`.
 
 <h4 class="pdoc-member-header" id="KeyRingArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRing.ts#L136">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRing.ts#L162">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2470,7 +3452,7 @@ A full list of valid locations can be found by running `gcloud kms locations lis
 The resource name for the KeyRing.
 
 <h4 class="pdoc-member-header" id="KeyRingArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRing.ts#L141">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRing.ts#L167">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2479,7 +3461,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h3 class="pdoc-module-header" id="KeyRingIAMBindingArgs" data-link-title="KeyRingIAMBindingArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMBinding.ts#L149">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMBinding.ts#L279">
         interface <strong>KeyRingIAMBindingArgs</strong>
     </a>
 </h3>
@@ -2489,7 +3471,7 @@ If it is not provided, the provider project is used.
 The set of arguments for constructing a KeyRingIAMBinding resource.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMBindingArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMBinding.ts#L154">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMBinding.ts#L284">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#KeyRingIAMBindingCondition'>KeyRingIAMBindingCondition</a>&gt;;</code></pre>
@@ -2498,7 +3480,7 @@ An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a 
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMBindingArgs-keyRingId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMBinding.ts#L161">property <b>keyRingId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMBinding.ts#L291">property <b>keyRingId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyRingId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2509,12 +3491,12 @@ The key ring ID, in the form
 project setting will be used as a fallback.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMBindingArgs-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMBinding.ts#L162">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMBinding.ts#L292">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KeyRingIAMBindingArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMBinding.ts#L168">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMBinding.ts#L298">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2524,7 +3506,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="KeyRingIAMBindingState" data-link-title="KeyRingIAMBindingState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMBinding.ts#L120">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMBinding.ts#L250">
         interface <strong>KeyRingIAMBindingState</strong>
     </a>
 </h3>
@@ -2534,7 +3516,7 @@ The role that should be applied. Only one
 Input properties used for looking up and filtering KeyRingIAMBinding resources.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMBindingState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMBinding.ts#L125">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMBinding.ts#L255">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#KeyRingIAMBindingCondition'>KeyRingIAMBindingCondition</a>&gt;;</code></pre>
@@ -2543,7 +3525,7 @@ An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a 
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMBindingState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMBinding.ts#L129">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMBinding.ts#L259">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2551,7 +3533,7 @@ Structure is documented below.
 (Computed) The etag of the key ring's IAM policy.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMBindingState-keyRingId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMBinding.ts#L136">property <b>keyRingId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMBinding.ts#L266">property <b>keyRingId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyRingId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2562,12 +3544,12 @@ The key ring ID, in the form
 project setting will be used as a fallback.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMBindingState-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMBinding.ts#L137">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMBinding.ts#L267">property <b>members</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KeyRingIAMBindingState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMBinding.ts#L143">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMBinding.ts#L273">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2577,7 +3559,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="KeyRingIAMMemberArgs" data-link-title="KeyRingIAMMemberArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMMember.ts#L149">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMMember.ts#L279">
         interface <strong>KeyRingIAMMemberArgs</strong>
     </a>
 </h3>
@@ -2587,7 +3569,7 @@ The role that should be applied. Only one
 The set of arguments for constructing a KeyRingIAMMember resource.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMMemberArgs-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMMember.ts#L154">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMMember.ts#L284">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#KeyRingIAMMemberCondition'>KeyRingIAMMemberCondition</a>&gt;;</code></pre>
@@ -2596,7 +3578,7 @@ An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a 
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMMemberArgs-keyRingId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMMember.ts#L161">property <b>keyRingId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMMember.ts#L291">property <b>keyRingId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyRingId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2607,12 +3589,12 @@ The key ring ID, in the form
 project setting will be used as a fallback.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMMemberArgs-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMMember.ts#L162">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMMember.ts#L292">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KeyRingIAMMemberArgs-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMMember.ts#L168">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMMember.ts#L298">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2622,7 +3604,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="KeyRingIAMMemberState" data-link-title="KeyRingIAMMemberState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMMember.ts#L120">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMMember.ts#L250">
         interface <strong>KeyRingIAMMemberState</strong>
     </a>
 </h3>
@@ -2632,7 +3614,7 @@ The role that should be applied. Only one
 Input properties used for looking up and filtering KeyRingIAMMember resources.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMMemberState-condition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMMember.ts#L125">property <b>condition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMMember.ts#L255">property <b>condition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>condition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#KeyRingIAMMemberCondition'>KeyRingIAMMemberCondition</a>&gt;;</code></pre>
@@ -2641,7 +3623,7 @@ An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a 
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMMemberState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMMember.ts#L129">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMMember.ts#L259">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2649,7 +3631,7 @@ Structure is documented below.
 (Computed) The etag of the key ring's IAM policy.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMMemberState-keyRingId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMMember.ts#L136">property <b>keyRingId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMMember.ts#L266">property <b>keyRingId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyRingId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2660,12 +3642,12 @@ The key ring ID, in the form
 project setting will be used as a fallback.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMMemberState-member">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMMember.ts#L137">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMMember.ts#L267">property <b>member</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="KeyRingIAMMemberState-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMMember.ts#L143">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMMember.ts#L273">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2675,7 +3657,7 @@ The role that should be applied. Only one
 `[projects|organizations]/{parent-name}/roles/{role-name}`.
 
 <h3 class="pdoc-module-header" id="KeyRingIAMPolicyArgs" data-link-title="KeyRingIAMPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMPolicy.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMPolicy.ts#L257">
         interface <strong>KeyRingIAMPolicyArgs</strong>
     </a>
 </h3>
@@ -2685,7 +3667,7 @@ The role that should be applied. Only one
 The set of arguments for constructing a KeyRingIAMPolicy resource.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMPolicyArgs-keyRingId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMPolicy.ts#L133">property <b>keyRingId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMPolicy.ts#L264">property <b>keyRingId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyRingId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2696,7 +3678,7 @@ The key ring ID, in the form
 project setting will be used as a fallback.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMPolicyArgs-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMPolicy.ts#L138">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMPolicy.ts#L269">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2705,7 +3687,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h3 class="pdoc-module-header" id="KeyRingIAMPolicyState" data-link-title="KeyRingIAMPolicyState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMPolicy.ts#L104">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMPolicy.ts#L235">
         interface <strong>KeyRingIAMPolicyState</strong>
     </a>
 </h3>
@@ -2715,7 +3697,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 Input properties used for looking up and filtering KeyRingIAMPolicy resources.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMPolicyState-etag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMPolicy.ts#L108">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMPolicy.ts#L239">property <b>etag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2723,7 +3705,7 @@ Input properties used for looking up and filtering KeyRingIAMPolicy resources.
 (Computed) The etag of the key ring's IAM policy.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMPolicyState-keyRingId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMPolicy.ts#L115">property <b>keyRingId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMPolicy.ts#L246">property <b>keyRingId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyRingId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2734,7 +3716,7 @@ The key ring ID, in the form
 project setting will be used as a fallback.
 
 <h4 class="pdoc-member-header" id="KeyRingIAMPolicyState-policyData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingIAMPolicy.ts#L120">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingIAMPolicy.ts#L251">property <b>policyData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2743,7 +3725,7 @@ The policy data generated by
 a `gcp.organizations.getIAMPolicy` data source.
 
 <h3 class="pdoc-module-header" id="KeyRingImportJobArgs" data-link-title="KeyRingImportJobArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L205">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L212">
         interface <strong>KeyRingImportJobArgs</strong>
     </a>
 </h3>
@@ -2753,7 +3735,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 The set of arguments for constructing a KeyRingImportJob resource.
 
 <h4 class="pdoc-member-header" id="KeyRingImportJobArgs-importJobId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L209">property <b>importJobId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L216">property <b>importJobId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>importJobId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2761,7 +3743,7 @@ The set of arguments for constructing a KeyRingImportJob resource.
 It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
 
 <h4 class="pdoc-member-header" id="KeyRingImportJobArgs-importMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L214">property <b>importMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L221">property <b>importMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>importMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2770,7 +3752,7 @@ The wrapping method to be used for incoming key material.
 Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256`.
 
 <h4 class="pdoc-member-header" id="KeyRingImportJobArgs-keyRing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L219">property <b>keyRing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L226">property <b>keyRing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyRing: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2779,7 +3761,7 @@ The KeyRing that this import job belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 
 <h4 class="pdoc-member-header" id="KeyRingImportJobArgs-protectionLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L225">property <b>protectionLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L232">property <b>protectionLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protectionLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2789,7 +3771,7 @@ versionTemplate on the CryptoKey you attempt to import into.
 Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 
 <h3 class="pdoc-module-header" id="KeyRingImportJobState" data-link-title="KeyRingImportJobState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L157">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L164">
         interface <strong>KeyRingImportJobState</strong>
     </a>
 </h3>
@@ -2799,7 +3781,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 Input properties used for looking up and filtering KeyRingImportJob resources.
 
 <h4 class="pdoc-member-header" id="KeyRingImportJobState-attestations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L163">property <b>attestations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L170">property <b>attestations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attestations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#KeyRingImportJobAttestation'>KeyRingImportJobAttestation</a>&gt;[]&gt;;</code></pre>
@@ -2809,7 +3791,7 @@ statement to verify attributes of the key as stored on the HSM, independently of
 ImportMethod is one with a protection level of HSM.
 
 <h4 class="pdoc-member-header" id="KeyRingImportJobState-expireTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L167">property <b>expireTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L174">property <b>expireTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expireTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2817,7 +3799,7 @@ ImportMethod is one with a protection level of HSM.
 The time at which this resource is scheduled for expiration and can no longer be used. This is in RFC3339 text format.
 
 <h4 class="pdoc-member-header" id="KeyRingImportJobState-importJobId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L171">property <b>importJobId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L178">property <b>importJobId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>importJobId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2825,7 +3807,7 @@ The time at which this resource is scheduled for expiration and can no longer be
 It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}
 
 <h4 class="pdoc-member-header" id="KeyRingImportJobState-importMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L176">property <b>importMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L183">property <b>importMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>importMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2834,7 +3816,7 @@ The wrapping method to be used for incoming key material.
 Possible values are `RSA_OAEP_3072_SHA1_AES_256` and `RSA_OAEP_4096_SHA1_AES_256`.
 
 <h4 class="pdoc-member-header" id="KeyRingImportJobState-keyRing">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L181">property <b>keyRing</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L188">property <b>keyRing</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyRing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2843,7 +3825,7 @@ The KeyRing that this import job belongs to.
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 
 <h4 class="pdoc-member-header" id="KeyRingImportJobState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L185">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L192">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2851,7 +3833,7 @@ Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}'`.
 The resource name for this ImportJob in the format projects/*&#47;locations/*&#47;keyRings/*&#47;importJobs/*.
 
 <h4 class="pdoc-member-header" id="KeyRingImportJobState-protectionLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L191">property <b>protectionLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L198">property <b>protectionLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protectionLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2861,7 +3843,7 @@ versionTemplate on the CryptoKey you attempt to import into.
 Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 
 <h4 class="pdoc-member-header" id="KeyRingImportJobState-publicKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L195">property <b>publicKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L202">property <b>publicKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#KeyRingImportJobPublicKey'>KeyRingImportJobPublicKey</a>&gt;[]&gt;;</code></pre>
@@ -2869,7 +3851,7 @@ Possible values are `SOFTWARE`, `HSM`, and `EXTERNAL`.
 The public key with which to wrap key material prior to import. Only returned if state is 'ACTIVE'.
 
 <h4 class="pdoc-member-header" id="KeyRingImportJobState-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRingImportJob.ts#L199">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRingImportJob.ts#L206">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2877,7 +3859,7 @@ The public key with which to wrap key material prior to import. Only returned if
 The current state of the ImportJob, indicating if it can be used.
 
 <h3 class="pdoc-module-header" id="KeyRingState" data-link-title="KeyRingState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRing.ts#L106">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRing.ts#L132">
         interface <strong>KeyRingState</strong>
     </a>
 </h3>
@@ -2887,7 +3869,7 @@ The current state of the ImportJob, indicating if it can be used.
 Input properties used for looking up and filtering KeyRing resources.
 
 <h4 class="pdoc-member-header" id="KeyRingState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRing.ts#L111">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRing.ts#L137">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2896,7 +3878,7 @@ The location for the KeyRing.
 A full list of valid locations can be found by running `gcloud kms locations list`.
 
 <h4 class="pdoc-member-header" id="KeyRingState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRing.ts#L115">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRing.ts#L141">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2904,7 +3886,7 @@ A full list of valid locations can be found by running `gcloud kms locations lis
 The resource name for the KeyRing.
 
 <h4 class="pdoc-member-header" id="KeyRingState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRing.ts#L120">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRing.ts#L146">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2913,12 +3895,12 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="KeyRingState-selfLink">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/keyRing.ts#L121">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/keyRing.ts#L147">property <b>selfLink</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="RegistryArgs" data-link-title="RegistryArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L208">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L286">
         interface <strong>RegistryArgs</strong>
     </a>
 </h3>
@@ -2928,7 +3910,7 @@ If it is not provided, the provider project is used.
 The set of arguments for constructing a Registry resource.
 
 <h4 class="pdoc-member-header" id="RegistryArgs-credentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L213">property <b>credentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L291">property <b>credentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryCredential'>RegistryCredential</a>&gt;[]&gt;;</code></pre>
@@ -2937,7 +3919,7 @@ List of public key certificates to authenticate devices.
 The structure is documented below.
 
 <h4 class="pdoc-member-header" id="RegistryArgs-eventNotificationConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L219">property <b>eventNotificationConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L297">property <b>eventNotificationConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventNotificationConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryEventNotificationConfigItem'>RegistryEventNotificationConfigItem</a>&gt;[]&gt;;</code></pre>
@@ -2947,7 +3929,7 @@ to publish device events to.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="RegistryArgs-httpConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L224">property <b>httpConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L302">property <b>httpConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2956,7 +3938,7 @@ Activate or deactivate HTTP.
 The structure is documented below.
 
 <h4 class="pdoc-member-header" id="RegistryArgs-logLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L234">property <b>logLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L312">property <b>logLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2970,7 +3952,7 @@ Default value is `NONE`.
 Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 
 <h4 class="pdoc-member-header" id="RegistryArgs-mqttConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L239">property <b>mqttConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L317">property <b>mqttConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mqttConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2979,7 +3961,7 @@ Activate or deactivate MQTT.
 The structure is documented below.
 
 <h4 class="pdoc-member-header" id="RegistryArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L243">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L321">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2987,7 +3969,7 @@ The structure is documented below.
 A unique name for the resource, required by device registry.
 
 <h4 class="pdoc-member-header" id="RegistryArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L248">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L326">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2996,7 +3978,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="RegistryArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L253">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L331">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3005,7 +3987,7 @@ The region in which the created registry should reside.
 If it is not provided, the provider region is used.
 
 <h4 class="pdoc-member-header" id="RegistryArgs-stateNotificationConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L258">property <b>stateNotificationConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L336">property <b>stateNotificationConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stateNotificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -3014,7 +3996,7 @@ A PubSub topic to publish device state updates.
 The structure is documented below.
 
 <h3 class="pdoc-module-header" id="RegistryState" data-link-title="RegistryState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L230">
         interface <strong>RegistryState</strong>
     </a>
 </h3>
@@ -3024,7 +4006,7 @@ The structure is documented below.
 Input properties used for looking up and filtering Registry resources.
 
 <h4 class="pdoc-member-header" id="RegistryState-credentials">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L157">property <b>credentials</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L235">property <b>credentials</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryCredential'>RegistryCredential</a>&gt;[]&gt;;</code></pre>
@@ -3033,7 +4015,7 @@ List of public key certificates to authenticate devices.
 The structure is documented below.
 
 <h4 class="pdoc-member-header" id="RegistryState-eventNotificationConfigs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L163">property <b>eventNotificationConfigs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L241">property <b>eventNotificationConfigs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventNotificationConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegistryEventNotificationConfigItem'>RegistryEventNotificationConfigItem</a>&gt;[]&gt;;</code></pre>
@@ -3043,7 +4025,7 @@ to publish device events to.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="RegistryState-httpConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L168">property <b>httpConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L246">property <b>httpConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -3052,7 +4034,7 @@ Activate or deactivate HTTP.
 The structure is documented below.
 
 <h4 class="pdoc-member-header" id="RegistryState-logLevel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L178">property <b>logLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L256">property <b>logLevel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3066,7 +4048,7 @@ Default value is `NONE`.
 Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
 
 <h4 class="pdoc-member-header" id="RegistryState-mqttConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L183">property <b>mqttConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L261">property <b>mqttConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mqttConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -3075,7 +4057,7 @@ Activate or deactivate MQTT.
 The structure is documented below.
 
 <h4 class="pdoc-member-header" id="RegistryState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L187">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L265">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3083,7 +4065,7 @@ The structure is documented below.
 A unique name for the resource, required by device registry.
 
 <h4 class="pdoc-member-header" id="RegistryState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L192">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L270">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3092,7 +4074,7 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="RegistryState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L197">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L275">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3101,7 +4083,7 @@ The region in which the created registry should reside.
 If it is not provided, the provider region is used.
 
 <h4 class="pdoc-member-header" id="RegistryState-stateNotificationConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/registry.ts#L202">property <b>stateNotificationConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/registry.ts#L280">property <b>stateNotificationConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stateNotificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -3110,7 +4092,7 @@ A PubSub topic to publish device state updates.
 The structure is documented below.
 
 <h3 class="pdoc-module-header" id="SecretCiphertextArgs" data-link-title="SecretCiphertextArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/secretCiphertext.ts#L142">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/secretCiphertext.ts#L178">
         interface <strong>SecretCiphertextArgs</strong>
     </a>
 </h3>
@@ -3120,7 +4102,7 @@ The structure is documented below.
 The set of arguments for constructing a SecretCiphertext resource.
 
 <h4 class="pdoc-member-header" id="SecretCiphertextArgs-additionalAuthenticatedData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/secretCiphertext.ts#L147">property <b>additionalAuthenticatedData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/secretCiphertext.ts#L183">property <b>additionalAuthenticatedData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalAuthenticatedData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3129,7 +4111,7 @@ The additional authenticated data used for integrity checks during encryption an
 **Note**: This property is sensitive and will not be displayed in the plan.
 
 <h4 class="pdoc-member-header" id="SecretCiphertextArgs-cryptoKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/secretCiphertext.ts#L152">property <b>cryptoKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/secretCiphertext.ts#L188">property <b>cryptoKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cryptoKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3138,7 +4120,7 @@ The full name of the CryptoKey that will be used to encrypt the provided plainte
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'`
 
 <h4 class="pdoc-member-header" id="SecretCiphertextArgs-plaintext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/secretCiphertext.ts#L157">property <b>plaintext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/secretCiphertext.ts#L193">property <b>plaintext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plaintext: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3147,7 +4129,7 @@ The plaintext to be encrypted.
 **Note**: This property is sensitive and will not be displayed in the plan.
 
 <h3 class="pdoc-module-header" id="SecretCiphertextState" data-link-title="SecretCiphertextState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/secretCiphertext.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/secretCiphertext.ts#L153">
         interface <strong>SecretCiphertextState</strong>
     </a>
 </h3>
@@ -3157,7 +4139,7 @@ The plaintext to be encrypted.
 Input properties used for looking up and filtering SecretCiphertext resources.
 
 <h4 class="pdoc-member-header" id="SecretCiphertextState-additionalAuthenticatedData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/secretCiphertext.ts#L122">property <b>additionalAuthenticatedData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/secretCiphertext.ts#L158">property <b>additionalAuthenticatedData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalAuthenticatedData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3166,7 +4148,7 @@ The additional authenticated data used for integrity checks during encryption an
 **Note**: This property is sensitive and will not be displayed in the plan.
 
 <h4 class="pdoc-member-header" id="SecretCiphertextState-ciphertext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/secretCiphertext.ts#L126">property <b>ciphertext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/secretCiphertext.ts#L162">property <b>ciphertext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ciphertext?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3174,7 +4156,7 @@ The additional authenticated data used for integrity checks during encryption an
 Contains the result of encrypting the provided plaintext, encoded in base64.
 
 <h4 class="pdoc-member-header" id="SecretCiphertextState-cryptoKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/secretCiphertext.ts#L131">property <b>cryptoKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/secretCiphertext.ts#L167">property <b>cryptoKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cryptoKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3183,7 +4165,7 @@ The full name of the CryptoKey that will be used to encrypt the provided plainte
 Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'`
 
 <h4 class="pdoc-member-header" id="SecretCiphertextState-plaintext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/kms/secretCiphertext.ts#L136">property <b>plaintext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/412945bd19782bdb51f1477251bede26b0ea0f15/sdk/nodejs/kms/secretCiphertext.ts#L172">property <b>plaintext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plaintext?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

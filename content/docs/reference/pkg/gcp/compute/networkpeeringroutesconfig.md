@@ -21,6 +21,162 @@ To get more information about NetworkPeeringRoutesConfig, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/vpc/docs/vpc-peering)
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Network Peering Routes Config Basic
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var networkPrimary = new Gcp.Compute.Network("networkPrimary", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var networkSecondary = new Gcp.Compute.Network("networkSecondary", new Gcp.Compute.NetworkArgs
+        {
+            AutoCreateSubnetworks = false,
+        });
+        var peeringPrimary = new Gcp.Compute.NetworkPeering("peeringPrimary", new Gcp.Compute.NetworkPeeringArgs
+        {
+            Network = networkPrimary.Id,
+            PeerNetwork = networkSecondary.Id,
+            ImportCustomRoutes = true,
+            ExportCustomRoutes = true,
+        });
+        var peeringPrimaryRoutes = new Gcp.Compute.NetworkPeeringRoutesConfig("peeringPrimaryRoutes", new Gcp.Compute.NetworkPeeringRoutesConfigArgs
+        {
+            Peering = peeringPrimary.Name,
+            Network = networkPrimary.Name,
+            ImportCustomRoutes = true,
+            ExportCustomRoutes = true,
+        });
+        var peeringSecondary = new Gcp.Compute.NetworkPeering("peeringSecondary", new Gcp.Compute.NetworkPeeringArgs
+        {
+            Network = networkSecondary.Id,
+            PeerNetwork = networkPrimary.Id,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		networkPrimary, err := compute.NewNetwork(ctx, "networkPrimary", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		networkSecondary, err := compute.NewNetwork(ctx, "networkSecondary", &compute.NetworkArgs{
+			AutoCreateSubnetworks: pulumi.Bool(false),
+		})
+		if err != nil {
+			return err
+		}
+		peeringPrimary, err := compute.NewNetworkPeering(ctx, "peeringPrimary", &compute.NetworkPeeringArgs{
+			Network:            networkPrimary.ID(),
+			PeerNetwork:        networkSecondary.ID(),
+			ImportCustomRoutes: pulumi.Bool(true),
+			ExportCustomRoutes: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewNetworkPeeringRoutesConfig(ctx, "peeringPrimaryRoutes", &compute.NetworkPeeringRoutesConfigArgs{
+			Peering:            peeringPrimary.Name,
+			Network:            networkPrimary.Name,
+			ImportCustomRoutes: pulumi.Bool(true),
+			ExportCustomRoutes: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewNetworkPeering(ctx, "peeringSecondary", &compute.NetworkPeeringArgs{
+			Network:     networkSecondary.ID(),
+			PeerNetwork: networkPrimary.ID(),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+network_primary = gcp.compute.Network("networkPrimary", auto_create_subnetworks=False)
+network_secondary = gcp.compute.Network("networkSecondary", auto_create_subnetworks=False)
+peering_primary = gcp.compute.NetworkPeering("peeringPrimary",
+    network=network_primary.id,
+    peer_network=network_secondary.id,
+    import_custom_routes=True,
+    export_custom_routes=True)
+peering_primary_routes = gcp.compute.NetworkPeeringRoutesConfig("peeringPrimaryRoutes",
+    peering=peering_primary.name,
+    network=network_primary.name,
+    import_custom_routes=True,
+    export_custom_routes=True)
+peering_secondary = gcp.compute.NetworkPeering("peeringSecondary",
+    network=network_secondary.id,
+    peer_network=network_primary.id)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const networkPrimary = new gcp.compute.Network("networkPrimary", {autoCreateSubnetworks: "false"});
+const networkSecondary = new gcp.compute.Network("networkSecondary", {autoCreateSubnetworks: "false"});
+const peeringPrimary = new gcp.compute.NetworkPeering("peeringPrimary", {
+    network: networkPrimary.id,
+    peerNetwork: networkSecondary.id,
+    importCustomRoutes: true,
+    exportCustomRoutes: true,
+});
+const peeringPrimaryRoutes = new gcp.compute.NetworkPeeringRoutesConfig("peeringPrimaryRoutes", {
+    peering: peeringPrimary.name,
+    network: networkPrimary.name,
+    importCustomRoutes: true,
+    exportCustomRoutes: true,
+});
+const peeringSecondary = new gcp.compute.NetworkPeering("peeringSecondary", {
+    network: networkSecondary.id,
+    peerNetwork: networkPrimary.id,
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a NetworkPeeringRoutesConfig Resource {#create}
@@ -918,6 +1074,24 @@ If it is not provided, the provider project is used.
 
 
 
+
+
+## Import
+
+
+NetworkPeeringRoutesConfig can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:compute/networkPeeringRoutesConfig:NetworkPeeringRoutesConfig default projects/{{project}}/global/networks/{{network}}/networkPeerings/{{peering}}
+```
+
+```sh
+ $ pulumi import gcp:compute/networkPeeringRoutesConfig:NetworkPeeringRoutesConfig default {{project}}/{{network}}/{{peering}}
+```
+
+```sh
+ $ pulumi import gcp:compute/networkPeeringRoutesConfig:NetworkPeeringRoutesConfig default {{network}}/{{peering}}
+```
 
 
 

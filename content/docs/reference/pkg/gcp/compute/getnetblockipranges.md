@@ -13,6 +13,222 @@ meta_desc: "Explore the GetNetblockIPRanges function of the compute module, incl
 Use this data source to get the IP addresses from different special IP ranges on Google Cloud Platform.
 
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+### Cloud Ranges
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var netblock = Output.Create(Gcp.Compute.GetNetblockIPRanges.InvokeAsync());
+        this.CidrBlocks = netblock.Apply(netblock => netblock.CidrBlocks);
+        this.CidrBlocksIpv4 = netblock.Apply(netblock => netblock.CidrBlocksIpv4s);
+        this.CidrBlocksIpv6 = netblock.Apply(netblock => netblock.CidrBlocksIpv6s);
+    }
+
+    [Output("cidrBlocks")]
+    public Output<string> CidrBlocks { get; set; }
+    [Output("cidrBlocksIpv4")]
+    public Output<string> CidrBlocksIpv4 { get; set; }
+    [Output("cidrBlocksIpv6")]
+    public Output<string> CidrBlocksIpv6 { get; set; }
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		netblock, err := compute.GetNetblockIPRanges(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		ctx.Export("cidrBlocks", netblock.CidrBlocks)
+		ctx.Export("cidrBlocksIpv4", netblock.CidrBlocksIpv4s)
+		ctx.Export("cidrBlocksIpv6", netblock.CidrBlocksIpv6s)
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+netblock = gcp.compute.get_netblock_ip_ranges()
+pulumi.export("cidrBlocks", netblock.cidr_blocks)
+pulumi.export("cidrBlocksIpv4", netblock.cidr_blocks_ipv4s)
+pulumi.export("cidrBlocksIpv6", netblock.cidr_blocks_ipv6s)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const netblock = gcp.compute.getNetblockIPRanges({});
+export const cidrBlocks = netblock.then(netblock => netblock.cidrBlocks);
+export const cidrBlocksIpv4 = netblock.then(netblock => netblock.cidrBlocksIpv4s);
+export const cidrBlocksIpv6 = netblock.then(netblock => netblock.cidrBlocksIpv6s);
+```
+
+{{% /example %}}
+
+### Allow Health Checks
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var legacy_hcs = Output.Create(Gcp.Compute.GetNetblockIPRanges.InvokeAsync(new Gcp.Compute.GetNetblockIPRangesArgs
+        {
+            RangeType = "legacy-health-checkers",
+        }));
+        var @default = new Gcp.Compute.Network("default", new Gcp.Compute.NetworkArgs
+        {
+        });
+        var allow_hcs = new Gcp.Compute.Firewall("allow-hcs", new Gcp.Compute.FirewallArgs
+        {
+            Network = @default.Name,
+            Allows = 
+            {
+                new Gcp.Compute.Inputs.FirewallAllowArgs
+                {
+                    Protocol = "tcp",
+                    Ports = 
+                    {
+                        "80",
+                    },
+                },
+            },
+            SourceRanges = legacy_hcs.Apply(legacy_hcs => legacy_hcs.CidrBlocksIpv4s),
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		opt0 := "legacy-health-checkers"
+		legacy_hcs, err := compute.GetNetblockIPRanges(ctx, &compute.GetNetblockIPRangesArgs{
+			RangeType: &opt0,
+		}, nil)
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewNetwork(ctx, "_default", nil)
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewFirewall(ctx, "allow_hcs", &compute.FirewallArgs{
+			Network: _default.Name,
+			Allows: compute.FirewallAllowArray{
+				&compute.FirewallAllowArgs{
+					Protocol: pulumi.String("tcp"),
+					Ports: pulumi.StringArray{
+						pulumi.String("80"),
+					},
+				},
+			},
+			SourceRanges: toPulumiStringArray(legacy_hcs.CidrBlocksIpv4s),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+func toPulumiStringArray(arr []string) pulumi.StringArray {
+	var pulumiArr pulumi.StringArray
+	for _, v := range arr {
+		pulumiArr = append(pulumiArr, pulumi.String(v))
+	}
+	return pulumiArr
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+legacy_hcs = gcp.compute.get_netblock_ip_ranges(range_type="legacy-health-checkers")
+default = gcp.compute.Network("default")
+allow_hcs = gcp.compute.Firewall("allow-hcs",
+    network=default.name,
+    allows=[gcp.compute.FirewallAllowArgs(
+        protocol="tcp",
+        ports=["80"],
+    )],
+    source_ranges=legacy_hcs.cidr_blocks_ipv4s)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const legacy-hcs = gcp.compute.getNetblockIPRanges({
+    rangeType: "legacy-health-checkers",
+});
+const _default = new gcp.compute.Network("default", {});
+const allow_hcs = new gcp.compute.Firewall("allow-hcs", {
+    network: _default.name,
+    allows: [{
+        protocol: "tcp",
+        ports: ["80"],
+    }],
+    sourceRanges: legacy_hcs.then(legacy_hcs => legacy_hcs.cidrBlocksIpv4s),
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
+
 
 ## Using GetNetblockIPRanges {#using}
 

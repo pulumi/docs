@@ -745,6 +745,20 @@ If it is not provided, the provider project is used.
 
 
 
+## Import
+
+
+Project can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:firebase/project:Project default projects/{{project}}
+```
+
+```sh
+ $ pulumi import gcp:firebase/project:Project default {{project}}
+```
+
+
 
 
 <h2 id="package-details">Package Details</h2>
