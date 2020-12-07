@@ -3,7 +3,7 @@ title: Easily Create and Manage AWS EKS Kubernetes Clusters
 h1: "Easily Create and Manage AWS EKS Kubernetes Clusters with Pulumi"
 date: "2019-01-24"
 meta_desc: "Use Pulumi to easily deploy new clusters, manage AWS resources, and deploy Kubernetes apps. See how to provision an EKS cluster with a single CLI command."
-meta_image: "easy-eks.png"
+meta_image: "pulumi_k8s.png"
 authors: 
   - luke-hoban
   - levi-blackstone
@@ -21,17 +21,8 @@ single CLI command, thanks to [the `@pulumi/eks`
 package](https://github.com/pulumi/pulumi-eks). Let's see how.
 <!--more-->
 
-TODO: update this image?
-![Pulumi making EKS Easy](./easy-eks.png)
-
 {{% notes type="info" %}}
-*Update (December 2020)*
-
-Our popular EKS library was developed
-back when Pulumi only supported TypeScript. Since that time, we've added support
-for additional languages, and have received frequent requests to bring EKS support
-to them as well. Today, we're excited to announce that EKS is available for Python,
-and support for .NET and Go is coming soon!
+Updated December 2020 to include Python, .NET, and Go support.
 {{% /notes %}}
 
 To get started, download the free and open source
@@ -66,7 +57,6 @@ performing any operation. Once you have reviewed and selected "Yes," the
 cluster will begin deploying. The terminal output will be something like
 the following:
 
-TODO: may want to update this image
 ![Pulumi-EKS-1](./eks-1.jpg)
 
 Following these steps will provide a complete managed Amazon EKS
@@ -181,25 +171,25 @@ import (
 )
 
 func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		// Create an EKS cluster.
-		cluster, err := cluster.NewCluster(ctx, "cluster",
-			cluster.ClusterArgs{
-				InstanceType:    pulumi.String("t2.medium"),
-				DesiredCapacity: pulumi.Int(2),
-				MinSize:         pulumi.Int(1),
-				MaxSize:         pulumi.Int(2),
-			},
-		)
-		if err != nil {
-			return err
-		}
+    pulumi.Run(func(ctx *pulumi.Context) error {
+    // Create an EKS cluster.
+    cluster, err := cluster.NewCluster(ctx, "cluster",
+        cluster.ClusterArgs{
+            InstanceType:    pulumi.String("t2.medium"),
+            DesiredCapacity: pulumi.Int(2),
+            MinSize:         pulumi.Int(1),
+            MaxSize:         pulumi.Int(2),
+        },
+    )
+    if err != nil {
+        return err
+    }
 
-		// Export the cluster's kubeconfig.
-		ctx.Export("kubeconfig", cluster.Kubeconfig)
+    // Export the cluster's kubeconfig.
+    ctx.Export("kubeconfig", cluster.Kubeconfig)
 
-		return nil
-	})
+    return nil
+    })
 }
 ```
 
@@ -274,7 +264,7 @@ const wordpress = new k8s.helm.v3.Chart("wpdev", {
 {{% choosable language python %}}
 
 ```python
-nginx_ingress = Chart(
+wordpress = Chart(
     "wpdev",
     ChartOpts(
         chart="wordpress",
@@ -283,7 +273,7 @@ nginx_ingress = Chart(
             repo="https://charts.bitnami.com/bitnami",
         ),
     ),
-  opts=ResourceOptions(provider=cluster.provider),
+    opts=ResourceOptions(provider=cluster.provider),
 )
 ```
 
@@ -292,7 +282,7 @@ nginx_ingress = Chart(
 {{% choosable language csharp %}}
 
 ```csharp
-var nginx = new Chart("wpdev", new ChartArgs
+var wordpress = new Chart("wpdev", new ChartArgs
 {
     Chart = "wordpress",
     Version = "9.6.0",
@@ -311,13 +301,13 @@ var nginx = new Chart("wpdev", new ChartArgs
 {{% choosable language go %}}
 
 ```go
-_, err := helm.NewChart(ctx, "wpdev", helm.ChartArgs{
-            Chart:   pulumi.String("wordpress"),
-            Version: pulumi.String("9.6.0"),
-            FetchArgs: helm.FetchArgs{
-                repo: pulumi.String("https://charts.bitnami.com/bitnami"),
-            },
-        }, pulumi.Provider(cluster.Provider))
+wordpress, err := helm.NewChart(ctx, "wpdev", helm.ChartArgs{
+    Chart:   pulumi.String("wordpress"),
+    Version: pulumi.String("9.6.0"),
+    FetchArgs: helm.FetchArgs{
+        repo: pulumi.String("https://charts.bitnami.com/bitnami"),
+    },
+}, pulumi.Provider(cluster.Provider))
 ```
 
 {{% /choosable %}}
