@@ -8,7 +8,7 @@ authors:
 tags:
     - kubernetes
     - EKS
-    - re:invent 2020
+    - re:Invent 2020
 
 ---
 
