@@ -16,7 +16,7 @@ tags:
 Provisioning, managing, and monitoring a Kubernetes cluster is
 no easy task. AWS now offers EKS to ease a lot of that burden -- but
 it's still difficult to get up and running. Pulumi's infrastructure as
-code to the rescue! We can now provision an entire EKS cluster with a
+code can help! We can now provision an entire EKS cluster with a
 single CLI command, thanks to [the `@pulumi/eks`
 package](https://github.com/pulumi/pulumi-eks). Let's see how.
 <!--more-->
@@ -26,12 +26,11 @@ Updated December 2020 to include Python, .NET, and Go support.
 {{% /notes %}}
 
 To get started, download the free and open source
-[Pulumi SDK]({{< relref "/docs/get-started/install" >}}). The SDK includes
-the CLI we'll be using below, and requires AWS credentials to access
-your AWS account and provision resources. If you already have the AWS
-CLI installed and configured, you're already all set to go. Otherwise,
-[check out the docs here]({{< relref "/docs/intro/cloud-providers/aws/setup" >}})
-to set things up.
+[Pulumi SDK]({{< relref "/docs/get-started/install" >}}), which includes 
+the `pulumi` CLI we'll be using below. If you don't already
+have the AWS CLI installed and configured, [set that up too]({{< relref "/docs/intro/cloud-providers/aws/setup" >}}).
+You'll need AWS credentials to access your AWS account and 
+provision resources.
 
 From here, there are two ways to proceed:
 
@@ -54,8 +53,7 @@ number of cluster nodes.
 The CLI will first show you a preview of the AWS and Kubernetes
 resources that will be deployed to create the cluster, before actually
 performing any operation. Once you have reviewed and selected "Yes," the
-cluster will begin deploying. The terminal output will be something like
-the following:
+cluster will begin deploying. The terminal output will look like this:
 
 ![Pulumi-EKS-1](./eks-1.jpg)
 
@@ -76,10 +74,10 @@ with [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/):
 
 ## Reusable AWS EKS component
 
-This Amazon EKS installer is built on top of a reusable
+The Amazon EKS installer we just saw is built on top of a reusable
 [eks.Cluster](https://github.com/pulumi/pulumi-eks) component that is
 available in Pulumi's infrastructure as code solution. In fact, the
-command above created this component with reasonable defaults. If you
+command above created an instance of this component with reasonable defaults. If you
 prefer, you can do it by hand and programmatically. Here are examples
 in each of Pulumi's supported languages:
 
@@ -321,8 +319,8 @@ exact replicas of the environment can be created independently
 for operations such as testing or disaster recovery.
 
 As usual, by expressing these resources in code instead of in YAML, you
-get many software engineering benefits, such as improved
-tooling, ability to refactor using your favorite IDE, the ability to
+get many software engineering benefits: improved
+tooling, the ability to refactor using your favorite IDE, the ability to
 create and share reusable components, and strong
 typing to validate correctness up front.
 
