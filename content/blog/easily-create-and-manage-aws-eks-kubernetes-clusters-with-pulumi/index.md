@@ -39,8 +39,6 @@ From here, there are two ways to proceed:
 
 ## Installing Amazon EKS with Pulumi
 
-TODO: is this still true now that we have multi-lang support?
-
 With the Pulumi CLI installed and configured, a single command will
 provision your cluster:
 
